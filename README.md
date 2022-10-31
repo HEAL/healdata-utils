@@ -1,4 +1,4 @@
-# HEAL Variable Level Metadata Uploads
+# HEAL Data Dictionaries
 
 This repository holds HEAL investigator data dictionaries collected by the HEAL ecosystem Data Task Force Team in addition to the outputs after parsing to json format after validation. 
 
