@@ -1,0 +1,12 @@
+﻿name,title,description,type,format,constraints.maxLength,constraints.pattern,constraints.minimum,constraints.maximum,ordered,missingValues,trueValues,falseValues,repo_link,cde_id,ontology_id,encoding,constraints.enum
+AGE,,Age in Years,integer,3,8,,,,,,,,,NLM=fmMMaUGpKS,,,
+BRTHDTC,,Date of Birth,date,ISO8601,,,,,,,,,,NLM=wgPM2Ge1Fq,,,
+DOMAIN,,Domain Abbreviation,text,,2,,,,,,,,,,,,
+ETHNIC,,Ethnicity,text,,22,,,,,,,,,NLM=PtRlg7yLP_,,,
+RACE,,Race,text,,40,,,,,,,,,NLM=Fakc6Jy2x,,,
+RACEMULT,,Race - Multiple,text,,150,,,,,,,,,,,,
+RFPENDTC,,Date/Time of End of Participation,date,ISO8601,,,,,,,,,,,,,
+RFSTDTC,,Subject Reference Start Date/Time,date,ISO8601,,,,,,,,,,,,,
+SEX,,Sex,text,,10,,,,,,,,,NLM=ezelurehr2,,,
+STUDYID,,Study Identifier,text,,8,,,,,,,,,,,,
+USUBJID,,Unique Subject Identifier,text,,19,,,,,,,,,,,,

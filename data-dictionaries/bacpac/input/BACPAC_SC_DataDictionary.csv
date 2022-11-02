@@ -1,0 +1,13 @@
+﻿name,title,description,type,format,constraints.maxLength,constraints.pattern,constraints.minimum,constraints.maximum,ordered,missingValues,trueValues,falseValues,repo_link,cde_id,ontology_id,encoding,constraints.enum
+DOMAIN,,Domain Abbreviation,text,,2,,,,,,,,,,,,
+SCMETHOD,,Method of Test or Examination,text,,20,,,,,,,,,,,,
+SCORRES,,Result or Finding in Original Units,text,,100,,,,,,,,,,,,
+SCORRESU,,Units of Original Result or Finding,text,,20,,,,,,,,,,,,
+SCSEQ,,Sequence Number,integer,3,8,,,,,,,,,,,,
+SCSTRESC,,Character Result/Finding in Std Format,text,,100,,,,,,,,,,,,
+SCSTRESN,,Numeric Result/Finding in Std Units,float,,8,,,,,,,,,,,,
+SCSTRESU,,Standard Units of Result/Finding,text,,20,,,,,,,,,,,,
+SCTEST,,Subject Characteristic,text,,100,,,,,,,,,,,,
+SCTESTCD,,Subject Characteristic Short Name,text,,8,,,,,,,,,,,,
+STUDYID,,Study Identifier,text,,8,,,,,,,,,,,,
+USUBJID,,Unique Subject Identifier,text,,19,,,,,,,,,,,,
