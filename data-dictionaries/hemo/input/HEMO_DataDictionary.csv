@@ -1,0 +1,13 @@
+﻿name,title,description,type,format,constraints.maxLength,constraints.pattern,constraints.minimum,constraints.maximum,ordered,missingValues,trueValues,falseValues,repo_link,cde_id,ontology_id,encoding,constraints.enum
+DIABETES,,Diabetic Status: Patient Table - Used for stratification,NUM,2,8,,,,,,,,,NLM=8C5WiGMdu,,1=Yes|0=No,
+SEX,,"Gender (1=male, 2=female,): Form 2",NUM,2,8,,,,,,,,,NLM=ezelurehr2,,1=male|2=female,
+RACE,,Race Code: Form 2,NUM,2,8,,,,,,,,,NLM=Fakc6Jy2x,,,
+ETHNICIT,,Ethnicity: Form 2,NUM,2,8,,,,,,,,,NLM=PtRlg7yLP_,,,
+FM3_DT,,Date of Comorbidity Assessment: Form 3,NUM,MMDDYY8.,8,,,,,,,,,,,,
+VIST,,Visit Type: Baseline or Followup?,CHAR,1,8,,,,,,,,,,,,
+FM39_DT,,Date of Physical Impairment Info.: Form 39,NUM,MMDDYY8.,8,,,,,,,,,,,,
+EDEMA,,"Edema (0,1=1+,2=2+,3=3+,4=4+): Anthropometry",NUM,2,8,,,,,,,,,,,"0,1=1+|2=2+|3=3+|4=4+",
+DRY_WT,,Dry Weight (kg): Anthropometry,NUM,6.1,8,,,,,,,,,,,,
+BMI,,Body Mass Index (kg-m2): Anthropometry,NUM,6.1,8,,,,,,,,,NLM=7S6rde8blc,,,
+CHNG_HOW,,How to Change Diet: Form 34,CHAR,30,8,,,,,,,,,,,,
+PROTEIN,,Protein Intake (g/d): Diet Record,NUM,9.3,8,,,,,,,,,,,,

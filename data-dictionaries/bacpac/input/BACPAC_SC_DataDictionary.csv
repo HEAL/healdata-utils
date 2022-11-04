@@ -1,4 +1,4 @@
-﻿name,title,description,type,format,constraints.maxLength,constraints.pattern,constraints.minimum,constraints.maximum,ordered,missingValues,trueValues,falseValues,repo_link,cde_id,ontology_id,encoding,constraints.enum
+name,title,description,type,format,constraints.maxLength,constraints.pattern,constraints.minimum,constraints.maximum,ordered,missingValues,trueValues,falseValues,repo_link,cde_id,ontology_id,encoding,constraints.enum
 DOMAIN,,Domain Abbreviation,text,,2,,,,,,,,,,,,
 SCMETHOD,,Method of Test or Examination,text,,20,,,,,,,,,,,,
 SCORRES,,Result or Finding in Original Units,text,,100,,,,,,,,,,,,

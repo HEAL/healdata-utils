@@ -1,0 +1,99 @@
+[
+    {
+        "name": "DOMAIN",
+        "description": "Domain Abbreviation",
+        "type": "string",
+        "constraints": {
+            "maxLength": 2
+        }
+    },
+    {
+        "name": "SCMETHOD",
+        "description": "Method of Test or Examination",
+        "type": "string",
+        "constraints": {
+            "maxLength": 20
+        }
+    },
+    {
+        "name": "SCORRES",
+        "description": "Result or Finding in Original Units",
+        "type": "string",
+        "constraints": {
+            "maxLength": 100
+        }
+    },
+    {
+        "name": "SCORRESU",
+        "description": "Units of Original Result or Finding",
+        "type": "string",
+        "constraints": {
+            "maxLength": 20
+        }
+    },
+    {
+        "name": "SCSEQ",
+        "description": "Sequence Number",
+        "type": "integer",
+        "format": "3",
+        "constraints": {
+            "maxLength": 8
+        }
+    },
+    {
+        "name": "SCSTRESC",
+        "description": "Character Result/Finding in Std Format",
+        "type": "string",
+        "constraints": {
+            "maxLength": 100
+        }
+    },
+    {
+        "name": "SCSTRESN",
+        "description": "Numeric Result/Finding in Std Units",
+        "type": "number",
+        "constraints": {
+            "maxLength": 8
+        }
+    },
+    {
+        "name": "SCSTRESU",
+        "description": "Standard Units of Result/Finding",
+        "type": "string",
+        "constraints": {
+            "maxLength": 20
+        }
+    },
+    {
+        "name": "SCTEST",
+        "description": "Subject Characteristic",
+        "type": "string",
+        "constraints": {
+            "maxLength": 100
+        }
+    },
+    {
+        "name": "SCTESTCD",
+        "description": "Subject Characteristic Short Name",
+        "type": "string",
+        "constraints": {
+            "maxLength": 8
+        }
+    },
+    {
+        "name": "STUDYID",
+        "description": "Study Identifier",
+        "type": "string",
+        "constraints": {
+            "maxLength": 8
+        }
+    },
+    {
+        "name": "USUBJID",
+        "description": "Unique Subject Identifier",
+        "type": "string",
+        "constraints": {
+            "maxLength": 19
+        }
+    }
+]
