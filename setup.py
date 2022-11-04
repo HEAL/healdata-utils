@@ -13,6 +13,7 @@ setup(
         'petl',
         'jsonschema',
         'requests',
-        'pyyaml'
+        'pyyaml',
+        'frictionless'
     ]
 )
