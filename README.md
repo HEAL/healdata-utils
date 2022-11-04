@@ -20,7 +20,11 @@ To use, after spinning up a virtual environment,
 navigate to this directory (e.g., `cd <path>/heal-data-dictionaries`)  and run `pip install .`
 or `pip install -e .` if you are developing the code.
 
+If using conda, can run:
+
+`conda create -f requirements.yaml`
+
 ### Converting input to output data dictionaries
 From this directory, run:
 
-WIP: `python data_dictionaries.py` to convert input data_dictionaries.
+`python ./code/data_dictionaries.py` to convert input data_dictionaries.
