@@ -11,18 +11,21 @@ template_output = convert_template_csv_to_json(
     
 )
 
-input_files = (ROOT_DIR/'data-dictionaries'/'bacpac'/'input').glob("*")
-for input_file in input_files:
-    print(input_file)
-    convert_template_csv_to_json(
-        csvtemplate_path=input_file,
-        jsontemplate_path=input_file.parents[1]/'output'/f"{input_file.stem}.json"
-    )
+# input_files = (ROOT_DIR/'data-dictionaries'/'bacpac'/'input').glob("*")
+# for input_file in input_files:
+#     print(input_file)
+#     convert_template_csv_to_json(
+#         csvtemplate_path=input_file,
+#         jsontemplate_path=input_file.parents[1]/'output'/f"{input_file.stem}.json"
+#     )
 
-# for study,info in studies.items():
-#     input_files = (ROOT_DIR/'data-dictionaries'/study/'input').glob('*')
-#     for input_file in input_files:
-#         convert_template_csv_to_json(
-#             csvtemplate_path=input_file,
-#             jsontemplate_path=input_file.parents[1]/'output'/input_file.stem+'.json'
-#         )
+# Did above 
+del studies['template']
+
+for study,info in studies.items():
+    input_files = (ROOT_DIR/'data-dictionaries'/study/'input').glob('*')
+    for input_file in input_files:
+        convert_template_csv_to_json(
+            csvtemplate_path=input_file,
+            jsontemplate_path=input_file.parents[1]/'output'/f"{input_file.stem}.json"
+        )

@@ -23,6 +23,17 @@
                 "id": "m1_atF7L7U"
             }
         ],
+        "encoding": {
+            "1": "White",
+            "2": "Black or African American",
+            "3": "American Indian or Alaska Native",
+            "4": "Native",
+            "5": "Hawaiian or Other Pacific Islander",
+            "6": "Asian",
+            "7": "Some other race",
+            "8": "Multiracial",
+            "99": "Not reported"
+        },
         "constraints": {
             "enum": [
                 "1",

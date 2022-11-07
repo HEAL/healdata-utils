@@ -1,0 +1,154 @@
+[
+    {
+        "name": "DIABETES",
+        "description": "Diabetic Status: Patient Table - Used for stratification",
+        "type": "number",
+        "format": "2",
+        "constraints": {
+            "maxLength": 8
+        },
+        "cde_id": [
+            {
+                "source": "NLM",
+                "id": "8C5WiGMdu"
+            }
+        ],
+        "encoding": {
+            "1": "Yes",
+            "0": "No"
+        }
+    },
+    {
+        "name": "SEX",
+        "description": "Gender (1=male, 2=female,): Form 2",
+        "type": "number",
+        "format": "2",
+        "constraints": {
+            "maxLength": 8
+        },
+        "cde_id": [
+            {
+                "source": "NLM",
+                "id": "ezelurehr2"
+            }
+        ],
+        "encoding": {
+            "1": "male",
+            "2": "female"
+        }
+    },
+    {
+        "name": "RACE",
+        "description": "Race Code: Form 2",
+        "type": "number",
+        "format": "2",
+        "constraints": {
+            "maxLength": 8
+        },
+        "cde_id": [
+            {
+                "source": "NLM",
+                "id": "Fakc6Jy2x"
+            }
+        ]
+    },
+    {
+        "name": "ETHNICIT",
+        "description": "Ethnicity: Form 2",
+        "type": "number",
+        "format": "2",
+        "constraints": {
+            "maxLength": 8
+        },
+        "cde_id": [
+            {
+                "source": "NLM",
+                "id": "PtRlg7yLP_"
+            }
+        ]
+    },
+    {
+        "name": "FM3_DT",
+        "description": "Date of Comorbidity Assessment: Form 3",
+        "type": "number",
+        "format": "MMDDYY8.",
+        "constraints": {
+            "maxLength": 8
+        }
+    },
+    {
+        "name": "VIST",
+        "description": "Visit Type: Baseline or Followup?",
+        "type": "string",
+        "format": "1",
+        "constraints": {
+            "maxLength": 8
+        }
+    },
+    {
+        "name": "FM39_DT",
+        "description": "Date of Physical Impairment Info.: Form 39",
+        "type": "number",
+        "format": "MMDDYY8.",
+        "constraints": {
+            "maxLength": 8
+        }
+    },
+    {
+        "name": "EDEMA",
+        "description": "Edema (0,1=1+,2=2+,3=3+,4=4+): Anthropometry",
+        "type": "number",
+        "format": "2",
+        "constraints": {
+            "maxLength": 8
+        },
+        "encoding": {
+            "0,1": "1+",
+            "2": "2+",
+            "3": "3+",
+            "4": "4+"
+        }
+    },
+    {
+        "name": "DRY_WT",
+        "description": "Dry Weight (kg): Anthropometry",
+        "type": "number",
+        "format": "6.1",
+        "constraints": {
+            "maxLength": 8
+        }
+    },
+    {
+        "name": "BMI",
+        "description": "Body Mass Index (kg-m2): Anthropometry",
+        "type": "number",
+        "format": "6.1",
+        "constraints": {
+            "maxLength": 8
+        },
+        "cde_id": [
+            {
+                "source": "NLM",
+                "id": "7S6rde8blc"
+            }
+        ]
+    },
+    {
+        "name": "CHNG_HOW",
+        "description": "How to Change Diet: Form 34",
+        "type": "string",
+        "format": "30",
+        "constraints": {
+            "maxLength": 8
+        }
+    },
+    {
+        "name": "PROTEIN",
+        "description": "Protein Intake (g/d): Diet Record",
+        "type": "number",
+        "format": "9.3",
+        "constraints": {
+            "maxLength": 8
+        }
+    }
+]
