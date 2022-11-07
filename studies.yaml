@@ -1,47 +1,55 @@
 template:
-  appl_id: None
+  mds_study_endpoint: None
   description: The template example from the HEAL metadata repo in the HEAL github org
-  notes: >
-    Pulled from the HEAL org HEAL metadata repo and is the example template
-    
+
 bacpac:
-  appl_id: 9898044
+  mds_study_endpoint: '9898044'
   description: >
     Back Pain Consortium (BACPAC) Research Program Data Integration, Algorithm Development and Operations Management Center
-  grant_id: 1U24AR076730-01
-  notes: >
-    BACPAC data dictionaries were manually converted to template from here 
-    https://docs.google.com/spreadsheets/d/1x4WNLEjT98tgUq6c1GGj1syeNvj_eUyE
-  todo: 
-    - should dds be derived from the define.xml file?
-    - what was the data collection instrument used?
   data_dictionaries:
     - label: demographics
       file_name: BACPAC_DM_DataDictionary.csv
       guid: dg.H34L/e4232941-e154-4366-b1e2-603c8514fc35
+      conversiontype: template
     - label: questionnaires
       file_name: BACPAC_QSMD_DataDictionary.csv
       guid: dg.H34L/3d9821d2-a741-4d21-8b0d-ba416f08267a
+      conversiontype: template
     - label: subject_characteristics
       file_name: BACPAC_SC_DataDictionary.csv
       guid: dg.H34L/a8ab68ef-76b8-41e4-8e0c-b395ca7efa8c
-
+      conversiontype: template
+      
 hemo:
-  appl_id: None
+  mds_study_endpoint: Cant find
   description: None
-  grant_id: 3U01DK123813-01S1
-  notes: >
-    Pulled from https://repository.niddk.nih.gov/media/studies/hemo/Data%20Dictionary.pdf (annual.sas7bdat)
-    and manually converted to template. This data dictionary was from a set of SAS data files.
-  todo: 
-    - map SAS formats to standard
   data_dictionaries:
     - label: annual
       file_name: HEMO_DataDictionary.csv
       guid: dg.H34L/34b5f7f1-637a-49c0-8a4a-05ce222ba42d
+      conversiontype: template
   
 stigma:
-  appl_id: None 
+  mds_study_endpoint: Cant find
   description: JCOIN Amerispeak Stigma Survey
-  grant_id: 1U2CDA050098-01_a
-  todo: need to do
+  data_dictionaries:
+    - label: 'protocol1-survey1-brief-stigma'
+      guid: 'dg.H34L/92a2ebd8-9b76-4962-bd83-b9bc9002f1b0'
+      file_name: JCOIN_NORC Omnibus_SURVEY1_Feb2020_072821.sav
+      conversiontype: spss
+    - label: 'protocol1-survey2-brief-stigma'
+      guid: 'dg.H34L/c7e5fa14-0301-4728-8bd1-2bc19f981147'
+      file_name: JCOIN_NORC Omnibus_SURVEY2_April2020_072821.sav
+      conversiontype: spss
+    - label: 'protocol1-survey3-brief-stigma'
+      guid: 'dg.H34L/359d3e99-e271-46b6-9bab-b8b961c41f67'
+      file_name: JCOIN_NORC Omnibus_SURVEY3_June2020_072821.sav
+      conversiontype: spss
+    - label: 'protocol1-survey4-brief-stigma'
+      guid: 'dg.H34L/744c8c88-ce39-4200-9cd6-2d4e929ad882'
+      file_name: JCOIN_NORC Omnibus_SURVEY4_Oct2020_072821.sav
+      conversiontype: spss
+    - label: 'protocol1-survey5-brief-stigma'
+      guid: 'dg.H34L/2d527c1d-3d4d-45e7-90c1-49db040c0f9d'
+      file_name: JCOIN_NORC Omnibus_SURVEY5_Feb2021_072821.sav
+      conversiontype: spss
