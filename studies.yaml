@@ -1,13 +1,34 @@
+template:
+  appl_id: None
+  description: The template example from the HEAL metadata repo in the HEAL github org
+  notes: >
+    Pulled from the HEAL org HEAL metadata repo and is the example template
+    
 bacpac:
   appl_id: 9898044
   description: >
     Back Pain Consortium (BACPAC) Research Program Data Integration, Algorithm Development and Operations Management Center
   grant_id: 1U24AR076730-01
+  notes: >
+    BACPAC data dictionaries were manually converted to template from here 
+    https://docs.google.com/spreadsheets/d/1x4WNLEjT98tgUq6c1GGj1syeNvj_eUyE
+  todo: 
+    - should dds be derived from the define.xml file?
+    - what was the data collection instrument used?
+  inputType: template
+
 hemo:
   appl_id: None
   description: None
   grant_id: 3U01DK123813-01S1
+  notes: >
+    Pulled from https://repository.niddk.nih.gov/media/studies/hemo/Data%20Dictionary.pdf
+    and manually converted to template. This data dictionary was from a set of SAS data files.
+  todo: 
+    - map SAS formats to standard
+  
 stigma:
   appl_id: None 
   description: JCOIN Amerispeak Stigma Survey
   grant_id: 1U2CDA050098-01_a
+  todo: need to do

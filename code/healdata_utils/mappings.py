@@ -1,5 +1,5 @@
 from healdata_utils import schemas 
-from healdata_utils.utils import split_and_map,split_str_array
+from healdata_utils.utils import split_and_map,split_str_array,loads_dict
 
 def mapval(v,mapping):
     v = str(v)
@@ -9,8 +9,12 @@ def mapval(v,mapping):
         return v
 
 typemap = {
+    #from bacpac
     'text':'string',
     'float':'number',
+    #from hemo
+    'NUM':'number',
+    'CHAR':'string'
 }
 
 formatmap = {
