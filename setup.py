@@ -14,6 +14,7 @@ setup(
         'jsonschema',
         'requests',
         'pyyaml',
-        'frictionless'
+        'frictionless',
+        'gen3'
     ]
 )
