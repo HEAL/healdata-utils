@@ -13,7 +13,7 @@ import json
 from frictionless import Schema
 
 import healdata_utils.schemas as schemas
-from healdata_utils.mappings import fieldmap
+from healdata_utils.transforms.mappings import fieldmap
 
 def convert_rec_to_json(record):
     ''' 

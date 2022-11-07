@@ -1,4 +1,9 @@
-from healdata_utils.csvtemplate import convert_template_csv_to_json
+''' 
+conversion from input format (e.g., csv template, etc)
+to json format for data dictionaries
+''' 
+
+from healdata_utils.transforms.csvtemplate import convert_template_csv_to_json
 from healdata_utils.config import studies,ROOT_DIR
 from frictionless import Resource
 # current template with examples from HEAL repo
@@ -10,14 +15,6 @@ template_output = convert_template_csv_to_json(
     jsontemplate_path=ROOT_DIR/"data-dictionaries"/"template"/"output.json"
     
 )
-
-# input_files = (ROOT_DIR/'data-dictionaries'/'bacpac'/'input').glob("*")
-# for input_file in input_files:
-#     print(input_file)
-#     convert_template_csv_to_json(
-#         csvtemplate_path=input_file,
-#         jsontemplate_path=input_file.parents[1]/'output'/f"{input_file.stem}.json"
-#     )
 
 # Did above 
 del studies['template']

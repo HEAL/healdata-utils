@@ -1,5 +1,4 @@
 from pathlib import Path
-import requests
 from frictionless import Schema
 
 heal = {

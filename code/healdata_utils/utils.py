@@ -1,3 +1,4 @@
+''' Utilities/helper functions'''
 
 # split array columns
 def split_str_array(string,sep='|'):
