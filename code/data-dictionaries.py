@@ -23,9 +23,11 @@ template_output = convert_template_csv_to_json(
 del studies['template']
 
 for study,info in studies.items():
-    input_files = (ROOT_DIR/'data-dictionaries'/study/'input').glob('*')
-    for input_file in input_files:
-        convert_template_csv_to_json(
-            csvtemplate_path=input_file,
-            jsontemplate_path=input_file.parents[1]/'output'/f"{input_file.stem}.json"
-        )
+    data_dictionaries = info.get('data_dictionaries')
+    if data_dictionaries:
+        for dd in data_dictionaries:
+            input_file = ROOT_DIR/'data-dictionaries'/study/'input'/dd['file_name']
+            convert_template_csv_to_json(
+                csvtemplate_path=input_file,
+                jsontemplate_path=input_file.parents[1]/'output'/f"{input_file.stem}.json"
+            )

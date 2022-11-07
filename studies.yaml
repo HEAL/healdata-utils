@@ -15,17 +15,30 @@ bacpac:
   todo: 
     - should dds be derived from the define.xml file?
     - what was the data collection instrument used?
-  inputType: template
+  data_dictionaries:
+    - label: demographics
+      file_name: BACPAC_DM_DataDictionary.csv
+      guid: dg.H34L/e4232941-e154-4366-b1e2-603c8514fc35
+    - label: questionnaires
+      file_name: BACPAC_QSMD_DataDictionary.csv
+      guid: dg.H34L/3d9821d2-a741-4d21-8b0d-ba416f08267a
+    - label: subject_characteristics
+      file_name: BACPAC_SC_DataDictionary.csv
+      guid: dg.H34L/a8ab68ef-76b8-41e4-8e0c-b395ca7efa8c
 
 hemo:
   appl_id: None
   description: None
   grant_id: 3U01DK123813-01S1
   notes: >
-    Pulled from https://repository.niddk.nih.gov/media/studies/hemo/Data%20Dictionary.pdf
+    Pulled from https://repository.niddk.nih.gov/media/studies/hemo/Data%20Dictionary.pdf (annual.sas7bdat)
     and manually converted to template. This data dictionary was from a set of SAS data files.
   todo: 
     - map SAS formats to standard
+  data_dictionaries:
+    - label: annual
+      file_name: HEMO_DataDictionary.csv
+      guid: dg.H34L/34b5f7f1-637a-49c0-8a4a-05ce222ba42d
   
 stigma:
   appl_id: None 
