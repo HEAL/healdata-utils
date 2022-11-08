@@ -2,8 +2,6 @@
 takes the filled out variable level metadata template
 and converts to json, validates, and saves json template to file
 based on an explicit set of mapping functions
-
-
 ''' 
 import jsonschema 
 import petl as etl
@@ -13,7 +11,7 @@ import json
 from frictionless import Schema
 
 import healdata_utils.schemas as schemas
-from healdata_utils.transforms.mappings import fieldmap
+from healdata_utils.transforms.csvtemplate.mappings import fieldmap
 
 def convert_rec_to_json(record):
     ''' 

@@ -1,6 +1,7 @@
 template:
   mds_study_endpoint: None
   description: The template example from the HEAL metadata repo in the HEAL github org
+  conversiontype: csvtemplate
 
 bacpac:
   mds_study_endpoint: '9898044'
@@ -18,7 +19,7 @@ bacpac:
     - label: subject_characteristics
       file_name: BACPAC_SC_DataDictionary.csv
       guid: dg.H34L/a8ab68ef-76b8-41e4-8e0c-b395ca7efa8c
-      conversiontype: template
+      conversiontype: csvtemplate
       
 hemo:
   mds_study_endpoint: Cant find
@@ -27,7 +28,7 @@ hemo:
     - label: annual
       file_name: HEMO_DataDictionary.csv
       guid: dg.H34L/34b5f7f1-637a-49c0-8a4a-05ce222ba42d
-      conversiontype: template
+      conversiontype: csvtemplate
   
 stigma:
   mds_study_endpoint: Cant find

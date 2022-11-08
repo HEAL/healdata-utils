@@ -3,7 +3,7 @@ conversion from input format (e.g., csv template, etc)
 to json format for data dictionaries
 ''' 
 
-from healdata_utils.transforms.csvtemplate import convert_template_csv_to_json
+from healdata_utils.transforms.csvtemplate.conversion import convert_template_csv_to_json
 from healdata_utils.config import studies,ROOT_DIR
 from frictionless import Resource
 # current template with examples from HEAL repo
@@ -19,7 +19,10 @@ template_output = convert_template_csv_to_json(
 # Did above 
 del studies['template']
 
-for study,info in studies.items():
+
+csvtemplate_studies = {s:info for s,info in studies.items() if info.get('conversiontype')=='csvtemplate'}
+
+for study,info in csvtemplate_studies.items():
     data_dictionaries = info.get('data_dictionaries')
     if data_dictionaries:
         for dd in data_dictionaries:
