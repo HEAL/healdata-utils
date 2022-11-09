@@ -4,8 +4,8 @@ from gen3.auth import Gen3Auth
 from gen3.metadata import Gen3Metadata
 from healdata_utils.config import studies,ROOT_DIR
 
-# GEN3_ENV = ROOT_DIR/'.gen3'/'qa-heal.json'
-GEN3_ENV = ROOT_DIR/'.gen3'/'preprod-heal.json'
+GEN3_ENV = ROOT_DIR/'.gen3'/'qa-heal.json'
+#GEN3_ENV = ROOT_DIR/'.gen3'/'preprod-heal.json'
 auth = Gen3Auth(refresh_file=GEN3_ENV.as_posix())
 metadata = Gen3Metadata(auth)
 

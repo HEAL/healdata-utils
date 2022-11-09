@@ -42,9 +42,7 @@ def convert_rec_to_json(record):
 
 def convert_template_csv_to_json(
     csvtemplate_path:str,
-    jsontemplate_path:str,
-    schema:dict=schemas.heal['data_dictionary'],
-    mappings:dict=fieldmap
+    mappings:dict=fieldmap,
     ) -> dict:
     """
     Parses a csv template into a json file and validates according to the specification provided.
@@ -58,15 +56,6 @@ def convert_template_csv_to_json(
         .convert(fieldmap)
     )       
     data_dictionary = [convert_rec_to_json(rec) for rec in etl.dicts(template_tbl)]
-    template_json = data_dictionary
-    # TODO: use jsonschema resolver and data_dictionary.json
-    # TODO: output informative error messages
-    jsonschema.validate(template_json,schema={'type':'array','items':schema})
 
-    # write to file
-    template_str_json = json.dumps(template_json,indent=4)
-    jsontemplate_path = Path(jsontemplate_path)
-    jsontemplate_path.parent.mkdir(exist_ok=True)
-    jsontemplate_path.write_text(template_str_json)
+    return data_dictionary
 
-    return template_json
