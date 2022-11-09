@@ -1,0 +1,293 @@
+name,type,format,description,encodings,ordered
+CaseId,integer,nominal,Case ID,,True
+WEIGHT,number,scale,"Post-stratification weights - 18+ general population (N=1,036)",,
+RND_01,integer,nominal,RANDOM: Randomization variable used for scripting,0.0=0|1.0=1,True
+PS_A_Medicaid_Bi,integer,nominal,"[I favor expanding Medicaid insurance benefits for low income families to provide coverage for treatment of opioid use disorders/addiction problems, including addiction to prescription pain medications. ] Do you disagree or agree with the following stateme",1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_B_Naloxone_Bi,integer,nominal,"[I favor making naloxone (also known as 'Narcan'), a medication that can quickly reverse the effects of a person experiencing an opioid overdose, widely available and affordable without a prescription.] Do you disagree or agree with the following statement",1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_C_Mandatory_Bi,integer,nominal,[I believe that making drug treatment mandatory is an effective way to help people with an opioid use disorder.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_D_GovSpend_Bi,integer,nominal,[I favor increasing government spending to improve treatment of opioid use disorder/addiction.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+DS_E_Schools_Bi,integer,nominal,[High schools and colleges should be allowed to dismiss or expel a person with an opioid use disorder/addiction.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+DS_F_Physicians_Bi,integer,nominal,[Physicians and other healthcare providers should be allowed to refuse to treat a person with an opioid use disorder/addiction.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+DS_G_Employers_Bi,integer,nominal,[Employers should be allowed to deny employment to a person with a current opioid use disorder/addiction.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+DS_H_Landlords_Bi,integer,nominal,[Landlords should be allowed to deny housing to a person with a current opioid use disorder/addiction.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_I_SeekMedical_Bi,integer,nominal,[I favor passing laws to protect people from criminal charges for drug crimes if they seek medical help for experiencing an opioid/prescription pain medication problem.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_J_JailHealth_Bi,integer,nominal,[I believe that incarceration/jail is an effective way to improve the health of people with an opioid use disorder.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_K_JailOverdose_Bi,integer,nominal,[I believe that incarceration/jail is an effective way to reduce the risk of overdosing for people with an opioid use disorder.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_L_JailTreatment_Bi,integer,nominal,"[I believe that people in jail/prison with an opioid use disorder/addiction problem should get access to medication for opioid use disorder (e.g., methadone, buprenorphine, or naltrexone).] Do you disagree or agree with the following statements?",1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_A_Medicaid_Uni,integer,nominal,"[I favor expanding Medicaid insurance benefits for low income families to provide coverage for treatment of opioid use disorders/addiction problems, including addiction to prescription pain medications. ] Do you agree with the following statements?",1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_B_Naloxone_Uni,integer,nominal,"[I favor making naloxone (also known as 'Narcan'), a medication that can quickly reverse the effects of a person experiencing an opioid overdose, widely available and affordable without a prescription.] Do you agree with the following statements?",1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_C_Mandatory_Uni,integer,nominal,[I believe that making drug treatment mandatory is an effective way to help people with an opioid use disorder.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_D_GovSpend_Uni,integer,nominal,[I favor increasing government spending to improve treatment of opioid use disorder/addiction.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+DS_E_Schools_Uni,integer,nominal,[High schools and colleges should be allowed to dismiss or expel a person with an opioid use disorder/addiction.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+DS_F_Physicians_Uni,integer,nominal,[Physicians and other healthcare providers should be allowed to refuse to treat a person with an opioid use disorder/addiction.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+DS_G_Employers_Uni,integer,nominal,[Employers should be allowed to deny employment to a person with a current opioid use disorder/addiction.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+DS_H_Landlords_Uni,integer,nominal,[Landlords should be allowed to deny housing to a person with a current opioid use disorder/addiction. ] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_I_SeekMedical_Uni,integer,nominal,[I favor passing laws to protect people from criminal charges for drug crimes if they seek medical help for experiencing an opioid/prescription pain medication problem.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_J_JailHealth_Uni,integer,nominal,[I believe that incarceration/jail is an effective way to improve the health of people with an opioid use disorder.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_K_JailOverdose_Uni,integer,nominal,[I believe that incarceration/jail is an effective way to reduce the risk of overdosing for people with an opioid use disorder.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PS_L_JailTreatment_Uni,integer,nominal,"[I believe that people in jail/prison with an opioid use disorder/addiction problem should get access to medication for opioid use disorder (e.g., methadone, buprenorphine, or naltrexone).] Do you agree with the following statements?",1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+SS_A_HistoryWork_Bi,integer,nominal,[I would be willing to have a person with a past history of opioid use disorder/addiction start working closely with me on a job.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+SS_B_HistoryMarry_Bi,integer,nominal,[I am comfortable having a person with a past history of opioid use disorder/addiction marry into my family.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+SS_C_CurrentWork_Bi,integer,nominal,[I would be willing to have a person with a current opioid use disorder/addiction start working closely with me on a job.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+SS_D_CurrentMarry_Bi,integer,nominal,[I would be comfortable having a person with a current opioid use disorder/addiction marry into my family.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+SS_E_Dangerous_Bi,integer,nominal,[People with a current addiction to opioids/prescription pain medications are more dangerous than the general population.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+SS_F_Trust_Bi,integer,nominal,[A person who is currently addicted to opioids/prescription pain medication cannot be trusted.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+SS_A_HistoryWork_Uni,integer,nominal,[I would be willing to have a person with a past history of opioid use disorder/addiction start working closely with me on a job.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+SS_B_HistoryMarry_Uni,integer,nominal,[I am comfortable having a person with a past history of opioid use disorder/addiction marry into my family.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+SS_C_CurrentWork_Uni,integer,nominal,[I would be willing to have a person with a current opioid use disorder/addiction start working closely with me on a job.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+SS_D_CurrentMarry_Uni,integer,nominal,[I would be comfortable having a person with a current opioid use disorder/addiction marry into my family.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+SS_E_Dangerous_Uni,integer,nominal,[People with a current addiction to opioids/prescription pain medications are more dangerous than the general population.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+SS_F_Trust_Uni,integer,nominal,[A person who is currently addicted to opioids/prescription pain medication cannot be trusted.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+CS_A_Obtain_Bi,integer,nominal,[I favor arresting and prosecuting people who obtain opioids/pain medication from sources other than a medical provider.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+CS_B_Use_Bi,integer,nominal,[I favor arresting and prosecuting people who use opioids in a way not as prescribed by a doctor.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+CS_C_SentencedJail_Bi,integer,nominal,[People found guilty of misuse of opioids/prescription pain medication need to be sentenced to jail or prison.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+CS_D_IncarceratedAccess_Bi,integer,nominal,[Individuals who are incarcerated with an opioid use disorder/addiction should get access to evidence-based treatment while incarcerated.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+CS_E_ParoleAccess_Bi,integer,nominal,[Individuals who are on parole or probation with an opioid use disorder/addiction should get access to evidence-based treatment.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+CS_A_Obtain_Uni,integer,nominal,[I favor arresting and prosecuting people who obtain opioids/pain medication from sources other than a medical provider.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+CS_B_Use_Uni,integer,nominal,[I favor arresting and prosecuting people who use opioids in a way not as prescribed by a doctor.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+CS_C_SentencedJail_Uni,integer,nominal,[People found guilty of misuse of opioids/prescription pain medication need to be sentenced to jail or prison.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+CS_D_IncarceratedAccess_Uni,integer,nominal,[Individuals who are incarcerated with an opioid use disorder/addiction should get access to evidence-based treatment while incarcerated.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+CS_E_ParoleAccess_Uni,integer,nominal,[Individuals who are on parole or probation with an opioid use disorder/addiction should get access to evidence-based treatment.] Do you agree with the following statements?,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_A_Definition_Bi,integer,nominal,[Opioid addiction is defined by a person continuing to use opioids despite negative consequences.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_B_AnyUse_Bi,integer,nominal,[Anyone who uses opioids long-term for pain has an opioid addiction.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_C_SelfControl_Bi,integer,nominal,[Most people who develop and/or struggle with opioid use disorder/addiction lack self-control.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_D_MoralFail_Bi,integer,nominal,[Misuse of opioids is a moral failing.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_E_QuitAnytime_Bi,integer,nominal,[A person struggling with opioid use disorder/addiction can quit using anytime if they choose.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_F_StopBreathing_Bi,integer,nominal,"[When misused, opioids can slow your breathing or even cause you to stop breathing entirely and lead to an overdose or death.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.",1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_G_Recover_Bi,integer,nominal,[Evidence-based treatments for opioid use disorder can recover people from opioid addiction.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_H_MedicalCondition_Bi,integer,nominal,[Opioid use disorder is a medical condition like other chronic health conditions.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_I_RockBottom_Bi,integer,nominal,[A person struggling with opioid use disorder/addiction must hit rock bottom before they are ready to accept treatment.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_J_EasyFind_Bi,integer,nominal,[It is easy to find good opioid use disorder treatment.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_K_FDA_Bi,integer,nominal,[The FDA has approved medications that are effective in treating opioid use disorder/addiction.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_L_JailHelps_Bi,integer,nominal,[Jailing someone with an opioid use disorder for at least a few days will help them by reducing their risk for an overdose.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_M_MedHoax_Bi,integer,nominal,"[Medication for opioid use disorder (e.g., methadone, buprenorphine, or naltrexone) is a hoax.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.",1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_N_MedAbuse_Bi,integer,nominal,"[Medication for opioid use disorder (e.g., methadone, buprenorphine/suboxone, or naltrexone/vivitrol) is just substituting one form of drug abuse for another type of drug abuse.] Answer whether you disagree or agree with the following statements about opio",1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_O_LongTerm_Bi,integer,nominal,[People with an opioid use disorder/addiction need long-term treatment with medications.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_P_Responsible_Bi,integer,nominal,[People who misuse opioids can function as responsible members of society.] Answer whether you disagree or agree with the following statements about opioid use disorder/addiction.,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_A_Definition_Uni,integer,nominal,[Opioid addiction is defined by a person continuing to use opioids despite negative consequences.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_B_AnyUse_Uni,integer,nominal,[Anyone who uses opioids long-term for pain has an opioid addiction.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_C_SelfControl_Uni,integer,nominal,[Most people who develop and/or struggle with opioid use disorder/addiction lack self-control.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_D_MoralFail_Uni,integer,nominal,[Misuse of opioids is a moral failing.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_E_QuitAnytime_Uni,integer,nominal,[A person struggling with opioid use disorder/addiction can quit using anytime if they choose.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_F_StopBreathing_Uni,integer,nominal,"[When misused, opioids can slow your breathing or even cause you to stop breathing entirely and lead to an overdose or death.] Answer whether you agree with the following statements about opioid use disorder/addiction.",1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_G_Recover_Uni,integer,nominal,[Evidence-based treatments for opioid use disorder can recover people from opioid addiction.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_H_MedicalCondition_Uni,integer,nominal,[Opioid use disorder is a medical condition like other chronic health conditions.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_I_RockBottom_Uni,integer,nominal,[A person struggling with opioid use disorder/addiction must hit rock bottom before they are ready to accept treatment.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_J_EasyFind_Uni,integer,nominal,[It is easy to find good opioid use disorder treatment.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_K_FDA_Uni,integer,nominal,[The FDA has approved medications that are effective in treating opioid use disorder/addiction.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_L_JailHelps_Uni,integer,nominal,[Jailing someone with an opioid use disorder for at least a few days will help them by reducing their risk for an overdose.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_M_MedHoax_Uni,integer,nominal,"[Medication for opioid use disorder (e.g., methadone, buprenorphine, or naltrexone) is a hoax.] Answer whether you agree with the following statements about opioid use disorder/addiction.",1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_N_MedAbuse_Uni,integer,nominal,"[Medication for opioid use disorder (e.g., methadone, buprenorphine/suboxone, or naltrexone/vivitrol) is just substituting one form of drug abuse for another type of drug abuse.] Answer whether you agree with the following statements about opioid use disor",1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_O_LongTerm_Uni,integer,nominal,[People with an opioid use disorder/addiction need long-term treatment with medications.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+KB_P_Responsible_Uni,integer,nominal,[People who misuse opioids can function as responsible members of society.] Answer whether you agree with the following statements about opioid use disorder/addiction.,1.0=Do not agree at all|2.0=Slightly agree|3.0=Somewhat agree|4.0=Strongly agree|5.0=Completely agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PersonalUse_Ever,integer,nominal,[Have you ever used opioids/prescription pain medication illicitly obtained or used in a way not prescribed by a doctor?] The next set of questions are about your own personal experiences or the experiences of any family members or close friends.,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PersonalOverdose_Ever,integer,nominal,[Have you ever overdosed from opioids/prescription pain medication?] The next set of questions are about your own personal experiences or the experiences of any family members or close friends.,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PersonalConviction_Ever,integer,nominal,[Have you ever been convicted of any misdemeanor or felony crime?] The next set of questions are about your own personal experiences or the experiences of any family members or close friends.,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+PersonalIncarceration_Ever,integer,nominal,[Have you ever been incarcerated in jail or prison?] The next set of questions are about your own personal experiences or the experiences of any family members or close friends.,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+FamilyUse_Ever,integer,nominal,[Have any family members or close friends you know ever used opioids/prescription pain medication illicitly obtained or used in a way not prescribed by a doctor?] The next set of questions are about your own personal experiences or the experiences of any f,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+FamilyOverdose_Ever,integer,nominal,[Have any of your family members or close friends ever overdosed from opioids/prescription pain medication?] The next set of questions are about your own personal experiences or the experiences of any family members or close friends.,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+FamilyConviction_Ever,integer,nominal,[Have any of your family members or close friends ever been convicted of any misdemeanor or felony crime?] The next set of questions are about your own personal experiences or the experiences of any family members or close friends.,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+FamilyIncarceration_Ever,integer,nominal,[Have any of your family members or close friends ever been incarcerated in jail or prison?] The next set of questions are about your own personal experiences or the experiences of any family members or close friends.,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
+STARTDT_JCOIN,number,scale,JCOIN section start date/time,,
+ENDDT_JCOIN,number,scale,JCOIN section end date/time,,
+duration_JCOIN,number,scale,JCOIN Omnibus Section: Interview duration in minutes,0.0=Under 1 minute,
+SURV_MODE,integer,nominal,Survey interview mode (online or phone),1.0=Phone interview|2.0=Web Interview,True
+SURV_LANG,integer,nominal,Survey Interview Language,1.0=English|2.0=Spanish,True
+Device,string,nominal,Device,,True
+GENDER,integer,nominal,Respondent male/female sex,0.0=Unknown|1.0=Male|2.0=Female,True
+AGE4,integer,nominal,Age - 4 Categories,1.0=18-29|2.0=30-44|3.0=45-59|4.0=60+|99.0=Under 18,True
+AGE7,integer,nominal,Age - 7 Categories,1.0=18-24|2.0=25-34|3.0=35-44|4.0=45-54|5.0=55-64|6.0=65-74|7.0=75+|99.0=Under 18,True
+RACETHNICITY,integer,nominal,Combined Race/Ethnicity,"1.0=White, non-Hispanic|2.0=Black, non-Hispanic|3.0=Other, non-Hispanic|4.0=Hispanic|5.0=2+, non-Hispanic|6.0=Asian, non-Hispanic",True
+EDUC4,integer,nominal,4-level education,1.0=No HS diploma|2.0=HS graduate or equivalent|3.0=Some college|4.0=BA or above,True
+MARITAL,integer,nominal,Marital Status,1.0=Married|2.0=Widowed|3.0=Divorced|4.0=Separated|5.0=Never married|6.0=Living with partner,True
+EMPLOY,integer,nominal,Current Employment Status,1.0=Working – as a paid employee|2.0=Working – self employed|3.0=Not working – looking for work or on temporary layoff|4.0=Not working – retired|5.0=Not working – disabled|6.0=Not working - other,True
+REGION4,integer,nominal,4-level region,1.0=Northeast|2.0=Midwest|3.0=South|4.0=West,True
+METRO,integer,nominal,Metropolitan area flag,0.0=Non-Metro Area|1.0=Metro Area,True
+INTERNET,integer,nominal,"HH internet access via dial-up, DSL, or cable broadband at home",0.0=Non-internet household|1.0=Internet Household,True
+HOUSING,integer,nominal,Home Ownership,1.0=Owned|2.0=Rented or occupied without payment,True
+HOME_TYPE,integer,nominal,Type of building of panelists' residence,"1.0=A one-family house detached from any other house|2.0=A one-family house attached to one or more houses|3.0=Apartment building, mobile home or trailer, boat, RV, or other",True
+PHONESERVICE,integer,nominal,Telephone service for the household,"1.0=Landline telephone only|2.0=Have a landline, but mostly use cellphone|3.0=Have cellphone, but mostly use landline|4.0=Cellphone only|5.0=No telephone service",True
+HHSIZE,integer,nominal,Household size (including children),,True
+HH612,integer,nominal,Number of HH members age 6-12,0.0=0|1.0=1|2.0=2|3.0=3 or more,True
+HH1317,integer,nominal,Number of HH members age 13-17,0.0=0|1.0=1|2.0=2 or more,True
+HH18OV,integer,nominal,Number of HH members age 18+,0.0=0|1.0=1|2.0=2|3.0=3|4.0=4|5.0=5|6.0=6 or more,True
+Stigma_Scale_Score,number,scale,Stigma scale: average score of 6 stigma items; higher scores indicate higher stigma.,,
+KB_B_AnyUse_Correct,integer,nominal,"Anyone who uses opioids long-term for pain has an opioid addiction [False]: disagreement coded as ""correct""",0.0=Incorrect|1.0=Correct,True
+KB_E_QuitAnytime_Correct,integer,nominal,"A person struggling with opioid use disorder/addiction can quit using anytime if they choose [False]: disagreement coded as ""correct""",0.0=Incorrect|1.0=Correct,True
+KB_I_RockBottom_Correct,integer,nominal,"A person struggling with opioid use disorder/addiction must hit rock bottom before they are ready to accept treatment [False]: disagreement coded as ""correct""",0.0=Incorrect|1.0=Correct,True
+KB_J_EasyFind_Correct,integer,nominal,"It is easy to find good opioid use disorder treatment [False]: disagreement coded as ""correct""",0.0=Incorrect|1.0=Correct,True
+KB_N_MedAbuse_Correct,integer,nominal,"Medication for opioid use disorder (e.g., methadone, buprenorphine/suboxone, or naltrexone/vivitrol) is just substituting one form of drug abuse for another type of drug abuse [False]: disagreement coded as ""correct""",0.0=Incorrect|1.0=Correct,True
+KB_A_Definition_Correct,integer,nominal,Opioid addiction is defined by a person continuing to use opioids despite negative consequences [True]: agreement coded as correct,0.0=Incorrect|1.0=Correct,True
+KB_F_StopBreathing_Correct,integer,nominal,"When misused, opioids can slow your breathing or even cause you to stop breathing entirely and lead to an overdose or death [True]: agreement coded as correct",0.0=Incorrect|1.0=Correct,True
+KB_G_Recover_Correct,integer,nominal,Evidence-based treatments for opioid use disorder can recover people from opioid addiction [True]: agreement coded as correct,0.0=Incorrect|1.0=Correct,True
+KB_H_MedicalCondition_Correct,integer,nominal,Opioid use disorder is a medical condition like other chronic health conditions [True]: agreement coded as correct,0.0=Incorrect|1.0=Correct,True
+KB_K_FDA_Correct,integer,nominal,The FDA has approved medications that are effective in treating opioid use disorder/addiction [True]: agreement coded as correct,0.0=Incorrect|1.0=Correct,True
+Policy_Attitudes_Scale,number,scale,Policy attitudes scale score from average of eight items. Higher scores indicate more support for policies benefitting those with OUD.,,
+Discrimination_Scale_Score,number,scale,Acceptance of discrimination scale score from average of four items. Higher scores indicate more acceptance of discrimination.,,
+KnowledgeScore_new,integer,nominal,"Sum of 10 knowledge-based items, with higher scores indicating more knowledge.",,True
+Criminality_Scale_Score,number,scale,Perceptions of criminality scale score. Average of five items with higher scores indicating more perceived criminality toward those with OUD.,,
+PS_A_Medicaid,number,scale,"I favor expanding Medicaid insurance benefits for low income families to provide coverage for treatment of opioid use disorders/addiction problems, including addiction to prescription pain medications",,
+PS_B_Naloxone,number,scale,"I favor making naloxone (also known as 'Narcan'), a medication that can quickly reverse the effects of a person experiencing an opioid overdose, widely available and affordable without a prescription",,
+PS_C_Mandatory,number,scale,I believe that making drug treatment mandatory is an effective way to help people with an opioid use disorder,,
+PS_D_GovSpend,number,scale,I favor increasing government spending to improve treatment of opioid use disorder/addiction,,
+DS_E_Schools,number,scale,High schools and colleges should be allowed to dismiss or expel a person with an opioid use disorder/addiction,,
+DS_F_Physicians,number,scale,Physicians and other healthcare providers should be allowed to refuse to treat a person with an opioid use disorder/addiction,,
+DS_G_Employers,number,scale,Employers should be allowed to deny employment to a person with a current opioid use disorder/addiction,,
+DS_H_Landlords,number,scale,Landlords should be allowed to deny housing to a person with a current opioid use disorder/addiction,,
+PS_I_SeekMedical,number,scale,I favor passing laws to protect people from criminal charges for drug crimes if they seek medical help for experiencing an opioid/prescription pain medication problem,,
+PS_J_JailHealth,number,scale,I believe that incarceration/jail is an effective way to improve the health of people with an opioid use disorder,,
+PS_K_JailOverdose,number,scale,I believe that incarceration/jail is an effective way to reduce the risk of overdosing for people with an opioid use disorder,,
+PS_L_JailTreatment,number,scale,"I believe that people in jail/prison with an opioid use disorder/addiction problem should get access to medication for opioid use disorder (e.g., methadone, buprenorphine, or naltrexone)",,
+SS_E_Dangerous,number,scale,People with a current addiction to opioids/prescription pain medications are more dangerous than the general population,,
+SS_F_Trust,number,scale,A person who is currently addicted to opioids/prescription pain medication cannot be trusted,,
+SS_A_HistoryWork,number,scale,I would be willing to have a person with a past history of opioid use disorder/addiction start working closely with me on a job,,
+SS_B_HistoryMarry,number,scale,I am comfortable having a person with a past history of opioid use disorder/addiction marry into my family,,
+SS_C_CurrentWork,number,scale,I would be willing to have a person with a current opioid use disorder/addiction start working closely with me on a job,,
+SS_D_CurrentMarry,number,scale,I would be comfortable having a person with a current opioid use disorder/addiction marry into my family,,
+CS_A_Obtain,number,scale,I favor arresting and prosecuting people who obtain opioids/pain medication from sources other than a medical provider,,
+CS_B_Use,number,scale,I favor arresting and prosecuting people who use opioids in a way not as prescribed by a doctor,,
+CS_C_SentencedJail,number,scale,People found guilty of misuse of opioids/prescription pain medication need to be sentenced to jail or prison,,
+CS_D_IncarceratedAccess,number,scale,Individuals who are incarcerated with an opioid use disorder/addiction should get access to evidence-based treatment while incarcerated,,
+CS_E_ParoleAccess,number,scale,Individuals who are on parole or probation with an opioid use disorder/addiction should get access to evidence-based treatment,,
+KB_A_Definition,number,scale,Opioid addiction is defined by a person continuing to use opioids despite negative consequences,,
+KB_B_AnyUse,number,scale,Anyone who uses opioids long-term for pain has an opioid addiction,,
+KB_C_SelfControl,number,scale,Most people who develop and/or struggle with opioid use disorder/addiction lack self-control,,
+KB_D_MoralFail,number,scale,Misuse of opioids is a moral failing,,
+KB_E_QuitAnytime,number,scale,A person struggling with opioid use disorder/addiction can quit using anytime if they choose,,
+KB_F_StopBreathing,number,scale,"When misused, opioids can slow your breathing or even cause you to stop breathing entirely and lead to an overdose or death",,
+KB_G_Recover,number,scale,Evidence-based treatments for opioid use disorder can recover people from opioid addiction,,
+KB_H_MedicalCondition,number,scale,Opioid use disorder is a medical condition like other chronic health conditions,,
+KB_I_RockBottom,number,scale,A person struggling with opioid use disorder/addiction must hit rock bottom before they are ready to accept treatment,,
+KB_J_EasyFind,number,scale,It is easy to find good opioid use disorder treatment,,
+KB_K_FDA,number,scale,The FDA has approved medications that are effective in treating opioid use disorder/addiction,,
+KB_L_JailHelps,number,scale,Jailing someone with an opioid use disorder for at least a few days will help them by reducing their risk for an overdose,,
+KB_M_MedHoax,number,scale,"Medication for opioid use disorder (e.g., methadone, buprenorphine, or naltrexone) is a hoax",,
+KB_N_MedAbuse,number,scale,"Medication for opioid use disorder (e.g., methadone, buprenorphine/suboxone, or naltrexone/vivitrol) is just substituting one form of drug abuse for another type of drug abuse",,
+KB_O_LongTerm,number,scale,People with an opioid use disorder/addiction need long-term treatment with medications,,
+KB_P_Responsible,number,scale,People who misuse opioids can function as responsible members of society,,
+PS_A_Medicaid_REV,number,scale,Reverse Coded Variable,,
+PS_B_Naloxone_REV,number,scale,Reverse Coded Variable,,
+PS_D_GovSpend_REV,number,scale,Reverse Coded Variable,,
+PS_L_JailTreatment_REV,number,scale,Reverse Coded Variable,,
+PS_J_JailHealth_REV,number,scale,Reverse Coded Variable,,
+PS_K_JailOverdose_REV,number,scale,Reverse Coded Variable,,
+SS_A_HistoryWork_REV,number,scale,Reverse Coded Variable,,
+SS_B_HistoryMarry_REV,number,scale,Reverse Coded Variable,,
+SS_C_CurrentWork_REV,number,scale,Reverse Coded Variable,,
+SS_D_CurrentMarry_REV,number,scale,Reverse Coded Variable,,
+CS_D_IncarceratedAccess_REV,number,scale,Reverse Coded Variable,,
+CS_E_ParoleAccess_REV,number,scale,Reverse Coded Variable,,
+KB_A_Definition_REV,number,scale,Reverse Coded Variable,,
+KB_F_StopBreathing_REV,number,scale,Reverse Coded Variable,,
+KB_G_Recover_REV,number,scale,Reverse Coded Variable,,
+KB_H_MedicalCondition_REV,number,scale,Reverse Coded Variable,,
+KB_K_FDA_REV,number,scale,Reverse Coded Variable,,
+KB_P_Responsible_REV,number,scale,Reverse Coded Variable,,
+Income_relativeMedian,integer,nominal,Income variable coded into approximately above and below the median for their state.,1.0=Below median|2.0=Above median,True
+MedicaidExpansionState,integer,nominal,State medicaid expansion status,1.0=Expansion Implemented|2.0=Not implemented,True
+CrimJustExp_personal,integer,nominal,Personal incarceration and conviction combined.,1.0=Yes|2.0=No,True
+CrimJustExp_family,integer,nominal,Family/friend incarceration or conviction combined.,1.0=Yes|2.0=No,True
+Incarceration_forOUD,number,scale,"Incarceration for OUD factor analysis scale, with higher scores indicating more support for incarcerating those who misuse opioids.",,
+JusticeBased_Intervention,number,scale,"Justice based interventions for OUD factor analysis scale, with higher scores indicating more agreement with interventions for OUD involving the justice system",,
+OpioidMisandCrimJust_personal,integer,nominal,Personal opioid misuse and criminal justice experience.,,True
+Stigma_BipolarScaleOnly,number,scale,Stigma scale score of ONLY cases that completed the survey with the bipolar scale,,
+Stigma_UnipolarScaleOnly,number,scale,Stigma scale score of ONLY cases that completed the survey with the unipolar scale,,
+Discrimination_UnipolarScaleOnly,number,scale,Discrimination scale score of ONLY cases that completed the survey with the bipolar scale,,
+Discrimination_BipolarScaleOnly,number,scale,Discrimination scale score of ONLY caes that completed the survey with the unipolar scale,,
+DisregardofOUD,number,scale,"Disregard of OUD factor analysis scale, with higher scores indicating more disregard of OUD as a medical condition",,
+racedummy_WHITE1,integer,nominal,,,True
+racedummy_BLACK1,integer,nominal,,,True
+racedummy_OTHER1,integer,nominal,,,True
+racedummy_HISPANIC1,integer,nominal,,,True
+racedummy_MULTI1,integer,nominal,,,True
+racedummy_ASIAN1,integer,nominal,,,True
+SEX01,integer,nominal,,,True
+educationdichot_COLLEGE1,integer,nominal,,,True
+employdichot_EMPLOYED1,integer,nominal,,,True
+incomedichot_ABOVEMED1,integer,nominal,,,True
+PersonalOpioidMisuse_YES1,integer,nominal,,,True
+FamilyOpioidMisuse_YES1,integer,nominal,,,True
+AnyCrimJustPersonal_YES1,integer,nominal,,,True
+AnyCrimJustFamily_YES1,integer,nominal,,,True
+educationdummy_LESSHS1,integer,nominal,,,True
+educationdummy_SOMECOLLEGE1,integer,nominal,,,True
+educationdummy_HSDIPLOMA1,integer,nominal,,,True
+educationdummy_COLLEGEDEGREE1,integer,nominal,,,True
+incomedummy_LESS25K,integer,nominal,,,True
+incomedummy_25to49K,integer,nominal,,,True
+incomedummy_50to84K,integer,nominal,,,True
+incomedummy_85to150K,integer,nominal,,,True
+incomedummy_OVER150K,integer,nominal,,,True
+RACE_1,integer,nominal,RACETHNICITY=1.0,,True
+RACE_2,integer,nominal,RACETHNICITY=2.0,,True
+RACE_3,integer,nominal,RACETHNICITY=3.0,,True
+RACE_4,integer,nominal,RACETHNICITY=4.0,,True
+RACE_5,integer,nominal,RACETHNICITY=5.0,,True
+RACE_6,integer,nominal,RACETHNICITY=6.0,,True
+EMPLOYMENT_1,integer,nominal,EMPLOY=Working - as a paid employee,,True
+EMPLOYMENT_2,integer,nominal,EMPLOY=Working - self-employed,,True
+EMPLOYMENT_3,integer,nominal,EMPLOY=Not working - on temporary layoff from a job,,True
+EMPLOYMENT_4,integer,nominal,EMPLOY=Not working - looking for work,,True
+EMPLOYMENT_5,integer,nominal,EMPLOY=Not working - retired,,True
+EMPLOYMENT_6,integer,nominal,EMPLOY=Not working - disabled,,True
+EMPLOYMENT_7,integer,nominal,EMPLOY=Not working - other,,True
+ZEMPLOYMENT_1,number,scale,Zscore:  EMPLOY=Working - as a paid employee,,
+ZEMPLOYMENT_2,number,scale,Zscore:  EMPLOY=Working - self-employed,,
+ZEMPLOYMENT_3,number,scale,Zscore:  EMPLOY=Not working - on temporary layoff from a job,,
+ZEMPLOYMENT_4,number,scale,Zscore:  EMPLOY=Not working - looking for work,,
+ZEMPLOYMENT_5,number,scale,Zscore:  EMPLOY=Not working - retired,,
+ZEMPLOYMENT_6,number,scale,Zscore:  EMPLOY=Not working - disabled,,
+ZEMPLOYMENT_7,number,scale,Zscore:  EMPLOY=Not working - other,,
+Zincomedummy_LESS25K,number,scale,Zscore(incomedummy_LESS25K),,
+Zincomedummy_25to49K,number,scale,Zscore(incomedummy_25to49K),,
+Zincomedummy_50to84K,number,scale,Zscore(incomedummy_50to84K),,
+Zincomedummy_85to150K,number,scale,Zscore(incomedummy_85to150K),,
+Zincomedummy_OVER150K,number,scale,Zscore(incomedummy_OVER150K),,
+ZPersonalOpioidMisuse_YES1,number,scale,Zscore(PersonalOpioidMisuse_YES1),,
+ZFamilyOpioidMisuse_YES1,number,scale,Zscore(FamilyOpioidMisuse_YES1),,
+ZAnyCrimJustPersonal_YES1,number,scale,Zscore(AnyCrimJustPersonal_YES1),,
+ZAnyCrimJustFamily_YES1,number,scale,Zscore(AnyCrimJustFamily_YES1),,
+Zeducationdummy_LESSHS1,number,scale,Zscore(educationdummy_LESSHS1),,
+Zeducationdummy_SOMECOLLEGE1,number,scale,Zscore(educationdummy_SOMECOLLEGE1),,
+Zeducationdummy_HSDIPLOMA1,number,scale,Zscore(educationdummy_HSDIPLOMA1),,
+Zeducationdummy_COLLEGEDEGREE1,number,scale,Zscore(educationdummy_COLLEGEDEGREE1),,
+ZSEX01,number,scale,Zscore(SEX01),,
+ZDisregardofOUD,number,scale,"Zscore:  Disregard of OUD factor analysis scale, with higher scores indicating more disregard of OUD as a medical condition",,
+Zracedummy_WHITE1,number,scale,Zscore(racedummy_WHITE1),,
+Zracedummy_BLACK1,number,scale,Zscore(racedummy_BLACK1),,
+Zracedummy_OTHER1,number,scale,Zscore(racedummy_OTHER1),,
+Zracedummy_HISPANIC1,number,scale,Zscore(racedummy_HISPANIC1),,
+Zracedummy_MULTI1,number,scale,Zscore(racedummy_MULTI1),,
+Zracedummy_ASIAN1,number,scale,Zscore(racedummy_ASIAN1),,
+ZCriminality_Scale_Score,number,scale,Zscore:  Perceptions of criminality scale score. Average of five items with higher scores indicating more perceived criminality toward those with OUD.,,
+ZDiscrimination_Scale_Score,number,scale,Zscore:  Acceptance of discrimination scale score from average of four items. Higher scores indicate more acceptance of discrimination.,,
+ZPolicy_Attitudes_Scale,number,scale,Zscore:  Policy attitudes scale score from average of eight items. Higher scores indicate more support for policies benefitting those with OUD.,,
+ZStigma_Scale_Score,number,scale,Zscore:  Stigma scale: average score of 6 stigma items; higher scores indicate higher stigma.,,
+AGE4_1,integer,nominal,AGE4=18-29,,True
+AGE4_2,integer,nominal,AGE4=30-44,,True
+AGE4_3,integer,nominal,AGE4=45-59,,True
+AGE4_4,integer,nominal,AGE4=60+,,True
+PS_I_SeekMedical_Bi_REV,integer,nominal,,,True
+PS_I_SeekMedical_Uni_REV,integer,nominal,,,True
+ZPS_I_SeekMedical_Uni_REV,number,scale,Zscore(PS_I_SeekMedical_Uni_REV),,
+ZPS_I_SeekMedical_Bi_REV,number,scale,Zscore(PS_I_SeekMedical_Bi_REV),,
+Z_PS_I_SeekMedical_REV,number,scale,,,
+PS_I_SeekMedical_REV,number,scale,,,
+PS_C_Mandatory_Bi_REV,integer,nominal,,,True
+PS_C_Mandatory_Uni_REV,integer,nominal,,,True
+ZPS_C_Mandatory_Uni_REV,number,scale,Zscore(PS_C_Mandatory_Uni_REV),,
+ZPS_C_Mandatory_Bi_REV,number,scale,Zscore(PS_C_Mandatory_Bi_REV),,
+Z_PS_C_Mandatory_REV,number,scale,,,
+PS_C_Mandatory_REV,number,scale,,,
+NEW_Policy_Scale_rev,number,scale,Policy scale coded so higher scores indicate less endorsement of supportive policies,,
+ZNEW_Policy_Scale_rev,number,scale,Zscore:  Policy scale coded so higher scores indicate less endorsement of supportive policies,,
+ZSco01,number,scale,Zscore(NEW_Policy_Scale_rev)  Policy scale coded so higher scores indicate less endorsement of supportive policies,,
+ZSco02,number,scale,Zscore(Discrimination_Scale_Score)  Acceptance of discrimination scale score from average of four items. Higher scores indicate more acceptance of discrimination.,,
+ZSco03,number,scale,Zscore(Stigma_Scale_Score)  Stigma scale: average score of 6 stigma items; higher scores indicate higher stigma.,,
+ZSco04,number,scale,Zscore(Criminality_Scale_Score)  Perceptions of criminality scale score. Average of five items with higher scores indicating more perceived criminality toward those with OUD.,,
+ZSco05,number,scale,"Zscore(DisregardofOUD)  Disregard of OUD factor analysis scale, with higher scores indicating more disregard of OUD as a medical condition",,
+ZSS_F_Trust_Bi,number,scale,Zscore:  [A person who is currently addicted to opioids/prescription pain medication cannot be trusted.] Do you disagree or agree with the following statements?,,
+PersonalCrimJust_Ever,integer,nominal,,,True
+FamilyCrimJust_Ever,integer,nominal,,,True
+HH05,integer,nominal,,0.0=0|1.0=1|2.0=2|3.0=3 or more,True
+INCOME4,integer,nominal,Household income (4 categories),"1.0=< $30,000|2.0=$30,000-59,999|3.0=$60,000-99,999|4.0=$100,000+",True

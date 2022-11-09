@@ -1,130 +1,133 @@
-[
-    {
-        "name": "DOMAIN",
-        "description": "Domain Abbreviation",
-        "type": "string",
-        "constraints": {
-            "maxLength": 2
+{
+    "title": "bacpac-questionnaires",
+    "data_dictionary": [
+        {
+            "name": "DOMAIN",
+            "description": "Domain Abbreviation",
+            "type": "string",
+            "constraints": {
+                "maxLength": 2
+            }
+        },
+        {
+            "name": "QSCAT",
+            "description": "Category of Question",
+            "type": "string",
+            "constraints": {
+                "maxLength": 50
+            }
+        },
+        {
+            "name": "QSDRVFL",
+            "description": "Derived Flag",
+            "type": "string",
+            "constraints": {
+                "maxLength": 1
+            }
+        },
+        {
+            "name": "QSDTC",
+            "description": "Date/Time of Finding",
+            "type": "date"
+        },
+        {
+            "name": "QSDY",
+            "description": "Study Day of Finding",
+            "type": "integer",
+            "format": "3",
+            "constraints": {
+                "maxLength": 8
+            }
+        },
+        {
+            "name": "QSEVLINT",
+            "description": "Evaluation Interval",
+            "type": "string",
+            "constraints": {
+                "maxLength": 20
+            }
+        },
+        {
+            "name": "QSSCAT",
+            "description": "Subcategory for Question",
+            "type": "string",
+            "constraints": {
+                "maxLength": 50
+            }
+        },
+        {
+            "name": "QSSEQ",
+            "description": "Sequence Number",
+            "type": "integer",
+            "format": "3",
+            "constraints": {
+                "maxLength": 8
+            }
+        },
+        {
+            "name": "QSSTRESC",
+            "description": "Character Result/Finding in Std Format",
+            "type": "string",
+            "constraints": {
+                "maxLength": 30
+            }
+        },
+        {
+            "name": "QSSTRESN",
+            "description": "Numeric Finding in Std Units",
+            "type": "number",
+            "constraints": {
+                "maxLength": 8
+            }
+        },
+        {
+            "name": "QSTEST",
+            "description": "Question Name",
+            "type": "string",
+            "constraints": {
+                "maxLength": 100
+            }
+        },
+        {
+            "name": "QSTESTCD",
+            "description": "Question Short Name",
+            "type": "string",
+            "constraints": {
+                "maxLength": 8
+            }
+        },
+        {
+            "name": "STUDYID",
+            "description": "Study Identifier",
+            "type": "string",
+            "constraints": {
+                "maxLength": 8
+            }
+        },
+        {
+            "name": "USUBJID",
+            "description": "Unique Subject Identifier",
+            "type": "string",
+            "constraints": {
+                "maxLength": 19
+            }
+        },
+        {
+            "name": "VISIT",
+            "description": "Visit Name",
+            "type": "string",
+            "constraints": {
+                "maxLength": 20
+            }
+        },
+        {
+            "name": "VISITNUM",
+            "description": "Visit Number",
+            "type": "number",
+            "format": "5.1",
+            "constraints": {
+                "maxLength": 8
+            }
         }
-    },
-    {
-        "name": "QSCAT",
-        "description": "Category of Question",
-        "type": "string",
-        "constraints": {
-            "maxLength": 50
-        }
-    },
-    {
-        "name": "QSDRVFL",
-        "description": "Derived Flag",
-        "type": "string",
-        "constraints": {
-            "maxLength": 1
-        }
-    },
-    {
-        "name": "QSDTC",
-        "description": "Date/Time of Finding",
-        "type": "date"
-    },
-    {
-        "name": "QSDY",
-        "description": "Study Day of Finding",
-        "type": "integer",
-        "format": "3",
-        "constraints": {
-            "maxLength": 8
-        }
-    },
-    {
-        "name": "QSEVLINT",
-        "description": "Evaluation Interval",
-        "type": "string",
-        "constraints": {
-            "maxLength": 20
-        }
-    },
-    {
-        "name": "QSSCAT",
-        "description": "Subcategory for Question",
-        "type": "string",
-        "constraints": {
-            "maxLength": 50
-        }
-    },
-    {
-        "name": "QSSEQ",
-        "description": "Sequence Number",
-        "type": "integer",
-        "format": "3",
-        "constraints": {
-            "maxLength": 8
-        }
-    },
-    {
-        "name": "QSSTRESC",
-        "description": "Character Result/Finding in Std Format",
-        "type": "string",
-        "constraints": {
-            "maxLength": 30
-        }
-    },
-    {
-        "name": "QSSTRESN",
-        "description": "Numeric Finding in Std Units",
-        "type": "number",
-        "constraints": {
-            "maxLength": 8
-        }
-    },
-    {
-        "name": "QSTEST",
-        "description": "Question Name",
-        "type": "string",
-        "constraints": {
-            "maxLength": 100
-        }
-    },
-    {
-        "name": "QSTESTCD",
-        "description": "Question Short Name",
-        "type": "string",
-        "constraints": {
-            "maxLength": 8
-        }
-    },
-    {
-        "name": "STUDYID",
-        "description": "Study Identifier",
-        "type": "string",
-        "constraints": {
-            "maxLength": 8
-        }
-    },
-    {
-        "name": "USUBJID",
-        "description": "Unique Subject Identifier",
-        "type": "string",
-        "constraints": {
-            "maxLength": 19
-        }
-    },
-    {
-        "name": "VISIT",
-        "description": "Visit Name",
-        "type": "string",
-        "constraints": {
-            "maxLength": 20
-        }
-    },
-    {
-        "name": "VISITNUM",
-        "description": "Visit Number",
-        "type": "number",
-        "format": "5.1",
-        "constraints": {
-            "maxLength": 8
-        }
-    }
-]
+    ]
+}

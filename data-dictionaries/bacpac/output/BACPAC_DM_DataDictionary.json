@@ -1,112 +1,115 @@
-[
-    {
-        "name": "AGE",
-        "description": "Age in Years",
-        "type": "integer",
-        "format": "3",
-        "constraints": {
-            "maxLength": 8
+{
+    "title": "bacpac-demographics",
+    "data_dictionary": [
+        {
+            "name": "AGE",
+            "description": "Age in Years",
+            "type": "integer",
+            "format": "3",
+            "constraints": {
+                "maxLength": 8
+            },
+            "cde_id": [
+                {
+                    "source": "NLM",
+                    "id": "fmMMaUGpKS"
+                }
+            ]
         },
-        "cde_id": [
-            {
-                "source": "NLM",
-                "id": "fmMMaUGpKS"
-            }
-        ]
-    },
-    {
-        "name": "BRTHDTC",
-        "description": "Date of Birth",
-        "type": "date",
-        "cde_id": [
-            {
-                "source": "NLM",
-                "id": "wgPM2Ge1Fq"
-            }
-        ]
-    },
-    {
-        "name": "DOMAIN",
-        "description": "Domain Abbreviation",
-        "type": "string",
-        "constraints": {
-            "maxLength": 2
-        }
-    },
-    {
-        "name": "ETHNIC",
-        "description": "Ethnicity",
-        "type": "string",
-        "constraints": {
-            "maxLength": 22
+        {
+            "name": "BRTHDTC",
+            "description": "Date of Birth",
+            "type": "date",
+            "cde_id": [
+                {
+                    "source": "NLM",
+                    "id": "wgPM2Ge1Fq"
+                }
+            ]
         },
-        "cde_id": [
-            {
-                "source": "NLM",
-                "id": "PtRlg7yLP_"
+        {
+            "name": "DOMAIN",
+            "description": "Domain Abbreviation",
+            "type": "string",
+            "constraints": {
+                "maxLength": 2
             }
-        ]
-    },
-    {
-        "name": "RACE",
-        "description": "Race",
-        "type": "string",
-        "constraints": {
-            "maxLength": 40
         },
-        "cde_id": [
-            {
-                "source": "NLM",
-                "id": "Fakc6Jy2x"
-            }
-        ]
-    },
-    {
-        "name": "RACEMULT",
-        "description": "Race - Multiple",
-        "type": "string",
-        "constraints": {
-            "maxLength": 150
-        }
-    },
-    {
-        "name": "RFPENDTC",
-        "description": "Date/Time of End of Participation",
-        "type": "date"
-    },
-    {
-        "name": "RFSTDTC",
-        "description": "Subject Reference Start Date/Time",
-        "type": "date"
-    },
-    {
-        "name": "SEX",
-        "description": "Sex",
-        "type": "string",
-        "constraints": {
-            "maxLength": 10
+        {
+            "name": "ETHNIC",
+            "description": "Ethnicity",
+            "type": "string",
+            "constraints": {
+                "maxLength": 22
+            },
+            "cde_id": [
+                {
+                    "source": "NLM",
+                    "id": "PtRlg7yLP_"
+                }
+            ]
         },
-        "cde_id": [
-            {
-                "source": "NLM",
-                "id": "ezelurehr2"
+        {
+            "name": "RACE",
+            "description": "Race",
+            "type": "string",
+            "constraints": {
+                "maxLength": 40
+            },
+            "cde_id": [
+                {
+                    "source": "NLM",
+                    "id": "Fakc6Jy2x"
+                }
+            ]
+        },
+        {
+            "name": "RACEMULT",
+            "description": "Race - Multiple",
+            "type": "string",
+            "constraints": {
+                "maxLength": 150
             }
-        ]
-    },
-    {
-        "name": "STUDYID",
-        "description": "Study Identifier",
-        "type": "string",
-        "constraints": {
-            "maxLength": 8
+        },
+        {
+            "name": "RFPENDTC",
+            "description": "Date/Time of End of Participation",
+            "type": "date"
+        },
+        {
+            "name": "RFSTDTC",
+            "description": "Subject Reference Start Date/Time",
+            "type": "date"
+        },
+        {
+            "name": "SEX",
+            "description": "Sex",
+            "type": "string",
+            "constraints": {
+                "maxLength": 10
+            },
+            "cde_id": [
+                {
+                    "source": "NLM",
+                    "id": "ezelurehr2"
+                }
+            ]
+        },
+        {
+            "name": "STUDYID",
+            "description": "Study Identifier",
+            "type": "string",
+            "constraints": {
+                "maxLength": 8
+            }
+        },
+        {
+            "name": "USUBJID",
+            "description": "Unique Subject Identifier",
+            "type": "string",
+            "constraints": {
+                "maxLength": 19
+            }
         }
-    },
-    {
-        "name": "USUBJID",
-        "description": "Unique Subject Identifier",
-        "type": "string",
-        "constraints": {
-            "maxLength": 19
-        }
-    }
-]
+    ]
+}

@@ -5,6 +5,9 @@
     - bacpac: what is the data source where data types/formats came from?
     - hemo: SAS type/format mappings
 
+
+- TODO: CLI with conversion type and output type
+
 ## Study specific
 ```yaml
 bacpac:
