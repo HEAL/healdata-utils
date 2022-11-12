@@ -57,6 +57,9 @@ def convert_readstat(file_path,fieldmap=fieldmap):
             
             if meta_param:
                 meta_field[new_name] = meta_param
-        meta_mapped.append(meta_field)        
 
+        if not meta_field.get('description'):
+            meta_field['description'] = 'No description'
+        meta_mapped.append(meta_field)
+    
     return meta_mapped

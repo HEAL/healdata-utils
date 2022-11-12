@@ -91,6 +91,7 @@ def flatten_except_if(dictionary, parent_key=False, sep=".",except_keys=['encodi
 
 def convert_json_to_template_csv(
     jsontemplate_path:str,
+    data_dict_params={},
     sep_iter = '|',
     sep_dict = '=',
     ) -> Resource:
