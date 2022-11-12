@@ -16,6 +16,9 @@
             "title": "Race",
             "description": "Self-reported race",
             "type": "integer",
+            "missingValues": [
+                "99"
+            ],
             "cde_id": [
                 {
                     "source": "NLM",
@@ -57,6 +60,7 @@
             "type": "integer",
             "format": "years",
             "constraints": {
+                "minimum": "0",
                 "maximum": 90
             }
         },
