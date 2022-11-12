@@ -1,171 +1,171 @@
-name,type,format,description,encodings,ordered
-CaseId,integer,nominal,Case ID,,True
-WEIGHT,number,scale,"Post-stratification weights - 18+ general population (N=1,007)",,
-KB_A_Definition,integer,nominal,[Opioid use disorder is defined as a person continuing to use opioids despite negative consequences.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_B_AnyUse,integer,nominal,[Anyone who uses opioids long-term for pain has an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_C_SelfControl,integer,nominal,[Most people who develop and/or struggle with an opioid use disorder lack self-control.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_E_QuitAnytime,integer,nominal,[A person struggling with an opioid use disorder can choose to quit using at any time if they put their mind to it.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_F_StopBreathing,integer,nominal,[Using opioids can slow your breathing or even cause you to stop breathing entirely and lead to an overdose or death.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_Treat_Recover,integer,nominal,[Some forms of substance use treatment is effective at helping people recover from an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_H_MedicalCondition,integer,nominal,"[Opioid use disorder is a medical condition like other chronic health conditions (for example, diabetes, high blood pressure).] Do you disagree or agree with the following statements about opioid use disorder?",1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_I_RockBottom,integer,nominal,[A person struggling with an opioid use disorder must hit ‚Äúrock bottom‚Äù before they are willing to accept or attend treatment.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_J_EasyFind,integer,nominal,[Effective treatment for an opioid use disorder is easy to find.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_MedicationsExist,integer,nominal,[Approved medications that are effective in treating opioid use disorder exist.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_L_JailHelps,integer,nominal,[Jailing someone with an opioid use disorder for at least a few days will help them by reducing their risk for an overdose.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_SeekProfessional,integer,nominal,[People with an opioid use disorder should seek professional help.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_LongTerm,integer,nominal,[People with an opioid use disorder require long-term treatment in order to recover.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_Medications_Recover,integer,nominal,[People with an opioid use disorder need medications in order to recover.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_Recovery_No_End,integer,nominal,[Recovery is a continuous process that never ends.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-KB_PainMeds_Dangerous,integer,nominal,[Individuals with an opioid use disorder specific to prescription pain medications are more dangerous.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Heroin_SeekTreatment,integer,nominal,[Individuals with an opioid use disorder specific to heroin are more likely to seek treatment.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Heroin_Recover,integer,nominal,[Individuals with an opioid use disorder specific to heroin are more likely to recover.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Heroin_MoreTreatment,integer,nominal,[Individuals with an opioid use disorder specific to heroin will require more treatment in their attempt at recovery.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Family_Know_Treatment,integer,nominal,[I would want my friends and family to know if I sought treatment for an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Friend_Tell_Treatment,integer,nominal,[I would want my friend to tell me if they sought treatment for an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Encourage_Friend_Treatment,integer,nominal,[I would encourage my friend to seek treatment if they had an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Treatment_Separate_Healthcare,integer,nominal,[Treatment for opioid use disorder should be delivered separately from general health care services.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-GeneralHCP_Treatment,integer,nominal,[General health care providers should not be responsible for treating individuals with an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-GeneralHCP_Trained,integer,nominal,[General health care providers should be required to receive training on treatment for opioid use disorders.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-GeneralHCP_NoTreat,integer,nominal,[I would not want my general health care provider to treat individuals with an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Opinion_Changed,integer,nominal,[My opinions about opioid use disorder have changed over the last 5 years.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-At_Risk,integer,nominal,[‚Ä¶I think I would be considered ‚Äúat risk‚Äù for developing an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Recovery_Common,integer,nominal,[Recovery is the most common outcome for individuals with an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Failing_Common,integer,nominal,[Multiple failed attempts is a common characteristic of recovery from opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Recovery_Religious,integer,nominal,[Religious in nature] Please rank the following statements corresponding to your personal definition of recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Recovery_Spiritual,integer,nominal,[Spiritual in nature and has nothing to do with religion] Please rank the following statements corresponding to your personal definition of recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Recovery_PhysicalMental,integer,nominal,[Physical and mental in nature and has nothing to do with spirituality or religion] Please rank the following statements corresponding to your personal definition of recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Recovery_Contributes,integer,nominal,[Living a life that contributes to society] Please rank the following statements corresponding to your personal definition of recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Recovery_EnhancedQuality,integer,nominal,[Enhanced quality of life] Please rank the following statements corresponding to your personal definition of recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Recovery_ProfHelp,integer,nominal,[Seeking professional help] Please rank the following statements corresponding to your personal definition of recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Recovery_Purpose,integer,nominal,[Having a sense of purpose in life] Please rank the following statements corresponding to your personal definition of recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Recovery_ControlledUse,integer,nominal,[Moderate/controlled use of any drug and alcohol] Please rank the following statements corresponding to your personal definition of recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Recovery_NoDrugUse,integer,nominal,[No use of any drug] Please rank the following statements corresponding to your personal definition of recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Recovery_Abstaining,integer,nominal,[Abstaining from any substance use] Please rank the following statements corresponding to your personal definition of recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-RecovHelp_PCP,integer,nominal,[Be referred to a Primary Care Physician] Please rank the following statements what you think is most helpful for recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-RecovHelp_Inpatient,integer,nominal,[Be referred to an Intensive Inpatient Program] Please rank the following statements what you think is most helpful for recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-RecovHelp_SelfHelp,integer,nominal,[Be referred to a Self-help Group] Please rank the following statements what you think is most helpful for recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-RecovHelp_Therapist,integer,nominal,[Be referred to a Therapist/Psychologist/Social Worker] Please rank the following statements what you think is most helpful for recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-RecovHelp_Medication,integer,nominal,[Be prescribed Medication] Please rank the following statements what you think is most helpful for recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-RecovHelp_TalkFamily,integer,nominal,[Talk to Family and Friends] Please rank the following statements what you think is most helpful for recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-RecovHelp_NaturalHealer,integer,nominal,[Be referred to a spiritual or natural healer] Please rank the following statements what you think is most helpful for recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-RecovHelp_FBO,integer,nominal,[Be referred to a faith-based organization/institution] Please rank the following statements what you think is most helpful for recovery.,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-PS_A_Medicaid,integer,nominal,[I favor expanding Medicaid insurance benefits for low income families‚Ä¶] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-PS_B_Naloxone,integer,nominal,[I favor making naloxone‚Ä¶widely available and affordable without a prescription.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-PS_C_Mandatory,integer,nominal,[I believe that making treatment mandatory is an effective way to‚Ä¶] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-PS_D_GovSpend,integer,nominal,[I favor increasing government spending to improve treatment of opioid use disorder.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Laws_Protect_Treatment,integer,nominal,[I favor passing laws to protect people from criminal charges for drug related crimes‚Ä¶] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Access_Med_Jail,integer,nominal,[I believe that people in jail/prison with an opioid use disorder should be allowed access to medication‚Ä¶] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Req_Treat_Prob,integer,nominal,[Individuals who are on parole or probation with an opioid use disorder should be required to attend substance use treatment.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-SS_A_HistoryWork,integer,nominal,[I would be willing to have a person with a past history of opioid use disorder start working closely with me on a job.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-SS_C_CurrentWork,integer,nominal,[I would be willing to have a person with a current opioid use disorder start working closely with me on a job.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-SS_D_CurrentMarry,integer,nominal,[I would be comfortable having a person with a current opioid use disorder marry into my family.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-SS_B_HistoryMarry,integer,nominal,[I am comfortable having a person with a past history of opioid use disorder marry into my family.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-SS_E_Dangerous,integer,nominal,[People with a current opioid use disorder are more dangerous than the general population.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-SS_F_Trust,integer,nominal,[A person who currently has an opioid use disorder cannot be trusted.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-OUD_FunctionWell,integer,nominal,[Individuals with an opioid use disorder can generally function well in their daily lives.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Know_Where_Help,integer,nominal,[I would know where to go if I needed to find help for a friend with an opioid use disorder.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-OUDResources_Adequate,integer,nominal,[Our community has adequate resources to help individuals with an opioid use disorder.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-News_Influence,integer,nominal,[The news media has influenced my opinions of individuals with an opioid use disorder.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Media_Influence,integer,nominal,[Popular media has influenced my opinions of individuals with an opioid use disorder.] Do you disagree or agree with the following statements?,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-PersonalUse_Ever,integer,nominal,Have you ever misused opioids of any kind?,1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-PersonalUse_Last,integer,nominal,When was the last time you used heroin or opioids illicitly obtained or used in a way not prescribed by a doctor?,1.0=Past 6 months|2.0=6 ‚Äì 12 months ago|3.0=1-5 years ago|4.0=5+ years ago|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-PersonalUse_First,integer,nominal,"Since you used heroin or opioids in the past 6 months, is this your first time misusing opioids/prescription pain medications?",1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Treat_6mos,integer,nominal,"During the past 6 months, have you received treatment for your opioid/prescription pain medication misuse?",1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Treat_Hospital,integer,nominal,[Hospital] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,0.0=No|1.0=Yes,True
-Treat_RehabFac,integer,nominal,[Rehabilitation facility] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,0.0=No|1.0=Yes,True
-Treat_MHcenter,integer,nominal,[Mental health center or facility] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,0.0=No|1.0=Yes,True
-Treat_ER,integer,nominal,[Emergency room] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,0.0=No|1.0=Yes,True
-Treat_PrivateDoc,integer,nominal,[Private doctor's office] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,0.0=No|1.0=Yes,True
-Treat_SelfHelp,integer,nominal,[Self-help group] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,0.0=No|1.0=Yes,True
-Treat_CommunityBased,integer,nominal,[Community-based recovery support] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,0.0=No|1.0=Yes,True
-Treat_Other,integer,nominal,[Other ‚Äì please specify:] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,0.0=No|1.0=Yes,True
-Treat_OtherText,string,nominal,[TEXTBOX] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,,True
-Treat_DK,integer,nominal,[DON'T KNOW] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,0.0=No|1.0=Yes,True
-Treat_SKP,integer,nominal,[SKIPPED ON WEB] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,0.0=No|1.0=Yes,True
-Treat_REF,integer,nominal,[REFUSED] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,0.0=No|1.0=Yes,True
-Treat_MAT,integer,nominal,Have you received Medication Assisted Treatment (MAT)?,1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-MAT_Methadone,integer,nominal,[Methadone] How is your Medication Assisted Treatment given to you?,0.0=No|1.0=Yes,True
-MAT_OralBup,integer,nominal,[Oral Buprenorphine] How is your Medication Assisted Treatment given to you?,0.0=No|1.0=Yes,True
-MAT_InjectBup,integer,nominal,[Injectable Buprenorphine] How is your Medication Assisted Treatment given to you?,0.0=No|1.0=Yes,True
-MAT_Naltrexone,integer,nominal,[Naltrexone] How is your Medication Assisted Treatment given to you?,0.0=No|1.0=Yes,True
-MAT_Other,integer,nominal,[Other ‚Äì please specify:] How is your Medication Assisted Treatment given to you?,0.0=No|1.0=Yes,True
-MAT_OtherText,string,nominal,[TEXTBOX] How is your Medication Assisted Treatment given to you?,,True
-MAT_DK,integer,nominal,[DON'T KNOW] How is your Medication Assisted Treatment given to you?,0.0=No|1.0=Yes,True
-MAT_SKP,integer,nominal,[SKIPPED ON WEB] How is your Medication Assisted Treatment given to you?,0.0=No|1.0=Yes,True
-MAT_REF,integer,nominal,[REFUSED] How is your Medication Assisted Treatment given to you?,0.0=No|1.0=Yes,True
-PersonalOverdose_Ever,integer,nominal,Have you ever overdosed from using opioids?,1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-PersonalOverdose_Times,integer,nominal,How many times have you ever overdosed after taking opioids?,1.0=Once|2.0=Twice|3.0=3 times|4.0=4 or more times|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-PersonalOverdose_Last,integer,nominal,When was the last time you overdosed after taking opioids?,1.0=Past 6 months|2.0=6 ‚Äì 12 months ago|3.0=1-5 years ago|4.0=5+ years ago|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Narcan_Personal,integer,nominal,"To your knowledge, did someone administer naloxone (Narcan) to revive you?",1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-PersonalConviction_Ever,integer,nominal,[Have you ever been convicted of any misdemeanor or felony crime?] Please answer yes or no to the following questions:,"1.0=Yes, within the last year|2.0= Yes, more than a year ago|3.0= No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",True
-PersonalIncarceration_Ever,integer,nominal,[Have you ever been incarcerated in jail or prison?] Please answer yes or no to the following questions:,"1.0=Yes, within the last year|2.0= Yes, more than a year ago|3.0= No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",True
-FamilyOUD,integer,nominal,[Have any family members or close friends ever had an opioid use disorder or misused opioids?] Please answer yes or no to the following questions:,"1.0=Yes, within the last year|2.0= Yes, more than a year ago|3.0= No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",True
-FamilyOverdose_Ever,integer,nominal,[Have any of your family members or close friends ever overdosed from using opioids? ] Please answer yes or no to the following questions:,"1.0=Yes, within the last year|2.0= Yes, more than a year ago|3.0= No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",True
-FamilyConviction_Ever,integer,nominal,[Have any of your family members or close friends ever been convicted of any misdemeanor or felony crime?] Please answer yes or no to the following questions:,"1.0=Yes, within the last year|2.0= Yes, more than a year ago|3.0= No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",True
-FamilyIncarceration_Ever,integer,nominal,[Have any of your family members or close friends ever been incarcerated in jail or prison?] Please answer yes or no to the following questions:,"1.0=Yes, within the last year|2.0= Yes, more than a year ago|3.0= No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",True
-Narcan_Family,integer,nominal,"To your knowledge, did someone administer naloxone (Narcan) to revive them?",1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Protest_Participant,integer,nominal,"In the past month, have you participated in a public protest or gathering of more than 50 people?",1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Protest_Arrested,integer,nominal,Were you arrested as a part of your participation?,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-PrimaryCare_Last,integer,nominal,When is the last time you saw a primary care doctor?,1.0=Past month|2.0=Between 1-2 months ago|3.0=Between 2-3 months ago|4.0=Between 3-4 months ago|5.0=Between 5-6 months ago|6.0=Between 6-12 months ago|7.0=Over a year ago|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Personal_COVIDtest,integer,nominal,"Have you been tested for COVID-19 (coronavirus)? If so, what was the result?",1.0=I have been tested and I tested positive (I had coronavirus)|2.0=I have been tested and I tested negative (I did not have coronavirus)|3.0=I have been tested and I do not know the result|4.0=I had COVID-19 symptoms|5.0=I have not been tested|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-Household_COVIDtest,integer,nominal,Has anyone else in your household (not counting yourself) been tested for COVID-19 (coronavirus)?,1.0=They have been tested and they tested positive (They had coronavirus)|2.0=They have been tested and they tested negative (They did not have coronavirus)|3.0=They have been tested and they do not know the result|4.0=They had COVID-19 symptoms|5.0=They have not been tested|6.0=There is no one else living in my household|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,True
-duration_NORCND,number,scale,NORC-ND Omnibus Section: Interview duration in minutes,0.0=Under 1 minute,
-SURV_MODE,integer,nominal,Survey interview mode (online or phone),1.0=Phone interview|2.0=Web Interview,True
-SURV_LANG,integer,nominal,Survey Interview Language,1.0=English|2.0=Spanish,True
-Device,string,nominal,Device,,True
-GENDER,integer,nominal,Respondent gender,0.0=Unknown|1.0=Male|2.0=Female,True
-AGE4,integer,nominal,Age - 4 Categories,1.0=18-29|2.0=30-44|3.0=45-59|4.0=60+|99.0=Under 18,True
-AGE7,integer,nominal,Age - 7 Categories,1.0=18-24|2.0=25-34|3.0=35-44|4.0=45-54|5.0=55-64|6.0=65-74|7.0=75+|99.0=Under 18,True
-RACETHNICITY,integer,nominal,Combined Race/Ethnicity,"1.0=White, non-Hispanic|2.0=Black, non-Hispanic|3.0=Other, non-Hispanic|4.0=Hispanic|5.0=2+, non-Hispanic|6.0=Asian, non-Hispanic",True
-EDUC4,integer,nominal,4-level education,1.0=No HS diploma|2.0=HS graduate or equivalent|3.0=Some college|4.0=BA or above,True
-MARITAL,integer,nominal,Marital Status,1.0=Married|2.0=Widowed|3.0=Divorced|4.0=Separated|5.0=Never married|6.0=Living with partner,True
-EMPLOY,integer,nominal,Current Employment Status,1.0=Working ‚Äì as a paid employee|2.0=Working ‚Äì self employed|3.0=Not working ‚Äì looking for work or on temporary layoff|4.0=Not working ‚Äì retired|5.0=Not working ‚Äì disabled|6.0=Not working - other,True
-REGION4,integer,nominal,4-level region,1.0=Northeast|2.0=Midwest|3.0=South|4.0=West,True
-METRO,integer,nominal,Metropolitan area flag,0.0=Non-Metro Area|1.0=Metro Area,True
-INTERNET,integer,nominal,"HH internet access via dial-up, DSL, or cable broadband at home",0.0=Non-internet household|1.0=Internet Household,True
-HOUSING,integer,nominal,Home Ownership,1.0=Owned|2.0=Rented or occupied without payment,True
-HOME_TYPE,integer,nominal,Type of building of panelists' residence,"1.0=A one-family house detached from any other house|2.0=A one-family house attached to one or more houses|3.0=Apartment building, mobile home or trailer, boat, RV, or other",True
-PHONESERVICE,integer,nominal,Telephone service for the household,"1.0=Landline telephone only|2.0=Have a landline, but mostly use cellphone|3.0=Have cellphone, but mostly use landline|4.0=Cellphone only|5.0=No telephone service",True
-HHSIZE,integer,nominal,Household size (including children),,True
-HH612,integer,nominal,Number of HH members age 6-12,0.0=0|1.0=1|2.0=2|3.0=3 or more,True
-HH1317,integer,nominal,Number of HH members age 13-17,0.0=0|1.0=1|2.0=2 or more,True
-HH18OV,integer,nominal,Number of HH members age 18+,0.0=0|1.0=1|2.0=2|3.0=3|4.0=4|5.0=5|6.0=6 or more,True
-Positive_COVIDtest,integer,nominal,Tested positively for COVID.,0.0=Not tested/negative|1.0=Positive COVID Test,True
-PersonalCrimJust_Ever,integer,nominal,Combined personal conviction or incarceration.,0.0=No criminal justice history|1.0=Yes criminal justice history,True
-FamilyCrimJust_Ever,integer,nominal,Combined family/friend conviction or incarceration.,0.0=No family/friend criminal justice history|1.0=Family/friend criminal justice history,True
-ANY_COVIDtest,integer,nominal,Self or household tested for COVID,0.0=self/household not tested|1.0=self/household tested,True
-Income_relativeMedian,integer,nominal,Income above or below median for state,1.0=Below median|2.0=Above median,True
-FamilyUse_Ever,integer,nominal,Family or friend opioid use disorder,0.0=No|1.0=Yes,True
-Stigma_Scale_Score,number,scale,Average stigma score,,
-Policy_4ITEM_Scale,number,scale,Average 4-item policy score,,
-PersonalMisuse_Lifetime,integer,nominal,Lifetime personal opioid misuse,0.0=No Opioid Misuse|1.0=Opioid Misuse History,True
-PersonalMisuse_Recent,integer,nominal,Personal opioid misuse in past 12 months,,True
-PersonalOverdose_Lifetime,integer,nominal,Lifetime personal opioid overdose,,True
-PersonalOverdose_Recent,integer,nominal,Personal opioid overdose in past 12 months,,True
-FamFriendMisuse_Lifetime,integer,nominal,Lifetime family or friend opioid misuse,,True
-FamFriendMisuse_Recent,integer,nominal,Family or friend opioid misuse in past 12 months,,True
-FamFriendOverdose_Lifetime,integer,nominal,Lifetime family or friend opioid overdose,,True
-FamFriendOverdose_Recent,integer,nominal,Family or friend opioid overdose in past 12 months,,True
-PersonalCrimJust_Recent,integer,nominal,Personal conviction or incarceration within past 12 months,,True
-FamilyCrimJust_Recent,integer,nominal,Family or friend conviction or incarceration within past 12 months,,True
-SelfHousehold_COVIDtested,integer,nominal,Self or household member tested for COVID,,True
-SelfHousehold_COVIDpositive,integer,nominal,Self or household member tested positively for COVID,,True
-HOTSPOT_Survey,integer,nominal,Lived in a hotspot state during survey,,True
-Education_COLLEGE,integer,nominal,At least some college education,,True
-EMPLOYED_vs_NOT,integer,nominal,Self-employed or paid employee,,True
-ZKB_Medications_Recover,number,scale,Zscore:  [People with an opioid use disorder need medications in order to recover.] Do you disagree or agree with the following statements about opioid use disorder?,,
-ZKB_Treat_Recover,number,scale,Zscore:  [Some forms of substance use treatment is effective at helping people recover from an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,,
-ZKB_E_QuitAnytime,number,scale,Zscore:  [A person struggling with an opioid use disorder can choose to quit using at any time if they put their mind to it.] Do you disagree or agree with the following statements about opioid use disorder?,,
-ZKB_C_SelfControl,number,scale,Zscore:  [Most people who develop and/or struggle with an opioid use disorder lack self-control.] Do you disagree or agree with the following statements about opioid use disorder?,,
-ZLaws_Protect_Treatment,number,scale,Zscore:  [I favor passing laws to protect people from criminal charges for drug related crimes‚Ä¶] Do you disagree or agree with the following statements?,,
-ZAccess_Med_Jail,number,scale,Zscore:  [I believe that people in jail/prison with an opioid use disorder should be allowed access to medication‚Ä¶] Do you disagree or agree with the following statements?,,
-ZReq_Treat_Prob,number,scale,Zscore:  [Individuals who are on parole or probation with an opioid use disorder should be required to attend substance use treatment.] Do you disagree or agree with the following statements?,,
-ZRecovery_Common,number,scale,Zscore:  [Recovery is the most common outcome for individuals with an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,,
-ZFailing_Common,number,scale,Zscore:  [Multiple failed attempts is a common characteristic of recovery from opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,,
-incomedummy_LESS25K,integer,nominal,"Income less than $25,000",,True
-incomedummy_25to49K,integer,nominal,"Income $25,000-49,999",,True
-incomedummy_50to84K,integer,nominal,"Income $50,000-84,999",,True
-incomedummy_85to150K,integer,nominal,"Income $85,000-150,000",,True
-incomedummy_OVER150K,integer,nominal,"Income over $150,000",,True
-HH05,integer,nominal,,0.0=0|1.0=1|2.0=2|3.0=3 or more,True
-INCOME4,integer,nominal,Household income (4 categories),"1.0=< $30,000|2.0=$30,000-59,999|3.0=$60,000-99,999|4.0=$100,000+",True
+name,type,description,ordered
+CaseId,integer,Case ID,True
+WEIGHT,number,"Post-stratification weights - 18+ general population (N=1,007)",
+KB_A_Definition,integer,[Opioid use disorder is defined as a person continuing to use opioids despite negative consequences.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_B_AnyUse,integer,[Anyone who uses opioids long-term for pain has an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_C_SelfControl,integer,[Most people who develop and/or struggle with an opioid use disorder lack self-control.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_E_QuitAnytime,integer,[A person struggling with an opioid use disorder can choose to quit using at any time if they put their mind to it.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_F_StopBreathing,integer,[Using opioids can slow your breathing or even cause you to stop breathing entirely and lead to an overdose or death.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_Treat_Recover,integer,[Some forms of substance use treatment is effective at helping people recover from an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_H_MedicalCondition,integer,"[Opioid use disorder is a medical condition like other chronic health conditions (for example, diabetes, high blood pressure).] Do you disagree or agree with the following statements about opioid use disorder?",True
+KB_I_RockBottom,integer,[A person struggling with an opioid use disorder must hit ìrock bottomî before they are willing to accept or attend treatment.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_J_EasyFind,integer,[Effective treatment for an opioid use disorder is easy to find.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_MedicationsExist,integer,[Approved medications that are effective in treating opioid use disorder exist.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_L_JailHelps,integer,[Jailing someone with an opioid use disorder for at least a few days will help them by reducing their risk for an overdose.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_SeekProfessional,integer,[People with an opioid use disorder should seek professional help.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_LongTerm,integer,[People with an opioid use disorder require long-term treatment in order to recover.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_Medications_Recover,integer,[People with an opioid use disorder need medications in order to recover.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_Recovery_No_End,integer,[Recovery is a continuous process that never ends.] Do you disagree or agree with the following statements about opioid use disorder?,True
+KB_PainMeds_Dangerous,integer,[Individuals with an opioid use disorder specific to prescription pain medications are more dangerous.] Do you disagree or agree with the following statements about opioid use disorder?,True
+Heroin_SeekTreatment,integer,[Individuals with an opioid use disorder specific to heroin are more likely to seek treatment.] Do you disagree or agree with the following statements about opioid use disorder?,True
+Heroin_Recover,integer,[Individuals with an opioid use disorder specific to heroin are more likely to recover.] Do you disagree or agree with the following statements about opioid use disorder?,True
+Heroin_MoreTreatment,integer,[Individuals with an opioid use disorder specific to heroin will require more treatment in their attempt at recovery.] Do you disagree or agree with the following statements about opioid use disorder?,True
+Family_Know_Treatment,integer,[I would want my friends and family to know if I sought treatment for an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,True
+Friend_Tell_Treatment,integer,[I would want my friend to tell me if they sought treatment for an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,True
+Encourage_Friend_Treatment,integer,[I would encourage my friend to seek treatment if they had an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,True
+Treatment_Separate_Healthcare,integer,[Treatment for opioid use disorder should be delivered separately from general health care services.] Do you disagree or agree with the following statements about opioid use disorder?,True
+GeneralHCP_Treatment,integer,[General health care providers should not be responsible for treating individuals with an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,True
+GeneralHCP_Trained,integer,[General health care providers should be required to receive training on treatment for opioid use disorders.] Do you disagree or agree with the following statements about opioid use disorder?,True
+GeneralHCP_NoTreat,integer,[I would not want my general health care provider to treat individuals with an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,True
+Opinion_Changed,integer,[My opinions about opioid use disorder have changed over the last 5 years.] Do you disagree or agree with the following statements about opioid use disorder?,True
+At_Risk,integer,[ÖI think I would be considered ìat riskî for developing an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,True
+Recovery_Common,integer,[Recovery is the most common outcome for individuals with an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,True
+Failing_Common,integer,[Multiple failed attempts is a common characteristic of recovery from opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,True
+Recovery_Religious,integer,[Religious in nature] Please rank the following statements corresponding to your personal definition of recovery.,True
+Recovery_Spiritual,integer,[Spiritual in nature and has nothing to do with religion] Please rank the following statements corresponding to your personal definition of recovery.,True
+Recovery_PhysicalMental,integer,[Physical and mental in nature and has nothing to do with spirituality or religion] Please rank the following statements corresponding to your personal definition of recovery.,True
+Recovery_Contributes,integer,[Living a life that contributes to society] Please rank the following statements corresponding to your personal definition of recovery.,True
+Recovery_EnhancedQuality,integer,[Enhanced quality of life] Please rank the following statements corresponding to your personal definition of recovery.,True
+Recovery_ProfHelp,integer,[Seeking professional help] Please rank the following statements corresponding to your personal definition of recovery.,True
+Recovery_Purpose,integer,[Having a sense of purpose in life] Please rank the following statements corresponding to your personal definition of recovery.,True
+Recovery_ControlledUse,integer,[Moderate/controlled use of any drug and alcohol] Please rank the following statements corresponding to your personal definition of recovery.,True
+Recovery_NoDrugUse,integer,[No use of any drug] Please rank the following statements corresponding to your personal definition of recovery.,True
+Recovery_Abstaining,integer,[Abstaining from any substance use] Please rank the following statements corresponding to your personal definition of recovery.,True
+RecovHelp_PCP,integer,[Be referred to a Primary Care Physician] Please rank the following statements what you think is most helpful for recovery.,True
+RecovHelp_Inpatient,integer,[Be referred to an Intensive Inpatient Program] Please rank the following statements what you think is most helpful for recovery.,True
+RecovHelp_SelfHelp,integer,[Be referred to a Self-help Group] Please rank the following statements what you think is most helpful for recovery.,True
+RecovHelp_Therapist,integer,[Be referred to a Therapist/Psychologist/Social Worker] Please rank the following statements what you think is most helpful for recovery.,True
+RecovHelp_Medication,integer,[Be prescribed Medication] Please rank the following statements what you think is most helpful for recovery.,True
+RecovHelp_TalkFamily,integer,[Talk to Family and Friends] Please rank the following statements what you think is most helpful for recovery.,True
+RecovHelp_NaturalHealer,integer,[Be referred to a spiritual or natural healer] Please rank the following statements what you think is most helpful for recovery.,True
+RecovHelp_FBO,integer,[Be referred to a faith-based organization/institution] Please rank the following statements what you think is most helpful for recovery.,True
+PS_A_Medicaid,integer,[I favor expanding Medicaid insurance benefits for low income familiesÖ] Do you disagree or agree with the following statements?,True
+PS_B_Naloxone,integer,[I favor making naloxoneÖwidely available and affordable without a prescription.] Do you disagree or agree with the following statements?,True
+PS_C_Mandatory,integer,[I believe that making treatment mandatory is an effective way toÖ] Do you disagree or agree with the following statements?,True
+PS_D_GovSpend,integer,[I favor increasing government spending to improve treatment of opioid use disorder.] Do you disagree or agree with the following statements?,True
+Laws_Protect_Treatment,integer,[I favor passing laws to protect people from criminal charges for drug related crimesÖ] Do you disagree or agree with the following statements?,True
+Access_Med_Jail,integer,[I believe that people in jail/prison with an opioid use disorder should be allowed access to medicationÖ] Do you disagree or agree with the following statements?,True
+Req_Treat_Prob,integer,[Individuals who are on parole or probation with an opioid use disorder should be required to attend substance use treatment.] Do you disagree or agree with the following statements?,True
+SS_A_HistoryWork,integer,[I would be willing to have a person with a past history of opioid use disorder start working closely with me on a job.] Do you disagree or agree with the following statements?,True
+SS_C_CurrentWork,integer,[I would be willing to have a person with a current opioid use disorder start working closely with me on a job.] Do you disagree or agree with the following statements?,True
+SS_D_CurrentMarry,integer,[I would be comfortable having a person with a current opioid use disorder marry into my family.] Do you disagree or agree with the following statements?,True
+SS_B_HistoryMarry,integer,[I am comfortable having a person with a past history of opioid use disorder marry into my family.] Do you disagree or agree with the following statements?,True
+SS_E_Dangerous,integer,[People with a current opioid use disorder are more dangerous than the general population.] Do you disagree or agree with the following statements?,True
+SS_F_Trust,integer,[A person who currently has an opioid use disorder cannot be trusted.] Do you disagree or agree with the following statements?,True
+OUD_FunctionWell,integer,[Individuals with an opioid use disorder can generally function well in their daily lives.] Do you disagree or agree with the following statements?,True
+Know_Where_Help,integer,[I would know where to go if I needed to find help for a friend with an opioid use disorder.] Do you disagree or agree with the following statements?,True
+OUDResources_Adequate,integer,[Our community has adequate resources to help individuals with an opioid use disorder.] Do you disagree or agree with the following statements?,True
+News_Influence,integer,[The news media has influenced my opinions of individuals with an opioid use disorder.] Do you disagree or agree with the following statements?,True
+Media_Influence,integer,[Popular media has influenced my opinions of individuals with an opioid use disorder.] Do you disagree or agree with the following statements?,True
+PersonalUse_Ever,integer,Have you ever misused opioids of any kind?,True
+PersonalUse_Last,integer,When was the last time you used heroin or opioids illicitly obtained or used in a way not prescribed by a doctor?,True
+PersonalUse_First,integer,"Since you used heroin or opioids in the past 6 months, is this your first time misusing opioids/prescription pain medications?",True
+Treat_6mos,integer,"During the past 6 months, have you received treatment for your opioid/prescription pain medication misuse?",True
+Treat_Hospital,integer,[Hospital] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,True
+Treat_RehabFac,integer,[Rehabilitation facility] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,True
+Treat_MHcenter,integer,[Mental health center or facility] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,True
+Treat_ER,integer,[Emergency room] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,True
+Treat_PrivateDoc,integer,[Private doctor's office] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,True
+Treat_SelfHelp,integer,[Self-help group] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,True
+Treat_CommunityBased,integer,[Community-based recovery support] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,True
+Treat_Other,integer,[Other ñ please specify:] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,True
+Treat_OtherText,string,[TEXTBOX] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,True
+Treat_DK,integer,[DON'T KNOW] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,True
+Treat_SKP,integer,[SKIPPED ON WEB] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,True
+Treat_REF,integer,[REFUSED] Where did you receive treatment for your opioid/prescription pain medication misuse in the past 6 months?,True
+Treat_MAT,integer,Have you received Medication Assisted Treatment (MAT)?,True
+MAT_Methadone,integer,[Methadone] How is your Medication Assisted Treatment given to you?,True
+MAT_OralBup,integer,[Oral Buprenorphine] How is your Medication Assisted Treatment given to you?,True
+MAT_InjectBup,integer,[Injectable Buprenorphine] How is your Medication Assisted Treatment given to you?,True
+MAT_Naltrexone,integer,[Naltrexone] How is your Medication Assisted Treatment given to you?,True
+MAT_Other,integer,[Other ñ please specify:] How is your Medication Assisted Treatment given to you?,True
+MAT_OtherText,string,[TEXTBOX] How is your Medication Assisted Treatment given to you?,True
+MAT_DK,integer,[DON'T KNOW] How is your Medication Assisted Treatment given to you?,True
+MAT_SKP,integer,[SKIPPED ON WEB] How is your Medication Assisted Treatment given to you?,True
+MAT_REF,integer,[REFUSED] How is your Medication Assisted Treatment given to you?,True
+PersonalOverdose_Ever,integer,Have you ever overdosed from using opioids?,True
+PersonalOverdose_Times,integer,How many times have you ever overdosed after taking opioids?,True
+PersonalOverdose_Last,integer,When was the last time you overdosed after taking opioids?,True
+Narcan_Personal,integer,"To your knowledge, did someone administer naloxone (Narcan) to revive you?",True
+PersonalConviction_Ever,integer,[Have you ever been convicted of any misdemeanor or felony crime?] Please answer yes or no to the following questions:,True
+PersonalIncarceration_Ever,integer,[Have you ever been incarcerated in jail or prison?] Please answer yes or no to the following questions:,True
+FamilyOUD,integer,[Have any family members or close friends ever had an opioid use disorder or misused opioids?] Please answer yes or no to the following questions:,True
+FamilyOverdose_Ever,integer,[Have any of your family members or close friends ever overdosed from using opioids? ] Please answer yes or no to the following questions:,True
+FamilyConviction_Ever,integer,[Have any of your family members or close friends ever been convicted of any misdemeanor or felony crime?] Please answer yes or no to the following questions:,True
+FamilyIncarceration_Ever,integer,[Have any of your family members or close friends ever been incarcerated in jail or prison?] Please answer yes or no to the following questions:,True
+Narcan_Family,integer,"To your knowledge, did someone administer naloxone (Narcan) to revive them?",True
+Protest_Participant,integer,"In the past month, have you participated in a public protest or gathering of more than 50 people?",True
+Protest_Arrested,integer,Were you arrested as a part of your participation?,True
+PrimaryCare_Last,integer,When is the last time you saw a primary care doctor?,True
+Personal_COVIDtest,integer,"Have you been tested for COVID-19 (coronavirus)? If so, what was the result?",True
+Household_COVIDtest,integer,Has anyone else in your household (not counting yourself) been tested for COVID-19 (coronavirus)?,True
+duration_NORCND,number,NORC-ND Omnibus Section: Interview duration in minutes,
+SURV_MODE,integer,Survey interview mode (online or phone),True
+SURV_LANG,integer,Survey Interview Language,True
+Device,string,Device,True
+GENDER,integer,Respondent gender,True
+AGE4,integer,Age - 4 Categories,True
+AGE7,integer,Age - 7 Categories,True
+RACETHNICITY,integer,Combined Race/Ethnicity,True
+EDUC4,integer,4-level education,True
+MARITAL,integer,Marital Status,True
+EMPLOY,integer,Current Employment Status,True
+REGION4,integer,4-level region,True
+METRO,integer,Metropolitan area flag,True
+INTERNET,integer,"HH internet access via dial-up, DSL, or cable broadband at home",True
+HOUSING,integer,Home Ownership,True
+HOME_TYPE,integer,Type of building of panelists' residence,True
+PHONESERVICE,integer,Telephone service for the household,True
+HHSIZE,integer,Household size (including children),True
+HH612,integer,Number of HH members age 6-12,True
+HH1317,integer,Number of HH members age 13-17,True
+HH18OV,integer,Number of HH members age 18+,True
+Positive_COVIDtest,integer,Tested positively for COVID.,True
+PersonalCrimJust_Ever,integer,Combined personal conviction or incarceration.,True
+FamilyCrimJust_Ever,integer,Combined family/friend conviction or incarceration.,True
+ANY_COVIDtest,integer,Self or household tested for COVID,True
+Income_relativeMedian,integer,Income above or below median for state,True
+FamilyUse_Ever,integer,Family or friend opioid use disorder,True
+Stigma_Scale_Score,number,Average stigma score,
+Policy_4ITEM_Scale,number,Average 4-item policy score,
+PersonalMisuse_Lifetime,integer,Lifetime personal opioid misuse,True
+PersonalMisuse_Recent,integer,Personal opioid misuse in past 12 months,True
+PersonalOverdose_Lifetime,integer,Lifetime personal opioid overdose,True
+PersonalOverdose_Recent,integer,Personal opioid overdose in past 12 months,True
+FamFriendMisuse_Lifetime,integer,Lifetime family or friend opioid misuse,True
+FamFriendMisuse_Recent,integer,Family or friend opioid misuse in past 12 months,True
+FamFriendOverdose_Lifetime,integer,Lifetime family or friend opioid overdose,True
+FamFriendOverdose_Recent,integer,Family or friend opioid overdose in past 12 months,True
+PersonalCrimJust_Recent,integer,Personal conviction or incarceration within past 12 months,True
+FamilyCrimJust_Recent,integer,Family or friend conviction or incarceration within past 12 months,True
+SelfHousehold_COVIDtested,integer,Self or household member tested for COVID,True
+SelfHousehold_COVIDpositive,integer,Self or household member tested positively for COVID,True
+HOTSPOT_Survey,integer,Lived in a hotspot state during survey,True
+Education_COLLEGE,integer,At least some college education,True
+EMPLOYED_vs_NOT,integer,Self-employed or paid employee,True
+ZKB_Medications_Recover,number,Zscore:  [People with an opioid use disorder need medications in order to recover.] Do you disagree or agree with the following statements about opioid use disorder?,
+ZKB_Treat_Recover,number,Zscore:  [Some forms of substance use treatment is effective at helping people recover from an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,
+ZKB_E_QuitAnytime,number,Zscore:  [A person struggling with an opioid use disorder can choose to quit using at any time if they put their mind to it.] Do you disagree or agree with the following statements about opioid use disorder?,
+ZKB_C_SelfControl,number,Zscore:  [Most people who develop and/or struggle with an opioid use disorder lack self-control.] Do you disagree or agree with the following statements about opioid use disorder?,
+ZLaws_Protect_Treatment,number,Zscore:  [I favor passing laws to protect people from criminal charges for drug related crimesÖ] Do you disagree or agree with the following statements?,
+ZAccess_Med_Jail,number,Zscore:  [I believe that people in jail/prison with an opioid use disorder should be allowed access to medicationÖ] Do you disagree or agree with the following statements?,
+ZReq_Treat_Prob,number,Zscore:  [Individuals who are on parole or probation with an opioid use disorder should be required to attend substance use treatment.] Do you disagree or agree with the following statements?,
+ZRecovery_Common,number,Zscore:  [Recovery is the most common outcome for individuals with an opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,
+ZFailing_Common,number,Zscore:  [Multiple failed attempts is a common characteristic of recovery from opioid use disorder.] Do you disagree or agree with the following statements about opioid use disorder?,
+incomedummy_LESS25K,integer,"Income less than $25,000",True
+incomedummy_25to49K,integer,"Income $25,000-49,999",True
+incomedummy_50to84K,integer,"Income $50,000-84,999",True
+incomedummy_85to150K,integer,"Income $85,000-150,000",True
+incomedummy_OVER150K,integer,"Income over $150,000",True
+HH05,integer,No description,True
+INCOME4,integer,Household income (4 categories),True

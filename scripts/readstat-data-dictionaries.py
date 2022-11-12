@@ -2,7 +2,7 @@
 spss/sas/stata --> to HEAL data dictionary
 
 """
-from healdata_utils.transforms.readstat.conversion import convert_readstat
+from healdata_utils.cli import to_json,to_csv_from_json
 from healdata_utils.config import studies,ROOT_DIR
 import json
 
@@ -12,10 +12,6 @@ for study,info in studies.items():
         for dd in data_dictionaries:
             if dd.get('conversiontype')=='spss':
                 input_file = ROOT_DIR/'data-dictionaries'/study/'input'/dd['file_name']
-                outputdir = input_file.parents[1]/'output'
-                jsontemplate = convert_readstat(input_file)
-                jsonpath = outputdir/(input_file.stem+'.json')
-                jsonpath.write_text(
-                    json.dumps({'title':dd['title'],'data_dictionary':jsontemplate},indent=4),
-                )
-
+                outputdir = input_file.parents[1]/'output'/input_file.with_suffix('.json').name
+                to_json(input_file,outputdir,title=dd['title'])
+                to_csv_from_json(outputdir,outputdir.with_suffix(".csv"))

@@ -3,7 +3,7 @@
 command line interface for generating HEAL data dictionary/vlmd json files
 
 #TODO: make scheam a CLI option?
-#TODO: port to_json and to_csv fxns outputside of CLI?
+#TODO: port to_json and to_csv fxns outputside of CLI? to an io.py folder?
 ''' 
 
 
@@ -32,36 +32,27 @@ def generate_outputpath(input_filepath,outputdir,suffix='json'):
         outputpath = Path(outputdir)/input_filepath.with_suffix(f".{suffix}").name
     return outputpath 
 
-def to_json(filepath,outputdir,title=None,description=None,inputtype=None,):
+def to_json(filepath,outputdir,data_dictionary_props={},inputtype=None,):
     ''' 
     write a data dictioanry (ie variable level metadata)
     to a HEAL metadata json file
     '''
-    outputdir = Path(outputdir)
-    filepath = Path(filepath)
+
+    #infer input type
     if not inputtype:
         inputtype = Path(filepath).suffix.replace('.','')
 
-    outputdir.parent.mkdir(exist_ok=True)
+    ## add dd title
+    if not data_dictionary_props['title']:
+        data_dictionary_props['title'] = filepath.stem
+
+    Path(outputdir).parent.mkdir(exist_ok=True)
+
+
 
     # get data dictionary based on the input type
-    dd_fields = choice_fxn[inputtype](filepath)
+    data_dictionary = choice_fxn[inputtype](filepath,data_dictionary_props)
 
-    ## add top level data dictionary information
-    data_dictionary = {'data_dictionary':dd_fields}
-
-
-
-    if description:
-        data_dictionary['description'] = description
-
-    ## add dd title
-    if title:
-        data_dictionary['title'] = title
-    elif data_dictionary.get('title'):
-        pass 
-    else:
-        data_dictionary['title'] = filepath.stem
 
     # VALIDATE
     print('Validating output json file.....')
@@ -115,7 +106,7 @@ def main(filepath,title,description,inputtype,outputdir):
     if inputtype=='json':
         to_csv_from_json(filepath, outputdir)
     else:
-        to_json(filepath,outputdir,title,description,inputtype,)
+        to_json(filepath,outputdir,{'title':title,'description':description},inputtype,)
   
 if __name__=='__main__':
     main()
