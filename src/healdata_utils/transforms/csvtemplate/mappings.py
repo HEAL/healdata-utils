@@ -4,7 +4,6 @@ contains mappings (both lambda functions or column mappings)
 
 from healdata_utils import schemas 
 
-
 # split array columns
 def split_str_array(string,sep='|'):
     if string:
@@ -78,3 +77,31 @@ fieldmap = {
     'falseValues':lambda v: split_str_array(v),
     # TODO: add stats
 }
+
+
+# join mappings for json to csv
+
+def join_iter(iterable,sep_list="|"):
+    return sep_list.join([str(p) for p in iterable])
+
+def join_dictvals(dictionary:dict,sep:str):
+    return sep.join(dictionary.values())
+
+def join_dictitems(dictionary:dict,sep_keyval='=',sep_items='|'):
+    dict_list = [key+sep_keyval+val for key,val in dictionary.items()]
+    return sep_items.join(dict_list)
+
+
+joinmap = {
+    'constraints.enum': join_iter,
+    'cde_id': join_dictvals,
+    'ontology_id': join_dictvals,
+    'encodings': join_dictitems,
+    'missingValues':join_iter,
+    'trueValues': join_iter,
+    'falseValues':join_iter,
+    # TODO: add stats
+}
+
+def join_prop(propname,prop):
+    return joinmap[propname](prop) if propname in joinmap else prop
