@@ -3,6 +3,7 @@
 command line interface for generating HEAL data dictionary/vlmd json files
 
 #TODO: make scheam a CLI option?
+#TODO: port to_json and to_csv fxns outputside of CLI?
 ''' 
 
 
@@ -41,7 +42,7 @@ def to_json(filepath,outputdir,title=None,description=None,inputtype=None,):
     if not inputtype:
         inputtype = Path(filepath).suffix.replace('.','')
 
-    outputdir.mkdir(exist_ok=True)
+    outputdir.parent.mkdir(exist_ok=True)
 
     # get data dictionary based on the input type
     dd_fields = choice_fxn[inputtype](filepath)
@@ -72,20 +73,24 @@ def to_json(filepath,outputdir,title=None,description=None,inputtype=None,):
     with open(outputpath,'w') as f:
         json.dump(data_dictionary,f,indent=4)
 
-def to_csv_from_json(filepath,outputdir):
+def to_csv_from_json(filepath,outputdir,title=None,description=None,):
     ''' 
     converts a json file to a csv
     ''' 
-    Path(outdir).mkdir(exists_ok=True)
-    resource = choice_fxn['json'](filepath)
-    # VALIDATE
-    print('Checking input json file.....')
-    validate_json(data_dictionary)
+    if not title:
+        title = filepath.stem
+
+    Path(outputdir).parent.mkdir(exist_ok=True)
+    resource = choice_fxn['json'](filepath,{"title":title,"description":description})
+    
+    #print('Checking input json file.....')
 
     outputpath = generate_outputpath(filepath, outputdir,'csv')
 
-    # write data dictionary params and path to CSV templates
-    resource.to_yaml(Path(outputpath).with_suffix('yaml'))
+    # TODO: write data dictionary params and path to CSV templates
+    # del resource['data']
+    # resource.path = Path(outputpath).name
+    # resource.to_yaml(Path(outputpath).with_suffix('.yaml'))
 
     # write data dictionary fields
     resource.to_petl().tocsv(outputpath)
@@ -101,15 +106,16 @@ def main(filepath,title,description,inputtype,outputdir):
     write a data dictioanry (ie variable level metadata)
     to a HEAL metadata json file
     '''
-    print(inputtype)
 
     if not outputdir:
+        
         outputdir = Path(filepath).parent.parent/'output'
+        print(outputdir)
 
     if inputtype=='json':
         to_csv_from_json(filepath, outputdir)
     else:
-        to_json(filepath,title,description,inputtype,outputdir)
+        to_json(filepath,outputdir,title,description,inputtype,)
   
 if __name__=='__main__':
     main()
