@@ -67,6 +67,7 @@ props = schemas.heal['data_dictionary']['properties']
 fieldmap = {
     'constraints.enum': lambda v: split_str_array(v),
     'constraints.maximum':int,
+    'constraints.minimum':int, #TODO:need to add to schema
     'constraints.maxLength':int,
     'cde_id': lambda v: split_and_map(v, props['cde_id']),
     'ontology_id': lambda v: split_and_map(v, props['ontology_id']),
