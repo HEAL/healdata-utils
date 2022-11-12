@@ -66,6 +66,8 @@ props = schemas.heal['data_dictionary']['properties']
     #mappings for array of dicts, arrays, and dicts
 fieldmap = {
     'constraints.enum': lambda v: split_str_array(v),
+    'constraints.maximum':int,
+    'constraints.maxLength':int,
     'cde_id': lambda v: split_and_map(v, props['cde_id']),
     'ontology_id': lambda v: split_and_map(v, props['ontology_id']),
     'encoding':lambda v: loads_dict(v),
