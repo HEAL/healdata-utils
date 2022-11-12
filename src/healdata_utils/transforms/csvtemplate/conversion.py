@@ -58,11 +58,10 @@ def convert_template_csv_to_json(
     # read in csv
     template_tbl = (
         etl.fromcsv(csvtemplate_path)
-        .convertnumbers()
         .convert(fieldmap)
     )       
-    data_dictionary = {'data_dictionary':[convert_rec_to_json(rec) for rec in etl.dicts(template_tbl)]}
-    data_dictionary.update(data_dictionary_props)
+    data_dictionary = data_dictionary_props.copy()
+    data_dictionary['data_dictionary'] = [convert_rec_to_json(rec) for rec in etl.dicts(template_tbl)]
 
     return data_dictionary
 
@@ -91,7 +90,7 @@ def flatten_except_if(dictionary, parent_key=False, sep=".",except_keys=['encodi
 
 def convert_json_to_template_csv(
     jsontemplate_path:str,
-    data_dict_params={},
+    data_dictionary_props={},
     sep_iter = '|',
     sep_dict = '=',
     ) -> Resource:
@@ -99,7 +98,7 @@ def convert_json_to_template_csv(
     with open(jsontemplate_path,'r') as f:
         data_dictionary = json.load(f)
 
-    data_dict_params = {key:val for key,val in data_dictionary.items() if key!='data_dictionary'}
+    data_dictionary_props = {key:val for key,val in data_dictionary.items() if key!='data_dictionary'}
     fields = list(data_dictionary['data_dictionary'])
     fields_csv = []
     #colnames = set()
@@ -112,5 +111,5 @@ def convert_json_to_template_csv(
         fields_csv.append(field_csv)
         #colnames.update(list(fields))
 
-    resource = Resource(data=fields_csv,**data_dict_params)
+    resource = Resource(data=fields_csv,**data_dictionary_props)
     return resource

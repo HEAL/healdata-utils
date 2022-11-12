@@ -42,7 +42,7 @@ def to_int_if_base10(string):
     
     return string
 
-def convert_readstat(file_path,fieldmap=fieldmap):
+def convert_readstat(file_path,data_dictionary_props={},fieldmap=fieldmap):
     _,meta = read_pyreadstat(file_path,metadataonly=True)
     meta = meta.__dict__ #change meta container object to dictionary so easier to map
     meta_mapped = []
@@ -62,4 +62,6 @@ def convert_readstat(file_path,fieldmap=fieldmap):
             meta_field['description'] = 'No description'
         meta_mapped.append(meta_field)
     
-    return meta_mapped
+    data_dictionary = data_dictionary_props.copy()
+    data_dictionary['data_dictionary'] = meta_mapped
+    return data_dictionary
