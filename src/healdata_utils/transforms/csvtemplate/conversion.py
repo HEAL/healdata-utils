@@ -90,7 +90,7 @@ def flatten_except_if(dictionary, parent_key=False, sep=".",except_keys=['encodi
 
 def convert_json_to_template_csv(
     jsontemplate_path:str,
-    data_dictionary_props={},
+    fields_name:str='data_dictionary',
     sep_iter = '|',
     sep_dict = '=',
     ) -> Resource:
@@ -98,8 +98,7 @@ def convert_json_to_template_csv(
     with open(jsontemplate_path,'r') as f:
         data_dictionary = json.load(f)
 
-    data_dictionary_props = {key:val for key,val in data_dictionary.items() if key!='data_dictionary'}
-    fields = list(data_dictionary['data_dictionary'])
+    fields = list(data_dictionary[fields_name])
     fields_csv = []
     #colnames = set()
     for f in fields:
@@ -111,5 +110,5 @@ def convert_json_to_template_csv(
         fields_csv.append(field_csv)
         #colnames.update(list(fields))
 
-    resource = Resource(data=fields_csv,**data_dictionary_props)
+    resource = Resource(data=fields_csv)
     return resource

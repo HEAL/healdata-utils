@@ -64,7 +64,7 @@ def to_json(filepath,outputdir,data_dictionary_props={},inputtype=None,):
     with open(outputpath,'w') as f:
         json.dump(data_dictionary,f,indent=4)
 
-def to_csv_from_json(filepath,outputdir,title=None,description=None,):
+def to_csv_from_json(filepath,outputdir):
     ''' 
     converts a json file to a csv
     ''' 
@@ -72,7 +72,7 @@ def to_csv_from_json(filepath,outputdir,title=None,description=None,):
         title = Path(filepath).stem
 
     Path(outputdir).parent.mkdir(exist_ok=True)
-    resource = choice_fxn['json'](filepath,{"title":title,"description":description})
+    resource = choice_fxn['json'](filepath)
     
     #print('Checking input json file.....')
 
