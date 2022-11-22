@@ -69,7 +69,7 @@ def to_csv_from_json(filepath,outputdir,title=None,description=None,):
     converts a json file to a csv
     ''' 
     if not title:
-        title = filepath.stem
+        title = Path(filepath).stem
 
     Path(outputdir).parent.mkdir(exist_ok=True)
     resource = choice_fxn['json'](filepath,{"title":title,"description":description})
