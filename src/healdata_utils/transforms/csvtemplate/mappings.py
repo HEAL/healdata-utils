@@ -64,7 +64,21 @@ formatmap = {
 
 props = schemas.heal['data_dictionary']['properties']
     #mappings for array of dicts, arrays, and dicts
+
+
+true_values = ["true","1","yes","required","y"]
+false_values = ["false","0","no","not required","n"]
+
+def to_bool(v):
+    if v.lower() in true_values:
+        return True 
+    elif v.lower() in false_values():
+        return False 
+    else:
+        return ""
+
 fieldmap = {
+    'constraints.required': lambda v: to_bool(v),
     'constraints.enum': lambda v: split_str_array(v),
     'constraints.maximum':int,
     'constraints.minimum':int, #TODO:need to add to schema
