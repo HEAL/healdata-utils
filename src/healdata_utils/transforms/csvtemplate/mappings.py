@@ -49,6 +49,14 @@ def mapval(v,mapping):
     else:
         return v
 
+def to_bool(v):
+    if v.lower() in true_values:
+        return True 
+    elif v.lower() in false_values():
+        return False 
+    else:
+        return ""
+        
 typemap = {
     #from bacpac
     'text':'string',
@@ -69,13 +77,7 @@ props = schemas.heal['data_dictionary']['properties']
 true_values = ["true","1","yes","required","y"]
 false_values = ["false","0","no","not required","n"]
 
-def to_bool(v):
-    if v.lower() in true_values:
-        return True 
-    elif v.lower() in false_values():
-        return False 
-    else:
-        return ""
+
 
 fieldmap = {
     'constraints.required': lambda v: to_bool(v),
