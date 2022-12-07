@@ -120,4 +120,4 @@ def convert_json_to_template_csv(
         fields_csv.append(field_csv)
         #colnames.update(list(fields))
 
-    return fields_csv
+    return Resource(data=fields_csv)
