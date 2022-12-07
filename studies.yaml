@@ -54,3 +54,9 @@ stigma:
       guid: 'dg.H34L/2d527c1d-3d4d-45e7-90c1-49db040c0f9d'
       file_name: JCOIN_NORC Omnibus_SURVEY5_Feb2021_072821.sav
       conversiontype: spss
+michigan:
+  mds_study_endpoint: ''
+  description: ''
+  guid: ''
+  file_name: ''
+  conversiontype: redcap-xml

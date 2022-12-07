@@ -16,7 +16,9 @@ setup(
         'pyyaml',
         'frictionless',
         'gen3',
-        'pyreadstat'
+        'pyreadstat',
+        'dataforge @ git+https://gitlab.com/mbkranz/data-forge.git@0afa429d6b7d1f1ec04ff8c4ee127291b3b058d4',
+        'xmltodict' #NOTE:used until schemas put into dataforge
     ],
     entry_points='''
         [console_scripts]

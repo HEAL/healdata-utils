@@ -11,15 +11,17 @@ import click
 from healdata_utils.transforms.csvtemplate.conversion import convert_template_csv_to_json
 from healdata_utils.transforms.csvtemplate.conversion import convert_json_to_template_csv
 from healdata_utils.transforms.readstat.conversion import convert_readstat
+from healdata_utils.transforms.redcap.conversion import convert_redcap
 import json
 from pathlib import Path
 import jsonschema
 from healdata_utils.schemas import validate_json
-
+import pandas as pd
 choice_fxn = {
     'csv': convert_template_csv_to_json,
     'sav': convert_readstat,
-    'json':convert_json_to_template_csv
+    'json':convert_json_to_template_csv,
+    'xml': convert_redcap #currently only redcap is xml but will need a wrapper function further specifying conversion fxn
 }
 
 def generate_outputpath(input_filepath,outputdir,suffix='json'):
@@ -43,10 +45,10 @@ def to_json(filepath,outputdir,data_dictionary_props={},inputtype=None,):
         inputtype = Path(filepath).suffix.replace('.','')
 
     ## add dd title
-    if not data_dictionary_props['title']:
+    if not data_dictionary_props.get('title'):
         data_dictionary_props['title'] = filepath.stem
 
-    Path(outputdir).parent.mkdir(exist_ok=True)
+    Path(outputdir).mkdir(exist_ok=True)
 
 
 
@@ -68,10 +70,8 @@ def to_csv_from_json(filepath,outputdir):
     ''' 
     converts a json file to a csv
     ''' 
-    if not title:
-        title = Path(filepath).stem
-
     Path(outputdir).parent.mkdir(exist_ok=True)
+
     resource = choice_fxn['json'](filepath)
     
     #print('Checking input json file.....')
@@ -84,7 +84,7 @@ def to_csv_from_json(filepath,outputdir):
     # resource.to_yaml(Path(outputpath).with_suffix('.yaml'))
 
     # write data dictionary fields
-    resource.to_petl().tocsv(outputpath)
+    pd.DataFrame(resource.data).to_csv(outputpath,index=False)
 
 @click.command()
 @click.option('--filepath',required=True,help='Path to the file you want to convert to a HEAL data dictionary')

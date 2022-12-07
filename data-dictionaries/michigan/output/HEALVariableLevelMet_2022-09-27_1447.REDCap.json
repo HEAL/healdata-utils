@@ -1,0 +1,1495 @@
+{
+    "title": "HEALVariableLevelMet_2022-09-27_1447.REDCap",
+    "data_dictionary": [
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "string",
+            "description": "Study Form Notes",
+            "name": "notes"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMFace]",
+            "name": "mbody___0",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRJaw]",
+            "name": "mbody___1",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLJaw]",
+            "name": "mbody___2",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRChest]",
+            "name": "mbody___3",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLChest]",
+            "name": "mbody___4",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRUpArMBM]",
+            "name": "mbody___5",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLUpArMBM]",
+            "name": "mbody___6",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRElbw]",
+            "name": "mbody___7",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLElbw]",
+            "name": "mbody___8",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRLowArMBM]",
+            "name": "mbody___9",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLLowArMBM]",
+            "name": "mbody___10",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRHand]",
+            "name": "mbody___11",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLHand]",
+            "name": "mbody___12",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMAbdoMBMen]",
+            "name": "mbody___13",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMPelvis]",
+            "name": "mbody___14",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRGroin]",
+            "name": "mbody___15",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLGroin]",
+            "name": "mbody___16",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRUpLeg]",
+            "name": "mbody___17",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLUpLeg]",
+            "name": "mbody___18",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRKnee]",
+            "name": "mbody___19",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLKnee]",
+            "name": "mbody___20",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRLowLeg]",
+            "name": "mbody___21",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLLowLeg]",
+            "name": "mbody___22",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRFoot]",
+            "name": "mbody___23",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLFoot]",
+            "name": "mbody___24",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMHead]",
+            "name": "mbody___25",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMNeck]",
+            "name": "mbody___26",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLShldr]",
+            "name": "mbody___27",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRShldr]",
+            "name": "mbody___28",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMUpBack]",
+            "name": "mbody___29",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLowBack]",
+            "name": "mbody___30",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLHip]",
+            "name": "mbody___31",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRHip]",
+            "name": "mbody___32",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMLBttck]",
+            "name": "mbody___33",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMRBttck]",
+            "name": "mbody___34",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MBMnone]",
+            "name": "mbody___35",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Face ",
+            "name": "mbmface"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": " Right Jaw",
+            "name": "mbmrjaw"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Jaw",
+            "name": "mbmljaw"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Chest",
+            "name": "mbmrchest"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Chest",
+            "name": "mbmlchest"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Upper Arm",
+            "name": "mbmruparmbm"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Upper Arm",
+            "name": "mbmluparmbm"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Elbow",
+            "name": "mbmrelbw"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Elbow",
+            "name": "mbmlelbw"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Lower Arm",
+            "name": "mbmrlowarmbm"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Lower Arm",
+            "name": "mbmllowarmbm"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Hand",
+            "name": "mbmrhand"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Hand",
+            "name": "mbmlhand"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Abdomen",
+            "name": "mbmabdombmen"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Pelvis",
+            "name": "mbmpelvis"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Groin",
+            "name": "mbmrgroin"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Groin",
+            "name": "mbmlgroin"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Upper Leg",
+            "name": "mbmrupleg"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Upper Leg",
+            "name": "mbmlupleg"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Knee",
+            "name": "mbmrknee"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Knee",
+            "name": "mbmlknee"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Lower Leg",
+            "name": "mbmrlowleg"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Lower Leg",
+            "name": "mbmllowleg"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Foot",
+            "name": "mbmrfoot"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Foot",
+            "name": "mbmlfoot"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Head",
+            "name": "mbmhead"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Neck",
+            "name": "mbmneck"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Shoulder",
+            "name": "mbmlshldr"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Shoulder",
+            "name": "mbmrshldr"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Upper Back",
+            "name": "mbmupback"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Lower Back",
+            "name": "mbmlowback"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Hip",
+            "name": "mbmlhip"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Hip",
+            "name": "mbmrhip"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Left Buttock",
+            "name": "mbmlbttck"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Right Buttock",
+            "name": "mbmrbttck"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "No Pain",
+            "name": "mbmnone"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "number",
+            "description": "Total Michigan Body Map Score",
+            "name": "mbmcurrent_total"
+        },
+        {
+            "module": "Michigan Body Map Image Recent",
+            "type": "string",
+            "description": "Complete?",
+            "name": "michigan_body_map_image_recent_complete",
+            "encodings": {
+                "0": "Incomplete",
+                "1": "Unverified",
+                "2": "Complete"
+            },
+            "constraints.enum": [
+                "0",
+                "1",
+                "2"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MFace]",
+            "name": "mbodycp___0",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRJaw]",
+            "name": "mbodycp___1",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLJaw]",
+            "name": "mbodycp___2",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRChest]",
+            "name": "mbodycp___3",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLChest]",
+            "name": "mbodycp___4",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRUpArm]",
+            "name": "mbodycp___5",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLUpArM]",
+            "name": "mbodycp___6",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRElbw]",
+            "name": "mbodycp___7",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLElbw]",
+            "name": "mbodycp___8",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRLowArm]",
+            "name": "mbodycp___9",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLLowArm]",
+            "name": "mbodycp___10",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRHand]",
+            "name": "mbodycp___11",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLHand]",
+            "name": "mbodycp___12",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MAbdomen]",
+            "name": "mbodycp___13",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MPelvis]",
+            "name": "mbodycp___14",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRGroin]",
+            "name": "mbodycp___15",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLGroin]",
+            "name": "mbodycp___16",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRUpLeg]",
+            "name": "mbodycp___17",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLUpLeg]",
+            "name": "mbodycp___18",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRKnee]",
+            "name": "mbodycp___19",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLKnee]",
+            "name": "mbodycp___20",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRLowLeg]",
+            "name": "mbodycp___21",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLLowLeg]",
+            "name": "mbodycp___22",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRFoot]",
+            "name": "mbodycp___23",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLFoot]",
+            "name": "mbodycp___24",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MHead]",
+            "name": "mbodycp___25",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MNeck]",
+            "name": "mbodycp___26",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLShldr]",
+            "name": "mbodycp___27",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRShldr]",
+            "name": "mbodycp___28",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MUpBack]",
+            "name": "mbodycp___29",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLowBack]",
+            "name": "mbodycp___30",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLHip]",
+            "name": "mbodycp___31",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRHip]",
+            "name": "mbodycp___32",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MLBttck]",
+            "name": "mbodycp___33",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[MRBttck]",
+            "name": "mbodycp___34",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "boolean",
+            "description": "@IMAGEMAP=MBODY[Mnone]",
+            "name": "mbodycp___35",
+            "encodings": {
+                "1": "Checked",
+                "0": "Unchecked"
+            },
+            "constraints.enum": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Face ",
+            "name": "mface"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": " Right Jaw",
+            "name": "mrjaw"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Jaw",
+            "name": "mljaw"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Chest",
+            "name": "mrchest"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Chest",
+            "name": "mlchest"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Upper Arm",
+            "name": "mruparm"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Upper Arm",
+            "name": "mluparm"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Elbow",
+            "name": "mrelbw"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Elbow",
+            "name": "mlelbw"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Lower Arm",
+            "name": "mrlowarm"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Lower Arm",
+            "name": "mllowarm"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Hand",
+            "name": "mrhand"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Hand",
+            "name": "mlhand"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Abdomen",
+            "name": "mabdomen"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Pelvis",
+            "name": "mpelvis"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Groin",
+            "name": "mrgroin"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Groin",
+            "name": "mlgroin"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Upper Leg",
+            "name": "mrupleg"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Upper Leg",
+            "name": "mlupleg"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Knee",
+            "name": "mrknee"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Knee",
+            "name": "mlknee"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Lower Leg",
+            "name": "mrlowleg"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Lower Leg",
+            "name": "mllowleg"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Foot",
+            "name": "mrfoot"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Foot",
+            "name": "mlfoot"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Head",
+            "name": "mhead"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Neck",
+            "name": "mneck"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Shoulder",
+            "name": "mlshldr"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Shoulder",
+            "name": "mrshldr"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Upper Back",
+            "name": "mupback"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Lower Back",
+            "name": "mlowback"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Hip",
+            "name": "mlhip"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Hip",
+            "name": "mrhip"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Left Buttock",
+            "name": "mlbttck"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Right Buttock",
+            "name": "mrbttck"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "No Pain",
+            "name": "mnone"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "number",
+            "description": "Total Michigan Body Map Score",
+            "name": "mbm_total"
+        },
+        {
+            "module": "Michigan Body Map Image Chronic Pain",
+            "type": "string",
+            "description": "Complete?",
+            "name": "michigan_body_map_image_chronic_pain_complete",
+            "encodings": {
+                "0": "Incomplete",
+                "1": "Unverified",
+                "2": "Complete"
+            },
+            "constraints.enum": [
+                "0",
+                "1",
+                "2"
+            ]
+        }
+    ]
+}
