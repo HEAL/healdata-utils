@@ -52,7 +52,7 @@ def mapval(v,mapping):
 def to_bool(v):
     if v.lower() in true_values:
         return True 
-    elif v.lower() in false_values():
+    elif v.lower() in false_values:
         return False 
     else:
         return ""
