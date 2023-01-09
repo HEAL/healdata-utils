@@ -45,8 +45,11 @@ def get_code_list(path):
     if code_list:
         df = pd.DataFrame(code_list).fillna(value="")
         df['choice_num'] = df['@Name'].str.replace("^.*__","",regex=True)
-        df['choices_dict'] = df['@redcap:CheckboxChoices'].apply(lambda choices:dict([[val.strip() 
-            for val in item.split(",")] for item in choices.split("|")]) if choices else None)
+        df['choices_dict'] = df['@redcap:CheckboxChoices'].apply(
+            lambda choices:{item.split(",")[0].strip().lower():''.join(item.split(",")[1:]).strip() 
+            for item in choices.split("|")} if choices
+            else None)
+
         df['choice'] = df.apply(lambda row: row['choices_dict'][row['choice_num']]\
              if row['choices_dict'] else None,axis=1)
         df['encodings'] = df.apply(
