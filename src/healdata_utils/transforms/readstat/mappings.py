@@ -34,12 +34,29 @@ def to_int_if_base10(val):
         
     return str(val)
 
+#https://www.reed.edu/psychology/stata/gs/tutorials/types.html#:~:text=Stata%20Data%20Formats%20%26%20Changing%20Them%201%20Numbers,the%20way%20the%20date%20and%20time%20displayed.%20
 typemap = {
     'pyreadstat':{
         'sav':{
             'number':{'readstat_variable_types':'double','variable_measure':'scale'},
             'integer':{'readstat_variable_types':'double','variable_measure':'nominal'},
             'string':{'readstat_variable_types':'string'}
+        },
+        'sas7bdat':{},
+
+        # Taken from following resources:
+        #http://wlm.userweb.mwn.de/Stata/wstatvar.htm
+        #https://gitlab.com/phs-rcg/pystata-extensions/-/blob/main/src/pystata_extensions/__init__.py
+        # may need to further specify other constraints based on these types or from the actual data 
+        # ie for boolean values need to look at data and see what min/max is? or just use 
+        # what the specs are for byte (-127 to 100)
+        'dta':{
+            'number':{'readstat_variable_types':'double'},
+            'float':{'readstat_variable_types':'float'},
+            'integer':{'readstat_variable_types':'byte'},
+            'integer':{'readstat_variable_types':'long'},
+            'integer':{'readstat_variable_types':'int'},
+            'string':{'readstat_variable_types':'str|str#\d+'} 
         }
     }
 }
@@ -55,7 +72,9 @@ fieldmap = {
                 for key,val in meta['variable_value_labels'].get(colname,{}).items()
             },
             'ordered': lambda meta,colname: is_ordered(meta,colname)
-        }
+        },
+        'sas7bdat':{},
+        'dta':{}
     }
 }
 
