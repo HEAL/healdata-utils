@@ -57,7 +57,7 @@ def convert_template_csv_to_json(
 
     # loop through empty json output and assign mapping type
     # read in csv
-    source = etl.fromcsv(csvtemplate_path,encoding='utf-8')
+    source = Resource(csvtemplate_path).to_petl()
     fields_to_add = [
         (field,'') 
         for field in mappings.keys() 
