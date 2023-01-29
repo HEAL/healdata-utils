@@ -1,67 +1,60 @@
 import pyreadstat
 import pandas as pd 
-from healdata_utils.transforms.readstat.mappings import fieldmap,typemap
 from pathlib import Path
-#TODO: add original type and translated type
-# commented out are file metadata
-#TODO: incorporate missing values and ranges into missingVals
-#TODO: make into a class 
-#TODO: change framework to not rely on pandas and only convert to dict (and then use csv to json fxn)
+from healdata_utils.utils import to_int_if_base10
 
 def read_pyreadstat(file_path,**kwargs):
     ''' 
     reads in a "metadata rich file"
-    (dta, sav,b7bdat)
+    (dta, sav,b7bdat). Note, xport format not supported
+    as it doesnt supply value labels.
 
     '''
     file_path = Path(file_path)
     ext = file_path.suffix 
     if ext=='.sav':
         read = pyreadstat.read_sav
-    #TODO: other extensions
-    # elif ext=='.sas7bdat':
-    #     read = pyreadstat.read_sas7bdat
+    elif ext=='.sas7bdat':
+        read = pyreadstat.read_sas7bdat
+    elif ext=='.dta':
+        read = pyreadstat.read_sav
+    elif ext=='.por':
+        read = pyreadstat.read_por
 
     return read(file_path,**kwargs)
 
-def get_type(meta,colname,typemap):
-
-    for std_name,conds in typemap.items():
-        is_type = sum([meta[key][colname]==val for key,val in conds])==len(list(conds))
-        if is_type:
-            return std_name
-
-def is_ordered(meta,colname):
-    return meta['variable_measure'][colname]=='nominal'
-
-def to_int_if_base10(string):
-    digits = string.split('.')
-    if len(digits)==2:
-        if digits[1]=='0' and digits[0].is_numeric():
-            return digits[0]
+def convert_readstat(file_path,
+    data_dictionary_props={}):
     
-    return string
-
-def convert_readstat(file_path,data_dictionary_props={},fieldmap=fieldmap):
-    _,meta = read_pyreadstat(file_path,metadataonly=True)
+    df,meta = read_pyreadstat(file_path)
+    df = df.convert_dtypes()
     meta = meta.__dict__ #change meta container object to dictionary so easier to map
-    meta_mapped = []
-    ext = Path(file_path).suffix.replace('.','')
-    for colname in meta['column_names']:
-        meta_field = {'name':colname}
-        for new_name,map_fxn in fieldmap['pyreadstat'][ext].items():
-            if new_name=='type':
-                meta_param = map_fxn(meta,colname,typemap['pyreadstat'][ext])
-            else:
-                meta_param = map_fxn(meta,colname)
-            
-            if meta_param:
-                meta_field[new_name] = meta_param
+    fields = pd.io.json.build_table_schema(df,index=False)['fields'] #converts to frictionless Table Schema
 
-        if not meta_field.get('description'):
-            meta_field['description'] = 'No description'
-        meta_mapped.append(meta_field)
-    
+    for field in fields:
+        field.pop('extDtype',None)
+        fieldname = field['name']
+
+        value_labels = meta.get('variable_value_labels',{}).get(fieldname)
+        if value_labels:
+            field['encodings'] = {
+                to_int_if_base10(key):to_int_if_base10(val)
+                for key,val in value_labels.items()
+            }
+            
+            #NOTE: enums are assumed if labels represent entire set of values
+            # this avoids value labels that are, for example, partials such as top/bottom encodings
+            enums = set(value_labels.keys())
+            values = set(df[fieldname].dropna()) 
+            if not values.difference(enums):
+                constraints_enums = {'constraints':{'enum':[to_int_if_base10(v) for v in enums]}}
+                field.update(constraints_enums)
+        
+        variable_label = meta.get('value_labels',{}).get(fieldname)
+        if variable_label:
+            field['description'] = variable_label
+
     data_dictionary = data_dictionary_props.copy()
-    data_dictionary['data_dictionary'] = meta_mapped
+    data_dictionary['data_dictionary'] = fields 
+
     return data_dictionary
