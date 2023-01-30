@@ -39,10 +39,11 @@ def to_json(filepath,outputdir,data_dictionary_props={},inputtype=None,):
     write a data dictioanry (ie variable level metadata)
     to a HEAL metadata json file
     '''
-
+    filepath = Path(filepath)
+    outputdir = Path(outputdir)
     #infer input type
     if not inputtype:
-        inputtype = Path(filepath).suffix.replace('.','')
+        inputtype = filepath.suffix.replace('.','')
 
     ## add dd title
     if not data_dictionary_props.get('title'):
@@ -97,7 +98,7 @@ def main(filepath,title,description,inputtype,outputdir):
     write a data dictioanry (ie variable level metadata)
     to a HEAL metadata json file
     '''
-
+    
     if not outputdir:
         
         outputdir = Path(filepath).parent.parent/'output'

@@ -82,9 +82,9 @@ false_values = ["false","0","no","not required","n"]
 fieldmap = {
     'constraints.required': lambda v: to_bool(v),
     'constraints.enum': lambda v: split_str_array(v),
-    'constraints.maximum':int,
-    'constraints.minimum':int, #TODO:need to add to schema
-    'constraints.maxLength':int,
+    # 'constraints.maximum':int,
+    # 'constraints.minimum':int, #TODO:need to add to schema
+    # 'constraints.maxLength':int,
     'cde_id': lambda v: split_and_map(v, props['cde_id']),
     'ontology_id': lambda v: split_and_map(v, props['ontology_id']),
     'encoding':lambda v: loads_dict(v),

@@ -57,7 +57,7 @@ def convert_template_csv_to_json(
 
     # loop through empty json output and assign mapping type
     # read in csv
-    source = etl.fromcsv(csvtemplate_path,encoding='utf-8')
+    source = Resource(csvtemplate_path).to_petl()
     fields_to_add = [
         (field,'') 
         for field in mappings.keys() 
@@ -67,6 +67,7 @@ def convert_template_csv_to_json(
         source
         .addfields(fields_to_add) # add fields from mappings not in the csv template to allow convert fxns to work
         .convert(fieldmap)
+        .convertnumbers()
         .cut(source.fieldnames()) #want to include only fields in csv
     )       
     data_dictionary = data_dictionary_props.copy()
