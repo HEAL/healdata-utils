@@ -16,3 +16,9 @@ def to_int_if_base10(val):
                 return digits[0]
     else:
         return string
+
+
+def parse_encodings():
+    # NOTE: need to consider multiple delimiters 
+    # (eg if comma delimtier and in value label, only select first one)
+    pass 
