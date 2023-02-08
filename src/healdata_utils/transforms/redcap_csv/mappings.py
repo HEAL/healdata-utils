@@ -1,8 +1,13 @@
-import pandas as pd
-#STEPS
-#1 fill section headers
-#2 sort rows to allow proper row indexing
-#3 make conditionals for each map function
+""" 
+Functions for each redcap field type
+that uses redcap field info to determine
+various pieces of field metadata.
+
+Input assumes a dictionary with key=redcap fieldname;value=redcap value
+""" 
+
+from healdata_utils import utils
+from .headers import choices_fieldname,slider_fieldname,calc_fieldname,text_valid_fieldname 
 # NOTES	- large text box for lots of text
 # DROPDOWN	- dropdown menu with options
 # RADIO	- radio buttons with options
@@ -15,16 +20,50 @@ import pandas as pd
 # YESNO	- radio buttons with yes and no options; coded as 1, Yes | 0, No
 # TRUEFALSE	- radio buttons with true and false options; coded as 1, True | 0, False
 
-def maptext(field,text_validation_colindex=6):
+def _parse_field_properties_from_encodings(
+    encodings_string
+    ):  
+    """ 
+    Many of the field types have the same logic
+    for conversion to data types and just differ
+    in presentation (dropbox,radio box) so making
+    fxn to support this
+
+    Currently supports strings,ints,and nums for types
+
+    NOTE: this function may be best housed in the general 
+    utils but keeping local for now and specific to 
+    redcap delimiters
+    """ 
+    # parse encodings
+    fieldencodings = utils.parse_dictionary_str(
+        encodings_string, item_sep=",", keyval_sep="|")
+    # get enums
+    fieldenums = list(fieldencodings.keys())
+    #interpret type from enums
+    for val in fieldenums:
+        if val.isnumeric():
+            try:
+                int(val)
+                fieldtype = "integer"
+            except ValueError:
+                fieldtype = "number"
+        else:
+            fieldtype = "string"
+    
+    return {
+        "type":fieldtype,
+        "encodings":fieldencodings,
+        "constraints.enum":fieldenums
+    }
+
+def maptext(field):
     """ 
     TEXT - single-line text box (for text and numbers)
 
     looks at text validation field
     """
-    text_validation = field[text_validation_colindex].lower()
-
-
-
+    text_validation = field[text_valid_fieldname].lower()
     fieldformat = None 
     fieldpattern = None
     if "datetime" in text_validation:
@@ -69,11 +108,11 @@ def maptext(field,text_validation_colindex=6):
     else:
         fieldtype = "string"
     
-    return {
-        "type":fieldtype,
-        "format":fieldformat,
-        "constraints.pattern":fieldpattern
-    }
+    props = zip(
+        ["type","format","constraints.pattern"],
+        [fieldtype,fieldformat,fieldpattern]
+    )
+    return {name:prop for name,prop in props if prop}
 
 def mapnotes(field):
     """ NOTES	
@@ -88,10 +127,9 @@ def mapdropdown(field):
 
     Determined by "options" (ie Choices, Calculations, OR Slider Labels)
     """
-    # parse enum/encodings
+    encodings_string = field[choices_fieldname]
+    return _parse_field_properties_from_encodings(encodings_string)
 
-
-    {"type":"integer"}
 def mapradio(field):
     """ 
     RADIO	- radio buttons with options
@@ -100,6 +138,8 @@ def mapradio(field):
 
     """
     # parse enum/encodings 
+    encodings_string = field[choices_fieldname]
+    return _parse_field_properties_from_encodings(encodings_string)
 
 
 def mapcheckbox(field):
@@ -136,34 +176,85 @@ def mapcheckbox(field):
     race____2
 
     A checkbox field can be thought of as a series of yes/no questions in one field. Therefore, a yes (check) is coded as 1 and a no (uncheck) is coded a 0. An unchecked response on a checkbox field is still regarded as an answer and is not considered missing.
-    """ 
+    """
+    checkboxname = field[choices_fieldname]
+    choices = utils.parse_dictionary_str(
+        encodings_string, item_sep=",", keyval_sep="|")
+    fieldtype = "boolean"
+    fieldenums = ["0","1"]
+    fieldencodings = {"0":"Unchecked","1":"Checked"}
 
+    fieldsnew = [
+        {
+            "description":f"[{choice}]",
+            "title": checkboxname.title()+":"+choice,
+            "name":checkboxname+"___"+re.sub("^\-","_",val),
+            "type":fieldtype,
+            "constraints.enum":fieldenums,
+            "encodings":fieldencodings
+        }
+        for val,choice in choices.items()
+    ]
+    return fieldsnew
 
 def mapfile(field):
-    pass 
+    return {"type":"string"}
 
 
 def mapcalc(field):
-    pass 
+    return {
+        "description":f"[Calculation: {field[calc_fieldname]}]",
+        "type": "number"
+    }
 
 
 def mapsql(field):
-    pass 
+    return None
 
 
 def mapyesno(field):
-    pass 
+    return {
+        "type":"boolean",
+        "constraints":{"enum":["0","1"]},
+        "encodings":{"0":"No","1":"Yes"}
+    }
 
 
 def maptruefalse(field):
-    pass 
+    return {
+        "type":"boolean",
+        "constraints":{"enum":["0","1"]},
+        "encodings":{"0":"False","1":"True"}
+    }
 
 
 def mapslider(field):
-    pass 
-
+    vallist = ["0","50","100"]
+    lbllist = utils.parse_list_str(field[slider_index],"|") 
+    fieldencodings = {vallist[i]:lbl for i,lbl in enumerate(fieldenum)}
+    return {
+        "type":"integer",
+        "constraints":{
+            "minimum":0,
+            "maximum":100
+        },
+        "encodings":fieldencodings
+    }
 def mapdescriptive(field):
-    pass 
+    return None
 
-def mapfile(field):
-    pass 
+
+#not mapping descriptives or sql (TODO: mapping sql?)
+typemappings = {
+    "text":maptext,
+    "notes":mapnotes,
+    "dropdown":mapdropdown,
+    "radio":mapradio,
+    "checkbox":mapcheckbox,
+    "slider":mapslider,
+    "yesno":mapyesno,
+    "truefalse":maptruefalse,
+    "calc":mapcalc
+}
+
+

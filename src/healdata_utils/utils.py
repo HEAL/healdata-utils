@@ -18,7 +18,21 @@ def to_int_if_base10(val):
         return string
 
 
-def parse_encodings():
-    # NOTE: need to consider multiple delimiters 
-    # (eg if comma delimtier and in value label, only select first one)
-    pass 
+def parse_dictionary_str(string,item_sep,keyval_sep):
+    """ 
+    parses a stringified dictionary into a dictionary
+    based on item separator 
+
+    """
+    stritems = string.strip().split(item_sep)
+    items = {}
+    for stritem in stritems:
+        item = stritem.split(keyval_sep,1)
+        items[item[0]] = items[item[1]]
+    
+    return items 
+
+
+def parse_list_str(string,list_sep):
+    return string.strip().split(list_sep)
+
