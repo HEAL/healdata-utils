@@ -5,7 +5,7 @@ various pieces of field metadata.
 
 Input assumes a dictionary with key=redcap fieldname;value=redcap value
 """ 
-
+import re
 from healdata_utils import utils
 from .headers import choices_fieldname,slider_fieldname,calc_fieldname,text_valid_fieldname 
 # NOTES	- large text box for lots of text
@@ -37,11 +37,12 @@ def _parse_field_properties_from_encodings(
     """ 
     # parse encodings
     fieldencodings = utils.parse_dictionary_str(
-        encodings_string, item_sep=",", keyval_sep="|")
+        encodings_string, item_sep="|", keyval_sep=",")
     # get enums
     fieldenums = list(fieldencodings.keys())
     #interpret type from enums
     for val in fieldenums:
+        val = val.strip()
         if val.isnumeric():
             try:
                 int(val)
@@ -53,8 +54,8 @@ def _parse_field_properties_from_encodings(
     
     return {
         "type":fieldtype,
-        "encodings":fieldencodings,
-        "constraints.enum":fieldenums
+        "encodings":{key.strip():val.strip() for key,val in fieldencodings.items()},
+        "constraints.enum":[val.strip() for val in fieldenums]
     }
 
 def maptext(field):
@@ -63,7 +64,10 @@ def maptext(field):
 
     looks at text validation field
     """
-    text_validation = field[text_valid_fieldname].lower()
+    if field.get(text_valid_fieldname):
+        text_validation = field[text_valid_fieldname].lower()
+    else:
+        text_validation = ""
     fieldformat = None 
     fieldpattern = None
     if "datetime" in text_validation:
@@ -179,7 +183,7 @@ def mapcheckbox(field):
     """
     checkboxname = field[choices_fieldname]
     choices = utils.parse_dictionary_str(
-        encodings_string, item_sep=",", keyval_sep="|")
+        checkboxname, item_sep="|", keyval_sep=",")
     fieldtype = "boolean"
     fieldenums = ["0","1"]
     fieldencodings = {"0":"Unchecked","1":"Checked"}
@@ -254,7 +258,8 @@ typemappings = {
     "slider":mapslider,
     "yesno":mapyesno,
     "truefalse":maptruefalse,
-    "calc":mapcalc
+    "calc":mapcalc,
+    "file":mapfile
 }
 
 
