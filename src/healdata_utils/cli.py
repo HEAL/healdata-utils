@@ -12,6 +12,7 @@ from healdata_utils.transforms.csvtemplate.conversion import convert_template_cs
 from healdata_utils.transforms.csvtemplate.conversion import convert_json_to_template_csv
 from healdata_utils.transforms.readstat.conversion import convert_readstat
 from healdata_utils.transforms.redcap.conversion import convert_redcap
+from healdata_utils.transforms.redcapcsv.conversion import convert_redcapcsv
 import json
 from pathlib import Path
 import jsonschema
@@ -19,9 +20,11 @@ from healdata_utils.schemas import validate_json
 import pandas as pd
 choice_fxn = {
     'csv': convert_template_csv_to_json,
-    'sav': convert_readstat,
+    'sav|sas7bdat|dta|por': convert_readstat,
     'json':convert_json_to_template_csv,
-    'xml': convert_redcap #currently only redcap is xml but will need a wrapper function further specifying conversion fxn
+    'redcap.xml': convert_redcap,
+    "redcap.csv":convert_redcapcsv
+
 }
 
 def generate_outputpath(input_filepath,outputdir,suffix='json'):
@@ -43,7 +46,7 @@ def to_json(filepath,outputdir,data_dictionary_props={},inputtype=None,):
     outputdir = Path(outputdir)
     #infer input type
     if not inputtype:
-        inputtype = filepath.suffix.replace('.','')
+        inputtype = ''.join(filepath.suffixes)[1:].lower()
 
     ## add dd title
     if not data_dictionary_props.get('title'):
