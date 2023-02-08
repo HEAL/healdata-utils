@@ -32,40 +32,55 @@ def gather(sourcefields):
     """ 
     def _add_description(sourcefield,targetfield):
 
-        fieldlabel = sourcefield.get("label","")
+        if sourcefield.get("label"):
+            fieldlabel = sourcefield["label"]
+        else:
+            fieldlabel = ""
+
         if sourcefield.get("section"):
             fieldsection = sourcefield['section']+": "
         else:
             fieldsection = ""
+
+        if targetfield.get("description"):
+            fielddescription = targetfield["description"]
+        else:
+            fielddescription = ""
         
+
         
-        return fieldsection+fieldlabel+targetfield.get("description","")
+        fielddescription = fieldsection+fieldlabel+fielddescription
+        if fielddescription:
+            return fielddescription
+        else:
+            return "No field label for this variable"
 
     def _add_title(sourcefield,targetfield):
         if sourcefield.get("label"):
             return sourcefield["label"]
+        else:
+            return "No field label for this variable"
     
     def _add_module(sourcefield,targetfield):
         if sourcefield.get("form"):
             return sourcefield["form"]
 
-    targetfields = [{"name":field["name"]} for field in sourcefields]
+    targetfields = [{"name":field["name"]} for field in sourcefields 
+        if field["type"] in list(typemappings)]
 
-    for i,sourcefield in enumerate(sourcefields):
-        targetfield = targetfields[i]
+    sourcedatafields = [field for field in sourcefields 
+        if field["type"] in list(typemappings)]
+
+    for targetfield,sourcefield in zip(targetfields,sourcedatafields):
         sourcefieldtype = sourcefield["type"]
-
-        if sourcefieldtype in list(typemappings):
-            mappedfield = typemappings[sourcefieldtype](sourcefield)
-            mappedfieldlist = [mappedfield] if isinstance(mappedfield,dict) else mappedfield
-            #NOTE if one sourcefield generates more than 1 target field (ie checkbox) need to iterate through
-            for mappedfield in mappedfieldlist:
-                mappedfield["description"] = _add_description(sourcefield, mappedfield)
-                mappedfield["title"] = _add_title(sourcefield, mappedfield)
-                mappedfield["module"] = _add_module(sourcefield, mappedfield)
-                targetfield.update(mappedfield)
-        else:
-            targetfields.pop(i) 
+        mappedfield = typemappings[sourcefieldtype](sourcefield)
+        mappedfieldlist = [mappedfield] if isinstance(mappedfield,dict) else mappedfield
+        #NOTE if one sourcefield generates more than 1 target field (ie checkbox) need to iterate through
+        for mappedfield in mappedfieldlist:
+            mappedfield["description"] = _add_description(sourcefield, mappedfield)
+            mappedfield["title"] = _add_title(sourcefield, mappedfield)
+            mappedfield["module"] = _add_module(sourcefield, mappedfield)
+            targetfield.update(mappedfield)
 
     return targetfields
 
