@@ -28,7 +28,7 @@ def parse_dictionary_str(string,item_sep,keyval_sep):
     items = {}
     for stritem in stritems:
         item = stritem.split(keyval_sep,1)
-        items[item[0]] = items[item[1]]
+        items[item[0]] = item[1].strip()
     
     return items 
 
