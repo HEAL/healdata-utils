@@ -7,6 +7,8 @@ in csv format to a heal-complieant json data dictionary
 from frictionless import Resource
 from . import headers,schema
 from .mappings import typemappings 
+from healdata_utils import utils
+import numpy as np
 #STEPS
 #1 fill section headers
 #2 sort rows to allow proper row indexing
@@ -21,8 +23,14 @@ def read(file_path):
         .to_petl()
         .todf()
         .rename(columns=headers.mapping)
-        .replace({"":None})
+        .applymap(utils.strip_html)
     )
+
+    #downfill section (if blank -- given we read in with petl, blanks are "" but ffill takes in np.nan)
+    sourcedf['section'] = sourcedf.replace({"":np.nan}).groupby('form')['section'].ffill()
+
+    sourcedf.fillna("",inplace=True) 
+
     return sourcedf.to_dict(orient="records")
 
 def gather(sourcefields):
@@ -30,57 +38,64 @@ def gather(sourcefields):
     maps and translates fields based on redcap field type
     to heal json
     """ 
-    def _add_description(sourcefield,targetfield):
+    def __add_description(sourcefield,targetfield):
 
         if sourcefield.get("label"):
-            fieldlabel = sourcefield["label"]
+            fieldlabel = sourcefield["label"].strip()
         else:
             fieldlabel = ""
 
         if sourcefield.get("section"):
-            fieldsection = sourcefield['section']+": "
+            fieldsection = sourcefield['section'].strip()+": "
         else:
             fieldsection = ""
 
         if targetfield.get("description"):
-            fielddescription = targetfield["description"]
+            fielddescription = targetfield["description"].strip()
         else:
             fielddescription = ""
         
-
-        
-        fielddescription = fieldsection+fieldlabel+fielddescription
+        fielddescription = utils.strip_html((fieldsection+fieldlabel+fielddescription).strip())
         if fielddescription:
             return fielddescription
         else:
             return "No field label for this variable"
 
-    def _add_title(sourcefield,targetfield):
+    def __add_title(sourcefield,targetfield):
+        targettitle = targetfield.get("title","")
         if sourcefield.get("label"):
-            return sourcefield["label"]
+            return targettitle + utils.strip_html(sourcefield["label"].strip())
         else:
             return "No field label for this variable"
     
-    def _add_module(sourcefield,targetfield):
+    def __add_module(sourcefield,targetfield):
         if sourcefield.get("form"):
             return sourcefield["form"]
-
-    targetfields = [{"name":field["name"]} for field in sourcefields 
-        if field["type"] in list(typemappings)]
+    
+    def _add_metadata(sourcefield,targetfield):
+        targetfield["description"] = __add_description(sourcefield, targetfield)
+        targetfield["title"] = __add_title(sourcefield, targetfield)
+        targetfield["module"] = __add_module(sourcefield, targetfield)
 
     sourcedatafields = [field for field in sourcefields 
         if field["type"] in list(typemappings)]
 
-    for targetfield,sourcefield in zip(targetfields,sourcedatafields):
+    targetfields = []
+    for sourcefield in sourcedatafields:
         sourcefieldtype = sourcefield["type"]
-        mappedfield = typemappings[sourcefieldtype](sourcefield)
-        mappedfieldlist = [mappedfield] if isinstance(mappedfield,dict) else mappedfield
+        targetfield = typemappings[sourcefieldtype](sourcefield)
         #NOTE if one sourcefield generates more than 1 target field (ie checkbox) need to iterate through
-        for mappedfield in mappedfieldlist:
-            mappedfield["description"] = _add_description(sourcefield, mappedfield)
-            mappedfield["title"] = _add_title(sourcefield, mappedfield)
-            mappedfield["module"] = _add_module(sourcefield, mappedfield)
-            targetfield.update(mappedfield)
+        #if list (and hence not one to one mapping with sourcefield), assumes mandatory fields
+        if isinstance(targetfield,list):
+            for _targetfield in targetfield:
+                assert 'name' in _targetfield and 'type' in _targetfield
+                _add_metadata(sourcefield,_targetfield)
+                targetfields.append(_targetfield)
+        else:
+            _add_metadata(sourcefield,targetfield)
+            targetfield_with_name = {'name':sourcefield['name']}
+            targetfield_with_name.update(targetfield)
+            targetfields.append(targetfield_with_name)
 
     return targetfields
 

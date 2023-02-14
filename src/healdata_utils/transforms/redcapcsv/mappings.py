@@ -181,18 +181,18 @@ def mapcheckbox(field):
 
     A checkbox field can be thought of as a series of yes/no questions in one field. Therefore, a yes (check) is coded as 1 and a no (uncheck) is coded a 0. An unchecked response on a checkbox field is still regarded as an answer and is not considered missing.
     """
-    checkboxname = field[choices_fieldname]
+    checkboxname = field['name']
     choices = utils.parse_dictionary_str(
-        checkboxname, item_sep="|", keyval_sep=",")
+        field[choices_fieldname], item_sep="|", keyval_sep=",")
     fieldtype = "boolean"
     fieldenums = ["0","1"]
     fieldencodings = {"0":"Unchecked","1":"Checked"}
 
     fieldsnew = [
         {
-            "description":f"[{choice}]",
+            "description":f"[choice={choice}]",
             "title": checkboxname.title()+":"+choice,
-            "name":checkboxname+"___"+re.sub("^\-","_",val),
+            "name":checkboxname+"___"+re.sub("^\-","_",val).strip(), #NOTE: REDCAP changes negative sign to underscore
             "type":fieldtype,
             "constraints.enum":fieldenums,
             "encodings":fieldencodings
@@ -207,7 +207,7 @@ def mapfile(field):
 
 def mapcalc(field):
     return {
-        "description":f"[Calculation: {field[calc_fieldname]}]",
+        "description":f"[calculation: {field[calc_fieldname]}]",
         "type": "number"
     }
 
