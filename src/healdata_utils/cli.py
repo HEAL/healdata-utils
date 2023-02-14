@@ -20,7 +20,10 @@ from healdata_utils.schemas import validate_json
 import pandas as pd
 choice_fxn = {
     'csv': convert_template_csv_to_json,
-    'sav|sas7bdat|dta|por': convert_readstat,
+    'sav': convert_readstat,
+    'dta':convert_readstat,
+    'por':convert_readstat,
+    'sas7bdat':convert_readstat,
     'json':convert_json_to_template_csv,
     'redcap.xml': convert_redcap,
     "redcap.csv":convert_redcapcsv
