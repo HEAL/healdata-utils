@@ -1,4 +1,12 @@
 ''' General utilities/helper functions'''
+import re
+def strip_html(html_string):
+    if html_string:
+        return re.sub(r'<[^>]+>', '', html_string)
+    else:
+        return html_string
+
+
 def to_int_if_base10(val):
     """ 
     converts value to a string and if 
