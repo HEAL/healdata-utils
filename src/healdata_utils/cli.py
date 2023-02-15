@@ -41,7 +41,7 @@ def generate_outputpath(input_filepath,outputdir,suffix='json'):
         outputpath = Path(outputdir)/input_filepath.with_suffix(f".{suffix}").name
     return outputpath 
 
-def to_json(filepath,outputdir,data_dictionary_props={},inputtype=None,):
+def to_json(filepath,outputdir,data_dictionary_props={},inputtype=None,raise_valid_error=True):
     f""" 
     writes a data dictioanry (ie variable level metadata)
     to a HEAL metadata json file using a registered function.
@@ -73,13 +73,21 @@ def to_json(filepath,outputdir,data_dictionary_props={},inputtype=None,):
 
 
     # VALIDATE
-    print('Validating output json file.....')
-    validate_json(data_dictionary)
+    try:
+        print(f'Validating output json file created from {str(filepath)}.....')
+        validate_json(data_dictionary)
+        data_dictionary['valid'] = True
+    except Exception as e:
+        data_dictionary['valid'] = False
+        if raise_valid_error:
+            raise Exception("Data dictionary not valid, look at validation error above")
+        else:
+            print(e)
 
     # write to file
     if Path(outputdir).is_dir():
         Path(outputdir).mkdir(exist_ok=True)
-        outputpath = outputdir/filepath.name.replace(".csv",".json")
+        outputpath = outputdir/filepath.name.replace(f".{inputtype}",".json")
     
     else:
         outputpath = outputdir
