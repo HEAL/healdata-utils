@@ -1,0 +1,804 @@
+{
+    "title": "Michigan Body Map of Recent Acute Pain",
+    "data_dictionary": [
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMFace]",
+            "title": "Mbody:MBMFace@IMAGEMAP=MBODY",
+            "name": "mbody___0",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRJaw]",
+            "title": "Mbody:MBMRJaw@IMAGEMAP=MBODY",
+            "name": "mbody___1",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLJaw]",
+            "title": "Mbody:MBMLJaw@IMAGEMAP=MBODY",
+            "name": "mbody___2",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRChest]",
+            "title": "Mbody:MBMRChest@IMAGEMAP=MBODY",
+            "name": "mbody___3",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLChest]",
+            "title": "Mbody:MBMLChest@IMAGEMAP=MBODY",
+            "name": "mbody___4",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRUpArMBM]",
+            "title": "Mbody:MBMRUpArMBM@IMAGEMAP=MBODY",
+            "name": "mbody___5",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLUpArMBM]",
+            "title": "Mbody:MBMLUpArMBM@IMAGEMAP=MBODY",
+            "name": "mbody___6",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRElbw]",
+            "title": "Mbody:MBMRElbw@IMAGEMAP=MBODY",
+            "name": "mbody___7",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLElbw]",
+            "title": "Mbody:MBMLElbw@IMAGEMAP=MBODY",
+            "name": "mbody___8",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRLowArMBM]",
+            "title": "Mbody:MBMRLowArMBM@IMAGEMAP=MBODY",
+            "name": "mbody___9",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLLowArMBM]",
+            "title": "Mbody:MBMLLowArMBM@IMAGEMAP=MBODY",
+            "name": "mbody___10",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRHand]",
+            "title": "Mbody:MBMRHand@IMAGEMAP=MBODY",
+            "name": "mbody___11",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLHand]",
+            "title": "Mbody:MBMLHand@IMAGEMAP=MBODY",
+            "name": "mbody___12",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMAbdoMBMen]",
+            "title": "Mbody:MBMAbdoMBMen@IMAGEMAP=MBODY",
+            "name": "mbody___13",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMPelvis]",
+            "title": "Mbody:MBMPelvis@IMAGEMAP=MBODY",
+            "name": "mbody___14",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRGroin]",
+            "title": "Mbody:MBMRGroin@IMAGEMAP=MBODY",
+            "name": "mbody___15",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLGroin]",
+            "title": "Mbody:MBMLGroin@IMAGEMAP=MBODY",
+            "name": "mbody___16",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRUpLeg]",
+            "title": "Mbody:MBMRUpLeg@IMAGEMAP=MBODY",
+            "name": "mbody___17",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLUpLeg]",
+            "title": "Mbody:MBMLUpLeg@IMAGEMAP=MBODY",
+            "name": "mbody___18",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRKnee]",
+            "title": "Mbody:MBMRKnee@IMAGEMAP=MBODY",
+            "name": "mbody___19",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLKnee]",
+            "title": "Mbody:MBMLKnee@IMAGEMAP=MBODY",
+            "name": "mbody___20",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRLowLeg]",
+            "title": "Mbody:MBMRLowLeg@IMAGEMAP=MBODY",
+            "name": "mbody___21",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLLowLeg]",
+            "title": "Mbody:MBMLLowLeg@IMAGEMAP=MBODY",
+            "name": "mbody___22",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRFoot]",
+            "title": "Mbody:MBMRFoot@IMAGEMAP=MBODY",
+            "name": "mbody___23",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLFoot]",
+            "title": "Mbody:MBMLFoot@IMAGEMAP=MBODY",
+            "name": "mbody___24",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMHead]",
+            "title": "Mbody:MBMHead@IMAGEMAP=MBODY",
+            "name": "mbody___25",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMNeck]",
+            "title": "Mbody:MBMNeck@IMAGEMAP=MBODY",
+            "name": "mbody___26",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLShldr]",
+            "title": "Mbody:MBMLShldr@IMAGEMAP=MBODY",
+            "name": "mbody___27",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRShldr]",
+            "title": "Mbody:MBMRShldr@IMAGEMAP=MBODY",
+            "name": "mbody___28",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMUpBack]",
+            "title": "Mbody:MBMUpBack@IMAGEMAP=MBODY",
+            "name": "mbody___29",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLowBack]",
+            "title": "Mbody:MBMLowBack@IMAGEMAP=MBODY",
+            "name": "mbody___30",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLHip]",
+            "title": "Mbody:MBMLHip@IMAGEMAP=MBODY",
+            "name": "mbody___31",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRHip]",
+            "title": "Mbody:MBMRHip@IMAGEMAP=MBODY",
+            "name": "mbody___32",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMLBttck]",
+            "title": "Mbody:MBMLBttck@IMAGEMAP=MBODY",
+            "name": "mbody___33",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMRBttck]",
+            "title": "Mbody:MBMRBttck@IMAGEMAP=MBODY",
+            "name": "mbody___34",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MBMnone]",
+            "title": "Mbody:MBMnone@IMAGEMAP=MBODY",
+            "name": "mbody___35",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmface",
+            "description": "Face[calculation: if([mbody(0)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Face",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrjaw",
+            "description": "Right Jaw[calculation: if([mbody(1)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Jaw",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmljaw",
+            "description": "Left Jaw[calculation: if([mbody(2)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Jaw",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrchest",
+            "description": "Right Chest[calculation: if([mbody(3)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Chest",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmlchest",
+            "description": "Left Chest[calculation: if([mbody(4)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Chest",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmruparmbm",
+            "description": "Right Upper Arm[calculation: if([mbody(5)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Upper Arm",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmluparmbm",
+            "description": "Left Upper Arm[calculation: if([mbody(6)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Upper Arm",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrelbw",
+            "description": "Right Elbow[calculation: if([mbody(7)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Elbow",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmlelbw",
+            "description": "Left Elbow[calculation: if([mbody(8)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Elbow",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrlowarmbm",
+            "description": "Right Lower Arm[calculation: if([mbody(9)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Lower Arm",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmllowarmbm",
+            "description": "Left Lower Arm[calculation: if([mbody(10)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Lower Arm",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrhand",
+            "description": "Right Hand[calculation: if([mbody(11)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Hand",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmlhand",
+            "description": "Left Hand[calculation: if([mbody(12)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Hand",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmabdombmen",
+            "description": "Abdomen[calculation: if([mbody(13)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Abdomen",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmpelvis",
+            "description": "Pelvis[calculation: if([mbody(14)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Pelvis",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrgroin",
+            "description": "Right Groin[calculation: if([mbody(15)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Groin",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmlgroin",
+            "description": "Left Groin[calculation: if([mbody(16)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Groin",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrupleg",
+            "description": "Right Upper Leg[calculation: if([mbody(17)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Upper Leg",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmlupleg",
+            "description": "Left Upper Leg[calculation: if([mbody(18)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Upper Leg",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrknee",
+            "description": "Right Knee[calculation: if([mbody(19)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Knee",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmlknee",
+            "description": "Left Knee[calculation: if([mbody(20)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Knee",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrlowleg",
+            "description": "Right Lower Leg[calculation: if([mbody(21)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Lower Leg",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmllowleg",
+            "description": "Left Lower Leg[calculation: if([mbody(22)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Lower Leg",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrfoot",
+            "description": "Right Foot[calculation: if([mbody(23)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Foot",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmlfoot",
+            "description": "Left Foot[calculation: if([mbody(24)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Foot",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmhead",
+            "description": "Head[calculation: if([mbody(25)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Head",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmneck",
+            "description": "Neck[calculation: if([mbody(26)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Neck",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmlshldr",
+            "description": "Left Shoulder[calculation: if([mbody(27)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Shoulder",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrshldr",
+            "description": "Right Shoulder[calculation: if([mbody(28)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Shoulder",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmupback",
+            "description": "Upper Back[calculation: if([mbody(29)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Upper Back",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmlowback",
+            "description": "Lower Back[calculation: if([mbody(30)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Lower Back",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmlhip",
+            "description": "Left Hip[calculation: if([mbody(31)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Hip",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrhip",
+            "description": "Right Hip[calculation: if([mbody(32)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Hip",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmlbttck",
+            "description": "Left Buttock[calculation: if([mbody(33)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Buttock",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmrbttck",
+            "description": "Right Buttock[calculation: if([mbody(34)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Buttock",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmnone",
+            "description": "No Pain[calculation: if([mbody(35)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "No Pain",
+            "module": "michigan_body_map_image_recent"
+        },
+        {
+            "name": "mbmcurrent_total",
+            "description": "Total Michigan Body Map Score[calculation: sum([mbmface], [mbmrjaw], [mbmljaw], [mbmrchest], [mbmlchest], [mbmruparmbm], [mbmluparmbm], [mbmrelbw], [mbmlelbw], [mbmrlowarmbm], [mbmllowarmbm], [mbmrhand], [mbmlhand], [mbmabdombmen], [mbmpelvis], [mbmrgroin], [mbmlgroin], [mbmrupleg], [mbmlupleg], [mbmrknee], [mbmlknee], [mbmrlowleg], [mbmllowleg], [mbmrfoot], [mbmlfoot], [mbmhead], [mbmneck], [mbmlshldr], [mbmrshldr], [mbmupback], [mbmlowback], [mbmlhip], [mbmrhip], [mbmlbttck], [mbmrbttck])]",
+            "type": "number",
+            "title": "Total Michigan Body Map Score",
+            "module": "michigan_body_map_image_recent"
+        }
+    ]
+}

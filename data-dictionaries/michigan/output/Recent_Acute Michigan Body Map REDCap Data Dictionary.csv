@@ -1,0 +1,74 @@
+description,title,name,type,constraints.enum,encodings,module
+@IMAGEMAP=MBODY[choice=MBMFace],Mbody:MBMFace@IMAGEMAP=MBODY,mbody___0,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRJaw],Mbody:MBMRJaw@IMAGEMAP=MBODY,mbody___1,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLJaw],Mbody:MBMLJaw@IMAGEMAP=MBODY,mbody___2,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRChest],Mbody:MBMRChest@IMAGEMAP=MBODY,mbody___3,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLChest],Mbody:MBMLChest@IMAGEMAP=MBODY,mbody___4,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRUpArMBM],Mbody:MBMRUpArMBM@IMAGEMAP=MBODY,mbody___5,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLUpArMBM],Mbody:MBMLUpArMBM@IMAGEMAP=MBODY,mbody___6,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRElbw],Mbody:MBMRElbw@IMAGEMAP=MBODY,mbody___7,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLElbw],Mbody:MBMLElbw@IMAGEMAP=MBODY,mbody___8,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRLowArMBM],Mbody:MBMRLowArMBM@IMAGEMAP=MBODY,mbody___9,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLLowArMBM],Mbody:MBMLLowArMBM@IMAGEMAP=MBODY,mbody___10,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRHand],Mbody:MBMRHand@IMAGEMAP=MBODY,mbody___11,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLHand],Mbody:MBMLHand@IMAGEMAP=MBODY,mbody___12,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMAbdoMBMen],Mbody:MBMAbdoMBMen@IMAGEMAP=MBODY,mbody___13,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMPelvis],Mbody:MBMPelvis@IMAGEMAP=MBODY,mbody___14,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRGroin],Mbody:MBMRGroin@IMAGEMAP=MBODY,mbody___15,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLGroin],Mbody:MBMLGroin@IMAGEMAP=MBODY,mbody___16,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRUpLeg],Mbody:MBMRUpLeg@IMAGEMAP=MBODY,mbody___17,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLUpLeg],Mbody:MBMLUpLeg@IMAGEMAP=MBODY,mbody___18,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRKnee],Mbody:MBMRKnee@IMAGEMAP=MBODY,mbody___19,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLKnee],Mbody:MBMLKnee@IMAGEMAP=MBODY,mbody___20,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRLowLeg],Mbody:MBMRLowLeg@IMAGEMAP=MBODY,mbody___21,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLLowLeg],Mbody:MBMLLowLeg@IMAGEMAP=MBODY,mbody___22,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRFoot],Mbody:MBMRFoot@IMAGEMAP=MBODY,mbody___23,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLFoot],Mbody:MBMLFoot@IMAGEMAP=MBODY,mbody___24,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMHead],Mbody:MBMHead@IMAGEMAP=MBODY,mbody___25,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMNeck],Mbody:MBMNeck@IMAGEMAP=MBODY,mbody___26,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLShldr],Mbody:MBMLShldr@IMAGEMAP=MBODY,mbody___27,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRShldr],Mbody:MBMRShldr@IMAGEMAP=MBODY,mbody___28,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMUpBack],Mbody:MBMUpBack@IMAGEMAP=MBODY,mbody___29,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLowBack],Mbody:MBMLowBack@IMAGEMAP=MBODY,mbody___30,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLHip],Mbody:MBMLHip@IMAGEMAP=MBODY,mbody___31,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRHip],Mbody:MBMRHip@IMAGEMAP=MBODY,mbody___32,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMLBttck],Mbody:MBMLBttck@IMAGEMAP=MBODY,mbody___33,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMRBttck],Mbody:MBMRBttck@IMAGEMAP=MBODY,mbody___34,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+@IMAGEMAP=MBODY[choice=MBMnone],Mbody:MBMnone@IMAGEMAP=MBODY,mbody___35,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_recent
+"Face[calculation: if([mbody(0)] = 1, 1, 0)]",Face,mbmface,number,,,michigan_body_map_image_recent
+"Right Jaw[calculation: if([mbody(1)] = 1, 1, 0)]",Right Jaw,mbmrjaw,number,,,michigan_body_map_image_recent
+"Left Jaw[calculation: if([mbody(2)] = 1, 1, 0)]",Left Jaw,mbmljaw,number,,,michigan_body_map_image_recent
+"Right Chest[calculation: if([mbody(3)] = 1, 1, 0)]",Right Chest,mbmrchest,number,,,michigan_body_map_image_recent
+"Left Chest[calculation: if([mbody(4)] = 1, 1, 0)]",Left Chest,mbmlchest,number,,,michigan_body_map_image_recent
+"Right Upper Arm[calculation: if([mbody(5)] = 1, 1, 0)]",Right Upper Arm,mbmruparmbm,number,,,michigan_body_map_image_recent
+"Left Upper Arm[calculation: if([mbody(6)] = 1, 1, 0)]",Left Upper Arm,mbmluparmbm,number,,,michigan_body_map_image_recent
+"Right Elbow[calculation: if([mbody(7)] = 1, 1, 0)]",Right Elbow,mbmrelbw,number,,,michigan_body_map_image_recent
+"Left Elbow[calculation: if([mbody(8)] = 1, 1, 0)]",Left Elbow,mbmlelbw,number,,,michigan_body_map_image_recent
+"Right Lower Arm[calculation: if([mbody(9)] = 1, 1, 0)]",Right Lower Arm,mbmrlowarmbm,number,,,michigan_body_map_image_recent
+"Left Lower Arm[calculation: if([mbody(10)] = 1, 1, 0)]",Left Lower Arm,mbmllowarmbm,number,,,michigan_body_map_image_recent
+"Right Hand[calculation: if([mbody(11)] = 1, 1, 0)]",Right Hand,mbmrhand,number,,,michigan_body_map_image_recent
+"Left Hand[calculation: if([mbody(12)] = 1, 1, 0)]",Left Hand,mbmlhand,number,,,michigan_body_map_image_recent
+"Abdomen[calculation: if([mbody(13)] = 1, 1, 0)]",Abdomen,mbmabdombmen,number,,,michigan_body_map_image_recent
+"Pelvis[calculation: if([mbody(14)] = 1, 1, 0)]",Pelvis,mbmpelvis,number,,,michigan_body_map_image_recent
+"Right Groin[calculation: if([mbody(15)] = 1, 1, 0)]",Right Groin,mbmrgroin,number,,,michigan_body_map_image_recent
+"Left Groin[calculation: if([mbody(16)] = 1, 1, 0)]",Left Groin,mbmlgroin,number,,,michigan_body_map_image_recent
+"Right Upper Leg[calculation: if([mbody(17)] = 1, 1, 0)]",Right Upper Leg,mbmrupleg,number,,,michigan_body_map_image_recent
+"Left Upper Leg[calculation: if([mbody(18)] = 1, 1, 0)]",Left Upper Leg,mbmlupleg,number,,,michigan_body_map_image_recent
+"Right Knee[calculation: if([mbody(19)] = 1, 1, 0)]",Right Knee,mbmrknee,number,,,michigan_body_map_image_recent
+"Left Knee[calculation: if([mbody(20)] = 1, 1, 0)]",Left Knee,mbmlknee,number,,,michigan_body_map_image_recent
+"Right Lower Leg[calculation: if([mbody(21)] = 1, 1, 0)]",Right Lower Leg,mbmrlowleg,number,,,michigan_body_map_image_recent
+"Left Lower Leg[calculation: if([mbody(22)] = 1, 1, 0)]",Left Lower Leg,mbmllowleg,number,,,michigan_body_map_image_recent
+"Right Foot[calculation: if([mbody(23)] = 1, 1, 0)]",Right Foot,mbmrfoot,number,,,michigan_body_map_image_recent
+"Left Foot[calculation: if([mbody(24)] = 1, 1, 0)]",Left Foot,mbmlfoot,number,,,michigan_body_map_image_recent
+"Head[calculation: if([mbody(25)] = 1, 1, 0)]",Head,mbmhead,number,,,michigan_body_map_image_recent
+"Neck[calculation: if([mbody(26)] = 1, 1, 0)]",Neck,mbmneck,number,,,michigan_body_map_image_recent
+"Left Shoulder[calculation: if([mbody(27)] = 1, 1, 0)]",Left Shoulder,mbmlshldr,number,,,michigan_body_map_image_recent
+"Right Shoulder[calculation: if([mbody(28)] = 1, 1, 0)]",Right Shoulder,mbmrshldr,number,,,michigan_body_map_image_recent
+"Upper Back[calculation: if([mbody(29)] = 1, 1, 0)]",Upper Back,mbmupback,number,,,michigan_body_map_image_recent
+"Lower Back[calculation: if([mbody(30)] = 1, 1, 0)]",Lower Back,mbmlowback,number,,,michigan_body_map_image_recent
+"Left Hip[calculation: if([mbody(31)] = 1, 1, 0)]",Left Hip,mbmlhip,number,,,michigan_body_map_image_recent
+"Right Hip[calculation: if([mbody(32)] = 1, 1, 0)]",Right Hip,mbmrhip,number,,,michigan_body_map_image_recent
+"Left Buttock[calculation: if([mbody(33)] = 1, 1, 0)]",Left Buttock,mbmlbttck,number,,,michigan_body_map_image_recent
+"Right Buttock[calculation: if([mbody(34)] = 1, 1, 0)]",Right Buttock,mbmrbttck,number,,,michigan_body_map_image_recent
+"No Pain[calculation: if([mbody(35)] = 1, 1, 0)]",No Pain,mbmnone,number,,,michigan_body_map_image_recent
+"Total Michigan Body Map Score[calculation: sum([mbmface], [mbmrjaw], [mbmljaw], [mbmrchest], [mbmlchest], [mbmruparmbm], [mbmluparmbm], [mbmrelbw], [mbmlelbw], [mbmrlowarmbm], [mbmllowarmbm], [mbmrhand], [mbmlhand], [mbmabdombmen], [mbmpelvis], [mbmrgroin], [mbmlgroin], [mbmrupleg], [mbmlupleg], [mbmrknee], [mbmlknee], [mbmrlowleg], [mbmllowleg], [mbmrfoot], [mbmlfoot], [mbmhead], [mbmneck], [mbmlshldr], [mbmrshldr], [mbmupback], [mbmlowback], [mbmlhip], [mbmrhip], [mbmlbttck], [mbmrbttck])]",Total Michigan Body Map Score,mbmcurrent_total,number,,,michigan_body_map_image_recent

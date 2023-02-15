@@ -1,0 +1,74 @@
+description,title,name,type,constraints.enum,encodings,module
+@IMAGEMAP=MBODY[choice=MFace],Mbodycp:MFace@IMAGEMAP=MBODY,mbodycp___0,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRJaw],Mbodycp:MRJaw@IMAGEMAP=MBODY,mbodycp___1,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLJaw],Mbodycp:MLJaw@IMAGEMAP=MBODY,mbodycp___2,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRChest],Mbodycp:MRChest@IMAGEMAP=MBODY,mbodycp___3,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLChest],Mbodycp:MLChest@IMAGEMAP=MBODY,mbodycp___4,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRUpArm],Mbodycp:MRUpArm@IMAGEMAP=MBODY,mbodycp___5,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLUpArM],Mbodycp:MLUpArM@IMAGEMAP=MBODY,mbodycp___6,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRElbw],Mbodycp:MRElbw@IMAGEMAP=MBODY,mbodycp___7,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLElbw],Mbodycp:MLElbw@IMAGEMAP=MBODY,mbodycp___8,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRLowArm],Mbodycp:MRLowArm@IMAGEMAP=MBODY,mbodycp___9,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLLowArm],Mbodycp:MLLowArm@IMAGEMAP=MBODY,mbodycp___10,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRHand],Mbodycp:MRHand@IMAGEMAP=MBODY,mbodycp___11,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLHand],Mbodycp:MLHand@IMAGEMAP=MBODY,mbodycp___12,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MAbdomen],Mbodycp:MAbdomen@IMAGEMAP=MBODY,mbodycp___13,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MPelvis],Mbodycp:MPelvis@IMAGEMAP=MBODY,mbodycp___14,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRGroin],Mbodycp:MRGroin@IMAGEMAP=MBODY,mbodycp___15,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLGroin],Mbodycp:MLGroin@IMAGEMAP=MBODY,mbodycp___16,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRUpLeg],Mbodycp:MRUpLeg@IMAGEMAP=MBODY,mbodycp___17,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLUpLeg],Mbodycp:MLUpLeg@IMAGEMAP=MBODY,mbodycp___18,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRKnee],Mbodycp:MRKnee@IMAGEMAP=MBODY,mbodycp___19,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLKnee],Mbodycp:MLKnee@IMAGEMAP=MBODY,mbodycp___20,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRLowLeg],Mbodycp:MRLowLeg@IMAGEMAP=MBODY,mbodycp___21,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLLowLeg],Mbodycp:MLLowLeg@IMAGEMAP=MBODY,mbodycp___22,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRFoot],Mbodycp:MRFoot@IMAGEMAP=MBODY,mbodycp___23,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLFoot],Mbodycp:MLFoot@IMAGEMAP=MBODY,mbodycp___24,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MHead],Mbodycp:MHead@IMAGEMAP=MBODY,mbodycp___25,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MNeck],Mbodycp:MNeck@IMAGEMAP=MBODY,mbodycp___26,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLShldr],Mbodycp:MLShldr@IMAGEMAP=MBODY,mbodycp___27,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRShldr],Mbodycp:MRShldr@IMAGEMAP=MBODY,mbodycp___28,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MUpBack],Mbodycp:MUpBack@IMAGEMAP=MBODY,mbodycp___29,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLowBack],Mbodycp:MLowBack@IMAGEMAP=MBODY,mbodycp___30,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLHip],Mbodycp:MLHip@IMAGEMAP=MBODY,mbodycp___31,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRHip],Mbodycp:MRHip@IMAGEMAP=MBODY,mbodycp___32,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MLBttck],Mbodycp:MLBttck@IMAGEMAP=MBODY,mbodycp___33,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=MRBttck],Mbodycp:MRBttck@IMAGEMAP=MBODY,mbodycp___34,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+@IMAGEMAP=MBODY[choice=Mnone],Mbodycp:Mnone@IMAGEMAP=MBODY,mbodycp___35,boolean,0|1,0=Unchecked|1=Checked,michigan_body_map_image_chronic_pain
+"Face[calculation: if([mbodycp(0)]=1,1,0)]",Face,mface,number,,,michigan_body_map_image_chronic_pain
+"Right Jaw[calculation: if([mbodycp(1)] = 1, 1, 0)]",Right Jaw,mrjaw,number,,,michigan_body_map_image_chronic_pain
+"Left Jaw[calculation: if([mbodycp(2)] = 1, 1, 0)]",Left Jaw,mljaw,number,,,michigan_body_map_image_chronic_pain
+"Right Chest[calculation: if([mbodycp(3)] = 1, 1, 0)]",Right Chest,mrchest,number,,,michigan_body_map_image_chronic_pain
+"Left Chest[calculation: if([mbodycp(4)] = 1, 1, 0)]",Left Chest,mlchest,number,,,michigan_body_map_image_chronic_pain
+"Right Upper Arm[calculation: if([mbodycp(5)] = 1, 1, 0)]",Right Upper Arm,mruparm,number,,,michigan_body_map_image_chronic_pain
+"Left Upper Arm[calculation: if([mbodycp(6)] = 1, 1, 0)]",Left Upper Arm,mluparm,number,,,michigan_body_map_image_chronic_pain
+"Right Elbow[calculation: if([mbodycp(7)] = 1, 1, 0)]",Right Elbow,mrelbw,number,,,michigan_body_map_image_chronic_pain
+"Left Elbow[calculation: if([mbodycp(8)] = 1, 1, 0)]",Left Elbow,mlelbw,number,,,michigan_body_map_image_chronic_pain
+"Right Lower Arm[calculation: if([mbodycp(9)] = 1, 1, 0)]",Right Lower Arm,mrlowarm,number,,,michigan_body_map_image_chronic_pain
+"Left Lower Arm[calculation: if([mbodycp(10)] = 1, 1, 0)]",Left Lower Arm,mllowarm,number,,,michigan_body_map_image_chronic_pain
+"Right Hand[calculation: if([mbodycp(11)] = 1, 1, 0)]",Right Hand,mrhand,number,,,michigan_body_map_image_chronic_pain
+"Left Hand[calculation: if([mbodycp(12)] = 1, 1, 0)]",Left Hand,mlhand,number,,,michigan_body_map_image_chronic_pain
+"Abdomen[calculation: if([mbodycp(13)] = 1, 1, 0)]",Abdomen,mabdomen,number,,,michigan_body_map_image_chronic_pain
+"Pelvis[calculation: if([mbodycp(14)] = 1, 1, 0)]",Pelvis,mpelvis,number,,,michigan_body_map_image_chronic_pain
+"Right Groin[calculation: if([mbodycp(15)] = 1, 1, 0)]",Right Groin,mrgroin,number,,,michigan_body_map_image_chronic_pain
+"Left Groin[calculation: if([mbodycp(16)] = 1, 1, 0)]",Left Groin,mlgroin,number,,,michigan_body_map_image_chronic_pain
+"Right Upper Leg[calculation: if([mbodycp(17)] = 1, 1, 0)]",Right Upper Leg,mrupleg,number,,,michigan_body_map_image_chronic_pain
+"Left Upper Leg[calculation: if([mbodycp(18)] = 1, 1, 0)]",Left Upper Leg,mlupleg,number,,,michigan_body_map_image_chronic_pain
+"Right Knee[calculation: if([mbodycp(19)] = 1, 1, 0)]",Right Knee,mrknee,number,,,michigan_body_map_image_chronic_pain
+"Left Knee[calculation: if([mbodycp(20)] = 1, 1, 0)]",Left Knee,mlknee,number,,,michigan_body_map_image_chronic_pain
+"Right Lower Leg[calculation: if([mbodycp(21)] = 1, 1, 0)]",Right Lower Leg,mrlowleg,number,,,michigan_body_map_image_chronic_pain
+"Left Lower Leg[calculation: if([mbodycp(22)] = 1, 1, 0)]",Left Lower Leg,mllowleg,number,,,michigan_body_map_image_chronic_pain
+"Right Foot[calculation: if([mbodycp(23)] = 1, 1, 0)]",Right Foot,mrfoot,number,,,michigan_body_map_image_chronic_pain
+"Left Foot[calculation: if([mbodycp(24)] = 1, 1, 0)]",Left Foot,mlfoot,number,,,michigan_body_map_image_chronic_pain
+"Head[calculation: if([mbodycp(25)] = 1, 1, 0)]",Head,mhead,number,,,michigan_body_map_image_chronic_pain
+"Neck[calculation: if([mbodycp(26)] = '1', 1, 0)]",Neck,mneck,number,,,michigan_body_map_image_chronic_pain
+"Left Shoulder[calculation: if([mbodycp(27)] = 1, 1, 0)]",Left Shoulder,mlshldr,number,,,michigan_body_map_image_chronic_pain
+"Right Shoulder[calculation: if([mbodycp(28)] = 1, 1, 0)]",Right Shoulder,mrshldr,number,,,michigan_body_map_image_chronic_pain
+"Upper Back[calculation: if([mbodycp(29)] = 1, 1, 0)]",Upper Back,mupback,number,,,michigan_body_map_image_chronic_pain
+"Lower Back[calculation: if([mbodycp(30)] = 1, 1, 0)]",Lower Back,mlowback,number,,,michigan_body_map_image_chronic_pain
+"Left Hip[calculation: if([mbodycp(31)] = 1, 1, 0)]",Left Hip,mlhip,number,,,michigan_body_map_image_chronic_pain
+"Right Hip[calculation: if([mbodycp(32)] = 1, 1, 0)]",Right Hip,mrhip,number,,,michigan_body_map_image_chronic_pain
+"Left Buttock[calculation: if([mbodycp(33)] = 1, 1, 0)]",Left Buttock,mlbttck,number,,,michigan_body_map_image_chronic_pain
+"Right Buttock[calculation: if([mbodycp(34)] = 1, 1, 0)]",Right Buttock,mrbttck,number,,,michigan_body_map_image_chronic_pain
+"No Pain[calculation: if([mbodycp(35)] = 1, 1, 0)]",No Pain,mnone,number,,,michigan_body_map_image_chronic_pain
+"Total Michigan Body Map Score[calculation: sum([mface], [mrjaw], [mljaw], [mrchest], [mlchest], [mruparm], [mluparm], [mrelbw], [mlelbw], [mrlowarm], [mllowarm], [mrhand], [mlhand], [mabdomen], [mpelvis], [mrgroin], [mlgroin], [mrupleg], [mlupleg], [mrknee], [mlknee], [mrlowleg], [mllowleg], [mrfoot], [mlfoot], [mhead], [mneck], [mlshldr], [mrshldr], [mupback], [mlowback], [mlhip], [mrhip], [mlbttck], [mrbttck])]",Total Michigan Body Map Score,mbm_total,number,,,michigan_body_map_image_chronic_pain

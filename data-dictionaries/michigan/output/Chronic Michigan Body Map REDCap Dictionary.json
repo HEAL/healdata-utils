@@ -1,0 +1,804 @@
+{
+    "title": "Michigan Body Map of Chronic Pain",
+    "data_dictionary": [
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MFace]",
+            "title": "Mbodycp:MFace@IMAGEMAP=MBODY",
+            "name": "mbodycp___0",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRJaw]",
+            "title": "Mbodycp:MRJaw@IMAGEMAP=MBODY",
+            "name": "mbodycp___1",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLJaw]",
+            "title": "Mbodycp:MLJaw@IMAGEMAP=MBODY",
+            "name": "mbodycp___2",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRChest]",
+            "title": "Mbodycp:MRChest@IMAGEMAP=MBODY",
+            "name": "mbodycp___3",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLChest]",
+            "title": "Mbodycp:MLChest@IMAGEMAP=MBODY",
+            "name": "mbodycp___4",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRUpArm]",
+            "title": "Mbodycp:MRUpArm@IMAGEMAP=MBODY",
+            "name": "mbodycp___5",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLUpArM]",
+            "title": "Mbodycp:MLUpArM@IMAGEMAP=MBODY",
+            "name": "mbodycp___6",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRElbw]",
+            "title": "Mbodycp:MRElbw@IMAGEMAP=MBODY",
+            "name": "mbodycp___7",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLElbw]",
+            "title": "Mbodycp:MLElbw@IMAGEMAP=MBODY",
+            "name": "mbodycp___8",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRLowArm]",
+            "title": "Mbodycp:MRLowArm@IMAGEMAP=MBODY",
+            "name": "mbodycp___9",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLLowArm]",
+            "title": "Mbodycp:MLLowArm@IMAGEMAP=MBODY",
+            "name": "mbodycp___10",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRHand]",
+            "title": "Mbodycp:MRHand@IMAGEMAP=MBODY",
+            "name": "mbodycp___11",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLHand]",
+            "title": "Mbodycp:MLHand@IMAGEMAP=MBODY",
+            "name": "mbodycp___12",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MAbdomen]",
+            "title": "Mbodycp:MAbdomen@IMAGEMAP=MBODY",
+            "name": "mbodycp___13",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MPelvis]",
+            "title": "Mbodycp:MPelvis@IMAGEMAP=MBODY",
+            "name": "mbodycp___14",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRGroin]",
+            "title": "Mbodycp:MRGroin@IMAGEMAP=MBODY",
+            "name": "mbodycp___15",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLGroin]",
+            "title": "Mbodycp:MLGroin@IMAGEMAP=MBODY",
+            "name": "mbodycp___16",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRUpLeg]",
+            "title": "Mbodycp:MRUpLeg@IMAGEMAP=MBODY",
+            "name": "mbodycp___17",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLUpLeg]",
+            "title": "Mbodycp:MLUpLeg@IMAGEMAP=MBODY",
+            "name": "mbodycp___18",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRKnee]",
+            "title": "Mbodycp:MRKnee@IMAGEMAP=MBODY",
+            "name": "mbodycp___19",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLKnee]",
+            "title": "Mbodycp:MLKnee@IMAGEMAP=MBODY",
+            "name": "mbodycp___20",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRLowLeg]",
+            "title": "Mbodycp:MRLowLeg@IMAGEMAP=MBODY",
+            "name": "mbodycp___21",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLLowLeg]",
+            "title": "Mbodycp:MLLowLeg@IMAGEMAP=MBODY",
+            "name": "mbodycp___22",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRFoot]",
+            "title": "Mbodycp:MRFoot@IMAGEMAP=MBODY",
+            "name": "mbodycp___23",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLFoot]",
+            "title": "Mbodycp:MLFoot@IMAGEMAP=MBODY",
+            "name": "mbodycp___24",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MHead]",
+            "title": "Mbodycp:MHead@IMAGEMAP=MBODY",
+            "name": "mbodycp___25",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MNeck]",
+            "title": "Mbodycp:MNeck@IMAGEMAP=MBODY",
+            "name": "mbodycp___26",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLShldr]",
+            "title": "Mbodycp:MLShldr@IMAGEMAP=MBODY",
+            "name": "mbodycp___27",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRShldr]",
+            "title": "Mbodycp:MRShldr@IMAGEMAP=MBODY",
+            "name": "mbodycp___28",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MUpBack]",
+            "title": "Mbodycp:MUpBack@IMAGEMAP=MBODY",
+            "name": "mbodycp___29",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLowBack]",
+            "title": "Mbodycp:MLowBack@IMAGEMAP=MBODY",
+            "name": "mbodycp___30",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLHip]",
+            "title": "Mbodycp:MLHip@IMAGEMAP=MBODY",
+            "name": "mbodycp___31",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRHip]",
+            "title": "Mbodycp:MRHip@IMAGEMAP=MBODY",
+            "name": "mbodycp___32",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MLBttck]",
+            "title": "Mbodycp:MLBttck@IMAGEMAP=MBODY",
+            "name": "mbodycp___33",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=MRBttck]",
+            "title": "Mbodycp:MRBttck@IMAGEMAP=MBODY",
+            "name": "mbodycp___34",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "description": "@IMAGEMAP=MBODY[choice=Mnone]",
+            "title": "Mbodycp:Mnone@IMAGEMAP=MBODY",
+            "name": "mbodycp___35",
+            "type": "boolean",
+            "constraints.enum": [
+                "0",
+                "1"
+            ],
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mface",
+            "description": "Face[calculation: if([mbodycp(0)]=1,1,0)]",
+            "type": "number",
+            "title": "Face",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrjaw",
+            "description": "Right Jaw[calculation: if([mbodycp(1)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Jaw",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mljaw",
+            "description": "Left Jaw[calculation: if([mbodycp(2)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Jaw",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrchest",
+            "description": "Right Chest[calculation: if([mbodycp(3)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Chest",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mlchest",
+            "description": "Left Chest[calculation: if([mbodycp(4)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Chest",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mruparm",
+            "description": "Right Upper Arm[calculation: if([mbodycp(5)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Upper Arm",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mluparm",
+            "description": "Left Upper Arm[calculation: if([mbodycp(6)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Upper Arm",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrelbw",
+            "description": "Right Elbow[calculation: if([mbodycp(7)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Elbow",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mlelbw",
+            "description": "Left Elbow[calculation: if([mbodycp(8)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Elbow",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrlowarm",
+            "description": "Right Lower Arm[calculation: if([mbodycp(9)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Lower Arm",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mllowarm",
+            "description": "Left Lower Arm[calculation: if([mbodycp(10)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Lower Arm",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrhand",
+            "description": "Right Hand[calculation: if([mbodycp(11)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Hand",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mlhand",
+            "description": "Left Hand[calculation: if([mbodycp(12)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Hand",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mabdomen",
+            "description": "Abdomen[calculation: if([mbodycp(13)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Abdomen",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mpelvis",
+            "description": "Pelvis[calculation: if([mbodycp(14)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Pelvis",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrgroin",
+            "description": "Right Groin[calculation: if([mbodycp(15)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Groin",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mlgroin",
+            "description": "Left Groin[calculation: if([mbodycp(16)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Groin",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrupleg",
+            "description": "Right Upper Leg[calculation: if([mbodycp(17)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Upper Leg",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mlupleg",
+            "description": "Left Upper Leg[calculation: if([mbodycp(18)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Upper Leg",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrknee",
+            "description": "Right Knee[calculation: if([mbodycp(19)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Knee",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mlknee",
+            "description": "Left Knee[calculation: if([mbodycp(20)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Knee",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrlowleg",
+            "description": "Right Lower Leg[calculation: if([mbodycp(21)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Lower Leg",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mllowleg",
+            "description": "Left Lower Leg[calculation: if([mbodycp(22)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Lower Leg",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrfoot",
+            "description": "Right Foot[calculation: if([mbodycp(23)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Foot",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mlfoot",
+            "description": "Left Foot[calculation: if([mbodycp(24)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Foot",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mhead",
+            "description": "Head[calculation: if([mbodycp(25)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Head",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mneck",
+            "description": "Neck[calculation: if([mbodycp(26)] = '1', 1, 0)]",
+            "type": "number",
+            "title": "Neck",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mlshldr",
+            "description": "Left Shoulder[calculation: if([mbodycp(27)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Shoulder",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrshldr",
+            "description": "Right Shoulder[calculation: if([mbodycp(28)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Shoulder",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mupback",
+            "description": "Upper Back[calculation: if([mbodycp(29)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Upper Back",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mlowback",
+            "description": "Lower Back[calculation: if([mbodycp(30)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Lower Back",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mlhip",
+            "description": "Left Hip[calculation: if([mbodycp(31)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Hip",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrhip",
+            "description": "Right Hip[calculation: if([mbodycp(32)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Hip",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mlbttck",
+            "description": "Left Buttock[calculation: if([mbodycp(33)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Left Buttock",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mrbttck",
+            "description": "Right Buttock[calculation: if([mbodycp(34)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "Right Buttock",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mnone",
+            "description": "No Pain[calculation: if([mbodycp(35)] = 1, 1, 0)]",
+            "type": "number",
+            "title": "No Pain",
+            "module": "michigan_body_map_image_chronic_pain"
+        },
+        {
+            "name": "mbm_total",
+            "description": "Total Michigan Body Map Score[calculation: sum([mface], [mrjaw], [mljaw], [mrchest], [mlchest], [mruparm], [mluparm], [mrelbw], [mlelbw], [mrlowarm], [mllowarm], [mrhand], [mlhand], [mabdomen], [mpelvis], [mrgroin], [mlgroin], [mrupleg], [mlupleg], [mrknee], [mlknee], [mrlowleg], [mllowleg], [mrfoot], [mlfoot], [mhead], [mneck], [mlshldr], [mrshldr], [mupback], [mlowback], [mlhip], [mrhip], [mlbttck], [mrbttck])]",
+            "type": "number",
+            "title": "Total Michigan Body Map Score",
+            "module": "michigan_body_map_image_chronic_pain"
+        }
+    ]
+}
