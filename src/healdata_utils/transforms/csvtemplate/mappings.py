@@ -107,7 +107,18 @@ def join_dictvals(dictionary:dict,sep:str):
     return sep.join(dictionary.values())
 
 def join_dictitems(dictionary:dict,sep_keyval='=',sep_items='|'):
-    dict_list = [key+sep_keyval+val for key,val in dictionary.items()]
+    """ joins a mappable collection (ie dictionary) into a string
+    representation with specified separators for the key and value
+    in addition to items. 
+
+    All items are coerced to the string representation (eg if key or value
+    is None, this will be coerced to "None")
+    """
+    dict_list = []
+    for key,val in dictionary.items():
+        keystr = str(key)
+        valstr = str(val)
+        dict_list.append(keystr+sep_keyval+valstr)
     return sep_items.join(dict_list)
 
 
