@@ -29,7 +29,7 @@ choice_fxn = {
     "redcap.csv":convert_redcapcsv
 
 }
-choice_fxn_md = "\n - ".join(choice_fxn.keys()[1:])
+choice_fxn_md = "\n - ".join(list(choice_fxn.keys())[1:])
 
 def generate_outputpath(input_filepath,outputdir,suffix='json'):
 
