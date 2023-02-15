@@ -29,6 +29,7 @@ choice_fxn = {
     "redcap.csv":convert_redcapcsv
 
 }
+choice_fxn_md = "\n - ".join(choice_fxn.keys()[1:])
 
 def generate_outputpath(input_filepath,outputdir,suffix='json'):
 
@@ -41,10 +42,22 @@ def generate_outputpath(input_filepath,outputdir,suffix='json'):
     return outputpath 
 
 def to_json(filepath,outputdir,data_dictionary_props={},inputtype=None,):
-    ''' 
-    write a data dictioanry (ie variable level metadata)
-    to a HEAL metadata json file
-    '''
+    f""" 
+    writes a data dictioanry (ie variable level metadata)
+    to a HEAL metadata json file using a registered function.
+
+
+    Parameters
+    -------------
+    filepath: path to input file 
+    outputdir: path to a directory where output will go. 
+        If a directory is specified, will use the input name for output name replaced with json suffix.
+    data_dictionary_props: The other data-dictionary level properties. By default, will 
+        give the data_dictionary `title` property as the file name stem. 
+    inputtype: The input type. If none specified, will default to using the file extension.
+        Currently the registered inputs types are: 
+        {choice_fxn_md} 
+    """
     filepath = Path(filepath)
     outputdir = Path(outputdir)
     #infer input type
@@ -55,10 +68,6 @@ def to_json(filepath,outputdir,data_dictionary_props={},inputtype=None,):
     if not data_dictionary_props.get('title'):
         data_dictionary_props['title'] = filepath.stem
 
-    Path(outputdir).mkdir(exist_ok=True)
-
-
-
     # get data dictionary based on the input type
     data_dictionary = choice_fxn[inputtype](filepath,data_dictionary_props)
 
@@ -67,8 +76,13 @@ def to_json(filepath,outputdir,data_dictionary_props={},inputtype=None,):
     print('Validating output json file.....')
     validate_json(data_dictionary)
 
-    #Output jsonfile
-    outputpath = generate_outputpath(filepath, outputdir,'json')
+    # write to file
+    if Path(outputdir).is_dir():
+        Path(outputdir).mkdir(exist_ok=True)
+        outputpath = outputdir/filepath.name.replace(".csv",".json")
+    
+    else:
+        outputpath = outputdir
 
     with open(outputpath,'w') as f:
         json.dump(data_dictionary,f,indent=4)
@@ -76,19 +90,30 @@ def to_json(filepath,outputdir,data_dictionary_props={},inputtype=None,):
 def to_csv_from_json(filepath,outputdir):
     ''' 
     converts a json file to a csv
+
+    Parameters
+    ---------------
+    filepath: path to input file 
+    outputdir: path to a directory where output will go. 
+        If a directory is specified, will use the input name for output name replaced with json suffix.
+
+    Returns
+    --------------
+    None
+
+
     ''' 
-    Path(outputdir).parent.mkdir(exist_ok=True)
+    assert filepath.suffix==".json","filepath needs to be a json file"
 
     resource = choice_fxn['json'](filepath)
     
-    #print('Checking input json file.....')
-
-    outputpath = generate_outputpath(filepath, outputdir,'csv')
-
-    # TODO: write data dictionary params and path to CSV templates
-    # del resource['data']
-    # resource.path = Path(outputpath).name
-    # resource.to_yaml(Path(outputpath).with_suffix('.yaml'))
+   # write to file
+    if Path(outputdir).is_dir():
+        Path(outputdir).mkdir(exist_ok=True)
+        outputpath = outputdir/filepath.name.replace(".json",".csv")
+    
+    else:
+        outputpath = outputdir
 
     # write data dictionary fields
     pd.DataFrame(resource.data).to_csv(outputpath,index=False)
@@ -108,7 +133,6 @@ def main(filepath,title,description,inputtype,outputdir):
     if not outputdir:
         
         outputdir = Path(filepath).parent.parent/'output'
-        print(outputdir)
 
     if inputtype=='json':
         to_csv_from_json(filepath, outputdir)
