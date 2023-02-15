@@ -1,1953 +1,2913 @@
 {
+    "title": "3645_JCOIN_HEAL Initiative 2021_Data for External Use",
     "data_dictionary": [
         {
             "name": "CaseId",
-            "type": "integer",
-            "description": "Case ID",
-            "ordered": true
+            "type": "integer"
         },
         {
             "name": "WEIGHT",
-            "type": "number",
-            "description": "Post-stratification weights - 18+ general population (N=1,002)"
+            "type": "number"
         },
         {
             "name": "Jan20_LackedCompanionship",
             "type": "integer",
-            "description": "[That you lacked companionship] At the start of the New Year in January 2020\u2026how often did you feel\u2026",
             "encodings": {
-                "1": "Hardly ever",
-                "2": "Some of the time",
-                "3": "Often",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Hardly ever",
+                "2.0": "Some of the time",
+                "3.0": "Often",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Jan20_LeftOut",
             "type": "integer",
-            "description": "[Left out] At the start of the New Year in January 2020\u2026how often did you feel\u2026",
             "encodings": {
-                "1": "Hardly ever",
-                "2": "Some of the time",
-                "3": "Often",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Hardly ever",
+                "2.0": "Some of the time",
+                "3.0": "Often",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Jan20_Isolated",
             "type": "integer",
-            "description": "[Isolated from others] At the start of the New Year in January 2020\u2026how often did you feel\u2026",
             "encodings": {
-                "1": "Hardly ever",
-                "2": "Some of the time",
-                "3": "Often",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Hardly ever",
+                "2.0": "Some of the time",
+                "3.0": "Often",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Personal_COVIDtest",
             "type": "integer",
-            "description": "Have you been tested for COVID-19 (coronavirus)? If so, what was the result?",
             "encodings": {
-                "1": "I have been tested and I tested positive (I had coronavirus)",
-                "2": "I have been tested and I tested negative (I did not have coronavirus)",
-                "3": "I have been tested and I do not know the result",
-                "4": "I had COVID-19 symptoms, but did not get tested",
-                "5": "I have not been tested",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "I have been tested and I tested positive (I had coronavirus)",
+                "2.0": "I have been tested and I tested negative (I did not have coronavirus)",
+                "3.0": "I have been tested and I do not know the result",
+                "4.0": "I had COVID-19 symptoms, but did not get tested",
+                "5.0": "I have not been tested",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Household_COVIDtest",
             "type": "integer",
-            "description": "Has anyone else in your household (not counting yourself) been tested for COVID-19 (coronavirus)?",
             "encodings": {
-                "1": "They have been tested and they tested positive (They had coronavirus)",
-                "2": "They have been tested and they tested negative (They did not have coronavirus)",
-                "3": "They have been tested and I do not know the result",
-                "4": "They had COVID-19 symptoms, but did not get tested",
-                "5": "They have not been tested",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "They have been tested and they tested positive (They had coronavirus)",
+                "2.0": "They have been tested and they tested negative (They did not have coronavirus)",
+                "3.0": "They have been tested and I do not know the result",
+                "4.0": "They had COVID-19 symptoms, but did not get tested",
+                "5.0": "They have not been tested",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "CancelDoc_React",
             "type": "integer",
-            "description": "[Cancelled a doctor\u2019s appointment] Which of the following have you done in reaction as a general response to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Prayed_React",
             "type": "integer",
-            "description": "[Prayed] Which of the following have you done in reaction as a general response to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Telehealth_React",
             "type": "integer",
-            "description": "[Had a \u2018telehealth visit\u2019 with a doctor or other health care provider] Which of the following have you done in reaction as a general response to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "AvoidContact_React",
             "type": "integer",
-            "description": "[Avoided in-person contact with friends or family] Which of the following have you done in reaction as a general response to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "WashHands_React",
             "type": "integer",
-            "description": "[Washed/Sanitized hands more than usual] Which of the following have you done in reaction as a general response to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "IsolatedHHmember_React",
             "type": "integer",
-            "description": "[Isolated from other person(s) who lives with you] Which of the following have you done in reaction as a general response to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "CancelWork_React",
             "type": "integer",
-            "description": "[Cancelled/postponed work or school activities] Which of the following have you done in reaction as a general response to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "CancelTravel_React",
             "type": "integer",
-            "description": "[Cancelled/postponed travel] Which of the following have you done in reaction as a general response to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "NotLeftHome_React",
             "type": "integer",
-            "description": "[Have not left my home] Which of the following have you done in reaction as a general response to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "OtherSafe_React",
             "type": "integer",
-            "description": "[I have done other things to keep myself safe] Which of the following have you done in reaction as a general response to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "None_React",
             "type": "integer",
-            "description": "[I have not taken any of these steps] Which of the following have you done in reaction as a general response to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "LimitTrips_measure",
             "type": "integer",
-            "description": "[Limiting trips out of the house to essential work or errands] Which of the following measures, if any, are you taking in response to the outbreak of the new coronavirus?",
             "encodings": {
-                "0": "No",
-                "1": "Yes"
+                "0.0": "No",
+                "1.0": "Yes"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "WFH_measure",
             "type": "integer",
-            "description": "[Working from home] Which of the following measures, if any, are you taking in response to the outbreak of the new coronavirus?",
             "encodings": {
-                "0": "No",
-                "1": "Yes"
+                "0.0": "No",
+                "1.0": "Yes"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "Groups10_measure",
             "type": "integer",
-            "description": "[Limiting interactions with others to groups of 10 or less] Which of the following measures, if any, are you taking in response to the outbreak of the new coronavirus?",
             "encodings": {
-                "0": "No",
-                "1": "Yes"
+                "0.0": "No",
+                "1.0": "Yes"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "SixFeet_measure",
             "type": "integer",
-            "description": "[Keeping a 6-foot radius when interacting with people you do not live with] Which of the following measures, if any, are you taking in response to the outbreak of the new coronavirus?",
             "encodings": {
-                "0": "No",
-                "1": "Yes"
+                "0.0": "No",
+                "1.0": "Yes"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "StockFood_measure",
             "type": "integer",
-            "description": "[Stocking up on extra food] Which of the following measures, if any, are you taking in response to the outbreak of the new coronavirus?",
             "encodings": {
-                "0": "No",
-                "1": "Yes"
+                "0.0": "No",
+                "1.0": "Yes"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "StockCleaning_measure",
             "type": "integer",
-            "description": "[Stocking up on extra cleaning supplies] Which of the following measures, if any, are you taking in response to the outbreak of the new coronavirus?",
             "encodings": {
-                "0": "No",
-                "1": "Yes"
+                "0.0": "No",
+                "1.0": "Yes"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "WearMask_measure",
             "type": "integer",
-            "description": "[Wearing a mask when leaving home] Which of the following measures, if any, are you taking in response to the outbreak of the new coronavirus?",
             "encodings": {
-                "0": "No",
-                "1": "Yes"
+                "0.0": "No",
+                "1.0": "Yes"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "FoodNeighbors_helpcomm",
             "type": "integer",
-            "description": "[Getting food or medicine for neighbors] Which of the following new actions are you taking to help your family, friends or your community respond to the COVID-19 pandemic and social distancing rules?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Childcare_helpcomm",
             "type": "integer",
-            "description": "[Providing childcare] Which of the following new actions are you taking to help your family, friends or your community respond to the COVID-19 pandemic and social distancing rules?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "ContactFriends_helpcomm",
             "type": "integer",
-            "description": "[Contacting friends or family to keep in touch] Which of the following new actions are you taking to help your family, friends or your community respond to the COVID-19 pandemic and social distancing rules?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Other_helpcomm",
             "type": "integer",
-            "description": "[I have done other things to help] Which of the following new actions are you taking to help your family, friends or your community respond to the COVID-19 pandemic and social distancing rules?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Nothing_helpcomm",
             "type": "integer",
-            "description": "[I am not taking any new actions] Which of the following new actions are you taking to help your family, friends or your community respond to the COVID-19 pandemic and social distancing rules?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "DonateBlood_frequency",
             "type": "integer",
-            "description": "[Donated blood] Since the coronavirus outbreak began in the U.S., how often have you done each of the following?",
             "encodings": {
-                "1": "Often",
-                "2": "Sometimes",
-                "3": "Rarely",
-                "4": "Never",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Often",
+                "2.0": "Sometimes",
+                "3.0": "Rarely",
+                "4.0": "Never",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "DonateReligiousOrg_frequency",
             "type": "integer",
-            "description": "[Donated money, food, or supplies to a religious organization or group] Since the coronavirus outbreak began in the U.S., how often have you done each of the following?",
             "encodings": {
-                "1": "Often",
-                "2": "Sometimes",
-                "3": "Rarely",
-                "4": "Never",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Often",
+                "2.0": "Sometimes",
+                "3.0": "Rarely",
+                "4.0": "Never",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "DonateNonReligious_frequency",
             "type": "integer",
-            "description": "[Donated money, food, or supplies to a non-religious organization or group] Since the coronavirus outbreak began in the U.S., how often have you done each of the following?",
             "encodings": {
-                "1": "Often",
-                "2": "Sometimes",
-                "3": "Rarely",
-                "4": "Never",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Often",
+                "2.0": "Sometimes",
+                "3.0": "Rarely",
+                "4.0": "Never",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "ConnectSocially_days",
             "type": "integer",
-            "description": "[Connected socially with friends or family] Out of the past seven days, what is your best estimate of the number of days that you did each of the following activities?",
             "encodings": {
-                "1": "0",
-                "2": "1",
-                "3": "2",
-                "4": "3",
-                "5": "4",
-                "6": "5",
-                "7": "6",
-                "8": "7",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": null,
+                "2.0": null,
+                "3.0": null,
+                "4.0": null,
+                "5.0": null,
+                "6.0": null,
+                "7.0": null,
+                "8.0": null,
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "7.0",
+                    "8.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Relax_days",
             "type": "integer",
-            "description": "[Made time to relax] Out of the past seven days, what is your best estimate of the number of days that you did each of the following activities?",
             "encodings": {
-                "1": "0",
-                "2": "1",
-                "3": "2",
-                "4": "3",
-                "5": "4",
-                "6": "5",
-                "7": "6",
-                "8": "7",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": null,
+                "2.0": null,
+                "3.0": null,
+                "4.0": null,
+                "5.0": null,
+                "6.0": null,
+                "7.0": null,
+                "8.0": null,
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "7.0",
+                    "8.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Exercise_days",
             "type": "integer",
-            "description": "[Exercised] Out of the past seven days, what is your best estimate of the number of days that you did each of the following activities?",
             "encodings": {
-                "1": "0",
-                "2": "1",
-                "3": "2",
-                "4": "3",
-                "5": "4",
-                "6": "5",
-                "7": "6",
-                "8": "7",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": null,
+                "2.0": null,
+                "3.0": null,
+                "4.0": null,
+                "5.0": null,
+                "6.0": null,
+                "7.0": null,
+                "8.0": null,
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "7.0",
+                    "8.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Meditated_days",
             "type": "integer",
-            "description": "[Meditated] Out of the past seven days, what is your best estimate of the number of days that you did each of the following activities?",
             "encodings": {
-                "1": "0",
-                "2": "1",
-                "3": "2",
-                "4": "3",
-                "5": "4",
-                "6": "5",
-                "7": "6",
-                "8": "7",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": null,
+                "2.0": null,
+                "3.0": null,
+                "4.0": null,
+                "5.0": null,
+                "6.0": null,
+                "7.0": null,
+                "8.0": null,
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "7.0",
+                    "8.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Alcohol_days",
             "type": "integer",
-            "description": "[Drank alcohol] Out of the past seven days, what is your best estimate of the number of days that you did each of the following activities?",
             "encodings": {
-                "1": "0",
-                "2": "1",
-                "3": "2",
-                "4": "3",
-                "5": "4",
-                "6": "5",
-                "7": "6",
-                "8": "7",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": null,
+                "2.0": null,
+                "3.0": null,
+                "4.0": null,
+                "5.0": null,
+                "6.0": null,
+                "7.0": null,
+                "8.0": null,
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "7.0",
+                    "8.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Cannabis_days",
             "type": "integer",
-            "description": "[Used cannabis products such as marijuana] Out of the past seven days, what is your best estimate of the number of days that you did each of the following activities?",
             "encodings": {
-                "1": "0",
-                "2": "1",
-                "3": "2",
-                "4": "3",
-                "5": "4",
-                "6": "5",
-                "7": "6",
-                "8": "7",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": null,
+                "2.0": null,
+                "3.0": null,
+                "4.0": null,
+                "5.0": null,
+                "6.0": null,
+                "7.0": null,
+                "8.0": null,
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "7.0",
+                    "8.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "OtherRecDrug_days",
             "type": "integer",
-            "description": "[Used recreational drugs other than alcohol or cannabis products] Out of the past seven days, what is your best estimate of the number of days that you did each of the following activities?",
             "encodings": {
-                "1": "0",
-                "2": "1",
-                "3": "2",
-                "4": "3",
-                "5": "4",
-                "6": "5",
-                "7": "6",
-                "8": "7",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": null,
+                "2.0": null,
+                "3.0": null,
+                "4.0": null,
+                "5.0": null,
+                "6.0": null,
+                "7.0": null,
+                "8.0": null,
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "7.0",
+                    "8.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "UnemployedPrior_COVIDemployment",
             "type": "integer",
-            "description": "[Someone was\u00a0unemployed prior to the pandemic] Have you or has someone in your household experienced any of the following employment-related changes directly or indirectly due to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "NoChanges_COVIDemployment",
             "type": "integer",
-            "description": "[Someone is\u00a0working in the same job and has experienced no changes] Have you or has someone in your household experienced any of the following employment-related changes directly or indirectly due to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "OnLeave_COVIDemployment",
             "type": "integer",
-            "description": "[Someone is on sick leave or other leave from the same job] Have you or has someone in your household experienced any of the following employment-related changes directly or indirectly due to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "LaidOff_COVIDemployment",
             "type": "integer",
-            "description": "[Someone has been\u00a0laid off from the same job] Have you or has someone in your household experienced any of the following employment-related changes directly or indirectly due to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "FewerHours_COVIDemployment",
             "type": "integer",
-            "description": "[Someone has been scheduled for fewer hours from the same job] Have you or has someone in your household experienced any of the following employment-related changes directly or indirectly due to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "WFH_COVIDemployment",
             "type": "integer",
-            "description": "[Someone has chosen to work from home for the same job] Have you or has someone in your household experienced any of the following employment-related changes directly or indirectly due to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "UnpaidTO_COVIDemployment",
             "type": "integer",
-            "description": "[Someone has taken unpaid time off from the same job] Have you or has someone in your household experienced any of the following employment-related changes directly or indirectly due to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "ReducedPay_COVIDemployment",
             "type": "integer",
-            "description": "[Someone had their wages or salary reduced from the same job] Have you or has someone in your household experienced any of the following employment-related changes directly or indirectly due to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "NewJob_COVIDemployment",
             "type": "integer",
-            "description": "[Someone is now working at a different job] Have you or has someone in your household experienced any of the following employment-related changes directly or indirectly due to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "CantWork_COVIDemployment",
             "type": "integer",
-            "description": "[Someone is not looking for work and/or unavailable to work] Have you or has someone in your household experienced any of the following employment-related changes directly or indirectly due to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PayMortgage",
             "type": "integer",
-            "description": "Have you had any issues being able to pay your rent or mortgage due to the coronavirus pandemic?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "HH_Death_COVID",
             "type": "integer",
-            "description": "Has anyone in your household passed away/died related to COVID-19 (coronavirus)?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "NewGuest",
             "type": "integer",
-            "description": "Do you have a friend or family member staying in your home now who does not ordinarily stay with you?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "NewGuest_COVID",
             "type": "integer",
-            "description": "Is this person living with you because of a financial challenge or other personal circumstances related to COVID-19?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "NewGuest_LengthofStay",
             "type": "integer",
-            "description": "How long do you expect this person to live with you?",
             "encodings": {
-                "1": "A few days",
-                "2": "A few weeks",
-                "3": "A few months",
-                "4": "Longer",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "A few days",
+                "2.0": "A few weeks",
+                "3.0": "A few months",
+                "4.0": "Longer",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "NewGuest_MentalHealth",
             "type": "integer",
-            "description": "Has this friend ever been told by a doctor that they have a mental health condition (for example, anxiety, depression)?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "Don\u2019t know",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "Don\u2019t know",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "NewGuest_SUD",
             "type": "integer",
-            "description": "Does this friend currently have a substance use disorder (for example, substance addiction, abuse or dependence)?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "Don\u2019t know",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "Don\u2019t know",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Nervous_PastMonth",
             "type": "integer",
-            "description": "[Been a very nervous person] Over the past month how often have you:",
             "encodings": {
-                "1": "All of the time",
-                "2": "Most of the time",
-                "3": "A good bit of the time",
-                "4": "Some of the time",
-                "5": "A little of the time",
-                "6": "None of the time",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "All of the time",
+                "2.0": "Most of the time",
+                "3.0": "A good bit of the time",
+                "4.0": "Some of the time",
+                "5.0": "A little of the time",
+                "6.0": "None of the time",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Downhearted_PastMonth",
             "type": "integer",
-            "description": "[Felt downhearted and blue] Over the past month how often have you:",
             "encodings": {
-                "1": "All of the time",
-                "2": "Most of the time",
-                "3": "A good bit of the time",
-                "4": "Some of the time",
-                "5": "A little of the time",
-                "6": "None of the time",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "All of the time",
+                "2.0": "Most of the time",
+                "3.0": "A good bit of the time",
+                "4.0": "Some of the time",
+                "5.0": "A little of the time",
+                "6.0": "None of the time",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Calm_PastMonth",
             "type": "integer",
-            "description": "[Felt calm and peaceful] Over the past month how often have you:",
             "encodings": {
-                "1": "All of the time",
-                "2": "Most of the time",
-                "3": "A good bit of the time",
-                "4": "Some of the time",
-                "5": "A little of the time",
-                "6": "None of the time",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "All of the time",
+                "2.0": "Most of the time",
+                "3.0": "A good bit of the time",
+                "4.0": "Some of the time",
+                "5.0": "A little of the time",
+                "6.0": "None of the time",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Dumps_PastMonth",
             "type": "integer",
-            "description": "[Felt so down in the dumps that nothing could cheer you up] Over the past month how often have you:",
             "encodings": {
-                "1": "All of the time",
-                "2": "Most of the time",
-                "3": "A good bit of the time",
-                "4": "Some of the time",
-                "5": "A little of the time",
-                "6": "None of the time",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "All of the time",
+                "2.0": "Most of the time",
+                "3.0": "A good bit of the time",
+                "4.0": "Some of the time",
+                "5.0": "A little of the time",
+                "6.0": "None of the time",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Happy_PastMonth",
             "type": "integer",
-            "description": "[Been a happy person] Over the past month how often have you:",
             "encodings": {
-                "1": "All of the time",
-                "2": "Most of the time",
-                "3": "A good bit of the time",
-                "4": "Some of the time",
-                "5": "A little of the time",
-                "6": "None of the time",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "All of the time",
+                "2.0": "Most of the time",
+                "3.0": "A good bit of the time",
+                "4.0": "Some of the time",
+                "5.0": "A little of the time",
+                "6.0": "None of the time",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PastMonth_LackedCompanionship",
             "type": "integer",
-            "description": "[That you lacked companionship] In the past month, how often did you feel\u2026",
             "encodings": {
-                "1": "Hardly ever",
-                "2": "Some of the time",
-                "3": "Often",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Hardly ever",
+                "2.0": "Some of the time",
+                "3.0": "Often",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PastMonth_LeftOut",
             "type": "integer",
-            "description": "[Left out] In the past month, how often did you feel\u2026",
             "encodings": {
-                "1": "Hardly ever",
-                "2": "Some of the time",
-                "3": "Often",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Hardly ever",
+                "2.0": "Some of the time",
+                "3.0": "Often",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PastMonth_Isolated",
             "type": "integer",
-            "description": "[Isolated from others] In the past month, how often did you feel\u2026",
             "encodings": {
-                "1": "Hardly ever",
-                "2": "Some of the time",
-                "3": "Often",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Hardly ever",
+                "2.0": "Some of the time",
+                "3.0": "Often",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Communication_Changed",
             "type": "integer",
-            "description": "Compared to the month of January 2020, before the outbreak began, how has the frequency of your communication with close friends and family to provide/receive social support changed?",
             "encodings": {
-                "1": "I communicate with them more often than before",
-                "2": "I communicate with them about the same as before",
-                "3": "I communicate with them less often than before",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "I communicate with them more often than before",
+                "2.0": "I communicate with them about the same as before",
+                "3.0": "I communicate with them less often than before",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "ObtainFood_Difficulty",
             "type": "integer",
-            "description": "[Obtaining the food that you need because of the COVID-19 pandemic or social distancing rules] How much difficulty do you have\u2026",
             "encodings": {
-                "1": "None",
-                "2": "Some",
-                "3": "Much",
-                "4": "Unable or very difficult",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "None",
+                "2.0": "Some",
+                "3.0": "Much",
+                "4.0": "Unable or very difficult",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "ObtainMedicine_Difficulty",
             "type": "integer",
-            "description": "[Obtaining the medicine that you need because of the COVID-19 pandemic or social distancing rules] How much difficulty do you have\u2026",
             "encodings": {
-                "1": "None",
-                "2": "Some",
-                "3": "Much",
-                "4": "Unable or very difficult",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "None",
+                "2.0": "Some",
+                "3.0": "Much",
+                "4.0": "Unable or very difficult",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "RoutineMedCare_Difficulty",
             "type": "integer",
-            "description": "[With getting routine medical care that you need because of the COVID-19 pandemic or social distancing rules] How much difficulty do you have\u2026",
             "encodings": {
-                "1": "None",
-                "2": "Some",
-                "3": "Much",
-                "4": "Unable or very difficult",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "None",
+                "2.0": "Some",
+                "3.0": "Much",
+                "4.0": "Unable or very difficult",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "HesitateMedicalCare",
             "type": "integer",
-            "description": "Would you hesitate to seek care if you needed medical care for a health condition?",
             "encodings": {
-                "1": "Yes, I would hesitate to seek care due to the COVID-19 pandemic primarily to avoid exposure to the clinic or hospital",
-                "2": "Yes, I would hesitate to seek care due to the COVID-19 pandemic primarily to avoid overburdening the healthcare system",
-                "3": "Yes, I would hesitate to seek care because you do not have health insurance",
-                "4": "Yes, I would hesitate to seek care for some other reason",
-                "5": "No, I would not hesitate to seek care",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes, I would hesitate to seek care due to the COVID-19 pandemic primarily to avoid exposure to the clinic or hospital",
+                "2.0": "Yes, I would hesitate to seek care due to the COVID-19 pandemic primarily to avoid overburdening the healthcare system",
+                "3.0": "Yes, I would hesitate to seek care because you do not have health insurance",
+                "4.0": "Yes, I would hesitate to seek care for some other reason",
+                "5.0": "No, I would not hesitate to seek care",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "StayHomeOrder_Agreement",
             "type": "integer",
-            "description": "Do you live in a city/town with a stay-at-home or shelter-in-place order, and do you agree with the order?",
             "encodings": {
-                "1": "Yes we have an order, and I agree with it",
-                "2": "Yes we have an order, and I do not agree with it",
-                "3": "No we do not have an order, and I think we should have an order",
-                "4": "No we do not have an order, and I agree with not having an order",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes we have an order, and I agree with it",
+                "2.0": "Yes we have an order, and I do not agree with it",
+                "3.0": "No we do not have an order, and I think we should have an order",
+                "4.0": "No we do not have an order, and I agree with not having an order",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PainControl_Difficulty",
             "type": "integer",
-            "description": "Since the beginning of March 2020, have you noticed any difficulties getting adequate pain control for acute or chronic health conditions?",
             "encodings": {
-                "1": "I haven\u2019t had any conditions that have required pain control",
-                "2": "I have had conditions that needed pain management and could get the medicine or therapies I needed",
-                "3": "I have had conditions that needed pain management but could not get the medicine because of issues related to COVID",
-                "4": "I have had conditions that needed pain management but couldn't get medicine for reasons that don't have to do w/ COVID",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "I haven\u2019t had any conditions that have required pain control",
+                "2.0": "I have had conditions that needed pain management and could get the medicine or therapies I needed",
+                "3.0": "I have had conditions that needed pain management but could not get the medicine because of issues related to COVID",
+                "4.0": "I have had conditions that needed pain management but couldn't get medicine for reasons that don't have to do w/ COVID",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PS_A_Medicaid",
             "type": "integer",
-            "description": "[I favor expanding Medicaid insurance benefits for low income families to provide coverage for treatment of opioid use disorders\u2026] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PS_B_Naloxone",
             "type": "integer",
-            "description": "[I favor making naloxone\u2026widely available and affordable without a prescription] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PS_C_Mandatory",
             "type": "integer",
-            "description": "[I believe that making drug treatment mandatory is an effective way to help people with an opioid use disorder] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PS_D_GovSpend",
             "type": "integer",
-            "description": "[I favor increasing government spending to improve treatment of opioid use disorders] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "DS_E_Schools",
             "type": "integer",
-            "description": "[High schools and colleges should be allowed to dismiss or expel a person with an opioid use disorder] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "DS_F_Physicians",
             "type": "integer",
-            "description": "[Physicians and other healthcare providers should be allowed to refuse to treat a person with an opioid use disorder] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "DS_G_Employers",
             "type": "integer",
-            "description": "[Employers should be allowed to deny employment to a person with a current opioid use disorder] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "DS_H_Landlords",
             "type": "integer",
-            "description": "[Landlords should be allowed to deny housing to a person with a current opioid use disorder/addiction] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Release_Incarcerated",
             "type": "integer",
-            "description": "[Jails and Prisons should evaluate whether those convicted of non-violent crimes should be released to prevent the spread of COVID-19 within jails/prisons] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "SS_A_HistoryWork",
             "type": "integer",
-            "description": "[I would be willing to have a person with a past history of opioid use disorder start working closely with me on a job] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "SS_B_HistoryMarry",
             "type": "integer",
-            "description": "[I am comfortable having a person with a past history of opioid use disorder marry into my family] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "SS_C_CurrentWork",
             "type": "integer",
-            "description": "[I would be willing to have a person with a current opioid use disorder start working closely with me on a job] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "SS_D_CurrentMarry",
             "type": "integer",
-            "description": "[I would be comfortable having a person with a current opioid use disorder marry into my family] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "SS_E_Dangerous",
             "type": "integer",
-            "description": "[People with a current opioid use disorder\u2026are more dangerous than the general population] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "SS_F_Trust",
             "type": "integer",
-            "description": "[A person who currently has opioid use disorder\u2026cannot be trusted] Do you disagree or agree with the following statements?",
             "encodings": {
-                "1": "Strongly disagree",
-                "2": "Somewhat disagree",
-                "3": "Neither disagree nor agree",
-                "4": "Somewhat agree",
-                "5": "Strongly agree",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Strongly disagree",
+                "2.0": "Somewhat disagree",
+                "3.0": "Neither disagree nor agree",
+                "4.0": "Somewhat agree",
+                "5.0": "Strongly agree",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PersonalUse_Ever",
             "type": "integer",
-            "description": "In your lifetime, have you ever misused opioids/prescription pain medication?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "COVID_IncreaseMisuse",
             "type": "integer",
-            "description": "Do you think the COVID-19 pandemic will increase the misuse of opioids/prescription pain medication?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PersonalUse_Last",
             "type": "integer",
-            "description": "When was the last time?",
             "encodings": {
-                "1": "Past 6 months",
-                "2": "6 to 12 months ago",
-                "3": "1 to 5 years ago",
-                "4": "Over 5 years ago",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Past 6 months",
+                "2.0": "6 to 12 months ago",
+                "3.0": "1 to 5 years ago",
+                "4.0": "Over 5 years ago",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PersonalUse_First",
             "type": "integer",
-            "description": "Is this your first time misusing opioids/prescription pain medications?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PersonalUse_COVID",
             "type": "integer",
-            "description": "Was this due to COVID-19 (directly or indirectly)?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Treat_6mos",
             "type": "integer",
-            "description": "During the past 6 months, have you received treatment for your opioid/prescription pain medication misuse?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "Treat_COVID_difficult",
             "type": "integer",
-            "description": "Has COVID-19 made it difficult or impossible to continue this treatment?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PersonalOverdose_Ever",
             "type": "integer",
-            "description": "Have you ever overdosed after taking opioids/prescription pain medication?",
             "encodings": {
-                "1": "Yes, most recently within the past year",
-                "2": "Yes, most recently over a year ago",
-                "3": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes, most recently within the past year",
+                "2.0": "Yes, most recently over a year ago",
+                "3.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PersonalConviction_Ever",
             "type": "integer",
-            "description": "Have you ever been convicted of any misdemeanor or felony crime?",
             "encodings": {
-                "1": "Yes, most recently within the past year",
-                "2": "Yes, most recently over a year ago",
-                "3": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes, most recently within the past year",
+                "2.0": "Yes, most recently over a year ago",
+                "3.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "PersonalIncarceration_Ever",
             "type": "integer",
-            "description": "Have you ever been incarcerated in jail or prison?",
             "encodings": {
-                "1": "Yes, most recently within the past year",
-                "2": "Yes, most recently over a year ago",
-                "3": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes, most recently within the past year",
+                "2.0": "Yes, most recently over a year ago",
+                "3.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "FamilyUse_Ever",
             "type": "integer",
-            "description": "Have any family members or close friends you know ever misused opioids/prescription pain medication?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "Don\u2019t know",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "Don\u2019t know",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "FamilyUse_Last",
             "type": "integer",
-            "description": "When was the last time?",
             "encodings": {
-                "1": "Past 6 months",
-                "2": "6 to 12 months ago",
-                "3": "1 to 5 years ago",
-                "4": "Over 5 years ago",
-                "77": "Don\u2019t know",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Past 6 months",
+                "2.0": "6 to 12 months ago",
+                "3.0": "1 to 5 years ago",
+                "4.0": "Over 5 years ago",
+                "77.0": "Don\u2019t know",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "FamilyUse_First",
             "type": "integer",
-            "description": "Is this their first time misusing opioids/prescription pain medications?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "Don\u2019t know",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "Don\u2019t know",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "FamilyOverdose_Ever",
             "type": "integer",
-            "description": "Have any of your family members or close friends ever overdosed from opioids/prescription pain medication?",
             "encodings": {
-                "1": "Yes",
-                "2": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes",
+                "2.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "98.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "FamilyOverdose_Last",
             "type": "integer",
-            "description": "When was the last time?",
             "encodings": {
-                "1": "Past 6 months",
-                "2": "6 to 12 months ago",
-                "3": "1 to 5 years ago",
-                "4": "Over 5 years ago",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Past 6 months",
+                "2.0": "6 to 12 months ago",
+                "3.0": "1 to 5 years ago",
+                "4.0": "Over 5 years ago",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "FamilyConviction_Ever",
             "type": "integer",
-            "description": "Have any of your family members or close friends ever been convicted of any misdemeanor or felony crime?",
             "encodings": {
-                "1": "Yes, most recently within the past year",
-                "2": "Yes, most recently over a year ago",
-                "3": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes, most recently within the past year",
+                "2.0": "Yes, most recently over a year ago",
+                "3.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "FamilyIncarceration_Ever",
             "type": "integer",
-            "description": "Have any of your family members or close friends ever been incarcerated in jail or prison?",
             "encodings": {
-                "1": "Yes, most recently within the past year",
-                "2": "Yes, most recently over a year ago",
-                "3": "No",
-                "77": "DON'T KNOW",
-                "98": "SKIPPED ON WEB",
-                "99": "REFUSED"
+                "1.0": "Yes, most recently within the past year",
+                "2.0": "Yes, most recently over a year ago",
+                "3.0": "No",
+                "77.0": "DON'T KNOW",
+                "98.0": "SKIPPED ON WEB",
+                "99.0": "REFUSED"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "98.0",
+                    "99.0",
+                    "77.0"
+                ]
+            }
         },
         {
             "name": "STARTDT_JCOIN",
-            "type": "number",
-            "description": "NORC-PH Section start date/time"
+            "type": "datetime"
         },
         {
             "name": "ENDDT_JCOIN",
-            "type": "number",
-            "description": "NORC-PH Section end date/time"
+            "type": "datetime"
         },
         {
             "name": "duration_JCOIN",
-            "type": "number",
-            "description": "NORC-PH Omnibus Section: Interview duration in minutes",
+            "type": "integer",
             "encodings": {
-                "0": "Under 1 minute"
+                "0.0": "Under 1 minute"
             }
         },
         {
             "name": "SURV_MODE",
             "type": "integer",
-            "description": "Survey interview mode (online or phone)",
             "encodings": {
-                "1": "Phone interview",
-                "2": "Web Interview"
+                "1.0": "Phone interview",
+                "2.0": "Web Interview"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0"
+                ]
+            }
         },
         {
             "name": "SURV_LANG",
             "type": "integer",
-            "description": "Survey Interview Language",
             "encodings": {
-                "1": "English",
-                "2": "Spanish"
+                "1.0": "English",
+                "2.0": "Spanish"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0"
+                ]
+            }
         },
         {
             "name": "Device",
-            "type": "string",
-            "description": "Device",
-            "ordered": true
+            "type": "any"
         },
         {
             "name": "GENDER",
             "type": "integer",
-            "description": "Respondent gender",
             "encodings": {
-                "0": "Unknown",
-                "1": "Male",
-                "2": "Female"
+                "0.0": "Unknown",
+                "1.0": "Male",
+                "2.0": "Female"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "2.0"
+                ]
+            }
         },
         {
             "name": "AGE4",
             "type": "integer",
-            "description": "Age - 4 Categories",
             "encodings": {
-                "1": "18-29",
-                "2": "30-44",
-                "3": "45-59",
-                "4": "60+",
-                "99": "Under 18"
+                "1.0": "18-29",
+                "2.0": "30-44",
+                "3.0": "45-59",
+                "4.0": "60+",
+                "99.0": "Under 18"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "99.0",
+                    "3.0",
+                    "4.0"
+                ]
+            }
         },
         {
             "name": "AGE7",
             "type": "integer",
-            "description": "Age - 7 Categories",
             "encodings": {
-                "1": "18-24",
-                "2": "25-34",
-                "3": "35-44",
-                "4": "45-54",
-                "5": "55-64",
-                "6": "65-74",
-                "7": "75+",
-                "99": "Under 18"
+                "1.0": "18-24",
+                "2.0": "25-34",
+                "3.0": "35-44",
+                "4.0": "45-54",
+                "5.0": "55-64",
+                "6.0": "65-74",
+                "7.0": "75+",
+                "99.0": "Under 18"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "7.0",
+                    "99.0"
+                ]
+            }
         },
         {
             "name": "RACETHNICITY",
             "type": "integer",
-            "description": "Combined Race/Ethnicity",
             "encodings": {
-                "1": "White, non-Hispanic",
-                "2": "Black, non-Hispanic",
-                "3": "Other, non-Hispanic",
-                "4": "Hispanic",
-                "5": "2+, non-Hispanic",
-                "6": "Asian, non-Hispanic"
+                "1.0": "White, non-Hispanic",
+                "2.0": "Black, non-Hispanic",
+                "3.0": "Other, non-Hispanic",
+                "4.0": "Hispanic",
+                "5.0": "2+, non-Hispanic",
+                "6.0": "Asian, non-Hispanic"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0"
+                ]
+            }
         },
         {
             "name": "EDUC",
             "type": "integer",
-            "description": "Education (Highest Degree Received)",
             "encodings": {
-                "1": "No formal education",
-                "2": "1st, 2nd, 3rd, or 4th grade",
-                "3": "5th or 6th grade",
-                "4": "7th or 8th grade",
-                "5": "9th grade",
-                "6": "10th grade",
-                "7": "11th grade",
-                "8": "12th grade NO DIPLOMA",
-                "9": "HIGH SCHOOL GRADUATE - high school DIPLOMA or the equivalent (GED)",
-                "10": "Some college, no degree",
-                "11": "Associate degree",
-                "12": "Bachelors degree",
-                "13": "Masters degree",
-                "14": "Professional or Doctorate degree"
+                "1.0": "No formal education",
+                "2.0": "1st, 2nd, 3rd, or 4th grade",
+                "3.0": "5th or 6th grade",
+                "4.0": "7th or 8th grade",
+                "5.0": "9th grade",
+                "6.0": "10th grade",
+                "7.0": "11th grade",
+                "8.0": "12th grade NO DIPLOMA",
+                "9.0": "HIGH SCHOOL GRADUATE - high school DIPLOMA or the equivalent (GED)",
+                "10.0": "Some college, no degree",
+                "11.0": "Associate degree",
+                "12.0": "Bachelors degree",
+                "13.0": "Masters degree",
+                "14.0": "Professional or Doctorate degree"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "7.0",
+                    "8.0",
+                    "9.0",
+                    "10.0",
+                    "11.0",
+                    "12.0",
+                    "13.0",
+                    "14.0"
+                ]
+            }
         },
         {
             "name": "EDUC4",
             "type": "integer",
-            "description": "4-level education",
             "encodings": {
-                "1": "No HS diploma",
-                "2": "HS graduate or equivalent",
-                "3": "Some college",
-                "4": "BA or above"
+                "1.0": "No HS diploma",
+                "2.0": "HS graduate or equivalent",
+                "3.0": "Some college",
+                "4.0": "BA or above"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0"
+                ]
+            }
         },
         {
             "name": "MARITAL",
             "type": "integer",
-            "description": "Marital Status",
             "encodings": {
-                "1": "Married",
-                "2": "Widowed",
-                "3": "Divorced",
-                "4": "Separated",
-                "5": "Never married",
-                "6": "Living with partner"
+                "1.0": "Married",
+                "2.0": "Widowed",
+                "3.0": "Divorced",
+                "4.0": "Separated",
+                "5.0": "Never married",
+                "6.0": "Living with partner"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0"
+                ]
+            }
         },
         {
             "name": "EMPLOY",
             "type": "integer",
-            "description": "Current Employment Status",
             "encodings": {
-                "1": "Working \u2013 as a paid employee",
-                "2": "Working \u2013 self employed",
-                "3": "Not working \u2013 looking for work or on temporary layoff",
-                "4": "Not working \u2013 retired",
-                "5": "Not working \u2013 disabled",
-                "6": "Not working - other"
+                "1.0": "Working \u2013 as a paid employee",
+                "2.0": "Working \u2013 self employed",
+                "3.0": "Not working \u2013 looking for work or on temporary layoff",
+                "4.0": "Not working \u2013 retired",
+                "5.0": "Not working \u2013 disabled",
+                "6.0": "Not working - other"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0"
+                ]
+            }
         },
         {
             "name": "REGION4",
             "type": "integer",
-            "description": "4-level region",
             "encodings": {
-                "1": "Northeast",
-                "2": "Midwest",
-                "3": "South",
-                "4": "West"
+                "1.0": "Northeast",
+                "2.0": "Midwest",
+                "3.0": "South",
+                "4.0": "West"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0"
+                ]
+            }
         },
         {
             "name": "METRO",
             "type": "integer",
-            "description": "Metropolitan area flag",
             "encodings": {
-                "0": "Non-Metro Area",
-                "1": "Metro Area"
+                "0.0": "Non-Metro Area",
+                "1.0": "Metro Area"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "INTERNET",
             "type": "integer",
-            "description": "HH internet access via dial-up, DSL, or cable broadband at home",
             "encodings": {
-                "0": "Non-internet household",
-                "1": "Internet Household"
+                "0.0": "Non-internet household",
+                "1.0": "Internet Household"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "HOUSING",
             "type": "integer",
-            "description": "Home Ownership",
             "encodings": {
-                "1": "Owned",
-                "2": "Rented or occupied without payment"
+                "1.0": "Owned",
+                "2.0": "Rented or occupied without payment"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0"
+                ]
+            }
         },
         {
             "name": "HOME_TYPE",
             "type": "integer",
-            "description": "Type of building of panelists' residence",
             "encodings": {
-                "1": "A one-family house detached from any other house",
-                "2": "A one-family house attached to one or more houses",
-                "3": "Apartment building, mobile home or trailer, boat, RV, or other"
+                "1.0": "A one-family house detached from any other house",
+                "2.0": "A one-family house attached to one or more houses",
+                "3.0": "Apartment building, mobile home or trailer, boat, RV, or other"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0"
+                ]
+            }
         },
         {
             "name": "PHONESERVICE",
             "type": "integer",
-            "description": "Telephone service for the household",
             "encodings": {
-                "1": "Landline telephone only",
-                "2": "Have a landline, but mostly use cellphone",
-                "3": "Have cellphone, but mostly use landline",
-                "4": "Cellphone only",
-                "5": "No telephone service"
+                "1.0": "Landline telephone only",
+                "2.0": "Have a landline, but mostly use cellphone",
+                "3.0": "Have cellphone, but mostly use landline",
+                "4.0": "Cellphone only",
+                "5.0": "No telephone service"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0"
+                ]
+            }
         },
         {
             "name": "HHSIZE",
-            "type": "integer",
-            "description": "Household size (including children)",
-            "ordered": true
+            "type": "integer"
         },
         {
             "name": "HH612",
             "type": "integer",
-            "description": "Number of HH members age 6-12",
             "encodings": {
-                "0": "0",
-                "1": "1",
-                "2": "2",
-                "3": "3 or more"
+                "0.0": null,
+                "1.0": null,
+                "2.0": null,
+                "3.0": "3 or more"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "2.0",
+                    "3.0"
+                ]
+            }
         },
         {
             "name": "HH1317",
             "type": "integer",
-            "description": "Number of HH members age 13-17",
             "encodings": {
-                "0": "0",
-                "1": "1",
-                "2": "2 or more"
+                "0.0": null,
+                "1.0": null,
+                "2.0": "2 or more"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "2.0"
+                ]
+            }
         },
         {
             "name": "HH18OV",
             "type": "integer",
-            "description": "Number of HH members age 18+",
             "encodings": {
-                "0": "0",
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6 or more"
+                "0.0": null,
+                "1.0": null,
+                "2.0": null,
+                "3.0": null,
+                "4.0": null,
+                "5.0": null,
+                "6.0": "6 or more"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0"
+                ]
+            }
         },
         {
             "name": "Stigma_Scale_Score",
-            "type": "number",
-            "description": "Stigma scale: average score of 6 stigma items; higher scores indicate higher stigma."
+            "type": "number"
         },
         {
             "name": "Discrimination_Scale_Score",
-            "type": "number",
-            "description": "Discrimination scale score from average of four discrimination variables. Higher scores indicate more acceptance of discrimination."
+            "type": "number"
         },
         {
             "name": "Income_relativeMedian",
             "type": "integer",
-            "description": "Income coded into above/below median for state.",
             "encodings": {
-                "1": "Below median",
-                "2": "Above median"
+                "1.0": "Below median",
+                "2.0": "Above median"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0"
+                ]
+            }
         },
         {
             "name": "ANY_COVIDtest",
             "type": "integer",
-            "description": "Either self or household member tested for COVID.",
             "encodings": {
-                "1": "Yes",
-                "2": "No"
+                "1.0": "Yes",
+                "2.0": "No"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0"
+                ]
+            }
         },
         {
             "name": "Positive_COVIDtest",
             "type": "integer",
-            "description": "Either self or household tested postivie.",
             "encodings": {
-                "0": "No",
-                "1": "Yes"
+                "0.0": "No",
+                "1.0": "Yes"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "Loneliness_PreCOVID",
-            "type": "number",
-            "description": "No description"
+            "type": "number"
         },
         {
             "name": "Loneliness_DuringCOVID",
-            "type": "number",
-            "description": "No description"
+            "type": "number"
         },
         {
             "name": "POLICY_4ITEM_SCALE",
-            "type": "number",
-            "description": "No description"
+            "type": "number"
         },
         {
             "name": "PersonalCrimJust_Ever",
             "type": "integer",
-            "description": "Combined personal history of conviction or incarceration.",
             "encodings": {
-                "0": "No",
-                "1": "Yes"
+                "0.0": "No",
+                "1.0": "Yes"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "FamilyCrimJust_Ever",
             "type": "integer",
-            "description": "Combined family or friend history of conviction or incarceration.",
             "encodings": {
-                "0": "No",
-                "1": "Yes"
+                "0.0": "No",
+                "1.0": "Yes"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "MH5_Scale",
-            "type": "number",
-            "description": "No description"
+            "type": "number"
         },
         {
             "name": "COVIDsymptoms",
             "type": "integer",
-            "description": "Had COVID symptoms but was not tested, self or household.",
             "encodings": {
-                "0": "n/a",
-                "1": "COVID symptoms, no test"
+                "0.0": "n/a",
+                "1.0": "COVID symptoms, no test"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
         },
         {
             "name": "PersonalMisuse_Lifetime",
-            "type": "integer",
-            "description": "Personal history of every misusing opioids",
-            "ordered": true
+            "type": "integer"
         },
         {
             "name": "FamFriendMisuse_Lifetime",
-            "type": "integer",
-            "description": "Have family or friends that have ever misused opioids",
-            "ordered": true
+            "type": "integer"
         },
         {
             "name": "FamFriendOverdose_Lifetime",
-            "type": "integer",
-            "description": "Have family member or friend that has ever overdosed",
-            "ordered": true
+            "type": "integer"
         },
         {
             "name": "PersonalMisuse_Recent",
-            "type": "integer",
-            "description": "Personal misuse within the last 12 months",
-            "ordered": true
+            "type": "integer"
         },
         {
             "name": "FamFriendMisuse_Recent",
-            "type": "integer",
-            "description": "Family or friend has misused opiods in the past 12 months",
-            "ordered": true
+            "type": "integer"
         },
         {
             "name": "FamFriendOverdose_Recent",
-            "type": "integer",
-            "description": "Family or friend overdosed in past 12 months",
-            "ordered": true
+            "type": "integer"
         },
         {
             "name": "PersonalOverdose_Lifetime",
-            "type": "integer",
-            "description": "Personal history of overdose from opioids",
-            "ordered": true
+            "type": "integer"
         },
         {
             "name": "PersonalOverdose_Recent",
-            "type": "integer",
-            "description": "Personal overdose from opioids in last 12 months",
-            "ordered": true
+            "type": "integer"
         },
         {
             "name": "PersonalCrimJust_Recent",
-            "type": "integer",
-            "ordered": true,
-            "description": "No description"
+            "type": "integer"
         },
         {
             "name": "FamilyCrimJust_Recent",
-            "type": "integer",
-            "ordered": true,
-            "description": "No description"
+            "type": "integer"
         },
         {
             "name": "SelfHousehold_COVIDtested",
-            "type": "integer",
-            "ordered": true,
-            "description": "No description"
+            "type": "integer"
         },
         {
             "name": "SelfHousehold_COVIDpositive",
-            "type": "integer",
-            "ordered": true,
-            "description": "No description"
+            "type": "integer"
         },
         {
             "name": "COVID_deathinHH",
-            "type": "integer",
-            "ordered": true,
-            "description": "No description"
+            "type": "integer"
         },
         {
             "name": "HOTSPOT_Survey",
-            "type": "integer",
-            "ordered": true,
-            "description": "No description"
+            "type": "integer"
         },
         {
             "name": "EMPLOYED_vs_NOT",
-            "type": "integer",
-            "ordered": true,
-            "description": "No description"
+            "type": "integer"
         },
         {
             "name": "Support_StayHome",
-            "type": "integer",
-            "ordered": true,
-            "description": "No description"
+            "type": "integer"
         },
         {
             "name": "HH05",
             "type": "integer",
             "encodings": {
-                "0": "0",
-                "1": "1",
-                "2": "2",
-                "3": "3 or more"
+                "0.0": null,
+                "1.0": null,
+                "2.0": null,
+                "3.0": "3 or more"
             },
-            "ordered": true,
-            "description": "No description"
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "2.0",
+                    "3.0"
+                ]
+            }
         },
         {
             "name": "INCOME4",
             "type": "integer",
-            "description": "Household income (4 categories)",
             "encodings": {
-                "1": "< $30,000",
-                "2": "$30,000-59,999",
-                "3": "$60,000-99,999",
-                "4": "$100,000+"
+                "1.0": "< $30,000",
+                "2.0": "$30,000-59,999",
+                "3.0": "$60,000-99,999",
+                "4.0": "$100,000+"
             },
-            "ordered": true
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0"
+                ]
+            }
         }
     ],
-    "title": "protocol1-survey2-brief-stigma"
+    "valid": false
 }

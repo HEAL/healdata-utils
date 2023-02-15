@@ -1,277 +1,277 @@
-name,type,description,ordered
-CaseId,integer,Case ID,True
-WEIGHT,number,"Post-stratification weights - 18+ general population (N=1,161)",
-FluVax,integer,Have you or do you plan to get a flu vaccine for the 2020-2021 flu season?,True
-FluVax_Employ,integer,Are you now required to get a flu vaccination as part of your employment?,True
-VaxPlans,integer,"Now that a vaccine against the coronavirus is becoming available, do you plan to get vaccinated, or not?",True
-Vax_ProtectFam,integer,[I want to protect my family] Which of the following are reasons you [got/would get] a coronavirus vaccine?,True
-Vax_ProtectComm,integer,[I want to protect my community] Which of the following are reasons you [got/would get] a coronavirus vaccine?,True
-Vax_ProtectSelf,integer,[ I want to protect myself] Which of the following are reasons you [got/would get] a coronavirus vaccine?,True
-Vax_DocRec,integer,[My doctor recommends vaccines] Which of the following are reasons you [got/would get] a coronavirus vaccine?,True
-Vax_NormalLife,integer,[Life won’t go back to normal until most people are vaccinated] Which of the following are reasons you [got/would get] a coronavirus vaccine?,True
-Vax_MostPublic,integer,[I think the majority of the public will get the vaccine] Which of the following are reasons you [got/would get] a coronavirus vaccine?,True
-Vax_Other,integer,[Other] Which of the following are reasons you [got/would get] a coronavirus vaccine?,True
-Vax_DK,integer,[DON'T KNOW] Which of the following are reasons you [got/would get] a coronavirus vaccine?,True
-Vax_SKP,integer,[SKIPPED ON WEB] Which of the following are reasons you [got/would get] a coronavirus vaccine?,True
-Vax_REF,integer,[REFUSED] Which of the following are reasons you [got/would get] a coronavirus vaccine?,True
-NoVax_Allergic,integer,[I am allergic to vaccines] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_Needles,integer,[I don’t like needles] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_NoConcern,integer,[I’m not concerned about getting seriously ill from the coronavirus] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_Time,integer,[I won’t have time to get vaccinated] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_GetInfected,integer,[I would be concerned about getting infected with the coronavirus from the vaccine] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_SideEffect,integer,[I would be concerned about side effects from the vaccine] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_DontWork,integer,[I don’t think vaccines work very well] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_Politics,integer,[Politicians might promote a vaccine to win votes even if it is not fully tested or safe] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_NotSerious,integer,[The coronavirus outbreak is not as serious as some people say it is] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_MostPublic,integer,[I don’t think the majority of the public will get the vaccine] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_Other,integer,"[Other, please specify:] Which of the following are reasons you would not get a coronavirus vaccine?",True
-NoVax_Other_OE,string,[TEXTBOX] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_WillGet,integer,"[I will get the coronavirus vaccine, these reasons do not outweigh the benefit of the vaccine] Which of the following are reasons you would not get a coronavirus vaccine?",True
-NoVax_DK,integer,[DON'T KNOW] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_SKP,integer,[SKIPPED ON WEB] Which of the following are reasons you would not get a coronavirus vaccine?,True
-NoVax_REF,integer,[REFUSED] Which of the following are reasons you would not get a coronavirus vaccine?,True
-Change_Famous,integer,[Famous people I trust get the coronavirus vaccine] Which of the following reasons would make you reconsider getting the coronavirus vaccine [sooner]?,True
-Change_Friends,integer,[Close friends get the coronavirus vaccine] Which of the following reasons would make you reconsider getting the coronavirus vaccine [sooner]?,True
-Change_MajPublic,integer,[The majority of the public gets the vaccine] Which of the following reasons would make you reconsider getting the coronavirus vaccine [sooner]?,True
-Change_Free,integer,[The vaccine is free] Which of the following reasons would make you reconsider getting the coronavirus vaccine [sooner]?,True
-Change_DocRec,integer,[My doctor recommends that I get the vaccine] Which of the following reasons would make you reconsider getting the coronavirus vaccine [sooner]?,True
-Change_StudyResults,integer,[Seeing study results or articles that show me the vaccine is safe and effective] Which of the following reasons would make you reconsider getting the coronavirus vaccine [sooner]?,True
-Change_Nothing,integer,[There is nothing that would make me get the vaccine] Which of the following reasons would make you reconsider getting the coronavirus vaccine [sooner]?,True
-Change_DK,integer,[DON'T KNOW] Which of the following reasons would make you reconsider getting the coronavirus vaccine [sooner]?,True
-Change_SKP,integer,[SKIPPED ON WEB] Which of the following reasons would make you reconsider getting the coronavirus vaccine [sooner]?,True
-Change_REF,integer,[REFUSED] Which of the following reasons would make you reconsider getting the coronavirus vaccine [sooner]?,True
-Change_DocCall,integer,"If a doctor you know called you directly to talk about your concerns around the COVID-19 vaccine, would that change your mind on getting a COVID-19 vaccine?",True
-Change_HealthDept,integer,If your local health department called you directly to talk about your concerns around the COVID-19 vaccine would that change your mind on getting a COVID-19 vaccine?,True
-GiftCard,integer,If you were offered a gift card for $50 would that make you more likely to want to get a COVID-19 vaccine?,True
-GiftCard_OE,number,[NUMBERBOX] What is the lowest amount that would be necessary to make a difference in your decision to get a COVID-19 vaccine?,
-Ask_Employer,integer,[Employer] Have any of the following people asked you about any concerns you have about getting a COVID-19 vaccination?,True
-Ask_PCP,integer,[Your primary care physician] Have any of the following people asked you about any concerns you have about getting a COVID-19 vaccination?,True
-Ask_Physician,integer,[Another physician who is not your primary care physician] Have any of the following people asked you about any concerns you have about getting a COVID-19 vaccination?,True
-Ask_Family,integer,[Family member] Have any of the following people asked you about any concerns you have about getting a COVID-19 vaccination?,True
-Ask_Friend,integer,[Friend] Have any of the following people asked you about any concerns you have about getting a COVID-19 vaccination?,True
-Ask_Religious,integer,[Religious/spiritual leader] Have any of the following people asked you about any concerns you have about getting a COVID-19 vaccination?,True
-Ask_Other,integer,[Other] Have any of the following people asked you about any concerns you have about getting a COVID-19 vaccination?,True
-VaxReq_Employ,integer,Do you expect that you will be required to get a COVID-19 vaccination as part of your employment?,True
-ChanceCovid,number,"Considering the next three months, on a scale of 0 to 100 percent, do you think there is a 0% chance you will get the coronavirus or 100% chance you will get the coronavirus?",
-DeathCovid,number,"If you do get the coronavirus, on a scale of 0 to 100 percent, do you think there is a 0% chance you will die from it or 100% chance you will die from it?",
-Personal_COVIDtest,integer,"Have you been tested for COVID-19 (coronavirus)? If so, what was the result?",True
-HH_TestPositive,integer,"[At least one has been tested and he/she tested positive (They had coronavirus)] Has any family member, close friend, or other person living in your home (not counting yourself) been tested for COVID-19 (coronavirus)?",True
-HH_TestNegative,integer,"[At least one has been tested and he/she never tested positive...] Has any family member, close friend, or other person living in your home (not counting yourself) been tested for COVID-19 (coronavirus)?",True
-HH_TestUnknown,integer,"[At least one has been tested and I do not know the result] Has any family member, close friend, or other person living in your home (not counting yourself) been tested for COVID-19 (coronavirus)?",True
-HH_COVIDSymptoms,integer,"[At least one has not been tested, but he/she experienced COVID-19 symptoms] Has any family member, close friend, or other person living in your home (not counting yourself) been tested for COVID-19 (coronavirus)?",True
-HH_NoCOVID,integer,"[At least one has not been tested and he/she has not experienced COVID-19 symptoms] Has any family member, close friend, or other person living in your home (not counting yourself) been tested for COVID-19 (coronavirus)?",True
-HH_NoMembers,integer,"[There is no one else living in my household] Has any family member, close friend, or other person living in your home (not counting yourself) been tested for COVID-19 (coronavirus)?",True
-HH_DK,integer,"[DON'T KNOW] Has any family member, close friend, or other person living in your home (not counting yourself) been tested for COVID-19 (coronavirus)?",True
-HH_SKP,integer,"[SKIPPED ON WEB] Has any family member, close friend, or other person living in your home (not counting yourself) been tested for COVID-19 (coronavirus)?",True
-HH_REF,integer,"[REFUSED] Has any family member, close friend, or other person living in your home (not counting yourself) been tested for COVID-19 (coronavirus)?",True
-HH_CovidPass,integer,"[Yes, someone in my household] Do you personally know anyone who has passed away/died because of coronavirus?",True
-FF_CovidPass,integer,"[Yes, a close friend/family member] Do you personally know anyone who has passed away/died because of coronavirus?",True
-AC_CovidPass,integer,"[Yes, an acquaintance/coworker] Do you personally know anyone who has passed away/died because of coronavirus?",True
-No_CovidPass,integer,[No] Do you personally know anyone who has passed away/died because of coronavirus?,True
-CovidPass_DK,integer,[DON'T KNOW] Do you personally know anyone who has passed away/died because of coronavirus?,True
-CovidPass_SKP,integer,[SKIPPED ON WEB] Do you personally know anyone who has passed away/died because of coronavirus?,True
-CovidPass_REF,integer,[REFUSED] Do you personally know anyone who has passed away/died because of coronavirus?,True
-EssentialJob,integer,"Thinking about your main job in the past month, would that job be considered “essential” in your state?",True
-WashHands,integer,"[Washed/sanitized hands more than usual] In the past two weeks, which of the following have you done as a general response to the coronavirus pandemic (in addition to what you normally do)?",True
-AvoidTransit,integer,"[Avoided public transportation (e.g., bus, subway, train, commuter rail)] In the past two weeks, which of the following have you done as a general response to the coronavirus pandemic (in addition to what you normally do)?",True
-LessGroups10,integer,"[Limited interactions with others to groups of 10 or less] In the past two weeks, which of the following have you done as a general response to the coronavirus pandemic (in addition to what you normally do)?",True
-SixFeet,integer,"[Kept a 6-foot radius when interacting with people you do not live with] In the past two weeks, which of the following have you done as a general response to the coronavirus pandemic (in addition to what you normally do)?",True
-WearMask,integer,"[Wore a mask or face covering when leaving home] In the past two weeks, which of the following have you done as a general response to the coronavirus pandemic (in addition to what you normally do)?",True
-OtherMeasure,integer,"[I have done other things to keep myself safe] In the past two weeks, which of the following have you done as a general response to the coronavirus pandemic (in addition to what you normally do)?",True
-Restaurant,integer,"[Gone out to a bar, club, restaurant or other place where people gather] In the past two weeks, have you done the following?",True
-Visitors,integer,"[Gone to a friend, neighbor, or relative’s residence (that is not your own) or had visitors such as friends, neighbors or relatives at your residence ] In the past two weeks, have you done the following?",True
-Gathering,integer,"[Attended a gathering with more than 10 people] In the past two weeks, have you done the following?",True
-SharedItems,integer,"[Shared items like towels or utensils with other people not in your household] In the past two weeks, have you done the following?",True
-OthersNoMask,integer,"[Had close contact (within 6 feet) with people who do not live with you and they were without a mask or face coverings] In the past two weeks, have you done the following?",True
-SelfNoMask,integer,"[Been within 6 feet of someone outside your household and you were not wearing a mask or face covering] In the past two weeks, have you done the following?",True
-SocDisBelief,integer,[I do not believe in social distancing] Please select all the reason(s) why you did not social distance in the situations described previously.,True
-COVIDunlikely,integer,[Those I gathered with were unlikely to have the coronavirus] Please select all the reason(s) why you did not social distance in the situations described previously.,True
-SicknessBelief,integer,[I don’t think coronavirus will make me really sick] Please select all the reason(s) why you did not social distance in the situations described previously.,True
-StayedOutside,integer,[We stayed outside most of the time] Please select all the reason(s) why you did not social distance in the situations described previously.,True
-SocObligation,integer,[I felt like I had to go to the event or be in that situation] Please select all the reason(s) why you did not social distance in the situations described previously.,True
-SocDisOther,integer,"[Other, please specify] Please select all the reason(s) why you did not social distance in the situations described previously.",True
-SocDis_Other_OE,string,[TEXTBOX] Please select all the reason(s) why you did not social distance in the situations described previously.,True
-SocDis_DK,integer,[DON'T KNOW] Please select all the reason(s) why you did not social distance in the situations described previously.,True
-SocDis_SKP,integer,[SKIPPED ON WEB] Please select all the reason(s) why you did not social distance in the situations described previously.,True
-SocDis_REF,integer,[REFUSED] Please select all the reason(s) why you did not social distance in the situations described previously.,True
-Know_Blood,integer,[People with certain blood types will never get COVID-19.] Do you think the following statements are true or false?,True
-Know_AALessLikely,integer,[African Americans are less likely to get COVID-19 compared to other racial groups.] Do you think the following statements are true or false?,True
-Know_VaxAvail,integer,[A vaccine for COVID-19 is already available.] Do you think the following statements are true or false?,True
-Know_TestTransmit,integer,[I cannot get COVID-19 by getting tested for it.] Do you think the following statements are true or false?,True
-Know_HealthBehav,integer,"[If I eat right, exercise, and take good care of my body, I don’t need to worry about getting COVID-19.] Do you think the following statements are true or false?",True
-Know_COVIDscheme,integer,[COVID-19 is a scheme for rich people and big companies to make money off of the testing and vaccines.] Do you think the following statements are true or false?,True
-Know_VaxFast,integer,[The COVID-19 vaccines are coming out so fast because they have not been carefully tested.] Do you think the following statements are true or false?,True
-Know_HIVmed,integer,[Taking HIV/AIDS medications would protect me from COVID-19.] Do you think the following statements are true or false?,True
-Know_MaskSpread,integer,[A person with COVID-19 who wears a mask can still spread COVID-19 to other people.] Do you think the following statements are true or false?,True
-Know_LiveCOVID,integer,"[If someone I live with has COVID-19, it increases my chance of getting COVID-19.] Do you think the following statements are true or false?",True
-DOV_TCOUNT,integer,"DATA ONLY VARIABLE: Number of True Q21A, Q21B, Q21E, Q21F, Q21G and Q21H",True
-DOV_TRUE,integer,DATA ONLY VARIABLE: Groups number of true,True
-DOV_FCOUNT,integer,"DATA ONLY VARIABLE: Number of False Q21C, Q21D, Q21I, and Q21J",True
-DOV_FALSE,integer,DATA ONLY VARIABLE: Groups number of false,True
-NotTrue_Careful,integer,[Carefully protect yourself and others around you] Imagine a person you trust tells you that the following statement is not true: [RANDOM SELECTION FROM TRUE AT Q21]. Will that make you more likely to…?,True
-NotTrue_Test,integer,[Get tested for COVID-19] Imagine a person you trust tells you that the following statement is not true: [RANDOM SELECTION FROM TRUE AT Q21]. Will that make you more likely to…?,True
-NotTrue_Vax,integer,[Get vaccinated for COVID-19 when the opportunity is available] Imagine a person you trust tells you that the following statement is not true: [RANDOM SELECTION FROM TRUE AT Q21]. Will that make you more likely to…?,True
-True_Careful,integer,[Carefully protect yourself and others around you] Imagine a person you trust tells you that the following statement is true: [RANDOM SELECTION FROM FALSE AT Q21] Will that make you more likely to…?,True
-True_Test,integer,[Get tested for COVID-19] Imagine a person you trust tells you that the following statement is true: [RANDOM SELECTION FROM FALSE AT Q21] Will that make you more likely to…?,True
-True_Vax,integer,[Get vaccinated for COVID-19 when the opportunity is available] Imagine a person you trust tells you that the following statement is true: [RANDOM SELECTION FROM FALSE AT Q21] Will that make you more likely to…?,True
-LocalPrint,integer,"[Local Print (e.g., Local newspapers, other local news in print form)] In the past month, where did you get most of your information about COVID-19?",True
-NationalPrint,integer,"[National Print (e.g., National newspapers such as USA Today or news magazines such as Newsweek)] In the past month, where did you get most of your information about COVID-19?",True
-BroadcastTV,integer,"[Broadcast television (e.g. ABC, NBC, CBS)] In the past month, where did you get most of your information about COVID-19?",True
-CableTV,integer,"[Cable television (e.g. CNN, FOX, MSNBC)] In the past month, where did you get most of your information about COVID-19?",True
-RadioNews,integer,"[Radio news programs (including streaming, e.g. Sirius)] In the past month, where did you get most of your information about COVID-19?",True
-OnlineNews,integer,"[Online news sites (e.g. websites for print publications, Huffington Post, The Hill, Breitbart)] In the past month, where did you get most of your information about COVID-19?",True
-SocialMedia,integer,"[Social media (e.g. Twitter, Facebook, NextDoor)] In the past month, where did you get most of your information about COVID-19?",True
-EmployerInfo,integer,"[Employer] In the past month, where did you get most of your information about COVID-19?",True
-PersonalNetwork,integer,"[Friends, family, or personal networks] In the past month, where did you get most of your information about COVID-19?",True
-StateLocalGov,integer,"[State or local government] In the past month, where did you get most of your information about COVID-19?",True
-FederalGov,integer,"[Federal government agencies or officials other than the President (such as Anthony Fauci)] In the past month, where did you get most of your information about COVID-19?",True
-TrumpInfo,integer,"[Donald Trump] In the past month, where did you get most of your information about COVID-19?",True
-BidenInfo,integer,"[Joe Biden] In the past month, where did you get most of your information about COVID-19?",True
-ChurchInfo,integer,"[Church/faith-based leaders] In the past month, where did you get most of your information about COVID-19?",True
-CBOInfo,integer,"[Community-based organizations (e.g. Union leadership, mutual aid associations, …,support groups (AA, smart recovery, etc)) ] In the past month, where did you get most of your information about COVID-19?",True
-SciJournal,integer,"[Scientific journals] In the past month, where did you get most of your information about COVID-19?",True
-OtherInfo,integer,"[Other] In the past month, where did you get most of your information about COVID-19?",True
-NoInfo,integer,"[I don’t consume news about COVID-19] In the past month, where did you get most of your information about COVID-19?",True
-Info_DK,integer,"[DON'T KNOW] In the past month, where did you get most of your information about COVID-19?",True
-Info_SKP,integer,"[SKIPPED ON WEB] In the past month, where did you get most of your information about COVID-19?",True
-Info_REF,integer,"[REFUSED] In the past month, where did you get most of your information about COVID-19?",True
-RACE_WhiteAdvantage,integer,[White people in the U.S. have certain advantages because of the color of their skin.] Do you disagree or agree with the following statements?,True
-RACE_Successful,integer,[Race is very important in determining who is successful and who is not.] Do you disagree or agree with the following statements?,True
-RACE_Prison,integer,[Race plays an important role in who gets sent to prison.] Do you disagree or agree with the following statements?,True
-RACE_SocServices,integer,[Race plays a major role in the type of social services (such as type of health care or day care) that people receive in the U.S.] Do you disagree or agree with the following statements?,True
-RACE_Opportunity,integer,[Racial and ethnic minorities do not have the same opportunities as white people in the U.S.] Do you disagree or agree with the following statements?,True
-RACE_MinAdvantage,integer,[Racial and ethnic minorities in the U.S. have certain advantages because of the color of their skin.] Do you disagree or agree with the following statements?,True
-RACE_Rich,integer,"[Everyone who works hard, no matter what race they are, has an equal chance to become rich.] Do you disagree or agree with the following statements?",True
-RACE_WhiteBlame,integer,[White people are more to blame for racial discrimination than racial and ethnic minorities.] Do you disagree or agree with the following statements?,True
-Disc_AtSchool,integer,"[At school?] Have you ever experienced discrimination...in any of the following situations because of your race, ethnicity, or color?",True
-Disc_Hired,integer,"[Getting hired or getting a job?] Have you ever experienced discrimination...in any of the following situations because of your race, ethnicity, or color?",True
-Disc_AtWork,integer,"[At work?] Have you ever experienced discrimination...in any of the following situations because of your race, ethnicity, or color?",True
-Disc_Housing,integer,"[Getting housing?] Have you ever experienced discrimination...in any of the following situations because of your race, ethnicity, or color?",True
-Disc_MedCare,integer,"[Getting medical care?] Have you ever experienced discrimination...in any of the following situations because of your race, ethnicity, or color?",True
-Disc_Restaurant,integer,"[Getting service in a store or restaurant?] Have you ever experienced discrimination...in any of the following situations because of your race, ethnicity, or color?",True
-Disc_Credit,integer,"[Getting credit, bank loans, or a mortgage?] Have you ever experienced discrimination...in any of the following situations because of your race, ethnicity, or color?",True
-Disc_Street,integer,"[On the street or in a public setting?] Have you ever experienced discrimination...in any of the following situations because of your race, ethnicity, or color?",True
-Disc_Police,integer,"[From the police or in the courts?] Have you ever experienced discrimination...in any of the following situations because of your race, ethnicity, or color?",True
-Times_AtSchool,integer,[At school?]How many times did this happen?,True
-Times_Hired,integer,[Getting hired or getting a job?] How many times did this happen?,True
-Times_AtWork,integer,[At work?] How many times did this happen?,True
-Times_Housing,integer,[Getting housing?] How many times did this happen?,True
-Times_MedCare,integer,[Getting medical care?] How many times did this happen?,True
-Times_Restaurant,integer,[Getting service in a store or restaurant?] How many times did this happen?,True
-Times_Credit,integer,"[Getting credit, bank loans, or a mortgage?] How many times did this happen?",True
-Times_Street,integer,[On the street or in a public setting?] How many times did this happen?,True
-Times_Police,integer,[From the police or in the courts?] How many times did this happen?,True
-PS_A_Medicaid,integer,[I favor expanding Medicaid insurance benefits for low income families to provide coverage for treatment...prescription pain medications] Do you disagree or agree with the following statements?,True
-PS_B_Naloxone,integer,"[I favor making naloxone (also known as “Narcan”),...available and affordable without a prescription] Do you disagree or agree with the following statements?",True
-PS_C_Mandatory,integer,[I believe that making drug treatment mandatory is an effective way to help people with an opioid use disorder] Do you disagree or agree with the following statements?,True
-PS_D_GovSpend,integer,[I favor increasing government spending to improve treatment of opioid use disorder/addiction] Do you disagree or agree with the following statements?,True
-SS_A_HistoryWork,integer,[I would be willing to have a person with a past history of opioid use disorder start working closely with me on a job.] Do you disagree or agree with the following statements?,True
-SS_C_CurrentWork,integer,[I would be willing to have a person with a current opioid use disorder start working closely with me on a job.] Do you disagree or agree with the following statements?,True
-SS_D_CurrentMarry,integer,[I would be comfortable having a person with a current opioid use disorder marry into my close or immediate family.] Do you disagree or agree with the following statements?,True
-SS_B_HistoryMarry,integer,[I am comfortable having a person with a past history of opioid use disorder marry into my close or immediate family.] Do you disagree or agree with the following statements?,True
-SS_E_Dangerous,integer,[People with a current opioid use disorder are more dangerous than the general population.] Do you disagree or agree with the following statements?,True
-SS_F_Trust,integer,[A person who currently has an opioid use disorder cannot be trusted.] Do you disagree or agree with the following statements?,True
-SS_CurrentSteal,integer,[A person who currently has an opioid use disorder would be willing to steal money or valuable items in order to get drugs.] Do you disagree or agree with the following statements?,True
-SS_HistorySteal,integer,[A person who has a past history of opioid use disorder...valuable items out of desperation to get drugs.] Do you disagree or agree with the following statements?,True
-SS_CurrentHighRisk,integer,[A person who currently has an opioid use disorder...make them a high-risk employee in my workplace.] Do you disagree or agree with the following statements?,True
-SS_HistoryHighRisk,integer,[A person who has a past history of opioid use disorder...make them a high-risk employee in my workplace.] Do you disagree or agree with the following statements?,True
-Recovery_Religious,integer,[Religious in nature] Please rank the following statements with 1 most closely corresponding to your personal definition of recovery and 10 being what you think least corresponds...,True
-Recovery_Spiritual,integer,[Spiritual in nature] Please rank the following statements with 1 most closely corresponding to your personal definition of recovery and 10 being what you think least corresponds...,True
-Recovery_PhysicalMental,integer,[Physical and mental in nature] Please rank the following statements with 1 most closely corresponding to your personal definition of recovery and 10 being what you think least corresponds...,True
-Recovery_Contributes,integer,[Living a life that contributes to society] Please rank the following statements with 1 most closely corresponding to your personal definition of recovery and 10 being what you think least corresponds...,True
-Recovery_EnhancedQuality,integer,[Enhanced quality of life] Please rank the following statements with 1 most closely corresponding to your personal definition of recovery and 10 being what you think least corresponds...,True
-Recovery_ProfHelp,integer,[Seeking professional help] Please rank the following statements with 1 most closely corresponding to your personal definition of recovery and 10 being what you think least corresponds...,True
-Recovery_Purpose,integer,[Having a sense of purpose in life] Please rank the following statements with 1 most closely corresponding to your personal definition of recovery and 10 being what you think least corresponds...,True
-Recovery_ControlledUse,integer,[Moderate/controlled use of any substance (drugs and/or alcohol)] Please rank the following statements with 1 most closely corresponding to your personal definition of recovery and 10 being what you think least corresponds...,True
-Recovery_NoDrugUse,integer,[No use of any drug and moderate/controlled use of alcohol] Please rank the following statements with 1 most closely corresponding to your personal definition of recovery and 10 being what you think least corresponds...,True
-Recovery_Abstaining,integer,[No use of any substance (drugs or alcohol)] Please rank the following statements with 1 most closely corresponding to your personal definition of recovery and 10 being what you think least corresponds...,True
-RecovHelp_PCP,integer,[Primary Care Physician] Please rank the following statements with 1 being what you think is most helpful for recovery and 9 being what you think is the least helpful for recovery.,True
-RecovHelp_Inpatient,integer,[Intensive Inpatient Program] Please rank the following statements with 1 being what you think is most helpful for recovery and 9 being what you think is the least helpful for recovery.,True
-RecovHelp_SelfHelp,integer,"[Self-help Group (for example, Alcoholics Anonymous)] Please rank the following statements with 1 being what you think is most helpful for recovery and 9 being what you think is the least helpful for recovery.",True
-RecovHelp_Therapist,integer,[Therapist/Psychologist/Social Worker] Please rank the following statements with 1 being what you think is most helpful for recovery and 9 being what you think is the least helpful for recovery.,True
-RecovHelp_Medication,integer,[Prescription Medication] Please rank the following statements with 1 being what you think is most helpful for recovery and 9 being what you think is the least helpful for recovery.,True
-RecovHelp_TalkFamily,integer,[Family and Friends] Please rank the following statements with 1 being what you think is most helpful for recovery and 9 being what you think is the least helpful for recovery.,True
-RecovHelp_NaturalHealer,integer,[Spiritual or natural healer] Please rank the following statements with 1 being what you think is most helpful for recovery and 9 being what you think is the least helpful for recovery.,True
-RecovHelp_Rehab,integer,[Rehab program] Please rank the following statements with 1 being what you think is most helpful for recovery and 9 being what you think is the least helpful for recovery.,True
-RecovHelp_FBO,integer,[Faith-based organization/institution] Please rank the following statements with 1 being what you think is most helpful for recovery and 9 being what you think is the least helpful for recovery.,True
-PersonalUse_Ever,integer,"Have you ever misused opioids of any kind – such as heroin, fentanyl, or prescription pain medications other than exactly as prescribed for you?",True
-PersonalUse_Last,integer,When was the last time you used heroin or other illegally obtained opioids in a way not prescribed by a doctor?,True
-PersonalConviction_Ever,integer,[Have you ever been convicted of any misdemeanor or felony crime?] Please answer yes or no to the following questions:,True
-PersonalIncarceration_Ever,integer,[Have you ever been incarcerated in jail or prison?] Please answer yes or no to the following questions:,True
-FamilyUse_Ever,integer,"[Have any family members or close friends ever had an opioid use disorder or misused opioids (for example, used in a way other] Please answer yes or no to the following questions:",True
-FamilyConviction_Ever,integer,[Have any of your family members or close friends ever been convicted of any misdemeanor or felony crime?] Please answer yes or no to the following questions:,True
-FamilyIncarceration_Ever,integer,[Have any of your family members or close friends ever been incarcerated in jail or prison?] Please answer yes or no to the following questions:,True
-EmployStatus,integer,"We would like to know about what you do -- Are you working now, looking for work, retired, keeping house, a student, or what?",True
-PatientContact,integer,"Since the COVID-19 pandemic began, on a typical work day, how often are you in direct contact with patients?",True
-COVIDContact,integer,"At your healthcare facility, how often do you think you come into contact with someone who has COVID-19?",True
-COVIDContactRisk,integer,"In general, how often do you think you come into contact with someone who has a high-risk medical condition(s), that if they were to get infected with COVID-19 would put their health at serious risk?",True
-Facility_ClothMasks,integer,"[Cloth face coverings] Since the COVID-19 pandemic began, in your place of work as a health care worker, how often are the following precautions taken throughout the facility?",True
-Facility_MedMasks,integer,"[Medical face masks (I.e. surgical masks)] Since the COVID-19 pandemic began, in your place of work as a health care worker, how often are the following precautions taken throughout the facility?",True
-Facility_Respirator,integer,"[Respirators, such as N95 respirators] Since the COVID-19 pandemic began, in your place of work as a health care worker, how often are the following precautions taken throughout the facility?",True
-Facility_EyeProtect,integer,"[Eye protection (I.e. face shield or goggles)] Since the COVID-19 pandemic began, in your place of work as a health care worker, how often are the following precautions taken throughout the facility?",True
-Facility_MedGloves,integer,"[Disposable medical gloves] Since the COVID-19 pandemic began, in your place of work as a health care worker, how often are the following precautions taken throughout the facility?",True
-Facility_Gowns,integer,"[Disposable gowns/one-piece coveralls] Since the COVID-19 pandemic began, in your place of work as a health care worker, how often are the following precautions taken throughout the facility?",True
-Facility_PhysDist,integer,"[Physically distance from others when possible] Since the COVID-19 pandemic began, in your place of work as a health care worker, how often are the following precautions taken throughout the facility?",True
-Facility_WashHands,integer,"[Wash hands regularly] Since the COVID-19 pandemic began, in your place of work as a health care worker, how often are the following precautions taken throughout the facility?",True
-PID1,integer,"Do you consider yourself a Democrat, a Republican, an Independent or none of these?",True
-PIDA,integer,Do you consider yourself a strong or not so strong Democrat?,True
-PIDB,integer,Do you consider yourself a strong or not so strong Republican?,True
-PIDI,integer,Do you lean more toward the Democrats or the Republicans?,True
-PartyID5,number,DATA-ONLY: Computed 5-level Party ID,
-PartyID7,number,DATA-ONLY: Computed 7-level Party ID,
-IDEO,number,DATA-ONLY: Computed 5-level political ideology,
-LGBT,integer,Which of the following best represents how you think of yourself?,True
-STUDENT_TYPE,integer,Are you…,True
-FutureContact,integer,Do you consent to be contacted to be screened for this interview opportunity?,True
-STARTDT,number,Start Date/Time,
-ENDDT,number,END Date/Time,
-duration,number,"Time spent in survey, in minutes",
-SURV_MODE,integer,Survey interview mode (online or phone),True
-SURV_LANG,integer,Survey Interview Language,True
-Device,string,Device,True
-GENDER,integer,Respondent gender,True
-AGE4,integer,Age - 4 Categories,True
-AGE7,integer,Age - 7 Categories,True
-RACETHNICITY,integer,Combined Race/Ethnicity,True
-EDUC5,integer,5-level education,True
-MARITAL,integer,Marital Status,True
-EMPLOY,integer,Current Employment Status,True
-INCOME4,integer,4-level Household Income,True
-REGION4,integer,4-level region,True
-METRO,integer,Metropolitan area flag,True
-INTERNET,integer,"HH internet access via dial-up, DSL, or cable broadband at home",True
-HOUSING,integer,Home Ownership,True
-HOME_TYPE,integer,Type of building of panelists' residence,True
-PHONESERVICE,integer,Telephone service for the household,True
-HHSIZE,integer,Household size (including children),True
-HH612,integer,Number of HH members age 6-12,True
-HH1317,integer,Number of HH members age 13-17,True
-HH18OV,integer,Number of HH members age 18+,True
-PersonalMisuse_Lifetime,integer,Personal history of ever misusing opioids,True
-FamFriendMisuse_Lifetime,integer,Family or friend history of ever misusing opioids,True
-PersonalMisuse_Recent,integer,Personal misuse within the last 12 months,True
-PersonalCrimJust_Ever,integer,Personal criminal justice history (lifetime),True
-FamilyCrimJust_Ever,integer,Family criminal justice history (lifetime),True
-PersonalCrimJust_Recent,integer,Personal criminal justice history (past year),True
-FamilyCrimJust_Recent,integer,Family criminal justice history (past year),True
-SS_A_HistoryWork_REV,integer,"Willing to work with someone with a past history, reverse coded for scale use, high value = high stigma",True
-SS_C_CurrentWork_REV,integer,"Willing to work with someone with a current OUD, reverse coded for scale use, high value = high stigma",True
-SS_B_HistoryMarry_REV,integer,"Comfortable with past history marrying into family, reverse coded for scale use, high value = high stigma",True
-SS_D_CurrentMarry_REV,integer,"Comfortable with current OUD marrying into family, reverse coded for scale use, high value = high stigma",True
-Stigma_Scale_Score,number,Mean of six stigma items,
-Expanded_10ITEM_Stigma,number,Mean of ten stigma items,
-Policy_4ITEM_Scale,number,Mean of four policy items,
-SelfHousehold_COVIDtested,integer,Either self or household member was tested for COVID,True
-race_WHITE,integer,Race: White,True
-race_BLACK,integer,Race: Black,True
-race_OTHERMIXED,integer,Race: Other/2+,True
-race_HISPANIC,integer,Race: Hispanic,True
-race_ASIAN,integer,Race: Asian,True
-RACEwhiteadvantage_REV,integer,Reverse CoBras Scale item,True
-RACEsuccessful_REV,integer,Reverse CoBras Scale item,True
-RACEprison_REV,integer,Reverse CoBras Scale item,True
-RACEsocservices_REV,integer,Reverse CoBras Scale item,True
-RACEopportunity_REV,integer,Reverse CoBras Scale item,True
-RACEwhiteblame_REV,integer,Reverse CoBras Scale item,True
-CoBRAS_Scale,number,"Colorblind racial attitudes, unawareness of racial privilege subscale",
-HH05,integer,No description,True
+name,type,encodings,constraints.enum
+CaseId,integer,,
+WEIGHT,number,,
+FluVax,integer,"1.0=Yes, I already got the vaccine for the 2020-2021 flu season|2.0=Yes, I plan to get the vaccine for the 2020-2021 flu season|3.0=No, not this flu season|4.0=No, I never get the flu vaccine|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|4.0|98.0|99.0|77.0
+FluVax_Employ,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+VaxPlans,integer,"1.0=I already got vaccinated|2.0=Yes, I will get a coronavirus vaccine as soon as it is available to me|3.0=Yes, I will get a coronavirus vaccine, but I will wait until I see more proof that it is safe and effective|4.0=No, I will not get a coronavirus vaccine|77.0=Not sure|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|4.0|98.0|99.0|77.0
+Vax_ProtectFam,integer,0.0=No|1.0=Yes,0.0|1.0
+Vax_ProtectComm,integer,0.0=No|1.0=Yes,0.0|1.0
+Vax_ProtectSelf,integer,0.0=No|1.0=Yes,0.0|1.0
+Vax_DocRec,integer,0.0=No|1.0=Yes,0.0|1.0
+Vax_NormalLife,integer,0.0=No|1.0=Yes,0.0|1.0
+Vax_MostPublic,integer,0.0=No|1.0=Yes,0.0|1.0
+Vax_Other,integer,0.0=No|1.0=Yes,0.0|1.0
+Vax_DK,integer,0.0=No|1.0=Yes,0.0|1.0
+Vax_SKP,integer,0.0=No|1.0=Yes,0.0|1.0
+Vax_REF,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_Allergic,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_Needles,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_NoConcern,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_Time,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_GetInfected,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_SideEffect,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_DontWork,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_Politics,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_NotSerious,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_MostPublic,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_Other,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_Other_OE,any,,
+NoVax_WillGet,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_DK,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_SKP,integer,0.0=No|1.0=Yes,0.0|1.0
+NoVax_REF,integer,0.0=No|1.0=Yes,0.0|1.0
+Change_Famous,integer,0.0=No|1.0=Yes,0.0|1.0
+Change_Friends,integer,0.0=No|1.0=Yes,0.0|1.0
+Change_MajPublic,integer,0.0=No|1.0=Yes,0.0|1.0
+Change_Free,integer,0.0=No|1.0=Yes,0.0|1.0
+Change_DocRec,integer,0.0=No|1.0=Yes,0.0|1.0
+Change_StudyResults,integer,0.0=No|1.0=Yes,0.0|1.0
+Change_Nothing,integer,0.0=No|1.0=Yes,0.0|1.0
+Change_DK,integer,0.0=No|1.0=Yes,0.0|1.0
+Change_SKP,integer,0.0=No|1.0=Yes,0.0|1.0
+Change_REF,integer,0.0=No|1.0=Yes,0.0|1.0
+Change_DocCall,integer,1.0=No|2.0=Yes|77.0=Donâ€™t know/unsure|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Change_HealthDept,integer,1.0=No|2.0=Yes|77.0=Donâ€™t know/unsure|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+GiftCard,integer,"1.0=Yes, but I would also get it without the gift card|2.0=Yes, I would try to get the vaccine sooner|3.0=No, because I don't want to get it under any circumstances|4.0=No, because $50 is not enough|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|4.0|98.0|99.0|77.0
+GiftCard_OE,integer,7777.0=DON'T KNOW|9998.0=SKIPPED ON WEB|9999.0=REFUSED,
+Ask_Employer,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Ask_PCP,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Ask_Physician,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Ask_Family,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Ask_Friend,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Ask_Religious,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Ask_Other,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+VaxReq_Employ,integer,1.0=Yes|2.0=No|77.0=Donâ€™t know|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+ChanceCovid,integer,777.0=DON'T KNOW|998.0=SKIPPED ON WEB|999.0=REFUSED,
+DeathCovid,integer,777.0=DON'T KNOW|998.0=SKIPPED ON WEB|999.0=REFUSED,
+Personal_COVIDtest,integer,"1.0=Yes, I have tested positive at least once for COVID-19|2.0=Yes, I have never tested positive for COVID-19|3.0=Yes, but I do not know the result(s)|4.0=No, I have never been tested, but I experienced COVID-19 symptoms|5.0=No, I have never been tested and I have not had symptoms of COVID-19|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+HH_TestPositive,integer,0.0=No|1.0=Yes,0.0|1.0
+HH_TestNegative,integer,0.0=No|1.0=Yes,0.0|1.0
+HH_TestUnknown,integer,0.0=No|1.0=Yes,0.0|1.0
+HH_COVIDSymptoms,integer,0.0=No|1.0=Yes,0.0|1.0
+HH_NoCOVID,integer,0.0=No|1.0=Yes,0.0|1.0
+HH_NoMembers,integer,0.0=No|1.0=Yes,0.0|1.0
+HH_DK,integer,0.0=No|1.0=Yes,0.0|1.0
+HH_SKP,integer,0.0=No|1.0=Yes,0.0|1.0
+HH_REF,integer,0.0=No|1.0=Yes,0.0|1.0
+HH_CovidPass,integer,0.0=No|1.0=Yes,0.0|1.0
+FF_CovidPass,integer,0.0=No|1.0=Yes,0.0|1.0
+AC_CovidPass,integer,0.0=No|1.0=Yes,0.0|1.0
+No_CovidPass,integer,0.0=No|1.0=Yes,0.0|1.0
+CovidPass_DK,integer,0.0=No|1.0=Yes,0.0|1.0
+CovidPass_SKP,integer,0.0=No|1.0=Yes,0.0|1.0
+CovidPass_REF,integer,0.0=No|1.0=Yes,0.0|1.0
+EssentialJob,integer,1.0=Yes|2.0=No|3.0=Not working in the past month|77.0=Donâ€™t know|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|98.0|99.0|77.0
+WashHands,integer,"1.0=No, I don't think it is necessary|2.0=No, I would like to but I cannot|3.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|98.0|99.0|77.0
+AvoidTransit,integer,"1.0=No, I don't think it is necessary|2.0=No, I would like to but I cannot|3.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|98.0|99.0|77.0
+LessGroups10,integer,"1.0=No, I don't think it is necessary|2.0=No, I would like to but I cannot|3.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|98.0|99.0|77.0
+SixFeet,integer,"1.0=No, I don't think it is necessary|2.0=No, I would like to but I cannot|3.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|98.0|99.0|77.0
+WearMask,integer,"1.0=No, I don't think it is necessary|2.0=No, I would like to but I cannot|3.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|98.0|99.0|77.0
+OtherMeasure,integer,"1.0=No, I don't think it is necessary|2.0=No, I would like to but I cannot|3.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|98.0|99.0|77.0
+Restaurant,integer,1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Visitors,integer,1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Gathering,integer,1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+SharedItems,integer,1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+OthersNoMask,integer,1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+SelfNoMask,integer,1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+SocDisBelief,integer,0.0=No|1.0=Yes,0.0|1.0
+COVIDunlikely,integer,0.0=No|1.0=Yes,0.0|1.0
+SicknessBelief,integer,0.0=No|1.0=Yes,0.0|1.0
+StayedOutside,integer,0.0=No|1.0=Yes,0.0|1.0
+SocObligation,integer,0.0=No|1.0=Yes,0.0|1.0
+SocDisOther,integer,0.0=No|1.0=Yes,0.0|1.0
+SocDis_Other_OE,any,,
+SocDis_DK,integer,0.0=No|1.0=Yes,0.0|1.0
+SocDis_SKP,integer,0.0=No|1.0=Yes,0.0|1.0
+SocDis_REF,integer,0.0=No|1.0=Yes,0.0|1.0
+Know_Blood,integer,1.0=True|2.0=False|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Know_AALessLikely,integer,1.0=True|2.0=False|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Know_VaxAvail,integer,1.0=True|2.0=False|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Know_TestTransmit,integer,1.0=True|2.0=False|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Know_HealthBehav,integer,1.0=True|2.0=False|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Know_COVIDscheme,integer,1.0=True|2.0=False|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Know_VaxFast,integer,1.0=True|2.0=False|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Know_HIVmed,integer,1.0=True|2.0=False|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Know_MaskSpread,integer,1.0=True|2.0=False|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Know_LiveCOVID,integer,1.0=True|2.0=False|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+DOV_TCOUNT,integer,,
+DOV_TRUE,integer,0.0=None true at Q21|1.0=1 true at Q21|2.0=2 or more true at Q21,0.0|1.0|2.0
+DOV_FCOUNT,integer,,
+DOV_FALSE,integer,0.0=None false at Q21|1.0=1 false at Q21|2.0=2 or more false at Q21,0.0|1.0|2.0
+NotTrue_Careful,integer,"1.0=No, it will not change my mind|2.0=No, because I am alreadying doing it or have already done it|3.0=Yes, slightly more likely|4.0=Yes, somewhat more likely|5.0=Yes, a lot more likely|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+NotTrue_Test,integer,"1.0=No, it will not change my mind|2.0=No, because I am alreadying doing it or have already done it|3.0=Yes, slightly more likely|4.0=Yes, somewhat more likely|5.0=Yes, a lot more likely|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+NotTrue_Vax,integer,"1.0=No, it will not change my mind|2.0=No, because I am alreadying doing it or have already done it|3.0=Yes, slightly more likely|4.0=Yes, somewhat more likely|5.0=Yes, a lot more likely|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+True_Careful,integer,"1.0=No, it will not change my mind|2.0=No, because I am alreadying doing it or have already done it|3.0=Yes, slightly more likely|4.0=Yes, somewhat more likely|5.0=Yes, a lot more likely|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+True_Test,integer,"1.0=No, it will not change my mind|2.0=No, because I am alreadying doing it or have already done it|3.0=Yes, slightly more likely|4.0=Yes, somewhat more likely|5.0=Yes, a lot more likely|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+True_Vax,integer,"1.0=No, it will not change my mind|2.0=No, because I am alreadying doing it or have already done it|3.0=Yes, slightly more likely|4.0=Yes, somewhat more likely|5.0=Yes, a lot more likely|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+LocalPrint,integer,0.0=No|1.0=Yes,0.0|1.0
+NationalPrint,integer,0.0=No|1.0=Yes,0.0|1.0
+BroadcastTV,integer,0.0=No|1.0=Yes,0.0|1.0
+CableTV,integer,0.0=No|1.0=Yes,0.0|1.0
+RadioNews,integer,0.0=No|1.0=Yes,0.0|1.0
+OnlineNews,integer,0.0=No|1.0=Yes,0.0|1.0
+SocialMedia,integer,0.0=No|1.0=Yes,0.0|1.0
+EmployerInfo,integer,0.0=No|1.0=Yes,0.0|1.0
+PersonalNetwork,integer,0.0=No|1.0=Yes,0.0|1.0
+StateLocalGov,integer,0.0=No|1.0=Yes,0.0|1.0
+FederalGov,integer,0.0=No|1.0=Yes,0.0|1.0
+TrumpInfo,integer,0.0=No|1.0=Yes,0.0|1.0
+BidenInfo,integer,0.0=No|1.0=Yes,0.0|1.0
+ChurchInfo,integer,0.0=No|1.0=Yes,0.0|1.0
+CBOInfo,integer,0.0=No|1.0=Yes,0.0|1.0
+SciJournal,integer,0.0=No|1.0=Yes,0.0|1.0
+OtherInfo,integer,0.0=No|1.0=Yes,0.0|1.0
+NoInfo,integer,0.0=No|1.0=Yes,0.0|1.0
+Info_DK,integer,0.0=No|1.0=Yes,0.0|1.0
+Info_SKP,integer,0.0=No|1.0=Yes,0.0|1.0
+Info_REF,integer,0.0=No|1.0=Yes,0.0|1.0
+RACE_WhiteAdvantage,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+RACE_Successful,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+RACE_Prison,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+RACE_SocServices,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+RACE_Opportunity,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+RACE_MinAdvantage,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+RACE_Rich,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+RACE_WhiteBlame,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+Disc_AtSchool,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Disc_Hired,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Disc_AtWork,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Disc_Housing,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Disc_MedCare,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Disc_Restaurant,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Disc_Credit,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Disc_Street,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Disc_Police,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+Times_AtSchool,integer,1.0=Once|2.0=Two or three times|3.0=Four or more times,1.0|2.0|3.0
+Times_Hired,integer,1.0=Once|2.0=Two or three times|3.0=Four or more times,1.0|2.0|3.0
+Times_AtWork,integer,1.0=Once|2.0=Two or three times|3.0=Four or more times,1.0|2.0|3.0
+Times_Housing,integer,1.0=Once|2.0=Two or three times|3.0=Four or more times,1.0|2.0|3.0
+Times_MedCare,integer,1.0=Once|2.0=Two or three times|3.0=Four or more times,1.0|2.0|3.0
+Times_Restaurant,integer,1.0=Once|2.0=Two or three times|3.0=Four or more times,1.0|2.0|3.0
+Times_Credit,integer,1.0=Once|2.0=Two or three times|3.0=Four or more times,1.0|2.0|3.0
+Times_Street,integer,1.0=Once|2.0=Two or three times|3.0=Four or more times,1.0|2.0|3.0
+Times_Police,integer,1.0=Once|2.0=Two or three times|3.0=Four or more times,1.0|2.0|3.0
+PS_A_Medicaid,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+PS_B_Naloxone,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+PS_C_Mandatory,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+PS_D_GovSpend,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+SS_A_HistoryWork,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+SS_C_CurrentWork,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+SS_D_CurrentMarry,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+SS_B_HistoryMarry,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+SS_E_Dangerous,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+SS_F_Trust,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+SS_CurrentSteal,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+SS_HistorySteal,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+SS_CurrentHighRisk,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+SS_HistoryHighRisk,integer,1.0=Strongly disagree|2.0=Somewhat disagree|3.0=Neither disagree nor agree|4.0=Somewhat agree|5.0=Strongly agree|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+Recovery_Religious,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+Recovery_Spiritual,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+Recovery_PhysicalMental,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+Recovery_Contributes,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+Recovery_EnhancedQuality,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+Recovery_ProfHelp,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+Recovery_Purpose,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+Recovery_ControlledUse,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+Recovery_NoDrugUse,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+Recovery_Abstaining,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+RecovHelp_PCP,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+RecovHelp_Inpatient,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+RecovHelp_SelfHelp,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+RecovHelp_Therapist,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+RecovHelp_Medication,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+RecovHelp_TalkFamily,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+RecovHelp_NaturalHealer,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+RecovHelp_Rehab,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+RecovHelp_FBO,integer,77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,
+PersonalUse_Ever,integer,1.0=No|2.0=Yes|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+PersonalUse_Last,integer,1.0=Past 6 months|2.0=7 â€“ 12 months ago|3.0=1-5 years ago|4.0=5+ years ago|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|98.0|99.0|77.0
+PersonalConviction_Ever,integer,"1.0=Yes, within the last year|2.0=Yes, more than a year ago|3.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|98.0|99.0|77.0
+PersonalIncarceration_Ever,integer,"1.0=Yes, within the last year|2.0=Yes, more than a year ago|3.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|98.0|99.0|77.0
+FamilyUse_Ever,integer,"1.0=Yes, within the last year|2.0=Yes, more than a year ago|3.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|98.0|99.0|77.0
+FamilyConviction_Ever,integer,"1.0=Yes, within the last year|2.0=Yes, more than a year ago|3.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|98.0|99.0|77.0
+FamilyIncarceration_Ever,integer,"1.0=Yes, within the last year|2.0=Yes, more than a year ago|3.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|98.0|99.0|77.0
+EmployStatus,integer,"1.0=Employed full time (30 hours or more a week)|2.0=Employed part time (less than 30 hours a week)|3.0=Only temporarily laid off, sick leave or maternity leave|4.0=Looking for work, unemployed|5.0=Retired|6.0=Disabled, permanently or temporarily|7.0=Keeping house|8.0=Student|9.0=Other (Specify)|10.0=Prefer not to answer|77.0=Don't know|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|4.0|5.0|6.0|7.0|8.0|9.0|10.0|98.0|99.0|77.0
+PatientContact,integer,1.0=None|2.0=Up to 1 hour|3.0=1-2 hours|4.0=3-4 hours|5.0=5-6 hours|6.0=7-8 hours|7.0=9-10 hours|8.0=11-12 hours|9.0=12+ hours|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|6.0|7.0|8.0|9.0|98.0|99.0|77.0
+COVIDContact,integer,1.0=Every day I work|2.0=Most of the days I work|3.0=Some of the days I work|4.0=Rarely|5.0=Never|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+COVIDContactRisk,integer,1.0=Every day|2.0=Most of the days|3.0=Some of the days|4.0=Rarely|5.0=Never|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+Facility_ClothMasks,integer,1.0=Never|2.0=Rarely|3.0=Sometimes|4.0=Most of the time|5.0=Always|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+Facility_MedMasks,integer,1.0=Never|2.0=Rarely|3.0=Sometimes|4.0=Most of the time|5.0=Always|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+Facility_Respirator,integer,1.0=Never|2.0=Rarely|3.0=Sometimes|4.0=Most of the time|5.0=Always|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+Facility_EyeProtect,integer,1.0=Never|2.0=Rarely|3.0=Sometimes|4.0=Most of the time|5.0=Always|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+Facility_MedGloves,integer,1.0=Never|2.0=Rarely|3.0=Sometimes|4.0=Most of the time|5.0=Always|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+Facility_Gowns,integer,1.0=Never|2.0=Rarely|3.0=Sometimes|4.0=Most of the time|5.0=Always|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+Facility_PhysDist,integer,1.0=Never|2.0=Rarely|3.0=Sometimes|4.0=Most of the time|5.0=Always|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+Facility_WashHands,integer,1.0=Never|2.0=Rarely|3.0=Sometimes|4.0=Most of the time|5.0=Always|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+PID1,integer,1.0=Democrat|2.0=Republican|3.0=Independent|4.0=None of these|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|4.0|98.0|99.0|77.0
+PIDA,integer,1.0=Strong Democrat|2.0=Not so strong Democrat|77.0=DONâ€™T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+PIDB,integer,1.0=Strong Republican|2.0=Not so strong Republican|77.0=DONâ€™T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+PIDI,integer,1.0=Lean Democrat|2.0=Lean Republican|3.0=Donâ€™t lean|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|98.0|99.0|77.0
+PartyID5,integer,-1.0=Unknown|1.0=Democrat|2.0=Lean Democrat|3.0=Don't Lean/Independent/None|4.0=Lean Republican|5.0=Republican,1.0|2.0|3.0|4.0|5.0|-1.0
+PartyID7,integer,-1.0=Unknown|1.0=Strong Democrat|2.0=Not so strong Democrat|3.0=Lean Democrat|4.0=Don't Lean/Independent/None|5.0=Lean Republican|6.0=Not so strong Republican|7.0=Strong Republican,1.0|2.0|3.0|4.0|5.0|6.0|7.0|-1.0
+IDEO,integer,-1.0=Unknown|1.0=Very liberal|2.0=Somewhat liberal|3.0=Moderate|4.0=Somewhat conservative|5.0=Very conservative,1.0|2.0|3.0|4.0|5.0|-1.0
+LGBT,integer,"1.0=Lesbian or gay|2.0=Straight, that is, not lesbian or gay|3.0=Bisexual|4.0=Something else|5.0=I don't know the answer|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED",1.0|2.0|3.0|4.0|5.0|98.0|99.0|77.0
+STUDENT_TYPE,integer,1.0=A full-time college student|2.0=A part-time college student|3.0=Not a college student|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|3.0|98.0|99.0|77.0
+FutureContact,integer,1.0=Yes|2.0=No|77.0=DON'T KNOW|98.0=SKIPPED ON WEB|99.0=REFUSED,1.0|2.0|99.0|98.0|77.0
+STARTDT,datetime,,
+ENDDT,datetime,,
+duration,integer,,
+SURV_MODE,integer,1.0=Phone interview|2.0=Web Interview,1.0|2.0
+SURV_LANG,integer,1.0=English|2.0=Spanish,1.0|2.0
+Device,any,,
+GENDER,integer,0.0=Unknown|1.0=Male|2.0=Female,0.0|1.0|2.0
+AGE4,integer,1.0=18-29|2.0=30-44|3.0=45-59|4.0=60+|99.0=Under 18,1.0|2.0|99.0|3.0|4.0
+AGE7,integer,1.0=18-24|2.0=25-34|3.0=35-44|4.0=45-54|5.0=55-64|6.0=65-74|7.0=75+|99.0=Under 18,1.0|2.0|3.0|4.0|5.0|6.0|7.0|99.0
+RACETHNICITY,integer,"1.0=White, non-Hispanic|2.0=Black, non-Hispanic|3.0=Other, non-Hispanic|4.0=Hispanic|5.0=2+, non-Hispanic|6.0=Asian, non-Hispanic",1.0|2.0|3.0|4.0|5.0|6.0
+EDUC5,integer,1.0=Less than HS|2.0=HS graduate or equivalent|3.0=Vocational/tech school/some college/ associates|4.0=Bachelor's degree|5.0=Post grad study/professional degree,1.0|2.0|3.0|4.0|5.0
+MARITAL,integer,1.0=Married|2.0=Widowed|3.0=Divorced|4.0=Separated|5.0=Never married|6.0=Living with partner,1.0|2.0|3.0|4.0|5.0|6.0
+EMPLOY,integer,1.0=Working â€“ as a paid employee|2.0=Working â€“ self employed|3.0=Not working â€“ looking for work or on temporary layoff|4.0=Not working â€“ retired|5.0=Not working â€“ disabled|6.0=Not working - other,1.0|2.0|3.0|4.0|5.0|6.0
+INCOME4,integer,"1.0=Less than $30,000|2.0=$30,000 to under $60,000|3.0=$60,000 to under $100,000|4.0=$100,000 or more",1.0|2.0|3.0|4.0
+REGION4,integer,1.0=Northeast|2.0=Midwest|3.0=South|4.0=West,1.0|2.0|3.0|4.0
+METRO,integer,0.0=Non-Metro Area|1.0=Metro Area,0.0|1.0
+INTERNET,integer,0.0=Non-internet household|1.0=Internet Household,0.0|1.0
+HOUSING,integer,1.0=Owned|2.0=Rented or occupied without payment,1.0|2.0
+HOME_TYPE,integer,"1.0=A one-family house detached from any other house|2.0=A one-family house attached to one or more houses|3.0=Apartment building, mobile home or trailer, boat, RV, or other",1.0|2.0|3.0
+PHONESERVICE,integer,"1.0=Landline telephone only|2.0=Have a landline, but mostly use cellphone|3.0=Have cellphone, but mostly use landline|4.0=Cellphone only|5.0=No telephone service",1.0|2.0|3.0|4.0|5.0
+HHSIZE,integer,,
+HH612,integer,0.0=|1.0=|2.0=|3.0=3 or more,0.0|1.0|2.0|3.0
+HH1317,integer,0.0=|1.0=|2.0=2 or more,0.0|1.0|2.0
+HH18OV,integer,0.0=|1.0=|2.0=|3.0=|4.0=|5.0=|6.0=6 or more,0.0|1.0|2.0|3.0|4.0|5.0|6.0
+PersonalMisuse_Lifetime,integer,0.0=No|1.0=Yes,
+FamFriendMisuse_Lifetime,integer,0.0=No|1.0=Yes,
+PersonalMisuse_Recent,integer,0.0=No|1.0=Yes,
+PersonalCrimJust_Ever,integer,0.0=No|1.0=Yes,0.0|1.0
+FamilyCrimJust_Ever,integer,0.0=No|1.0=Yes,0.0|1.0
+PersonalCrimJust_Recent,integer,0.0=No|1.0=Yes,0.0|1.0
+FamilyCrimJust_Recent,integer,0.0=No|1.0=Yes,0.0|1.0
+SS_A_HistoryWork_REV,integer,,
+SS_C_CurrentWork_REV,integer,,
+SS_B_HistoryMarry_REV,integer,,
+SS_D_CurrentMarry_REV,integer,,
+Stigma_Scale_Score,number,,
+Expanded_10ITEM_Stigma,number,,
+Policy_4ITEM_Scale,number,,
+SelfHousehold_COVIDtested,integer,,
+race_WHITE,integer,,
+race_BLACK,integer,,
+race_OTHERMIXED,integer,,
+race_HISPANIC,integer,,
+race_ASIAN,integer,,
+RACEwhiteadvantage_REV,integer,,
+RACEsuccessful_REV,integer,,
+RACEprison_REV,integer,,
+RACEsocservices_REV,integer,,
+RACEopportunity_REV,integer,,
+RACEwhiteblame_REV,integer,,
+CoBRAS_Scale,number,,
+HH05,integer,0.0=|1.0=|2.0=2 or more,0.0|1.0|2.0
