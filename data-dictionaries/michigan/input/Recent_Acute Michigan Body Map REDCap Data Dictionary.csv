@@ -1,39 +1,39 @@
-Variable / Field Name,Form Name,Section Header,Field Type,Field Label,"Choices, Calculations, OR Slider Labels",Field Note,Text Validation Type OR Show Slider Number,Text Validation Min,Text Validation Max,Identifier?,Branching Logic (Show field only if...),Required Field?,Custom Alignment,Question Number (surveys only),Matrix Group Name,Matrix Ranking?,Field Annotation
-mbody,michigan_body_map_image_recent,,checkbox,@IMAGEMAP=MBODY,"0, MBMFace | 1, MBMRJaw | 2, MBMLJaw | 3, MBMRChest | 4, MBMLChest | 5, MBMRUpArMBM | 6, MBMLUpArMBM | 7, MBMRElbw | 8, MBMLElbw | 9, MBMRLowArMBM | 10, MBMLLowArMBM | 11, MBMRHand | 12, MBMLHand | 13, MBMAbdoMBMen | 14, MBMPelvis | 15, MBMRGroin | 16, MBMLGroin | 17, MBMRUpLeg | 18, MBMLUpLeg | 19, MBMRKnee | 20, MBMLKnee | 21, MBMRLowLeg | 22, MBMLLowLeg | 23, MBMRFoot | 24, MBMLFoot | 25, MBMHead | 26, MBMNeck | 27, MBMLShldr | 28, MBMRShldr | 29, MBMUpBack | 30, MBMLowBack | 31, MBMLHip | 32, MBMRHip | 33, MBMLBttck | 34, MBMRBttck | 35, MBMnone",,,,,,,,,,,, @IMAGEMAP=MBODY
-mbmface,michigan_body_map_image_recent,,calc,Face ,"if([mbody(0)] = 1, 1, 0)",,,,,,[mbody(0)] = '1',,,,,, @hidden
-mbmrjaw,michigan_body_map_image_recent,,calc, Right Jaw,"if([mbody(1)] = 1, 1, 0)",,,,,,[mbody(1)] = '1',,,,,, @hidden
-mbmljaw,michigan_body_map_image_recent,,calc,Left Jaw,"if([mbody(2)] = 1, 1, 0)",,,,,,[mbody(2)] = '1',,,,,, @hidden
-mbmrchest,michigan_body_map_image_recent,,calc,Right Chest,"if([mbody(3)] = 1, 1, 0)",,,,,,[mbody(3)] = '1',,,,,, @hidden
-mbmlchest,michigan_body_map_image_recent,,calc,Left Chest,"if([mbody(4)] = 1, 1, 0)",,,,,,[mbody(4)] = '1',,,,,, @hidden
-mbmruparmbm,michigan_body_map_image_recent,,calc,Right Upper Arm,"if([mbody(5)] = 1, 1, 0)",,,,,,[mbody(5)] = '1',,,,,, @hidden
-mbmluparmbm,michigan_body_map_image_recent,,calc,Left Upper Arm,"if([mbody(6)] = 1, 1, 0)",,,,,,[mbody(6)] = '1',,,,,, @hidden
-mbmrelbw,michigan_body_map_image_recent,,calc,Right Elbow,"if([mbody(7)] = 1, 1, 0)",,,,,,[mbody(7)] = '1',,,,,, @hidden
-mbmlelbw,michigan_body_map_image_recent,,calc,Left Elbow,"if([mbody(8)] = 1, 1, 0)",,,,,,[mbody(8)] = '1',,,,,, @hidden
-mbmrlowarmbm,michigan_body_map_image_recent,,calc,Right Lower Arm,"if([mbody(9)] = 1, 1, 0)",,,,,,[mbody(9)] = '1',,,,,, @hidden
-mbmllowarmbm,michigan_body_map_image_recent,,calc,Left Lower Arm,"if([mbody(10)] = 1, 1, 0)",,,,,,[mbody(10)] = '1',,,,,, @hidden
-mbmrhand,michigan_body_map_image_recent,,calc,Right Hand,"if([mbody(11)] = 1, 1, 0)",,,,,,[mbody(11)] = '1',,,,,, @hidden
-mbmlhand,michigan_body_map_image_recent,,calc,Left Hand,"if([mbody(12)] = 1, 1, 0)",,,,,,[mbody(12)] = '1',,,,,, @hidden
-mbmabdombmen,michigan_body_map_image_recent,,calc,Abdomen,"if([mbody(13)] = 1, 1, 0)",,,,,,[mbody(13)] = '1',,,,,, @hidden
-mbmpelvis,michigan_body_map_image_recent,,calc,Pelvis,"if([mbody(14)] = 1, 1, 0)",,,,,,[mbody(14)] = '1',,,,,, @hidden
-mbmrgroin,michigan_body_map_image_recent,,calc,Right Groin,"if([mbody(15)] = 1, 1, 0)",,,,,,[mbody(15)] = '1',,,,,, @hidden
-mbmlgroin,michigan_body_map_image_recent,,calc,Left Groin,"if([mbody(16)] = 1, 1, 0)",,,,,,[mbody(16)] = '1',,,,,, @hidden
-mbmrupleg,michigan_body_map_image_recent,,calc,Right Upper Leg,"if([mbody(17)] = 1, 1, 0)",,,,,,[mbody(17)] = '1',,,,,, @hidden
-mbmlupleg,michigan_body_map_image_recent,,calc,Left Upper Leg,"if([mbody(18)] = 1, 1, 0)",,,,,,[mbody(18)] = '1',,,,,, @hidden
-mbmrknee,michigan_body_map_image_recent,,calc,Right Knee,"if([mbody(19)] = 1, 1, 0)",,,,,,[mbody(19)] = '1',,,,,, @hidden
-mbmlknee,michigan_body_map_image_recent,,calc,Left Knee,"if([mbody(20)] = 1, 1, 0)",,,,,,[mbody(20)] = '1',,,,,, @hidden
-mbmrlowleg,michigan_body_map_image_recent,,calc,Right Lower Leg,"if([mbody(21)] = 1, 1, 0)",,,,,,[mbody(21)] = '1',,,,,, @hidden
-mbmllowleg,michigan_body_map_image_recent,,calc,Left Lower Leg,"if([mbody(22)] = 1, 1, 0)",,,,,,[mbody(22)] = '1',,,,,, @hidden
-mbmrfoot,michigan_body_map_image_recent,,calc,Right Foot,"if([mbody(23)] = 1, 1, 0)",,,,,,[mbody(23)] = '1',,,,,, @hidden
-mbmlfoot,michigan_body_map_image_recent,,calc,Left Foot,"if([mbody(24)] = 1, 1, 0)",,,,,,[mbody(24)] = '1',,,,,, @hidden
-mbmhead,michigan_body_map_image_recent,,calc,Head,"if([mbody(25)] = 1, 1, 0)",,,,,,[mbody(25)] = '1',,,,,, @hidden
-mbmneck,michigan_body_map_image_recent,,calc,Neck,"if([mbody(26)] = 1, 1, 0)",,,,,,[mbody(26)] = '1',,,,,, @hidden
-mbmlshldr,michigan_body_map_image_recent,,calc,Left Shoulder,"if([mbody(27)] = 1, 1, 0)",,,,,,[mbody(27)] = '1',,,,,, @hidden
-mbmrshldr,michigan_body_map_image_recent,,calc,Right Shoulder,"if([mbody(28)] = 1, 1, 0)",,,,,,[mbody(28)] = '1',,,,,, @hidden
-mbmupback,michigan_body_map_image_recent,,calc,Upper Back,"if([mbody(29)] = 1, 1, 0)",,,,,,[mbody(29)] = '1',,,,,, @hidden
-mbmlowback,michigan_body_map_image_recent,,calc,Lower Back,"if([mbody(30)] = 1, 1, 0)",,,,,,[mbody(30)] = '1',,,,,, @hidden
-mbmlhip,michigan_body_map_image_recent,,calc,Left Hip,"if([mbody(31)] = 1, 1, 0)",,,,,,[mbody(31)] = '1',,,,,, @hidden
-mbmrhip,michigan_body_map_image_recent,,calc,Right Hip,"if([mbody(32)] = 1, 1, 0)",,,,,,[mbody(32)] = '1',,,,,, @hidden
-mbmlbttck,michigan_body_map_image_recent,,calc,Left Buttock,"if([mbody(33)] = 1, 1, 0)",,,,,,[mbody(33)] = '1',,,,,, @hidden
-mbmrbttck,michigan_body_map_image_recent,,calc,Right Buttock,"if([mbody(34)] = 1, 1, 0)",,,,,,[mbody(34)] = '1',,,,,, @hidden
-mbmnone,michigan_body_map_image_recent,,calc,No Pain,"if([mbody(35)] = 1, 1, 0)",,,,,,[mbody(35)] = '1',,,,,, @hidden
+Variable / Field Name,Form Name,Section Header,Field Type,Field Label,"Choices, Calculations, OR Slider Labels",Field Note,Text Validation Type OR Show Slider Number,Text Validation Min,Text Validation Max,Identifier?,Branching Logic (Show field only if...),Required Field?,Custom Alignment,Question Number (surveys only),Matrix Group Name,Matrix Ranking?,Field Annotation
+mbody,michigan_body_map_image_recent,,checkbox,@IMAGEMAP=MBODY,"0, MBMFace | 1, MBMRJaw | 2, MBMLJaw | 3, MBMRChest | 4, MBMLChest | 5, MBMRUpArMBM | 6, MBMLUpArMBM | 7, MBMRElbw | 8, MBMLElbw | 9, MBMRLowArMBM | 10, MBMLLowArMBM | 11, MBMRHand | 12, MBMLHand | 13, MBMAbdoMBMen | 14, MBMPelvis | 15, MBMRGroin | 16, MBMLGroin | 17, MBMRUpLeg | 18, MBMLUpLeg | 19, MBMRKnee | 20, MBMLKnee | 21, MBMRLowLeg | 22, MBMLLowLeg | 23, MBMRFoot | 24, MBMLFoot | 25, MBMHead | 26, MBMNeck | 27, MBMLShldr | 28, MBMRShldr | 29, MBMUpBack | 30, MBMLowBack | 31, MBMLHip | 32, MBMRHip | 33, MBMLBttck | 34, MBMRBttck | 35, MBMnone",,,,,,,,,,,, @IMAGEMAP=MBODY
+mbmface,michigan_body_map_image_recent,,calc,Face ,"if([mbody(0)] = 1, 1, 0)",,,,,,[mbody(0)] = '1',,,,,, @hidden
+mbmrjaw,michigan_body_map_image_recent,,calc, Right Jaw,"if([mbody(1)] = 1, 1, 0)",,,,,,[mbody(1)] = '1',,,,,, @hidden
+mbmljaw,michigan_body_map_image_recent,,calc,Left Jaw,"if([mbody(2)] = 1, 1, 0)",,,,,,[mbody(2)] = '1',,,,,, @hidden
+mbmrchest,michigan_body_map_image_recent,,calc,Right Chest,"if([mbody(3)] = 1, 1, 0)",,,,,,[mbody(3)] = '1',,,,,, @hidden
+mbmlchest,michigan_body_map_image_recent,,calc,Left Chest,"if([mbody(4)] = 1, 1, 0)",,,,,,[mbody(4)] = '1',,,,,, @hidden
+mbmruparmbm,michigan_body_map_image_recent,,calc,Right Upper Arm,"if([mbody(5)] = 1, 1, 0)",,,,,,[mbody(5)] = '1',,,,,, @hidden
+mbmluparmbm,michigan_body_map_image_recent,,calc,Left Upper Arm,"if([mbody(6)] = 1, 1, 0)",,,,,,[mbody(6)] = '1',,,,,, @hidden
+mbmrelbw,michigan_body_map_image_recent,,calc,Right Elbow,"if([mbody(7)] = 1, 1, 0)",,,,,,[mbody(7)] = '1',,,,,, @hidden
+mbmlelbw,michigan_body_map_image_recent,,calc,Left Elbow,"if([mbody(8)] = 1, 1, 0)",,,,,,[mbody(8)] = '1',,,,,, @hidden
+mbmrlowarmbm,michigan_body_map_image_recent,,calc,Right Lower Arm,"if([mbody(9)] = 1, 1, 0)",,,,,,[mbody(9)] = '1',,,,,, @hidden
+mbmllowarmbm,michigan_body_map_image_recent,,calc,Left Lower Arm,"if([mbody(10)] = 1, 1, 0)",,,,,,[mbody(10)] = '1',,,,,, @hidden
+mbmrhand,michigan_body_map_image_recent,,calc,Right Hand,"if([mbody(11)] = 1, 1, 0)",,,,,,[mbody(11)] = '1',,,,,, @hidden
+mbmlhand,michigan_body_map_image_recent,,calc,Left Hand,"if([mbody(12)] = 1, 1, 0)",,,,,,[mbody(12)] = '1',,,,,, @hidden
+mbmabdombmen,michigan_body_map_image_recent,,calc,Abdomen,"if([mbody(13)] = 1, 1, 0)",,,,,,[mbody(13)] = '1',,,,,, @hidden
+mbmpelvis,michigan_body_map_image_recent,,calc,Pelvis,"if([mbody(14)] = 1, 1, 0)",,,,,,[mbody(14)] = '1',,,,,, @hidden
+mbmrgroin,michigan_body_map_image_recent,,calc,Right Groin,"if([mbody(15)] = 1, 1, 0)",,,,,,[mbody(15)] = '1',,,,,, @hidden
+mbmlgroin,michigan_body_map_image_recent,,calc,Left Groin,"if([mbody(16)] = 1, 1, 0)",,,,,,[mbody(16)] = '1',,,,,, @hidden
+mbmrupleg,michigan_body_map_image_recent,,calc,Right Upper Leg,"if([mbody(17)] = 1, 1, 0)",,,,,,[mbody(17)] = '1',,,,,, @hidden
+mbmlupleg,michigan_body_map_image_recent,,calc,Left Upper Leg,"if([mbody(18)] = 1, 1, 0)",,,,,,[mbody(18)] = '1',,,,,, @hidden
+mbmrknee,michigan_body_map_image_recent,,calc,Right Knee,"if([mbody(19)] = 1, 1, 0)",,,,,,[mbody(19)] = '1',,,,,, @hidden
+mbmlknee,michigan_body_map_image_recent,,calc,Left Knee,"if([mbody(20)] = 1, 1, 0)",,,,,,[mbody(20)] = '1',,,,,, @hidden
+mbmrlowleg,michigan_body_map_image_recent,,calc,Right Lower Leg,"if([mbody(21)] = 1, 1, 0)",,,,,,[mbody(21)] = '1',,,,,, @hidden
+mbmllowleg,michigan_body_map_image_recent,,calc,Left Lower Leg,"if([mbody(22)] = 1, 1, 0)",,,,,,[mbody(22)] = '1',,,,,, @hidden
+mbmrfoot,michigan_body_map_image_recent,,calc,Right Foot,"if([mbody(23)] = 1, 1, 0)",,,,,,[mbody(23)] = '1',,,,,, @hidden
+mbmlfoot,michigan_body_map_image_recent,,calc,Left Foot,"if([mbody(24)] = 1, 1, 0)",,,,,,[mbody(24)] = '1',,,,,, @hidden
+mbmhead,michigan_body_map_image_recent,,calc,Head,"if([mbody(25)] = 1, 1, 0)",,,,,,[mbody(25)] = '1',,,,,, @hidden
+mbmneck,michigan_body_map_image_recent,,calc,Neck,"if([mbody(26)] = 1, 1, 0)",,,,,,[mbody(26)] = '1',,,,,, @hidden
+mbmlshldr,michigan_body_map_image_recent,,calc,Left Shoulder,"if([mbody(27)] = 1, 1, 0)",,,,,,[mbody(27)] = '1',,,,,, @hidden
+mbmrshldr,michigan_body_map_image_recent,,calc,Right Shoulder,"if([mbody(28)] = 1, 1, 0)",,,,,,[mbody(28)] = '1',,,,,, @hidden
+mbmupback,michigan_body_map_image_recent,,calc,Upper Back,"if([mbody(29)] = 1, 1, 0)",,,,,,[mbody(29)] = '1',,,,,, @hidden
+mbmlowback,michigan_body_map_image_recent,,calc,Lower Back,"if([mbody(30)] = 1, 1, 0)",,,,,,[mbody(30)] = '1',,,,,, @hidden
+mbmlhip,michigan_body_map_image_recent,,calc,Left Hip,"if([mbody(31)] = 1, 1, 0)",,,,,,[mbody(31)] = '1',,,,,, @hidden
+mbmrhip,michigan_body_map_image_recent,,calc,Right Hip,"if([mbody(32)] = 1, 1, 0)",,,,,,[mbody(32)] = '1',,,,,, @hidden
+mbmlbttck,michigan_body_map_image_recent,,calc,Left Buttock,"if([mbody(33)] = 1, 1, 0)",,,,,,[mbody(33)] = '1',,,,,, @hidden
+mbmrbttck,michigan_body_map_image_recent,,calc,Right Buttock,"if([mbody(34)] = 1, 1, 0)",,,,,,[mbody(34)] = '1',,,,,, @hidden
+mbmnone,michigan_body_map_image_recent,,calc,No Pain,"if([mbody(35)] = 1, 1, 0)",,,,,,[mbody(35)] = '1',,,,,, @hidden
 mbmcurrent_total,michigan_body_map_image_recent,,calc,Total Michigan Body Map Score,"sum([mbmface], [mbmrjaw], [mbmljaw], [mbmrchest], [mbmlchest], [mbmruparmbm], [mbmluparmbm], [mbmrelbw], [mbmlelbw], [mbmrlowarmbm], [mbmllowarmbm], [mbmrhand], [mbmlhand], [mbmabdombmen], [mbmpelvis], [mbmrgroin], [mbmlgroin], [mbmrupleg], [mbmlupleg], [mbmrknee], [mbmlknee], [mbmrlowleg], [mbmllowleg], [mbmrfoot], [mbmlfoot], [mbmhead], [mbmneck], [mbmlshldr], [mbmrshldr], [mbmupback], [mbmlowback], [mbmlhip], [mbmrhip], [mbmlbttck], [mbmrbttck])",,,,,,,,,,,, @hidden

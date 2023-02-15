@@ -1,39 +1,39 @@
-Variable / Field Name,Form Name,Section Header,Field Type,Field Label,"Choices, Calculations, OR Slider Labels",Field Note,Text Validation Type OR Show Slider Number,Text Validation Min,Text Validation Max,Identifier?,Branching Logic (Show field only if...),Required Field?,Custom Alignment,Question Number (surveys only),Matrix Group Name,Matrix Ranking?,Field Annotation
-mbodycp,michigan_body_map_image_chronic_pain,,checkbox,@IMAGEMAP=MBODY,"0, MFace | 1, MRJaw | 2, MLJaw | 3, MRChest | 4, MLChest | 5, MRUpArm | 6, MLUpArM | 7, MRElbw | 8, MLElbw | 9, MRLowArm | 10, MLLowArm | 11, MRHand | 12, MLHand | 13, MAbdomen | 14, MPelvis | 15, MRGroin | 16, MLGroin | 17, MRUpLeg | 18, MLUpLeg | 19, MRKnee | 20, MLKnee | 21, MRLowLeg | 22, MLLowLeg | 23, MRFoot | 24, MLFoot | 25, MHead | 26, MNeck | 27, MLShldr | 28, MRShldr | 29, MUpBack | 30, MLowBack | 31, MLHip | 32, MRHip | 33, MLBttck | 34, MRBttck | 35, Mnone",,,,,,,,,,,, @IMAGEMAP=MBODY
-mface,michigan_body_map_image_chronic_pain,,calc,Face ,"if([mbodycp(0)]=1,1,0)",,,,,,[mbodycp(0)] = '1',,,,,, @hidden
-mrjaw,michigan_body_map_image_chronic_pain,,calc, Right Jaw,"if([mbodycp(1)] = 1, 1, 0)",,,,,,[mbodycp(1)] = '1',,,,,, @hidden
-mljaw,michigan_body_map_image_chronic_pain,,calc,Left Jaw,"if([mbodycp(2)] = 1, 1, 0)",,,,,,[mbodycp(2)] = '1',,,,,, @hidden
-mrchest,michigan_body_map_image_chronic_pain,,calc,Right Chest,"if([mbodycp(3)] = 1, 1, 0)",,,,,,[mbodycp(3)] = '1',,,,,, @hidden
-mlchest,michigan_body_map_image_chronic_pain,,calc,Left Chest,"if([mbodycp(4)] = 1, 1, 0)",,,,,,[mbodycp(4)] = '1',,,,,, @hidden
-mruparm,michigan_body_map_image_chronic_pain,,calc,Right Upper Arm,"if([mbodycp(5)] = 1, 1, 0)",,,,,,[mbodycp(5)] = '1',,,,,, @hidden
-mluparm,michigan_body_map_image_chronic_pain,,calc,Left Upper Arm,"if([mbodycp(6)] = 1, 1, 0)",,,,,,[mbodycp(6)] = '1',,,,,, @hidden
-mrelbw,michigan_body_map_image_chronic_pain,,calc,Right Elbow,"if([mbodycp(7)] = 1, 1, 0)",,,,,,[mbodycp(7)] = '1',,,,,, @hidden
-mlelbw,michigan_body_map_image_chronic_pain,,calc,Left Elbow,"if([mbodycp(8)] = 1, 1, 0)",,,,,,[mbodycp(8)] = '1',,,,,, @hidden
-mrlowarm,michigan_body_map_image_chronic_pain,,calc,Right Lower Arm,"if([mbodycp(9)] = 1, 1, 0)",,,,,,[mbodycp(9)] = '1',,,,,, @hidden
-mllowarm,michigan_body_map_image_chronic_pain,,calc,Left Lower Arm,"if([mbodycp(10)] = 1, 1, 0)",,,,,,[mbodycp(10)] = '1',,,,,, @hidden
-mrhand,michigan_body_map_image_chronic_pain,,calc,Right Hand,"if([mbodycp(11)] = 1, 1, 0)",,,,,,[mbodycp(11)] = '1',,,,,, @hidden
-mlhand,michigan_body_map_image_chronic_pain,,calc,Left Hand,"if([mbodycp(12)] = 1, 1, 0)",,,,,,[mbodycp(12)] = '1',,,,,, @hidden
-mabdomen,michigan_body_map_image_chronic_pain,,calc,Abdomen,"if([mbodycp(13)] = 1, 1, 0)",,,,,,[mbodycp(13)] = '1',,,,,, @hidden
-mpelvis,michigan_body_map_image_chronic_pain,,calc,Pelvis,"if([mbodycp(14)] = 1, 1, 0)",,,,,,[mbodycp(14)] = '1',,,,,, @hidden
-mrgroin,michigan_body_map_image_chronic_pain,,calc,Right Groin,"if([mbodycp(15)] = 1, 1, 0)",,,,,,[mbodycp(15)] = '1',,,,,, @hidden
-mlgroin,michigan_body_map_image_chronic_pain,,calc,Left Groin,"if([mbodycp(16)] = 1, 1, 0)",,,,,,[mbodycp(16)] = '1',,,,,, @hidden
-mrupleg,michigan_body_map_image_chronic_pain,,calc,Right Upper Leg,"if([mbodycp(17)] = 1, 1, 0)",,,,,,[mbodycp(17)] = '1',,,,,, @hidden
-mlupleg,michigan_body_map_image_chronic_pain,,calc,Left Upper Leg,"if([mbodycp(18)] = 1, 1, 0)",,,,,,[mbodycp(18)] = '1',,,,,, @hidden
-mrknee,michigan_body_map_image_chronic_pain,,calc,Right Knee,"if([mbodycp(19)] = 1, 1, 0)",,,,,,[mbodycp(19)] = '1',,,,,, @hidden
-mlknee,michigan_body_map_image_chronic_pain,,calc,Left Knee,"if([mbodycp(20)] = 1, 1, 0)",,,,,,[mbodycp(20)] = '1',,,,,, @hidden
-mrlowleg,michigan_body_map_image_chronic_pain,,calc,Right Lower Leg,"if([mbodycp(21)] = 1, 1, 0)",,,,,,[mbodycp(21)] = '1',,,,,, @hidden
-mllowleg,michigan_body_map_image_chronic_pain,,calc,Left Lower Leg,"if([mbodycp(22)] = 1, 1, 0)",,,,,,[mbodycp(22)] = '1',,,,,, @hidden
-mrfoot,michigan_body_map_image_chronic_pain,,calc,Right Foot,"if([mbodycp(23)] = 1, 1, 0)",,,,,,[mbodycp(23)] = '1',,,,,, @hidden
-mlfoot,michigan_body_map_image_chronic_pain,,calc,Left Foot,"if([mbodycp(24)] = 1, 1, 0)",,,,,,[mbodycp(24)] = '1',,,,,, @hidden
-mhead,michigan_body_map_image_chronic_pain,,calc,Head,"if([mbodycp(25)] = 1, 1, 0)",,,,,,[mbodycp(25)] = '1',,,,,, @hidden
-mneck,michigan_body_map_image_chronic_pain,,calc,Neck,"if([mbodycp(26)] = '1', 1, 0)",,,,,,[mbodycp(26)] = '1',,,,,, @hidden
-mlshldr,michigan_body_map_image_chronic_pain,,calc,Left Shoulder,"if([mbodycp(27)] = 1, 1, 0)",,,,,,[mbodycp(27)] = '1',,,,,, @hidden
-mrshldr,michigan_body_map_image_chronic_pain,,calc,Right Shoulder,"if([mbodycp(28)] = 1, 1, 0)",,,,,,[mbodycp(28)] = '1',,,,,, @hidden
-mupback,michigan_body_map_image_chronic_pain,,calc,Upper Back,"if([mbodycp(29)] = 1, 1, 0)",,,,,,[mbodycp(29)] = '1',,,,,, @hidden
-mlowback,michigan_body_map_image_chronic_pain,,calc,Lower Back,"if([mbodycp(30)] = 1, 1, 0)",,,,,,[mbodycp(30)] = '1',,,,,, @hidden
-mlhip,michigan_body_map_image_chronic_pain,,calc,Left Hip,"if([mbodycp(31)] = 1, 1, 0)",,,,,,[mbodycp(31)] = '1',,,,,, @hidden
-mrhip,michigan_body_map_image_chronic_pain,,calc,Right Hip,"if([mbodycp(32)] = 1, 1, 0)",,,,,,[mbodycp(32)] = '1',,,,,, @hidden
-mlbttck,michigan_body_map_image_chronic_pain,,calc,Left Buttock,"if([mbodycp(33)] = 1, 1, 0)",,,,,,[mbodycp(33)] = '1',,,,,, @hidden
-mrbttck,michigan_body_map_image_chronic_pain,,calc,Right Buttock,"if([mbodycp(34)] = 1, 1, 0)",,,,,,[mbodycp(34)] = '1',,,,,, @hidden
-mnone,michigan_body_map_image_chronic_pain,,calc,No Pain,"if([mbodycp(35)] = 1, 1, 0)",,,,,,[mbodycp(35)] = '1',,,,,, @hidden
+Variable / Field Name,Form Name,Section Header,Field Type,Field Label,"Choices, Calculations, OR Slider Labels",Field Note,Text Validation Type OR Show Slider Number,Text Validation Min,Text Validation Max,Identifier?,Branching Logic (Show field only if...),Required Field?,Custom Alignment,Question Number (surveys only),Matrix Group Name,Matrix Ranking?,Field Annotation
+mbodycp,michigan_body_map_image_chronic_pain,,checkbox,@IMAGEMAP=MBODY,"0, MFace | 1, MRJaw | 2, MLJaw | 3, MRChest | 4, MLChest | 5, MRUpArm | 6, MLUpArM | 7, MRElbw | 8, MLElbw | 9, MRLowArm | 10, MLLowArm | 11, MRHand | 12, MLHand | 13, MAbdomen | 14, MPelvis | 15, MRGroin | 16, MLGroin | 17, MRUpLeg | 18, MLUpLeg | 19, MRKnee | 20, MLKnee | 21, MRLowLeg | 22, MLLowLeg | 23, MRFoot | 24, MLFoot | 25, MHead | 26, MNeck | 27, MLShldr | 28, MRShldr | 29, MUpBack | 30, MLowBack | 31, MLHip | 32, MRHip | 33, MLBttck | 34, MRBttck | 35, Mnone",,,,,,,,,,,, @IMAGEMAP=MBODY
+mface,michigan_body_map_image_chronic_pain,,calc,Face ,"if([mbodycp(0)]=1,1,0)",,,,,,[mbodycp(0)] = '1',,,,,, @hidden
+mrjaw,michigan_body_map_image_chronic_pain,,calc, Right Jaw,"if([mbodycp(1)] = 1, 1, 0)",,,,,,[mbodycp(1)] = '1',,,,,, @hidden
+mljaw,michigan_body_map_image_chronic_pain,,calc,Left Jaw,"if([mbodycp(2)] = 1, 1, 0)",,,,,,[mbodycp(2)] = '1',,,,,, @hidden
+mrchest,michigan_body_map_image_chronic_pain,,calc,Right Chest,"if([mbodycp(3)] = 1, 1, 0)",,,,,,[mbodycp(3)] = '1',,,,,, @hidden
+mlchest,michigan_body_map_image_chronic_pain,,calc,Left Chest,"if([mbodycp(4)] = 1, 1, 0)",,,,,,[mbodycp(4)] = '1',,,,,, @hidden
+mruparm,michigan_body_map_image_chronic_pain,,calc,Right Upper Arm,"if([mbodycp(5)] = 1, 1, 0)",,,,,,[mbodycp(5)] = '1',,,,,, @hidden
+mluparm,michigan_body_map_image_chronic_pain,,calc,Left Upper Arm,"if([mbodycp(6)] = 1, 1, 0)",,,,,,[mbodycp(6)] = '1',,,,,, @hidden
+mrelbw,michigan_body_map_image_chronic_pain,,calc,Right Elbow,"if([mbodycp(7)] = 1, 1, 0)",,,,,,[mbodycp(7)] = '1',,,,,, @hidden
+mlelbw,michigan_body_map_image_chronic_pain,,calc,Left Elbow,"if([mbodycp(8)] = 1, 1, 0)",,,,,,[mbodycp(8)] = '1',,,,,, @hidden
+mrlowarm,michigan_body_map_image_chronic_pain,,calc,Right Lower Arm,"if([mbodycp(9)] = 1, 1, 0)",,,,,,[mbodycp(9)] = '1',,,,,, @hidden
+mllowarm,michigan_body_map_image_chronic_pain,,calc,Left Lower Arm,"if([mbodycp(10)] = 1, 1, 0)",,,,,,[mbodycp(10)] = '1',,,,,, @hidden
+mrhand,michigan_body_map_image_chronic_pain,,calc,Right Hand,"if([mbodycp(11)] = 1, 1, 0)",,,,,,[mbodycp(11)] = '1',,,,,, @hidden
+mlhand,michigan_body_map_image_chronic_pain,,calc,Left Hand,"if([mbodycp(12)] = 1, 1, 0)",,,,,,[mbodycp(12)] = '1',,,,,, @hidden
+mabdomen,michigan_body_map_image_chronic_pain,,calc,Abdomen,"if([mbodycp(13)] = 1, 1, 0)",,,,,,[mbodycp(13)] = '1',,,,,, @hidden
+mpelvis,michigan_body_map_image_chronic_pain,,calc,Pelvis,"if([mbodycp(14)] = 1, 1, 0)",,,,,,[mbodycp(14)] = '1',,,,,, @hidden
+mrgroin,michigan_body_map_image_chronic_pain,,calc,Right Groin,"if([mbodycp(15)] = 1, 1, 0)",,,,,,[mbodycp(15)] = '1',,,,,, @hidden
+mlgroin,michigan_body_map_image_chronic_pain,,calc,Left Groin,"if([mbodycp(16)] = 1, 1, 0)",,,,,,[mbodycp(16)] = '1',,,,,, @hidden
+mrupleg,michigan_body_map_image_chronic_pain,,calc,Right Upper Leg,"if([mbodycp(17)] = 1, 1, 0)",,,,,,[mbodycp(17)] = '1',,,,,, @hidden
+mlupleg,michigan_body_map_image_chronic_pain,,calc,Left Upper Leg,"if([mbodycp(18)] = 1, 1, 0)",,,,,,[mbodycp(18)] = '1',,,,,, @hidden
+mrknee,michigan_body_map_image_chronic_pain,,calc,Right Knee,"if([mbodycp(19)] = 1, 1, 0)",,,,,,[mbodycp(19)] = '1',,,,,, @hidden
+mlknee,michigan_body_map_image_chronic_pain,,calc,Left Knee,"if([mbodycp(20)] = 1, 1, 0)",,,,,,[mbodycp(20)] = '1',,,,,, @hidden
+mrlowleg,michigan_body_map_image_chronic_pain,,calc,Right Lower Leg,"if([mbodycp(21)] = 1, 1, 0)",,,,,,[mbodycp(21)] = '1',,,,,, @hidden
+mllowleg,michigan_body_map_image_chronic_pain,,calc,Left Lower Leg,"if([mbodycp(22)] = 1, 1, 0)",,,,,,[mbodycp(22)] = '1',,,,,, @hidden
+mrfoot,michigan_body_map_image_chronic_pain,,calc,Right Foot,"if([mbodycp(23)] = 1, 1, 0)",,,,,,[mbodycp(23)] = '1',,,,,, @hidden
+mlfoot,michigan_body_map_image_chronic_pain,,calc,Left Foot,"if([mbodycp(24)] = 1, 1, 0)",,,,,,[mbodycp(24)] = '1',,,,,, @hidden
+mhead,michigan_body_map_image_chronic_pain,,calc,Head,"if([mbodycp(25)] = 1, 1, 0)",,,,,,[mbodycp(25)] = '1',,,,,, @hidden
+mneck,michigan_body_map_image_chronic_pain,,calc,Neck,"if([mbodycp(26)] = '1', 1, 0)",,,,,,[mbodycp(26)] = '1',,,,,, @hidden
+mlshldr,michigan_body_map_image_chronic_pain,,calc,Left Shoulder,"if([mbodycp(27)] = 1, 1, 0)",,,,,,[mbodycp(27)] = '1',,,,,, @hidden
+mrshldr,michigan_body_map_image_chronic_pain,,calc,Right Shoulder,"if([mbodycp(28)] = 1, 1, 0)",,,,,,[mbodycp(28)] = '1',,,,,, @hidden
+mupback,michigan_body_map_image_chronic_pain,,calc,Upper Back,"if([mbodycp(29)] = 1, 1, 0)",,,,,,[mbodycp(29)] = '1',,,,,, @hidden
+mlowback,michigan_body_map_image_chronic_pain,,calc,Lower Back,"if([mbodycp(30)] = 1, 1, 0)",,,,,,[mbodycp(30)] = '1',,,,,, @hidden
+mlhip,michigan_body_map_image_chronic_pain,,calc,Left Hip,"if([mbodycp(31)] = 1, 1, 0)",,,,,,[mbodycp(31)] = '1',,,,,, @hidden
+mrhip,michigan_body_map_image_chronic_pain,,calc,Right Hip,"if([mbodycp(32)] = 1, 1, 0)",,,,,,[mbodycp(32)] = '1',,,,,, @hidden
+mlbttck,michigan_body_map_image_chronic_pain,,calc,Left Buttock,"if([mbodycp(33)] = 1, 1, 0)",,,,,,[mbodycp(33)] = '1',,,,,, @hidden
+mrbttck,michigan_body_map_image_chronic_pain,,calc,Right Buttock,"if([mbodycp(34)] = 1, 1, 0)",,,,,,[mbodycp(34)] = '1',,,,,, @hidden
+mnone,michigan_body_map_image_chronic_pain,,calc,No Pain,"if([mbodycp(35)] = 1, 1, 0)",,,,,,[mbodycp(35)] = '1',,,,,, @hidden
 mbm_total,michigan_body_map_image_chronic_pain,,calc,Total Michigan Body Map Score,"sum([mface], [mrjaw], [mljaw], [mrchest], [mlchest], [mruparm], [mluparm], [mrelbw], [mlelbw], [mrlowarm], [mllowarm], [mrhand], [mlhand], [mabdomen], [mpelvis], [mrgroin], [mlgroin], [mrupleg], [mlupleg], [mrknee], [mlknee], [mrlowleg], [mllowleg], [mrfoot], [mlfoot], [mhead], [mneck], [mlshldr], [mrshldr], [mupback], [mlowback], [mlhip], [mrhip], [mlbttck], [mrbttck])",,,,,,,,,,,, @hidden
