@@ -1,5 +1,8 @@
 ''' General utilities/helper functions'''
 import re
+
+
+# individual cell utilities
 def strip_html(html_string):
     if html_string:
         return re.sub(r'<[^>]+>', '', html_string)
@@ -44,3 +47,54 @@ def parse_dictionary_str(string,item_sep,keyval_sep):
 def parse_list_str(string,list_sep):
     return string.strip().split(list_sep)
 
+
+# dictionary utilities
+def flatten_except_if(dictionary, parent_key=False, sep=".",except_keys=['encodings']):
+    """
+    Turn a nested dictionary into a flattened dictionary. Taken from gen3 
+    mds.agg_mds.adapter.flatten
+    but added except keys and fixed a bug where parent is always False in MutableMapping
+
+    :param dictionary: The dictionary to flatten
+    :param parent_key: The string to prepend to dictionary's keys
+    :param sep: The string used to separate flattened keys
+    :param except_keys: keys to not flatten. Note, can be nested if using notation specified in sep
+    :return: A flattened dictionary
+    """
+
+    items = []
+    for key, value in dictionary.items():
+        new_key = str(parent_key) + sep + key if parent_key else key
+        if isinstance(value,MutableMapping) and not new_key in except_keys:
+            items.extend(flatten_except_if(value, new_key, sep).items())
+        else:
+            items.append((new_key, value))
+    return dict(items)
+
+
+def convert_rec_to_json(field):
+    ''' 
+    converts a flattened dictionary to a nested dictionary
+    based on JSON path dot notation indicating nesting
+    '''
+    field_json = {}
+    for prop_path,prop in field.items():
+        if prop:
+            # initiate the prop to be added with the entire
+            # field 
+            prop_json = field_json
+            # get the inner most dictionary item of the jsonpath
+            nested_names = prop_path.split('.')
+            for i,prop_name in enumerate(nested_names):
+                is_last_nested = i+1==len(nested_names)
+                if prop_json.get(prop_name) and not is_last_nested:
+                    prop_json = prop_json[prop_name]
+                # if no object currently 
+                elif not is_last_nested:
+                    prop_json[prop_name] = {}
+                    prop_json = prop_json[prop_name]
+                #assign property to inner most item
+                else:
+                    prop_json[prop_name] = prop
+
+    return field_json
