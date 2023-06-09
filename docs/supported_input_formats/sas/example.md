@@ -1,6 +1,11 @@
+# Example of applying value formats in SAS
+
+The below SAS syntax is an example of how to annotate your data within your SAS code. Alternatively, if you have existing SAS code, see syntax 
+you can copy/paste into your code (or use as a standalone `.sas` script to
+produce SAS files)
 
 ******************************************************************************************************;
-/*DETAILED STEPS AND CODE TO PRODUCE AND OUTPUT THE NECESSARY SAS FILES FOR CREATION OF A DATA DICTIONARY FILE*/
+
 /*1. Set up an out directory for the data and catalog file*/
 libname out "P:/3652/Common/public_data/samhda-repo/national-mental-health-services-survey/2017";
 

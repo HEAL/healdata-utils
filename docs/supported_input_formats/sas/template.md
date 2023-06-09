@@ -1,7 +1,14 @@
 # SAS template code
 
-```
-/*Steps and code to produce and output the necessary SAS files for creation of a data dictionary file*/
+Template code to produce a sas7bdat file and a sas7bcat file.
+
+A sas7bdat file is XXXX
+
+A sas7bcat file is XXXX
+
+
+```sas
+
 
 /*1. Read in data file without value labels and run full code. 
 		Note: The most important pieces to run here are the PROC FORMAT statement(s) and any data steps 
