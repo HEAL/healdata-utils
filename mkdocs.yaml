@@ -4,10 +4,23 @@ site_url: https://norc-heal.github.io/healdata-utils
 repo_url: https://github.com/norc-heal/healdata-utils
 nav:
   - index.md
+  - contributing.md
   - Supported Input Formats:
     - SAS: 
+      - supported_input_formats/sas/index.md
       - Template: supported_input_formats/sas/template.md
       - Example: supported_input_formats/sas/example.md
+    - Redcap:
+      - supported_input_formats/redcap/index.md
+      - CSV Data Dictionary Export: supported_input_formats/redcap/csv-dd.md
+    - SPSS:
+      - supported_input_formats/spss/index.md
+    - Excel:
+      - supported_input_formats/excel/index.md
+    - Stata:
+      - supported_input_formats/stata/index.md
+    - Csv:
+      - supported_input_formats/csv.md
 theme:
   name: material
   palette:
