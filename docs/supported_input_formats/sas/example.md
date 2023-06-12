@@ -1,16 +1,14 @@
-# Example of applying value formats in SAS
+# Example of generating sas7bdat and sas7bcat files
 
-The below SAS syntax is an example of how to annotate your data within your SAS code. Alternatively, if you have existing SAS code, see syntax 
-you can copy/paste into your code (or use as a standalone `.sas` script to
-produce SAS files)
+The below SAS syntax is an example of how to use the template within your SAS workflow.
 
-******************************************************************************************************;
+Here we create all of our variable and value labels. This could be within one or multiple sas scripts
+but for demonstration purposes, we only use one script. In your existing workflows, these may also include analyses and other PROC calls for data exploration.
 
-/*1. Set up an out directory for the data and catalog file*/
-libname out "P:/3652/Common/public_data/samhda-repo/national-mental-health-services-survey/2017";
+```sas title="my_existing_sas_workflow.sas"
 
 /*2. Read in input data */
-proc import datafile="P:/3652/Common/public_data/samhda-repo/national-mental-health-services-survey/2017/raw_data/NMHSS_2017_PUF_CSV_SAMPLE.csv"
+proc import datafile="myprojectfolder/input/mydata.csv"
 	out=raw
 	dbms=csv replace;
 	getnames=yes;
@@ -60,7 +58,7 @@ proc format;
 		-9	="Not used in this version";
 
 **Apply formats;
-data raw_form;
+data processed;
 	set raw;
 	
 	format YOUNGADULTS TREATPSYCHOTHRPY TREATTRAUMATHRPY YESNO. FOCUS FOCUS. PUBLIC PUBLIC.;
@@ -70,21 +68,31 @@ data raw_form;
 			FOCUS="Primary treatment focus of facility"
 			PUBLIC="Public agency or department that operates facility";
 run;
+```
 
-/*4. Output the data file (as sas7bdat) with variable labels and format mappings applied */
-data out.final_data;
-	set raw_form;
+This second script called `my_output.sas` is the filled out template ([see here](template.md)). Note the `%INCLUDE` function that calls `my_existing_sas_workflow.sas`
 
-	run;
+```sas title="my_output.sas"
+/*1. Read in data file without value labels and run full code. 
+		Note: The most important pieces to run here are the PROC FORMAT statement(s) and any data steps 
+		that assign formats and variable labels which are needed for the data dictionary*/
 
-/*5. Output format catalog to sas7bcat file*/
-/*5A. Confirm that formats are saved in work */
-PROC CATALOG CAT=WORK.FORMATS; CONTENTS; QUIT;
-PROC FORMAT LIB=WORK FMTLIB; RUN;
+%INCLUDE "myprojectfolder/myworkflow.sas"; /* THIS WILL RUN A SEPARATE SAS SCRIPT*/
 
-/*5B. Output sas7bcat to out directory
-	Note: The formats applied above are already saved in work.formats. This steps just copies them to 
-	the out library */
+/*2. Output the format catalog (sas7bcat) */
+
+libname out "myprojectfolder/output";
+
+/*2b. Output the format catalog.
+		The format catalog is automatically stored in work.formats. This step copies the format file to the 
+		out directory as a sas7bcat file.*/
 proc catalog cat=work.FORMATS;
 	copy out=out.FORMATS;
 	run;
+	
+/*3. Output the data file (sas7bdat) to your output folder*/
+data out.yourdata;
+	set processed;
+	run;
+
+```
