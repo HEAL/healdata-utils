@@ -15,11 +15,9 @@ nav:
       - CSV Data Dictionary Export: supported_input_formats/redcap/csv-dd.md
     - SPSS:
       - supported_input_formats/spss/index.md
-    - Excel:
-      - supported_input_formats/excel/index.md
     - Stata:
       - supported_input_formats/stata/index.md
-    - Csv:
+    - Csv data:
       - supported_input_formats/csv.md
 theme:
   name: material
