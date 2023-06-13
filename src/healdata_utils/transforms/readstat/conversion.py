@@ -3,7 +3,6 @@ from healdata_utils.utils import to_int_if_base10
 from healdata_utils.io import read_pyreadstat
 from healdata_utils.types import typesets
 from ..jsontemplate.conversion import convert_templatejson
-
 from datetime import datetime
 
 
