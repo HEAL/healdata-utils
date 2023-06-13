@@ -1,3 +1,5 @@
+--8<-- [start:intro]
+
 # HEAL Data Utilities
 
 The HEAL data utilities python package provides data packaging tools for the HEAL data ecosystem to facilitate data discovery,sharing, and harmonization with a focus on the HEAL platform data consultancy (DSC).
@@ -104,3 +106,5 @@ See the below notebooks demonstrating use and workflows using the `convert_to_vl
 - click binder badge for interactive [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/norc-heal/healdata-utils/HEAD?labpath=notebooks%2Fdemos%2Finputs-to-heal-data-dictionary.ipynb) 
 
 2. [in development] Creating and iterating over a csv data dictionary to create a valid data dictionary file [click here](notebooks/demos/demo-csvtemplate-validation.ipynb)
+
+--8<-- [end:intro]
