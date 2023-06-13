@@ -1,13 +1,14 @@
 import pandas as pd
 from healdata_utils.utils import to_int_if_base10
 from healdata_utils.io import read_pyreadstat
+from healdata_utils.types import typesets
 from ..jsontemplate.conversion import convert_templatejson
-
 from datetime import datetime
 
 
 def convert_readstat(file_path,
-    data_dictionary_props={}):
+    data_dictionary_props={},
+    sas7bcat_file_path=None,):
     """
     Converts a "metadata-rich" (ie statistical software file) 
     into a HEAL-specified data dictionary in both csv format and json format.
@@ -22,14 +23,14 @@ def convert_readstat(file_path,
 
     Parameters
     ----------
-    csvtemplate : str or path-like or any object
+    file_path : str or path-like or any object
         Data or path to data with the data being a tabular HEAL-specified data dictionary.
         This input can be any data object or path-like string excepted by a frictionless Resource object.
     data_dictionary_props : dict
         The HEAL-specified data dictionary properties.
-    mappings : dict, optional
-        Mappings (which can be a dictionary of either lambda functions or other to-be-mapped objects).
-        Default: specified fieldmap.
+    
+    sas7bcat_file_path : str or path-like
+        Path to a sas catalog file (sas7bcat). Needed for value formats if a sas (sas7bdat) input file
 
     Returns
     -------
@@ -63,11 +64,9 @@ def convert_readstat(file_path,
 
     """
     
-    _,meta = read_pyreadstat(file_path,user_missing=True) # get user missing values (for stata/sas will make string so need sep call to infer types)
+    _,meta = read_pyreadstat(file_path,catalog_file=sas7bcat_file_path,user_missing=True) # get user missing values (for stata/sas will make string so need sep call to infer types)
     df,_ = read_pyreadstat(file_path) # dont fill user defined missing vals (to get correct types)
-    df = df.convert_dtypes() #TODO: use visions package for inference (from pandas profile project)
-    fields = pd.io.json.build_table_schema(df,index=False)['fields'] #converts to frictionless Table Schema
-
+    fields = typesets.infer_frictionless_fields(df)
 
     for field in fields:
         field.pop('extDtype',None)
@@ -96,8 +95,6 @@ def convert_readstat(file_path,
             enums = set(value_labels.keys()).difference(set(missing_values))
             constraints_enums = {'constraints':{'enum':[str(v) for v in enums]}}
             field.update(constraints_enums)
-
-        #NOTE/TODO: for SPSS no functionality for incorporating missing ranges
         
         if missing_values:
             field['missingValues'] = missing_values
