@@ -1,0 +1,809 @@
+{
+    "name": "example_nmhss_2019_first_20recs",
+    "title": "Healdata-utils Demonstration Data Dictionary",
+    "description": "This is a proof of concept to demonstrate the healdata-utils functionality",
+    "data_dictionary": [
+        {
+            "name": "CASEID",
+            "type": "integer",
+            "description": "Case identification number"
+        },
+        {
+            "name": "LST",
+            "type": "string",
+            "constraints": {
+                "enum": [
+                    "AK"
+                ]
+            },
+            "description": "State postal code"
+        },
+        {
+            "name": "MHINTAKE",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers mental health intake"
+        },
+        {
+            "name": "MHDIAGEVAL",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers mental health diagnostic evaluation"
+        },
+        {
+            "name": "MHREFERRAL",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers mental health information and/or referral"
+        },
+        {
+            "name": "SMISEDSUD",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Offered co-occurring SMI/SED and SUD"
+        },
+        {
+            "name": "TREATMT",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers substance use treatment"
+        },
+        {
+            "name": "ADMINSERV",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers administrative or operational services for mental health treatment facilities"
+        },
+        {
+            "name": "SETTINGIP",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Provides mental health treatment in a 24-hour hospital inpatient setting"
+        },
+        {
+            "name": "SETTINGRC",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Provides mental health treatment in a 24-hour residential setting"
+        },
+        {
+            "name": "SETTINGDTPH",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Provides mental health treatment in a partial hospitalization/day treatment setting"
+        },
+        {
+            "name": "SETTINGOP",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Provides mental health treatment in an outpatient setting"
+        },
+        {
+            "name": "FACILITYTYPE",
+            "type": "integer",
+            "description": "Facility type"
+        },
+        {
+            "name": "FOCUS",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "-0.8749999999999999",
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.4999999999999998",
+                    "-3.9999999999999996",
+                    "-1.9999999999999998"
+                ]
+            },
+            "encodings": {
+                "1.0": "Mental health treatment",
+                "2.0": "Substance abuse treatment",
+                "3.0": "Mix of mental health and substance abuse treatment (neither is primary)",
+                "4.0": "General health care",
+                "5.0": "Other service focus",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Primary treatment focus of facility"
+        },
+        {
+            "name": "OWNERSHP",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            "description": "Organization that operates the facility"
+        },
+        {
+            "name": "PUBLICAGENCY",
+            "type": "integer",
+            "encodings": {
+                "1.0": "State mental health authority (SMHA)",
+                "2.0": "Other state government agency or department",
+                "3.0": "Regional/district authority or county, local, or municipal government",
+                "4.0": "Tribal government",
+                "5.0": "Indian Health Service",
+                "6.0": "Department of Veterans Affairs",
+                "7.0": "Other",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "constraints": {
+                "enum": [
+                    "-0.8749999999999999",
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "7.0",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.4999999999999998",
+                    "-3.9999999999999996",
+                    "-1.9999999999999998"
+                ]
+            },
+            "description": "Public agency or department that operates facility"
+        },
+        {
+            "name": "TREATPSYCHOTHRPY",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers individual psychotherapy"
+        },
+        {
+            "name": "TREATFAMTHRPY",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers couples/family therapy"
+        },
+        {
+            "name": "TREATGRPTHRPY",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers group therapy"
+        },
+        {
+            "name": "TREATCOGTHRPY",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers cognitive behavioral therapy"
+        },
+        {
+            "name": "TREATDIALTHRPY",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers dialectical behavior therapy"
+        },
+        {
+            "name": "TREATBEHAVMOD",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers behavior modification"
+        },
+        {
+            "name": "TREATDUALMHSA",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers integrated dual disorders treatment"
+        },
+        {
+            "name": "TREATTRAUMATHRPY",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers trauma therapy"
+        },
+        {
+            "name": "TREATACTVTYTHRPY",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers activity therapy"
+        },
+        {
+            "name": "TREATELECTRO",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers electroconvulsive therapy"
+        },
+        {
+            "name": "TREATTELEMEDINCE",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers telemedicine/telehealth therapy"
+        },
+        {
+            "name": "TREATPSYCHOMED",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers psychotropic medication"
+        },
+        {
+            "name": "TREATOTH",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers other mental health treatment approach"
+        },
+        {
+            "name": "NOTREAT",
+            "type": "integer",
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0",
+                    "-0.8749999999999999",
+                    "-0.7499999999999999",
+                    "-0.6249999999999999",
+                    "-0.46874999999999994",
+                    "-1.9999999999999998",
+                    "-3.9999999999999996",
+                    "-1.4999999999999998"
+                ]
+            },
+            "encodings": {
+                "0.0": "No",
+                "1.0": "Yes",
+                "-3.9999999999999996": "Missing",
+                "-1.9999999999999998": "Logical skip",
+                "-1.4999999999999998": "Don't know",
+                "-0.8749999999999999": "Refused",
+                "-0.7499999999999999": "Not applicable",
+                "-0.6249999999999999": "Multiple responses",
+                "-0.46874999999999994": "Not used in this version"
+            },
+            "description": "Facility offers none of the identified mental health treatment approaches"
+        }
+    ]
+}

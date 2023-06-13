@@ -26,7 +26,7 @@ choice_fxn = {
     'csv': convert_templatecsv, #maintained for backwards compatibility
     'sav': convert_readstat,
     'dta':convert_readstat,
-    'por':convert_readstat,
+    #'por':convert_readstat,
     'sas7bdat':convert_readstat,
     'template.json':convert_templatejson,
     'json':convert_templatejson, #maintain for bwds compat
@@ -46,6 +46,7 @@ def convert_to_vlmd(
     data_dictionary_props={},
     inputtype=None,
     outputdir=None,
+    sas7bcat_filepath=None
 
     ):
     """
@@ -81,6 +82,10 @@ def convert_to_vlmd(
     However, right now, it simply returns the csvtemplate and jsontemplate as specified
     in the heal specification repository.
     This is an intermediate solution to socialize a proof-of-concept.
+
+    TODO
+    --------
+    make sub command for each file format rather than just one function? Added sas7bcat and can predict additional complexity
     
     """
 
@@ -94,8 +99,13 @@ def convert_to_vlmd(
     if not data_dictionary_props.get('title'):
         data_dictionary_props['title'] = filepath.stem
 
+    
     # get data dictionary package based on the input type
-    data_dictionary_package = choice_fxn[inputtype](filepath,data_dictionary_props)
+    if sas7bcat_filepath:
+        data_dictionary_package = choice_fxn[inputtype](filepath,data_dictionary_props,sas7bcat_file_path=sas7bcat_filepath,) 
+    else:
+        data_dictionary_package = choice_fxn[inputtype](filepath,data_dictionary_props)
+
 
     #TODO: currently only validates fields (ie table) but no reason it cant validate entire data package
     package_csv = validate_vlmd_csv(data_dictionary_package['templatecsv']['data_dictionary'],to_sync_fields=True)
@@ -167,7 +177,8 @@ def convert_to_vlmd(
 @click.option('--description',default=None,help='Description of data dictionary')
 @click.option('--inputtype',default=None,type=click.Choice(list(choice_fxn.keys())),help='The type of your input file.')
 @click.option('--outputdir',default="",help='The folder where you want to output your HEAL data dictionary')
-def main(filepath,title,description,inputtype,outputdir):
+@click.option('--sas7bcat-filepath',default=None,help="[FOR SAS7BDAT ONLY]: Path to a sas catalog file (sas7bcat). Needed for value formats if a sas (sas7bdat) input file")
+def main(filepath,title,description,inputtype,outputdir,sas7bcat_filepath):
     data_dictionary_props = {'title':title,'description':description}
 
     #save dds and error reports to files
@@ -176,7 +187,7 @@ def main(filepath,title,description,inputtype,outputdir):
         data_dictionary_props=data_dictionary_props,
         outputdir=outputdir,
         inputtype=inputtype,
-
+        sas7bcat_filepath=sas7bcat_filepath
     )
      
 if __name__=='__main__':
