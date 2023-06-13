@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-from frictionless import Resource,Package
+# from frictionless import Resource,Package
 from collections.abc import MutableMapping
 from .mappings import join_prop
 from healdata_utils.utils import flatten_except_if

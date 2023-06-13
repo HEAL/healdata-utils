@@ -9,7 +9,7 @@ see convert_templatecsv_to_json and convert_json_to_templatecsv
 ''' 
 import petl as etl
 from pathlib import Path
-from frictionless import Resource,Package
+# from frictionless import Resource,Package
 from healdata_utils.utils import convert_rec_to_json
 from healdata_utils.io import read_table
 from .mappings import fieldmap

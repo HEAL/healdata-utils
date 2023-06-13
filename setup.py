@@ -7,7 +7,7 @@ def generate_long_description():
 
 setup(
     name='healdata_utils',
-    version='0.0.6-alpha',
+    version='0.0.7-alpha',
     author='Michael Kranz',
     author_email='kranz-michael@norc.org',
     long_description=generate_long_description(),
@@ -22,10 +22,11 @@ setup(
         'jsonschema==4.17.3',
         'requests==2.28.2',
         'PyYaml==6.0',
-        'frictionless==4.40.8',
+        #'frictionless==4.40.8',
         'pyreadstat==1.2.0',
         'charset_normalizer==2.1',
-        'visions== 0.7.5'
+        'visions== 0.7.5',
+        "click==8.1.3"
     ],
     entry_points='''
         [console_scripts]
