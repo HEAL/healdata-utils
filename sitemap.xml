@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://norc-heal.github.io/healdata-utils/</loc>
+         <lastmod>2023-06-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://norc-heal.github.io/healdata-utils/contributing/</loc>
+         <lastmod>2023-06-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://norc-heal.github.io/healdata-utils/install/</loc>
+         <lastmod>2023-06-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://norc-heal.github.io/healdata-utils/supported_input_formats/</loc>
+         <lastmod>2023-06-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
