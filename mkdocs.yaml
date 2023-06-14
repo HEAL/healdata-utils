@@ -5,7 +5,9 @@ repo_url: https://github.com/norc-heal/healdata-utils
 nav:
   - index.md
   # - contributing.md
-  - supported_input_formats.md
+  # - install.md
+  - Variable Level Metadata:
+    - supported_input_formats.md
 theme:
   name: material
   palette:
@@ -20,9 +22,9 @@ theme:
     # - navigation.instant
     - navigation.indexes
     #- navigation.tabs
-    #- navigation.tabs.sticky
+    - navigation.tabs.sticky
     - navigation.tracking
-    #- navigation.sections
+    - navigation.sections
     #- toc.integrate
   favicon: assets/heal_logo.png
 extra_css:

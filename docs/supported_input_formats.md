@@ -26,9 +26,11 @@ To download a Redcap CSV export do the following*:
 
 #### Run the `vlmd` command
 
-**TODO: add vlmd command call **
+```bash
+vlmd --filepath input/example_redcap_demo.redcap.csv --inputtype redcap.csv --outputdir output/heal-vlmd-from-redcap.csv
+```
 
-### SAS `sas7bdat` and `sas7bcat` files
+### SAS `sas7bdat` (and `sas7bcat`) files
 
 To accomodate SAS users, HEAL data utilities supports the binary `Sas7bdat` file format, which contains the actual data values (observations/records). This file also includes variable metadata (variable `names` and variable labels/ `descriptions`).
 
@@ -106,7 +108,7 @@ but for demonstration purposes, we only use one script. In your existing workflo
         2='Substance abuse treatment'
         3='Mix of mental health and substance abuse treatment (neither is primary)'
         4='General health care'
-        5='Other service focus'
+        5='Other service focus';
 
     **Apply formats;
     data processed;
@@ -152,7 +154,9 @@ but for demonstration purposes, we only use one script. In your existing workflo
 
 After creating the necessary `sas7bdat` and `sas7bcat` files, you can then run the `vlmd` command. Note, the `sas7bcat` files are optional. However, if you don't include, the `encodings` (ie value labels) will not be added.
 
-TODO: ADD VLMD COMMAND HERE
+```bash
+vlmd --filepath input/data.sas7bdat --sas7bcat-filepath input/formats.sas7bcat --inputtype sas7bdat
+```
 
 
 ### SPSS `.sav` files
@@ -165,9 +169,9 @@ For SPSS users, HEAL data utilities generates heal-compliant data dictioanries f
 TO ADD -->
 
 #### Run the `vlmd` command
-
-TODO: ADD COMMAND HERE
-
+```bash
+vlmd --filepath data/example_pyreadstat_output.sav --inputtype sav
+```
 ### Stata `.dta` files
 
 For Stata users, HEAL data utilities generates heal-compliant data dictionaries through Stata's default file format: the `DTA` files. `DTA` files not only store the data itself but also stores metadata such as variable names, variable labels, types, and value labels.
@@ -175,7 +179,10 @@ For Stata users, HEAL data utilities generates heal-compliant data dictionaries 
 <!-- ### Creating a well-annotated `dta` file
 
 TO ADD -->
-
+#### Run the `vlmd` command
+```bash
+vlmd --filepath data/example_pyreadstat_output.dta --inputtype dta
+```
 ### `csv` Datasets
 
 
