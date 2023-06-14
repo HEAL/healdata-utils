@@ -595,6 +595,6 @@ def test_validate_vlmd_json_with_data():
     }
 
 
-test_validate_vlmd_csv_with_data()
-test_validate_vlmd_json_with_data()
-print("SUCCESS")
+# test_validate_vlmd_csv_with_data()
+# test_validate_vlmd_json_with_data()
+# print("SUCCESS")

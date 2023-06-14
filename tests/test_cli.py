@@ -4,6 +4,7 @@ from healdata_utils.cli import convert_to_vlmd
 
 
 # test convert vlmd with redcap csv
+print(os.getcwd())
 def test_convert_to_vlmd_with_redcap_csv_no_output():
     data_dictionary_metadata = {
         "description": (
@@ -12,7 +13,7 @@ def test_convert_to_vlmd_with_redcap_csv_no_output():
         ),
         "title": "Healdata-utils Demonstration Data Dictionary",
     }
-    filepath = "data/example_redcap_demo.redcap.csv"
+    filepath = "tests/data/example_redcap_demo.redcap.csv"
     data_dictionaries = convert_to_vlmd(
         filepath, data_dictionary_props=data_dictionary_metadata
     )
@@ -143,6 +144,6 @@ def test_convert_to_vlmd_with_redcap_csv_no_output():
     assert errors["csvtemplate"] == {"valid": True, "errors": []}
 
 
-os.chdir(Path(__file__).parent)
-test_convert_to_vlmd_with_redcap_csv_no_output()
-print("SUCCESS")
+# os.chdir(Path(__file__).parent)
+# test_convert_to_vlmd_with_redcap_csv_no_output()
+# print("SUCCESS")

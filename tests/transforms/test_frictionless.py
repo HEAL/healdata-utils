@@ -4,7 +4,7 @@ import yaml
 
 
 def test_convert_frictionless_to_jsonschema():
-    with Path(__file__).parent.joinpath("data/test_frictionless_schema.yaml").open(
+    with Path(__file__).parent.joinpath("../data/test_frictionless_schema.yaml").open(
         mode="r"
     ) as f:
         frictionless_schema = yaml.safe_load(f)

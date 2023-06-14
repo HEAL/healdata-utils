@@ -1,4 +1,4 @@
-from healdata_utils.schemas import convert_frictionless_to_jsonschema
+from healdata_utils.transforms.frictionless  import convert_frictionless_to_jsonschema
 from pathlib import Path
 import yaml
 
