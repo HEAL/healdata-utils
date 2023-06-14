@@ -1,0 +1,133 @@
+{
+    "data_dictionary": [
+        {
+            "name": "id",
+            "type": "integer",
+            "missingValues": [
+                -99.0,
+                -98.0
+            ],
+            "description": "Unique identifier for participant"
+        },
+        {
+            "name": "visit_dt",
+            "type": "datetime",
+            "missingValues": [
+                "1582-10-13 23:58:21",
+                "1582-10-13 23:58:22"
+            ],
+            "description": "Date of the interview"
+        },
+        {
+            "name": "sex_at_birth",
+            "type": "integer",
+            "encodings": {
+                "1.0": "Male",
+                "2.0": "Female",
+                "3.0": "Intersex",
+                "4.0": "None of these describe me",
+                "-99.0": "Not reported",
+                "-98.0": "Prefer not to answer"
+            },
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0"
+                ]
+            },
+            "missingValues": [
+                -99.0,
+                -98.0
+            ],
+            "description": "The self-reported sex of the participant/subject at birth"
+        },
+        {
+            "name": "race",
+            "type": "integer",
+            "encodings": {
+                "1.0": "White",
+                "2.0": "Black or African American",
+                "3.0": "American Indian or Alaska Native",
+                "4.0": "Native",
+                "5.0": "Hawaiian or Other Pacific Islander",
+                "6.0": "Asian",
+                "7.0": "Some other race",
+                "8.0": "Multiracial",
+                "-99.0": "Not reported",
+                "-98.0": "Prefer not to answer"
+            },
+            "constraints": {
+                "enum": [
+                    "1.0",
+                    "2.0",
+                    "3.0",
+                    "4.0",
+                    "5.0",
+                    "6.0",
+                    "7.0",
+                    "8.0"
+                ]
+            },
+            "missingValues": [
+                -99.0,
+                -98.0
+            ],
+            "description": "Self-reported race"
+        },
+        {
+            "name": "hispanic_ethnicity",
+            "type": "integer",
+            "encodings": {
+                "1.0": "Yes",
+                "0.0": "No",
+                "-99.0": "Not reported",
+                "-98.0": "Prefer not to answer"
+            },
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            },
+            "missingValues": [
+                -99.0,
+                -98.0
+            ],
+            "description": "Are you of Hispanic, Latino, or Spanish origin?"
+        },
+        {
+            "name": "SU4",
+            "type": "integer",
+            "encodings": {
+                "-99.0": "Not reported",
+                "-98.0": "Prefer not to answer"
+            },
+            "constraints": {
+                "enum": []
+            },
+            "missingValues": [
+                -99.0,
+                -98.0
+            ],
+            "description": "Heroin Days Used in days"
+        },
+        {
+            "name": "age",
+            "type": "integer",
+            "encodings": {
+                "-99.0": "Not reported",
+                "-98.0": "Prefer not to answer"
+            },
+            "constraints": {
+                "enum": []
+            },
+            "missingValues": [
+                -99.0,
+                -98.0
+            ],
+            "description": "Age of participant in year"
+        }
+    ]
+}

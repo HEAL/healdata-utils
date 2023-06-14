@@ -1,0 +1,8 @@
+name,type,missingValues,description,encodings,constraints.enum
+id,integer,-99.0|-98.0,Unique identifier for participant,,
+visit_dt,datetime,1582-10-13 23:58:21|1582-10-13 23:58:22,Date of the interview,,
+sex_at_birth,integer,-99.0|-98.0,The self-reported sex of the participant/subject at birth,1.0=Male|2.0=Female|3.0=Intersex|4.0=None of these describe me|-99.0=Not reported|-98.0=Prefer not to answer,1.0|2.0|3.0|4.0
+race,integer,-99.0|-98.0,Self-reported race,1.0=White|2.0=Black or African American|3.0=American Indian or Alaska Native|4.0=Native|5.0=Hawaiian or Other Pacific Islander|6.0=Asian|7.0=Some other race|8.0=Multiracial|-99.0=Not reported|-98.0=Prefer not to answer,1.0|2.0|3.0|4.0|5.0|6.0|7.0|8.0
+hispanic_ethnicity,integer,-99.0|-98.0,"Are you of Hispanic, Latino, or Spanish origin?",1.0=Yes|0.0=No|-99.0=Not reported|-98.0=Prefer not to answer,0.0|1.0
+SU4,integer,-99.0|-98.0,Heroin Days Used in days,-99.0=Not reported|-98.0=Prefer not to answer,
+age,integer,-99.0|-98.0,Age of participant in year,-99.0=Not reported|-98.0=Prefer not to answer,
