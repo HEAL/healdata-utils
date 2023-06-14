@@ -7,7 +7,11 @@ nav:
   # - contributing.md
   # - install.md
   - Variable Level Metadata:
-    - supported_input_formats.md
+    - vlmd/supported_input_formats.md
+    - Fields:
+      - vlmd/rendered-schemas/csv-fields.md
+      - vlmd/rendered-schemas/json-fields.md
+    
 theme:
   name: material
   palette:
@@ -29,6 +33,7 @@ theme:
   favicon: assets/heal_logo.png
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/schema_doc.css
 extra:
   homepage: https://github.com/norc-heal
 use_directory_urls: true
