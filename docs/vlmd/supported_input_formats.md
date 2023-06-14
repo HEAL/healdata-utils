@@ -185,10 +185,54 @@ vlmd --filepath data/example_pyreadstat_output.dta --inputtype dta
 ```
 ### `csv` Datasets
 
-[TODO]
+CSV (comma-separated values) is the main open tabular data format for storage and exchange. It is easy to
+create and understand using basic text editors in addition to popular spreadsheet software like Google Sheets
+and Excel. Importantly, it is simple and can be easily integrated into web applications and just about any software.
+
+Currently, the HEAL data utilities `vlmd` function can infer a minimal-HEAL compliant dataset by inferring `name`,`type`,and `enum` (i.e., possible values). After this minimal data dictionary is generated, the researcher can further annotate
+it with fields' `description` and other optional properties. 
 
 ### `csv` HEAL data dictionary (e.g., from template)
 
-[TODO]
+HEAL data utilities can also input a `csv` HEAL data dictionary either from a manually filled out template or 
+as an additional step after additional annotation (e.g., from the HEAL csv data dictionary output of the above file formats).
+
+#### Creating a `csv` HEAL data dictionary
+
+1. Use the template and start from scratch
+    > [Click here]() to download a `csv` HEAL data dictionary template. 
+2. Output from one of the above formats and then further annotate.
+
+!!! note
+    To further annotate the data dictionary, see the variable level metadata field properties (with examples) here.
+
+#### Validate with the `vlmd` command
+
+After finishing your work on the csv HEAL data dictionary, run the `vlmd` command to ensure it is HEAL-compliant with:
+
+```bash
+vlmd --filepath data/heal-dd-output.csv --inputtype csvtemplate
+```
+
 ### `json` HEAL data dictionary (e.g., from template)
-[TODO]
+
+While the `csv` HEAL data dictionary provides a tabular format for HEAL-compliant data dictionaries, ultimately, 
+these csv data dictionary files are converted to a json file (the most common format to store and exchange data within web applications such as the HEAL data platform). 
+
+The HEAL data utilities `vlmd` tool can also input this `json` HEAL data dictionary either from a manually filled out template or as an additional step after additional annotation. Another advantage of `json` HEAL data dictionaries is that one can specify metadata describing the data dictionary as a whole (e.g., the `description` and `title`). 
+
+#### Creating a `json` HEAL data dictionary
+1. Use the template and start from scratch
+    > [Click here to download]() a `json` HEAL data dictionary template. 
+2. Output from one of the above formats and then further annotate.
+
+!!! note
+    To further annotate the data dictionary, see the variable level metadata field properties (with examples) here.
+
+#### Validate with the `vlmd` command
+
+After finishing your work on the csv HEAL data dictionary, run the `vlmd` command to ensure it is HEAL-compliant with:
+
+```bash
+vlmd --filepath data/heal-dd-output.json --inputtype jsontemplate
+```
