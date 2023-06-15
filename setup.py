@@ -27,7 +27,6 @@ setup(
         'charset_normalizer==2.1',
         'visions== 0.7.5',
         "click==8.1.3",
-        "pytest==7.3.2"
     ],
     entry_points='''
         [console_scripts]
