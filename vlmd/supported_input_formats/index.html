@@ -9,9 +9,9 @@
       
       
       
-        <link rel="canonical" href="https://norc-heal.github.io/healdata-utils/supported_input_formats/">
+        <link rel="canonical" href="https://norc-heal.github.io/healdata-utils/vlmd/supported_input_formats/">
       
-      <link rel="icon" href="../assets/heal_logo.png">
+      <link rel="icon" href="../../assets/heal_logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-7.3.6">
     
     
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -38,9 +38,9 @@
     
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../stylesheets/schema_doc.css">
+      <link rel="stylesheet" href="../../stylesheets/schema_doc.css">
     
     
       
@@ -59,7 +59,7 @@
     <body dir="ltr" data-md-color-scheme="heal_platform" data-md-color-primary="" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -84,7 +84,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="https://github.com/norc-heal" title="HEAL Data Utilities" class="md-header__button md-logo" aria-label="HEAL Data Utilities" data-md-component="logo">
       
-  <img src="../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -183,7 +183,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://github.com/norc-heal" title="HEAL Data Utilities" class="md-nav__button md-logo" aria-label="HEAL Data Utilities" data-md-component="logo">
       
-  <img src="../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
 
     </a>
     HEAL Data Utilities
@@ -212,7 +212,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -238,8 +238,6 @@
       
       
       
-        
-          
         
           
         
@@ -401,9 +399,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#heal-data-dictionary-template" class="md-nav__link">
-    HEAL data dictionary template
+  <a href="#csv-heal-data-dictionary-eg-from-template" class="md-nav__link">
+    csv HEAL data dictionary (e.g., from template)
   </a>
+  
+    <nav class="md-nav" aria-label="csv HEAL data dictionary (e.g., from template)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-csv-heal-data-dictionary" class="md-nav__link">
+    Creating a csv HEAL data dictionary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-with-the-vlmd-command" class="md-nav__link">
+    Validate with the vlmd command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-heal-data-dictionary-eg-from-template" class="md-nav__link">
+    json HEAL data dictionary (e.g., from template)
+  </a>
+  
+    <nav class="md-nav" aria-label="json HEAL data dictionary (e.g., from template)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-json-heal-data-dictionary" class="md-nav__link">
+    Creating a json HEAL data dictionary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-with-the-vlmd-command_1" class="md-nav__link">
+    Validate with the vlmd command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -421,9 +466,41 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Fields
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fields" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Fields
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../rendered-schemas/csv-fields/" class="md-nav__link">
-        Csv fields
+        CSV Data dictionary
       </a>
     </li>
   
@@ -437,8 +514,15 @@
   
     <li class="md-nav__item">
       <a href="../rendered-schemas/json-fields/" class="md-nav__link">
-        Json fields
+        JSON Data dictionary
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -579,9 +663,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#heal-data-dictionary-template" class="md-nav__link">
-    HEAL data dictionary template
+  <a href="#csv-heal-data-dictionary-eg-from-template" class="md-nav__link">
+    csv HEAL data dictionary (e.g., from template)
   </a>
+  
+    <nav class="md-nav" aria-label="csv HEAL data dictionary (e.g., from template)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-csv-heal-data-dictionary" class="md-nav__link">
+    Creating a csv HEAL data dictionary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-with-the-vlmd-command" class="md-nav__link">
+    Validate with the vlmd command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-heal-data-dictionary-eg-from-template" class="md-nav__link">
+    json HEAL data dictionary (e.g., from template)
+  </a>
+  
+    <nav class="md-nav" aria-label="json HEAL data dictionary (e.g., from template)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-json-heal-data-dictionary" class="md-nav__link">
+    Creating a json HEAL data dictionary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-with-the-vlmd-command_1" class="md-nav__link">
+    Validate with the vlmd command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -597,7 +728,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/norc-heal/healdata-utils/edit/master/docs/supported_input_formats.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/norc-heal/healdata-utils/edit/master/docs/vlmd/supported_input_formats.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -612,11 +743,11 @@
 <ol>
 <li>After logging in to your Redcap project page, locate the <code>Data dictionary</code> page. A link to this page may be available on the project side bar (see image below) or in the <code>Project Setup tab</code> at the top of your page.</li>
 </ol>
-<p><img alt="redcap_dd_link" src="../assets/redcap_data_dictionary_page.png" title="Redcap DD Export button" /></p>
+<p><img alt="redcap_dd_link" src="../../assets/redcap_data_dictionary_page.png" title="Redcap DD Export button" /></p>
 <ol>
 <li>After arriving at the <code>Data dictionary</code> page, click on <code>Download the current data dictionary</code> to export the dictionary (see below).</li>
 </ol>
-<p><img alt="redcap_export_link" src="../assets/redcap_csv_dd_export_link.png" title="Redcap DD Export button" /></p>
+<p><img alt="redcap_export_link" src="../../assets/redcap_csv_dd_export_link.png" title="Redcap DD Export button" /></p>
 <p>*there may be slight differences depending on your specific Redcap instance and version</p>
 <h4 id="run-the-vlmd-command">Run the <code>vlmd</code> command<a class="headerlink" href="#run-the-vlmd-command" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>--filepath<span class="w"> </span>input/example_redcap_demo.redcap.csv<span class="w"> </span>--inputtype<span class="w"> </span>redcap.csv<span class="w"> </span>--outputdir<span class="w"> </span>output/heal-vlmd-from-redcap.csv
@@ -743,7 +874,46 @@ TO ADD -->
 <div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>--filepath<span class="w"> </span>data/example_pyreadstat_output.dta<span class="w"> </span>--inputtype<span class="w"> </span>dta
 </code></pre></div>
 <h3 id="csv-datasets"><code>csv</code> Datasets<a class="headerlink" href="#csv-datasets" title="Permanent link">&para;</a></h3>
-<h3 id="heal-data-dictionary-template">HEAL data dictionary template<a class="headerlink" href="#heal-data-dictionary-template" title="Permanent link">&para;</a></h3>
+<p>CSV (comma-separated values) is the main open tabular data format for storage and exchange. It is easy to
+create and understand using basic text editors in addition to popular spreadsheet software like Google Sheets
+and Excel. Importantly, it is simple and can be easily integrated into web applications and just about any software.</p>
+<p>Currently, the HEAL data utilities <code>vlmd</code> function can infer a minimal-HEAL compliant dataset by inferring <code>name</code>,<code>type</code>,and <code>enum</code> (i.e., possible values). After this minimal data dictionary is generated, the researcher can further annotate
+it with fields' <code>description</code> and other optional properties. </p>
+<h3 id="csv-heal-data-dictionary-eg-from-template"><code>csv</code> HEAL data dictionary (e.g., from template)<a class="headerlink" href="#csv-heal-data-dictionary-eg-from-template" title="Permanent link">&para;</a></h3>
+<p>HEAL data utilities can also input a <code>csv</code> HEAL data dictionary either from a manually filled out template or 
+as an additional step after additional annotation (e.g., from the HEAL csv data dictionary output of the above file formats).</p>
+<h4 id="creating-a-csv-heal-data-dictionary">Creating a <code>csv</code> HEAL data dictionary<a class="headerlink" href="#creating-a-csv-heal-data-dictionary" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Use the template and start from scratch
+    &gt; <a href="">Click here</a> to download a <code>csv</code> HEAL data dictionary template. </li>
+<li>Output from one of the above formats and then further annotate.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To further annotate the data dictionary, see the variable level metadata field properties (with examples) here.</p>
+</div>
+<h4 id="validate-with-the-vlmd-command">Validate with the <code>vlmd</code> command<a class="headerlink" href="#validate-with-the-vlmd-command" title="Permanent link">&para;</a></h4>
+<p>After finishing your work on the csv HEAL data dictionary, run the <code>vlmd</code> command to ensure it is HEAL-compliant with:</p>
+<div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>--filepath<span class="w"> </span>data/heal-dd-output.csv<span class="w"> </span>--inputtype<span class="w"> </span>csvtemplate
+</code></pre></div>
+<h3 id="json-heal-data-dictionary-eg-from-template"><code>json</code> HEAL data dictionary (e.g., from template)<a class="headerlink" href="#json-heal-data-dictionary-eg-from-template" title="Permanent link">&para;</a></h3>
+<p>While the <code>csv</code> HEAL data dictionary provides a tabular format for HEAL-compliant data dictionaries, ultimately, 
+these csv data dictionary files are converted to a json file (the most common format to store and exchange data within web applications such as the HEAL data platform). </p>
+<p>The HEAL data utilities <code>vlmd</code> tool can also input this <code>json</code> HEAL data dictionary either from a manually filled out template or as an additional step after additional annotation. Another advantage of <code>json</code> HEAL data dictionaries is that one can specify metadata describing the data dictionary as a whole (e.g., the <code>description</code> and <code>title</code>). </p>
+<h4 id="creating-a-json-heal-data-dictionary">Creating a <code>json</code> HEAL data dictionary<a class="headerlink" href="#creating-a-json-heal-data-dictionary" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Use the template and start from scratch
+    &gt; <a href="">Click here to download</a> a <code>json</code> HEAL data dictionary template. </li>
+<li>Output from one of the above formats and then further annotate.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To further annotate the data dictionary, see the variable level metadata field properties (with examples) here.</p>
+</div>
+<h4 id="validate-with-the-vlmd-command_1">Validate with the <code>vlmd</code> command<a class="headerlink" href="#validate-with-the-vlmd-command_1" title="Permanent link">&para;</a></h4>
+<p>After finishing your work on the csv HEAL data dictionary, run the <code>vlmd</code> command to ensure it is HEAL-compliant with:</p>
+<div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>--filepath<span class="w"> </span>data/heal-dd-output.json<span class="w"> </span>--inputtype<span class="w"> </span>jsontemplate
+</code></pre></div>
                 
               
               
@@ -763,7 +933,7 @@ TO ADD -->
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -779,13 +949,13 @@ TO ADD -->
       
       
         
-        <a href="../rendered-schemas/csv-fields/" class="md-footer__link md-footer__link--next" aria-label="Next: Csv fields" rel="next">
+        <a href="../rendered-schemas/csv-fields/" class="md-footer__link md-footer__link--next" aria-label="Next: CSV Data dictionary" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Csv fields
+              CSV Data dictionary
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -816,10 +986,10 @@ TO ADD -->
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections"], "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections"], "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>

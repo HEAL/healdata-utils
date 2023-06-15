@@ -1,0 +1,3474 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://norc-heal.github.io/healdata-utils/vlmd/rendered-schemas/json-fields/">
+      
+      <link rel="icon" href="../../../assets/heal_logo.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>JSON Data dictionary - HEAL Data Utilities</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Montserrat";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/schema_doc.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="heal_platform" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#json-heal-variable-level-metadata-fields" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://github.com/norc-heal" title="HEAL Data Utilities" class="md-header__button md-logo" aria-label="HEAL Data Utilities" data-md-component="logo">
+      
+  <img src="../../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HEAL Data Utilities
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              JSON Data dictionary
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/norc-heal/healdata-utils" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://github.com/norc-heal" title="HEAL Data Utilities" class="md-nav__button md-logo" aria-label="HEAL Data Utilities" data-md-component="logo">
+      
+  <img src="../../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+
+    </a>
+    HEAL Data Utilities
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/norc-heal/healdata-utils" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Variable Level Metadata
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Variable Level Metadata" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Variable Level Metadata
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../supported_input_formats/" class="md-nav__link">
+        Supported Input Formats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Fields
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fields" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Fields
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../csv-fields/" class="md-nav__link">
+        CSV Data dictionary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          JSON Data dictionary
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        JSON Data dictionary
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#module" class="md-nav__link">
+    module
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    title
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    format
+  </a>
+  
+    <nav class="md-nav" aria-label="format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#property-string-format" class="md-nav__link">
+    Property String Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-date-format" class="md-nav__link">
+    Property Date Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-geopoint-format" class="md-nav__link">
+    Property Geopoint Format
+  </a>
+  
+    <nav class="md-nav" aria-label="Property Geopoint Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#property-item-0" class="md-nav__link">
+    Property item 0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-item-1" class="md-nav__link">
+    Property item 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-item-3" class="md-nav__link">
+    Property item 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    constraints
+  </a>
+  
+    <nav class="md-nav" aria-label="constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maxlength" class="md-nav__link">
+    maxLength
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    enum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern" class="md-nav__link">
+    pattern
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum" class="md-nav__link">
+    maximum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encodings" class="md-nav__link">
+    encodings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordered" class="md-nav__link">
+    ordered
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missingvalues" class="md-nav__link">
+    missingValues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#truevalues" class="md-nav__link">
+    trueValues
+  </a>
+  
+    <nav class="md-nav" aria-label="trueValues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truevalues-items" class="md-nav__link">
+    trueValues items
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#falsevalues" class="md-nav__link">
+    falseValues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repo_link" class="md-nav__link">
+    repo_link
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cde_id" class="md-nav__link">
+    cde_id
+  </a>
+  
+    <nav class="md-nav" aria-label="cde_id">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cde_id-items" class="md-nav__link">
+    cde_id items
+  </a>
+  
+    <nav class="md-nav" aria-label="cde_id items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ontology_id" class="md-nav__link">
+    ontology_id
+  </a>
+  
+    <nav class="md-nav" aria-label="ontology_id">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ontology_id-items" class="md-nav__link">
+    ontology_id items
+  </a>
+  
+    <nav class="md-nav" aria-label="ontology_id items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relation" class="md-nav__link">
+    relation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source_1" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id_1" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standardsmappings" class="md-nav__link">
+    standardsMappings
+  </a>
+  
+    <nav class="md-nav" aria-label="standardsMappings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standardsmappings-items" class="md-nav__link">
+    standardsMappings items
+  </a>
+  
+    <nav class="md-nav" aria-label="standardsMappings items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type_1" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source_2" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id_2" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatedconcepts" class="md-nav__link">
+    relatedConcepts
+  </a>
+  
+    <nav class="md-nav" aria-label="relatedConcepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relatedconcepts-items" class="md-nav__link">
+    relatedConcepts items
+  </a>
+  
+    <nav class="md-nav" aria-label="relatedConcepts items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type_2" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label_1" class="md-nav__link">
+    label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url_1" class="md-nav__link">
+    url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source_3" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id_3" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#univarstats" class="md-nav__link">
+    univarStats
+  </a>
+  
+    <nav class="md-nav" aria-label="univarStats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#median" class="md-nav__link">
+    median
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mean" class="md-nav__link">
+    mean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#std" class="md-nav__link">
+    std
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min" class="md-nav__link">
+    min
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max" class="md-nav__link">
+    max
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode" class="md-nav__link">
+    mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count" class="md-nav__link">
+    count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twentyfifthpercentile" class="md-nav__link">
+    twentyFifthPercentile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seventyfifthpercentile" class="md-nav__link">
+    seventyFifthPercentile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categoricalmarginals" class="md-nav__link">
+    categoricalMarginals
+  </a>
+  
+    <nav class="md-nav" aria-label="categoricalMarginals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categoricalmarginals-items" class="md-nav__link">
+    categoricalMarginals items
+  </a>
+  
+    <nav class="md-nav" aria-label="categoricalMarginals items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_1" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count_1" class="md-nav__link">
+    count
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#module" class="md-nav__link">
+    module
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    title
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    format
+  </a>
+  
+    <nav class="md-nav" aria-label="format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#property-string-format" class="md-nav__link">
+    Property String Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-date-format" class="md-nav__link">
+    Property Date Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-geopoint-format" class="md-nav__link">
+    Property Geopoint Format
+  </a>
+  
+    <nav class="md-nav" aria-label="Property Geopoint Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#property-item-0" class="md-nav__link">
+    Property item 0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-item-1" class="md-nav__link">
+    Property item 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-item-3" class="md-nav__link">
+    Property item 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    constraints
+  </a>
+  
+    <nav class="md-nav" aria-label="constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maxlength" class="md-nav__link">
+    maxLength
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    enum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern" class="md-nav__link">
+    pattern
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum" class="md-nav__link">
+    maximum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encodings" class="md-nav__link">
+    encodings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordered" class="md-nav__link">
+    ordered
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missingvalues" class="md-nav__link">
+    missingValues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#truevalues" class="md-nav__link">
+    trueValues
+  </a>
+  
+    <nav class="md-nav" aria-label="trueValues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truevalues-items" class="md-nav__link">
+    trueValues items
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#falsevalues" class="md-nav__link">
+    falseValues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repo_link" class="md-nav__link">
+    repo_link
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cde_id" class="md-nav__link">
+    cde_id
+  </a>
+  
+    <nav class="md-nav" aria-label="cde_id">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cde_id-items" class="md-nav__link">
+    cde_id items
+  </a>
+  
+    <nav class="md-nav" aria-label="cde_id items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ontology_id" class="md-nav__link">
+    ontology_id
+  </a>
+  
+    <nav class="md-nav" aria-label="ontology_id">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ontology_id-items" class="md-nav__link">
+    ontology_id items
+  </a>
+  
+    <nav class="md-nav" aria-label="ontology_id items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relation" class="md-nav__link">
+    relation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source_1" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id_1" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standardsmappings" class="md-nav__link">
+    standardsMappings
+  </a>
+  
+    <nav class="md-nav" aria-label="standardsMappings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standardsmappings-items" class="md-nav__link">
+    standardsMappings items
+  </a>
+  
+    <nav class="md-nav" aria-label="standardsMappings items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type_1" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source_2" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id_2" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatedconcepts" class="md-nav__link">
+    relatedConcepts
+  </a>
+  
+    <nav class="md-nav" aria-label="relatedConcepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relatedconcepts-items" class="md-nav__link">
+    relatedConcepts items
+  </a>
+  
+    <nav class="md-nav" aria-label="relatedConcepts items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type_2" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label_1" class="md-nav__link">
+    label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url_1" class="md-nav__link">
+    url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source_3" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id_3" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#univarstats" class="md-nav__link">
+    univarStats
+  </a>
+  
+    <nav class="md-nav" aria-label="univarStats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#median" class="md-nav__link">
+    median
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mean" class="md-nav__link">
+    mean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#std" class="md-nav__link">
+    std
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min" class="md-nav__link">
+    min
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max" class="md-nav__link">
+    max
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode" class="md-nav__link">
+    mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count" class="md-nav__link">
+    count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twentyfifthpercentile" class="md-nav__link">
+    twentyFifthPercentile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seventyfifthpercentile" class="md-nav__link">
+    seventyFifthPercentile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categoricalmarginals" class="md-nav__link">
+    categoricalMarginals
+  </a>
+  
+    <nav class="md-nav" aria-label="categoricalMarginals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categoricalmarginals-items" class="md-nav__link">
+    categoricalMarginals items
+  </a>
+  
+    <nav class="md-nav" aria-label="categoricalMarginals items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_1" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count_1" class="md-nav__link">
+    count
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/norc-heal/healdata-utils/edit/master/docs/vlmd/rendered-schemas/json-fields.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="json-heal-variable-level-metadata-fields"><strong>JSON</strong> HEAL Variable Level Metadata Fields<a class="headerlink" href="#json-heal-variable-level-metadata-fields" title="Permanent link">&para;</a></h1>
+<p><strong>Title:</strong> HEAL Variable Level Metadata Fields</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> Variable level metadata individual fields integrated into the variable level
+metadata object within the HEAL platform metadata service.</p>
+<blockquote>
+<p>Note, only <code>name</code> and <code>description</code> are required.
+ Listed at the end of the description are suggested "priority" levels in brackets (e.g., [<priority>]):
+  1. [Required]: Needs to be filled out to be valid.
+  2. [Highly recommended]: Greatly help using the data dictionary but not required. 
+  3. [Optional, if applicable]: May only be applicable to certain fields.
+  4. [Autopopulated, if not filled]: These fields are intended to be autopopulated from other fields but can be filled out if desired.
+  5. [Experimental]: These fields are not currently used but are in development.</p>
+</blockquote>
+<h2 id="module"><code>module</code><a class="headerlink" href="#module" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Module</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The section, form, survey instrument, set of measures  or other broad category used 
+to group variables.</p>
+<p><strong>Examples:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;Demographics&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;PROMIS&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;Substance use&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;Medical History&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;Sleep questions&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;Physical activity&quot;</span>
+</code></pre></div>
+<h2 id="name"><code>name</code><a class="headerlink" href="#name" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Variable Name</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The name of a variable (i.e., field) as it appears in the data. </p>
+<p>[Required]</p>
+<h2 id="title"><code>title</code><a class="headerlink" href="#title" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Variable Label (ie Title)</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The human-readable title or label of the variable. </p>
+<p>[Highly recommended]</p>
+<p><strong>Example:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;My Variable (for name of my_variable)&quot;</span>
+</code></pre></div>
+<h2 id="description"><code>description</code><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Variable Description</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> An extended description of the variable. This could be the definition of a variable or the 
+question text (e.g., if a survey). </p>
+<p>[Required]</p>
+<p><strong>Examples:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;Definition&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;Question text (if a survey)&quot;</span>
+</code></pre></div>
+<h2 id="type"><code>type</code><a class="headerlink" href="#type" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Variable Type</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>enum (of string)</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The data type of the variable. This categorization allows the researcher to know what operations can be performed
+with the variable (i.e., statistical test) in addition to telling the computer how to effectively store these data.</p>
+<p>[Highly recommended]</p>
+<p><strong>Examples:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A numeric value with optional decimal places. (e.g., 3.14)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;integer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A whole number without decimal places. (e.g., 42)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;string&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A sequence of characters. (e.g., \&quot;test\&quot;)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;any&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Any type of data is allowed. (e.g., true)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;boolean&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A binary value representing true or false. (e.g., true)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A specific calendar date. (e.g., \&quot;2023-05-25\&quot;)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;datetime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A specific date and time, including timezone information. (e.g., \&quot;2023-05-25T10:30:00Z\&quot;)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A specific time of day. (e.g., \&quot;10:30:00\&quot;)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;year&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A specific year. (e.g., 2023)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;yearmonth&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A specific year and month. (e.g., \&quot;2023-05\&quot;)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A length of time. (e.g., \&quot;PT1H\&quot;)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;geopoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A pair of latitude and longitude coordinates. (e.g., [51.5074, -0.1278])&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Must be one of:
+* "number"
+* "integer"
+* "string"
+* "any"
+* "boolean"
+* "date"
+* "datetime"
+* "time"
+* "year"
+* "yearmonth"
+* "duration"
+* "geopoint"</p>
+<h2 id="format"><code>format</code><a class="headerlink" href="#format" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Frictionless Formats</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>combining</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> A format taken from one of the <a href="https://specs.frictionlessdata.io/">frictionless specification</a> schemas. For example, for tabular data, there is the <a href="https://specs.frictionlessdata.io/table-schema">Table Schema specification</a></p>
+<!-- 
+| Any of(Option)                      |
+| ----------------------------------- |
+| [String Format](#format_anyOf_i0)   |
+| [Date Format](#format_anyOf_i1)     |
+| [Geopoint Format](#format_anyOf_i2) |
+| [item 3](#format_anyOf_i3)          |
+ -->
+
+<h3 id="property-string-format">Property <code>String Format</code><a class="headerlink" href="#property-string-format" title="Permanent link">&para;</a></h3>
+<p><strong>Title:</strong> String Format</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>enum (of string)</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>Must be one of:
+* "uri"
+* "email"
+* "binary"
+* "uuid"</p>
+<h3 id="property-date-format">Property <code>Date Format</code><a class="headerlink" href="#property-date-format" title="Permanent link">&para;</a></h3>
+<p><strong>Title:</strong> Date Format</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> A format for a date variable (<code>date</code>,<code>time</code>,<code>datetime</code>).<br />
+    * <strong>default</strong>: An ISO8601 format string.
+    * <strong>any</strong>: Any parsable representation of a date/time/datetime. The implementing library can attempt to parse the datetime via a range of strategies.
+    * <strong>{PATTERN}</strong>: The value can be parsed according to <code>{PATTERN}</code>, which <code>MUST</code> follow the date formatting syntax of C / Python <a href="http://strftime.org/">strftime</a>.</p>
+<p><strong>Examples:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;`%Y-%m-%d` (for date, e.g., 2023-05-25)&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;`%Y%-%d` (for date, e.g., 20230525) for date without dashes&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;`%Y-%m-%dT%H:%M:%S` (for datetime, e.g., 2023-05-25T10:30:45)&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;`%Y-%m-%dT%H:%M:%SZ` (for datetime with UTC timezone, e.g., 2023-05-25T10:30:45Z)&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;`%Y-%m-%dT%H:%M:%S%z` (for datetime with timezone offset, e.g., 2023-05-25T10:30:45+0300)&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;`%Y-%m-%dT%H:%M` (for datetime without seconds, e.g., 2023-05-25T10:30)&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;`%Y-%m-%dT%H` (for datetime without minutes and seconds, e.g., 2023-05-25T10)&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;`%H:%M:%S` (for time, e.g., 10:30:45)&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;`%H:%M:%SZ` (for time with UTC timezone, e.g., 10:30:45Z)&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;`%H:%M:%S%z` (for time with timezone offset, e.g., 10:30:45+0300)&quot;</span>
+</code></pre></div>
+<h3 id="property-geopoint-format">Property <code>Geopoint Format</code><a class="headerlink" href="#property-geopoint-format" title="Permanent link">&para;</a></h3>
+<p><strong>Title:</strong> Geopoint Format</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>combining</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The two types of formats for <code>geopoint</code> (describing a geographic point).</p>
+<!-- 
+| One of(Option)                      |
+| ----------------------------------- |
+| [item 0](#format_anyOf_i2_oneOf_i0) |
+| [item 1](#format_anyOf_i2_oneOf_i1) |
+ -->
+
+<h4 id="property-item-0">Property <code>item 0</code><a class="headerlink" href="#property-item-0" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>array</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> A JSON array or a string parsable as a JSON array where each item is a number with the first 
+as the latitude and the second as longitude. </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Array restrictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Min items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Max items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Items unicity</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Additional items</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Tuple validation</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h4 id="property-item-1">Property <code>item 1</code><a class="headerlink" href="#property-item-1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> Contains latitude and longitude with two keys ("lat" and "long") with number items mapped to each key.</p>
+<h3 id="property-item-3">Property <code>item 3</code><a class="headerlink" href="#property-item-3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>enum (of string)</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The JSON object according to the geojson spec.</p>
+<p>Must be one of:
+* "topojson"
+* "default"</p>
+<h2 id="constraints"><code>constraints</code><a class="headerlink" href="#constraints" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="maxlength"><code>maxLength</code><a class="headerlink" href="#maxlength" title="Permanent link">&para;</a></h3>
+<p><strong>Title:</strong> Maximum Length</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>integer</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> Indicates the maximum length of an iterable (e.g., array, string, or
+object). For example, if 'Hello World' is the longest value of a
+categorical variable, this would be a maxLength of 11.</p>
+<p>[Optional,if applicable]</p>
+<h3 id="enum"><code>enum</code><a class="headerlink" href="#enum" title="Permanent link">&para;</a></h3>
+<p><strong>Title:</strong> Variable Possible Values</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>array</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> Constrains possible values to a set of values.</p>
+<p>[Optional,if applicable]</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Array restrictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Min items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Max items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Items unicity</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Additional items</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Tuple validation</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pattern"><code>pattern</code><a class="headerlink" href="#pattern" title="Permanent link">&para;</a></h3>
+<p><strong>Title:</strong> Regular Expression Pattern</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> A regular expression pattern the data MUST conform to.</p>
+<p>[Optional,if applicable]</p>
+<h3 id="maximum"><code>maximum</code><a class="headerlink" href="#maximum" title="Permanent link">&para;</a></h3>
+<p><strong>Title:</strong> Maximum Value</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>integer</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> Specifies the maximum value of a field (e.g., maximum -- or most
+recent -- date, maximum integer etc). Note, this is different then
+maxLength property.</p>
+<p>[Optional,if applicable]</p>
+<h2 id="encodings"><code>encodings</code><a class="headerlink" href="#encodings" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Variable Value Encodings (i.e., mappings; value labels)</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> Variable value encodings provide a way to further annotate any value within a any variable type,
+making values easier to understand. </p>
+<p>Many analytic software programs (e.g., SPSS,Stata, and SAS) use numerical encodings and some algorithms
+only support numerical values. Encodings (and mappings) allow categorical values to be stored as
+numerical values.</p>
+<p>Additionally, as another use case, this field provides a way to
+store categoricals that are stored as  "short" labels (such as
+abbreviations).</p>
+<p>[Optional,if applicable]</p>
+<p><strong>Examples:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;No&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Yes&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;HW&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hello world&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;GBW&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Good bye world&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;HM&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hi, Mike&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="ordered"><code>ordered</code><a class="headerlink" href="#ordered" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> An ordered variable</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>boolean</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> Indicates whether a categorical variable is ordered. This variable  is
+relevant for variables that have an ordered relationship but not
+necessarily  a numerical relationship (e.g., Strongly disagree &lt; Disagree
+&lt; Neutral &lt; Agree).</p>
+<p>[Optional,if applicable]</p>
+<h2 id="missingvalues"><code>missingValues</code><a class="headerlink" href="#missingvalues" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Missing Values</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>array</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> A list of missing values specific to a variable.</p>
+<p>[Highly recommended]</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Array restrictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Min items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Max items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Items unicity</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Additional items</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Tuple validation</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="truevalues"><code>trueValues</code><a class="headerlink" href="#truevalues" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Boolean True Value Labels</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>array of string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> For boolean (true) variable (as defined in type field), this field allows
+a physical string representation to be cast as true (increasing
+readability of the field). It can include one or more values.</p>
+<p>[Optional, if applicable]</p>
+<p><strong>Examples:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;Required&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;REQUIRED&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;required&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;Yes&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;Checked\&quot;&quot;</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Array restrictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Min items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Max items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Items unicity</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Additional items</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Tuple validation</strong></td>
+<td>See below</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Each item of this array must be</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#trueValues_items">trueValues items</a></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="truevalues-items">trueValues items<a class="headerlink" href="#truevalues-items" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h2 id="falsevalues"><code>falseValues</code><a class="headerlink" href="#falsevalues" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Boolean False Value Labels</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>array</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> For boolean (false) variable (as defined in type field), this field allows
+a physical string representation to be cast as false (increasing
+readability of the field) that is not a standard false value. It can include one or more values.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Array restrictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Min items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Max items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Items unicity</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Additional items</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Tuple validation</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="repo_link"><code>repo_link</code><a class="headerlink" href="#repo_link" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Variable Repository Link</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> A link to the variable as it exists on the home repository, if applicable</p>
+<h2 id="cde_id"><code>cde_id</code><a class="headerlink" href="#cde_id" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Common Data Element Id</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>array of object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> [FUTURE WARNING: WILL BE DEPRECATED] Use <code>standardsMapping</code>. The source and id for the NIH Common Data Elements program.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Array restrictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Min items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Max items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Items unicity</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Additional items</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Tuple validation</strong></td>
+<td>See below</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Each item of this array must be</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#cde_id_items">cde_id items</a></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cde_id-items">cde_id items<a class="headerlink" href="#cde_id-items" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="source"><code>source</code><a class="headerlink" href="#source" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="id"><code>id</code><a class="headerlink" href="#id" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ontology_id"><code>ontology_id</code><a class="headerlink" href="#ontology_id" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Ontology ID</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>array of object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> [FUTURE WARNING: WILL BE DEPRECATED] - Use <code>relatedConcepts</code>. Ontological information for the given variable as indicated  by the
+source, id, and relation to the specified classification. One or more
+ontology classifications can be specified. </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Array restrictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Min items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Max items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Items unicity</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Additional items</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Tuple validation</strong></td>
+<td>See below</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Each item of this array must be</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#ontology_id_items">ontology_id items</a></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ontology_id-items">ontology_id items<a class="headerlink" href="#ontology_id-items" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relation"><code>relation</code><a class="headerlink" href="#relation" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="source_1"><code>source</code><a class="headerlink" href="#source_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="id_1"><code>id</code><a class="headerlink" href="#id_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h2 id="standardsmappings"><code>standardsMappings</code><a class="headerlink" href="#standardsmappings" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Standards Mappings</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>array of object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> A published set of standard variables such as the NIH Common Data Elements program.
+[Autopopulated, if not filled]</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Array restrictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Min items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Max items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Items unicity</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Additional items</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Tuple validation</strong></td>
+<td>See below</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Each item of this array must be</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#standardsMappings_items">standardsMappings items</a></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standardsmappings-items">standardsMappings items<a class="headerlink" href="#standardsmappings-items" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="type_1"><code>type</code><a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
+<p><strong>Title:</strong> Standards Mapping - Title</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The <strong>type</strong> of mapping linked to a published set of standard variables such as the NIH Common Data Elements program.
+[Autopopulated, if not filled]</p>
+<p><strong>Examples:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;cde&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;ontology&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;reference_list&quot;</span>
+</code></pre></div>
+<h4 id="label"><code>label</code><a class="headerlink" href="#label" title="Permanent link">&para;</a></h4>
+<p><strong>Title:</strong> Standards Mapping - Label</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> A free text <strong>label</strong> of a mapping indicating a mapping(s) to a published set of standard variables such as the NIH Common Data Elements program.</p>
+<p>[Autopopulated, if not filled]</p>
+<p><strong>Examples:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;substance use&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;chemical compound&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;promis&quot;</span>
+</code></pre></div>
+<h4 id="url"><code>url</code><a class="headerlink" href="#url" title="Permanent link">&para;</a></h4>
+<p><strong>Title:</strong> Standards Mapping - Url</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Format</strong></td>
+<td><code>uri</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The url that links out to the published, standardized mapping.</p>
+<p>[Autopopulated, if not filled]</p>
+<p><strong>Example:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI&quot;</span>
+</code></pre></div>
+<h4 id="source_2"><code>source</code><a class="headerlink" href="#source_2" title="Permanent link">&para;</a></h4>
+<p><strong>Title:</strong> Standard Mapping - Source</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The source of the standardized variable.</p>
+<p><strong>Example:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;TBD (will have controlled vocabulary)&quot;</span>
+</code></pre></div>
+<h4 id="id_2"><code>id</code><a class="headerlink" href="#id_2" title="Permanent link">&para;</a></h4>
+<p><strong>Title:</strong> Standard Mapping - Id</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The id locating the individual mapping within the given source.</p>
+<h2 id="relatedconcepts"><code>relatedConcepts</code><a class="headerlink" href="#relatedconcepts" title="Permanent link">&para;</a></h2>
+<p><strong>Title:</strong> Related Concepts</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>array of object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> Mappings to a published set of concepts related to the given field such as ontological information (eg., NCI thesaurus, bioportal etc)
+[Autopopulated, if not filled]</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Array restrictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Min items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Max items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Items unicity</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Additional items</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Tuple validation</strong></td>
+<td>See below</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Each item of this array must be</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#relatedConcepts_items">relatedConcepts items</a></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relatedconcepts-items">relatedConcepts items<a class="headerlink" href="#relatedconcepts-items" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="type_2"><code>type</code><a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
+<p><strong>Title:</strong> Related concepts - Type</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The <strong>type</strong> of mapping to a published set of concepts related to the given field such as 
+ontological information (eg., NCI thesaurus, bioportal etc)</p>
+<p>[Autopopulated, if not filled]</p>
+<h4 id="label_1"><code>label</code><a class="headerlink" href="#label_1" title="Permanent link">&para;</a></h4>
+<p><strong>Title:</strong> Related Concepts - Label</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> A free text <strong>label</strong> of mapping to a published set of concepts related to the given field such as 
+ontological information (eg., NCI thesaurus, bioportal etc)</p>
+<p>[Autopopulated, if not filled]</p>
+<h4 id="url_1"><code>url</code><a class="headerlink" href="#url_1" title="Permanent link">&para;</a></h4>
+<p><strong>Title:</strong> Related Concepts - Url</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Format</strong></td>
+<td><code>uri</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The url that links out to the published, standardized concept.</p>
+<p>[Autopopulated, if not filled]</p>
+<p><strong>Example:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI&quot;</span>
+</code></pre></div>
+<h4 id="source_3"><code>source</code><a class="headerlink" href="#source_3" title="Permanent link">&para;</a></h4>
+<p><strong>Title:</strong> Related Concepts - Source</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The source of the related concept.</p>
+<p>[Autopopulated, if not filled]</p>
+<p><strong>Example:</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;TBD (will have controlled vocabulary)&quot;</span>
+</code></pre></div>
+<h4 id="id_3"><code>id</code><a class="headerlink" href="#id_3" title="Permanent link">&para;</a></h4>
+<p><strong>Title:</strong> Related Concepts - Id</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> The id locating the individual mapping within the given source.</p>
+<p>[Autopopulated, if not filled]</p>
+<h2 id="univarstats"><code>univarStats</code><a class="headerlink" href="#univarstats" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description:</strong> Univariate statistics inferred from the data about the given variable </p>
+<p>[Experimental]</p>
+<h3 id="median"><code>median</code><a class="headerlink" href="#median" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mean"><code>mean</code><a class="headerlink" href="#mean" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="std"><code>std</code><a class="headerlink" href="#std" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="min"><code>min</code><a class="headerlink" href="#min" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="max"><code>max</code><a class="headerlink" href="#max" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mode"><code>mode</code><a class="headerlink" href="#mode" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="count"><code>count</code><a class="headerlink" href="#count" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>integer</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Restrictions</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Minimum</strong></td>
+<td>&ge; 0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="twentyfifthpercentile"><code>twentyFifthPercentile</code><a class="headerlink" href="#twentyfifthpercentile" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="seventyfifthpercentile"><code>seventyFifthPercentile</code><a class="headerlink" href="#seventyfifthpercentile" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="categoricalmarginals"><code>categoricalMarginals</code><a class="headerlink" href="#categoricalmarginals" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>array of object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Array restrictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Min items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Max items</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Items unicity</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Additional items</strong></td>
+<td>False</td>
+</tr>
+<tr>
+<td><strong>Tuple validation</strong></td>
+<td>See below</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Each item of this array must be</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#univarStats_categoricalMarginals_items">categoricalMarginals items</a></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h4 id="categoricalmarginals-items">categoricalMarginals items<a class="headerlink" href="#categoricalmarginals-items" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Additional properties</strong></td>
+<td><a href="#" title="Additional Properties of any type are allowed.">[Any type: allowed]</a></td>
+</tr>
+</tbody>
+</table>
+<h5 id="name_1"><code>name</code><a class="headerlink" href="#name_1" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h5 id="count_1"><code>count</code><a class="headerlink" href="#count_1" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>integer</code></td>
+</tr>
+<tr>
+<td><strong>Required</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../csv-fields/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CSV Data dictionary" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              CSV Data dictionary
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,9 +1,4 @@
-body {
-  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
-  color: #333;
-  font-weight: 300;
-  padding: 40px;
-}
+
 
 .btn.btn-link {
     font-size: 18px;
@@ -83,10 +78,7 @@ body {
     display: inline-block;
 }
 
-.badge.required-property,.badge.deprecated-property,.badge.pattern-property,.badge.no-additional {
-    font-size: 100%;
-    margin-left: 10px;
-}
+
 
 .accordion div.card:only-child {
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
