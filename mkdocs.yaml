@@ -9,8 +9,8 @@ nav:
   - Variable Level Metadata:
     - vlmd/supported_input_formats.md
     - Fields:
-      - vlmd/rendered-schemas/csv-fields.md
-      - vlmd/rendered-schemas/json-fields.md
+      - "CSV Data dictionary": vlmd/rendered-schemas/csv-fields.md
+      - "JSON Data dictionary": vlmd/rendered-schemas/json-fields.md
     
 theme:
   name: material
