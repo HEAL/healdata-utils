@@ -5,8 +5,11 @@ name: Python application
 
 on:
   pull_request:
-    types: [opened, reopened]
-
+    branches:
+      - main
+  push:
+    branches:
+      - main
 permissions:
   contents: read
 
