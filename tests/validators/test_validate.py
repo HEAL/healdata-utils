@@ -14,7 +14,7 @@ def test_validate_vlmd_csv_with_data():
         {"name": "field1", "type": "hello", "encodings": "1"},
     ]
     package = validate_vlmd_csv(data)
-    with open("tests\\criteria_data\\test_validate_check1.json", 'r') as fp:
+    with open("tests/criteria_data/test_validate_check1.json", 'r') as fp:
         package_check = json.load(fp)
     assert package == package_check
 
