@@ -4,10 +4,8 @@
 name: Python application
 
 on:
-  push:
-    branches: [ "test-deployment-pipeline" ]
   pull_request:
-    branches: [ "test-deployment-pipeline" ]
+    types: [opened, reopened]
 
 permissions:
   contents: read
