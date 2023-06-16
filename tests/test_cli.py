@@ -20,8 +20,7 @@ def test_convert_to_vlmd_with_redcap_csv_no_output():
     csvtemplate = data_dictionaries["csvtemplate"]
     jsontemplate = data_dictionaries["jsontemplate"]
     errors = data_dictionaries["errors"]
-
-    assert csvtemplate[5] == {
+    csvtemplate_5 = {
         "module": "demographics",
         "name": "telephone_1",
         "title": "Phone number",
@@ -51,7 +50,10 @@ def test_convert_to_vlmd_with_redcap_csv_no_output():
         "univar_stats.seventy_five_percentile": "",
         "univar_stats.cat_marginals": "",
     }
-    assert csvtemplate[7] == {
+
+    assert csvtemplate[5] == csvtemplate_5
+
+    csvtemplate_7 = {
         "module": "demographics",
         "name": "email",
         "title": "E-mail",
@@ -81,7 +83,10 @@ def test_convert_to_vlmd_with_redcap_csv_no_output():
         "univar_stats.seventy_five_percentile": "",
         "univar_stats.cat_marginals": "",
     }
-    assert csvtemplate[8] == {
+
+    assert csvtemplate[7] == csvtemplate_7
+
+    csvtemplate_8 = {
         "module": "demographics",
         "name": "sex",
         "title": "Gender",
@@ -112,9 +117,11 @@ def test_convert_to_vlmd_with_redcap_csv_no_output():
         "univar_stats.cat_marginals": "",
     }
 
+    assert csvtemplate[8] == csvtemplate_8
+
     assert jsontemplate["description"] == data_dictionary_metadata["description"]
     assert jsontemplate["title"] == data_dictionary_metadata["title"]
-    assert jsontemplate["data_dictionary"][5] == {
+    data_dictionary_5 = {
         "name": "telephone_1",
         "type": "string",
         "constraints": {"pattern": "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"},
@@ -122,7 +129,8 @@ def test_convert_to_vlmd_with_redcap_csv_no_output():
         "title": "Phone number",
         "module": "demographics",
     }
-    assert jsontemplate["data_dictionary"][7] == {
+    assert jsontemplate["data_dictionary"][5] == data_dictionary_5
+    data_dictionary_7 = {
         "name": "email",
         "type": "string",
         "format": "email",
@@ -130,7 +138,8 @@ def test_convert_to_vlmd_with_redcap_csv_no_output():
         "title": "E-mail",
         "module": "demographics",
     }
-    assert jsontemplate["data_dictionary"][8] == {
+    assert jsontemplate["data_dictionary"][7] == data_dictionary_7
+    data_dictionary_8 = {
         "name": "sex",
         "type": "integer",
         "encodings": {"0": "Female", "1": "Male"},
@@ -139,6 +148,7 @@ def test_convert_to_vlmd_with_redcap_csv_no_output():
         "title": "Gender",
         "module": "demographics",
     }
+    assert jsontemplate["data_dictionary"][8] == data_dictionary_8
 
     assert errors["jsontemplate"] == {"valid": True, "errors": []}
     assert errors["csvtemplate"] == {"valid": True, "errors": []}
