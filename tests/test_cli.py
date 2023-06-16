@@ -152,8 +152,3 @@ def test_convert_to_vlmd_with_redcap_csv_no_output():
 
     assert errors["jsontemplate"] == {"valid": True, "errors": []}
     assert errors["csvtemplate"] == {"valid": True, "errors": []}
-
-
-# os.chdir(Path(__file__).parent)
-# test_convert_to_vlmd_with_redcap_csv_no_output()
-# print("SUCCESS")

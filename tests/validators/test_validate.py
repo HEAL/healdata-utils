@@ -31,7 +31,7 @@ def test_validate_vlmd_json_with_data():
         {"name": "field2", "encodings": "1"},
     ]
     package = validate_vlmd_json(data)
-    with open("tests\\criteria_data\\test_validate_check2.json", 'r') as fp:
+    with open("tests/criteria_data/test_validate_check2.json", 'r') as fp:
         package_check = json.load(fp)
     assert package == package_check
 
