@@ -12,4 +12,6 @@ def test_convert_frictionless_to_jsonschema():
     jsonschema_props = convert_frictionless_to_jsonschema(frictionless_schema)
     with open("tests/criteria_data/test_frictionless_check1.json", "r") as fp:
         jsonschema_props_check = json.load(fp)
-    assert jsonschema_props == jsonschema_props_check
+    test_passed = jsonschema_props == jsonschema_props_check
+    if not test_passed:
+        raise Exception("line 15 assertion statement failed")
