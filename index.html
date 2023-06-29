@@ -574,8 +574,7 @@
 <p>Currently, the focus of the repo is on generating data-dictionaries (see Variable level metadata section below). However, in the future, this will be expanded for all heal specific data packaging functions (e.g., study and file level metadata and data).</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>To install the latest official release of healdata-utils, from your computer's command prompt, run:</p>
-<p><code>pip install healdata-utils</code></p>
-<p>to install the working, un-released version from this git repository, run:</p>
+<p><code>pip install healdata-utils --pre</code> (<strong>NOTE: currently in pre-lease</strong>)</p>
 <p><code>pip install git+https://github.com/norc-heal/healdata-utils.git</code></p>
 <h2 id="variable-level-metadata-data-dictionaries">Variable level metadata (data dictionaries)<a class="headerlink" href="#variable-level-metadata-data-dictionaries" title="Permanent link">&para;</a></h2>
 <p><a href="https://mybinder.org/v2/gh/norc-heal/healdata-utils/HEAD?labpath=notebooks%2Fdemos%2Finputs-to-heal-data-dictionary.ipynb"><img alt="Binder" src="http://mybinder.org/badge_logo.svg" /></a> </p>
@@ -619,8 +618,7 @@ For descriptions on the different flags/options, run <code>vlmd --help</code></p
 --description<span class="w"> </span><span class="s2">&quot;This is a proof of concept to demonstrate the healdata-utils functionality&quot;</span><span class="w"> </span>
 </code></pre></div>
 <h4 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h4>
-<p>Both the python and command line routes will result in a JSON and CSV version of the HEAL  data dictionary in the output folder along with 
-the validation reports in the <code>errors</code> folder. See below:</p>
+<p>Both the python and command line routes will result in a JSON and CSV version of the HEAL  data dictionary in the output folder along with the validation reports in the <code>errors</code> folder. See below:</p>
 <ul>
 <li>
 <p><code>input/input/my-redcap-data-dictionary-export.csv</code> : your input file</p>
@@ -631,15 +629,21 @@ the validation reports in the <code>errors</code> folder. See below:</p>
 <li>see schema <a href="https://github.com/norc-heal/heal-metadata-schemas/blob/main/variable-level-metadata-schema/schemas/frictionless/csvtemplate/fields.json">here</a></li>
 </ul>
 </li>
-<li>
-<p><code>output/errors/heal-json-errors.json</code>:  outputted jsonschema validation report.</p>
-<ul>
+<li><code>output/errors/heal-json-errors.json</code>:  outputted jsonschema validation report.<ul>
 <li>see schema <a href="https://github.com/norc-heal/heal-metadata-schemas/blob/main/variable-level-metadata-schema/schemas/jsonschema/data-dictionary.json">here</a></li>
 </ul>
 </li>
-<li>
-<p><code>output/heal-csvtemplate-data-dictionary.csv</code>: This is the CSV data dictionary</p>
-</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The main difference* between the CSV and JSON data dictionary validation lies in the way the data dictionaries are structured and the additional metadata included in the JSON data dictionary.</p>
+<p>The CSV data dictionary is a plain tabular representation with no additional metadata, while the JSON dataset includes fields along with additional metadata in the form of a root description and title.</p>
+<ul>
+<li>for field-specific differences, see the schemas in the documentation. </li>
+</ul>
+</div>
+<ul>
+<li><code>output/heal-csvtemplate-data-dictionary.csv</code>: This is the CSV data dictionary</li>
 <li><code>output/heal-jsontemplate-data-dictionary.json</code>: This is the JSON version of the data dictionary</li>
 </ul>
 <blockquote>
