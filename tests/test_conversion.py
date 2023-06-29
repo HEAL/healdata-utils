@@ -51,10 +51,10 @@ def compile_assertions(data1, data2):
 def test_convert_readstat(compile_assertion=False):
     # compile_assertions: bool
     # use to bulk generate assertions statements for testing
-    file_path = "tests\\data\\sas-nmhss-2019\\data.sas7bdat"
+    file_path = "tests/data/sas-nmhss-2019/data.sas7bdat"
     if os.path.isfile(file_path):
         print('file exists: regex')
-    sas7bcat_file_path = "tests\\data\\sas-nmhss-2019\\formats.sas7bcat"
+    sas7bcat_file_path = "tests/data/sas-nmhss-2019/formats.sas7bcat"
     data_dictionaries = convert_readstat(
         file_path=file_path,
         data_dictionary_props={},
