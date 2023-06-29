@@ -6,25 +6,52 @@ from healdata_utils.cli import convert_to_vlmd
 
 # test convert vlmd with redcap csv
 
-# commented out below is the python code producer I used for this tests assertion statements
-# def script_compile_functionality(data1, data2):
-#     filer = open("new_python_test.txt", "a")
 
-#     for i, item in enumerate([data1, data2]):
-#         if i == 0:
-#             text = "csvtemplate_{}"
-#             var = "csvtemplate"
-#         else:
-#             text = "data_dictionary_{}"
-#             var = 'jsontemplate["data_dictionary"]'
-#         for j, component in enumerate(item):
-#             filer.write("\n\n" + text.format(str(j)) + "= {}".format(str(component)))
-#             filer.write(
-#                 "\n\nassert {}[{}]".format(var, str(j)) + " == " + text.format(j)
-#             )
+def compile_assertions(data1, data2):
+    # helper function to bulk generate assertion statements for data structures.
+    assertion_statements = ""
+    for i, item in enumerate([data1, data2]):
+        if i == 0:
+            text = "csvtemplate_{}"
+            var = "csvtemplate"
+        else:
+            text = "data_dictionary_{}"
+            var = 'jsontemplate["data_dictionary"]'
+        for j, component in enumerate(item):
+            assertion_statements += (
+                "\n\n    " + text.format(str(j)) + "= {}".format(str(component))
+            )
+            assertion_statements += (
+                "\n\n    assert {}[{}]".format(var, str(j)) + " == " + text.format(j)
+            )
+    with open(__file__, "r") as cur_file:
+        test_file = cur_file.read()
+        cur_file.close()
+    lines = test_file.split("\n")
+
+    for i, line in enumerate(lines):
+        if line.replace(" ", "") == "##regexflagstart###":
+            j = i
+        elif line.replace(" ", "") == "##regexflagend###":
+            n = i
+    for x in range(n - j - 1):
+        lines.pop(j + 1)
+    new_text = ""
+    for i, line in enumerate(lines):
+        preamb = "" if i == 0 else "\n"
+        if i == j + 1:
+            new_text += "\n" + assertion_statements + "\n"
+        new_text += preamb + line
+
+    with open(__file__, "w") as cur_file:
+        cur_file.write(new_text)
+    print(os.getcwd())
+    # os.system('cmd /k " venv\\Scripts\\activate"'.format(__file__))
+    # os.system('cmd /c "black {}"'.format(__file__))
+    return
 
 
-def test_convert_to_vlmd_with_redcap_csv_no_output():
+def test_convert_to_vlmd_with_redcap_csv_no_output(compile_assertion=False):
     data_dictionary_metadata = {
         "description": (
             "This is a proof of concept to demonstrate"
@@ -39,8 +66,11 @@ def test_convert_to_vlmd_with_redcap_csv_no_output():
     csvtemplate = data_dictionaries["csvtemplate"]
     jsontemplate = data_dictionaries["jsontemplate"]
     errors = data_dictionaries["errors"]
-    #this commented out line below produces a text document with a majority of the code below (in conjunction w/ black):
-    # script_compile_functionality(csvtemplate, jsontemplate["data_dictionary"])
+    if compile_assertion:
+        compile_assertions(csvtemplate, jsontemplate["data_dictionary"])
+        return
+
+    ##regex flag start###
 
     csvtemplate_0 = {
         "module": "demographics",
@@ -8542,11 +8572,10 @@ def test_convert_to_vlmd_with_redcap_csv_no_output():
 
     assert jsontemplate["data_dictionary"][144] == data_dictionary_144
 
+    ##regex flag end###
+
     assert jsontemplate["description"] == data_dictionary_metadata["description"]
     assert jsontemplate["title"] == data_dictionary_metadata["title"]
 
     assert errors["jsontemplate"] == {"valid": True, "errors": []}
     assert errors["csvtemplate"] == {"valid": True, "errors": []}
-
-
-test_convert_to_vlmd_with_redcap_csv_no_output()

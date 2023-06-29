@@ -96,6 +96,8 @@ def infer_frictionless_fields(
 
     for col,typepath in typepaths.items():
         field = {"name":col}
+        if len(typepath)==1:
+            continue
         type_final = str(typepath[-1])
         type_second_to_final = str(typepath[-2])
         if type_final=="Categorical":
