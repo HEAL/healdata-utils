@@ -1,0 +1,65 @@
+[
+    {
+        "title": null,
+        "description": null,
+        "data_dictionary": [
+            {
+                "module": null,
+                "name": null,
+                "title": null,
+                "description": null,
+                "type": null,
+                "constraints": {
+                    "maxLength": null,
+                    "enum": [],
+                    "pattern": null,
+                    "maximum": null,
+                    "minimum": null
+                },
+                "encodings": {},
+                "ordered": null,
+                "missingValues": [],
+                "trueValues": [
+                    {}
+                ],
+                "falseValues": [],
+                "repo_link": null,
+                "standardsMappings": [
+                    {
+                        "type": null,
+                        "label": null,
+                        "url": null,
+                        "source": null,
+                        "id": null
+                    }
+                ],
+                "relatedConcepts": [
+                    {
+                        "type": null,
+                        "label": null,
+                        "url": null,
+                        "source": null,
+                        "id": null
+                    }
+                ],
+                "univarStats": {
+                    "median": null,
+                    "mean": null,
+                    "std": null,
+                    "min": null,
+                    "max": null,
+                    "mode": null,
+                    "count": null,
+                    "twentyFifthPercentile": null,
+                    "seventyFifthPercentile": null,
+                    "categoricalMarginals": [
+                        {
+                            "name": null,
+                            "count": null
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]

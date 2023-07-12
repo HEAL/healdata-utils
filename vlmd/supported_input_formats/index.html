@@ -8,11 +8,16 @@
       
       
       
-      
         <link rel="canonical" href="https://norc-heal.github.io/healdata-utils/vlmd/supported_input_formats/">
       
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../rendered-schemas/">
+      
       <link rel="icon" href="../../assets/heal_logo.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-7.3.6">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -20,32 +25,34 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
         
-      
-    
-    
-    
-      
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700%7C&display=fallback">
-        <style>:root{--md-text-font-family:"Montserrat";--md-code-font-family:""}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
       <link rel="stylesheet" href="../../stylesheets/schema_doc.css">
     
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-
+    
     
     
   </head>
@@ -56,10 +63,9 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="heal_platform" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="heal_platform" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -76,11 +82,12 @@
       
     </div>
     
+    
       
 
   
 
-<header class="md-header md-header--lifted" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="https://github.com/norc-heal" title="HEAL Data Utilities" class="md-header__button md-logo" aria-label="HEAL Data Utilities" data-md-component="logo">
       
@@ -88,7 +95,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -107,25 +114,26 @@
       </div>
     </div>
     
+      
+    
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -136,7 +144,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -145,11 +153,10 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/norc-heal/healdata-utils" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/norc-heal/healdata-utils" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -190,11 +197,10 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/norc-heal/healdata-utils" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/norc-heal/healdata-utils" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -234,8 +240,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
         
@@ -260,14 +267,13 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Variable Level Metadata" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Variable Level Metadata
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
             
           
             
@@ -279,7 +285,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -295,7 +301,6 @@
       </a>
       
         
-
 
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
@@ -470,8 +475,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
       
       
         
@@ -496,14 +502,13 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Data dictionary definitions" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           Data dictionary definitions
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
             
           
             
@@ -559,7 +564,6 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
 
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
@@ -724,16 +728,17 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <a href="https://github.com/norc-heal/healdata-utils/edit/master/docs/vlmd/supported_input_formats.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
-                
-                <h1 id="supported-input-formats">Supported Input Formats<a class="headerlink" href="#supported-input-formats" title="Permanent link">&para;</a></h1>
+                  
+
+  
+  
+
+
+<h1 id="supported-input-formats">Supported Input Formats<a class="headerlink" href="#supported-input-formats" title="Permanent link">&para;</a></h1>
 <p>In this section, supported formats for generating HEAL-compliant data dictionaries are listed. Additional instructions on how to obtain the necessary input files/software are also provided.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -752,8 +757,8 @@ as an additional step after further annotation (e.g., from the <code>csv</code> 
 <ol>
 <li>
 <p>Use the template and start from scratch</p>
-<p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/heal-metadata-schemas/blob/mbkranz/variable-lvl-dev/variable-level-metadata-schema/templates/template_submission.csv">Click here to download a blank <strong>csv</strong> HEAL data dictionary template</a></p>
-<p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/healdata-utils/blob/main/tests/data/valid/output/heal_dd_from_redcap_dd_export.csv">Click here to download an example of a filled out <strong>csv</strong> HEAL data dictionary template</a></p>
+<p><a class="md-button md-button--primary" download="example_submission.csv" href="../../assets/templates/template_submission.csv">Click here to download a blank <strong>csv</strong> HEAL data dictionary template</a></p>
+<p><a class="md-button md-button--primary" download="template_submission.csv" href="assets/examples/valid/template_submission.csv">Click here to download an example of a filled out <strong>csv</strong> HEAL data dictionary template</a></p>
 </li>
 <li>
 <p>Output from one of the below software-specific formats and then further annotate.</p>
@@ -776,10 +781,8 @@ these csv data dictionary files are converted to a json file (the most common fo
 <li>
 <p>Use the template and start from scratch (click on the template below to expand)</p>
 <p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/heal-metadata-schemas/blob/mbkranz/variable-lvl-dev/variable-level-metadata-schema/templates/template_submission.json">Click here to download a blank <strong>json</strong> HEAL data dictionary template</a></p>
-<p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/healdata-utils/blob/main/tests/data/valid/output/heal_dd_from_redcap_dd_export.json">Click here to download an example of filled out <strong>json</strong> HEAL data dictionary template</a></p>
-</li>
-<li>
-<p>Output from one of the below software-specific formats and then further annotate.</p>
+<p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/heal-metadata-schemas/blob/mbkranz/variable-lvl-dev/variable-level-metadata-schema/examples/valid/template_submission.json">Click here to download an example of filled out <strong>json</strong> HEAL data dictionary template</a>
+2. Output from one of the below software-specific formats and then further annotate.</p>
 </li>
 </ol>
 <div class="admonition note">
@@ -817,7 +820,9 @@ these csv data dictionary files are converted to a json file (the most common fo
 <p class="admonition-title">Note</p>
 </div>
 <p>If inserted directly, remember to delete the lines with <code>%INCLUDE</code>)</p>
-<details class="template" open="open"><summary>Template</summary><div class="highlight"><span class="filename">template.sas</span><pre><span></span><code><span class="cm">/*1. Read in data file without value labels and run full code. </span>
+<details class="template" open="open">
+<summary>Template</summary>
+<div class="highlight"><span class="filename">template.sas</span><pre><span></span><code><span class="cm">/*1. Read in data file without value labels and run full code. </span>
 <span class="cm">        Note: The most important pieces to run here are the PROC FORMAT statement(s) and any data steps </span>
 <span class="cm">        that assign formats and variable labels which are needed for the data dictionary. You may have defined variable labels and values in separate scripts for different analyses. In order to capture all your defined variable labels and values across scripts, you will need an %INCLUDE statement for each SAS script that defines unique variable labels or value labels.*/</span>
 
@@ -845,7 +850,9 @@ these csv data dictionary files are converted to a json file (the most common fo
 <p>The below SAS syntax is an example of how to use the template within your SAS workflow.</p>
 <p>The below sample script creates all of our variable and value labels. Your workflow may include multiple SAS scripts with multiple format statements and may include analyses and other PROC calls for data exploration, 
 but for demonstration purposes, this example only uses one script and focuses on defining the variable and value labels.</p>
-<details class="example template usage" open="open"><summary>Example</summary><div class="highlight"><span class="filename">my_existing_sas_workflow.sas</span><pre><span></span><code><span class="c">/*1. Read in input data */</span>
+<details class="example template usage" open="open">
+<summary>Example</summary>
+<div class="highlight"><span class="filename">my_existing_sas_workflow.sas</span><pre><span></span><code><span class="c">/*1. Read in input data */</span>
 <span class="kr">proc import </span>datafile=<span class="s">&quot;myprojectfolder/input/mydata.csv&quot;</span>
     <span class="k">out</span>=raw
     dbms=csv <span class="k">replace</span>;
@@ -935,69 +942,33 @@ TO ADD -->
 <!-- ### Creating a well-annotated `dta` file
 
 TO ADD -->
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
-        
-<footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Variable-level Metadata (Data Dictionaries)" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Variable-level Metadata (Data Dictionaries)
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../rendered-schemas/" class="md-footer__link md-footer__link--next" aria-label="Next: HEAL data dictionary schemas" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              HEAL data dictionary schemas
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
-          </a>
-        
-        
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -1007,10 +978,11 @@ TO ADD -->
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections"], "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>
