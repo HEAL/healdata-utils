@@ -16,7 +16,7 @@
     
     
       
-        <title>Index - HEAL Data Utilities</title>
+        <title>Variable-level Metadata (Data Dictionaries) - HEAL Data Utilities</title>
       
     
     
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Variable-level Metadata (Data Dictionaries)
             
           </span>
         </div>
@@ -388,21 +388,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#variable-level-metadata-data-dictionaries" class="md-nav__link">
-    Variable level metadata (data dictionaries)
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -419,29 +406,26 @@
                   </a>
                 
                 
-                  <h1>Index</h1>
-                
-                <h2 id="variable-level-metadata-data-dictionaries">Variable level metadata (data dictionaries)<a class="headerlink" href="#variable-level-metadata-data-dictionaries" title="Permanent link">&para;</a></h2>
+                <h1 id="variable-level-metadata-data-dictionaries">Variable-level Metadata (Data Dictionaries)<a class="headerlink" href="#variable-level-metadata-data-dictionaries" title="Permanent link">&para;</a></h1>
 <p><a href="https://mybinder.org/v2/gh/norc-heal/healdata-utils/HEAD?labpath=notebooks%2Fdemos%2Finputs-to-heal-data-dictionary.ipynb"><img alt="Binder" src="http://mybinder.org/badge_logo.svg" /></a> </p>
-<p>The healdata-utils variable level metadata (vlmd) tool inputs a variety of different input file types and exports HEAL-formatted data dictionaries (JSON and CSV formats). Additionally, exported validation (ie "error") reports provide the user information as to a. if the exported data dictionary is valid according to HEAL specifications and information
-on how to modify one's data dictionary to conform to make HEAL compliant.</p>
-<p>For support formats and more detailed software-specific instructions and recommendations, <a href="docs/supported_input_formats.md">see here</a></p>
-<p>For more information on variable level metadata properties (fields), see the <a href="rendered-schemas/csv-fields/"><code>csv</code> field specification</a> and <a href="rendered-schemas/json-data-dictionary/"><code>json</code> field specification</a>. </p>
+<p>The healdata-utils variable-level metadata (vlmd) tool inputs a variety of different input file types and exports HEAL-compliant data dictionaries (JSON and CSV formats). Additionally, exported validation (i.e., "error") reports provide the user information as to a) if the exported data dictionary is valid according to HEAL specifications and b) how to modify one's data dictionary to make it HEAL-compliant.</p>
+<p>For supported formats and more detailed software-specific instructions and recommendations, <a href="supported_input_formats/">see here</a>.</p>
+<p>For more information on variable-level metadata properties (fields), see the <a href="rendered-schemas/csv-fields/"><code>csv</code> field specification</a> and <a href="rendered-schemas/json-data-dictionary/"><code>json</code> field specification</a>. </p>
 <p>Typical workflows for creating a HEAL-compliant data dictionary include:</p>
 <ol>
-<li><strong>Run the <code>vlmd</code> command</strong> (or <code>convert_to_vlmd</code> if in python) to generate a HEAL-compliant data dictionary via your desired input format (See the basic usage section on the homepage for general installation and usage information.)</li>
+<li><strong>Run the <code>vlmd</code> command</strong> (or <code>convert_to_vlmd</code> if in python) to generate a HEAL-compliant data dictionary via your desired input format (See the basic usage section on the homepage for general installation and usage information).</li>
 <li><strong>Add/annotate with</strong> additional information in your preferred HEAL data dictionary format (either <code>json</code> or <code>csv</code>).</li>
 </ol>
-<p>To further annotate and use the data dictionary, see the variable level metadata field property information below:</p>
+<p>To further annotate and use the data dictionary, see the variable-level metadata field property information below:</p>
 <ul>
 <li><a href="rendered-schemas/csv-fields/"><code>csv</code> data dictionary</a></li>
 <li>
-<p><a href="rendered-schemas/json-fields.md"><code>json</code> data dictionary</a></p>
+<p><a href="rendered-schemas/json-data-dictionary/"><code>json</code> data dictionary</a></p>
 </li>
 <li>
-<p><strong>Run the <code>vlmd</code> command</strong> again with your HEAL data dictioanry as input to validate.</p>
+<p><strong>Run the <code>vlmd</code> command</strong> again with your HEAL data dictioanry as the input to validate.</p>
 </li>
-<li>Repeat 2 and 3 until you are ready to submit. Remember, currently only <code>name</code> and <code>description</code> are required.</li>
+<li>Repeat (2) and (3) until you are ready to submit. Please note, currently only <code>name</code> and <code>description</code> are required.</li>
 </ul>
                 
               

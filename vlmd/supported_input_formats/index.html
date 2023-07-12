@@ -373,10 +373,10 @@
       
         <li class="md-nav__item">
   <a href="#redcap-data-dictionary-csv-export" class="md-nav__link">
-    Redcap: Data Dictionary CSV Export
+    REDCap: Data Dictionary CSV Export
   </a>
   
-    <nav class="md-nav" aria-label="Redcap: Data Dictionary CSV Export">
+    <nav class="md-nav" aria-label="REDCap: Data Dictionary CSV Export">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -637,10 +637,10 @@
       
         <li class="md-nav__item">
   <a href="#redcap-data-dictionary-csv-export" class="md-nav__link">
-    Redcap: Data Dictionary CSV Export
+    REDCap: Data Dictionary CSV Export
   </a>
   
-    <nav class="md-nav" aria-label="Redcap: Data Dictionary CSV Export">
+    <nav class="md-nav" aria-label="REDCap: Data Dictionary CSV Export">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -734,28 +734,26 @@
                 
                 
                 <h1 id="supported-input-formats">Supported Input Formats<a class="headerlink" href="#supported-input-formats" title="Permanent link">&para;</a></h1>
-<p>In this section, supported formats for generating heal-compliant data dictionaries are listed. We also provide additional instructions on how to get the necessary input files format/software.</p>
+<p>In this section, supported formats for generating HEAL-compliant data dictionaries are listed. Additional instructions on how to obtain the necessary input files/software are also provided.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To further annotate your outputted data dictionaries, see the variable level metadata field properties (with examples) for either the <strong><code>csv data dictionary</code></strong> <a href="../rendered-schemas/csv-fields/">click here</a> and for the <strong><code>json data dictionary</code></strong> <a href="../rendered-schemas/json-data-dictionary/">click here</a></p>
+<p>To further annotate your outputted data dictionaries, see the variable-level metadata field properties (with examples) for either the <strong><code>csv data dictionary</code></strong> <a href="../rendered-schemas/csv-fields/">click here</a> or the <strong><code>json data dictionary</code></strong> <a href="../rendered-schemas/json-data-dictionary/">click here</a>.</p>
 </div>
 <!-- TODO: make a table of contents/list of supported formats and brief
 description of them (with links to each) -->
 <h3 id="csv-datasets"><code>csv</code> Datasets<a class="headerlink" href="#csv-datasets" title="Permanent link">&para;</a></h3>
-<p>CSV (comma-separated values) is the main open tabular data format for storage and exchange. It is easy to
-create and understand using basic text editors in addition to popular spreadsheet software like Google Sheets
-and Excel. Importantly, it is simple and can be easily integrated into web applications and just about any software.</p>
-<p>Currently, the HEAL data utilities <code>vlmd</code> function can infer a minimal-HEAL compliant dataset by inferring <code>name</code>,<code>type</code>,and <code>enum</code> (i.e., possible values). After this minimal data dictionary is generated, the researcher can further annotate
-it with fields' <code>description</code> and other optional properties in either the HEAL-compliant csv or json data dictionary (see the HEAL data dictionary template sections below for more information)</p>
+<p>CSV (comma-separated values) is the main open tabular data format for storage and exchange. It is easy to create and understand using basic text editors in addition to popular spreadsheet software like Google Sheets and Excel. Importantly, CSVs are simple and can be easily integrated into web applications and just about any software.</p>
+<p>Currently, the HEAL Data Utilities <code>vlmd</code> function can infer a minimal, HEAL-compliant dataset by inferring <code>name</code>, <code>type</code>, and <code>enum</code> (i.e., possible values). After this minimal data dictionary is generated, the researcher can further annotate
+it with fields' <code>description</code> and other optional properties in either the HEAL-compliant <code>csv</code>- or <code>json</code>-formatted data dictionary (see the HEAL data dictionary template sections below for more information).</p>
 <h3 id="csv-heal-data-dictionary-eg-from-template"><code>csv</code> HEAL data dictionary (e.g., from template)<a class="headerlink" href="#csv-heal-data-dictionary-eg-from-template" title="Permanent link">&para;</a></h3>
-<p>HEAL data utilities can also input a <code>csv</code> HEAL data dictionary either from a manually filled out template or 
-as an additional step after additional annotation (e.g., from the HEAL csv data dictionary output of the above file formats).</p>
+<p>The HEAL Data Utilities can also input a <code>csv</code> HEAL data dictionary either from a manually filled out template or 
+as an additional step after further annotation (e.g., from the <code>csv</code> HEAL data dictionary output of the above file formats).</p>
 <h4 id="creating-a-csv-heal-data-dictionary">Creating a <code>csv</code> HEAL data dictionary<a class="headerlink" href="#creating-a-csv-heal-data-dictionary" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p>Use the template and start from scratch</p>
-<p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/heal-metadata-schemas/blob/mbkranz/variable-lvl-dev/variable-level-metadata-schema/templates/template_submission.csv">Click here to download a blank <strong>csv</strong> HEAL data dictionary template here</a></p>
-<p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/healdata-utils/blob/main/tests/data/valid/output/heal_dd_from_redcap_dd_export.csv">Click here to download an example of filled out <strong>csv</strong> HEAL data dictionary template here</a></p>
+<p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/heal-metadata-schemas/blob/mbkranz/variable-lvl-dev/variable-level-metadata-schema/templates/template_submission.csv">Click here to download a blank <strong>csv</strong> HEAL data dictionary template</a></p>
+<p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/healdata-utils/blob/main/tests/data/valid/output/heal_dd_from_redcap_dd_export.csv">Click here to download an example of a filled out <strong>csv</strong> HEAL data dictionary template</a></p>
 </li>
 <li>
 <p>Output from one of the below software-specific formats and then further annotate.</p>
@@ -763,22 +761,22 @@ as an additional step after additional annotation (e.g., from the HEAL csv data 
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To further annotate your outputted data dictionaries, see the variable level metadata field properties (with examples) for either the <strong><code>csv data dictionary</code></strong> <a href="../rendered-schemas/csv-fields/">click here</a></p>
+<p>To further annotate your outputted <code>csv</code> HEAL data dictionaries, see the variable level metadata field properties (with examples) for the <strong><code>csv data dictionary</code></strong>: <a href="../rendered-schemas/csv-fields/">click here</a></p>
 </div>
 <h4 id="validate-with-the-vlmd-command">Validate with the <code>vlmd</code> command<a class="headerlink" href="#validate-with-the-vlmd-command" title="Permanent link">&para;</a></h4>
-<p>After finishing your work on the csv HEAL data dictionary, run the <code>vlmd</code> command to ensure it is HEAL-compliant with:</p>
+<p>After finishing your work on the <code>csv</code> HEAL data dictionary, run the <code>vlmd</code> command to ensure it is HEAL-compliant with:</p>
 <div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>--filepath<span class="w"> </span>data/heal-dd-output.csv<span class="w"> </span>--inputtype<span class="w"> </span>csvtemplate
 </code></pre></div>
 <h3 id="json-heal-data-dictionary-eg-from-template"><code>json</code> HEAL data dictionary (e.g., from template)<a class="headerlink" href="#json-heal-data-dictionary-eg-from-template" title="Permanent link">&para;</a></h3>
 <p>While the <code>csv</code> HEAL data dictionary provides a tabular format for HEAL-compliant data dictionaries, ultimately, 
-these csv data dictionary files are converted to a json file (the most common format to store and exchange data within web applications such as the HEAL data platform). </p>
-<p>The HEAL data utilities <code>vlmd</code> tool can also input this <code>json</code> HEAL data dictionary either from a manually filled out template or as an additional step after additional annotation. Another advantage of <code>json</code> HEAL data dictionaries is that one can specify metadata describing the data dictionary as a whole (e.g., the <code>description</code> and <code>title</code>). </p>
+these csv data dictionary files are converted to a json file (the most common format to store and exchange data within web applications such as the HEAL Data Platform). </p>
+<p>The HEAL Data Utilities <code>vlmd</code> tool can also input this <code>json</code> HEAL data dictionary either from a manually filled out template or as an additional step after further annotation. Another advantage of <code>json</code> HEAL data dictionaries is that one can specify metadata describing the data dictionary as a whole (e.g., the <code>description</code> and <code>title</code>). </p>
 <h4 id="creating-a-json-heal-data-dictionary">Creating a <code>json</code> HEAL data dictionary<a class="headerlink" href="#creating-a-json-heal-data-dictionary" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p>Use the template and start from scratch (click on the template below to expand)</p>
-<p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/heal-metadata-schemas/blob/mbkranz/variable-lvl-dev/variable-level-metadata-schema/templates/template_submission.json">Click here to download a blank <strong>json</strong> HEAL data dictionary template here</a></p>
-<p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/healdata-utils/blob/main/tests/data/valid/output/heal_dd_from_redcap_dd_export.json">Click here to download an example of filled out <strong>json</strong> HEAL data dictionary template here</a></p>
+<p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/heal-metadata-schemas/blob/mbkranz/variable-lvl-dev/variable-level-metadata-schema/templates/template_submission.json">Click here to download a blank <strong>json</strong> HEAL data dictionary template</a></p>
+<p><a class="md-button md-button--primary" download="download" href="https://github.com/norc-heal/healdata-utils/blob/main/tests/data/valid/output/heal_dd_from_redcap_dd_export.json">Click here to download an example of filled out <strong>json</strong> HEAL data dictionary template</a></p>
 </li>
 <li>
 <p>Output from one of the below software-specific formats and then further annotate.</p>
@@ -786,35 +784,35 @@ these csv data dictionary files are converted to a json file (the most common fo
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To further annotate your outputted data dictionaries, see the variable level metadata field properties (with examples) for the <strong><code>json data dictionary</code></strong> <a href="../rendered-schemas/json-data-dictionary/">click here</a></p>
+<p>To further annotate your outputted <code>json</code> HEAL data dictionaries, see the variable-level metadata field properties (with examples) for the <strong><code>json data dictionary</code></strong>: <a href="../rendered-schemas/json-data-dictionary/">click here</a></p>
 </div>
 <h4 id="validate-with-the-vlmd-command_1">Validate with the <code>vlmd</code> command<a class="headerlink" href="#validate-with-the-vlmd-command_1" title="Permanent link">&para;</a></h4>
-<p>After finishing your work on the csv HEAL data dictionary, run the <code>vlmd</code> command to ensure it is HEAL-compliant with:</p>
+<p>After finishing your work on the <code>json</code> HEAL data dictionary, run the <code>vlmd</code> command to ensure it is HEAL-compliant with:</p>
 <div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>--filepath<span class="w"> </span>data/heal-dd-output.json<span class="w"> </span>--inputtype<span class="w"> </span>jsontemplate
 </code></pre></div>
-<h3 id="redcap-data-dictionary-csv-export">Redcap: Data Dictionary CSV Export<a class="headerlink" href="#redcap-data-dictionary-csv-export" title="Permanent link">&para;</a></h3>
-<p>For users collecting data in a <a href="https://www.project-redcap.org">Redcap</a> data management system, HEAL-compliant data dictionaries can be generated directly from Redcap exports. </p>
-<p>The redcap data dictionary export serves the purpose of providing variable level metadata in a standardized, tabular format and is generally easy to export. The HEAL data utilities leverages this user experience and standardized format to enable HEAL researchers to generate a Heal-compliant data dictionary. </p>
+<h3 id="redcap-data-dictionary-csv-export">REDCap: Data Dictionary CSV Export<a class="headerlink" href="#redcap-data-dictionary-csv-export" title="Permanent link">&para;</a></h3>
+<p>For users collecting data in a <a href="https://www.project-redcap.org">REDCap</a> data management system, HEAL-compliant data dictionaries can be generated directly from REDCap exports. </p>
+<p>The REDCap data dictionary export serves the purpose of providing variable-level metadata in a standardized, tabular format and is generally easy to export. The HEAL data utilities leverages this user experience and standardized format to enable HEAL researchers to generate a Heal-compliant data dictionary. </p>
 <h4 id="export-your-redcap-data-dictionary">Export your Redcap data dictionary<a class="headerlink" href="#export-your-redcap-data-dictionary" title="Permanent link">&para;</a></h4>
-<p>To download a Redcap CSV export do the following*: </p>
+<p>To download a REDCap CSV export, do the following*: </p>
 <ol>
-<li>After logging in to your Redcap project page, locate the <code>Data dictionary</code> page. A link to this page may be available on the project side bar (see image below) or in the <code>Project Setup tab</code> at the top of your page.</li>
+<li>After logging in to your REDCap project page, locate the <code>Data dictionary</code> page. A link to this page may be available on the project side bar (see image below) or in the <code>Project Setup tab</code> at the top of your page.</li>
 </ol>
 <p><img alt="redcap_dd_link" src="../../assets/redcap_data_dictionary_page.png" title="Redcap DD Export button" /></p>
 <ol>
 <li>After arriving at the <code>Data dictionary</code> page, click on <code>Download the current data dictionary</code> to export the dictionary (see below).</li>
 </ol>
 <p><img alt="redcap_export_link" src="../../assets/redcap_csv_dd_export_link.png" title="Redcap DD Export button" /></p>
-<p>*there may be slight differences depending on your specific Redcap instance and version</p>
+<p>*there may be slight differences depending on your specific REDCap instance and version</p>
 <h4 id="run-the-vlmd-command">Run the <code>vlmd</code> command<a class="headerlink" href="#run-the-vlmd-command" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>--filepath<span class="w"> </span>input/example_redcap_demo.redcap.csv<span class="w"> </span>--inputtype<span class="w"> </span>redcap.csv<span class="w"> </span>--outputdir<span class="w"> </span>output/heal-vlmd-from-redcap.csv
 </code></pre></div>
 <h3 id="sas-sas7bdat-and-sas7bcat-files">SAS <code>sas7bdat</code> (and <code>sas7bcat</code>) files<a class="headerlink" href="#sas-sas7bdat-and-sas7bcat-files" title="Permanent link">&para;</a></h3>
-<p>To accommodate SAS users, HEAL data utilities supports the binary <code>sas7bdat</code> file format, which contains the actual data values (observations/records). This file also includes variable metadata (variable <code>names</code> and variable labels/ <code>descriptions</code>).</p>
-<p>HEAL data utilities also provides the option to include a catalog file – <code>sas7bcat</code> format - with the <code>sas7bdat</code>.  A <code>sas7bcat</code> file contains variable value labels, or <code>encodings</code> that can be mapped onto the corresponding data from a sas7bdat file.</p>
+<p>To accommodate SAS users, the HEAL Data Utilities supports the binary <code>sas7bdat</code> file format, which contains the actual data values (observations/records). This file also includes variable metadata (variable <code>names</code> and variable labels/ <code>descriptions</code>).</p>
+<p>The HEAL Data Utilities also provides the option to include a catalog file – <code>sas7bcat</code> format - with the <code>sas7bdat</code>.  A <code>sas7bcat</code> file contains variable value labels, or <code>encodings</code>, that can be mapped onto the corresponding data from a <code>sas7bdat</code> file.</p>
 <h4 id="creating-a-sas7bdat-and-a-sas7bcat-file">Creating a <code>sas7bdat</code> and a <code>sas7bcat</code> file<a class="headerlink" href="#creating-a-sas7bdat-and-a-sas7bcat-file" title="Permanent link">&para;</a></h4>
 <p>Many SAS users build formats and labels into their data processing and analysis scripts. In this section, we provide syntax that can be easily copy-pasted into these existing workflows to create <code>sas7bdat</code> and <code>sas7bcat</code> files to input into the <code>vlmd</code> tool. </p>
-<p>This script template can be run separately or inserted directly at the end of a SAS user's workflow </p>
+<p>This script template can be run separately or inserted directly at the end of a SAS user's workflow. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>
@@ -917,14 +915,14 @@ but for demonstration purposes, this example only uses one script and focuses on
 </details>
 <h4 id="run-the-vlmd-command_1">Run the <code>vlmd</code> command<a class="headerlink" href="#run-the-vlmd-command_1" title="Permanent link">&para;</a></h4>
 <p>After creating the necessary <code>sas7bdat</code> and <code>sas7bcat</code> files, you can then run the <code>vlmd</code> command. Note, the <code>sas7bcat</code> files are optional. However, if you don't include a <code>sas7bcat</code> file, the <code>encodings</code> (i.e., value labels) will not be added.</p>
-<p>With the sas7bcat file:</p>
+<p>With the <code>sas7bcat</code> file:</p>
 <div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>--filepath<span class="w"> </span>input/data.sas7bdat<span class="w"> </span>--sas7bcat-filepath<span class="w"> </span>input/formats.sas7bcat<span class="w"> </span>--inputtype<span class="w"> </span>sas7bdat
 </code></pre></div>
-<p>Without the sas7bdat file:</p>
+<p>Without the <code>sas7bdat</code> file:</p>
 <div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>--filepath<span class="w"> </span>input/data.sas7bdat<span class="w"> </span>--inputtype<span class="w"> </span>sas7bdat
 </code></pre></div>
 <h3 id="spss-sav-files">SPSS <code>.sav</code> files<a class="headerlink" href="#spss-sav-files" title="Permanent link">&para;</a></h3>
-<p>For SPSS users, HEAL data utilities generates heal-compliant data dictionaries from SPSS's default file format for storing datasets: A <code>SAV</code> file. It not only stores the data itself but also stores metadata such as variable names, variable labels, types, and value labels. The HEAL data utilities extracts the data and metadata to create heal-compliant data dictionaries.</p>
+<p>For SPSS users, the HEAL Data Utilities generates HEAL-compliant data dictionaries from SPSS's default file format for storing datasets: a <code>SAV</code> file. It stores not only the data itself but also metadata such as variable names, variable labels, types, and value labels. The HEAL Data Utilities extracts these data and metadata to create HEAL-compliant data dictionaries.</p>
 <!-- ### Creating a well-annotated `sav` file
 
 TO ADD -->
@@ -933,7 +931,7 @@ TO ADD -->
 <div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>--filepath<span class="w"> </span>data/example_pyreadstat_output.sav<span class="w"> </span>--inputtype<span class="w"> </span>sav
 </code></pre></div>
 <h3 id="stata-dta-files">Stata <code>.dta</code> files<a class="headerlink" href="#stata-dta-files" title="Permanent link">&para;</a></h3>
-<p>For Stata users, HEAL data utilities generates heal-compliant data dictionaries through Stata's default file format: the <code>DTA</code> files. <code>DTA</code> files not only store the data itself but also stores metadata such as variable names, variable labels, types, and value labels.</p>
+<p>For Stata users, the HEAL Data Utilities generates HEAL-compliant data dictionaries through Stata's default file format: a <code>DTA</code> file. <code>DTA</code> files store not only the data itself but also metadata such as variable names, variable labels, types, and value labels.</p>
 <!-- ### Creating a well-annotated `dta` file
 
 TO ADD -->
@@ -956,7 +954,7 @@ TO ADD -->
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Variable-level Metadata (Data Dictionaries)" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -965,7 +963,7 @@ TO ADD -->
               <span class="md-footer__direction">
                 Previous
               </span>
-              Index
+              Variable-level Metadata (Data Dictionaries)
             </div>
           </div>
         </a>

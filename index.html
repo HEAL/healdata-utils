@@ -255,10 +255,10 @@
       
         <li class="md-nav__item">
   <a href="#variable-level-metadata-data-dictionaries" class="md-nav__link">
-    Variable level metadata (data dictionaries)
+    Variable-level Metadata (Data Dictionaries)
   </a>
   
-    <nav class="md-nav" aria-label="Variable level metadata (data dictionaries)">
+    <nav class="md-nav" aria-label="Variable-level Metadata (Data Dictionaries)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -500,10 +500,10 @@
       
         <li class="md-nav__item">
   <a href="#variable-level-metadata-data-dictionaries" class="md-nav__link">
-    Variable level metadata (data dictionaries)
+    Variable-level Metadata (Data Dictionaries)
   </a>
   
-    <nav class="md-nav" aria-label="Variable level metadata (data dictionaries)">
+    <nav class="md-nav" aria-label="Variable-level Metadata (Data Dictionaries)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -570,16 +570,16 @@
                 
                 
                 <h1 id="heal-data-utilities">HEAL Data Utilities<a class="headerlink" href="#heal-data-utilities" title="Permanent link">&para;</a></h1>
-<p>The HEAL data utilities python package provides data packaging tools for the HEAL data ecosystem to facilitate data discovery,sharing, and harmonization with a focus on the HEAL platform data consultancy (DSC).</p>
-<p>Currently, the focus of the repo is on generating data-dictionaries (see Variable level metadata section below). However, in the future, this will be expanded for all heal specific data packaging functions (e.g., study and file level metadata and data).</p>
+<p>The HEAL Data Utilities python package provides data packaging tools for the HEAL Data Ecosystem to facilitate data discovery, sharing, and harmonization with a focus on the HEAL Platform Data Consultancy (DSC).</p>
+<p>Currently, the focus of this repository is generating data dictionaries (see Variable-level Metadata section below). However, in the future, this will be expanded for all HEAL-specific data packaging functions (e.g., study- and file-level metadata and data).</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>To install the latest official release of healdata-utils, from your computer's command prompt, run:</p>
 <p><code>pip install healdata-utils --pre</code> (<strong>NOTE: currently in pre-lease</strong>)</p>
 <p><code>pip install git+https://github.com/norc-heal/healdata-utils.git</code></p>
-<h2 id="variable-level-metadata-data-dictionaries">Variable level metadata (data dictionaries)<a class="headerlink" href="#variable-level-metadata-data-dictionaries" title="Permanent link">&para;</a></h2>
+<h2 id="variable-level-metadata-data-dictionaries">Variable-level Metadata (Data Dictionaries)<a class="headerlink" href="#variable-level-metadata-data-dictionaries" title="Permanent link">&para;</a></h2>
 <p><a href="https://mybinder.org/v2/gh/norc-heal/healdata-utils/HEAD?labpath=notebooks%2Fdemos%2Finputs-to-heal-data-dictionary.ipynb"><img alt="Binder" src="http://mybinder.org/badge_logo.svg" /></a> </p>
-<p>The healdata-utils variable level metadata (vlmd) tool inputs a variety of different input file types and exports HEAL-formatted data dictionaries (JSON and CSV formats). Additionally, exported validation (ie "error") reports provide the user information as to a. if the exported data dictionary is valid according to HEAL specifications (see the schema repository <a href="https://github.com/norc-heal/heal-metadata-schemas/tree/main/variable-level-metadata-schema">here</a>).</p>
-<p>For support formats and more detailed software specific instructions and recommendations, <a href="docs/supported_input_formats.md">see here</a></p>
+<p>The healdata-utils variable-level metadata (vlmd) tool inputs a variety of different input file types and exports HEAL-compliant data dictionaries (JSON and CSV formats). Additionally, exported validation (i.e., "error") reports provide the user information as to a) if the exported data dictionary is valid according to HEAL specifications and b) how to modify one's data dictionary to make it HEAL-compliant.</p>
+<p>For supported formats and more detailed software specific instructions and recommendations, <a href="supported_input_formats.md">see here</a></p>
 <h3 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">&para;</a></h3>
 <p>The vlmd tool can be used via python or the command line.</p>
 <h4 id="using-from-python">Using from python<a class="headerlink" href="#using-from-python" title="Permanent link">&para;</a></h4>
@@ -600,8 +600,8 @@
 <span class="p">)</span>
 </code></pre></div>
 <blockquote>
-<p>This will output the data dictionaries to the specified output directory (see ooutput section below) and also save the json/csv versions in the <code>data_dictionaries</code> object.</p>
-<p>For the available input file formats (ie the available choices for the <code>inputtype</code> parameter), one can run (from python):</p>
+<p>This will output the data dictionaries to the specified output directory (see output section below) and also save the json/csv versions in the <code>data_dictionaries</code> object.</p>
+<p>For the available input file formats (i.e., the available choices for the <code>inputtype</code> parameter), one can run (from python):</p>
 </blockquote>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">healdata_utils.cli</span> <span class="kn">import</span> <span class="n">input_descriptions</span>
 
@@ -610,7 +610,7 @@
 <p>The <code>input_descriptions</code> object contains the choice for <code>inputtype</code> as the key and the description as the value.</p>
 <h4 id="using-from-the-command-line">Using from the command line<a class="headerlink" href="#using-from-the-command-line" title="Permanent link">&para;</a></h4>
 <p>From your current working directory run:
-(note the <code>\</code> at the end of each line signals a line continuation for ease in understanding the long one line command.) Again the <code>--title</code> and <code>--description</code> options are optional.
+(note the <code>\</code> at the end of each line signals a line continuation for ease in understanding the long, one-line command.) Again, the <code>--title</code> and <code>--description</code> options are optional.
 For descriptions on the different flags/options, run <code>vlmd --help</code></p>
 <div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>--filepath<span class="w"> </span><span class="s2">&quot;data/example_pyreadstat_output.sav&quot;</span><span class="w"> </span><span class="se">\</span>
 --outputdir<span class="w"> </span><span class="s2">&quot;output-cli&quot;</span><span class="w"> </span><span class="se">\</span>
@@ -618,7 +618,7 @@ For descriptions on the different flags/options, run <code>vlmd --help</code></p
 --description<span class="w"> </span><span class="s2">&quot;This is a proof of concept to demonstrate the healdata-utils functionality&quot;</span><span class="w"> </span>
 </code></pre></div>
 <h4 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h4>
-<p>Both the python and command line routes will result in a JSON and CSV version of the HEAL  data dictionary in the output folder along with the validation reports in the <code>errors</code> folder. See below:</p>
+<p>Both the python and command line routes will result in a JSON and CSV version of the HEAL data dictionary in the output folder along with the validation reports in the <code>errors</code> folder. See below:</p>
 <ul>
 <li>
 <p><code>input/input/my-redcap-data-dictionary-export.csv</code> : your input file</p>
@@ -688,13 +688,13 @@ For descriptions on the different flags/options, run <code>vlmd --help</code></p
       
       
         
-        <a href="vlmd/" class="md-footer__link md-footer__link--next" aria-label="Next: Index" rel="next">
+        <a href="vlmd/" class="md-footer__link md-footer__link--next" aria-label="Next: Variable-level Metadata (Data Dictionaries)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Index
+              Variable-level Metadata (Data Dictionaries)
             </div>
           </div>
           <div class="md-footer__button md-icon">
