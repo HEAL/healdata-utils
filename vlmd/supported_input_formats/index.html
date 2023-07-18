@@ -17,7 +17,7 @@
         <link rel="next" href="../rendered-schemas/">
       
       <link rel="icon" href="../../assets/heal_logo.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -744,15 +744,22 @@
 <p class="admonition-title">Note</p>
 <p>To further annotate your outputted data dictionaries, see the variable-level metadata field properties (with examples) for either the <strong><code>csv data dictionary</code></strong> <a href="../rendered-schemas/csv-fields/">click here</a> or the <strong><code>json data dictionary</code></strong> <a href="../rendered-schemas/json-data-dictionary/">click here</a>.</p>
 </div>
-<!-- TODO: make a table of contents/list of supported formats and brief
-description of them (with links to each) -->
+<p>From your data:
+- <a href="#csv-datasets">CSV datasets</a>
+- <a href="#spss-sav-files">SPSS datasets</a>
+- <a href="#sas-sas7bdat-and-sas7bcat-files">SAS datasets</a>
+- <a href="#stata-dta-files">Stata datasets</a></p>
+<p>From your data dictionaries:
+- <a href="#redcap-data-dictionary-csv-export">REDCap data dictionary</a>
+- <a href="#csv-heal-data-dictionary-eg-from-template">HEAL CSV template data dictionary</a>
+- <a href="#json-heal-data-dictionary-eg-from-template">HEAL JSON template data dictionary</a></p>
 <h3 id="csv-datasets"><code>csv</code> Datasets<a class="headerlink" href="#csv-datasets" title="Permanent link">&para;</a></h3>
 <p>CSV (comma-separated values) is the main open tabular data format for storage and exchange. It is easy to create and understand using basic text editors in addition to popular spreadsheet software like Google Sheets and Excel. Importantly, CSVs are simple and can be easily integrated into web applications and just about any software.</p>
 <p>Currently, the HEAL Data Utilities <code>vlmd</code> function can infer a minimal, HEAL-compliant dataset by inferring <code>name</code>, <code>type</code>, and <code>enum</code> (i.e., possible values). After this minimal data dictionary is generated, the researcher can further annotate
 it with fields' <code>description</code> and other optional properties in either the HEAL-compliant <code>csv</code>- or <code>json</code>-formatted data dictionary (see the HEAL data dictionary template sections below for more information).</p>
 <h3 id="csv-heal-data-dictionary-eg-from-template"><code>csv</code> HEAL data dictionary (e.g., from template)<a class="headerlink" href="#csv-heal-data-dictionary-eg-from-template" title="Permanent link">&para;</a></h3>
 <p>The HEAL Data Utilities can also input a <code>csv</code> HEAL data dictionary either from a manually filled out template or 
-as an additional step after further annotation (e.g., from the <code>csv</code> HEAL data dictionary output of the above file formats).</p>
+as an additional step after further annotation (e.g., from the <code>csv</code> HEAL data dictionary output of the other file formats).</p>
 <h4 id="creating-a-csv-heal-data-dictionary">Creating a <code>csv</code> HEAL data dictionary<a class="headerlink" href="#creating-a-csv-heal-data-dictionary" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
@@ -818,8 +825,8 @@ these csv data dictionary files are converted to a json file (the most common fo
 <p>This script template can be run separately or inserted directly at the end of a SAS user's workflow. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-</div>
 <p>If inserted directly, remember to delete the lines with <code>%INCLUDE</code>)</p>
+</div>
 <details class="template" open="open">
 <summary>Template</summary>
 <div class="highlight"><span class="filename">template.sas</span><pre><span></span><code><span class="cm">/*1. Read in data file without value labels and run full code. </span>
