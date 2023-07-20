@@ -14,7 +14,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="supported_input_formats/">
+        <link rel="next" href="formats/csvtemplate/">
       
       <link rel="icon" href="../assets/heal_logo.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
@@ -281,10 +281,144 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Input Formats
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Input Formats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="supported_input_formats/" class="md-nav__link">
-        Supported Input Formats
+      <a href="formats/csvtemplate/" class="md-nav__link">
+        Tabular (CSV) data dictionary template
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="formats/jsontemplate/" class="md-nav__link">
+        JSON data dictionary template
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="formats/sas/" class="md-nav__link">
+        SAS dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="formats/spss/" class="md-nav__link">
+        SPSS dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="formats/stata/" class="md-nav__link">
+        Stata dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="formats/csvdata/" class="md-nav__link">
+        Tabular (CSV) dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="formats/redcapcsv/" class="md-nav__link">
+        REDCap data dictionary
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -311,14 +445,12 @@
         
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="rendered-schemas/">Data dictionary definitions</a>
+          <a href="schemas/">Output Formats</a>
           
             <label for="__nav_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -329,7 +461,7 @@
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
-          Data dictionary definitions
+          Output Formats
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -340,9 +472,42 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+          Definitions (schemas)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Definitions (schemas)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="rendered-schemas/csv-fields/" class="md-nav__link">
-        CSV Data dictionary
+      <a href="schemas/csv-fields/" class="md-nav__link">
+        Tabular (CSV) data dictionary
       </a>
     </li>
   
@@ -355,9 +520,16 @@
   
   
     <li class="md-nav__item">
-      <a href="rendered-schemas/json-data-dictionary/" class="md-nav__link">
-        JSON Data dictionary
+      <a href="schemas/json-data-dictionary/" class="md-nav__link">
+        JSON data dictionary
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -415,8 +587,8 @@
 <h1 id="variable-level-metadata-data-dictionaries">Variable-level Metadata (Data Dictionaries)<a class="headerlink" href="#variable-level-metadata-data-dictionaries" title="Permanent link">&para;</a></h1>
 <p><a href="https://mybinder.org/v2/gh/norc-heal/healdata-utils/HEAD?labpath=notebooks%2Fdemos%2Finputs-to-heal-data-dictionary.ipynb"><img alt="Binder" src="http://mybinder.org/badge_logo.svg" /></a> </p>
 <p>The healdata-utils variable-level metadata (vlmd) tool inputs a variety of different input file types and exports HEAL-compliant data dictionaries (JSON and CSV formats). Additionally, exported validation (i.e., "error") reports provide the user information as to a) if the exported data dictionary is valid according to HEAL specifications and b) how to modify one's data dictionary to make it HEAL-compliant.</p>
-<p>For supported formats and more detailed software-specific instructions and recommendations, <a href="supported_input_formats/">see here</a>.</p>
-<p>For more information on variable-level metadata properties (fields), see the <a href="rendered-schemas/csv-fields/"><code>csv</code> field specification</a> and <a href="rendered-schemas/json-data-dictionary/"><code>json</code> field specification</a>. </p>
+<p>For supported formats and more detailed software-specific instructions and recommendations, <a href="formats/">see here</a>.</p>
+<p>For more information on variable-level metadata properties (fields), see the <a href="schemas/csv-fields/"><code>csv</code> field specification</a> and <a href="schemas/json-data-dictionary/"><code>json</code> field specification</a>. </p>
 <p>Typical workflows for creating a HEAL-compliant data dictionary include:</p>
 <ol>
 <li><strong>Run the <code>vlmd</code> command</strong> (or <code>convert_to_vlmd</code> if in python) to generate a HEAL-compliant data dictionary via your desired input format (See the basic usage section on the homepage for general installation and usage information).</li>
@@ -424,9 +596,9 @@
 </ol>
 <p>To further annotate and use the data dictionary, see the variable-level metadata field property information below:</p>
 <ul>
-<li><a href="rendered-schemas/csv-fields/"><code>csv</code> data dictionary</a></li>
+<li><a href="schemas/csv-fields/"><code>csv</code> data dictionary</a></li>
 <li>
-<p><a href="rendered-schemas/json-data-dictionary/"><code>json</code> data dictionary</a></p>
+<p><a href="schemas/json-data-dictionary/"><code>json</code> data dictionary</a></p>
 </li>
 <li>
 <p><strong>Run the <code>vlmd</code> command</strong> again with your HEAL data dictioanry as the input to validate.</p>
