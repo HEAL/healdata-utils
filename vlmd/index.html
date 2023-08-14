@@ -14,7 +14,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="formats/">
+        <link rel="next" href="formats/csvtemplate/">
       
       <link rel="icon" href="../assets/heal_logo.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
@@ -292,10 +292,6 @@
       
         
           
-            
-          
-        
-          
         
           
         
@@ -313,16 +309,10 @@
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="formats/">Input Formats</a>
-          
-            <label for="__nav_2_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Input Formats
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2">
@@ -330,8 +320,6 @@
           Input Formats
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
           
             
               
@@ -568,6 +556,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#input-formats" class="md-nav__link">
+    Input Formats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     Output
   </a>
@@ -657,6 +652,31 @@
 </div>
 </div>
 </div>
+<h3 id="input-formats">Input Formats<a class="headerlink" href="#input-formats" title="Permanent link">&para;</a></h3>
+<p>In this section, supported formats for generating HEAL-compliant data dictionaries are listed. Additional instructions on how to obtain the necessary input files/software are also provided. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The commands in these sections are very minimal. One can add other metadata (Ie metadata describing the data dictionary) via the command line (eg <code>--title</code> and <code>--description</code> options.) For an example of this, see the <a href="#basic-usage">basic usage section</a>. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To further annotate your outputted data dictionaries, see the variable-level metadata field properties (with examples) for either the <strong><code>csv data dictionary</code></strong> <a href="schemas/csv-fields/">click here</a> or the <strong><code>json data dictionary</code></strong> <a href="schemas/json-data-dictionary/">click here</a>.</p>
+</div>
+<!-- TODO: Automate creation of these lists below -->
+<p>From your data:</p>
+<ul>
+<li><a href="formats/csvdata/">CSV datasets</a></li>
+<li><a href="formats/spss/">SPSS datasets</a></li>
+<li><a href="formats/sas/">SAS datasets</a></li>
+<li><a href="formats/stata/">Stata datasets</a></li>
+</ul>
+<p>From your data dictionaries:</p>
+<ul>
+<li><a href="formats/redcapcsv/">REDCap data dictionary</a></li>
+<li><a href="formats/frictionlessschema/">Frictionless Table Schema</a></li>
+<li><a href="formats/csvtemplate/">HEAL CSV template data dictionary</a></li>
+<li><a href="formats/jsontemplate/">HEAL JSON template data dictionary</a></li>
+</ul>
 <h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
 <p>Both the python and command line routes will result in a JSON and CSV version of the HEAL data dictionary in the output folder along with the validation reports in the <code>errors</code> folder. See below:</p>
 <ul>
