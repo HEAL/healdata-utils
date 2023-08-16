@@ -680,11 +680,23 @@
 <h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
 <p>Both the python and command line routes will result in a JSON and CSV version of the HEAL data dictionary in the output folder along with the validation reports in the <code>errors</code> folder. See below:</p>
 <ul>
+<li><code>errors/heal-csv-errors.json</code>: outputted validation report for table in csv file against frictionless schema</li>
+</ul>
+<p>If valid, this file will contain:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;valid&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div>
+- <code>errors/heal-json-errors.json</code>:  outputted jsonschema validation report.</p>
+<ul>
 <li>
-<p><code>errors/heal-csv-errors.json</code>: outputted validation report for table in csv file against frictionless schema</p>
-</li>
-<li>
-<p><code>errors/heal-json-errors.json</code>:  outputted jsonschema validation report.</p>
+<p>If valid, this file will contain:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;valid&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div></p>
 </li>
 <li>
 <p><code>heal-csvtemplate-data-dictionary.csv</code>: This is the CSV data dictionary</p>

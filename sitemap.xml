@@ -2,77 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/contributing/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/install/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/vlmd/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/vlmd/formats/csvdata/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/vlmd/formats/csvtemplate/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/vlmd/formats/frictionlessschema/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/vlmd/formats/jsontemplate/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/vlmd/formats/redcapcsv/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/vlmd/formats/sas/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/vlmd/formats/spss/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/vlmd/formats/stata/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/vlmd/schemas/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/vlmd/schemas/csv-fields/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://norc-heal.github.io/healdata-utils/vlmd/schemas/json-data-dictionary/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2023-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
