@@ -8,24 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://norc-heal.github.io/healdata-utils/vlmd/schemas/">
+        <link rel="canonical" href="https://norc-heal.github.io/healdata-utils/vlmd/extract/csvdata/">
       
       
+        <link rel="prev" href="../stata/">
       
       
-      <link rel="icon" href="../../assets/heal_logo.png">
+        <link rel="next" href="../redcapcsv/">
+      
+      
+      <link rel="icon" href="../../../assets/heal_logo.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
-        <title>HEAL data dictionary schemas - HEAL Data Utilities</title>
+        <title>Tabular (CSV) dataset - HEAL Data Utilities</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -44,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../stylesheets/schema_doc.css">
+      <link rel="stylesheet" href="../../../stylesheets/schema_doc.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#heal-data-dictionary-schemas" class="md-skip">
+        <a href="#csv-datasets" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +95,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="https://github.com/norc-heal" title="HEAL Data Utilities" class="md-header__button md-logo" aria-label="HEAL Data Utilities" data-md-component="logo">
       
-  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+  <img src="../../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -108,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HEAL data dictionary schemas
+              Tabular (CSV) dataset
             
           </span>
         </div>
@@ -196,7 +200,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://github.com/norc-heal" title="HEAL Data Utilities" class="md-nav__button md-logo" aria-label="HEAL Data Utilities" data-md-component="logo">
       
-  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+  <img src="../../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
 
     </a>
     HEAL Data Utilities
@@ -222,7 +226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -239,6 +243,8 @@
       
   
   
+    
+  
   
     
     
@@ -255,18 +261,18 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -282,7 +288,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Variable Level Metadata
@@ -295,6 +301,8 @@
                 
   
   
+    
+  
   
     
     
@@ -307,13 +315,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
@@ -326,7 +334,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Functions
@@ -337,6 +345,8 @@
                 
   
   
+    
+  
   
     
     
@@ -359,18 +369,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../extract/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -386,7 +396,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2_1">
             <span class="md-nav__icon md-icon"></span>
             Extract
@@ -401,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extract/sas/" class="md-nav__link">
+      <a href="../sas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -421,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extract/spss/" class="md-nav__link">
+      <a href="../spss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -441,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extract/stata/" class="md-nav__link">
+      <a href="../stata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -459,9 +469,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../extract/csvdata/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -470,6 +489,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -481,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extract/redcapcsv/" class="md-nav__link">
+      <a href="../redcapcsv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extract/frictionlessschema/" class="md-nav__link">
+      <a href="../frictionlessschema/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -548,7 +568,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../start/" class="md-nav__link ">
+            <a href="../../start/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -602,7 +622,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../validate/" class="md-nav__link ">
+            <a href="../../validate/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -685,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="csv-fields/" class="md-nav__link">
+      <a href="../../schemas/csv-fields/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -705,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="json-data-dictionary/" class="md-nav__link">
+      <a href="../../schemas/json-data-dictionary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,14 +790,10 @@
   
 
 
-<h1 id="heal-data-dictionary-schemas">HEAL data dictionary schemas<a class="headerlink" href="#heal-data-dictionary-schemas" title="Permanent link">&para;</a></h1>
-<p>Click on each data dictionary schema below to view information about each format's data dictionary properties (such as a description, examples, etc).</p>
-<p><a href="csv-fields/">CSV fields</a></p>
-<p><a href="json-data-dictionary/">JSON data dictionary</a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>enum</code> type means that a field can only be one of a certain set of possible values.</p>
-</div>
+<h1 id="csv-datasets"><code>csv</code> Datasets<a class="headerlink" href="#csv-datasets" title="Permanent link">&para;</a></h1>
+<p>CSV (comma-separated values) is the main open tabular data format for storage and exchange. It is easy to create and understand using basic text editors in addition to popular spreadsheet software like Google Sheets and Excel. Importantly, CSVs are simple and can be easily integrated into web applications and just about any software.</p>
+<p>Currently, the HEAL Data Utilities <code>vlmd</code> function can infer a minimal, HEAL-compliant dataset by inferring <code>name</code>, <code>type</code>, and <code>enum</code> (i.e., possible values). After this minimal data dictionary is generated, the researcher can further annotate
+it with fields' <code>description</code> and other optional properties in either the HEAL-compliant <code>csv</code>- or <code>json</code>-formatted data dictionary (see the HEAL data dictionary template sections below for more information).</p>
 
 
 
@@ -815,10 +831,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>
