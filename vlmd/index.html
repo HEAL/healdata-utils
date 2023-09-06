@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/heal_logo.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.5">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
@@ -646,11 +646,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    Quick start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#basic-usage" class="md-nav__link">
     Basic usage
   </a>
   
     <nav class="md-nav" aria-label="Basic usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extract-vlmd-from-another-data-type-and-format" class="md-nav__link">
+    Extract VLMD from another data type and format
+  </a>
+  
+    <nav class="md-nav" aria-label="Extract VLMD from another data type and format">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -663,6 +678,25 @@
           <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-create-and-annotate-a-heal-data-dictionary" class="md-nav__link">
+    Template: Create and annotate a HEAL data dictionary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-check-validate-an-existing-heal-data-dictionary-file" class="md-nav__link">
+    Validate Check (validate) an existing HEAL data dictionary file
   </a>
   
 </li>
@@ -714,12 +748,21 @@
 <p>Supports HEAL projects and goals such as the <a href="https://heal.nih.gov/data/common-data-elements">common data elements program</a></p>
 </li>
 </ul>
+<h2 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Command Line Interface (CLI)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p><strong>Double click</strong> on the <code>vlmd</code> (or <code>vlmd.exe</code>) executable or <strong>run</strong> the <code>vlmd</code> executable without any arguments to quickly start using this tool. This "quick start" will take walk you through step by step.</p>
+<p>The executables can be found </p>
 <h2 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">&para;</a></h2>
-<p>The healdata-utils variable-level metadata (vlmd) tool inputs a variety of different input file types and exports HEAL-compliant data dictionaries (JSON and CSV formats). Additionally, exported validation (i.e., "error") reports provide the user information as to a) if the exported data dictionary is valid according to HEAL specifications and b) how to modify one's data dictionary to make it HEAL-compliant.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Command Line Interface (CLI)</label><label for="__tabbed_1_2">Python</label></div>
+<h3 id="extract-vlmd-from-another-data-type-and-format"><code>Extract</code> VLMD from another data type and format<a class="headerlink" href="#extract-vlmd-from-another-data-type-and-format" title="Permanent link">&para;</a></h3>
+<p>The healdata-utils variable-level metadata (vlmd) tool inputs a variety of different input file types and extracts HEAL-compliant data dictionaries (JSON and CSV formats). Additionally, exported validation (i.e., "error") reports provide the user information as to a) if the exported data dictionary is valid according to HEAL specifications and b) how to modify one's data dictionary to make it HEAL-compliant.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Command Line Interface (CLI)</label><label for="__tabbed_2_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>--filepath<span class="w"> </span>myproject/myfile.sav<span class="w"> </span>--inputtype<span class="w"> </span>sav<span class="w"> </span>--description<span class="w"> </span><span class="s2">&quot;This contains my test data&quot;</span><span class="w"> </span>--title<span class="w"> </span><span class="s2">&quot;Test data&quot;</span>
+<div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>extract<span class="w"> </span>--inputtype<span class="w"> </span>spss<span class="w"> </span>myproject/myfile.sav
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -729,12 +772,7 @@
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">healdata_utils</span> <span class="kn">import</span> <span class="n">convert_to_vlmd</span>
 
-<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;This is a proof of concept to demonstrate the healdata-utils functionality&quot;</span>
-<span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Healdata-utils Demonstration Data Dictionary&quot;</span>
-
-<span class="n">convert_to_vlmd</span><span class="p">(</span>
-    <span class="n">filepath</span><span class="o">=</span><span class="s2">&quot;myproject/myfile.sav&quot;</span><span class="p">,</span><span class="n">inputtype</span><span class="o">=</span><span class="s2">&quot;sav&quot;</span><span class="p">,</span>
-    <span class="n">data_dictionary_props</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;This contains my test data&quot;</span><span class="p">,</span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Test data&quot;</span><span class="p">})</span>
+<span class="n">convert_to_vlmd</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s2">&quot;myproject/myfile.sav&quot;</span><span class="p">,</span><span class="n">inputtype</span><span class="o">=</span><span class="s2">&quot;spss&quot;</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -743,32 +781,24 @@
 </div>
 </div>
 </div>
-<h3 id="input-types-and-formats">Input Types and Formats<a class="headerlink" href="#input-types-and-formats" title="Permanent link">&para;</a></h3>
+<h4 id="input-types-and-formats">Input Types and Formats<a class="headerlink" href="#input-types-and-formats" title="Permanent link">&para;</a></h4>
 <p>This section provides the specific syntax for running each of the supported types for generating HEAL-compliant data dictionaries are listed. Additional instructions on how to obtain the necessary input files/software are also provided. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The commands in these sections are very minimal. One can add other metadata (Ie metadata describing the data dictionary) via the command line (eg <code>--title</code> and <code>--description</code> options.) For an example of this, see the <a href="#basic-usage">basic usage section</a>. </p>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To further annotate your outputted data dictionaries, see the variable-level metadata field properties (with examples) for either the <strong><code>csv data dictionary</code></strong> <a href="schemas/csv-fields/">click here</a> or the <strong><code>json data dictionary</code></strong> <a href="schemas/json-data-dictionary/">click here</a>.</p>
 </div>
 <!-- TODO: Automate creation of these lists below -->
-<p>From your data:</p>
+
+<p>Extract variable level metadata from your data:</p>
 <ul>
 <li><a href="formats/csvdata/">CSV datasets</a></li>
 <li><a href="formats/spss/">SPSS datasets</a></li>
 <li><a href="formats/sas/">SAS datasets</a></li>
 <li><a href="formats/stata/">Stata datasets</a></li>
-</ul>
-<p>From your data dictionaries:</p>
-<ul>
 <li><a href="formats/redcapcsv/">REDCap data dictionary</a></li>
 <li><a href="formats/frictionlessschema/">Frictionless Table Schema</a></li>
-<li><a href="formats/csvtemplate/">HEAL CSV template data dictionary</a></li>
-<li><a href="formats/jsontemplate/">HEAL JSON template data dictionary</a></li>
 </ul>
-<h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
+<h4 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h4>
 <p>Both the python and command line routes will result in a JSON and CSV version of the HEAL data dictionary in the output folder along with the validation reports in the <code>errors</code> folder. See below:</p>
 <ul>
 <li><code>errors/heal-csv-errors.json</code>: outputted validation report for table in csv file against frictionless schema</li>
@@ -793,6 +823,44 @@
 <li><code>heal-csvtemplate-data-dictionary.csv</code>: This is the CSV data dictionary</li>
 <li><code>heal-jsontemplate-data-dictionary.json</code>: This is the JSON version of the data dictionary</li>
 </ul>
+<h3 id="template-create-and-annotate-a-heal-data-dictionary"><code>Template</code>: Create and annotate a HEAL data dictionary<a class="headerlink" href="#template-create-and-annotate-a-heal-data-dictionary" title="Permanent link">&para;</a></h3>
+<p>Some folks may prefer to extract their vlmd themselves. To support this, we have created a utility that creates either a json or csv template. </p>
+<p>For more details (and downloadable examples) see:</p>
+<ul>
+<li><a href="formats/csvtemplate/">HEAL CSV template data dictionary</a></li>
+<li><a href="formats/jsontemplate/">HEAL JSON template data dictionary</a></li>
+</ul>
+<p>=== Command line interface (CLI)</p>
+<p>To create a template <code>json</code> version with 10 fields (variables):</p>
+<div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>template<span class="w"> </span>myhealdd.json<span class="w"> </span>--numfields<span class="w"> </span><span class="m">10</span>
+</code></pre></div>
+<p>To create a template <code>csv</code> version with 10 fields (variables):</p>
+<div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>template<span class="w"> </span>myhealdd.csv<span class="w"> </span>--numfields<span class="w"> </span><span class="m">10</span>
+</code></pre></div>
+<p>=== Python</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">healdata_utils</span> <span class="kn">import</span> <span class="n">write_vlmd_template</span>
+
+<span class="n">write_vlmd_template</span><span class="p">(</span><span class="n">tmpdir</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;heal.json&quot;</span><span class="p">),</span><span class="n">numfields</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+<p>To create a template csv version with 10 fields (variables):</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">healdata_utils</span> <span class="kn">import</span> <span class="n">write_vlmd_template</span>
+
+<span class="n">write_vlmd_template</span><span class="p">(</span><span class="n">tmpdir</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;heal.csv&quot;</span><span class="p">),</span><span class="n">numfields</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="validate-check-validate-an-existing-heal-data-dictionary-file"><code>Validate</code> Check (validate) an existing HEAL data dictionary file<a class="headerlink" href="#validate-check-validate-an-existing-heal-data-dictionary-file" title="Permanent link">&para;</a></h3>
+<p>Will indicate if the data dictionary complies with the HEAL specifications.</p>
+<p>=== Command line interface (CLI)</p>
+<div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>validate<span class="w"> </span>data/myhealcsvdd.csv
+
+vlmd<span class="w"> </span>validate<span class="w"> </span>data/myhealjsondd.json
+</code></pre></div>
+<p>=== Python</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">healdata_utils</span> <span class="kn">import</span> <span class="n">validate_vlmd_csv</span><span class="p">,</span><span class="n">validate_vlmd_json</span>
+
+<span class="n">validate_vlmd_csv</span><span class="p">(</span><span class="s2">&quot;data/myhealcsvdd.csv&quot;</span><span class="p">)</span>
+
+<span class="n">validate_vlmd_json</span><span class="p">(</span><span class="s2">&quot;data/myhealjsondd.json&quot;</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="csv-and-json-data-dictionary-definitions">CSV and JSON data dictionary definitions<a class="headerlink" href="#csv-and-json-data-dictionary-definitions" title="Permanent link">&para;</a></h2>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -877,7 +945,7 @@ See the below notebooks demonstrating use and workflows using the `convert_to_vl
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>
