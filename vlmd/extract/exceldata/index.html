@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/heal_logo.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#run-the-vlmd-command" class="md-skip">
+        <a href="#excel-xlsx-dataset" class="md-skip">
           Skip to content
         </a>
       
@@ -539,6 +539,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -566,6 +568,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -853,6 +857,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -912,17 +918,12 @@
   
 
 
-  <h1>Excel (xlsx) dataset</h1>
-
+<h1 id="excel-xlsx-dataset">Excel (xlsx) dataset<a class="headerlink" href="#excel-xlsx-dataset" title="Permanent link">&para;</a></h1>
 <p>Excel workbooks contain tabular data tables across named worksheets.</p>
-<p>Extract vlmd from all worksheets of an excel workbook or as a combined data dictionary (python only) or as multiple data dictionaries (ie one dd = one worksheet). Note, to specify specific worksheets, use the tool within python.</p>
+<p>Extract and infer a partially completed data dictionary from excel worksheets. The command line tool will automatically generate one data dictionary per worksheet. Working in python provides a little more flexibility as you can specify specific worksheets and if you want to combine sheets into one data dictionary (rather than one dd per sheet). </p>
 <h2 id="run-the-vlmd-command">Run the <code>vlmd</code> command<a class="headerlink" href="#run-the-vlmd-command" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">CLI</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">CLI</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>extract<span class="w"> </span>--inputtype<span class="w"> </span>excel-data<span class="w"> </span>myexcelfile.xlsx
-</code></pre></div>
-</div>
 <div class="tabbed-block">
 <h3 id="to-output-multiple-sheets-as-separate-data-dictionaries">To output multiple sheets as separate data dictionaries<a class="headerlink" href="#to-output-multiple-sheets-as-separate-data-dictionaries" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">healdata_utils</span> <span class="kn">import</span> <span class="n">convert_to_vlmd</span>
@@ -932,7 +933,7 @@
 <h3 id="to-extract-multiple-sheets-as-one-data-dictionary">To extract multiple sheets as one data dictionary<a class="headerlink" href="#to-extract-multiple-sheets-as-one-data-dictionary" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Be careful about using the <code>multiple_data_dicts=False</code>.
+<p>The parameter <code>multiple_data_dicts</code> is to specify whether multiple data dictionaries should be inferred (one per sheet). The default value is <code>True</code>. Be careful about using the <code>multiple_data_dicts=False</code>.
 In most instances, one sheet should correspond to one separate
 data table and thus have one corresponding data dictionary.  </p>
 </div>
@@ -956,6 +957,10 @@ of one resource/dataset. </p>
     <span class="n">multiple_data_dicts</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">sheet_name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mysheet1&quot;</span><span class="p">,</span><span class="s2">&quot;mysheet2&quot;</span><span class="p">]</span>
     <span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>extract<span class="w"> </span>--inputtype<span class="w"> </span>excel-data<span class="w"> </span>myexcelfile.xlsx
 </code></pre></div>
 </div>
 </div>
