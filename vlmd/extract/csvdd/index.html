@@ -8,28 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://norc-heal.github.io/healdata-utils/vlmd/extract/">
+        <link rel="canonical" href="https://norc-heal.github.io/healdata-utils/vlmd/extract/csvdd/">
       
       
-        <link rel="prev" href="../">
       
       
-        <link rel="next" href="sas/">
-      
-      
-      <link rel="icon" href="../../assets/heal_logo.png">
+      <link rel="icon" href="../../../assets/heal_logo.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
-        <title>Extract VLMD from another data type and format - HEAL Data Utilities</title>
+        <title>csv (Minimal) Data Dictionary - HEAL Data Utilities</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -48,11 +44,11 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../stylesheets/schema_doc.css">
+      <link rel="stylesheet" href="../../../stylesheets/schema_doc.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#extract-vlmd-from-another-data-type-and-format" class="md-skip">
+        <a href="#csv-minimal-data-dictionary" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +91,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="https://github.com/norc-heal" title="HEAL Data Utilities" class="md-header__button md-logo" aria-label="HEAL Data Utilities" data-md-component="logo">
       
-  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+  <img src="../../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -112,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Extract VLMD from another data type and format
+              csv (Minimal) Data Dictionary
             
           </span>
         </div>
@@ -200,7 +196,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://github.com/norc-heal" title="HEAL Data Utilities" class="md-nav__button md-logo" aria-label="HEAL Data Utilities" data-md-component="logo">
       
-  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+  <img src="../../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
 
     </a>
     HEAL Data Utilities
@@ -226,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -243,8 +239,6 @@
       
   
   
-    
-  
   
     
     
@@ -261,18 +255,18 @@
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -288,7 +282,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Variable Level Metadata
@@ -301,8 +295,6 @@
                 
   
   
-    
-  
   
     
     
@@ -315,13 +307,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
@@ -334,7 +326,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Functions
@@ -345,8 +337,6 @@
                 
   
   
-    
-  
   
     
     
@@ -371,18 +361,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -392,13 +382,13 @@
 
             </a>
             
-              <label class="md-nav__link md-nav__link--active" for="__nav_2_2_1">
+              <label class="md-nav__link " for="__nav_2_2_1">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_1">
             <span class="md-nav__icon md-icon"></span>
             Extract
@@ -413,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sas/" class="md-nav__link">
+      <a href="../sas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -433,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spss/" class="md-nav__link">
+      <a href="../spss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -453,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="stata/" class="md-nav__link">
+      <a href="../stata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -473,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="csvdata/" class="md-nav__link">
+      <a href="../csvdata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -493,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="redcapcsv/" class="md-nav__link">
+      <a href="../redcapcsv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -513,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="frictionlessschema/" class="md-nav__link">
+      <a href="../frictionlessschema/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="exceldata/" class="md-nav__link">
+      <a href="../exceldata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -580,7 +570,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../start/" class="md-nav__link ">
+            <a href="../../start/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -634,7 +624,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../validate/" class="md-nav__link ">
+            <a href="../../validate/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -717,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../schemas/csv-fields/" class="md-nav__link">
+      <a href="../../schemas/csv-fields/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../schemas/json-data-dictionary/" class="md-nav__link">
+      <a href="../../schemas/json-data-dictionary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,15 +783,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#input-types-and-formats" class="md-nav__link">
-    Input Types and Formats
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    Output
+  <a href="#run-the-vlmd-command" class="md-nav__link">
+    Run the vlmd command
   </a>
   
 </li>
@@ -824,79 +807,19 @@
   
 
 
-<h1 id="extract-vlmd-from-another-data-type-and-format"><code>Extract</code> VLMD from another data type and format<a class="headerlink" href="#extract-vlmd-from-another-data-type-and-format" title="Permanent link">&para;</a></h1>
-<p>The healdata-utils variable-level metadata (vlmd) tool inputs a variety of different input file types and extracts HEAL-compliant data dictionaries (JSON and CSV formats). Additionally, exported validation (i.e., "error") reports provide the user information as to a) if the exported data dictionary is valid according to HEAL specifications and b) how to modify one's data dictionary to make it HEAL-compliant.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Currently the python subcommand is <code>convert_to_vlmd</code> but will be changed to <code>extract_to_vlmd</code> to be
-consistent with CLI. <code>extract</code> was chosen to better reflect the functionality.</p>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Command Line Interface (CLI)</label><label for="__tabbed_1_2">Python</label></div>
+<h1 id="csv-minimal-data-dictionary"><code>csv</code> (Minimal) Data Dictionary<a class="headerlink" href="#csv-minimal-data-dictionary" title="Permanent link">&para;</a></h1>
+<p>A minimal data dictionary in a csv (or tsv file). For example, may have <code>name</code>, <code>type</code>, and description and then this adds the rest of the fields. </p>
+<blockquote>
+<p>Also maps a few common data types (such as char, character,text to 'string' and 'float' to 'number'.)</p>
+</blockquote>
+<h2 id="run-the-vlmd-command">Run the <code>vlmd</code> command<a class="headerlink" href="#run-the-vlmd-command" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">CLI</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>extract<span class="w"> </span>--inputtype<span class="w"> </span>spss<span class="w"> </span>myproject/myfile.sav
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code>vlmd<span class="w"> </span>extract<span class="w"> </span>--inputtype<span class="w"> </span>csv-data-dict<span class="w"> </span>data/minimal-csv-dd.csv
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To continue, it's recommended to go to the <a href="#input-types-and-formats">input types and formats</a>. Also, for more details on the different flags/options, run <code>vlmd --help</code></p>
-</div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">healdata_utils</span> <span class="kn">import</span> <span class="n">convert_to_vlmd</span>
-
-<span class="n">convert_to_vlmd</span><span class="p">(</span><span class="n">input_filepath</span><span class="o">=</span><span class="s2">&quot;myproject/myfile.sav&quot;</span><span class="p">,</span><span class="n">inputtype</span><span class="o">=</span><span class="s2">&quot;spss&quot;</span><span class="p">)</span>
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To continue, it's recommended to go to the <a href="#input-types-and-formats">input types and formats</a>. For a complete set of options with <code>convert_to_vlmd</code> see the docstring (if in a notebook, one can enter <code>convert_to_vlmd?</code>)</p>
-</div>
-</div>
-</div>
-</div>
-<h4 id="input-types-and-formats">Input Types and Formats<a class="headerlink" href="#input-types-and-formats" title="Permanent link">&para;</a></h4>
-<p>This section provides the specific syntax for running each of the supported types for generating HEAL-compliant data dictionaries are listed. Additional instructions on how to obtain the necessary input files/software are also provided. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To further annotate your outputted data dictionaries, see the variable-level metadata field properties (with examples) for either the <strong><code>csv data dictionary</code></strong> <a href="../schemas/csv-fields/">click here</a> or the <strong><code>json data dictionary</code></strong> <a href="../schemas/json-data-dictionary/">click here</a>.</p>
-</div>
-<!-- TODO: Automate creation of these lists below -->
-
-<p>Extract variable level metadata from your data:</p>
-<ul>
-<li><a href="csvdata/">CSV datasets</a></li>
-<li><a href="csvdd/">CSV (minimal) data dictionary</a></li>
-<li><a href="spss/">SPSS datasets</a></li>
-<li><a href="sas/">SAS datasets</a></li>
-<li><a href="stata/">Stata datasets</a></li>
-<li><a href="redcapcsv/">REDCap data dictionary</a></li>
-<li><a href="frictionlessschema/">Frictionless Table Schema</a></li>
-<li><a href="exceldata/">Excel dataset</a></li>
-</ul>
-<h4 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h4>
-<p>Both the python and command line routes will result in a JSON and CSV version of the HEAL data dictionary in the output folder along with the validation reports in the <code>errors</code> folder. See below:</p>
-<ul>
-<li><code>errors/heal-csv-errors.json</code>: outputted validation report for table in csv file against frictionless schema</li>
-</ul>
-<p>If valid, this file will contain:
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;valid&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
-<span class="p">}</span>
-</code></pre></div>
-- <code>errors/heal-json-errors.json</code>:  outputted jsonschema validation report.</p>
-<ul>
-<li>If valid, this file will contain:
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;valid&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
-<span class="p">}</span>
-</code></pre></div></li>
-</ul>
-<p>If no <code>outputdir</code> specified, the resulting HEAL-compliant data dictionaries will be named:</p>
-<ul>
-<li><code>heal-csvtemplate-data-dictionary.csv</code>: This is the CSV data dictionary</li>
-<li><code>heal-jsontemplate-data-dictionary.json</code>: This is the JSON version of the data dictionary</li>
-</ul>
 
 
 
@@ -934,10 +857,10 @@ consistent with CLI. <code>extract</code> was chosen to better reflect the funct
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>
