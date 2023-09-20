@@ -1,92 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/</loc>
+         <loc>https://heal.github.io/healdata-utils/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/contributing/</loc>
+         <loc>https://heal.github.io/healdata-utils/contributing/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/install/</loc>
+         <loc>https://heal.github.io/healdata-utils/install/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/extract/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/extract/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/extract/csvdata/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/extract/csvdata/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/extract/csvdd/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/extract/csvdd/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/extract/exceldata/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/extract/exceldata/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/extract/frictionlessschema/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/extract/frictionlessschema/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/extract/redcapcsv/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/extract/redcapcsv/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/extract/sas/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/extract/sas/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/extract/spss/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/extract/spss/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/extract/stata/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/extract/stata/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/schemas/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/schemas/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/schemas/csv-fields/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/schemas/csv-fields/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/schemas/json-data-dictionary/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/schemas/json-data-dictionary/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/start/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/start/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://norc-heal.github.io/healdata-utils/vlmd/validate/</loc>
+         <loc>https://heal.github.io/healdata-utils/vlmd/validate/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
