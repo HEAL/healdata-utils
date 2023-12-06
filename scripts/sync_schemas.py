@@ -2,15 +2,16 @@ import requests
 from pathlib import Path
 import pprint
 import subprocess
+import argparse
 
-def copy_schemas():
+def copy_schemas(fork,branch):
     pp = pprint.PrettyPrinter(indent=2,compact=True, sort_dicts=False)
     jsonschema_url = (
-      "https://raw.githubusercontent.com/HEAL/heal-metadata-schemas/main/"
+      f"https://raw.githubusercontent.com/{fork}/heal-metadata-schemas/{branch}/"
       "variable-level-metadata-schema/schemas/jsonschema/data-dictionary.json"
     )
     csvschema_url = (
-        "https://raw.githubusercontent.com/HEAL/heal-metadata-schemas/main/"
+        f"https://raw.githubusercontent.com/{fork}/heal-metadata-schemas/{branch}/"
         "variable-level-metadata-schema/schemas/frictionless/csvtemplate/fields.json"
     )
     healjsonschema = requests.get(jsonschema_url).json()
@@ -28,5 +29,16 @@ def copy_schemas():
         subprocess.run(["black",str(py_schema_dir.joinpath(f))])
 
 if __name__ == "__main__":
-    copy_schemas()
+    parser = argparse.ArgumentParser(description=('Copies and formats the HEAL'
+        ' vlmd fricitonless and jsonschema schemas ')
+    )
+    # Add arguments
+    parser.add_argument('-b', '--branch', type=str,
+        default="main", 
+        help=('The branch name or commit hash from heal-metadata-schemas'))
+    parser.add_argument('-f','--fork',
+        type=str,help="Name of the fork (default is HEAL)",
+        default="HEAL")
+    args = parser.parse_args()
+    copy_schemas(args.fork,args.branch)
 

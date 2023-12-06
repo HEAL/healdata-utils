@@ -1,21 +1,20 @@
 healcsvschema = {
+    "version": "0.1.0",
     "description": "Variable level metadata individual fields integrated into "
     "the variable level\n"
     "metadata object within the HEAL platform metadata service.\n"
     "\n"
-    "> Note, only `name` and `description` are required.\n"
-    ">  Listed at the end of the description are suggested "
-    '"priority" levels in brackets (e.g., [<priority>]):\n'
-    "  1. [Required]: Needs to be filled out to be valid.\n"
-    "  2. [Highly recommended]: Greatly help using the data "
-    "dictionary but not required. \n"
-    "  3. [Optional, if applicable]: May only be applicable to "
-    "certain fields.\n"
-    "  4. [Autopopulated, if not filled]: These fields are "
-    "intended to be autopopulated from other fields but can be "
-    "filled out if desired.\n"
-    "  5. [Experimental]: These fields are not currently used but "
-    "are in development.\n",
+    '!!! note "NOTE"\n'
+    "\n"
+    "  Only `name` and `description` properties are required. \n"
+    "  For categorical variables, `constraints.enum` and "
+    "`encodings` (where applicable) properties are highly "
+    "encouraged. \n"
+    "  For studies using HEAL or other common data elements "
+    "(CDEs), `standardsMappings` information is highly "
+    "encouraged.\n"
+    "  `type` and `format` properties may be particularly useful "
+    "for some variable types (e.g. date-like variables)\n",
     "title": "HEAL Variable Level Metadata Fields",
     "fields": [
         {
@@ -37,32 +36,30 @@ healcsvschema = {
         {
             "name": "name",
             "description": "The name of a variable (i.e., field) as it "
-            "appears in the data. \n"
-            "\n"
-            "[Required]\n",
+            "appears in the data. \n",
             "title": "Variable Name",
             "type": "string",
             "constraints": {"required": True},
         },
         {
             "name": "title",
-            "description": "The human-readable title or label of the "
-            "variable. \n"
-            "\n"
-            "[Highly recommended]\n",
+            "description": "The human-readable title or label of the " "variable. \n",
             "title": "Variable Label (ie Title)",
-            "examples": ["My Variable (for name of my_variable)"],
+            "examples": ["My Variable", "Gender identity"],
             "type": "string",
         },
         {
             "name": "description",
             "description": "An extended description of the variable. This "
             "could be the definition of a variable or the \n"
-            "question text (e.g., if a survey). \n"
-            "\n"
-            "[Required]\n",
+            "question text (e.g., if a survey). \n",
             "title": "Variable Description",
-            "examples": ["Definition", "Question text (if a survey)"],
+            "examples": [
+                "The participant's age at the time of study " "enrollment",
+                "What is the highest grade or level of school "
+                "you have completed or the highest degree you "
+                "have received?",
+            ],
             "type": "string",
             "constraints": {"required": True},
         },
@@ -71,6 +68,8 @@ healcsvschema = {
             "description": "A classification or category of a particular "
             "data element or property expected or allowed "
             "in the dataset.\n"
+            "\n"
+            "Definitions:\n"
             "\n"
             "-  `number` (A numeric value with optional "
             "decimal places. (e.g., 3.14))\n"
@@ -101,38 +100,111 @@ healcsvschema = {
             "type": "string",
             "constraints": {
                 "enum": [
-                    "integer",
-                    "geopoint",
-                    "string",
-                    "yearmonth",
                     "number",
+                    "datetime",
                     "date",
-                    "boolean",
+                    "string",
                     "any",
                     "year",
-                    "duration",
+                    "geopoint",
                     "time",
-                    "datetime",
+                    "integer",
+                    "yearmonth",
+                    "duration",
+                    "boolean",
                 ]
             },
         },
         {
             "name": "format",
-            "description": "A format taken from one of the [frictionless "
-            "specification](https://specs.frictionlessdata.io/) "
-            "schemas.\n"
-            "For example, for tabular data, there is the "
-            "[Table Schema "
-            "specification](https://specs.frictionlessdata.io/table-schema)\n"
-            "\n"
+            "description": "Indicates the format of the type specified in "
+            "the `type` property. \n"
             "Each format is dependent on the `type` "
-            "specified. For example:\n"
-            'If `type` is "string", then see the String '
-            "formats. \n"
-            "If `type` is one of the date-like formats, "
-            "then see Date formats.\n",
-            "title": "Frictionless Formats",
-            "type": "any",
+            "specified. \n"
+            'For example: If `type` is "string", then see '
+            "the [String "
+            "formats](https://specs.frictionlessdata.io/table-schema/#string). \n"
+            'If `type` is "date", "datetime", or "time", '
+            "default format is ISO8601 formatting for those "
+            "respective types (see details on ISO8601 "
+            "format for "
+            "[Date](https://specs.frictionlessdata.io/table-schema/#date),\n"
+            "[Datetime](https://specs.frictionlessdata.io/table-schema/#datetime), \n"
+            "or "
+            "[Time](https://specs.frictionlessdata.io/table-schema/#time)) "
+            "- If you want to specify a date-like variable "
+            "using standard Python/C strptime syntax, see "
+            "[here](#format-details-for-date-datetime-time-type-variables) "
+            "for details. \n"
+            "See "
+            "[here](https://specs.frictionlessdata.io/table-schema/#types-and-formats) "
+            "for more information about appropriate "
+            "`format` values by variable `type`. \n"
+            "\n"
+            "[Additional information]\n"
+            "\n"
+            "Date Formats (date, datetime, time `type` "
+            "variable):\n"
+            "\n"
+            "A format for a date variable "
+            "(`date`,`time`,`datetime`).  \n"
+            "**default**: An ISO8601 format string.\n"
+            "**any**: Any parsable representation of a "
+            "date/time/datetime. The implementing library "
+            "can attempt to parse the datetime via a range "
+            "of strategies.\n"
+            "\n"
+            "**{PATTERN}**: The value can be parsed "
+            "according to `{PATTERN}`,\n"
+            "which `MUST` follow the date formatting syntax "
+            "of \n"
+            "C / Python [strftime](http://strftime.org/) "
+            "such as:\n"
+            "\n"
+            '- "`%Y-%m-%d` (for date, e.g., 2023-05-25)"\n'
+            '- "`%Y%-%d` (for date, e.g., 20230525) for '
+            'date without dashes"\n'
+            '- "`%Y-%m-%dT%H:%M:%S` (for datetime, e.g., '
+            '2023-05-25T10:30:45)"\n'
+            '- "`%Y-%m-%dT%H:%M:%SZ` (for datetime with UTC '
+            'timezone, e.g., 2023-05-25T10:30:45Z)"\n'
+            '- "`%Y-%m-%dT%H:%M:%S%z` (for datetime with '
+            "timezone offset, e.g., "
+            '2023-05-25T10:30:45+0300)"\n'
+            '- "`%Y-%m-%dT%H:%M` (for datetime without '
+            'seconds, e.g., 2023-05-25T10:30)"\n'
+            '- "`%Y-%m-%dT%H` (for datetime without minutes '
+            'and seconds, e.g., 2023-05-25T10)"\n'
+            '- "`%H:%M:%S` (for time, e.g., 10:30:45)"\n'
+            '- "`%H:%M:%SZ` (for time with UTC timezone, '
+            'e.g., 10:30:45Z)"\n'
+            '- "`%H:%M:%S%z` (for time with timezone '
+            'offset, e.g., 10:30:45+0300)"\n'
+            "\n"
+            "String formats:\n"
+            "\n"
+            '- "`email` if valid emails (e.g., '
+            'test@gmail.com)"\n'
+            '- "`uri` if valid uri addresses (e.g., '
+            'https://example.com/resource123)"\n'
+            '- "`binary` if a base64 binary encoded string '
+            "(e.g., authentication token like "
+            'aGVsbG8gd29ybGQ=)"\n'
+            '- "`uuid` if a universal unique identifier '
+            "also known as a guid (eg., "
+            'f47ac10b-58cc-4372-a567-0e02b2c3d479)"\n'
+            "\n"
+            "\n"
+            "Geopoint formats:\n"
+            "\n"
+            "The two types of formats for `geopoint` "
+            "(describing a geographic point).\n"
+            "\n"
+            "- `array` (if 'lat,long' (e.g., "
+            "36.63,-90.20))\n"
+            "- `object` (if {'lat':36.63,'lon':-90.20})\n",
+            "title": "Variable Format",
+            "type": "string",
         },
         {
             "name": "constraints.maxLength",
@@ -141,28 +213,28 @@ healcsvschema = {
             "object). For example, if 'Hello World' is the "
             "longest value of a\n"
             "categorical variable, this would be a "
-            "maxLength of 11.\n"
-            "\n"
-            "[Optional,if applicable]\n",
+            "maxLength of 11.\n",
             "title": "Maximum Length",
             "type": "integer",
         },
         {
             "name": "constraints.enum",
-            "description": "Constrains possible values to a set of "
-            "values.\n"
-            "\n"
-            "[Optional,if applicable]\n",
+            "description": "Constrains possible values to a set of " "values.\n",
             "title": "Variable Possible Values",
+            "examples": [
+                "1|2|3|4|5|6|7|8",
+                "White|Black or African American|American Indian "
+                "or Alaska Native|Native Hawaiian or Other "
+                "Pacific Islander|Asian|Some other "
+                "race|Multiracial",
+            ],
             "type": "string",
             "constraints": {"pattern": "^(?:[^|]+\\||[^|]*)(?:[^|]*\\|)*[^|]*$"},
         },
         {
             "name": "constraints.pattern",
             "description": "A regular expression pattern the data MUST "
-            "conform to.\n"
-            "\n"
-            "[Optional,if applicable]\n",
+            "conform to.\n",
             "title": "Regular Expression Pattern",
             "type": "string",
         },
@@ -172,17 +244,13 @@ healcsvschema = {
             "maximum -- or most\n"
             "recent -- date, maximum integer etc). Note, "
             "this is different then\n"
-            "maxLength property.\n"
-            "\n"
-            "[Optional,if applicable]\n",
+            "maxLength property.\n",
             "title": "Maximum Value",
             "type": "integer",
         },
         {
             "name": "constraints.minimum",
-            "description": "Specifies the minimum value of a field.\n"
-            "\n"
-            "[Optional,if applicable]\n",
+            "description": "Specifies the minimum value of a field.\n",
             "title": "Minimum Value",
             "type": "integer",
         },
@@ -206,9 +274,7 @@ healcsvschema = {
             "provides a way to\n"
             'store categoricals that are stored as  "short" '
             "labels (such as\n"
-            "abbreviations).\n"
-            "\n"
-            "[Optional,if applicable]\n",
+            "abbreviations).\n",
             "title": "Variable Value Encodings (i.e., mappings; value " "labels)",
             "examples": ["0=No|1=Yes", "HW=Hello world|GBW=Good bye world|HM=Hi,Mike"],
             "type": "string",
@@ -222,19 +288,15 @@ healcsvschema = {
             "relationship but not\n"
             "necessarily  a numerical relationship (e.g., "
             "Strongly disagree < Disagree\n"
-            "< Neutral < Agree).\n"
-            "\n"
-            "[Optional,if applicable]\n",
+            "< Neutral < Agree).\n",
             "title": "An ordered variable",
             "type": "boolean",
         },
         {
             "name": "missingValues",
-            "description": "A list of missing values specific to a "
-            "variable.\n"
-            "\n"
-            "[Optional, if applicable]\n",
+            "description": "A list of missing values specific to a " "variable.\n",
             "title": "Missing Values",
+            "examples": ["Missing|Skipped|No preference", "Missing"],
             "type": "string",
             "constraints": {"pattern": "^(?:[^|]+\\||[^|]*)(?:[^|]*\\|)*[^|]*$"},
         },
@@ -245,9 +307,7 @@ healcsvschema = {
             "a physical string representation to be cast as "
             "true (increasing\n"
             "readability of the field). It can include one "
-            "or more values.\n"
-            "\n"
-            "[Optional, if applicable]\n",
+            "or more values.\n",
             "examples": [
                 "Required|REQUIRED",
                 "required|Yes|Y|Checked",
@@ -278,11 +338,18 @@ healcsvschema = {
             "type": "string",
         },
         {
+            "name": "standardsMappings.url",
+            "description": "The url that links out to the published, "
+            "standardized mapping.\n",
+            "title": "Standards Mapping - Url",
+            "examples": ["https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"],
+            "type": "string",
+        },
+        {
             "name": "standardsMappings.type",
             "description": "The **type** of mapping linked to a published "
             "set of standard variables such as the NIH "
-            "Common Data Elements program.\n"
-            "[Autopopulated, if not filled]\n",
+            "Common Data Elements program\n",
             "title": "Standards Mapping - Title",
             "examples": ["cde", "ontology", "reference_list"],
             "type": "string",
@@ -292,21 +359,9 @@ healcsvschema = {
             "description": "A free text **label** of a mapping indicating "
             "a mapping(s) to a published set of standard "
             "variables such as the NIH Common Data Elements "
-            "program.\n"
-            "\n"
-            "[Autopopulated, if not filled]\n",
+            "program.\n",
             "title": "Standards Mapping - Label",
             "examples": ["substance use", "chemical compound", "promis"],
-            "type": "string",
-        },
-        {
-            "name": "standardsMappings.url",
-            "description": "The url that links out to the published, "
-            "standardized mapping.\n"
-            "\n"
-            "[Autopopulated, if not filled]\n",
-            "title": "Standards Mapping - Url",
-            "examples": ["https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"],
             "type": "string",
         },
         {
@@ -324,13 +379,19 @@ healcsvschema = {
             "type": "string",
         },
         {
+            "name": "relatedConcepts.url",
+            "description": "The url that links out to the published, "
+            "standardized concept.\n",
+            "title": "Related Concepts - Url",
+            "examples": ["https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"],
+            "type": "string",
+        },
+        {
             "name": "relatedConcepts.type",
             "description": "The **type** of mapping to a published set of "
             "concepts related to the given field such as \n"
             "ontological information (eg., NCI thesaurus, "
-            "bioportal etc)\n"
-            "\n"
-            "[Autopopulated, if not filled]\n",
+            "bioportal etc)\n",
             "title": "Related concepts - Type",
             "type": "string",
         },
@@ -340,27 +401,13 @@ healcsvschema = {
             "published set of concepts related to the given "
             "field such as \n"
             "ontological information (eg., NCI thesaurus, "
-            "bioportal etc)\n"
-            "\n"
-            "[Autopopulated, if not filled]\n",
+            "bioportal etc)\n",
             "title": "Related Concepts - Label",
             "type": "string",
         },
         {
-            "name": "relatedConcepts.url",
-            "description": "The url that links out to the published, "
-            "standardized concept.\n"
-            "\n"
-            "[Autopopulated, if not filled]\n",
-            "title": "Related Concepts - Url",
-            "examples": ["https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"],
-            "type": "string",
-        },
-        {
             "name": "relatedConcepts.source",
-            "description": "The source of the related concept.\n"
-            "\n"
-            "[Autopopulated, if not filled]\n",
+            "description": "The source of the related concept.\n",
             "title": "Related Concepts - Source",
             "examples": ["TBD (will have controlled vocabulary)"],
             "type": "string",
@@ -368,9 +415,7 @@ healcsvschema = {
         {
             "name": "relatedConcepts.id",
             "description": "The id locating the individual mapping within "
-            "the given source.\n"
-            "\n"
-            "[Autopopulated, if not filled]\n",
+            "the given source.\n",
             "title": "Related Concepts - Id",
             "type": "string",
         },

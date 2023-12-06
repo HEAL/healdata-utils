@@ -1,4 +1,5 @@
 healjsonschema = {
+    "version": "0.1.0",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "vlmd",
     "title": "Variable Level Metadata (Data Dictionaries)",
@@ -33,65 +34,48 @@ healjsonschema = {
                 "metadata "
                 "service.\n"
                 "\n"
-                "> Note, only "
+                "!!! note "
+                '"NOTE"\n'
+                "\n"
+                "  Only "
                 "`name` and "
                 "`description` "
+                "properties "
                 "are "
-                "required.\n"
-                ">  Listed at "
-                "the end of "
-                "the "
-                "description "
-                "are "
-                "suggested "
-                '"priority" '
-                "levels in "
-                "brackets "
-                "(e.g., "
-                "[<priority>]):\n"
-                "  1. "
-                "[Required]: "
-                "Needs to be "
-                "filled out "
-                "to be "
-                "valid.\n"
-                "  2. [Highly "
-                "recommended]: "
-                "Greatly help "
-                "using the "
-                "data "
-                "dictionary "
-                "but not "
                 "required. \n"
-                "  3. "
-                "[Optional, "
-                "if "
-                "applicable]: "
-                "May only be "
-                "applicable "
-                "to certain "
-                "fields.\n"
-                "  4. "
-                "[Autopopulated, "
-                "if not "
-                "filled]: "
-                "These fields "
-                "are intended "
-                "to be "
-                "autopopulated "
-                "from other "
-                "fields but "
-                "can be "
-                "filled out "
-                "if desired.\n"
-                "  5. "
-                "[Experimental]: "
-                "These fields "
-                "are not "
-                "currently "
-                "used but are "
-                "in "
-                "development.\n",
+                "  For "
+                "categorical "
+                "variables, "
+                "`constraints.enum` "
+                "and "
+                "`encodings` "
+                "(where "
+                "applicable) "
+                "properties "
+                "are highly "
+                "encouraged. \n"
+                "  For "
+                "studies "
+                "using HEAL "
+                "or other "
+                "common data "
+                "elements "
+                "(CDEs), "
+                "`standardsMappings` "
+                "information "
+                "is highly "
+                "encouraged.\n"
+                "  `type` and "
+                "`format` "
+                "properties "
+                "may be "
+                "particularly "
+                "useful for "
+                "some "
+                "variable "
+                "types (e.g. "
+                "date-like "
+                "variables)\n",
                 "type": "object",
                 "additionalProperties": True,
                 "required": ["name", "description"],
@@ -139,9 +123,7 @@ healjsonschema = {
                         "appears "
                         "in "
                         "the "
-                        "data. \n"
-                        "\n"
-                        "[Required]\n",
+                        "data. \n",
                     },
                     "title": {
                         "type": "string",
@@ -153,13 +135,8 @@ healjsonschema = {
                         "label "
                         "of "
                         "the "
-                        "variable. \n"
-                        "\n"
-                        "[Highly "
-                        "recommended]\n",
-                        "examples": [
-                            "My " "Variable " "(for " "name " "of " "my_variable)"
-                        ],
+                        "variable. \n",
+                        "examples": ["My " "Variable", "Gender " "identity"],
                     },
                     "description": {
                         "type": "string",
@@ -185,16 +162,41 @@ healjsonschema = {
                         "(e.g., "
                         "if "
                         "a "
-                        "survey). \n"
-                        "\n"
-                        "[Required]\n",
+                        "survey). \n",
                         "examples": [
-                            "Definition",
-                            "Question " "text " "(if " "a " "survey)",
+                            "The "
+                            "participant's "
+                            "age "
+                            "at "
+                            "the "
+                            "time "
+                            "of "
+                            "study "
+                            "enrollment",
+                            "What "
+                            "is "
+                            "the "
+                            "highest "
+                            "grade "
+                            "or "
+                            "level "
+                            "of "
+                            "school "
+                            "you "
+                            "have "
+                            "completed "
+                            "or "
+                            "the "
+                            "highest "
+                            "degree "
+                            "you "
+                            "have "
+                            "received?",
                         ],
                     },
                     "type": {
                         "title": "Variable " "Type",
+                        "type": "string",
                         "description": "A "
                         "classification "
                         "or "
@@ -212,6 +214,8 @@ healjsonschema = {
                         "in "
                         "the "
                         "dataset.\n"
+                        "\n"
+                        "Definitions:\n"
                         "\n"
                         "-  "
                         "`number` "
@@ -328,7 +332,6 @@ healjsonschema = {
                         "(e.g., "
                         "[51.5074, "
                         "-0.1278]))\n",
-                        "type": "string",
                         "enum": [
                             "number",
                             "integer",
@@ -345,29 +348,19 @@ healjsonschema = {
                         ],
                     },
                     "format": {
-                        "title": "Frictionless " "Formats",
-                        "description": "A "
+                        "title": "Variable " "Format",
+                        "type": "string",
+                        "description": "Indicates "
+                        "the "
                         "format "
-                        "taken "
-                        "from "
-                        "one "
                         "of "
                         "the "
-                        "[frictionless "
-                        "specification](https://specs.frictionlessdata.io/) "
-                        "schemas.\n"
-                        "For "
-                        "example, "
-                        "for "
-                        "tabular "
-                        "data, "
-                        "there "
-                        "is "
+                        "type "
+                        "specified "
+                        "in "
                         "the "
-                        "[Table "
-                        "Schema "
-                        "specification](https://specs.frictionlessdata.io/table-schema)\n"
-                        "\n"
+                        "`type` "
+                        "property. \n"
                         "Each "
                         "format "
                         "is "
@@ -375,9 +368,9 @@ healjsonschema = {
                         "on "
                         "the "
                         "`type` "
-                        "specified. "
+                        "specified. \n"
                         "For "
-                        "example:\n"
+                        "example: "
                         "If "
                         "`type` "
                         "is "
@@ -385,254 +378,289 @@ healjsonschema = {
                         "then "
                         "see "
                         "the "
-                        "String "
-                        "formats. \n"
+                        "[String "
+                        "formats](https://specs.frictionlessdata.io/table-schema/#string). \n"
                         "If "
                         "`type` "
                         "is "
-                        "one "
-                        "of "
-                        "the "
+                        '"date", '
+                        '"datetime", '
+                        "or "
+                        '"time", '
+                        "default "
+                        "format "
+                        "is "
+                        "ISO8601 "
+                        "formatting "
+                        "for "
+                        "those "
+                        "respective "
+                        "types "
+                        "(see "
+                        "details "
+                        "on "
+                        "ISO8601 "
+                        "format "
+                        "for "
+                        "[Date](https://specs.frictionlessdata.io/table-schema/#date),\n"
+                        "[Datetime](https://specs.frictionlessdata.io/table-schema/#datetime), \n"
+                        "or "
+                        "[Time](https://specs.frictionlessdata.io/table-schema/#time)) "
+                        "- "
+                        "If "
+                        "you "
+                        "want "
+                        "to "
+                        "specify "
+                        "a "
                         "date-like "
-                        "formats, "
-                        "then "
+                        "variable "
+                        "using "
+                        "standard "
+                        "Python/C "
+                        "strptime "
+                        "syntax, "
                         "see "
+                        "[here](#format-details-for-date-datetime-time-type-variables) "
+                        "for "
+                        "details. \n"
+                        "See "
+                        "[here](https://specs.frictionlessdata.io/table-schema/#types-and-formats) "
+                        "for "
+                        "more "
+                        "information "
+                        "about "
+                        "appropriate "
+                        "`format` "
+                        "values "
+                        "by "
+                        "variable "
+                        "`type`. \n"
+                        "\n"
+                        "[Additional "
+                        "information]\n"
+                        "\n"
                         "Date "
-                        "formats.\n",
-                        "name": "frictionless_formats",
-                        "anyOf": [
-                            {
-                                "title": "String " "Format",
-                                "enum": ["uri", "email", "binary", "uuid"],
-                            },
-                            {
-                                "title": "Date " "Format",
-                                "description": "A "
-                                "format "
-                                "for "
-                                "a "
-                                "date "
-                                "variable "
-                                "(`date`,`time`,`datetime`).  \n"
-                                "    "
-                                "\\n\\t* "
-                                "**default**: "
-                                "An "
-                                "ISO8601 "
-                                "format "
-                                "string.\n"
-                                "    "
-                                "\\n\\t* "
-                                "**any**: "
-                                "Any "
-                                "parsable "
-                                "representation "
-                                "of "
-                                "a "
-                                "date/time/datetime. "
-                                "The "
-                                "implementing "
-                                "library "
-                                "can "
-                                "attempt "
-                                "to "
-                                "parse "
-                                "the "
-                                "datetime "
-                                "via "
-                                "a "
-                                "range "
-                                "of "
-                                "strategies.\n"
-                                "    "
-                                "\\n\\t* "
-                                "**{PATTERN}**: "
-                                "The "
-                                "value "
-                                "can "
-                                "be "
-                                "parsed "
-                                "according "
-                                "to "
-                                "`{PATTERN}`, "
-                                "which "
-                                "`MUST` "
-                                "follow "
-                                "the "
-                                "date "
-                                "formatting "
-                                "syntax "
-                                "of "
-                                "C "
-                                "/ "
-                                "Python "
-                                "[strftime](http://strftime.org/).\n"
-                                "\n"
-                                "\\nExamples:\n"
-                                "\n"
-                                "  "
-                                "`%Y-%m-%d` "
-                                "(for "
-                                "date, "
-                                "e.g., "
-                                "2023-05-25)\n"
-                                "  "
-                                "`%Y%-%d` "
-                                "(for "
-                                "date, "
-                                "e.g., "
-                                "20230525) "
-                                "for "
-                                "date "
-                                "without "
-                                'dashes"\n'
-                                "  "
-                                "`%Y-%m-%dT%H:%M:%S` "
-                                "(for "
-                                "datetime, "
-                                "e.g., "
-                                "2023-05-25T10:30:45)\n"
-                                "  "
-                                "`%Y-%m-%dT%H:%M:%SZ` "
-                                "(for "
-                                "datetime "
-                                "with "
-                                "UTC "
-                                "timezone, "
-                                "e.g., "
-                                "2023-05-25T10:30:45Z)\n"
-                                "  "
-                                "`%Y-%m-%dT%H:%M:%S%z` "
-                                "(for "
-                                "datetime "
-                                "with "
-                                "timezone "
-                                "offset, "
-                                "e.g., "
-                                "2023-05-25T10:30:45+0300)\n"
-                                "  "
-                                "`%Y-%m-%dT%H:%M` "
-                                "(for "
-                                "datetime "
-                                "without "
-                                "seconds, "
-                                "e.g., "
-                                "2023-05-25T10:30)\n"
-                                "  "
-                                "`%Y-%m-%dT%H` "
-                                "(for "
-                                "datetime "
-                                "without "
-                                "minutes "
-                                "and "
-                                "seconds, "
-                                "e.g., "
-                                "2023-05-25T10)\n"
-                                "  "
-                                "`%H:%M:%S` "
-                                "(for "
-                                "time, "
-                                "e.g., "
-                                "10:30:45)\n"
-                                "  "
-                                "`%H:%M:%SZ` "
-                                "(for "
-                                "time "
-                                "with "
-                                "UTC "
-                                "timezone, "
-                                "e.g., "
-                                "10:30:45Z)\n"
-                                "  "
-                                "`%H:%M:%S%z` "
-                                "(for "
-                                "time "
-                                "with "
-                                "timezone "
-                                "offset, "
-                                "e.g., "
-                                "10:30:45+0300)\n",
-                            },
-                            {
-                                "title": "Geopoint " "Format",
-                                "description": "The "
-                                "two "
-                                "types "
-                                "of "
-                                "formats "
-                                "for "
-                                "`geopoint` "
-                                "(describing "
-                                "a "
-                                "geographic "
-                                "point).",
-                                "oneOf": [
-                                    {
-                                        "type": "array",
-                                        "description": "A "
-                                        "JSON "
-                                        "array "
-                                        "or "
-                                        "a "
-                                        "string "
-                                        "parsable "
-                                        "as "
-                                        "a "
-                                        "JSON "
-                                        "array "
-                                        "where "
-                                        "each "
-                                        "item "
-                                        "is "
-                                        "a "
-                                        "number "
-                                        "with "
-                                        "the "
-                                        "first \n"
-                                        "as "
-                                        "the "
-                                        "latitude "
-                                        "and "
-                                        "the "
-                                        "second "
-                                        "as "
-                                        "longitude. \n",
-                                    },
-                                    {
-                                        "type": "object",
-                                        "description": "Contains "
-                                        "latitude "
-                                        "and "
-                                        "longitude "
-                                        "with "
-                                        "two "
-                                        "keys "
-                                        '("lat" '
-                                        "and "
-                                        '"long") '
-                                        "with "
-                                        "number "
-                                        "items "
-                                        "mapped "
-                                        "to "
-                                        "each "
-                                        "key.\n",
-                                    },
-                                ],
-                            },
-                            {
-                                "title": "geojson",
-                                "description": "The "
-                                "JSON "
-                                "object "
-                                "according "
-                                "to "
-                                "the "
-                                "geojson "
-                                "spec.",
-                                "enum": ["topojson", "default"],
-                            },
-                        ],
+                        "Formats "
+                        "(date, "
+                        "datetime, "
+                        "time "
+                        "`type` "
+                        "variable):\n"
+                        "\n"
+                        "A "
+                        "format "
+                        "for "
+                        "a "
+                        "date "
+                        "variable "
+                        "(`date`,`time`,`datetime`).  \n"
+                        "**default**: "
+                        "An "
+                        "ISO8601 "
+                        "format "
+                        "string.\n"
+                        "**any**: "
+                        "Any "
+                        "parsable "
+                        "representation "
+                        "of "
+                        "a "
+                        "date/time/datetime. "
+                        "The "
+                        "implementing "
+                        "library "
+                        "can "
+                        "attempt "
+                        "to "
+                        "parse "
+                        "the "
+                        "datetime "
+                        "via "
+                        "a "
+                        "range "
+                        "of "
+                        "strategies.\n"
+                        "\n"
+                        "**{PATTERN}**: "
+                        "The "
+                        "value "
+                        "can "
+                        "be "
+                        "parsed "
+                        "according "
+                        "to "
+                        "`{PATTERN}`,\n"
+                        "which "
+                        "`MUST` "
+                        "follow "
+                        "the "
+                        "date "
+                        "formatting "
+                        "syntax "
+                        "of \n"
+                        "C "
+                        "/ "
+                        "Python "
+                        "[strftime](http://strftime.org/) "
+                        "such "
+                        "as:\n"
+                        "\n"
+                        "- "
+                        '"`%Y-%m-%d` '
+                        "(for "
+                        "date, "
+                        "e.g., "
+                        '2023-05-25)"\n'
+                        "- "
+                        '"`%Y%-%d` '
+                        "(for "
+                        "date, "
+                        "e.g., "
+                        "20230525) "
+                        "for "
+                        "date "
+                        "without "
+                        'dashes"\n'
+                        "- "
+                        '"`%Y-%m-%dT%H:%M:%S` '
+                        "(for "
+                        "datetime, "
+                        "e.g., "
+                        '2023-05-25T10:30:45)"\n'
+                        "- "
+                        '"`%Y-%m-%dT%H:%M:%SZ` '
+                        "(for "
+                        "datetime "
+                        "with "
+                        "UTC "
+                        "timezone, "
+                        "e.g., "
+                        '2023-05-25T10:30:45Z)"\n'
+                        "- "
+                        '"`%Y-%m-%dT%H:%M:%S%z` '
+                        "(for "
+                        "datetime "
+                        "with "
+                        "timezone "
+                        "offset, "
+                        "e.g., "
+                        '2023-05-25T10:30:45+0300)"\n'
+                        "- "
+                        '"`%Y-%m-%dT%H:%M` '
+                        "(for "
+                        "datetime "
+                        "without "
+                        "seconds, "
+                        "e.g., "
+                        '2023-05-25T10:30)"\n'
+                        "- "
+                        '"`%Y-%m-%dT%H` '
+                        "(for "
+                        "datetime "
+                        "without "
+                        "minutes "
+                        "and "
+                        "seconds, "
+                        "e.g., "
+                        '2023-05-25T10)"\n'
+                        "- "
+                        '"`%H:%M:%S` '
+                        "(for "
+                        "time, "
+                        "e.g., "
+                        '10:30:45)"\n'
+                        "- "
+                        '"`%H:%M:%SZ` '
+                        "(for "
+                        "time "
+                        "with "
+                        "UTC "
+                        "timezone, "
+                        "e.g., "
+                        '10:30:45Z)"\n'
+                        "- "
+                        '"`%H:%M:%S%z` '
+                        "(for "
+                        "time "
+                        "with "
+                        "timezone "
+                        "offset, "
+                        "e.g., "
+                        '10:30:45+0300)"\n'
+                        "\n"
+                        "String "
+                        "formats:\n"
+                        "\n"
+                        "- "
+                        '"`email` '
+                        "if "
+                        "valid "
+                        "emails "
+                        "(e.g., "
+                        'test@gmail.com)"\n'
+                        "- "
+                        '"`uri` '
+                        "if "
+                        "valid "
+                        "uri "
+                        "addresses "
+                        "(e.g., "
+                        'https://example.com/resource123)"\n'
+                        "- "
+                        '"`binary` '
+                        "if "
+                        "a "
+                        "base64 "
+                        "binary "
+                        "encoded "
+                        "string "
+                        "(e.g., "
+                        "authentication "
+                        "token "
+                        "like "
+                        'aGVsbG8gd29ybGQ=)"\n'
+                        "- "
+                        '"`uuid` '
+                        "if "
+                        "a "
+                        "universal "
+                        "unique "
+                        "identifier "
+                        "also "
+                        "known "
+                        "as "
+                        "a "
+                        "guid "
+                        "(eg., "
+                        'f47ac10b-58cc-4372-a567-0e02b2c3d479)"\n'
+                        "\n"
+                        "\n"
+                        "Geopoint "
+                        "formats:\n"
+                        "\n"
+                        "The "
+                        "two "
+                        "types "
+                        "of "
+                        "formats "
+                        "for "
+                        "`geopoint` "
+                        "(describing "
+                        "a "
+                        "geographic "
+                        "point).\n"
+                        "\n"
+                        "- "
+                        "`array` "
+                        "(if "
+                        "'lat,long' "
+                        "(e.g., "
+                        "36.63,-90.20))\n"
+                        "- "
+                        "`object` "
+                        "(if "
+                        "{'lat':36.63,'lon':-90.20})\n",
                     },
                     "constraints": {
                         "type": "object",
@@ -671,10 +699,7 @@ healjsonschema = {
                                 "a "
                                 "maxLength "
                                 "of "
-                                "11.\n"
-                                "\n"
-                                "[Optional,if "
-                                "applicable]\n",
+                                "11.\n",
                             },
                             "enum": {
                                 "title": "Variable " "Possible " "Values",
@@ -685,11 +710,25 @@ healjsonschema = {
                                 "a "
                                 "set "
                                 "of "
-                                "values.\n"
-                                "\n"
-                                "[Optional,if "
-                                "applicable]\n",
+                                "values.\n",
                                 "type": "array",
+                                "examples": [
+                                    [1, 2, 3, 4],
+                                    [
+                                        "White",
+                                        "Black " "or " "African " "American",
+                                        "American " "Indian " "or " "Alaska " "Native",
+                                        "Native "
+                                        "Hawaiian "
+                                        "or "
+                                        "Other "
+                                        "Pacific "
+                                        "Islander",
+                                        "Asian",
+                                        "Some " "other " "race",
+                                        "Multiracial",
+                                    ],
+                                ],
                             },
                             "pattern": {
                                 "type": "string",
@@ -702,10 +741,7 @@ healjsonschema = {
                                 "data "
                                 "MUST "
                                 "conform "
-                                "to.\n"
-                                "\n"
-                                "[Optional,if "
-                                "applicable]\n",
+                                "to.\n",
                             },
                             "maximum": {
                                 "type": "integer",
@@ -734,10 +770,7 @@ healjsonschema = {
                                 "different "
                                 "then\n"
                                 "maxLength "
-                                "property.\n"
-                                "\n"
-                                "[Optional,if "
-                                "applicable]\n",
+                                "property.\n",
                             },
                             "minimum": {
                                 "type": "integer",
@@ -748,10 +781,7 @@ healjsonschema = {
                                 "value "
                                 "of "
                                 "a "
-                                "field.\n"
-                                "\n"
-                                "[Optional,if "
-                                "applicable]\n",
+                                "field.\n",
                             },
                         },
                     },
@@ -838,10 +868,7 @@ healjsonschema = {
                         "labels "
                         "(such "
                         "as\n"
-                        "abbreviations).\n"
-                        "\n"
-                        "[Optional,if "
-                        "applicable]\n",
+                        "abbreviations).\n",
                         "type": "object",
                         "examples": [
                             {"0": "No", "1": "Yes"},
@@ -886,10 +913,7 @@ healjsonschema = {
                         "< "
                         "Neutral "
                         "< "
-                        "Agree).\n"
-                        "\n"
-                        "[Optional,if "
-                        "applicable]\n",
+                        "Agree).\n",
                         "type": "boolean",
                     },
                     "missingValues": {
@@ -902,10 +926,11 @@ healjsonschema = {
                         "specific "
                         "to "
                         "a "
-                        "variable.\n"
-                        "\n"
-                        "[Highly "
-                        "recommended]\n",
+                        "variable.\n",
+                        "examples": [
+                            ["Missing", "Skipped", "No " "preference"],
+                            ["Missing"],
+                        ],
                         "type": "array",
                     },
                     "trueValues": {
@@ -942,20 +967,10 @@ healjsonschema = {
                         "one "
                         "or "
                         "more "
-                        "values.\n"
-                        "\n"
-                        "[Optional, "
-                        "if "
-                        "applicable]\n",
+                        "values.\n",
                         "type": "array",
                         "items": {"type": "string"},
-                        "examples": [
-                            "Required",
-                            "REQUIRED",
-                            "required",
-                            "Yes",
-                            'Checked"',
-                        ],
+                        "examples": [["required", "Yes", "Checked"], ["required"]],
                     },
                     "falseValues": {
                         "title": "Boolean " "False " "Value " "Labels",
@@ -1034,15 +1049,29 @@ healjsonschema = {
                         "Common "
                         "Data "
                         "Elements "
-                        "program.\n"
-                        "[Autopopulated, "
-                        "if "
-                        "not "
-                        "filled]",
+                        "program.",
                         "type": "array",
                         "items": {
                             "type": "object",
                             "properties": {
+                                "url": {
+                                    "title": "Standards " "Mapping " "- " "Url",
+                                    "description": "The "
+                                    "url "
+                                    "that "
+                                    "links "
+                                    "out "
+                                    "to "
+                                    "the "
+                                    "published, "
+                                    "standardized "
+                                    "mapping.\n",
+                                    "type": "string",
+                                    "format": "uri",
+                                    "examples": [
+                                        "https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"
+                                    ],
+                                },
                                 "type": {
                                     "title": "Standards " "Mapping " "- " "Title",
                                     "description": "The "
@@ -1064,11 +1093,7 @@ healjsonschema = {
                                     "Common "
                                     "Data "
                                     "Elements "
-                                    "program.\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
+                                    "program\n",
                                     "examples": ["cde", "ontology", "reference_list"],
                                     "type": "string",
                                 },
@@ -1098,40 +1123,12 @@ healjsonschema = {
                                     "Common "
                                     "Data "
                                     "Elements "
-                                    "program.\n"
-                                    "\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
+                                    "program.\n",
                                     "type": "string",
                                     "examples": [
                                         "substance " "use",
                                         "chemical " "compound",
                                         "promis",
-                                    ],
-                                },
-                                "url": {
-                                    "title": "Standards " "Mapping " "- " "Url",
-                                    "description": "The "
-                                    "url "
-                                    "that "
-                                    "links "
-                                    "out "
-                                    "to "
-                                    "the "
-                                    "published, "
-                                    "standardized "
-                                    "mapping.\n"
-                                    "\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
-                                    "type": "string",
-                                    "format": "uri",
-                                    "examples": [
-                                        "https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"
                                     ],
                                 },
                                 "source": {
@@ -1190,15 +1187,29 @@ healjsonschema = {
                         "NCI "
                         "thesaurus, "
                         "bioportal "
-                        "etc)\n"
-                        "[Autopopulated, "
-                        "if "
-                        "not "
-                        "filled]",
+                        "etc)",
                         "type": "array",
                         "items": {
                             "type": "object",
                             "properties": {
+                                "url": {
+                                    "title": "Related " "Concepts " "- " "Url",
+                                    "description": "The "
+                                    "url "
+                                    "that "
+                                    "links "
+                                    "out "
+                                    "to "
+                                    "the "
+                                    "published, "
+                                    "standardized "
+                                    "concept.\n",
+                                    "type": "string",
+                                    "format": "uri",
+                                    "examples": [
+                                        "https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"
+                                    ],
+                                },
                                 "type": {
                                     "title": "Related " "concepts " "- " "Type",
                                     "description": "The "
@@ -1224,12 +1235,7 @@ healjsonschema = {
                                     "NCI "
                                     "thesaurus, "
                                     "bioportal "
-                                    "etc)\n"
-                                    "\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
+                                    "etc)\n",
                                     "type": "string",
                                 },
                                 "label": {
@@ -1260,35 +1266,7 @@ healjsonschema = {
                                     "NCI "
                                     "thesaurus, "
                                     "bioportal "
-                                    "etc)\n"
-                                    "\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
-                                },
-                                "url": {
-                                    "title": "Related " "Concepts " "- " "Url",
-                                    "description": "The "
-                                    "url "
-                                    "that "
-                                    "links "
-                                    "out "
-                                    "to "
-                                    "the "
-                                    "published, "
-                                    "standardized "
-                                    "concept.\n"
-                                    "\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
-                                    "type": "string",
-                                    "format": "uri",
-                                    "examples": [
-                                        "https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"
-                                    ],
+                                    "etc)\n",
                                 },
                                 "source": {
                                     "title": "Related " "Concepts " "- " "Source",
@@ -1297,12 +1275,7 @@ healjsonschema = {
                                     "of "
                                     "the "
                                     "related "
-                                    "concept.\n"
-                                    "\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
+                                    "concept.\n",
                                     "type": "string",
                                     "examples": [
                                         "TBD "
@@ -1324,12 +1297,7 @@ healjsonschema = {
                                     "within "
                                     "the "
                                     "given "
-                                    "source.\n"
-                                    "\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
+                                    "source.\n",
                                 },
                             },
                         },
@@ -1345,9 +1313,7 @@ healjsonschema = {
                         "about "
                         "the "
                         "given "
-                        "variable \n"
-                        "\n"
-                        "[Experimental]\n",
+                        "variable \n",
                         "properties": {
                             "median": {"type": "number"},
                             "mean": {"type": "number"},
