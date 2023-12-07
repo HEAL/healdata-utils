@@ -1,0 +1,6 @@
+- outputfile: "data/templates/twofields.json"
+  output_overwrite: true
+  numfields: 2
+- outputfile: "data/templates/twofields.csv"
+  output_overwrite: true
+  numfields: 2

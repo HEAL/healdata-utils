@@ -6,45 +6,39 @@ import yaml
 
 config = yaml.safe_load(Path("configs/convert_to_vlmd.yaml").read_text())
 
-@pytest.fixture(scope="module")
-def fields_propname():
-    return "data_dictionary"
+fields_propname = "data_dictionary"
 
-@pytest.fixture(scope="module")
-def valid_input_params():
-    outputdir = Path("tmp")
-    input_params = {}
-    for p in config:
-        input_params[p['inputtype']] = p.copy()
-        input_params[p["inputtype"]]["output_filepath"] = outputdir.joinpath("heal-dd")
+outputdir = Path("tmp")
+valid_input_params = {}
+valid_output_json = {}
+valid_output_csv = {}
+for p in config:
+    inputtype = p["inputtype"]
+    valid_input_params[inputtype] = p.copy()
+    valid_input_params[inputtype]["output_filepath"] = outputdir.joinpath("heal-dd")
+    if p.get("sheet_name"):
+        file_paths = [Path(p["output_filepath"]+"-"+s) for s in p["sheet_name"]]
+        valid_output_json[inputtype] = [path.with_suffix(".json") for path in file_paths]
+        valid_output_csv[inputtype] = [path.with_suffix(".csv") for path in file_paths]
 
-    return input_params
-
-@pytest.fixture(scope="module")
-def valid_output_json(valid_input_params): 
-    output_paths = {p["inputtype"]:Path(p["output_filepath"]).with_suffix(".json") 
-        for p in config}  
-         
-    return output_paths
-
-@pytest.fixture(scope="module")
-def valid_output_csv(valid_input_params): 
-    output_paths = {p["inputtype"]:Path(p["output_filepath"]).with_suffix(".csv") 
-        for p in config} 
-
-    return output_paths
+    else:
+        valid_output_json[inputtype] = Path(p["output_filepath"]).with_suffix(".json")
+        valid_output_csv[inputtype] = Path(p["output_filepath"]).with_suffix(".csv")
 
 
-def compare_vlmd_tmp_to_output(tmpdir,csvoutput,jsonoutput,fields_propname,stemsuffix=""):
+def _compare_vlmd_tmp_to_output(filepath,csvoutput,jsonoutput,fields_propname):
     """ compares a given csv and json output to a tmp directory
     for both csv and json (vlmd - variable level metadata)
+
+    filepath can be any suffix (json or csv or just file stem as code below explicitly replaces)
     """
-    
-    ddjson = json.loads(list(tmpdir.glob(f"*{stemsuffix}.json"))[0].read_text())
+
+    filepath = Path(filepath)
+    ddjson = json.loads(filepath.with_suffix(".json").read_text())
     #NOTE: csv are just fields so no ddcsv
 
     # check for incorrect fields       
-    csv_fields = list(tmpdir.glob(f"*{stemsuffix}.csv"))[0].read_text().split("\n")
+    csv_fields = filepath.with_suffix(".csv").read_text().split("\n")
     json_fields = ddjson.pop(fields_propname) #NOTE: testing individual fields
 
     valid_output_json_fields = jsonoutput.pop(fields_propname)
@@ -73,3 +67,36 @@ def compare_vlmd_tmp_to_output(tmpdir,csvoutput,jsonoutput,fields_propname,stems
     # check if root level properties other than the fields are valid
     for propname in ddjson:
         assert ddjson[propname] == jsonoutput[propname],f"json dd property '{propname}' assertion failed"
+
+
+
+def compare_vlmd_tmp_to_output(_valid_input_params):
+    # currently json and csv are produced automatically
+    # so should be both a csv and json file (at least 2 files)
+    # more than 2 happens in cases of package-like dds formed such as with excel
+    inputtype = _valid_input_params["inputtype"]
+
+    if isinstance(valid_output_json[inputtype],(Path,str)) and isinstance(valid_output_csv[inputtype],(Path,str)):
+        file_paths = [(valid_output_json[inputtype],valid_output_csv[inputtype])]
+    else:
+        file_paths = zip(valid_output_json[inputtype],valid_output_csv[inputtype])
+    
+    for i,_file_paths in enumerate(file_paths):
+        jsonpath,csvpath = _file_paths
+        
+        _valid_output_json = json.loads(Path(jsonpath).read_text())
+        _valid_output_csv = Path(csvpath).read_text().split("\n")
+        
+        if _valid_input_params.get("sheet_name"):
+            filename = Path(_valid_input_params["output_filepath"]).name + "-" + _valid_input_params.get("sheet_name",[])[i] # need to append if excel file
+            filedir = Path(_valid_input_params["output_filepath"]).parent
+
+            filepath = filedir/filename
+        else:
+            filepath = Path(_valid_input_params["output_filepath"])
+        _compare_vlmd_tmp_to_output(
+            filepath=filepath,
+            csvoutput=_valid_output_csv,
+            jsonoutput=_valid_output_json,
+            fields_propname=fields_propname
+        )

@@ -1,21 +1,18 @@
 from click.testing import CliRunner
 from healdata_utils.cli import vlmd
-from conftest import compare_vlmd_tmp_to_output
+from conftest import _compare_vlmd_tmp_to_output,compare_vlmd_tmp_to_output
+from conftest import valid_input_params,valid_output_json,valid_output_csv,fields_propname
 import shutil
 import os
 import json
 from pathlib import Path
 
-def test_vlmd_extract_all_params(
-    valid_input_params,valid_output_json,valid_output_csv,fields_propname):
+def test_vlmd_extract_all_params():
 
-    inputtypes = list(valid_input_params.keys())
-
-    for inputtype in inputtypes:
+    for inputtype,_input_params in valid_input_params.items():
 
         # collect CLI arguments
         cli_params = ['extract']
-        _input_params = valid_input_params[inputtype]
         
         for paramname,param in _input_params.items():
             
@@ -55,42 +52,16 @@ def test_vlmd_extract_all_params(
 
         assert result.exit_code == 0
 
-        # test CLI output to existing output
-        
-        # currently json and csv are produced automatically
-        # so should be both a csv and json file (at least 2 files)
-        # more than 2 happens in cases of package-like dds formed such as with excel
-        if isinstance(valid_output_json[inputtype],dict) and isinstance(valid_output_csv[inputtype],dict): 
-            for name in valid_output_json[inputtype]:
-                _valid_output_json = json.loads(valid_output_json[inputtype][name].read_text())
-                _valid_output_csv = valid_output_csv[inputtype][name].read_text().split("\n")
-                compare_vlmd_tmp_to_output(
-                    tmpdir=_outdir,
-                    stemsuffix=name, #stem suffix to detect the csv and json files
-                    csvoutput=_valid_output_csv,
-                    jsonoutput=_valid_output_json,
-                    fields_propname=fields_propname
-                )
-        else:
-            _valid_output_json = json.loads(valid_output_json[inputtype].read_text())
-            _valid_output_csv = valid_output_csv[inputtype].read_text().split("\n")
-            #no stemsuffix 
-            compare_vlmd_tmp_to_output(
-                tmpdir=_outdir,
-                csvoutput=_valid_output_csv,
-                jsonoutput=_valid_output_json,
-                fields_propname=fields_propname
-            )
-
+        compare_vlmd_tmp_to_output(_input_params)
             # clean up
         shutil.rmtree(_outdir)
 
 
-def test_vlmd_extract_minimal(valid_input_params):
+def test_vlmd_extract_minimal():
 
     for testname,testparams in valid_input_params.items():
 
-        filepath = str(testparams["input_filepath"].resolve())
+        filepath = str(Path(testparams["input_filepath"]).resolve())
         inputtype = testparams["inputtype"]
 
         try:
@@ -128,7 +99,7 @@ def test_vlmd_validate():
             assert result.exit_code == 0,result.output
 
 
-def test_vlmd_template(fields_propname):
+def test_vlmd_template():
 
     tmpdir = Path("tmp")
 
@@ -144,10 +115,15 @@ def test_vlmd_template(fields_propname):
     assert resultjson.exit_code == 0,resultjson.output
     assert resultcsv.exit_code == 0,resultcsv.output
 
+    # need to rename output files as the compare fxn uses same stem for csv and json
+    # however, overwrite check looks for just the stem so need diff names in above fxn
+    os.rename("tmp/templatejson.json","tmp/template.json")
+    os.rename("tmp/templatecsv.csv","tmp/template.csv")
+
     csvoutput = Path("data/templates/twofields.csv").read_text().split("\n")
     jsonoutput = json.loads(Path("data/templates/twofields.json").read_text())
 
-    compare_vlmd_tmp_to_output(tmpdir,csvoutput,jsonoutput,fields_propname)
+    _compare_vlmd_tmp_to_output("tmp/template",csvoutput,jsonoutput,fields_propname)
 
     shutil.rmtree(tmpdir) 
 
