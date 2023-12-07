@@ -1,0 +1,61 @@
+#list of parameters to pass to convert_to_vlmd to generate test data
+- data_dictionary_props:
+    description: This is a proof of concept to demonstrate the healdata-utils functionality
+    title: Healdata-utils Demonstration Data Dictionary
+  input_filepath: data/input/template_submission.csv
+  inputtype: csv-data-dict
+  output_filepath: data/output/heal_dd_from_csv_data_dict
+  output_overwrite: true
+- data_dictionary_props:
+    description: This is a proof of concept to demonstrate the healdata-utils functionality
+    title: Healdata-utils Demonstration Data Dictionary
+  input_filepath: data/input/excel-multitab-dataset1.xlsx
+  inputtype: excel-data
+  output_filepath: data/output/excel-dataset1/multiple-dd/heal-dd
+  output_overwrite: true
+  sheet_name:
+  - experiment1
+  - experiment2
+- data_dictionary_props:
+    description: This is a proof of concept to demonstrate the healdata-utils functionality
+    title: Healdata-utils Demonstration Data Dictionary
+  input_filepath: data/input/data_csv_dataset1.data.csv
+  inputtype: csv-data
+  output_filepath: data/output/heal_dd_from_csv_data_dataset1
+  output_overwrite: true
+  # TODO: for sas (below) : reduce data so easier to manage and test
+- data_dictionary_props:
+    description: This is a proof of concept to demonstrate the healdata-utils functionality
+    title: Healdata-utils Demonstration Data Dictionary
+  input_filepath: data/input/sas-nmhss-2019/data.sas7bdat
+  inputtype: sas
+  output_filepath: data/output/heal_dd_from_sas7bdat_with_sas7bcat
+  output_overwrite: true
+- data_dictionary_props:
+    description: This is a proof of concept to demonstrate the healdata-utils functionality
+    title: Healdata-utils Demonstration Data Dictionary
+  input_filepath: data/input/stata_dta_dataset1.dta
+  inputtype: stata
+  output_filepath: data/output/heal_dd_from_stata_dta_dataset1
+  output_overwrite: true
+- data_dictionary_props:
+    description: This is a proof of concept to demonstrate the healdata-utils functionality
+    title: Healdata-utils Demonstration Data Dictionary
+  input_filepath: data/input/spss_sav_dataset1.sav
+  inputtype: spss
+  output_filepath: data/output/heal_dd_from_spss_sav_dataset1
+  output_overwrite: true
+- data_dictionary_props:
+    description: This is a proof of concept to demonstrate the healdata-utils functionality
+    title: Healdata-utils Demonstration Data Dictionary
+  input_filepath: data/input/redcap_dd_export.redcap.csv
+  inputtype: redcap-csv
+  output_filepath: data/output/heal_dd_from_redcap_dd_export
+  output_overwrite: true
+- data_dictionary_props:
+    description: This is a proof of concept to demonstrate the healdata-utils functionality
+    title: Healdata-utils Demonstration Data Dictionary
+  input_filepath: data/input/frictionless_dataset1.frictionless.schema.json
+  inputtype: frictionless-tbl-schema
+  output_filepath: data/output/heal_dd_from_frictionless_schema
+  output_overwrite: true

@@ -1,7 +1,0 @@
-module,name,title,description,type,format,constraints.maxLength,constraints.enum,constraints.pattern,constraints.maximum,constraints.minimum,encodings,ordered,missingValues,trueValues,falseValues,repo_link,standardsMappings.type,standardsMappings.label,standardsMappings.url,standardsMappings.source,standardsMappings.id,relatedConcepts.type,relatedConcepts.label,relatedConcepts.url,relatedConcepts.source,relatedConcepts.id,univarStats.median,univarStats.mean,univarStats.std,univarStats.min,univarStats.max,univarStats.mode,univarStats.count,univarStats.twentyFifthPercentile,univarStats.seventyFifthPercentile,univarStats.categoricalMarginals.name,univarStats.categoricalMarginals.count
-,id,,,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,sex,,,string,,,F|M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,force_mn,,,number,,,0.98|9.8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,timepoint,,,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,group,,,string,,,control|experiment,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,withdrawal_freq,,,integer,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

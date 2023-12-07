@@ -3,95 +3,35 @@ from pathlib import Path
 from healdata_utils.conversion import choice_fxn
 import json
 
+config = yaml.safe_load(Path("configs/convert_to_vlmd.yaml").read_text())
+
 @pytest.fixture(scope="module")
 def fields_propname():
     return "data_dictionary"
 
 @pytest.fixture(scope="module")
 def valid_input_params():
-    inputdir = Path("data/valid/input")
     outputdir = Path("tmp")
-    data_dictionary_props = {
-        "description": (
-            "This is a proof of concept to demonstrate"
-            " the healdata-utils functionality"
-        ),
-        "title": "Healdata-utils Demonstration Data Dictionary",
-    }
-    get_input_params = lambda input_filepath: {
-        "input_filepath":inputdir.joinpath(input_filepath),
-        "output_filepath":outputdir.joinpath("heal-dd.json"),
-        "data_dictionary_props":data_dictionary_props}
-        
-    input_params = {
-        "csv-data-dict":{
-           **get_input_params("template_submission.csv"),
-            "inputtype":"csv-data-dict"
+    input_params = {}
+    for p in config:
+        p["output_filepath"] = outputdir.joinpath("heal-dd")
+        input_params[p["inputtype"]] = p
 
-        },
-        "excel-data":{
-            **get_input_params("excel-multitab-dataset1.xlsx"),
-            "inputtype":"excel-data"
-        },
-        "csv-data":{
-            **get_input_params("data_csv_dataset1.data.csv"),
-            "inputtype":"csv-data"
-        },
-        "sas":{
-            **get_input_params("sas-nmhss-2019/data.sas7bdat"),
-            #NOTE: now auto detecting sas formats file
-            # "sas_catalog_filepath":inputdir.joinpath("sas-nmhss-2019/formats.sas7bcat"),
-            "inputtype":"sas"
-        }, #TODO: reduce data so easier to manage and test
-        "stata":{**get_input_params("stata_dta_dataset1.dta"),"inputtype":"stata"},
-        # "sav":get_input_params("../../JCOIN_NORC_Omnibus_SURVEY3_June2020.sav"),
-        "spss":{**get_input_params("spss_sav_dataset1.sav"),"inputtype":"spss"},
-        "redcap":{**get_input_params("redcap_dd_export.redcap.csv"),"inputtype":"redcap-csv"},
-        "frictionless":{**get_input_params("frictionless_dataset1.frictionless.schema.json"),
-            "inputtype":"frictionless-tbl-schema"}
-    }
     return input_params
 
 @pytest.fixture(scope="module")
-def valid_output_json(valid_input_params):
-    path = Path("data/valid/output")
-    filenames = {
-        "excel-data":{
-            "experiment1":path/"excel-dataset1/multiple-dd/heal-dd-experiment1.json",
-            "experiment2":path/"excel-dataset1/multiple-dd/heal-dd-experiment2.json"
-        },
-        "csv-data-dict":path/"heal_dd_from_csv_data_dict.json",
-        "csv-data":path/"heal_dd_from_csv_data_dataset1.json",
-        "sas":path/"heal_dd_from_sas7bdat_with_sas7bcat.json", #TODO: reduce data so easier to manage and test
-        "stata":path/"heal_dd_from_stata_dta_dataset1.json",
-        "spss":path/"heal_dd_from_spss_sav_dataset1.json",
-        "redcap":path/"heal_dd_from_redcap_dd_export.json",
-        "frictionless":path/"heal_dd_from_frictionless_schema.json"
-    }
-    assert set(filenames) == set(valid_input_params)
-            
-    return filenames
+def valid_output_json(valid_input_params): 
+    output_paths = {p["inputtype"]:Path(p["output_filepath"]).with_suffix(".json") 
+        for p in config}  
+         
+    return output_paths
 
 @pytest.fixture(scope="module")
-def valid_output_csv(valid_input_params):
-    path = Path("data/valid/output")
-    filenames = {
-        "excel-data":{
-            "experiment1":path/"excel-dataset1/multiple-dd/heal-dd-experiment1.csv",
-            "experiment2":path/"excel-dataset1/multiple-dd/heal-dd-experiment2.csv"
-        },
-        "csv-data-dict":path/"heal_dd_from_csv_data_dict.csv",
-        "csv-data":path/"heal_dd_from_csv_data_dataset1.csv",
-        "sas":path/"heal_dd_from_sas7bdat_with_sas7bcat.csv",#TODO: reduce data so easier to manage and test
-        "stata":path/"heal_dd_from_stata_dta_dataset1.csv",
-        "spss":path/"heal_dd_from_spss_sav_dataset1.csv",
-        "redcap":path/"heal_dd_from_redcap_dd_export.csv",
-        "frictionless":path/"heal_dd_from_frictionless_schema.csv"
-    }
+def valid_output_csv(valid_input_params): 
+    output_paths = {p["inputtype"]:Path(p["output_filepath"]).with_suffix(".csv") 
+        for p in config} 
 
-    assert set(filenames) == set(valid_input_params)
-
-    return filenames
+    return output_paths
 
 
 def compare_vlmd_tmp_to_output(tmpdir,csvoutput,jsonoutput,fields_propname,stemsuffix=""):

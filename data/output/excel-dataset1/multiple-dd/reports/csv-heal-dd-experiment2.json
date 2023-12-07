@@ -1,0 +1,25 @@
+{
+    "valid": false,
+    "errors": [
+        {
+            "row": 0,
+            "column": "description",
+            "message": "'' should not be valid under {'enum': ['']}"
+        },
+        {
+            "row": 1,
+            "column": "description",
+            "message": "'' should not be valid under {'enum': ['']}"
+        },
+        {
+            "row": 2,
+            "column": "description",
+            "message": "'' should not be valid under {'enum': ['']}"
+        },
+        {
+            "row": 3,
+            "column": "description",
+            "message": "'' should not be valid under {'enum': ['']}"
+        }
+    ]
+}
