@@ -2,6 +2,7 @@ import pytest
 from pathlib import Path
 from healdata_utils.conversion import choice_fxn
 import json
+import yaml
 
 config = yaml.safe_load(Path("configs/convert_to_vlmd.yaml").read_text())
 
@@ -14,8 +15,8 @@ def valid_input_params():
     outputdir = Path("tmp")
     input_params = {}
     for p in config:
-        p["output_filepath"] = outputdir.joinpath("heal-dd")
-        input_params[p["inputtype"]] = p
+        input_params[p['inputtype']] = p.copy()
+        input_params[p["inputtype"]]["output_filepath"] = outputdir.joinpath("heal-dd")
 
     return input_params
 
