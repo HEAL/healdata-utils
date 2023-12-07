@@ -206,7 +206,8 @@ def convert_to_vlmd(
     output_csv_quoting: bool, optional
         If true, all nonnumeric values will be quoted. This helps reduce ambiguity for programs
         like excel that uses special characters for specific purposes (eg = for formulas)
-    
+    output_overwrite: bool, optional
+        If true, will overwrite files of the same name. 
     **kwargs: keyword arguments for specific registered input types
         currently this includes sas catalog file for sas and sheet_names/other params for excel.
 
