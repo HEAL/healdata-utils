@@ -27,6 +27,23 @@ def copy_schemas(fork,branch):
     
     for f in ["jsonschema.py","frictionless.py"]:
         subprocess.run(["black",str(py_schema_dir.joinpath(f))])
+    
+    # docs
+    jsonmd_url = (
+      f"https://raw.githubusercontent.com/{fork}/heal-metadata-schemas/{branch}/"
+      "variable-level-metadata-schema/"
+      "docs/md-rendered-schemas/jsonschema-jsontemplate-data-dictionary.md"
+    )
+    csvmd_url = (
+        f"https://raw.githubusercontent.com/{fork}/heal-metadata-schemas/{branch}/"
+        "variable-level-metadata-schema/"
+        "docs/md-rendered-schemas/jsonschema-csvtemplate-fields.md"
+    )
+    jsonmd = requests.get(jsonmd_url).text
+    csvmd = requests.get(csvmd_url).text
+
+    Path("docs/vlmd/schemas/json-data-dictionary.md").write_text(str(jsonmd))
+    Path("docs/vlmd/schemas/csv-fields.md").write_text(str(csvmd))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=('Copies and formats the HEAL'
