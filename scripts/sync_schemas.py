@@ -57,5 +57,7 @@ if __name__ == "__main__":
         type=str,help="Name of the fork (default is HEAL)",
         default="HEAL")
     args = parser.parse_args()
+    args.fork = "norc-heal"
+    args.branch = "feat/v0.2.0-revisions"
     copy_schemas(args.fork,args.branch)
 

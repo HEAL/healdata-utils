@@ -1,5 +1,5 @@
 healcsvschema = {
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Variable level metadata individual fields integrated into "
     "the variable level\n"
     "metadata object within the HEAL platform metadata service.\n"
@@ -18,11 +18,12 @@ healcsvschema = {
     "title": "HEAL Variable Level Metadata Fields",
     "fields": [
         {
-            "name": "module",
+            "name": "section",
             "description": "The section, form, survey instrument, set of "
             "measures  or other broad category used \n"
-            "to group variables.\n",
-            "title": "Module",
+            "to group variables. Previously called "
+            '"module."\n',
+            "title": "Section",
             "examples": [
                 "Demographics",
                 "PROMIS",
@@ -100,18 +101,18 @@ healcsvschema = {
             "type": "string",
             "constraints": {
                 "enum": [
+                    "geopoint",
                     "number",
                     "datetime",
-                    "date",
-                    "string",
-                    "any",
-                    "year",
-                    "geopoint",
-                    "time",
-                    "integer",
                     "yearmonth",
-                    "duration",
                     "boolean",
+                    "date",
+                    "any",
+                    "duration",
+                    "year",
+                    "integer",
+                    "time",
+                    "string",
                 ]
             },
         },
@@ -255,7 +256,7 @@ healcsvschema = {
             "type": "integer",
         },
         {
-            "name": "encodings",
+            "name": "enumLabels",
             "description": "Variable value encodings provide a way to "
             "further annotate any value within a any "
             "variable type,\n"
@@ -281,7 +282,7 @@ healcsvschema = {
             "constraints": {"pattern": "^(?:.*?=.*?(?:\\||$))+$"},
         },
         {
-            "name": "ordered",
+            "name": "enumOrdered",
             "description": "Indicates whether a categorical variable is "
             "ordered. This variable  is\n"
             "relevant for variables that have an ordered "
@@ -330,15 +331,16 @@ healcsvschema = {
             "type": "string",
             "constraints": {"pattern": "^(?:[^|]+\\||[^|]*)(?:[^|]*\\|)*[^|]*$"},
         },
+        {"name": "standardsMappings[0].instrument.url", "type": "string"},
         {
-            "name": "repo_link",
-            "description": "A link to the variable as it exists on the "
-            "home repository, if applicable\n",
-            "title": "Variable Repository Link",
+            "name": "standardsMappings[0].instrument.source",
             "type": "string",
+            "constraints": {"enum": ["heal-cde"]},
         },
+        {"name": "standardsMappings[0].instrument.title", "type": "string"},
+        {"name": "standardsMappings[0].instrument.id", "type": "string"},
         {
-            "name": "standardsMappings.url",
+            "name": "standardsMappings[0].item.url",
             "description": "The url that links out to the published, "
             "standardized mapping.\n",
             "title": "Standards Mapping - Url",
@@ -346,48 +348,27 @@ healcsvschema = {
             "type": "string",
         },
         {
-            "name": "standardsMappings.type",
-            "description": "The **type** of mapping linked to a published "
-            "set of standard variables such as the NIH "
-            "Common Data Elements program\n",
-            "title": "Standards Mapping - Title",
-            "examples": ["cde", "ontology", "reference_list"],
-            "type": "string",
-        },
-        {
-            "name": "standardsMappings.label",
-            "description": "A free text **label** of a mapping indicating "
-            "a mapping(s) to a published set of standard "
-            "variables such as the NIH Common Data Elements "
-            "program.\n",
-            "title": "Standards Mapping - Label",
-            "examples": ["substance use", "chemical compound", "promis"],
-            "type": "string",
-        },
-        {
-            "name": "standardsMappings.source",
+            "name": "standardsMappings[0].item.source",
             "description": "The source of the standardized variable.\n",
             "title": "Standard Mapping - Source",
-            "examples": ["TBD (will have controlled vocabulary)"],
             "type": "string",
         },
         {
-            "name": "standardsMappings.id",
+            "name": "standardsMappings[0].item.id",
             "description": "The id locating the individual mapping within "
             "the given source.\n",
             "title": "Standard Mapping - Id",
             "type": "string",
         },
         {
-            "name": "relatedConcepts.url",
+            "name": "relatedConcepts[0].url",
             "description": "The url that links out to the published, "
             "standardized concept.\n",
             "title": "Related Concepts - Url",
-            "examples": ["https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"],
             "type": "string",
         },
         {
-            "name": "relatedConcepts.type",
+            "name": "relatedConcepts[0].type",
             "description": "The **type** of mapping to a published set of "
             "concepts related to the given field such as \n"
             "ontological information (eg., NCI thesaurus, "
@@ -396,7 +377,7 @@ healcsvschema = {
             "type": "string",
         },
         {
-            "name": "relatedConcepts.label",
+            "name": "relatedConcepts[0].label",
             "description": "A free text **label** of mapping to a "
             "published set of concepts related to the given "
             "field such as \n"
@@ -406,30 +387,19 @@ healcsvschema = {
             "type": "string",
         },
         {
-            "name": "relatedConcepts.source",
+            "name": "relatedConcepts[0].source",
             "description": "The source of the related concept.\n",
             "title": "Related Concepts - Source",
             "examples": ["TBD (will have controlled vocabulary)"],
             "type": "string",
         },
         {
-            "name": "relatedConcepts.id",
+            "name": "relatedConcepts[0].id",
             "description": "The id locating the individual mapping within "
-            "the given source.\n",
+            "the given source.",
             "title": "Related Concepts - Id",
             "type": "string",
         },
-        {"name": "univarStats.median", "type": "number"},
-        {"name": "univarStats.mean", "type": "number"},
-        {"name": "univarStats.std", "type": "number"},
-        {"name": "univarStats.min", "type": "number"},
-        {"name": "univarStats.max", "type": "number"},
-        {"name": "univarStats.mode", "type": "number"},
-        {"name": "univarStats.count", "type": "integer"},
-        {"name": "univarStats.twentyFifthPercentile", "type": "number"},
-        {"name": "univarStats.seventyFifthPercentile", "type": "number"},
-        {"name": "univarStats.categoricalMarginals.name", "type": "string"},
-        {"name": "univarStats.categoricalMarginals.count", "type": "integer"},
     ],
     "missingValues": [""],
 }
