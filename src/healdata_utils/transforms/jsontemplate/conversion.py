@@ -2,8 +2,7 @@ from pathlib import Path
 import json
 # from frictionless import Resource,Package
 from collections.abc import MutableMapping
-from .mappings import join_prop
-from healdata_utils.utils import flatten_except_if
+from healdata_utils import utils
 from os import PathLike
 
 def convert_templatejson(
@@ -30,9 +29,6 @@ def convert_templatejson(
         This input can be any data object or path-like string excepted by a frictionless Resource object.
     data_dictionary_props : dict
         The HEAL-specified data dictionary properties.
-    mappings : dict, optional
-        Mappings (which can be a dictionary of either lambda functions or other to-be-mapped objects).
-        Default: specified fieldmap.
 
     Returns
     -------
@@ -75,11 +71,7 @@ def convert_templatejson(
     
     fields_csv = []
     for f in fields_json:
-        field_flattened = flatten_except_if(f)
-        field_csv = {
-            propname:join_prop(propname,prop)
-            for propname,prop in field_flattened.items()
-        }
+        field_csv = flatten_json(f)
         fields_csv.append(field_csv)
 
     template_json = dict(**data_dictionary_props,data_dictionary=fields_json)

@@ -1,7 +1,7 @@
 {
     "description": "This is a proof of concept to demonstrate the healdata-utils functionality",
     "title": "Healdata-utils Demonstration Data Dictionary",
-    "data_dictionary": [
+    "fields": [
         {
             "name": "CASEID",
             "type": "integer"
@@ -58,7 +58,7 @@
             "name": "FOCUS",
             "type": "integer",
             "description": "Primary treatment focus of facility",
-            "encodings": {
+            "enumLabels": {
                 "1.0": "Mental health treatment",
                 "2.0": "Substance abuse treatment",
                 "3.0": "Mix of mental health and substance abuse treatment (neither is primary)",
@@ -87,7 +87,7 @@
             "name": "TREATPSYCHOTHRPY",
             "type": "integer",
             "description": "Facility offers individual psychotherapy",
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes"
             },
@@ -126,7 +126,7 @@
             "name": "TREATTRAUMATHRPY",
             "type": "integer",
             "description": "Facility offers trauma therapy",
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes"
             },
@@ -277,7 +277,7 @@
             "name": "YOUNGADULTS",
             "type": "integer",
             "description": "Accepts young adults (aged 18-25 years old) for Tx",
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes"
             },

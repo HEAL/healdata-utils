@@ -1,4 +1,4 @@
-from healdata_utils.utils import sync_fields
+from healdata_utils import utils
 
 
 def test_add_missing_fields():
@@ -14,8 +14,10 @@ def test_add_missing_fields():
     # fields from schema
     fields = ["var1", "var2", "var3", "var4"]
 
-    data_with_missing = sync_fields(data, fields)
+    data_with_missing = utils.sync_fields(data, fields)
     assert data_with_missing == [
         {"var1": 1, "var2": 2, "var3": 3, "var4": None},
         {"var1": 1, "var2": None, "var3": None, "var4": 9, "var5": 10}
     ]
+
+

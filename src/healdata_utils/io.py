@@ -168,7 +168,7 @@ def write_vlmd_template(outputfile,output_overwrite=False,numfields=1):
 
     if ext == ".json":
         schema = schemas.healjsonschema
-        fields_propname = "data_dictionary"
+        fields_propname = "fields"
         template = _generate_jsontemplate(schema)
         template[fields_propname] = numfields *  template[fields_propname]
         Path(outputfile).write_text(json.dumps(template,indent=2))

@@ -2,7 +2,7 @@
     "name": "example_nmhss_2019_first_20recs",
     "title": "Healdata-utils Demonstration Data Dictionary",
     "description": "This is a proof of concept to demonstrate the healdata-utils functionality",
-    "data_dictionary": [
+    "fields": [
         {
             "name": "CASEID",
             "type": "integer",
@@ -34,7 +34,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -63,7 +63,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -92,7 +92,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -121,7 +121,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -150,7 +150,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -179,7 +179,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -208,7 +208,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -237,7 +237,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -266,7 +266,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -295,7 +295,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -332,7 +332,7 @@
                     "-1.9999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "1.0": "Mental health treatment",
                 "2.0": "Substance abuse treatment",
                 "3.0": "Mix of mental health and substance abuse treatment (neither is primary)",
@@ -363,7 +363,7 @@
         {
             "name": "PUBLICAGENCY",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "1.0": "State mental health authority (SMHA)",
                 "2.0": "Other state government agency or department",
                 "3.0": "Regional/district authority or county, local, or municipal government",
@@ -415,7 +415,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -444,7 +444,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -473,7 +473,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -502,7 +502,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -531,7 +531,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -560,7 +560,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -589,7 +589,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -618,7 +618,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -647,7 +647,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -676,7 +676,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -705,7 +705,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -734,7 +734,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -763,7 +763,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",
@@ -792,7 +792,7 @@
                     "-1.4999999999999998"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0.0": "No",
                 "1.0": "Yes",
                 "-3.9999999999999996": "Missing",

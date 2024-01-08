@@ -6,7 +6,7 @@ import yaml
 
 config = yaml.safe_load(Path("configs/convert_to_vlmd.yaml").read_text())
 
-fields_propname = "data_dictionary"
+fields_propname = "fields"
 
 outputdir = Path("tmp")
 valid_input_params = {}

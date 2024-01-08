@@ -1,7 +1,7 @@
 {
     "title": "Example VLMD",
     "description": "This is an example description",
-    "data_dictionary": [
+    "fields": [
         {
             "module": "Enrollment",
             "name": "participant_id",
@@ -30,7 +30,7 @@
                     "8"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "1": "White",
                 "2": "Black or African American",
                 "3": "American Indian or Alaska Native",

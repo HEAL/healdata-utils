@@ -49,7 +49,7 @@ def parse_list_str(string, list_sep):
 
 
 # dictionary utilities
-def flatten_except_if(dictionary, parent_key=False, sep=".", except_keys=["encodings"]):
+def flatten_to_jsonpath(dictionary,schema,parent_key=False, sep="."):
     """
     Turn a nested dictionary into a flattened dictionary. Taken from gen3
     mds.agg_mds.adapter.flatten
@@ -61,14 +61,34 @@ def flatten_except_if(dictionary, parent_key=False, sep=".", except_keys=["encod
     :param except_keys: keys to not flatten. Note, can be nested if using notation specified in sep
     :return: A flattened dictionary
     """
-
+    # flatten if type array -> type object with properties
+    # flatten if type object with properties
     items = []
     for key, value in dictionary.items():
         new_key = str(parent_key) + sep + key if parent_key else key
-        if isinstance(value, MutableMapping) and not new_key in except_keys:
-            items.extend(flatten_except_if(value, new_key, sep).items())
+        prop = schema["properties"][key]
+        childprops = prop.get("properties")
+        childitem_props = prop.get("items",{}).get("properties")
+
+        if childprops:
+            item = flatten_to_jsonpath(
+                dictionary=_value, 
+                schema=prop,
+                parent_key=new_key, 
+                sep=sep)
+            items.extend(item.items())
+        elif childitem_props:
+            for i,_value in enumerate(value):
+                item = flatten_to_jsonpath(
+                    dictionary=_value, 
+                    schema=prop,
+                    parent_key=new_key, 
+                    sep=f"[{str(i)}]{sep}")
+                items.extend(item.items())
+
         else:
             items.append((new_key, value))
+
     return dict(items)
 
 def stringify_keys(dictionary):
@@ -102,6 +122,30 @@ def convert_rec_to_json(field):
                     prop_json[prop_name] = prop
 
     return field_json
+
+# json to csv utils
+def join_iter(iterable,sep_list="|"):
+    return sep_list.join([str(p) for p in iterable])
+
+def join_dictvals(dictionary:dict,sep:str):
+    return sep.join(dictionary.values())
+
+def join_dictitems(dictionary:dict,sep_keyval='=',sep_items='|'):
+    """ joins a mappable collection (ie dictionary) into a string
+    representation with specified separators for the key and value
+    in addition to items. 
+
+    All items are coerced to the string representation (eg if key or value
+    is None, this will be coerced to "None")
+
+
+    """
+    dict_list = []
+    for key,val in dictionary.items():
+        keystr = str(key)
+        valstr = str(val)
+        dict_list.append(keystr+sep_keyval+valstr)
+    return sep_items.join(dict_list)
 
 
 # documentation building utilities
@@ -151,3 +195,6 @@ def sync_fields(data, field_list,missing_value=None):
 
     
     return data_with_missing
+
+
+

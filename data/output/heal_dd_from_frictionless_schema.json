@@ -8,7 +8,7 @@
         "Don't know",
         "Refused"
     ],
-    "data_dictionary": [
+    "fields": [
         {
             "module": "Record and linkage",
             "name": "id",

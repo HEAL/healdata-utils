@@ -1,7 +1,7 @@
 {
     "description": "This is a proof of concept to demonstrate the healdata-utils functionality",
     "title": "Healdata-utils Demonstration Data Dictionary",
-    "data_dictionary": [
+    "fields": [
         {
             "name": "study_id",
             "type": "string",
@@ -69,7 +69,7 @@
         {
             "name": "sex",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "Female",
                 "1": "Male"
             },
@@ -86,7 +86,7 @@
         {
             "name": "given_birth",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -110,7 +110,7 @@
         {
             "name": "ethnicity",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "Hispanic or Latino",
                 "1": "NOT Hispanic or Latino",
                 "2": "Unknown / Not Reported"
@@ -137,7 +137,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -154,7 +154,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -171,7 +171,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -188,7 +188,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -205,7 +205,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -222,7 +222,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -239,7 +239,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -298,7 +298,7 @@
         {
             "name": "diabetes",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -315,7 +315,7 @@
         {
             "name": "diabetes_type",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "Type 1 insulin-dependent",
                 "1": "Type 2 insulin-dependent",
                 "2": "Type 2 non insulin-dependent"
@@ -342,7 +342,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -359,7 +359,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -376,7 +376,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -393,7 +393,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -410,7 +410,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -427,7 +427,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -444,7 +444,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -461,7 +461,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -478,7 +478,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -495,7 +495,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -512,7 +512,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -529,7 +529,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -546,7 +546,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -563,7 +563,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -580,7 +580,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -597,7 +597,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -614,7 +614,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -631,7 +631,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -648,7 +648,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -665,7 +665,7 @@
                     "1"
                 ]
             },
-            "encodings": {
+            "enumLabels": {
                 "0": "Unchecked",
                 "1": "Checked"
             },
@@ -682,7 +682,7 @@
         {
             "name": "access_type",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "Graft",
                 "1": "Fistula",
                 "2": "Catheter with maturing graft",
@@ -703,7 +703,7 @@
         {
             "name": "access_location",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "Forearm",
                 "1": "Upper arm",
                 "2": "Internal jugular vein",
@@ -743,7 +743,7 @@
         {
             "name": "dialysis_schedule_days",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "Monday-Wednesday-Friday",
                 "1": "Tuesday-Thursday-Saturday",
                 "2": "Other"
@@ -762,7 +762,7 @@
         {
             "name": "dialysis_schedule_time",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "First shift",
                 "1": "Second shift",
                 "2": "Third shift",
@@ -783,7 +783,7 @@
         {
             "name": "etiology_esrd",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "Diabetes",
                 "1": "Hypertension",
                 "2": "Glomerulonephritis",
@@ -889,7 +889,7 @@
         {
             "name": "plasma1_b",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -906,7 +906,7 @@
         {
             "name": "plasma2_b",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -923,7 +923,7 @@
         {
             "name": "plasma3_b",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -940,7 +940,7 @@
         {
             "name": "serum1_b",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -957,7 +957,7 @@
         {
             "name": "serum2_b",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -974,7 +974,7 @@
         {
             "name": "serum3_b",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1077,7 +1077,7 @@
         {
             "name": "compliance_1",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "100 percent",
                 "1": "99-75 percent",
                 "2": "74-50 percent",
@@ -1100,7 +1100,7 @@
         {
             "name": "hospit_1",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1117,7 +1117,7 @@
         {
             "name": "cause_hosp_1",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "1": "Vascular access related events",
                 "2": "CVD events",
                 "3": "Other"
@@ -1152,7 +1152,7 @@
         {
             "name": "discharge_summary_1",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1169,7 +1169,7 @@
         {
             "name": "death_1",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1194,7 +1194,7 @@
         {
             "name": "cause_death_1",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "1": "All-cause",
                 "2": "Cardiovascular"
             },
@@ -1282,7 +1282,7 @@
         {
             "name": "compliance_2",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "100 percent",
                 "1": "99-75 percent",
                 "2": "74-50 percent",
@@ -1305,7 +1305,7 @@
         {
             "name": "hospit_2",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1322,7 +1322,7 @@
         {
             "name": "cause_hosp_2",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "1": "Vascular access related events",
                 "2": "CVD events",
                 "3": "Other"
@@ -1357,7 +1357,7 @@
         {
             "name": "discharge_summary_2",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1374,7 +1374,7 @@
         {
             "name": "death_2",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1399,7 +1399,7 @@
         {
             "name": "cause_death_2",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "1": "All-cause",
                 "2": "Cardiovascular"
             },
@@ -1488,7 +1488,7 @@
         {
             "name": "plasma1_3",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1505,7 +1505,7 @@
         {
             "name": "plasma2_3",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1522,7 +1522,7 @@
         {
             "name": "plasma3_3",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1539,7 +1539,7 @@
         {
             "name": "serum1_3",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1556,7 +1556,7 @@
         {
             "name": "serum2_3",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1573,7 +1573,7 @@
         {
             "name": "serum3_3",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1604,7 +1604,7 @@
         {
             "name": "compliance_3",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "100 percent",
                 "1": "99-75 percent",
                 "2": "74-50 percent",
@@ -1627,7 +1627,7 @@
         {
             "name": "hospit_3",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1644,7 +1644,7 @@
         {
             "name": "cause_hosp_3",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "1": "Vascular access related events",
                 "2": "CVD events",
                 "3": "Other"
@@ -1679,7 +1679,7 @@
         {
             "name": "discharge_summary_3",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1696,7 +1696,7 @@
         {
             "name": "death_3",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1721,7 +1721,7 @@
         {
             "name": "cause_death_3",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "1": "All-cause",
                 "2": "Cardiovascular"
             },
@@ -1738,7 +1738,7 @@
         {
             "name": "complete_study",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes"
             },
@@ -1763,7 +1763,7 @@
         {
             "name": "withdraw_reason",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "Non-compliance",
                 "1": "Did not wish to continue in study",
                 "2": "Could not tolerate the supplement",

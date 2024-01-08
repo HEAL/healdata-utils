@@ -12,13 +12,16 @@ from pathlib import Path
 # from frictionless import Resource,Package
 from healdata_utils.utils import convert_rec_to_json
 from healdata_utils.io import read_delim
-from .mappings import fieldmap,zipmap,typemap,castnumbers
+from healdata_utils import mappings,schemas
 from os import PathLike
 
 def convert_templatecsv(
     csvtemplate: str,
     data_dictionary_props: dict,
-    mappings: dict = fieldmap,
+    renamemap:dict=None,
+    recodemap:dict=None,
+    droplist:dict=None,
+    **kwargs
 ) -> dict:
     """
     [shortdesc]
@@ -39,10 +42,10 @@ def convert_templatecsv(
         This input can be any data object or path-like string excepted by a frictionless Resource object.
     data_dictionary_props : dict
         The HEAL-specified data dictionary properties.
-    mappings : dict, optional
-        Mappings (which can be a dictionary of either lambda functions or other to-be-mapped objects).
-        Default: specified fieldmap.
-
+    renamemap: A mapping of source (current) column headers to target (desired -- conforming to CVS HEAL spec)
+        column headers 
+    recodemap: A mapping of values for each column in HEAL spec -- {..."colname":{"oldvalue":"newvalue"...}...}
+    droplist: a list of variables to drop from headers before processing
     Returns
     -------
     dict
@@ -57,25 +60,40 @@ def convert_templatecsv(
     else:
         template_tbl = pd.DataFrame(csvtemplate)
 
-    # apply convert functions for fields that exist in input
-    convertfields = {
-        propname:fxn 
-        for propname,fxn in mappings.items() 
-        if propname in template_tbl
+    if not renamemap:
+        renamemap = {}
+
+    if not recodemap:
+        recodemap = {}
+
+    if not droplist:
+        droplist = []
+
+    # cast numbers explicitly based on schema
+    # this is needed in case there is only one record in a string column that is a number (ie don't want to convert)
+    castnumbers = {
+        field["name"]:lambda v:int(v[field["name"]]) 
+        if field["type"]=="integer" 
+        else lambda v: float(v[field["name"]])
+        for field in schemas.healcsvschema["fields"]
+        if field.get("type","") in ["integer","number"]
     }
-    castfields = {
-        propname:fxn 
-        for propname,fxn in castnumbers.items() 
-        if propname in template_tbl
-    }
+    
+
 
     tbl_csv = (
-        etl.fromdataframe(template_tbl)
-        .convert(castfields)
-        .convertall({None:""})
+        template_tbl
+        .rename(columns=renamemap)
+        .replace(recodemap)
+        .drop(columns=droplist)
+        .assign(**castnumbers)
+        .apply(lambda v: utils.join_dictitems(v) 
+            if isinstance(v,MutableMapping) else v)
+        .apply(lambda v: "|".join)
     )
-    fields_csv = list(tbl_csv.dicts())
-    
+
+    # TODO: split array/load dict in the for loop rather than in 
+    # table
     tbl_json = (
         tbl_csv
         .convert(convertfields)
@@ -83,18 +101,7 @@ def convert_templatecsv(
 
     fields_json = []
     for record in tbl_json.dicts():
-        jsonrecord = convert_rec_to_json(record)
-        # if supposed to be an array of records,with properties spanning multiple columns in templatecsv, create that
-        # eg {"test":[1,2]} --> [{"test":1},{"test":2}]
-        for name in zipmap:
-            if name in jsonrecord:
-                field = jsonrecord.pop(name)
-                headers = field.keys()
-                values = field.values()
-                newfield = etl.fromcolumns(values,header=headers).dicts()
-                jsonrecord[name] = [{name:val for name,val in _record.items() if val} 
-                    for _record in newfield]
-        
+        jsonrecord = convert_rec_to_json(record)        
         fields_json.append(jsonrecord)
 
     template_json = dict(**data_dictionary_props,data_dictionary=fields_json)

@@ -1,5 +1,5 @@
 {
-    "data_dictionary": [
+    "fields": [
         {
             "name": "id",
             "type": "integer",
@@ -13,7 +13,7 @@
         {
             "name": "sex_at_birth",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "1": "Male",
                 "2": "Female",
                 "3": "Intersex",
@@ -38,7 +38,7 @@
         {
             "name": "race",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "1": "White",
                 "2": "Black or African American",
                 "3": "American Indian or Alaska Native",
@@ -71,7 +71,7 @@
         {
             "name": "hispanic_ethnicity",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "0": "No",
                 "1": "Yes",
                 "a": "Not reported",
@@ -92,7 +92,7 @@
         {
             "name": "SU4",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "a": "Not reported",
                 "b": "Prefer not to answer"
             },
@@ -108,7 +108,7 @@
         {
             "name": "age",
             "type": "integer",
-            "encodings": {
+            "enumLabels": {
                 "a": "Not reported",
                 "b": "Prefer not to answer"
             },

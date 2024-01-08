@@ -1,7 +1,7 @@
 {
     "description": "This is a proof of concept to demonstrate the healdata-utils functionality",
     "title": "Healdata-utils Demonstration Data Dictionary",
-    "data_dictionary": [
+    "fields": [
         {
             "name": "id",
             "type": "integer",
@@ -24,7 +24,7 @@
             "name": "sex_at_birth",
             "type": "integer",
             "description": "The self-reported sex of the participant/subject at birth",
-            "encodings": {
+            "enumLabels": {
                 "1.0": "Male",
                 "2.0": "Female",
                 "3.0": "Intersex",
@@ -49,7 +49,7 @@
             "name": "race",
             "type": "integer",
             "description": "Self-reported race",
-            "encodings": {
+            "enumLabels": {
                 "1.0": "White",
                 "2.0": "Black or African American",
                 "3.0": "American Indian or Alaska Native",
@@ -82,7 +82,7 @@
             "name": "hispanic_ethnicity",
             "type": "integer",
             "description": "Are you of Hispanic, Latino, or Spanish origin?",
-            "encodings": {
+            "enumLabels": {
                 "1.0": "Yes",
                 "0.0": "No",
                 "-99.0": "Not reported",
@@ -103,7 +103,7 @@
             "name": "SU4",
             "type": "integer",
             "description": "Heroin Days Used in days",
-            "encodings": {
+            "enumLabels": {
                 "-99.0": "Not reported",
                 "-98.0": "Prefer not to answer"
             },
@@ -116,7 +116,7 @@
             "name": "age",
             "type": "integer",
             "description": "Age of participant in year",
-            "encodings": {
+            "enumLabels": {
                 "-99.0": "Not reported",
                 "-98.0": "Prefer not to answer"
             },

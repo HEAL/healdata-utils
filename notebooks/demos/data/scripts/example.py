@@ -139,6 +139,6 @@ for ext in ["sav","dta"]:
     ddjson = json.dumps(dds['templatejson'],indent=4)
     Path(f"../example_{ext}_pyreadstat_output.json").write_text(ddjson)
 
-    pd.DataFrame(dds['templatecsv']["data_dictionary"])\
+    pd.DataFrame(dds['templatecsv']["fields"])\
         .to_csv(f"../example_{ext}_pyreadstat_output.csv",index=False)
 
