@@ -44,8 +44,8 @@ def parse_dictionary_str(string, item_sep, keyval_sep):
     return items
 
 
-def parse_list_str(string, list_sep):
-    return string.strip().split(list_sep)
+def parse_list_str(string, item_sep):
+    return string.strip().split(item_sep)
 
 
 # dictionary utilities
@@ -95,7 +95,6 @@ def stringify_keys(dictionary):
     orig_keys = list(dictionary.keys())
     for key in orig_keys:
         dictionary[str(key)] = dictionary.pop(key)
-import re
 
 def unflatten_jsonpath(field):
     """
@@ -225,4 +224,41 @@ def sync_fields(data, field_list,missing_value=None):
     return data_with_missing
 
 
+# %% 
+# Working with schemas
+def flatten_properties(properties, parentkey="", sep=".",itemsep="[0]"):
+    """
+    flatten schema properties
+    """
+    properties_flattened = {}
+    for key, item in properties.items():
+        # flattened keys
+        if parentkey:
+            flattenedkey = parentkey + "." + key
+        else:
+            flattenedkey = key
 
+        if isinstance(item, MutableMapping):
+            props = item.get("properties")
+            items = item.get("items",{}).get("properties")
+            if props:
+                newprops = flatten_properties(props, parentkey=flattenedkey)
+                properties_flattened.update(newprops)
+
+            elif items:
+                newprops = flatten_properties(items,parentkey=flattenedkey+itemsep)
+                properties_flattened.update(newprops)
+            else:
+                properties_flattened[flattenedkey] = item
+        
+        else:
+            properties_flattened[flattenedkey] = item
+    
+    return properties_flattened
+
+def flatten_schema(schema):
+    schema_flattened = dict(schema)
+    properties = schema.get("properties")
+    if properties:
+        schema_flattened["properties"] = flatten_properties(properties)
+    return schema_flattened
