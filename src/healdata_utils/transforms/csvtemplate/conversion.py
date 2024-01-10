@@ -10,9 +10,8 @@ see convert_templatecsv_to_json and convert_json_to_templatecsv
 import petl as etl
 from pathlib import Path
 # from frictionless import Resource,Package
-from healdata_utils.utils import convert_rec_to_json
 from healdata_utils.io import read_delim
-from healdata_utils import mappings,schemas
+from healdata_utils import mappings,schemas,utils
 from os import PathLike
 
 def convert_templatecsv(
@@ -21,6 +20,8 @@ def convert_templatecsv(
     renamemap:dict=None,
     recodemap:dict=None,
     droplist:dict=None,
+    item_sep:str="|", 
+    keyval_sep:str="=",
     **kwargs
 ) -> dict:
     """
@@ -46,6 +47,9 @@ def convert_templatecsv(
         column headers 
     recodemap: A mapping of values for each column in HEAL spec -- {..."colname":{"oldvalue":"newvalue"...}...}
     droplist: a list of variables to drop from headers before processing
+    item_sep:str (default:"|") Used to split stringified items (in objects and arrays)
+    keyval_sep:str (default:"=") Used to split stringified each key-value pair
+
     Returns
     -------
     dict
@@ -69,42 +73,38 @@ def convert_templatecsv(
     if not droplist:
         droplist = []
 
+    # get transforms
     # cast numbers explicitly based on schema
     # this is needed in case there is only one record in a string column that is a number (ie don't want to convert)
-    castnumbers = {
-        field["name"]:lambda v:int(v[field["name"]]) 
-        if field["type"]=="integer" 
-        else lambda v: float(v[field["name"]])
-        for field in schemas.healcsvschema["fields"]
-        if field.get("type","") in ["integer","number"]
-    }
-    
-
+    fields = utils.flatten_properties(schemas.healjsonschema["properties"]["fields"]["items"]["properties"])
+    castnumbers = {}
+    parse_dicts_and_lists = {}
+    for fieldname,field in fields.items(): 
+        if field["type"] == "integer":
+            castnumbers[fieldname] = lambda v:int(v[fieldname]) 
+        elif field["type"] == "number":
+            castnumbers[fieldname] = lambda v:float(v[fieldname])
+        elif field["type"] == "object":
+            fxn = lambda v: utils.parse_dictionary_str(v[fieldname],item_sep,keyval_sep)
+            parse_dicts_and_lists[fieldname] = fxn
+        elif field["type"] == "array":
+            parse_dicts_and_lists[fieldname] = lambda v: utils.parse_list_str(v[fieldname],item_sep)
 
     tbl_csv = (
         template_tbl
         .rename(columns=renamemap)
         .replace(recodemap)
-        .drop(columns=droplist)
+        .drop(columns=droplist,errors="ignore")
         .assign(**castnumbers)
-        .apply(lambda v: utils.join_dictitems(v) 
-            if isinstance(v,MutableMapping) else v)
-        .apply(lambda v: "|".join)
-    )
-
-    # TODO: split array/load dict in the for loop rather than in 
-    # table
-    tbl_json = (
-        tbl_csv
-        .convert(convertfields)
+        .assign(**parse_dicts_and_lists)
     )
 
     fields_json = []
-    for record in tbl_json.dicts():
-        jsonrecord = convert_rec_to_json(record)        
+    for record in tbl_csv.to_dict(orient="records"):
+        jsonrecord = utils.unflatten_jsonpath(record,schemas.healjsonschema)        
         fields_json.append(jsonrecord)
 
-    template_json = dict(**data_dictionary_props,data_dictionary=fields_json)
-    template_csv = dict(**data_dictionary_props,data_dictionary=fields_csv)
+    template_json = dict(**data_dictionary_props,fields=fields_json)
+    template_csv = dict(**data_dictionary_props,fields=fields_csv)
 
     return {"templatejson":template_json,"templatecsv":template_csv}
