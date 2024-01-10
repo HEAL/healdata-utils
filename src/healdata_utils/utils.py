@@ -35,17 +35,25 @@ def parse_dictionary_str(string, item_sep, keyval_sep):
     based on item separator
 
     """
-    stritems = string.strip().split(item_sep)
-    items = {}
-    for stritem in stritems:
-        item = stritem.split(keyval_sep, 1)
-        items[item[0]] = item[1].strip()
+    if string != "" and string != None:
+        stritems = string.strip().split(item_sep)
+        items = {}
 
-    return items
+        for stritem in stritems:
+            if stritem:
+                item = stritem.split(keyval_sep, 1)
+                items[item[0].strip()] = item[1].strip()
+        
+        return items
+    else:
+        return string
 
 
 def parse_list_str(string, item_sep):
-    return string.strip().split(item_sep)
+    if string != "" and string != None:
+        return string.strip().split(item_sep)
+    else:
+        return string
 
 
 # dictionary utilities
@@ -105,6 +113,13 @@ def unflatten_jsonpath(field):
 
     for prop_path, prop in field.items():
         prop_json = field_json
+
+        # if isinstance(prop,list):
+        #     prop = [v for val in prop if if val != None or val != ""]
+        # elif isinstance(prop,dict):
+        #     # filter falsey  values of "" and None
+        #     prop = {key:val for key,val in prop.items() if val != None or val != ""}
+
 
         if prop:
             # Get the necessary info from the JSON path 
