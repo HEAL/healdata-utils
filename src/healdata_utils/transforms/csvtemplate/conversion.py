@@ -11,7 +11,8 @@ import petl as etl
 from pathlib import Path
 # from frictionless import Resource,Package
 from healdata_utils.io import read_delim
-from healdata_utils import mappings,schemas,utils
+from healdata_utils import schemas,utils,mappings
+from healdata_utils.mappings import versions
 from os import PathLike
 
 def convert_templatecsv(
@@ -77,34 +78,52 @@ def convert_templatecsv(
     # cast numbers explicitly based on schema
     # this is needed in case there is only one record in a string column that is a number (ie don't want to convert)
     fields = utils.flatten_properties(schemas.healjsonschema["properties"]["fields"]["items"]["properties"])
-    castnumbers = {}
-    parse_dicts_and_lists = {}
-    for fieldname,field in fields.items(): 
-        if field["type"] == "integer":
-            castnumbers[fieldname] = lambda v:int(v[fieldname]) 
-        elif field["type"] == "number":
-            castnumbers[fieldname] = lambda v:float(v[fieldname])
-        elif field["type"] == "object":
-            fxn = lambda v: utils.parse_dictionary_str(v[fieldname],item_sep,keyval_sep)
-            parse_dicts_and_lists[fieldname] = fxn
-        elif field["type"] == "array":
-            parse_dicts_and_lists[fieldname] = lambda v: utils.parse_list_str(v[fieldname],item_sep)
+    def castnumbers(df):
+        for fieldname,field in fields.items(): 
+            if fieldname in df:
+                if field["type"] == "integer":
+                    df[fieldname] = df[fieldname].apply(lambda s: int(float(s)) if s else s)
+                elif field["type"] == "number":
+                    df[fieldname] = df[fieldname].astype(float)
+        
+        return df
+
+    def parse_dicts_and_lists(df):
+        for fieldname,field in fields.items(): 
+            if fieldname in df:
+                if field["type"] == "object":
+                    newcol = df[fieldname].apply(utils.parse_dictionary_str,item_sep=item_sep,keyval_sep=keyval_sep)
+                    df[fieldname] = newcol
+                elif field["type"] == "array":
+                    df[fieldname] = df[fieldname].apply(utils.parse_list_str,item_sep=item_sep)
+
+        return df
+
 
     tbl_csv = (
         template_tbl
         .rename(columns=renamemap)
         .replace(recodemap)
         .drop(columns=droplist,errors="ignore")
-        .assign(**castnumbers)
-        .assign(**parse_dicts_and_lists)
+        .pipe(castnumbers)
     )
+    fields_csv = tbl_csv.to_dict(orient="records")
 
-    fields_json = []
-    for record in tbl_csv.to_dict(orient="records"):
-        jsonrecord = utils.unflatten_jsonpath(record,schemas.healjsonschema)        
-        fields_json.append(jsonrecord)
+    tbl_json = tbl_csv.pipe(parse_dicts_and_lists)
+    fields_json = [utils.unflatten_jsonpath(record) 
+        for record in tbl_json.to_dict(orient="records")]
 
     template_json = dict(**data_dictionary_props,fields=fields_json)
     template_csv = dict(**data_dictionary_props,fields=fields_csv)
 
     return {"templatejson":template_json,"templatecsv":template_csv}
+
+
+def update_templatecsv_version(csvtemplate,data_dictionary_props,**kwargs):
+    params = {
+        "renamemap":mappings.versions.fields_renamemap,
+        "recodemap":mappings.versions.fields_recodemap,
+        "droplist":mappings.versions.fields_droplist,
+        **kwargs
+    }
+    return convert_templatecsv(csvtemplate,data_dictionary_props,**params)
