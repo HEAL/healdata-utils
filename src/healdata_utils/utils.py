@@ -98,28 +98,61 @@ def stringify_keys(dictionary):
 
 def convert_rec_to_json(field):
     """
-    converts a flattened dictionary to a nested dictionary
-    based on JSON path dot notation indicating nesting
+    converts a flattened dictionary with key names conforming to 
+    JSONpath notation to the nested dictionary format
     """
     field_json = {}
     for prop_path, prop in field.items():
-        if str(prop) and str(prop) != "<NA>" and str(prop) != "nan":
-            # initiate the prop to be added with the entire
-            # field
-            prop_json = field_json
-            # get the inner most dictionary item of the jsonpath
-            nested_names = prop_path.split(".")
-            for i, prop_name in enumerate(nested_names):
-                is_last_nested = i + 1 == len(nested_names)
-                if prop_json.get(prop_name) and not is_last_nested:
-                    prop_json = prop_json[prop_name]
-                # if no object currently
-                elif not is_last_nested:
-                    prop_json[prop_name] = {}
-                    prop_json = prop_json[prop_name]
-                # assign property to inner most item
+        prop_json = field_json
+        if prop:
+            # get the necessary info from the json path 
+            # (property name, any list indices,a property depth level index) 
+            nested_names = [re.sub("\[\d+\]$","",prop_name) 
+                for prop_name in prop_path.split(".")]
+            nested_indices = [
+                re.findall("\[(\d+)\]$",prop_name)[-1] if re.search("\[(\d+)\]$",prop_name)
+                else None
+                for prop_name in prop_path.split(".")
+            ]
+            parent_indices = [None] + nested_indices[:-1] # No parent index for first level
+
+
+            # create the nested json structure
+            for parent_index,prop_name,current_index in zip(parent_indices,nested_names,nested_indices):
+                is_last_nested = prop_name == nested_names[-1]
+                parent_is_array = not parent_index is None
+                parent_is_dict = not parent_is_array
+
+                current_is_array = not current_index is None
+                current_is_dict = not current_is_array
+
+
+                if current_is_array:
+                    if not prop_name in prop_json:
+                        prop_json[prop_name] = [None]*(int(current_index) +1)
+                    else:
+                        if int(current_index) +1 > len(prop_json[prop_name]):
+                            len_extend = len(prop_json[prop_name]) - int(current_index) + 1
+                            prop_json[prop_name].extend([None]*len_extend)
+                    if is_last_nested:
+                        prop_json[prop_name][current_index] = prop
+                    else:
+                        prop_json = prop_json[prop_name]
                 else:
-                    prop_json[prop_name] = prop
+                    if not prop_name in prop_json:
+                        prop_json[prop_name] = {}
+                    
+                    if parent_is_array:
+                        if is_last_nested:
+                            prop_json[prop_name][parent_index] = prop
+                        else:
+                            prop_json = prop_json[parent_index][prop_name]
+                    else:
+                        if is_last_nested:
+                            prop_json[prop_name] = prop
+                        else:
+                            prop_json = prop_json[prop_name]
+
 
     return field_json
 
