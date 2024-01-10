@@ -3,6 +3,13 @@
     description: This is a proof of concept to demonstrate the healdata-utils functionality
     title: Healdata-utils Demonstration Data Dictionary
   input_filepath: data/input/template_submission.csv
+  inputtype: csv-version-update
+  output_filepath: data/output/heal_dd_from_csv_data_dict
+  output_overwrite: true
+- data_dictionary_props:
+    description: This is a proof of concept to demonstrate the healdata-utils functionality
+    title: Healdata-utils Demonstration Data Dictionary
+  input_filepath: data/input/template_submission.csv
   inputtype: csv-data-dict
   output_filepath: data/output/heal_dd_from_csv_data_dict
   output_overwrite: true
