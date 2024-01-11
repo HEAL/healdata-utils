@@ -59,14 +59,14 @@ def parse_list_str(string, item_sep):
 # dictionary utilities
 def flatten_to_jsonpath(dictionary,schema,parent_key=False, sep="."):
     """
-    Turn a nested dictionary into a flattened dictionary. Taken from gen3
-    mds.agg_mds.adapter.flatten
-    but added except keys and fixed a bug where parent is always False in MutableMapping
+    Turn a nested dictionary into a flattened dictionary (but see schema param)
 
     :param dictionary: The dictionary to flatten
+    :param schema: The schema to indicate which properties to flatten
+        This includes dictionaries (properties) with child dictionaries (properties)
+        and lists (items) with child dictionaries (properties)
     :param parent_key: The string to prepend to dictionary's keys
-    :param sep: The string used to separate flattened keys
-    :param except_keys: keys to not flatten. Note, can be nested if using notation specified in sep
+    :param sep: The string used to separate flattened keys 
     :return: A flattened dictionary
     """
     # flatten if type array -> type object with properties
@@ -78,14 +78,7 @@ def flatten_to_jsonpath(dictionary,schema,parent_key=False, sep="."):
         childprops = prop.get("properties")
         childitem_props = prop.get("items",{}).get("properties")
 
-        if childprops:
-            item = flatten_to_jsonpath(
-                dictionary=_value, 
-                schema=prop,
-                parent_key=new_key, 
-                sep=sep)
-            items.extend(item.items())
-        elif childitem_props:
+        if childitem_props:
             for i,_value in enumerate(value):
                 item = flatten_to_jsonpath(
                     dictionary=_value, 
@@ -93,6 +86,13 @@ def flatten_to_jsonpath(dictionary,schema,parent_key=False, sep="."):
                     parent_key=new_key, 
                     sep=f"[{str(i)}]{sep}")
                 items.extend(item.items())
+        elif childprops:
+            item = flatten_to_jsonpath(
+                dictionary=value, 
+                schema=prop,
+                parent_key=new_key, 
+                sep=sep)
+            items.extend(item.items())
 
         else:
             items.append((new_key, value))
@@ -104,7 +104,7 @@ def stringify_keys(dictionary):
     for key in orig_keys:
         dictionary[str(key)] = dictionary.pop(key)
 
-def unflatten_jsonpath(field):
+def unflatten_from_jsonpath(field):
     """
     Converts a flattened dictionary with key names conforming to 
     JSONpath notation to the nested dictionary format.
