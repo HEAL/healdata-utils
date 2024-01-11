@@ -12,7 +12,7 @@ def _flatten(map):
 typemap = {
     {"target":"integer","source":["int"]},
     {"target":"string","source":["str","character","char","text"]},
-    {"target":"number","source":["num","float","decimal"]},
+    {"target":"number","source":["num","float","decimal","numeric"]},
     {"target":"boolean","source":["bool"]}
 }
 requiredmap = [
