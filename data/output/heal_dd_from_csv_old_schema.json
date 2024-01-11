@@ -1,0 +1,145 @@
+{
+    "description": "This is a proof of concept to demonstrate the healdata-utils functionality",
+    "title": "Healdata-utils Demonstration Data Dictionary",
+    "standardsMappings": [
+        {
+            "instrument": {
+                "title": "Adult Demographics"
+            }
+        }
+    ],
+    "fields": [
+        {
+            "section": "Demographics",
+            "name": "BRTHDTC",
+            "title": "Birth date",
+            "description": "Date (and time, if applicable and known) the participant/subject was born.",
+            "type": "date"
+        },
+        {
+            "section": "Demographics",
+            "name": "Age",
+            "title": "Age",
+            "description": "Value for participant/subject's age, calculated as elapsed time since the birth of the participant/subject.",
+            "type": "integer"
+        },
+        {
+            "section": "Demographics",
+            "name": "AgeU",
+            "title": "Age unit",
+            "description": "Unit of measure for Age",
+            "type": "string",
+            "constraints": {
+                "enum": [
+                    "years",
+                    "months",
+                    "weeks",
+                    "days",
+                    "hours"
+                ]
+            },
+            "standardsMappings": [
+                {
+                    "item": {
+                        "source": "CDISC",
+                        "id": "C66781"
+                    }
+                }
+            ]
+        },
+        {
+            "section": "Demographics",
+            "name": "Sex",
+            "title": "Sex birth type",
+            "description": "Self-reported sex at birth of the participant/subject. The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.",
+            "type": "integer",
+            "enumLabels": {
+                "1": "Male, A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both",
+                "2": "Female, A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both",
+                "3": "Unknown, Not known, not observed, not recorded, or refused",
+                "4": "Intersex, A person (one of unisexual specimens) who is born with genitalia and/or secondary sexual characteristics of indeterminate sex, or which combine features of both sexes"
+            },
+            "constraints": {
+                "enum": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            },
+            "standardsMappings": [
+                {
+                    "item": {
+                        "source": "CDISC",
+                        "id": "C66731"
+                    }
+                }
+            ]
+        },
+        {
+            "section": "Demographics",
+            "name": "GENIDENT",
+            "title": "Gender identification type",
+            "description": "Self-reported participant's/subject's internally held sense of their gender, which may or may not correspond to the individual's genotypic or phenotypic sex.",
+            "type": "integer",
+            "enumLabels": {
+                "1": "Male",
+                "2": "Female",
+                "3": "Unknown",
+                "4": "Other, specify"
+            },
+            "constraints": {
+                "enum": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            },
+            "standardsMappings": [
+                {
+                    "item": {
+                        "source": "CDISC",
+                        "id": "C158277"
+                    }
+                }
+            ]
+        },
+        {
+            "section": "Demographics",
+            "name": "GENIDENTOTH",
+            "title": "Gender identification other type text",
+            "description": "The free-text field related to 'Gender idenitification type.",
+            "type": "string"
+        },
+        {
+            "section": "Demographics",
+            "name": "ETHNIC",
+            "title": "Ethnicity category",
+            "description": "Category of ethnicity the participant/subject most closely identifies with. A social group characterized by a distinctive social and cultural tradition maintained from generation to generation, a common history and origin and a sense of identification with the group; members of the group have distinctive features in their way of life, shared experiences and often a common genetic heritage; these features may be reflected in their experience of health and disease",
+            "type": "integer",
+            "enumLabels": {
+                "1": "Hispanic or Latino, A person of Mexican, Puerto Rican, Cuban, Central or South American or other Spanish culture or origin, regardless of race",
+                "2": "Not Hispanic or Latino, A person not of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. An arbitrary ethnic classification",
+                "3": "Unknown, Not known, not observed, not recorded, or refused",
+                "4": "Not reported, Not provided or available"
+            },
+            "constraints": {
+                "enum": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            },
+            "standardsMappings": [
+                {
+                    "item": {
+                        "source": "CDISC",
+                        "id": "C66790"
+                    }
+                }
+            ]
+        }
+    ]
+}
