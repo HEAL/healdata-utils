@@ -37,6 +37,7 @@ healcsvschema = {
             "(not applicable for the json version as this "
             "property is already at the schema/root "
             "level)\n",
+            "examples": ["1.0.0", "0.2.0"],
             "type": "string",
             "constraints": {"pattern": "\\d+\\.\\d+\\.\\d+"},
         },
@@ -90,17 +91,17 @@ healcsvschema = {
             "type": "string",
             "constraints": {
                 "enum": [
-                    "boolean",
-                    "any",
-                    "number",
-                    "date",
-                    "time",
-                    "yearmonth",
-                    "duration",
                     "geopoint",
                     "year",
-                    "integer",
+                    "boolean",
+                    "yearmonth",
+                    "any",
+                    "date",
+                    "time",
+                    "duration",
                     "datetime",
+                    "integer",
+                    "number",
                     "string",
                 ]
             },
@@ -117,6 +118,16 @@ healcsvschema = {
             "`format` values by variable `type`.\n",
             "title": "Variable Format",
             "type": "string",
+        },
+        {
+            "name": "constraints.required",
+            "description": "If this variable is marked as true, then this "
+            "variable's value must be present\n"
+            "(ie not missing; see missingValues). If marked "
+            "as false or not present, then the \n"
+            "variable CAN be missing.\n",
+            "title": "Required variable",
+            "type": "boolean",
         },
         {
             "name": "constraints.maxLength",

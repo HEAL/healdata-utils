@@ -42,6 +42,7 @@ healjsonschema = {
             "property is already at "
             "the schema/root level)\n",
             "pattern": "\\d+\\.\\d+\\.\\d+",
+            "examples": ["1.0.0", "0.2.0"],
         },
         "version": {
             "type": "string",
@@ -359,6 +360,98 @@ healjsonschema = {
                 "type": "object",
                 "required": ["name", "description"],
                 "properties": {
+                    "schemaVersion": {
+                        "type": "string",
+                        "description": "The "
+                        "version "
+                        "of "
+                        "the "
+                        "schema "
+                        "used "
+                        "in "
+                        "agreed "
+                        "upon "
+                        "convention "
+                        "of "
+                        "major.minor.path "
+                        "(e.g., "
+                        "1.0.2) \n"
+                        "\n"
+                        "NOTE: "
+                        "This "
+                        "is "
+                        "NOT "
+                        "for "
+                        "versioning "
+                        "of "
+                        "each "
+                        "indiviual "
+                        "data "
+                        "dictionary "
+                        "instance. \n"
+                        "Rather, "
+                        "it "
+                        "is "
+                        "the\n"
+                        "version "
+                        "of "
+                        "THIS "
+                        "schema "
+                        "document. "
+                        "See "
+                        "`version` "
+                        "property "
+                        "(below) "
+                        "if "
+                        "specifying "
+                        "the "
+                        "individual "
+                        "data "
+                        "dictionary "
+                        "instance\n"
+                        "version.\n"
+                        "\n"
+                        "If "
+                        "generating "
+                        "a "
+                        "vlmd "
+                        "document "
+                        "as "
+                        "a "
+                        "csv "
+                        "file, "
+                        "include "
+                        "this "
+                        "version "
+                        "in \n"
+                        "every "
+                        "row/record "
+                        "to "
+                        "indicate "
+                        "this "
+                        "is "
+                        "a "
+                        "schema "
+                        "level "
+                        "property \n"
+                        "(not "
+                        "applicable "
+                        "for "
+                        "the "
+                        "json "
+                        "version "
+                        "as "
+                        "this "
+                        "property "
+                        "is "
+                        "already "
+                        "at "
+                        "the "
+                        "schema/root "
+                        "level)\n",
+                        "pattern": "\\d+\\.\\d+\\.\\d+",
+                        "examples": ["1.0.0", "0.2.0"],
+                    },
                     "section": {
                         "type": "string",
                         "title": "Section",
@@ -834,6 +927,42 @@ healjsonschema = {
                     "constraints": {
                         "type": "object",
                         "properties": {
+                            "required": {
+                                "type": "boolean",
+                                "title": "Required " "variable",
+                                "description": "If "
+                                "this "
+                                "variable "
+                                "is "
+                                "marked "
+                                "as "
+                                "true, "
+                                "then "
+                                "this "
+                                "variable's "
+                                "value "
+                                "must "
+                                "be "
+                                "present\n"
+                                "(ie "
+                                "not "
+                                "missing; "
+                                "see "
+                                "missingValues). "
+                                "If "
+                                "marked "
+                                "as "
+                                "false "
+                                "or "
+                                "not "
+                                "present, "
+                                "then "
+                                "the \n"
+                                "variable "
+                                "CAN "
+                                "be "
+                                "missing.\n",
+                            },
                             "maxLength": {
                                 "type": "integer",
                                 "title": "Maximum " "Length",
