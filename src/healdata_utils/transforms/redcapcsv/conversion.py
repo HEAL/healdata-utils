@@ -5,7 +5,7 @@ in csv format to a heal-complieant json data dictionary
 """ 
 
 import pandas as pd
-from . import headers,schema
+from . import headers
 from .mappings import typemappings 
 from healdata_utils import utils
 import numpy as np
@@ -73,14 +73,14 @@ def gather(sourcefields):
         else:
             return "No field label for this variable"
     
-    def __add_module(sourcefield,targetfield):
+    def __add_section(sourcefield,targetfield):
         if sourcefield.get("form"):
             return sourcefield["form"]
     
     def _add_metadata(sourcefield,targetfield):
         targetfield["description"] = __add_description(sourcefield, targetfield)
         targetfield["title"] = __add_title(sourcefield, targetfield)
-        targetfield["module"] = __add_module(sourcefield, targetfield)
+        targetfield["section"] = __add_section(sourcefield, targetfield)
 
     sourcedatafields = [field for field in sourcefields 
         if field["type"] in list(typemappings)]
@@ -139,7 +139,7 @@ def convert_redcapcsv(file_path,
     targetfields = gather(sourcefields)
 
     data_dictionary = data_dictionary_props.copy()
-    data_dictionary['data_dictionary'] = targetfields
+    data_dictionary['fields'] = targetfields
 
     package = convert_templatejson(data_dictionary)
     return package 

@@ -2,13 +2,13 @@ from pathlib import Path
 import json
 # from frictionless import Resource,Package
 from collections.abc import MutableMapping
-from healdata_utils import utils
+from healdata_utils import utils,schemas
 from os import PathLike
 
 def convert_templatejson(
     jsontemplate,
     data_dictionary_props:dict=None,
-    fields_name:str='data_dictionary',
+    fields_name:str='fields',
     sep_iter = '|',
     sep_dict = '=',
     **kwargs
@@ -69,12 +69,10 @@ def convert_templatejson(
     fields_json = jsontemplate_dict.pop(fields_name)
     data_dictionary_props = jsontemplate_dict
     
-    fields_csv = []
-    for f in fields_json:
-        field_csv = flatten_json(f)
-        fields_csv.append(field_csv)
+    fields_properties = schemas.healjsonschema["properties"]["fields"]["items"]
+    fields_csv = [utils.flatten_to_jsonpath(f,fields_properties) for f in fields_json]
 
-    template_json = dict(**data_dictionary_props,data_dictionary=fields_json)
-    template_csv = dict(**data_dictionary_props,data_dictionary=fields_csv)
+    template_json = {**data_dictionary_props,"fields":fields_json}
+    template_csv = {**data_dictionary_props,"fields":fields_csv}
 
     return {"templatejson":template_json,"templatecsv":template_csv}

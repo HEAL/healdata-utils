@@ -22,7 +22,7 @@ def convert_datacsv(file_path,data_dictionary_props={}):
     df = read_delim(file_path)
     data_dictionary = data_dictionary_props.copy()
     fields = typesets.infer_frictionless_fields(df)
-    data_dictionary['data_dictionary'] = fields 
+    data_dictionary['fields'] = fields 
 
     package = convert_templatejson(data_dictionary)
     return package

@@ -137,10 +137,10 @@ def convert_templatecsv(
         .pipe(parse_dicts_and_lists,fields_schema=fields_schema)
         .pipe(moveup_field_props,schema=schemas.healjsonschema)
     )
-    fields_json = [utils.unflatten_jsonpath(record) 
+    fields_json = [utils.unflatten_from_jsonpath(record) 
         for record in tbl_json.to_dict(orient="records")]
 
-    data_dictionary_props.update(utils.unflatten_jsonpath(moveup_props))
+    data_dictionary_props.update(utils.unflatten_from_jsonpath(moveup_props))
 
     template_json = dict(**data_dictionary_props,fields=fields_json)
     template_csv = dict(**data_dictionary_props,fields=fields_csv)

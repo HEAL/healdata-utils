@@ -278,7 +278,7 @@ def convert_to_vlmd(
     for name,package in packages.items():
         # TODO: json validate root AND fields while csv currently only validates fields (ie table) but no reason it cant validate entire data package
         package_csv = validate_vlmd_csv(
-            package["templatecsv"]["fields"], to_sync_fields=True
+            package["templatecsv"]['fields'], to_sync_fields=True
         )
         package_json = validate_vlmd_json(package["templatejson"])
 

@@ -33,7 +33,7 @@ def convert_dataexcel(file_path,data_dictionary_props=None,sheet_name=None,multi
         data_dictionary = {}
         fields = typesets.infer_frictionless_fields(df)
 
-        data_dictionary['data_dictionary'] = fields
+        data_dictionary['fields'] = fields
 
         package = convert_templatejson(data_dictionary)
 
