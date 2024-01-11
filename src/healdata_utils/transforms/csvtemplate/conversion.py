@@ -59,6 +59,54 @@ def convert_templatecsv(
             - 'templatecsv': the HEAL-specified tabular template.
 
     """
+    # get transforms
+    # cast numbers explicitly based on schema
+    # this is needed in case there is only one record in a string column that is a number (ie don't want to convert)
+
+
+    def castnumbers(df,fields_schema):
+        for fieldname,field in fields_schema.items(): 
+            if fieldname in df:
+                if field["type"] == "integer":
+                    df[fieldname] = df[fieldname].apply(lambda s: int(float(s)) if s else s)
+                elif field["type"] == "number":
+                    df[fieldname] = df[fieldname].astype(float)
+        
+        return df
+
+    def parse_dicts_and_lists(df,fields_schema):
+        for fieldname,field in fields_schema.items(): 
+            if fieldname in df:
+                if field["type"] == "object":
+                    newcol = df[fieldname].apply(utils.parse_dictionary_str,item_sep=item_sep,keyval_sep=keyval_sep)
+                    df[fieldname] = newcol
+                elif field["type"] == "array":
+                    df[fieldname] = df[fieldname].apply(utils.parse_list_str,item_sep=item_sep)
+
+        return df
+    def _get_moveup_field_propnames(schema):
+        # get data dictionary props to search for moving up a level if one unique value
+
+        annotation_names = ["title","description","name","additionalDescription"]
+        root_names = utils.flatten_properties(schema["properties"]).keys()
+        field_names = utils.flatten_properties(schema["properties"]["fields"]["items"]["properties"]).keys()
+        moveup_names = set(root_names).intersection(field_names).difference(annotation_names)
+
+        return list(moveup_names)
+    
+    def moveup_field_props(df,schema):
+        df = df.copy()
+        moveup_names = _get_moveup_field_propnames(schema)
+        moveup_record = {}
+
+        for name in moveup_names:
+            if name in df:
+                unique_val = df[name].unique()
+                if len(unique_val) == 1:
+                    moveup_record[name] = unique_val[0]
+                    df.drop(columns=name,inplace=True)
+
+        return moveup_record,df
 
     if isinstance(csvtemplate,(str,PathLike)):
         template_tbl = read_delim(str(Path(csvtemplate)))
@@ -74,44 +122,25 @@ def convert_templatecsv(
     if not droplist:
         droplist = []
 
-    # get transforms
-    # cast numbers explicitly based on schema
-    # this is needed in case there is only one record in a string column that is a number (ie don't want to convert)
-    fields = utils.flatten_properties(schemas.healjsonschema["properties"]["fields"]["items"]["properties"])
-    def castnumbers(df):
-        for fieldname,field in fields.items(): 
-            if fieldname in df:
-                if field["type"] == "integer":
-                    df[fieldname] = df[fieldname].apply(lambda s: int(float(s)) if s else s)
-                elif field["type"] == "number":
-                    df[fieldname] = df[fieldname].astype(float)
-        
-        return df
-
-    def parse_dicts_and_lists(df):
-        for fieldname,field in fields.items(): 
-            if fieldname in df:
-                if field["type"] == "object":
-                    newcol = df[fieldname].apply(utils.parse_dictionary_str,item_sep=item_sep,keyval_sep=keyval_sep)
-                    df[fieldname] = newcol
-                elif field["type"] == "array":
-                    df[fieldname] = df[fieldname].apply(utils.parse_list_str,item_sep=item_sep)
-
-        return df
-
-
+    fields_schema = utils.flatten_properties(schemas.healjsonschema["properties"]["fields"]["items"]["properties"])
     tbl_csv = (
         template_tbl
         .rename(columns=renamemap)
         .replace(recodemap)
         .drop(columns=droplist,errors="ignore")
-        .pipe(castnumbers)
+        .pipe(castnumbers,fields_schema=fields_schema)
     )
     fields_csv = tbl_csv.to_dict(orient="records")
 
-    tbl_json = tbl_csv.pipe(parse_dicts_and_lists)
+    moveup_props,tbl_json = (
+        tbl_csv
+        .pipe(parse_dicts_and_lists,fields_schema=fields_schema)
+        .pipe(moveup_field_props,schema=schemas.healjsonschema)
+    )
     fields_json = [utils.unflatten_jsonpath(record) 
         for record in tbl_json.to_dict(orient="records")]
+
+    data_dictionary_props.update(utils.unflatten_jsonpath(moveup_props))
 
     template_json = dict(**data_dictionary_props,fields=fields_json)
     template_csv = dict(**data_dictionary_props,fields=fields_csv)
