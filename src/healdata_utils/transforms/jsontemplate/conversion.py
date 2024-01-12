@@ -75,6 +75,7 @@ def convert_templatejson(
     tbl_csv = (
         pd.DataFrame([utils.flatten_to_jsonpath(f,fields_properties) 
             for f in fields_json])
+        .pipe(utils.embed_field_props,rootprops=data_dictionary_props,schema=schemas.healjsonschema)
         .fillna("")
         .applymap(lambda v: utils.join_dictitems(v) if isinstance(v,collections.abc.MutableMapping) else v)
         .applymap(lambda v: utils.join_iter(v) if isinstance(v,collections.abc.MutableSequence) else v)

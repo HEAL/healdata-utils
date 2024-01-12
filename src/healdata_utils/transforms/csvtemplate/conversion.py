@@ -86,29 +86,6 @@ def convert_templatecsv(
                     df[fieldname] = df[fieldname].apply(utils.parse_list_str,item_sep=item_sep)
 
         return df
-    def _get_moveup_field_propnames(schema):
-        # get data dictionary props to search for moving up a level if one unique value
-
-        annotation_names = ["title","description","name","additionalDescription"]
-        root_names = utils.flatten_properties(schema["properties"]).keys()
-        field_names = utils.flatten_properties(schema["properties"]["fields"]["items"]["properties"]).keys()
-        moveup_names = set(root_names).intersection(field_names).difference(annotation_names)
-
-        return list(moveup_names)
-    
-    def moveup_field_props(df,schema):
-        df = df.copy()
-        moveup_names = _get_moveup_field_propnames(schema)
-        moveup_record = {}
-
-        for name in moveup_names:
-            if name in df:
-                unique_val = df[name].unique()
-                if len(unique_val) == 1:
-                    moveup_record[name] = unique_val[0]
-                    df.drop(columns=name,inplace=True)
-
-        return moveup_record,df
 
     if isinstance(csvtemplate,(str,PathLike)):
         template_tbl = read_delim(str(Path(csvtemplate)))
@@ -133,20 +110,19 @@ def convert_templatecsv(
         .pipe(castnumbers,fields_schema=fields_schema)
         .applymap(lambda v: utils.join_dictitems(v) if isinstance(v,collections.abc.MutableMapping) else v)
         .applymap(lambda v: utils.join_iter(v) if isinstance(v,collections.abc.MutableSequence) else v)
-        .assign(schemaVersion=schemas.healcsvschema["version"])
     )
     fields_csv = tbl_csv.to_dict(orient="records")
 
-    moveup_props,tbl_json = (
+    refactored_props,tbl_json = (
         tbl_csv
         .pipe(parse_dicts_and_lists,fields_schema=fields_schema)
-        .pipe(moveup_field_props,schema=schemas.healjsonschema)
+        .pipe(utils.refactor_field_props,schema=schemas.healjsonschema)
     )
     fields_json = [utils.unflatten_from_jsonpath(record) 
         for record in tbl_json.to_dict(orient="records")]
 
     data_dictionary_props_csv = dict(data_dictionary_props)
-    data_dictionary_props_json = {**data_dictionary_props,**utils.unflatten_from_jsonpath(moveup_props)}
+    data_dictionary_props_json = {**data_dictionary_props,**utils.unflatten_from_jsonpath(refactored_props)}
 
     template_json = dict(**data_dictionary_props_json,fields=fields_json)
     template_csv = dict(**data_dictionary_props_csv,fields=fields_csv)
