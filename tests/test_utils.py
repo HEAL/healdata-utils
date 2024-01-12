@@ -46,3 +46,101 @@ def test_unflatten_jsonpath():
     }
     field_json = utils.unflatten_jsonpath(input)
     assert field_json == output,"Problem with converting input dictionary to output dictionary"
+
+input = {
+    "schemaVersion":"0.2.0",
+    "anotherFieldToEmbed":[{"thisone":"helloworld"}],
+    "fields":[
+        {"justAField":"cool"},
+        {"justAField":"sad"}
+    ]
+}
+def test_embed_field_props():
+    schema = {
+        "version": "0.2.0",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "test",
+        "type": "object",
+        "properties": {
+            "title": {"type": "string"},
+            "description": {"type": "string"},
+            "schemaVersion": {"type": "string"},
+            "anotherFieldToEmbed": {
+                "items":[{"type": "object","properties":{"thisone":{"type":"string"}}}]
+            },
+            "fields": {"type": "array",
+                "items": {
+                    "properties": {
+                        "type": "object",
+                        "justAField":{"type":"string"},
+                        "schemaVersion":{"type":"string"},
+                        "anotherFieldToEmbed": {"type": "object",
+                            "properties":{"thisone":{"type":"string"}}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    flat_root = {
+        "schemaVersion":"0.2.0",
+        "anotherFieldToEmbed[0].thisone":"helloworld"
+    } 
+    flat_fields_array =[
+            {"justAField":"cool"},
+            {"justAField":"sad"}
+        ]
+    flat_fields = utils.embed_flattened_props(flat_fields_array,flat_root,schema) 
+
+    assert flat_fields.to_dict(orient="records") == [
+        {"justAField":"cool","anotherFieldToEmbed[0].thisone":"helloworld"},
+        {"justAField":"sad","anotherFieldToEmbed[0].thisone":"helloworld"}
+    ]
+
+
+
+def test_refactor_field_props():
+    schema = {
+        "version": "0.2.0",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "test",
+        "type": "object",
+        "properties": {
+            "title": {"type": "string"},
+            "description": {"type": "string"},
+            "schemaVersion": {"type": "string"},
+            "anotherFieldToEmbed": {
+                "type": "object",
+                "properties":{"thisone":{"type":"string"}}
+            },
+            "fields": {"type": "array",
+                "items": {
+                    "properties": {
+                        "type": "object",
+                        "justAField":{"type":"string"},
+                        "schemaVersion":{"type":"string"},
+                        "anotherFieldToEmbed": {"type": "object",
+                            "properties":{"thisone":{"type":"string"}}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    flat_fields_array = [
+            {"justAField":"cool","anotherFieldToEmbed[0].thisone":"helloworld"},
+            {"justAField":"sad","anotherFieldToEmbed[0].thisone":"helloworld"}
+        ]
+    
+    flat_root,flat_fields = utils.refactor_flattened_props(flat_fields_array,schema)
+
+    assert flat_root.to_dict() == {
+        "anotherFieldToEmbed[0].thisone":"helloworld"
+    }
+    assert flat_fields.to_dict(orient="records") == [
+            {"justAField":"cool"},
+            {"justAField":"sad"}
+        ]
+
+

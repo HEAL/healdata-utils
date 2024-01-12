@@ -1,6 +1,7 @@
 """ General utilities/helper functions"""
 import re
 from collections.abc import MutableMapping
+import pandas as pd
 
 def _get_propnames_to_rearrange(schema):
     """ 
@@ -9,43 +10,52 @@ def _get_propnames_to_rearrange(schema):
     """
 
     annotation_names = ["title","description","name","additionalDescription"]
-    root_names = utils.flatten_properties(schema["properties"]).keys()
-    field_names = utils.flatten_properties(schema["properties"]["fields"]["items"]["properties"]).keys()
+    root_names = flatten_properties(schema).keys()
+    field_names = flatten_properties(schema["properties"]["fields"]["items"]["properties"]).keys()
     names_to_rearrange = set(root_names).intersection(field_names).difference(annotation_names)
 
     return list(names_to_rearrange)
 
-def embed_field_props(fields_df,rootprops,schema):
+def embed_flattened_props(flat_fields,flat_root,schema):
     """ 
-    Embed root level props in each field
+    Embed (flattened) root level props in each (flattened) field
     if field level prop is missing but the field level prop exists
-    and is not an annotation property (title,description)
+    and is not an annotation property (title,description). 
+    
+    Params
+    
+    flat_fields: array of dicts or pd.DataFrame (or something that can be converted into DataFrame)
+    flat_root: dict or pd.Series or something that can be converted into Series 
+    schema: schema for determining what fields should be embedded (note, this is flattened in fxn)
+    
+    Returns
+    
+    pd.DataFrame with the flat fields with the embedded root properties
     """
-    fields_df = pd.DataFrame(fields_df)
-    propnames_to_refactor = _get_propnames_to_rearrange(schema)
 
-    for propname in propnames_to_refactor:
-        embedded_props = pd.Series([rootprops[propname]] * len(fields_df),
-            index=fields_df.index,name=propname)
-        if not propname in fields_df:
-            fields_df[propname] = embedded_props
+    flat_root = pd.Series(flat_root)
+    flat_fields = pd.DataFrame(flat_fields)
+    propnames = _get_propnames_to_rearrange(schema)
+    for propname in propnames:
+        if not propname in flat_fields:
+            flat_fields.insert(0,propname,flat_root[propname])
         else:
-            fields_df[propname].fillna(props,inplace=True)
+            flat_fields[propname].fillna(flat_root[propname],inplace=True)
 
-    return fields_df
+    return flat_fields
 
-def refactor_field_props(fields_df,schema):
-    fields_df = pd.DataFrame(fields_df)
-    propnames_to_refactor = _get_propnames_to_rearrange(schema)
-    refactored_record = {}
-    for name in propnames_to_refactor:
-        if name in df:
-            unique_val = fields_df[name].unique()
+def refactor_field_props(flat_fields,schema):
+    fields_df = pd.DataFrame(flat_fields)
+    propnames = _get_propnames_to_rearrange(schema)
+    flat_record = pd.Series()
+    for name in propnames:
+        if name in fields_df:
+            unique_val = fields_df[name].unique() # NOTE: Includes NA values which is desired
             if len(unique_val) == 1:
-                refactored_record[name] = unique_val[0]
+                flat_record[name] = unique_val[0]
                 fields_df.drop(columns=name,inplace=True)
 
-    return refactored_record,fields_df
+    return flat_record,flat_fields
 
 # individual cell utilities
 def strip_html(html_string):

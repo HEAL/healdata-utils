@@ -69,13 +69,19 @@ def convert_templatejson(
 
     fields_json = jsontemplate_dict.pop(fields_name)
     data_dictionary_props = jsontemplate_dict
-    
     fields_properties = schemas.healjsonschema["properties"]["fields"]["items"]
+    root_properties = {
+        propname:prop 
+        for propname,prop in schemas.healjsonschema["properties"].items() 
+        if propname != "fields"}
 
-    tbl_csv = (
-        pd.DataFrame([utils.flatten_to_jsonpath(f,fields_properties) 
+    flattened_fields = pd.DataFrame([utils.flatten_to_jsonpath(f,fields_properties) 
             for f in fields_json])
-        .pipe(utils.embed_field_props,rootprops=data_dictionary_props,schema=schemas.healjsonschema)
+    flattened_root = pd.Series(utils.flatten_to_jsonpath(data_dictionary_props,root_properties))
+
+    flattened_and_embedded = utils.embed_field_props(flattened_fields,flattened_root)
+    tbl_csv = (
+        flattened_and_embedded
         .fillna("")
         .applymap(lambda v: utils.join_dictitems(v) if isinstance(v,collections.abc.MutableMapping) else v)
         .applymap(lambda v: utils.join_iter(v) if isinstance(v,collections.abc.MutableSequence) else v)
