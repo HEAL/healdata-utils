@@ -3,6 +3,29 @@ import re
 from collections.abc import MutableMapping
 
 
+def cascade_props(fields_df,props,schema):
+    """ 
+    Moves root level props to the field level 
+    if field level prop is missing but the field level prop exists
+    and is not an annotation property (title,description)
+    """
+    fields_df = pd.DataFrame(fields_df)
+    flatten_fields_properties = utils.flatten_properties(
+        schema["properties"]["fields"]["items"]["properties"])
+    flatten_root_properties = utils.flatten_properties(schema["properties"])
+    cascade_propnames = list(set(flatten_root_properties).intersect(flatten_fields_properties))
+    # TODO: filter out annotation props and test. Then add the "move up" function next to this one
+    for propname in cascade_propnames:
+        cascade_props = pd.Series([props[propname]] * len(fields_df),
+            index=fields_df.index,name=propname)
+        if not propname in fields_df:
+            fields_df[propname] = cascade_props
+        else:
+            fields_df[propname].fillna(cascade_props,inplace=True)
+
+    return fields_df
+
+
 # individual cell utilities
 def strip_html(html_string):
     if html_string:

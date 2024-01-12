@@ -6,27 +6,27 @@
             "message": "'title' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[0]",
+            "json_path": "$.fields[0]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[1]",
+            "json_path": "$.fields[1]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[2]",
+            "json_path": "$.fields[2]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[3]",
+            "json_path": "$.fields[3]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[4]",
+            "json_path": "$.fields[4]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[5]",
+            "json_path": "$.fields[5]",
             "message": "'description' is a required property"
         }
     ]

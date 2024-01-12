@@ -171,6 +171,7 @@ def write_vlmd_template(outputfile,output_overwrite=False,numfields=1):
         fields_propname = "fields"
         template = _generate_jsontemplate(schema)
         template[fields_propname] = numfields *  template[fields_propname]
+        template["schemaVersion"] = schema["version"]
         Path(outputfile).write_text(json.dumps(template,indent=2))
     
     elif ext == ".csv":
@@ -190,6 +191,8 @@ def write_vlmd_template(outputfile,output_overwrite=False,numfields=1):
                 val = ""
                 
             vals[field["name"]] = numfields * [val]
+        
+        vals["schemaVersion"] = vals["version"]
 
         template = pd.DataFrame(vals)
         template.to_csv(outputfile,index=False)

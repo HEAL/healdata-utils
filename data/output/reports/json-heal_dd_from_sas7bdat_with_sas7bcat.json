@@ -2,547 +2,547 @@
     "valid": false,
     "errors": [
         {
-            "json_path": "$.data_dictionary[0]",
+            "json_path": "$.fields[0]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[1]",
+            "json_path": "$.fields[1]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[2]",
+            "json_path": "$.fields[2]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[3]",
+            "json_path": "$.fields[3]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[4]",
+            "json_path": "$.fields[4]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[5]",
+            "json_path": "$.fields[5]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[6]",
+            "json_path": "$.fields[6]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[7]",
+            "json_path": "$.fields[7]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[8]",
+            "json_path": "$.fields[8]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[9]",
+            "json_path": "$.fields[9]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[10]",
+            "json_path": "$.fields[10]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[11]",
+            "json_path": "$.fields[11]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[12]",
+            "json_path": "$.fields[12]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[14]",
+            "json_path": "$.fields[14]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[15]",
+            "json_path": "$.fields[15]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[17]",
+            "json_path": "$.fields[17]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[18]",
+            "json_path": "$.fields[18]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[19]",
+            "json_path": "$.fields[19]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[20]",
+            "json_path": "$.fields[20]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[21]",
+            "json_path": "$.fields[21]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[22]",
+            "json_path": "$.fields[22]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[24]",
+            "json_path": "$.fields[24]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[25]",
+            "json_path": "$.fields[25]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[26]",
+            "json_path": "$.fields[26]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[27]",
+            "json_path": "$.fields[27]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[28]",
+            "json_path": "$.fields[28]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[29]",
+            "json_path": "$.fields[29]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[30]",
+            "json_path": "$.fields[30]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[31]",
+            "json_path": "$.fields[31]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[32]",
+            "json_path": "$.fields[32]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[33]",
+            "json_path": "$.fields[33]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[34]",
+            "json_path": "$.fields[34]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[35]",
+            "json_path": "$.fields[35]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[36]",
+            "json_path": "$.fields[36]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[37]",
+            "json_path": "$.fields[37]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[38]",
+            "json_path": "$.fields[38]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[39]",
+            "json_path": "$.fields[39]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[40]",
+            "json_path": "$.fields[40]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[41]",
+            "json_path": "$.fields[41]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[42]",
+            "json_path": "$.fields[42]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[43]",
+            "json_path": "$.fields[43]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[44]",
+            "json_path": "$.fields[44]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[45]",
+            "json_path": "$.fields[45]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[46]",
+            "json_path": "$.fields[46]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[47]",
+            "json_path": "$.fields[47]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[48]",
+            "json_path": "$.fields[48]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[49]",
+            "json_path": "$.fields[49]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[50]",
+            "json_path": "$.fields[50]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[51]",
+            "json_path": "$.fields[51]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[52]",
+            "json_path": "$.fields[52]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[53]",
+            "json_path": "$.fields[53]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[54]",
+            "json_path": "$.fields[54]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[55]",
+            "json_path": "$.fields[55]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[56]",
+            "json_path": "$.fields[56]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[57]",
+            "json_path": "$.fields[57]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[59]",
+            "json_path": "$.fields[59]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[60]",
+            "json_path": "$.fields[60]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[61]",
+            "json_path": "$.fields[61]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[62]",
+            "json_path": "$.fields[62]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[63]",
+            "json_path": "$.fields[63]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[64]",
+            "json_path": "$.fields[64]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[65]",
+            "json_path": "$.fields[65]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[66]",
+            "json_path": "$.fields[66]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[67]",
+            "json_path": "$.fields[67]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[68]",
+            "json_path": "$.fields[68]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[69]",
+            "json_path": "$.fields[69]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[70]",
+            "json_path": "$.fields[70]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[71]",
+            "json_path": "$.fields[71]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[72]",
+            "json_path": "$.fields[72]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[73]",
+            "json_path": "$.fields[73]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[74]",
+            "json_path": "$.fields[74]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[75]",
+            "json_path": "$.fields[75]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[76]",
+            "json_path": "$.fields[76]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[77]",
+            "json_path": "$.fields[77]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[78]",
+            "json_path": "$.fields[78]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[79]",
+            "json_path": "$.fields[79]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[80]",
+            "json_path": "$.fields[80]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[81]",
+            "json_path": "$.fields[81]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[82]",
+            "json_path": "$.fields[82]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[83]",
+            "json_path": "$.fields[83]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[84]",
+            "json_path": "$.fields[84]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[85]",
+            "json_path": "$.fields[85]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[86]",
+            "json_path": "$.fields[86]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[87]",
+            "json_path": "$.fields[87]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[88]",
+            "json_path": "$.fields[88]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[89]",
+            "json_path": "$.fields[89]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[90]",
+            "json_path": "$.fields[90]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[91]",
+            "json_path": "$.fields[91]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[92]",
+            "json_path": "$.fields[92]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[93]",
+            "json_path": "$.fields[93]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[94]",
+            "json_path": "$.fields[94]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[95]",
+            "json_path": "$.fields[95]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[96]",
+            "json_path": "$.fields[96]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[97]",
+            "json_path": "$.fields[97]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[98]",
+            "json_path": "$.fields[98]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[99]",
+            "json_path": "$.fields[99]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[100]",
+            "json_path": "$.fields[100]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[101]",
+            "json_path": "$.fields[101]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[102]",
+            "json_path": "$.fields[102]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[103]",
+            "json_path": "$.fields[103]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[104]",
+            "json_path": "$.fields[104]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[105]",
+            "json_path": "$.fields[105]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[106]",
+            "json_path": "$.fields[106]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[107]",
+            "json_path": "$.fields[107]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[108]",
+            "json_path": "$.fields[108]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[109]",
+            "json_path": "$.fields[109]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[110]",
+            "json_path": "$.fields[110]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[111]",
+            "json_path": "$.fields[111]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[112]",
+            "json_path": "$.fields[112]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[113]",
+            "json_path": "$.fields[113]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[114]",
+            "json_path": "$.fields[114]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[115]",
+            "json_path": "$.fields[115]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[116]",
+            "json_path": "$.fields[116]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[117]",
+            "json_path": "$.fields[117]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[118]",
+            "json_path": "$.fields[118]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[119]",
+            "json_path": "$.fields[119]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[120]",
+            "json_path": "$.fields[120]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[121]",
+            "json_path": "$.fields[121]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[122]",
+            "json_path": "$.fields[122]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[123]",
+            "json_path": "$.fields[123]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[124]",
+            "json_path": "$.fields[124]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[125]",
+            "json_path": "$.fields[125]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[126]",
+            "json_path": "$.fields[126]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[127]",
+            "json_path": "$.fields[127]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[128]",
+            "json_path": "$.fields[128]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[129]",
+            "json_path": "$.fields[129]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[130]",
+            "json_path": "$.fields[130]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[131]",
+            "json_path": "$.fields[131]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[132]",
+            "json_path": "$.fields[132]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[133]",
+            "json_path": "$.fields[133]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[134]",
+            "json_path": "$.fields[134]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[135]",
+            "json_path": "$.fields[135]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[136]",
+            "json_path": "$.fields[136]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[137]",
+            "json_path": "$.fields[137]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[138]",
+            "json_path": "$.fields[138]",
             "message": "'description' is a required property"
         },
         {
-            "json_path": "$.data_dictionary[139]",
+            "json_path": "$.fields[139]",
             "message": "'description' is a required property"
         }
     ]

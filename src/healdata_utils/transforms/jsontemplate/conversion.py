@@ -1,9 +1,10 @@
 from pathlib import Path
 import json
 # from frictionless import Resource,Package
-from collections.abc import MutableMapping
+import collections
 from healdata_utils import utils,schemas
 from os import PathLike
+import pandas as pd
 
 def convert_templatejson(
     jsontemplate,
@@ -46,7 +47,7 @@ def convert_templatejson(
     """
     if isinstance(jsontemplate,(str,PathLike)):
         jsontemplate_dict = json.loads(Path(jsontemplate).read_text())
-    elif isinstance(jsontemplate, MutableMapping):
+    elif isinstance(jsontemplate, collections.abc.MutableMapping):
         jsontemplate_dict = jsontemplate
     else:
         raise Exception("jsontemplate needs to be either dictionary-like or a path to a json")
@@ -70,7 +71,15 @@ def convert_templatejson(
     data_dictionary_props = jsontemplate_dict
     
     fields_properties = schemas.healjsonschema["properties"]["fields"]["items"]
-    fields_csv = [utils.flatten_to_jsonpath(f,fields_properties) for f in fields_json]
+
+    tbl_csv = (
+        pd.DataFrame([utils.flatten_to_jsonpath(f,fields_properties) 
+            for f in fields_json])
+        .fillna("")
+        .applymap(lambda v: utils.join_dictitems(v) if isinstance(v,collections.abc.MutableMapping) else v)
+        .applymap(lambda v: utils.join_iter(v) if isinstance(v,collections.abc.MutableSequence) else v)
+    )
+    fields_csv = tbl_csv.to_dict(orient="records")
 
     template_json = {**data_dictionary_props,"fields":fields_json}
     template_csv = {**data_dictionary_props,"fields":fields_csv}

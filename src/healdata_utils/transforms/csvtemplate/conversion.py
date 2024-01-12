@@ -8,7 +8,9 @@ goes the other way (from json to csv as well)
 see convert_templatecsv_to_json and convert_json_to_templatecsv
 ''' 
 import petl as etl
+import pandas as pd
 from pathlib import Path
+import collections
 # from frictionless import Resource,Package
 from healdata_utils.io import read_delim
 from healdata_utils import schemas,utils,mappings
@@ -129,6 +131,9 @@ def convert_templatecsv(
         .replace(recodemap)
         .drop(columns=droplist,errors="ignore")
         .pipe(castnumbers,fields_schema=fields_schema)
+        .applymap(lambda v: utils.join_dictitems(v) if isinstance(v,collections.abc.MutableMapping) else v)
+        .applymap(lambda v: utils.join_iter(v) if isinstance(v,collections.abc.MutableSequence) else v)
+        .assign(schemaVersion=schemas.healcsvschema["version"])
     )
     fields_csv = tbl_csv.to_dict(orient="records")
 
@@ -140,10 +145,11 @@ def convert_templatecsv(
     fields_json = [utils.unflatten_from_jsonpath(record) 
         for record in tbl_json.to_dict(orient="records")]
 
-    data_dictionary_props.update(utils.unflatten_from_jsonpath(moveup_props))
+    data_dictionary_props_csv = dict(data_dictionary_props)
+    data_dictionary_props_json = {**data_dictionary_props,**utils.unflatten_from_jsonpath(moveup_props)}
 
-    template_json = dict(**data_dictionary_props,fields=fields_json)
-    template_csv = dict(**data_dictionary_props,fields=fields_csv)
+    template_json = dict(**data_dictionary_props_json,fields=fields_json)
+    template_csv = dict(**data_dictionary_props_csv,fields=fields_csv)
 
     return {"templatejson":template_json,"templatecsv":template_csv}
 

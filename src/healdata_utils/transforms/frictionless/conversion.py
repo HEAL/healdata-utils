@@ -18,6 +18,14 @@ def convert_frictionless_tableschema(
             schemajson = json.loads(Path(schema).read_text())
     else:
         schemajson = schema
+
+    
+    schemajson["schemaVersion"] = schemas.healjsonschema["version"]
+
+    for prop in schemas.jsonschema["properties"]:
+        if not prop in schemajson:
+            del schemajson[prop]
+
     data_dictionaries = convert_templatejson(
         schemajson,
         data_dictionary_props,
