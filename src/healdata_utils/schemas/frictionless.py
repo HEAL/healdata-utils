@@ -1,8 +1,6 @@
 healcsvschema = {
     "version": "0.2.0",
-    "description": "Variable level metadata individual fields integrated into "
-    "the variable level\n"
-    "metadata object within the HEAL platform metadata service.\n"
+    "description": "\n"
     "\n"
     '!!! note "Highly encouraged"\n'
     "\n"
@@ -91,18 +89,18 @@ healcsvschema = {
             "type": "string",
             "constraints": {
                 "enum": [
+                    "time",
                     "geopoint",
-                    "year",
-                    "boolean",
-                    "yearmonth",
                     "any",
                     "date",
-                    "time",
-                    "duration",
                     "datetime",
-                    "integer",
+                    "year",
                     "number",
+                    "integer",
+                    "duration",
+                    "boolean",
                     "string",
+                    "yearmonth",
                 ]
             },
         },
@@ -305,7 +303,7 @@ healcsvschema = {
             "description": "The url that links out to the published, "
             "standardized mapping of a variable (e.g., "
             "common data element)\n",
-            "title": "Standards Mapping - Url",
+            "title": "Standards mappings - Url",
             "examples": [
                 "https://evs.nci.nih.gov/ftp1/CDISC/SDTM/SDTM%20Terminology.html#CL.C74457.RACE"
             ],
@@ -316,59 +314,19 @@ healcsvschema = {
             "description": "The source of the standardized variable. Note, "
             "this property is required if \n"
             "an id is specified.\n",
-            "title": "Standard Mapping - Source",
+            "title": "Standards mappings - Source",
             "examples": ["CDISC"],
             "type": "string",
         },
         {
             "name": "standardsMappings[0].item.id",
             "description": "The id locating the individual mapping within "
-            "the given source. Note, the "
-            "`standardsMapping[\\d+].source` property is "
-            "required if \n"
+            "the given source. \n"
+            "Note, the `standardsMappings[0].source` "
+            "property is required if \n"
             "this property is specified.\n",
-            "title": "Standard Mapping - Id",
+            "title": "Standards Mappings - Id",
             "examples": ["C74457"],
-            "type": "string",
-        },
-        {
-            "name": "relatedConcepts[0].url",
-            "description": "The url that links out to the published, "
-            "standardized concept.\n",
-            "title": "Related Concepts - Url",
-            "type": "string",
-        },
-        {
-            "name": "relatedConcepts[0].type",
-            "description": "The **type** of mapping to a published set of "
-            "concepts related to the given field such as \n"
-            "ontological information (eg., NCI thesaurus, "
-            "bioportal etc)\n",
-            "title": "Related concepts - Type",
-            "type": "string",
-        },
-        {
-            "name": "relatedConcepts[0].label",
-            "description": "A free text **label** of mapping to a "
-            "published set of concepts related to the given "
-            "field such as \n"
-            "ontological information (eg., NCI thesaurus, "
-            "bioportal etc)\n",
-            "title": "Related Concepts - Label",
-            "type": "string",
-        },
-        {
-            "name": "relatedConcepts[0].source",
-            "description": "The source of the related concept.\n",
-            "title": "Related Concepts - Source",
-            "examples": ["TBD (will have controlled vocabulary)"],
-            "type": "string",
-        },
-        {
-            "name": "relatedConcepts[0].id",
-            "description": "The id locating the individual mapping within "
-            "the given source.",
-            "title": "Related Concepts - Id",
             "type": "string",
         },
     ],

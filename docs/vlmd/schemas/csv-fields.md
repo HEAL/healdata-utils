@@ -2,9 +2,15 @@
 
 _version 0.2.0_
 
+<!-- Below annotation is specific for folks filling out the csv template
+and so is put here rather than in the actual schema annotations.
+The wording comes from a prior manual edit of the HEAL DSC data 
+packaging guidance version.
+ -->
 
-Variable level metadata individual fields integrated into the variable level
-metadata object within the HEAL platform metadata service.
+The aim of this HEAL metadata piece is to track and provide basic information about variables in a tabular data file (i.e. a data file with rows and columns) from your HEAL study. The objective is to list all variables and descriptive information about those variables. This will ensure that potential secondary data users know what data has been collected or calculated and how to use these data. Note that a given study can have multiple tabular data files; You should create a data dictionary for each tabular data file. Thus, a study may have multiple data dictionaries.
+
+
 
 !!! note "Highly encouraged"
 
@@ -317,7 +323,8 @@ Examples:
 ```
 
 **`standardsMappings[0].item.id`** _(string)_
- The id locating the individual mapping within the given source. Note, the `standardsMapping[\d+].source` property is required if 
+ The id locating the individual mapping within the given source. 
+Note, the `standardsMappings[0].source` property is required if 
 this property is specified.
 
 Examples:
@@ -327,34 +334,6 @@ Examples:
   C74457
 
 ```
-
-**`relatedConcepts[0].url`** _(string)_
- The url that links out to the published, standardized concept.
-
-
-**`relatedConcepts[0].type`** _(string)_
- The **type** of mapping to a published set of concepts related to the given field such as 
-ontological information (eg., NCI thesaurus, bioportal etc)
-
-
-**`relatedConcepts[0].label`** _(string)_
- A free text **label** of mapping to a published set of concepts related to the given field such as 
-ontological information (eg., NCI thesaurus, bioportal etc)
-
-
-**`relatedConcepts[0].source`** _(string)_
- The source of the related concept.
-
-Examples:
-
-
-```
-  TBD (will have controlled vocabulary)
-
-```
-
-**`relatedConcepts[0].id`** _(string)_
- The id locating the individual mapping within the given source.
 
 
 ## End of schema - Additional Property information 
@@ -378,23 +357,23 @@ Examples:
 
 Examples of date time pattern formats
 
-- "`%Y-%m-%d` (for date, e.g., 2023-05-25)"
-- "`%Y%-%d` (for date, e.g., 20230525) for date without dashes"
-- "`%Y-%m-%dT%H:%M:%S` (for datetime, e.g., 2023-05-25T10:30:45)"
-- "`%Y-%m-%dT%H:%M:%SZ` (for datetime with UTC timezone, e.g., 2023-05-25T10:30:45Z)"
-- "`%Y-%m-%dT%H:%M:%S%z` (for datetime with timezone offset, e.g., 2023-05-25T10:30:45+0300)"
-- "`%Y-%m-%dT%H:%M` (for datetime without seconds, e.g., 2023-05-25T10:30)"
-- "`%Y-%m-%dT%H` (for datetime without minutes and seconds, e.g., 2023-05-25T10)"
-- "`%H:%M:%S` (for time, e.g., 10:30:45)"
-- "`%H:%M:%SZ` (for time with UTC timezone, e.g., 10:30:45Z)"
-- "`%H:%M:%S%z` (for time with timezone offset, e.g., 10:30:45+0300)"
+- `%Y-%m-%d` (for date, e.g., 2023-05-25)
+- `%Y%-%d` (for date, e.g., 20230525) for date without dashes
+- `%Y-%m-%dT%H:%M:%S` (for datetime, e.g., 2023-05-25T10:30:45)
+- `%Y-%m-%dT%H:%M:%SZ` (for datetime with UTC timezone, e.g., 2023-05-25T10:30:45Z)
+- `%Y-%m-%dT%H:%M:%S%z` (for datetime with timezone offset, e.g., 2023-05-25T10:30:45+0300)
+- `%Y-%m-%dT%H:%M` (for datetime without seconds, e.g., 2023-05-25T10:30)
+- `%Y-%m-%dT%H` (for datetime without minutes and seconds, e.g., 2023-05-25T10)
+- `%H:%M:%S` (for time, e.g., 10:30:45)
+- `%H:%M:%SZ` (for time with UTC timezone, e.g., 10:30:45Z)
+- `%H:%M:%S%z` (for time with timezone offset, e.g., 10:30:45+0300)
 
 Examples of string formats
 
-- "`email` if valid emails (e.g., test@gmail.com)"
-- "`uri` if valid uri addresses (e.g., https://example.com/resource123)"
-- "`binary` if a base64 binary encoded string (e.g., authentication token like aGVsbG8gd29ybGQ=)"
-- "`uuid` if a universal unique identifier also known as a guid (eg., f47ac10b-58cc-4372-a567-0e02b2c3d479)"
+- `email` if valid emails (e.g., test@gmail.com)
+- `uri` if valid uri addresses (e.g., https://example.com/resource123)
+- `binary` if a base64 binary encoded string (e.g., authentication token like aGVsbG8gd29ybGQ=)
+- `uuid` if a universal unique identifier also known as a guid (eg., f47ac10b-58cc-4372-a567-0e02b2c3d479)
 
 
 Examples of geopoint formats

@@ -5,7 +5,7 @@ healjsonschema = {
     "title": "Variable Level Metadata (Data Dictionaries)",
     "description": "This schema defines the variable level metadata for one data "
     "dictionary for a given study.Note a given study can have "
-    "multiple data dictionaries",
+    "multiple data dictionaries.",
     "type": "object",
     "required": ["title", "fields"],
     "properties": {
@@ -321,15 +321,7 @@ healjsonschema = {
             "type": "array",
             "items": {
                 "title": "HEAL Variable Level " "Metadata Fields",
-                "description": "Variable level "
-                "metadata individual "
-                "fields integrated "
-                "into the variable "
-                "level\n"
-                "metadata object "
-                "within the HEAL "
-                "platform metadata "
-                "service.\n"
+                "description": "\n"
                 "\n"
                 '!!! note "Highly '
                 'encouraged"\n'
@@ -765,13 +757,13 @@ healjsonschema = {
                         "formats\n"
                         "\n"
                         "- "
-                        '"`%Y-%m-%d` '
+                        "`%Y-%m-%d` "
                         "(for "
                         "date, "
                         "e.g., "
-                        '2023-05-25)"\n'
+                        "2023-05-25)\n"
                         "- "
-                        '"`%Y%-%d` '
+                        "`%Y%-%d` "
                         "(for "
                         "date, "
                         "e.g., "
@@ -779,41 +771,41 @@ healjsonschema = {
                         "for "
                         "date "
                         "without "
-                        'dashes"\n'
+                        "dashes\n"
                         "- "
-                        '"`%Y-%m-%dT%H:%M:%S` '
+                        "`%Y-%m-%dT%H:%M:%S` "
                         "(for "
                         "datetime, "
                         "e.g., "
-                        '2023-05-25T10:30:45)"\n'
+                        "2023-05-25T10:30:45)\n"
                         "- "
-                        '"`%Y-%m-%dT%H:%M:%SZ` '
+                        "`%Y-%m-%dT%H:%M:%SZ` "
                         "(for "
                         "datetime "
                         "with "
                         "UTC "
                         "timezone, "
                         "e.g., "
-                        '2023-05-25T10:30:45Z)"\n'
+                        "2023-05-25T10:30:45Z)\n"
                         "- "
-                        '"`%Y-%m-%dT%H:%M:%S%z` '
+                        "`%Y-%m-%dT%H:%M:%S%z` "
                         "(for "
                         "datetime "
                         "with "
                         "timezone "
                         "offset, "
                         "e.g., "
-                        '2023-05-25T10:30:45+0300)"\n'
+                        "2023-05-25T10:30:45+0300)\n"
                         "- "
-                        '"`%Y-%m-%dT%H:%M` '
+                        "`%Y-%m-%dT%H:%M` "
                         "(for "
                         "datetime "
                         "without "
                         "seconds, "
                         "e.g., "
-                        '2023-05-25T10:30)"\n'
+                        "2023-05-25T10:30)\n"
                         "- "
-                        '"`%Y-%m-%dT%H` '
+                        "`%Y-%m-%dT%H` "
                         "(for "
                         "datetime "
                         "without "
@@ -821,31 +813,31 @@ healjsonschema = {
                         "and "
                         "seconds, "
                         "e.g., "
-                        '2023-05-25T10)"\n'
+                        "2023-05-25T10)\n"
                         "- "
-                        '"`%H:%M:%S` '
+                        "`%H:%M:%S` "
                         "(for "
                         "time, "
                         "e.g., "
-                        '10:30:45)"\n'
+                        "10:30:45)\n"
                         "- "
-                        '"`%H:%M:%SZ` '
+                        "`%H:%M:%SZ` "
                         "(for "
                         "time "
                         "with "
                         "UTC "
                         "timezone, "
                         "e.g., "
-                        '10:30:45Z)"\n'
+                        "10:30:45Z)\n"
                         "- "
-                        '"`%H:%M:%S%z` '
+                        "`%H:%M:%S%z` "
                         "(for "
                         "time "
                         "with "
                         "timezone "
                         "offset, "
                         "e.g., "
-                        '10:30:45+0300)"\n'
+                        "10:30:45+0300)\n"
                         "\n"
                         "Examples "
                         "of "
@@ -853,22 +845,22 @@ healjsonschema = {
                         "formats\n"
                         "\n"
                         "- "
-                        '"`email` '
+                        "`email` "
                         "if "
                         "valid "
                         "emails "
                         "(e.g., "
-                        'test@gmail.com)"\n'
+                        "test@gmail.com)\n"
                         "- "
-                        '"`uri` '
+                        "`uri` "
                         "if "
                         "valid "
                         "uri "
                         "addresses "
                         "(e.g., "
-                        'https://example.com/resource123)"\n'
+                        "https://example.com/resource123)\n"
                         "- "
-                        '"`binary` '
+                        "`binary` "
                         "if "
                         "a "
                         "base64 "
@@ -879,9 +871,9 @@ healjsonschema = {
                         "authentication "
                         "token "
                         "like "
-                        'aGVsbG8gd29ybGQ=)"\n'
+                        "aGVsbG8gd29ybGQ=)\n"
                         "- "
-                        '"`uuid` '
+                        "`uuid` "
                         "if "
                         "a "
                         "universal "
@@ -893,7 +885,7 @@ healjsonschema = {
                         "a "
                         "guid "
                         "(eg., "
-                        'f47ac10b-58cc-4372-a567-0e02b2c3d479)"\n'
+                        "f47ac10b-58cc-4372-a567-0e02b2c3d479)\n"
                         "\n"
                         "\n"
                         "Examples "
@@ -1894,7 +1886,7 @@ healjsonschema = {
                                 },
                                 "item": {
                                     "type": "object",
-                                    "title": "Standard " "mapping " "- " "item",
+                                    "title": "Standards " "mappings " "- " "Item",
                                     "description": "A "
                                     "standardized "
                                     "item "
@@ -1909,7 +1901,10 @@ healjsonschema = {
                                     "variable.\n",
                                     "properties": {
                                         "url": {
-                                            "title": "Standards " "Mapping " "- " "Url",
+                                            "title": "Standards "
+                                            "mappings "
+                                            "- "
+                                            "Url",
                                             "description": "The "
                                             "url "
                                             "that "
@@ -1934,8 +1929,8 @@ healjsonschema = {
                                             ],
                                         },
                                         "source": {
-                                            "title": "Standard "
-                                            "Mapping "
+                                            "title": "Standards "
+                                            "mappings "
                                             "- "
                                             "Source",
                                             "description": "The "
@@ -1958,7 +1953,7 @@ healjsonschema = {
                                             "type": "string",
                                         },
                                         "id": {
-                                            "title": "Standard " "Mapping " "- " "Id",
+                                            "title": "Standards " "Mappings " "- " "Id",
                                             "type": "string",
                                             "description": "The "
                                             "id "
@@ -1969,10 +1964,10 @@ healjsonschema = {
                                             "within "
                                             "the "
                                             "given "
-                                            "source. "
+                                            "source. \n"
                                             "Note, "
                                             "the "
-                                            "`standardsMapping[\\d+].source` "
+                                            "`standardsMappings[0].source` "
                                             "property "
                                             "is "
                                             "required "
@@ -1984,142 +1979,6 @@ healjsonschema = {
                                             "examples": ["C74457"],
                                         },
                                     },
-                                },
-                            },
-                        },
-                    },
-                    "relatedConcepts": {
-                        "title": "Related " "Concepts",
-                        "description": "__**[Under "
-                        "development]**__ "
-                        "Mappings "
-                        "to "
-                        "a "
-                        "published "
-                        "set "
-                        "of "
-                        "concepts "
-                        "related "
-                        "to "
-                        "the "
-                        "given "
-                        "field "
-                        "such "
-                        "as \n"
-                        "ontological "
-                        "information "
-                        "(eg., "
-                        "NCI "
-                        "thesaurus, "
-                        "bioportal "
-                        "etc)\n",
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "url": {
-                                    "title": "Related " "Concepts " "- " "Url",
-                                    "description": "The "
-                                    "url "
-                                    "that "
-                                    "links "
-                                    "out "
-                                    "to "
-                                    "the "
-                                    "published, "
-                                    "standardized "
-                                    "concept.\n",
-                                    "type": "string",
-                                    "format": "uri",
-                                },
-                                "type": {
-                                    "title": "Related " "concepts " "- " "Type",
-                                    "description": "The "
-                                    "**type** "
-                                    "of "
-                                    "mapping "
-                                    "to "
-                                    "a "
-                                    "published "
-                                    "set "
-                                    "of "
-                                    "concepts "
-                                    "related "
-                                    "to "
-                                    "the "
-                                    "given "
-                                    "field "
-                                    "such "
-                                    "as \n"
-                                    "ontological "
-                                    "information "
-                                    "(eg., "
-                                    "NCI "
-                                    "thesaurus, "
-                                    "bioportal "
-                                    "etc)\n",
-                                    "type": "string",
-                                },
-                                "label": {
-                                    "type": "string",
-                                    "title": "Related " "Concepts " "- " "Label",
-                                    "description": "A "
-                                    "free "
-                                    "text "
-                                    "**label** "
-                                    "of "
-                                    "mapping "
-                                    "to "
-                                    "a "
-                                    "published "
-                                    "set "
-                                    "of "
-                                    "concepts "
-                                    "related "
-                                    "to "
-                                    "the "
-                                    "given "
-                                    "field "
-                                    "such "
-                                    "as \n"
-                                    "ontological "
-                                    "information "
-                                    "(eg., "
-                                    "NCI "
-                                    "thesaurus, "
-                                    "bioportal "
-                                    "etc)\n",
-                                },
-                                "source": {
-                                    "title": "Related " "Concepts " "- " "Source",
-                                    "description": "The "
-                                    "source "
-                                    "of "
-                                    "the "
-                                    "related "
-                                    "concept.\n",
-                                    "type": "string",
-                                    "examples": [
-                                        "TBD "
-                                        "(will "
-                                        "have "
-                                        "controlled "
-                                        "vocabulary)"
-                                    ],
-                                },
-                                "id": {
-                                    "title": "Related " "Concepts " "- " "Id",
-                                    "type": "string",
-                                    "description": "The "
-                                    "id "
-                                    "locating "
-                                    "the "
-                                    "individual "
-                                    "mapping "
-                                    "within "
-                                    "the "
-                                    "given "
-                                    "source.",
                                 },
                             },
                         },

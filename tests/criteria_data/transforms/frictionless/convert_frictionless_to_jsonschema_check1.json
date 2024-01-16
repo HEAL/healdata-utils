@@ -27,12 +27,7 @@
          "standardsMappings[0].instrument.id",
          "standardsMappings[0].item.url",
          "standardsMappings[0].item.source",
-         "standardsMappings[0].item.id",
-         "relatedConcepts[0].url",
-         "relatedConcepts[0].type",
-         "relatedConcepts[0].label",
-         "relatedConcepts[0].source",
-         "relatedConcepts[0].id"
+         "standardsMappings[0].item.id"
       ],
       "properties": {
          "schemaVersion": {
@@ -116,18 +111,18 @@
                   "title": "Variable Type",
                   "type": "string",
                   "enum": [
+                     "time",
                      "geopoint",
-                     "year",
-                     "boolean",
-                     "yearmonth",
                      "any",
                      "date",
-                     "time",
-                     "duration",
                      "datetime",
-                     "integer",
+                     "year",
                      "number",
-                     "string"
+                     "integer",
+                     "duration",
+                     "boolean",
+                     "string",
+                     "yearmonth"
                   ]
                },
                {
@@ -372,7 +367,7 @@
             "anyOf": [
                {
                   "description": "The url that links out to the published, standardized mapping of a variable (e.g., common data element)\n",
-                  "title": "Standards Mapping - Url",
+                  "title": "Standards mappings - Url",
                   "type": "string"
                },
                {
@@ -386,7 +381,7 @@
             "anyOf": [
                {
                   "description": "The source of the standardized variable. Note, this property is required if \nan id is specified.\n",
-                  "title": "Standard Mapping - Source",
+                  "title": "Standards mappings - Source",
                   "type": "string"
                },
                {
@@ -399,78 +394,8 @@
          "standardsMappings[0].item.id": {
             "anyOf": [
                {
-                  "description": "The id locating the individual mapping within the given source. Note, the `standardsMapping[\\d+].source` property is required if \nthis property is specified.\n",
-                  "title": "Standard Mapping - Id",
-                  "type": "string"
-               },
-               {
-                  "enum": [
-                     ""
-                  ]
-               }
-            ]
-         },
-         "relatedConcepts[0].url": {
-            "anyOf": [
-               {
-                  "description": "The url that links out to the published, standardized concept.\n",
-                  "title": "Related Concepts - Url",
-                  "type": "string"
-               },
-               {
-                  "enum": [
-                     ""
-                  ]
-               }
-            ]
-         },
-         "relatedConcepts[0].type": {
-            "anyOf": [
-               {
-                  "description": "The **type** of mapping to a published set of concepts related to the given field such as \nontological information (eg., NCI thesaurus, bioportal etc)\n",
-                  "title": "Related concepts - Type",
-                  "type": "string"
-               },
-               {
-                  "enum": [
-                     ""
-                  ]
-               }
-            ]
-         },
-         "relatedConcepts[0].label": {
-            "anyOf": [
-               {
-                  "description": "A free text **label** of mapping to a published set of concepts related to the given field such as \nontological information (eg., NCI thesaurus, bioportal etc)\n",
-                  "title": "Related Concepts - Label",
-                  "type": "string"
-               },
-               {
-                  "enum": [
-                     ""
-                  ]
-               }
-            ]
-         },
-         "relatedConcepts[0].source": {
-            "anyOf": [
-               {
-                  "description": "The source of the related concept.\n",
-                  "title": "Related Concepts - Source",
-                  "type": "string"
-               },
-               {
-                  "enum": [
-                     ""
-                  ]
-               }
-            ]
-         },
-         "relatedConcepts[0].id": {
-            "anyOf": [
-               {
-                  "description": "The id locating the individual mapping within the given source.",
-                  "title": "Related Concepts - Id",
+                  "description": "The id locating the individual mapping within the given source. \nNote, the `standardsMappings[0].source` property is required if \nthis property is specified.\n",
+                  "title": "Standards Mappings - Id",
                   "type": "string"
                },
                {
@@ -481,7 +406,7 @@
             ]
          }
       },
-      "description": "Variable level metadata individual fields integrated into the variable level\nmetadata object within the HEAL platform metadata service.\n\n!!! note \"Highly encouraged\"\n\n  Only `name` and `description` properties are required. \n  For categorical variables, `constraints.enum` and `enumLabels` (where applicable) properties are highly encouraged. \n  For studies using HEAL or other common data elements (CDEs), `standardsMappings` information is highly encouraged.\n  `type` and `format` properties may be particularly useful for some variable types (e.g. date-like variables)\n",
+      "description": "\n\n!!! note \"Highly encouraged\"\n\n  Only `name` and `description` properties are required. \n  For categorical variables, `constraints.enum` and `enumLabels` (where applicable) properties are highly encouraged. \n  For studies using HEAL or other common data elements (CDEs), `standardsMappings` information is highly encouraged.\n  `type` and `format` properties may be particularly useful for some variable types (e.g. date-like variables)\n",
       "title": "HEAL Variable Level Metadata Fields"
    }
 }

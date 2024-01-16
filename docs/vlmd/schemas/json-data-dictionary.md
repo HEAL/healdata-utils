@@ -2,7 +2,7 @@
 
 _version 0.2.0_
 
-This schema defines the variable level metadata for one data dictionary for a given study.Note a given study can have multiple data dictionaries
+This schema defines the variable level metadata for one data dictionary for a given study.Note a given study can have multiple data dictionaries.
 
 ## `title` _(string,required)_
 
@@ -37,8 +37,7 @@ A set of standardized instruments linked to all variables within the `fields` pr
 
 ## `fields` _(array,required)_
 
-Variable level metadata individual fields integrated into the variable level
-metadata object within the HEAL platform metadata service.
+
 
 !!! note "Highly encouraged"
 
@@ -395,11 +394,6 @@ Two separate records. If desired, multiple standard mappings can be entered, say
 ```
 
 
-**`relatedConcepts`** _(array)_
- __**[Under development]**__ Mappings to a published set of concepts related to the given field such as 
-ontological information (eg., NCI thesaurus, bioportal etc)
-
-
 ### Additional `fields` property information
 
 #### `type` enum definitions:
@@ -421,23 +415,23 @@ ontological information (eg., NCI thesaurus, bioportal etc)
 
 Examples of date time pattern formats
 
-- "`%Y-%m-%d` (for date, e.g., 2023-05-25)"
-- "`%Y%-%d` (for date, e.g., 20230525) for date without dashes"
-- "`%Y-%m-%dT%H:%M:%S` (for datetime, e.g., 2023-05-25T10:30:45)"
-- "`%Y-%m-%dT%H:%M:%SZ` (for datetime with UTC timezone, e.g., 2023-05-25T10:30:45Z)"
-- "`%Y-%m-%dT%H:%M:%S%z` (for datetime with timezone offset, e.g., 2023-05-25T10:30:45+0300)"
-- "`%Y-%m-%dT%H:%M` (for datetime without seconds, e.g., 2023-05-25T10:30)"
-- "`%Y-%m-%dT%H` (for datetime without minutes and seconds, e.g., 2023-05-25T10)"
-- "`%H:%M:%S` (for time, e.g., 10:30:45)"
-- "`%H:%M:%SZ` (for time with UTC timezone, e.g., 10:30:45Z)"
-- "`%H:%M:%S%z` (for time with timezone offset, e.g., 10:30:45+0300)"
+- `%Y-%m-%d` (for date, e.g., 2023-05-25)
+- `%Y%-%d` (for date, e.g., 20230525) for date without dashes
+- `%Y-%m-%dT%H:%M:%S` (for datetime, e.g., 2023-05-25T10:30:45)
+- `%Y-%m-%dT%H:%M:%SZ` (for datetime with UTC timezone, e.g., 2023-05-25T10:30:45Z)
+- `%Y-%m-%dT%H:%M:%S%z` (for datetime with timezone offset, e.g., 2023-05-25T10:30:45+0300)
+- `%Y-%m-%dT%H:%M` (for datetime without seconds, e.g., 2023-05-25T10:30)
+- `%Y-%m-%dT%H` (for datetime without minutes and seconds, e.g., 2023-05-25T10)
+- `%H:%M:%S` (for time, e.g., 10:30:45)
+- `%H:%M:%SZ` (for time with UTC timezone, e.g., 10:30:45Z)
+- `%H:%M:%S%z` (for time with timezone offset, e.g., 10:30:45+0300)
 
 Examples of string formats
 
-- "`email` if valid emails (e.g., test@gmail.com)"
-- "`uri` if valid uri addresses (e.g., https://example.com/resource123)"
-- "`binary` if a base64 binary encoded string (e.g., authentication token like aGVsbG8gd29ybGQ=)"
-- "`uuid` if a universal unique identifier also known as a guid (eg., f47ac10b-58cc-4372-a567-0e02b2c3d479)"
+- `email` if valid emails (e.g., test@gmail.com)
+- `uri` if valid uri addresses (e.g., https://example.com/resource123)
+- `binary` if a base64 binary encoded string (e.g., authentication token like aGVsbG8gd29ybGQ=)
+- `uuid` if a universal unique identifier also known as a guid (eg., f47ac10b-58cc-4372-a567-0e02b2c3d479)
 
 
 Examples of geopoint formats
