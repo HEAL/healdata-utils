@@ -1,13 +1,7 @@
 {
     "title": "Healdata-utils Demonstration Data Dictionary",
     "description": "This is a proof of concept to demonstrate the healdata-utils functionality",
-    "primaryKey": [
-        "id"
-    ],
-    "missingValues": [
-        "Don't know",
-        "Refused"
-    ],
+    "schemaVersion": "0.2.0",
     "fields": [
         {
             "name": "id",
@@ -18,13 +12,21 @@
                 "required": true,
                 "maxLength": 9,
                 "pattern": "[A-Z][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]"
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "age",
             "title": "Age",
             "type": "integer",
-            "description": "About how old are you? (top coded at 90)"
+            "description": "About how old are you? (top coded at 90)",
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "sex_at_birth",
@@ -38,7 +40,11 @@
                     "Decline to answer",
                     "Something else"
                 ]
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "gender_id",
@@ -55,7 +61,11 @@
                     "Additional gender category (or other)",
                     "Not reported"
                 ]
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "gender_id_condensed",
@@ -71,7 +81,11 @@
                     "Something else",
                     "Not reported"
                 ]
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "race_white",
@@ -86,7 +100,11 @@
             ],
             "constraints": {
                 "required": true
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "race_black",
@@ -101,7 +119,11 @@
             ],
             "constraints": {
                 "required": true
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "race_AIAN",
@@ -116,7 +138,11 @@
             ],
             "constraints": {
                 "required": true
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "race_hawaiian_OPI",
@@ -131,7 +157,11 @@
             ],
             "constraints": {
                 "required": true
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "race_asian",
@@ -146,7 +176,11 @@
             ],
             "constraints": {
                 "required": true
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "race_other",
@@ -161,7 +195,11 @@
             ],
             "constraints": {
                 "required": true
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "race_AI_tribe",
@@ -170,7 +208,11 @@
             "description": "[American indian principal tribe or community specified] What is your race? SELECT ALL THAT APPLY",
             "constraints": {
                 "maxLength": 80
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "race_other_specified",
@@ -179,7 +221,11 @@
             "description": "[Other specified] What is your race? SELECT ALL THAT APPLY",
             "constraints": {
                 "maxLength": 80
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "hispanic_latino",
@@ -194,7 +240,11 @@
             ],
             "constraints": {
                 "required": true
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "sex_orient_category",
@@ -209,13 +259,21 @@
                     "Queer,pansexual, and/or questioning",
                     "Something else"
                 ]
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "sex_orient_other",
             "title": "Sexual orientation:  Other specified",
             "type": "string",
-            "description": "Sexual orientation:  Do you think of yourself as\u00e2\u20ac\u00a6"
+            "description": "Sexual orientation:  Do you think of yourself as\u00e2\u20ac\u00a6",
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "ever_pregnant",
@@ -231,7 +289,11 @@
                     "Not applicable",
                     "Don't know"
                 ]
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "marital_status",
@@ -246,7 +308,11 @@
                     "Separated",
                     "Never married"
                 ]
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "living_as_married",
@@ -258,7 +324,11 @@
                     "Yes, I am living as married with partner",
                     "No, I am not living as married with partner"
                 ]
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "educ_category",
@@ -277,19 +347,31 @@
                     "Graduate degree (e.g., MSW, MA, MS, JD, MD, DSW, EdD, PhD)",
                     "Other (specify)"
                 ]
-            }
+            },
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "educ_highest_grade",
             "title": "Education:  Highest grade level (if less than GED or h.s. diploma)",
             "type": "integer",
-            "description": "What is the highest grade completed?"
+            "description": "What is the highest grade completed?",
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         },
         {
             "name": "educ_other_specified",
             "title": "Education: Other specified",
             "type": "string",
-            "description": "What is the highest grade or level of school you have completed or the highest degree you have received?"
+            "description": "What is the highest grade or level of school you have completed or the highest degree you have received?",
+            "missingValues": [
+                "Don't know",
+                "Refused"
+            ]
         }
     ]
 }
