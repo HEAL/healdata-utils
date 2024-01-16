@@ -93,14 +93,14 @@ input = {
 }
 
 
-def test_embed_field_props():
+def test_embed_data_dictionary_props():
 
     flat_root = {
         "schemaVersion": "0.2.0",
         "anotherFieldToEmbed[0].thisone": "helloworld",
     }
     flat_fields_array = [{"justAField": "cool"}, {"justAField": "sad"}]
-    flat_fields = utils.embed_flattened_props(flat_fields_array, flat_root, schema_to_rearrange)
+    flat_fields = utils.embed_data_dictionary_props(flat_fields_array, flat_root, schema_to_rearrange)
 
     assert flat_fields.to_dict(orient="records") == [
         {
