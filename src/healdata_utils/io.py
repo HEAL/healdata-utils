@@ -181,20 +181,19 @@ def write_vlmd_template(outputfile,output_overwrite=False,numfields=1):
         vals = {}
 
         for field in schema["fields"]:
+            val = ""
             cols.append(field["name"])
+
             if field.get("constraints",{}).get("required"):
-                val = "[Required]"
-            elif re.search("\[Highly Recommended\]",field.get("description",""),
-                flags=re.IGNORECASE):
-                val = "[Highly Recommended]"
-            else:
-                val = ""
+                val += "[Required]"
+
                 
             vals[field["name"]] = numfields * [val]
-        
-        vals["schemaVersion"] = vals["version"]
 
         template = pd.DataFrame(vals)
+        if "version" in schema:
+            template["schemaVersion"] = schema["version"]
+
         template.to_csv(outputfile,index=False)
 
 
