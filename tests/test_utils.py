@@ -80,7 +80,7 @@ def test_unflatten_jsonpath():
         ],
         "test1": {"test2": {"test3": [{"test4": "test4_1"}, {"test3": "test3_1"}]}},
     }
-    field_json = utils.unflatten_jsonpath(input)
+    field_json = utils.unflatten_from_jsonpath(input)
     assert (
         field_json == output
     ), "Problem with converting input dictionary to output dictionary"
