@@ -1,6 +1,7 @@
 """ convert various frictionless objects to
 another format """
 from healdata_utils.transforms.jsontemplate.conversion import convert_templatejson
+from healdata_utils import schemas
 import os 
 import yaml
 import json
@@ -22,9 +23,14 @@ def convert_frictionless_tableschema(
     
     schemajson["schemaVersion"] = schemas.healjsonschema["version"]
 
-    for prop in schemas.jsonschema["properties"]:
-        if not prop in schemajson:
-            del schemajson[prop]
+    # remove non-heal keywords and if in fields, add there
+    # Note, for the embedding to take place, currently the 
+    # property needs to be at table and field level in heal 
+    # (missingValues is only at field level for heal so need to add at specific input fxn)
+    missing_values = schemajson.pop("missingValues")
+    primary_key = schemajson.pop("primaryKey")
+    for f in schemajson["fields"]:
+        f["missingValues"] = missing_values 
 
     data_dictionaries = convert_templatejson(
         schemajson,
