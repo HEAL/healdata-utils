@@ -34,7 +34,7 @@ def embed_data_dictionary_props(flat_fields,flat_root,schema):
     """
     flat_fields = pd.DataFrame(flat_fields)
     propnames = _get_propnames_to_rearrange(schema)
-    flat_root = pd.Series(flat_root).loc[flat_root.index.isin(propnames)] # take out annotation props
+    flat_root = pd.Series(flat_root).loc[lambda s: s.index.isin(propnames)] # take out annotation props
     if len(flat_root) > 0:
         for propname in propnames:
             if propname in flat_root:
