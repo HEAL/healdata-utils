@@ -1,15 +1,22 @@
 {
   "title": null,
   "description": null,
+  "schemaVersion": "0.2.0",
+  "version": null,
+  "standardsMappings": [
+    null
+  ],
   "fields": [
     {
-      "module": null,
+      "schemaVersion": null,
+      "section": null,
       "name": null,
       "title": null,
       "description": null,
       "type": null,
       "format": null,
       "constraints": {
+        "required": null,
         "maxLength": null,
         "enum": [],
         "pattern": null,
@@ -23,14 +30,19 @@
         null
       ],
       "falseValues": [],
-      "repo_link": null,
       "standardsMappings": [
         {
-          "url": null,
-          "type": null,
-          "label": null,
-          "source": null,
-          "id": null
+          "instrument": {
+            "url": null,
+            "source": null,
+            "title": null,
+            "id": null
+          },
+          "item": {
+            "url": null,
+            "source": null,
+            "id": null
+          }
         }
       ],
       "relatedConcepts": [
@@ -41,33 +53,18 @@
           "source": null,
           "id": null
         }
-      ],
-      "univarStats": {
-        "median": null,
-        "mean": null,
-        "std": null,
-        "min": null,
-        "max": null,
-        "mode": null,
-        "count": null,
-        "twentyFifthPercentile": null,
-        "seventyFifthPercentile": null,
-        "categoricalMarginals": [
-          {
-            "name": null,
-            "count": null
-          }
-        ]
-      }
+      ]
     },
     {
-      "module": null,
+      "schemaVersion": null,
+      "section": null,
       "name": null,
       "title": null,
       "description": null,
       "type": null,
       "format": null,
       "constraints": {
+        "required": null,
         "maxLength": null,
         "enum": [],
         "pattern": null,
@@ -81,14 +78,19 @@
         null
       ],
       "falseValues": [],
-      "repo_link": null,
       "standardsMappings": [
         {
-          "url": null,
-          "type": null,
-          "label": null,
-          "source": null,
-          "id": null
+          "instrument": {
+            "url": null,
+            "source": null,
+            "title": null,
+            "id": null
+          },
+          "item": {
+            "url": null,
+            "source": null,
+            "id": null
+          }
         }
       ],
       "relatedConcepts": [
@@ -99,24 +101,7 @@
           "source": null,
           "id": null
         }
-      ],
-      "univarStats": {
-        "median": null,
-        "mean": null,
-        "std": null,
-        "min": null,
-        "max": null,
-        "mode": null,
-        "count": null,
-        "twentyFifthPercentile": null,
-        "seventyFifthPercentile": null,
-        "categoricalMarginals": [
-          {
-            "name": null,
-            "count": null
-          }
-        ]
-      }
+      ]
     }
   ]
 }

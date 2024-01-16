@@ -10,6 +10,7 @@
          "description",
          "type",
          "format",
+         "constraints.required",
          "constraints.maxLength",
          "constraints.enum",
          "constraints.pattern",
@@ -115,17 +116,17 @@
                   "title": "Variable Type",
                   "type": "string",
                   "enum": [
-                     "boolean",
-                     "any",
-                     "number",
-                     "date",
-                     "time",
-                     "yearmonth",
-                     "duration",
                      "geopoint",
                      "year",
-                     "integer",
+                     "boolean",
+                     "yearmonth",
+                     "any",
+                     "date",
+                     "time",
+                     "duration",
                      "datetime",
+                     "integer",
+                     "number",
                      "string"
                   ]
                },
@@ -142,6 +143,20 @@
                   "description": "Indicates the format of the type specified in the `type` property. \nEach format is dependent on the `type` specified. \nSee [here](https://specs.frictionlessdata.io/table-schema/#types-and-formats) \nfor more information about appropriate `format` values by variable `type`.\n",
                   "title": "Variable Format",
                   "type": "string"
+               },
+               {
+                  "enum": [
+                     ""
+                  ]
+               }
+            ]
+         },
+         "constraints.required": {
+            "anyOf": [
+               {
+                  "description": "If this variable is marked as true, then this variable's value must be present\n(ie not missing; see missingValues). If marked as false or not present, then the \nvariable CAN be missing.\n",
+                  "title": "Required variable",
+                  "type": "boolean"
                },
                {
                   "enum": [
