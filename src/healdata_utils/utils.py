@@ -10,7 +10,7 @@ def _get_propnames_to_rearrange(schema):
     """
 
     annotation_names = ["title","description","name","additionalDescription"]
-    root_names = flatten_properties(schema).keys()
+    root_names = flatten_properties(schema["properties"]).keys()
     field_names = flatten_properties(schema["properties"]["fields"]["items"]["properties"]).keys()
     names_to_rearrange = set(root_names).intersection(field_names).difference(annotation_names)
 
@@ -45,17 +45,23 @@ def embed_flattened_props(flat_fields,flat_root,schema):
     return flat_fields
 
 def refactor_field_props(flat_fields,schema):
-    fields_df = pd.DataFrame(flat_fields)
+    """ 
+    given a flattened array of dicts corresponding to the unflattened schema,
+    move up (ie `refactor`) flattened properties that are both in the root 
+    (ie table level; level up from field records) and in the fields.
+
+    """  
+    flat_fields_df = pd.DataFrame(flat_fields)
     propnames = _get_propnames_to_rearrange(schema)
-    flat_record = pd.Series()
+    flat_record = pd.Series(dtype="object")
     for name in propnames:
-        if name in fields_df:
-            unique_val = fields_df[name].unique() # NOTE: Includes NA values which is desired
+        if name in flat_fields_df:
+            unique_val = flat_fields_df[name].unique() # NOTE: Includes NA values which is desired
             if len(unique_val) == 1:
                 flat_record[name] = unique_val[0]
-                fields_df.drop(columns=name,inplace=True)
+                flat_fields_df.drop(columns=name,inplace=True)
 
-    return flat_record,flat_fields
+    return flat_record,flat_fields_df
 
 # individual cell utilities
 def strip_html(html_string):
