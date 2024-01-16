@@ -16,7 +16,7 @@ def _get_propnames_to_rearrange(schema):
 
     return list(names_to_rearrange)
 
-def embed_flattened_props(flat_fields,flat_root,schema):
+def embed_data_dictionary_props(flat_fields,flat_root,schema):
     """ 
     Embed (flattened) root level props in each (flattened) field
     if field level prop is missing but the field level prop exists
@@ -32,15 +32,16 @@ def embed_flattened_props(flat_fields,flat_root,schema):
     
     pd.DataFrame with the flat fields with the embedded root properties
     """
-
-    flat_root = pd.Series(flat_root)
     flat_fields = pd.DataFrame(flat_fields)
     propnames = _get_propnames_to_rearrange(schema)
-    for propname in propnames:
-        if not propname in flat_fields:
-            flat_fields.insert(0,propname,flat_root[propname])
-        else:
-            flat_fields[propname].fillna(flat_root[propname],inplace=True)
+    flat_root = pd.Series(flat_root).loc[flat_root.index.isin(propnames)] # take out annotation props
+    if len(flat_root) > 0:
+        for propname in propnames:
+            if propname in flat_root:
+                if not propname in flat_fields:
+                    flat_fields.insert(0,propname,flat_root[propname])
+                else:
+                    flat_fields[propname].fillna(flat_root[propname],inplace=True)
 
     return flat_fields
 
