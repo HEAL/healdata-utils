@@ -18,16 +18,16 @@ def copy_schemas(fork,branch):
         f"https://raw.githubusercontent.com/{fork}/heal-metadata-schemas/{branch}/"
         "variable-level-metadata-schema/schemas/frictionless/csvtemplate/fields.json"
     )
-    healjsonschema = requests.get(jsonschema_url).json()
-    healcsvtemplate = requests.get(csvschema_url).json()
+    new_healjsonschema = requests.get(jsonschema_url).json()
+    new_healcsvschema = requests.get(csvschema_url).json()
 
-    healjsonschema_str = pp.pformat(healdata_utils.schemas.healjsonschema)
-    healcsvtemplate_str = pp.pformat(healdata_utils.schemas.healcsvschema)
+    healjsonschema_str = pp.pformat(new_healjsonschema)
+    healcsvschema_str = pp.pformat(new_healcsvschema)
 
     py_schema_dir = Path(__file__).parents[1].joinpath("src/healdata_utils/schemas") 
     py_schema_dir.joinpath("__init__.py").write_text("from .jsonschema import healjsonschema\nfrom .frictionless import healcsvschema")
     py_schema_dir.joinpath("jsonschema.py").write_text(f"healjsonschema = {healjsonschema_str}")
-    py_schema_dir.joinpath("frictionless.py").write_text(f"healcsvschema = {healcsvtemplate_str}")
+    py_schema_dir.joinpath("frictionless.py").write_text(f"healcsvschema = {healcsvschema_str}")
     
     for f in ["jsonschema.py","frictionless.py"]:
         subprocess.run(["black",str(py_schema_dir.joinpath(f))])
