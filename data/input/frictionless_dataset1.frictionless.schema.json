@@ -13,7 +13,8 @@
                 "required": true,
                 "maxLength": 9,
                 "pattern": "[A-Z][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]"
-            }
+            },
+            "custom":{"mystudy:original_name":"fakeid"}
         },
         {
             
