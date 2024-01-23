@@ -135,7 +135,7 @@ def flatten_to_jsonpath(dictionary,schema,parent_key=False, sep="."):
     items = []
     for key, value in dictionary.items():
         new_key = str(parent_key) + sep + key if parent_key else key
-        prop = schema["properties"][key]
+        prop = schema["properties"].get(key,{})
         childprops = prop.get("properties")
         childitem_props = prop.get("items",{}).get("properties")
 
