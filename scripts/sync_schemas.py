@@ -3,6 +3,9 @@ from pathlib import Path
 import pprint
 import subprocess
 import argparse
+import yaml 
+
+import healdata_utils
 
 def copy_schemas(fork,branch):
     pp = pprint.PrettyPrinter(indent=2,compact=True, sort_dicts=False)
@@ -58,4 +61,28 @@ if __name__ == "__main__":
         default="HEAL")
     args = parser.parse_args()
     copy_schemas(args.fork,args.branch)
+
+    # sync data
+    params = Path("configs/convert_to_vlmd.yaml").read_text()
+    params = yaml.safe_load(params)
+
+    for p in params:
+        healdata_utils.convert_to_vlmd(**p)
+
+    # sync templates
+    template_params = Path("configs/write_vlmd_template.yaml").read_text()
+    template_params = yaml.safe_load(template_params)
+
+    for p in template_params:
+        healdata_utils.write_vlmd_template(**p)
+
+    # sync converted schema
+    transformed_path = ("tests/criteria_data/transforms/"
+        "frictionless/convert_frictionless_to_jsonschema_check1.json")
+
+
+    frictionless_input_schema = healcsvschema
+    jsonschema_props = healdata_utils.transforms.frictionlessconvert_frictionless_to_jsonschema(
+        healdata_utils.schemas.frictionlessfrictionless_input_schema)
+    Path(transformed_path).write_text(json.dumps(jsonschema_props,indent=3))
 
