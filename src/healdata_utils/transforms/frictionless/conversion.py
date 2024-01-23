@@ -20,17 +20,6 @@ def convert_frictionless_tableschema(
     else:
         schemajson = schema
 
-    
-    schemajson["schemaVersion"] = schemas.healjsonschema["version"]
-
-    # remove non-heal keywords and if in fields, add there
-    # Note, for the embedding to take place, currently the 
-    # property needs to be at table and field level in heal 
-    # (missingValues is only at field level for heal so need to add at specific input fxn)
-    missing_values = schemajson.pop("missingValues")
-    primary_key = schemajson.pop("primaryKey")
-    for f in schemajson["fields"]:
-        f["missingValues"] = missing_values 
 
     data_dictionaries = convert_templatejson(
         schemajson,
