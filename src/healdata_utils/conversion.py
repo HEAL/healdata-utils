@@ -277,11 +277,11 @@ def convert_to_vlmd(
     packages_with_reports = {}
     for name,package in packages.items():
 
-        # add versions to both formats
+        # add versions to both formats at top of object
         for field in package["templatecsv"]['fields']:
-            field["schemaVersion"] = schemas.healjsonschema["version"]
+            field.update({"schemaVersion":schemas.healjsonschema["version"],**field})
 
-        package["templatejson"]["schemaVersion"] = schemas.healjsonschema["version"]
+        package["templatejson"] = {"schemaVersion":schemas.healjsonschema["version"],**dict(package["templatejson"])}
         
         package_csv = validate_vlmd_csv(
             package["templatecsv"]['fields'], to_sync_fields=True
