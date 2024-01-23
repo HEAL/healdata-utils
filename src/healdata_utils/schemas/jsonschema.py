@@ -317,6 +317,11 @@ healjsonschema = {
                 }
             },
         },
+        "custom": {
+            "type": "object",
+            "description": "Additional properties not "
+            "included as a core property. \n",
+        },
         "fields": {
             "type": "array",
             "items": {
@@ -326,28 +331,29 @@ healjsonschema = {
                 '!!! note "Highly '
                 'encouraged"\n'
                 "\n"
-                "  Only `name` and "
+                "  - Only `name` and "
                 "`description` "
                 "properties are "
                 "required. \n"
-                "  For categorical "
+                "  - For categorical "
                 "variables, "
                 "`constraints.enum` "
                 "and `enumLabels` "
                 "(where applicable) "
                 "properties are highly "
                 "encouraged. \n"
-                "  For studies using "
+                "  - For studies using "
                 "HEAL or other common "
                 "data elements (CDEs), "
                 "`standardsMappings` "
                 "information is highly "
                 "encouraged.\n"
-                "  `type` and `format` "
-                "properties may be "
-                "particularly useful "
-                "for some variable "
-                "types (e.g. date-like "
+                "  - `type` and "
+                "`format` properties "
+                "may be particularly "
+                "useful for some "
+                "variable types (e.g. "
+                "date-like "
                 "variables)\n",
                 "type": "object",
                 "required": ["name", "description"],
@@ -1282,7 +1288,6 @@ healjsonschema = {
                         "more "
                         "values.\n",
                         "type": "array",
-                        "items": {"type": "string"},
                         "examples": [["required", "Yes", "Checked"], ["required"]],
                     },
                     "falseValues": {
@@ -1983,8 +1988,40 @@ healjsonschema = {
                             },
                         },
                     },
+                    "custom": {
+                        "type": "object",
+                        "description": "Additional "
+                        "properties "
+                        "not "
+                        "included "
+                        "a "
+                        "core "
+                        "property. ",
+                    },
                 },
             },
         },
+    },
+    "propertyNames": {
+        "description": "To allow additional properties for "
+        "compatibility with other standards at the "
+        '"table" , or root, but not included in '
+        "the core `properties` set:\n"
+        "\n"
+        "[Frictionless Data package table schema "
+        "standard](https://specs.frictionlessdata.io/table-schema): "
+        "`missingValues`|`primaryKey`|`foreignKeys`\n",
+        "enum": [
+            "title",
+            "description",
+            "schemaVersion",
+            "version",
+            "standardsMappings",
+            "fields",
+            "custom",
+            "missingValues",
+            "primaryKey",
+            "foreignKeys",
+        ],
     },
 }

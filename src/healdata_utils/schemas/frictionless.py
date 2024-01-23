@@ -4,15 +4,15 @@ healcsvschema = {
     "\n"
     '!!! note "Highly encouraged"\n'
     "\n"
-    "  Only `name` and `description` properties are required. \n"
-    "  For categorical variables, `constraints.enum` and "
+    "  - Only `name` and `description` properties are required. \n"
+    "  - For categorical variables, `constraints.enum` and "
     "`enumLabels` (where applicable) properties are highly "
     "encouraged. \n"
-    "  For studies using HEAL or other common data elements "
+    "  - For studies using HEAL or other common data elements "
     "(CDEs), `standardsMappings` information is highly "
     "encouraged.\n"
-    "  `type` and `format` properties may be particularly useful "
-    "for some variable types (e.g. date-like variables)\n",
+    "  - `type` and `format` properties may be particularly "
+    "useful for some variable types (e.g. date-like variables)\n",
     "title": "HEAL Variable Level Metadata Fields",
     "fields": [
         {
@@ -89,18 +89,18 @@ healcsvschema = {
             "type": "string",
             "constraints": {
                 "enum": [
-                    "time",
                     "geopoint",
-                    "any",
-                    "date",
-                    "datetime",
-                    "year",
-                    "number",
-                    "integer",
-                    "duration",
-                    "boolean",
                     "string",
+                    "boolean",
+                    "integer",
+                    "time",
+                    "date",
+                    "year",
+                    "any",
                     "yearmonth",
+                    "duration",
+                    "datetime",
+                    "number",
                 ]
             },
         },
@@ -328,6 +328,12 @@ healcsvschema = {
             "title": "Standards Mappings - Id",
             "examples": ["C74457"],
             "type": "string",
+        },
+        {
+            "name": "custom",
+            "description": "Additional properties not included a core " "property. ",
+            "type": "string",
+            "constraints": {"pattern": "^(?:.*?=.*?(?:\\||$))+$"},
         },
     ],
     "missingValues": [""],
