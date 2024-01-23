@@ -27,7 +27,8 @@
          "standardsMappings[0].instrument.id",
          "standardsMappings[0].item.url",
          "standardsMappings[0].item.source",
-         "standardsMappings[0].item.id"
+         "standardsMappings[0].item.id",
+         "custom"
       ],
       "properties": {
          "schemaVersion": {
@@ -111,18 +112,18 @@
                   "title": "Variable Type",
                   "type": "string",
                   "enum": [
-                     "time",
                      "geopoint",
-                     "any",
-                     "date",
-                     "datetime",
-                     "year",
-                     "number",
-                     "integer",
-                     "duration",
-                     "boolean",
                      "string",
-                     "yearmonth"
+                     "boolean",
+                     "integer",
+                     "time",
+                     "date",
+                     "year",
+                     "any",
+                     "yearmonth",
+                     "duration",
+                     "datetime",
+                     "number"
                   ]
                },
                {
@@ -404,9 +405,23 @@
                   ]
                }
             ]
+         },
+         "custom": {
+            "anyOf": [
+               {
+                  "description": "Additional properties not included a core property. ",
+                  "type": "string",
+                  "pattern": "^(?:.*?=.*?(?:\\||$))+$"
+               },
+               {
+                  "enum": [
+                     ""
+                  ]
+               }
+            ]
          }
       },
-      "description": "\n\n!!! note \"Highly encouraged\"\n\n  Only `name` and `description` properties are required. \n  For categorical variables, `constraints.enum` and `enumLabels` (where applicable) properties are highly encouraged. \n  For studies using HEAL or other common data elements (CDEs), `standardsMappings` information is highly encouraged.\n  `type` and `format` properties may be particularly useful for some variable types (e.g. date-like variables)\n",
+      "description": "\n\n!!! note \"Highly encouraged\"\n\n  - Only `name` and `description` properties are required. \n  - For categorical variables, `constraints.enum` and `enumLabels` (where applicable) properties are highly encouraged. \n  - For studies using HEAL or other common data elements (CDEs), `standardsMappings` information is highly encouraged.\n  - `type` and `format` properties may be particularly useful for some variable types (e.g. date-like variables)\n",
       "title": "HEAL Variable Level Metadata Fields"
    }
 }

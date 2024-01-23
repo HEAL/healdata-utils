@@ -6,6 +6,7 @@
   "standardsMappings": [
     null
   ],
+  "custom": {},
   "fields": [
     {
       "schemaVersion": null,
@@ -26,9 +27,7 @@
       "enumLabels": {},
       "enumOrdered": null,
       "missingValues": [],
-      "trueValues": [
-        null
-      ],
+      "trueValues": [],
       "falseValues": [],
       "standardsMappings": [
         {
@@ -44,7 +43,8 @@
             "id": null
           }
         }
-      ]
+      ],
+      "custom": {}
     },
     {
       "schemaVersion": null,
@@ -65,9 +65,7 @@
       "enumLabels": {},
       "enumOrdered": null,
       "missingValues": [],
-      "trueValues": [
-        null
-      ],
+      "trueValues": [],
       "falseValues": [],
       "standardsMappings": [
         {
@@ -83,7 +81,8 @@
             "id": null
           }
         }
-      ]
+      ],
+      "custom": {}
     }
   ]
 }

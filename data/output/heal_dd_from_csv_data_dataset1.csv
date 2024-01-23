@@ -1,6 +1,6 @@
-schemaVersion,section,name,title,description,type,format,constraints.required,constraints.maxLength,constraints.enum,constraints.pattern,constraints.maximum,constraints.minimum,enumLabels,enumOrdered,missingValues,trueValues,falseValues,standardsMappings[0].instrument.url,standardsMappings[0].instrument.source,standardsMappings[0].instrument.title,standardsMappings[0].instrument.id,standardsMappings[0].item.url,standardsMappings[0].item.source,standardsMappings[0].item.id
-,,id,,,integer,,,,,,,,,,,,,,,,,,,
-,,name,,,string,,,,,,,,,,,,,,,,,,,
-,,population,,,string,,,,,,,,,,,,,,,,,,,
-,,is_cool_country,,,boolean,,,,,,,,,,,,,,,,,,,
-,,coolness_scale,,,integer,,,,1|2,,,,,,,,,,,,,,,
+schemaVersion,section,name,title,description,type,format,constraints.required,constraints.maxLength,constraints.enum,constraints.pattern,constraints.maximum,constraints.minimum,enumLabels,enumOrdered,missingValues,trueValues,falseValues,standardsMappings[0].instrument.url,standardsMappings[0].instrument.source,standardsMappings[0].instrument.title,standardsMappings[0].instrument.id,standardsMappings[0].item.url,standardsMappings[0].item.source,standardsMappings[0].item.id,custom
+0.2.0,,id,,,integer,,,,,,,,,,,,,,,,,,,,
+0.2.0,,name,,,string,,,,,,,,,,,,,,,,,,,,
+0.2.0,,population,,,string,,,,,,,,,,,,,,,,,,,,
+0.2.0,,is_cool_country,,,boolean,,,,,,,,,,,,,,,,,,,,
+0.2.0,,coolness_scale,,,integer,,,,1|2,,,,,,,,,,,,,,,,

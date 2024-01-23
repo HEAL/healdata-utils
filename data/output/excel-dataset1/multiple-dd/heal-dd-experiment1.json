@@ -1,4 +1,5 @@
 {
+    "schemaVersion": "0.2.0",
     "fields": [
         {
             "name": "id",
