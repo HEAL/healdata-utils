@@ -4,6 +4,7 @@ import pprint
 import subprocess
 import argparse
 import yaml 
+import json
 
 import healdata_utils
 
@@ -20,8 +21,8 @@ def copy_schemas(fork,branch):
     healjsonschema = requests.get(jsonschema_url).json()
     healcsvtemplate = requests.get(csvschema_url).json()
 
-    healjsonschema_str = pp.pformat(healjsonschema)
-    healcsvtemplate_str = pp.pformat(healcsvtemplate)
+    healjsonschema_str = pp.pformat(healdata_utils.schemas.healjsonschema)
+    healcsvtemplate_str = pp.pformat(healdata_utils.schemas.healcsvschema)
 
     py_schema_dir = Path(__file__).parents[1].joinpath("src/healdata_utils/schemas") 
     py_schema_dir.joinpath("__init__.py").write_text("from .jsonschema import healjsonschema\nfrom .frictionless import healcsvschema")
@@ -81,8 +82,7 @@ if __name__ == "__main__":
         "frictionless/convert_frictionless_to_jsonschema_check1.json")
 
 
-    frictionless_input_schema = healcsvschema
-    jsonschema_props = healdata_utils.transforms.frictionlessconvert_frictionless_to_jsonschema(
-        healdata_utils.schemas.frictionlessfrictionless_input_schema)
+    frictionless_input_schema = healdata_utils.schemas.healcsvschema
+    jsonschema_props = healdata_utils.transforms.frictionless.convert_frictionless_to_jsonschema(frictionless_input_schema)
     Path(transformed_path).write_text(json.dumps(jsonschema_props,indent=3))
 
