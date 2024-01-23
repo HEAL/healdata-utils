@@ -29,6 +29,7 @@
       "missingValues": [],
       "trueValues": [],
       "falseValues": [],
+      "custom": {},
       "standardsMappings": [
         {
           "instrument": {
@@ -44,7 +45,14 @@
           }
         }
       ],
-      "custom": {}
+      "relatedConcepts": [
+        {
+          "url": null,
+          "title": null,
+          "source": null,
+          "id": null
+        }
+      ]
     },
     {
       "schemaVersion": null,
@@ -67,6 +75,7 @@
       "missingValues": [],
       "trueValues": [],
       "falseValues": [],
+      "custom": {},
       "standardsMappings": [
         {
           "instrument": {
@@ -82,7 +91,14 @@
           }
         }
       ],
-      "custom": {}
+      "relatedConcepts": [
+        {
+          "url": null,
+          "title": null,
+          "source": null,
+          "id": null
+        }
+      ]
     }
   ]
 }

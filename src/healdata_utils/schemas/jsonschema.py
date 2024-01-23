@@ -1335,6 +1335,16 @@ healjsonschema = {
                         "type": "array",
                         "examples": [["Not " "required", "NOT " "REQUIRED"], ["No"]],
                     },
+                    "custom": {
+                        "type": "object",
+                        "description": "Additional "
+                        "properties "
+                        "not "
+                        "included "
+                        "a "
+                        "core "
+                        "property. \n",
+                    },
                     "standardsMappings": {
                         "type": "array",
                         "description": "\n"
@@ -1988,15 +1998,268 @@ healjsonschema = {
                             },
                         },
                     },
-                    "custom": {
-                        "type": "object",
-                        "description": "Additional "
-                        "properties "
-                        "not "
-                        "included "
+                    "relatedConcepts": {
+                        "title": "Related " "Concepts",
+                        "description": "__**[Under "
+                        "development]**__ "
+                        "Mappings "
+                        "to "
                         "a "
-                        "core "
-                        "property. ",
+                        "published "
+                        "set "
+                        "of "
+                        "concepts "
+                        "related "
+                        "to "
+                        "the "
+                        "given "
+                        "field "
+                        "such "
+                        "as \n"
+                        "ontological "
+                        "information "
+                        "(eg., "
+                        "NCI "
+                        "thesaurus, "
+                        "bioportal "
+                        "etc)\n",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "url": {
+                                    "title": "Related " "Concepts " "- " "Url",
+                                    "description": "The "
+                                    "url "
+                                    "that "
+                                    "links "
+                                    "out "
+                                    "to "
+                                    "the "
+                                    "published, "
+                                    "related "
+                                    "concept. \n"
+                                    "The "
+                                    "listed "
+                                    "examples "
+                                    "could "
+                                    "both "
+                                    "be "
+                                    "attached "
+                                    "to "
+                                    "any "
+                                    "variable "
+                                    "related "
+                                    "to, "
+                                    "for "
+                                    "example, "
+                                    "heroin "
+                                    "use.\n"
+                                    "\n"
+                                    "> "
+                                    ":point_up: "
+                                    "if "
+                                    "you "
+                                    "are "
+                                    "looking "
+                                    "for "
+                                    "mapping "
+                                    "field "
+                                    "values "
+                                    "to "
+                                    "common "
+                                    "data "
+                                    "elements "
+                                    "or "
+                                    "a "
+                                    "set "
+                                    "of "
+                                    "standards, "
+                                    "see "
+                                    "`standardsMappings`_\n",
+                                    "type": "string",
+                                    "format": "uri",
+                                    "examples": [
+                                        "https://www.ebi.ac.uk/chebi/chebiOntology.do?chebiId=CHEBI:27808",
+                                        "http://purl.bioontology.org/ontology/RXNORM/3304",
+                                    ],
+                                },
+                                "title": {
+                                    "title": "Related " "concepts " "- " "Type",
+                                    "description": "A "
+                                    "human-readable "
+                                    "title "
+                                    "(ie "
+                                    "label) "
+                                    "to "
+                                    "a "
+                                    "concept "
+                                    "related "
+                                    "to "
+                                    "the "
+                                    "given "
+                                    "field.\n"
+                                    "The "
+                                    "listed "
+                                    "examples "
+                                    "could "
+                                    "both "
+                                    "be "
+                                    "attached "
+                                    "to "
+                                    "any "
+                                    "variable "
+                                    "related "
+                                    "to, "
+                                    "for "
+                                    "example, "
+                                    "heroin "
+                                    "use.\n"
+                                    "\n"
+                                    "> "
+                                    ":point_up: "
+                                    "if "
+                                    "you "
+                                    "are "
+                                    "looking "
+                                    "for "
+                                    "mapping "
+                                    "field "
+                                    "values "
+                                    "to "
+                                    "common "
+                                    "data "
+                                    "elements "
+                                    "or "
+                                    "a "
+                                    "set "
+                                    "of "
+                                    "standards, "
+                                    "see "
+                                    "`standardsMappings`_\n",
+                                    "type": "string",
+                                    "examples": [
+                                        "Heroin " "Molecular " "Structure",
+                                        "Heroin " "Ontology",
+                                    ],
+                                },
+                                "source": {
+                                    "title": "Related " "Concepts " "- " "Source",
+                                    "description": "The "
+                                    "source "
+                                    "(e.g., "
+                                    "a "
+                                    "dictionary "
+                                    "or "
+                                    "vocabulary "
+                                    "set) "
+                                    "to "
+                                    "a "
+                                    "concept "
+                                    "related "
+                                    "to "
+                                    "the "
+                                    "given "
+                                    "field.\n"
+                                    "The "
+                                    "listed "
+                                    "examples "
+                                    "could "
+                                    "both "
+                                    "be "
+                                    "attached "
+                                    "to "
+                                    "any "
+                                    "variable "
+                                    "related "
+                                    "to, "
+                                    "for "
+                                    "example, "
+                                    "heroin "
+                                    "use.\n"
+                                    "\n"
+                                    "> "
+                                    ":point_up: "
+                                    "if "
+                                    "you "
+                                    "are "
+                                    "looking "
+                                    "for "
+                                    "mapping "
+                                    "field "
+                                    "values "
+                                    "to "
+                                    "common "
+                                    "data "
+                                    "elements "
+                                    "or "
+                                    "a "
+                                    "set "
+                                    "of "
+                                    "standards, "
+                                    "see "
+                                    "`standardsMappings`_\n",
+                                    "type": "string",
+                                    "examples": ["CHEBI", "RXNORM"],
+                                },
+                                "id": {
+                                    "title": "Related " "Concepts " "- " "Id",
+                                    "type": "string",
+                                    "description": "The "
+                                    "id "
+                                    "locating "
+                                    "the "
+                                    "individual "
+                                    "concept "
+                                    "within "
+                                    "the "
+                                    "source "
+                                    "of "
+                                    "the "
+                                    "given "
+                                    "field.\n"
+                                    "The "
+                                    "listed "
+                                    "examples "
+                                    "could "
+                                    "both "
+                                    "be "
+                                    "attached "
+                                    "to "
+                                    "any "
+                                    "variable "
+                                    "related "
+                                    "to, "
+                                    "for "
+                                    "example, "
+                                    "heroin "
+                                    "use.\n"
+                                    "\n"
+                                    "> "
+                                    ":point_up: "
+                                    "if "
+                                    "you "
+                                    "are "
+                                    "looking "
+                                    "for "
+                                    "mapping "
+                                    "field "
+                                    "values "
+                                    "to "
+                                    "common "
+                                    "data "
+                                    "elements "
+                                    "or "
+                                    "a "
+                                    "set "
+                                    "of "
+                                    "standards, "
+                                    "see "
+                                    "`standardsMappings`_\n",
+                                    "examples": ["27808", "3304"],
+                                },
+                            },
+                        },
                     },
                 },
             },

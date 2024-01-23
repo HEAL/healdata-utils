@@ -89,18 +89,18 @@ healcsvschema = {
             "type": "string",
             "constraints": {
                 "enum": [
-                    "geopoint",
-                    "string",
-                    "boolean",
-                    "integer",
                     "time",
-                    "date",
-                    "year",
+                    "number",
+                    "geopoint",
                     "any",
                     "yearmonth",
-                    "duration",
+                    "year",
                     "datetime",
-                    "number",
+                    "date",
+                    "integer",
+                    "duration",
+                    "boolean",
+                    "string",
                 ]
             },
         },
@@ -253,6 +253,12 @@ healcsvschema = {
             "constraints": {"pattern": "^(?:[^|]+\\||[^|]*)(?:[^|]*\\|)*[^|]*$"},
         },
         {
+            "name": "custom",
+            "description": "Additional properties not included a core " "property. \n",
+            "type": "string",
+            "constraints": {"pattern": "^(?:.*?=.*?(?:\\||$))+$"},
+        },
+        {
             "name": "standardsMappings[0].instrument.url",
             "description": "A url (e.g., link, address) to a file or other "
             "resource containing the instrument, or\n"
@@ -330,10 +336,67 @@ healcsvschema = {
             "type": "string",
         },
         {
-            "name": "custom",
-            "description": "Additional properties not included a core " "property. ",
+            "name": "relatedConcepts[0].url",
+            "description": "The url that links out to the published, "
+            "related concept. \n"
+            "The listed examples could both be attached to "
+            "any variable related to, for example, heroin "
+            "use.\n"
+            "\n"
+            "> :point_up: if you are looking for mapping "
+            "field values to common data elements or a set "
+            "of standards, see `standardsMappings`_\n",
+            "title": "Related Concepts - Url",
+            "examples": [
+                "https://www.ebi.ac.uk/chebi/chebiOntology.do?chebiId=CHEBI:27808",
+                "http://purl.bioontology.org/ontology/RXNORM/3304",
+            ],
             "type": "string",
-            "constraints": {"pattern": "^(?:.*?=.*?(?:\\||$))+$"},
+        },
+        {
+            "name": "relatedConcepts[0].title",
+            "description": "A human-readable title (ie label) to a concept "
+            "related to the given field.\n"
+            "The listed examples could both be attached to "
+            "any variable related to, for example, heroin "
+            "use.\n"
+            "\n"
+            "> :point_up: if you are looking for mapping "
+            "field values to common data elements or a set "
+            "of standards, see `standardsMappings`_\n",
+            "title": "Related concepts - Type",
+            "examples": ["Heroin Molecular Structure", "Heroin Ontology"],
+            "type": "string",
+        },
+        {
+            "name": "relatedConcepts[0].source",
+            "description": "The source (e.g., a dictionary or vocabulary "
+            "set) to a concept related to the given field.\n"
+            "The listed examples could both be attached to "
+            "any variable related to, for example, heroin "
+            "use.\n"
+            "\n"
+            "> :point_up: if you are looking for mapping "
+            "field values to common data elements or a set "
+            "of standards, see `standardsMappings`_\n",
+            "title": "Related Concepts - Source",
+            "examples": ["CHEBI", "RXNORM"],
+            "type": "string",
+        },
+        {
+            "name": "relatedConcepts[0].id",
+            "description": "The id locating the individual concept within "
+            "the source of the given field.\n"
+            "The listed examples could both be attached to "
+            "any variable related to, for example, heroin "
+            "use.\n"
+            "\n"
+            "> :point_up: if you are looking for mapping "
+            "field values to common data elements or a set "
+            "of standards, see `standardsMappings`_\n",
+            "title": "Related Concepts - Id",
+            "examples": ["27808", "3304"],
+            "type": "string",
         },
     ],
     "missingValues": [""],

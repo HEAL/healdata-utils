@@ -21,6 +21,7 @@
          "missingValues",
          "trueValues",
          "falseValues",
+         "custom",
          "standardsMappings[0].instrument.url",
          "standardsMappings[0].instrument.source",
          "standardsMappings[0].instrument.title",
@@ -28,7 +29,10 @@
          "standardsMappings[0].item.url",
          "standardsMappings[0].item.source",
          "standardsMappings[0].item.id",
-         "custom"
+         "relatedConcepts[0].url",
+         "relatedConcepts[0].title",
+         "relatedConcepts[0].source",
+         "relatedConcepts[0].id"
       ],
       "properties": {
          "schemaVersion": {
@@ -112,18 +116,18 @@
                   "title": "Variable Type",
                   "type": "string",
                   "enum": [
-                     "geopoint",
-                     "string",
-                     "boolean",
-                     "integer",
                      "time",
-                     "date",
-                     "year",
+                     "number",
+                     "geopoint",
                      "any",
                      "yearmonth",
-                     "duration",
+                     "year",
                      "datetime",
-                     "number"
+                     "date",
+                     "integer",
+                     "duration",
+                     "boolean",
+                     "string"
                   ]
                },
                {
@@ -306,6 +310,20 @@
                }
             ]
          },
+         "custom": {
+            "anyOf": [
+               {
+                  "description": "Additional properties not included a core property. \n",
+                  "type": "string",
+                  "pattern": "^(?:.*?=.*?(?:\\||$))+$"
+               },
+               {
+                  "enum": [
+                     ""
+                  ]
+               }
+            ]
+         },
          "standardsMappings[0].instrument.url": {
             "anyOf": [
                {
@@ -406,12 +424,54 @@
                }
             ]
          },
-         "custom": {
+         "relatedConcepts[0].url": {
             "anyOf": [
                {
-                  "description": "Additional properties not included a core property. ",
-                  "type": "string",
-                  "pattern": "^(?:.*?=.*?(?:\\||$))+$"
+                  "description": "The url that links out to the published, related concept. \nThe listed examples could both be attached to any variable related to, for example, heroin use.\n\n> :point_up: if you are looking for mapping field values to common data elements or a set of standards, see `standardsMappings`_\n",
+                  "title": "Related Concepts - Url",
+                  "type": "string"
+               },
+               {
+                  "enum": [
+                     ""
+                  ]
+               }
+            ]
+         },
+         "relatedConcepts[0].title": {
+            "anyOf": [
+               {
+                  "description": "A human-readable title (ie label) to a concept related to the given field.\nThe listed examples could both be attached to any variable related to, for example, heroin use.\n\n> :point_up: if you are looking for mapping field values to common data elements or a set of standards, see `standardsMappings`_\n",
+                  "title": "Related concepts - Type",
+                  "type": "string"
+               },
+               {
+                  "enum": [
+                     ""
+                  ]
+               }
+            ]
+         },
+         "relatedConcepts[0].source": {
+            "anyOf": [
+               {
+                  "description": "The source (e.g., a dictionary or vocabulary set) to a concept related to the given field.\nThe listed examples could both be attached to any variable related to, for example, heroin use.\n\n> :point_up: if you are looking for mapping field values to common data elements or a set of standards, see `standardsMappings`_\n",
+                  "title": "Related Concepts - Source",
+                  "type": "string"
+               },
+               {
+                  "enum": [
+                     ""
+                  ]
+               }
+            ]
+         },
+         "relatedConcepts[0].id": {
+            "anyOf": [
+               {
+                  "description": "The id locating the individual concept within the source of the given field.\nThe listed examples could both be attached to any variable related to, for example, heroin use.\n\n> :point_up: if you are looking for mapping field values to common data elements or a set of standards, see `standardsMappings`_\n",
+                  "title": "Related Concepts - Id",
+                  "type": "string"
                },
                {
                   "enum": [
