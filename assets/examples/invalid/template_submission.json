@@ -1,7 +1,7 @@
 {
     "title": "template_submission",
     "description": "This is an example slightly more filled out",
-    "data_dictionary": [
+    "fields": [
         {
             "title": "Participant Id",
             "description": "Unique identifier for participant",
@@ -18,7 +18,7 @@
             "missingValues": [
                 "99"
             ],
-            "encoding": "White|Black or African American|American Indian or Alaska Native|Native|Hawaiian or Other Pacific Islander|Asian|Some other race|Multiracial|Not reported",
+            "enumLabels": "White|Black or African American|American Indian or Alaska Native|Native|Hawaiian or Other Pacific Islander|Asian|Some other race|Multiracial|Not reported",
             "constraints": {
                 "enum": [
                     "1",
