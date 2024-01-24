@@ -111,7 +111,7 @@ def convert_readstat(file_path,
                 if not val in missing_values
             ]
             stringify_keys(value_labels)
-            field['encodings'] = value_labels
+            field['enumLabels'] = value_labels
 
             if enums:
                 constraints_enums = {'constraints':{'enum':enums}}
@@ -123,7 +123,7 @@ def convert_readstat(file_path,
             field['missingValues'] = missing_values_str
 
     data_dictionary = data_dictionary_props.copy()
-    data_dictionary['data_dictionary'] = fields 
+    data_dictionary['fields'] = fields 
 
     package = convert_templatejson(data_dictionary)
     return package

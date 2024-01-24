@@ -1,68 +1,82 @@
 healcsvschema = {
-    "description": "Variable level metadata individual fields integrated into "
-    "the variable level\n"
-    "metadata object within the HEAL platform metadata service.\n"
+    "version": "0.2.0",
+    "description": "\n"
     "\n"
-    "> Note, only `name` and `description` are required.\n"
-    ">  Listed at the end of the description are suggested "
-    '"priority" levels in brackets (e.g., [<priority>]):\n'
-    "  1. [Required]: Needs to be filled out to be valid.\n"
-    "  2. [Highly recommended]: Greatly help using the data "
-    "dictionary but not required. \n"
-    "  3. [Optional, if applicable]: May only be applicable to "
-    "certain fields.\n"
-    "  4. [Autopopulated, if not filled]: These fields are "
-    "intended to be autopopulated from other fields but can be "
-    "filled out if desired.\n"
-    "  5. [Experimental]: These fields are not currently used but "
-    "are in development.\n",
+    '!!! note "Highly encouraged"\n'
+    "\n"
+    "  - Only `name` and `description` properties are required. \n"
+    "  - For categorical variables, `constraints.enum` and "
+    "`enumLabels` (where applicable) properties are highly "
+    "encouraged. \n"
+    "  - For studies using HEAL or other common data elements "
+    "(CDEs), `standardsMappings` information is highly "
+    "encouraged.\n"
+    "  - `type` and `format` properties may be particularly "
+    "useful for some variable types (e.g. date-like variables)\n",
     "title": "HEAL Variable Level Metadata Fields",
     "fields": [
         {
-            "name": "module",
+            "name": "schemaVersion",
+            "description": "The version of the schema used in agreed upon "
+            "convention of major.minor.path (e.g., 1.0.2) \n"
+            "\n"
+            "NOTE: This is NOT for versioning of each "
+            "indiviual data dictionary instance. \n"
+            "Rather, it is the\n"
+            "version of THIS schema document. See `version` "
+            "property (below) if specifying the individual "
+            "data dictionary instance\n"
+            "version.\n"
+            "\n"
+            "If generating a vlmd document as a csv file, "
+            "include this version in \n"
+            "every row/record to indicate this is a schema "
+            "level property \n"
+            "(not applicable for the json version as this "
+            "property is already at the schema/root "
+            "level)\n",
+            "examples": ["1.0.0", "0.2.0"],
+            "type": "string",
+            "constraints": {"pattern": "\\d+\\.\\d+\\.\\d+"},
+        },
+        {
+            "name": "section",
             "description": "The section, form, survey instrument, set of "
             "measures  or other broad category used \n"
-            "to group variables.\n",
-            "title": "Module",
-            "examples": [
-                "Demographics",
-                "PROMIS",
-                "Substance use",
-                "Medical History",
-                "Sleep questions",
-                "Physical activity",
-            ],
+            "to group variables. Previously called "
+            '"module."\n',
+            "title": "Section",
+            "examples": ["Demographics", "PROMIS", "Medical History"],
             "type": "string",
         },
         {
             "name": "name",
             "description": "The name of a variable (i.e., field) as it "
-            "appears in the data. \n"
-            "\n"
-            "[Required]\n",
+            "appears in the data. \n",
             "title": "Variable Name",
+            "examples": ["gender_id"],
             "type": "string",
             "constraints": {"required": True},
         },
         {
             "name": "title",
-            "description": "The human-readable title or label of the "
-            "variable. \n"
-            "\n"
-            "[Highly recommended]\n",
+            "description": "The human-readable title or label of the " "variable.\n",
             "title": "Variable Label (ie Title)",
-            "examples": ["My Variable (for name of my_variable)"],
+            "examples": ["Gender identity"],
             "type": "string",
         },
         {
             "name": "description",
             "description": "An extended description of the variable. This "
             "could be the definition of a variable or the \n"
-            "question text (e.g., if a survey). \n"
-            "\n"
-            "[Required]\n",
+            "question text (e.g., if a survey). \n",
             "title": "Variable Description",
-            "examples": ["Definition", "Question text (if a survey)"],
+            "examples": [
+                "The participant's age at the time of study " "enrollment",
+                "What is the highest grade or level of school "
+                "you have completed or the highest degree you "
+                "have received?",
+            ],
             "type": "string",
             "constraints": {"required": True},
         },
@@ -70,69 +84,48 @@ healcsvschema = {
             "name": "type",
             "description": "A classification or category of a particular "
             "data element or property expected or allowed "
-            "in the dataset.\n"
-            "\n"
-            "-  `number` (A numeric value with optional "
-            "decimal places. (e.g., 3.14))\n"
-            "-  `integer` (A whole number without decimal "
-            "places. (e.g., 42))\n"
-            "-  `string` (A sequence of characters. (e.g., "
-            '\\"test\\"))\n'
-            "-  `any` (Any type of data is allowed. (e.g., "
-            "true))\n"
-            "-  `boolean` (A binary value representing true "
-            "or false. (e.g., true))\n"
-            "-  `date` (A specific calendar date. (e.g., "
-            '\\"2023-05-25\\"))\n'
-            "-  `datetime` (A specific date and time, "
-            "including timezone information. (e.g., "
-            '\\"2023-05-25T10:30:00Z\\"))\n'
-            "-  `time` (A specific time of day. (e.g., "
-            '\\"10:30:00\\"))\n'
-            "-  `year` (A specific year. (e.g., 2023)\n"
-            "-  `yearmonth` (A specific year and month. "
-            '(e.g., \\"2023-05\\"))\n'
-            "-  `duration` (A length of time. (e.g., "
-            '\\"PT1H\\")\n'
-            "-  `geopoint` (A pair of latitude and "
-            "longitude coordinates. (e.g., [51.5074, "
-            "-0.1278]))\n",
+            "in the dataset.\n",
             "title": "Variable Type",
             "type": "string",
             "constraints": {
                 "enum": [
-                    "integer",
-                    "geopoint",
-                    "string",
-                    "yearmonth",
-                    "number",
-                    "date",
-                    "boolean",
-                    "any",
-                    "year",
-                    "duration",
                     "time",
+                    "number",
+                    "geopoint",
+                    "any",
+                    "yearmonth",
+                    "year",
                     "datetime",
+                    "date",
+                    "integer",
+                    "duration",
+                    "boolean",
+                    "string",
                 ]
             },
         },
         {
             "name": "format",
-            "description": "A format taken from one of the [frictionless "
-            "specification](https://specs.frictionlessdata.io/) "
-            "schemas.\n"
-            "For example, for tabular data, there is the "
-            "[Table Schema "
-            "specification](https://specs.frictionlessdata.io/table-schema)\n"
-            "\n"
+            "description": "Indicates the format of the type specified in "
+            "the `type` property. \n"
             "Each format is dependent on the `type` "
-            "specified. For example:\n"
-            'If `type` is "string", then see the String '
-            "formats. \n"
-            "If `type` is one of the date-like formats, "
-            "then see Date formats.\n",
-            "title": "Frictionless Formats",
-            "type": "any",
+            "specified. \n"
+            "See "
+            "[here](https://specs.frictionlessdata.io/table-schema/#types-and-formats) \n"
+            "for more information about appropriate "
+            "`format` values by variable `type`.\n",
+            "title": "Variable Format",
+            "type": "string",
+        },
+        {
+            "name": "constraints.required",
+            "description": "If this variable is marked as true, then this "
+            "variable's value must be present\n"
+            "(ie not missing; see missingValues). If marked "
+            "as false or not present, then the \n"
+            "variable CAN be missing.\n",
+            "title": "Required variable",
+            "type": "boolean",
         },
         {
             "name": "constraints.maxLength",
@@ -141,28 +134,22 @@ healcsvschema = {
             "object). For example, if 'Hello World' is the "
             "longest value of a\n"
             "categorical variable, this would be a "
-            "maxLength of 11.\n"
-            "\n"
-            "[Optional,if applicable]\n",
+            "maxLength of 11.\n",
             "title": "Maximum Length",
             "type": "integer",
         },
         {
             "name": "constraints.enum",
-            "description": "Constrains possible values to a set of "
-            "values.\n"
-            "\n"
-            "[Optional,if applicable]\n",
+            "description": "Constrains possible values to a set of " "values.\n",
             "title": "Variable Possible Values",
+            "examples": ["1|2|3|4|5", "Poor|Fair|Good|Very good|Excellent"],
             "type": "string",
             "constraints": {"pattern": "^(?:[^|]+\\||[^|]*)(?:[^|]*\\|)*[^|]*$"},
         },
         {
             "name": "constraints.pattern",
             "description": "A regular expression pattern the data MUST "
-            "conform to.\n"
-            "\n"
-            "[Optional,if applicable]\n",
+            "conform to.\n",
             "title": "Regular Expression Pattern",
             "type": "string",
         },
@@ -172,22 +159,18 @@ healcsvschema = {
             "maximum -- or most\n"
             "recent -- date, maximum integer etc). Note, "
             "this is different then\n"
-            "maxLength property.\n"
-            "\n"
-            "[Optional,if applicable]\n",
+            "maxLength property.\n",
             "title": "Maximum Value",
             "type": "integer",
         },
         {
             "name": "constraints.minimum",
-            "description": "Specifies the minimum value of a field.\n"
-            "\n"
-            "[Optional,if applicable]\n",
+            "description": "Specifies the minimum value of a field.\n",
             "title": "Minimum Value",
             "type": "integer",
         },
         {
-            "name": "encodings",
+            "name": "enumLabels",
             "description": "Variable value encodings provide a way to "
             "further annotate any value within a any "
             "variable type,\n"
@@ -208,14 +191,18 @@ healcsvschema = {
             "labels (such as\n"
             "abbreviations).\n"
             "\n"
-            "[Optional,if applicable]\n",
+            "This field is intended to follow [this "
+            "pattern](https://specs.frictionlessdata.io/patterns/#table-schema-enum-labels-and-ordering)\n",
             "title": "Variable Value Encodings (i.e., mappings; value " "labels)",
-            "examples": ["0=No|1=Yes", "HW=Hello world|GBW=Good bye world|HM=Hi,Mike"],
+            "examples": [
+                "1=Poor|2=Fair|3=Good|4=Very good|5=Excellent",
+                "HW=Hello world|GBW=Good bye world|HM=Hi, Mike",
+            ],
             "type": "string",
             "constraints": {"pattern": "^(?:.*?=.*?(?:\\||$))+$"},
         },
         {
-            "name": "ordered",
+            "name": "enumOrdered",
             "description": "Indicates whether a categorical variable is "
             "ordered. This variable  is\n"
             "relevant for variables that have an ordered "
@@ -224,17 +211,17 @@ healcsvschema = {
             "Strongly disagree < Disagree\n"
             "< Neutral < Agree).\n"
             "\n"
-            "[Optional,if applicable]\n",
+            "This field is intended to follow the ordering "
+            "aspect of this [this pattern][this "
+            "pattern](https://specs.frictionlessdata.io/patterns/#table-schema-enum-labels-and-ordering)\n",
             "title": "An ordered variable",
             "type": "boolean",
         },
         {
             "name": "missingValues",
-            "description": "A list of missing values specific to a "
-            "variable.\n"
-            "\n"
-            "[Optional, if applicable]\n",
+            "description": "A list of missing values specific to a " "variable.\n",
             "title": "Missing Values",
+            "examples": ["Missing|Skipped|No preference", "Missing"],
             "type": "string",
             "constraints": {"pattern": "^(?:[^|]+\\||[^|]*)(?:[^|]*\\|)*[^|]*$"},
         },
@@ -245,15 +232,9 @@ healcsvschema = {
             "a physical string representation to be cast as "
             "true (increasing\n"
             "readability of the field). It can include one "
-            "or more values.\n"
-            "\n"
-            "[Optional, if applicable]\n",
-            "examples": [
-                "Required|REQUIRED",
-                "required|Yes|Y|Checked",
-                "Checked",
-                "Required",
-            ],
+            "or more values.\n",
+            "title": "Boolean True Value Labels",
+            "examples": ["required|Yes|Checked", "required"],
             "type": "string",
             "constraints": {"pattern": "^(?:[^|]+\\||[^|]*)(?:[^|]*\\|)*[^|]*$"},
         },
@@ -267,124 +248,156 @@ healcsvschema = {
             "standard false value. It can include one or "
             "more values.\n",
             "title": "Boolean False Value Labels",
+            "examples": ["Not required|NOT REQUIRED", "No"],
             "type": "string",
             "constraints": {"pattern": "^(?:[^|]+\\||[^|]*)(?:[^|]*\\|)*[^|]*$"},
         },
         {
-            "name": "repo_link",
-            "description": "A link to the variable as it exists on the "
-            "home repository, if applicable\n",
-            "title": "Variable Repository Link",
+            "name": "custom",
+            "description": "Additional properties not included a core " "property. \n",
+            "type": "string",
+            "constraints": {"pattern": "^(?:.*?=.*?(?:\\||$))+$"},
+        },
+        {
+            "name": "standardsMappings[0].instrument.url",
+            "description": "A url (e.g., link, address) to a file or other "
+            "resource containing the instrument, or\n"
+            "a set of items which encompass a variable in "
+            "this variable level metadata document (if at "
+            "the root level or the document level) \n"
+            "or the individual variable (if at the field "
+            "level). \n",
+            "title": "Url",
+            "examples": [
+                "https://www.heal.nih.gov/files/CDEs/2023-05/adult-demographics-cdes.xlsx"
+            ],
             "type": "string",
         },
         {
-            "name": "standardsMappings.type",
-            "description": "The **type** of mapping linked to a published "
-            "set of standard variables such as the NIH "
-            "Common Data Elements program.\n"
-            "[Autopopulated, if not filled]\n",
-            "title": "Standards Mapping - Title",
-            "examples": ["cde", "ontology", "reference_list"],
+            "name": "standardsMappings[0].instrument.source",
+            "description": "An abbreviated name/acronym from a controlled "
+            "vocabulary referencing the resource (e.g., "
+            "program or repository)\n"
+            "containing the instrument, or a set of items "
+            "which encompass a variable in this variable "
+            "level metadata document (if at the root level "
+            "or the document level) \n"
+            "or the individual variable (if at the field "
+            "level). \n",
+            "title": "Source",
+            "type": "string",
+            "constraints": {"enum": ["heal-cde"]},
+        },
+        {
+            "name": "standardsMappings[0].instrument.title",
+            "title": "Title",
+            "examples": ["Adult demographics", "adult-demographics"],
             "type": "string",
         },
         {
-            "name": "standardsMappings.label",
-            "description": "A free text **label** of a mapping indicating "
-            "a mapping(s) to a published set of standard "
-            "variables such as the NIH Common Data Elements "
-            "program.\n"
-            "\n"
-            "[Autopopulated, if not filled]\n",
-            "title": "Standards Mapping - Label",
-            "examples": ["substance use", "chemical compound", "promis"],
+            "name": "standardsMappings[0].instrument.id",
+            "description": "A code or other string that identifies the "
+            "instrument within the source.\n"
+            "This should always be from the source's "
+            "formal, standardized identification system \n",
+            "title": "Identifier",
+            "examples": ["5141"],
             "type": "string",
         },
         {
-            "name": "standardsMappings.url",
+            "name": "standardsMappings[0].item.url",
             "description": "The url that links out to the published, "
-            "standardized mapping.\n"
-            "\n"
-            "[Autopopulated, if not filled]\n",
-            "title": "Standards Mapping - Url",
-            "examples": ["https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"],
+            "standardized mapping of a variable (e.g., "
+            "common data element)\n",
+            "title": "Standards mappings - Url",
+            "examples": [
+                "https://evs.nci.nih.gov/ftp1/CDISC/SDTM/SDTM%20Terminology.html#CL.C74457.RACE"
+            ],
             "type": "string",
         },
         {
-            "name": "standardsMappings.source",
-            "description": "The source of the standardized variable.\n",
-            "title": "Standard Mapping - Source",
-            "examples": ["TBD (will have controlled vocabulary)"],
+            "name": "standardsMappings[0].item.source",
+            "description": "The source of the standardized variable. Note, "
+            "this property is required if \n"
+            "an id is specified.\n",
+            "title": "Standards mappings - Source",
+            "examples": ["CDISC"],
             "type": "string",
         },
         {
-            "name": "standardsMappings.id",
+            "name": "standardsMappings[0].item.id",
             "description": "The id locating the individual mapping within "
-            "the given source.\n",
-            "title": "Standard Mapping - Id",
+            "the given source. \n"
+            "Note, the `standardsMappings[0].source` "
+            "property is required if \n"
+            "this property is specified.\n",
+            "title": "Standards Mappings - Id",
+            "examples": ["C74457"],
             "type": "string",
         },
         {
-            "name": "relatedConcepts.type",
-            "description": "The **type** of mapping to a published set of "
-            "concepts related to the given field such as \n"
-            "ontological information (eg., NCI thesaurus, "
-            "bioportal etc)\n"
-            "\n"
-            "[Autopopulated, if not filled]\n",
-            "title": "Related concepts - Type",
-            "type": "string",
-        },
-        {
-            "name": "relatedConcepts.label",
-            "description": "A free text **label** of mapping to a "
-            "published set of concepts related to the given "
-            "field such as \n"
-            "ontological information (eg., NCI thesaurus, "
-            "bioportal etc)\n"
-            "\n"
-            "[Autopopulated, if not filled]\n",
-            "title": "Related Concepts - Label",
-            "type": "string",
-        },
-        {
-            "name": "relatedConcepts.url",
+            "name": "relatedConcepts[0].url",
             "description": "The url that links out to the published, "
-            "standardized concept.\n"
+            "related concept. \n"
+            "The listed examples could both be attached to "
+            "any variable related to, for example, heroin "
+            "use.\n"
             "\n"
-            "[Autopopulated, if not filled]\n",
+            "> :point_up: if you are looking for mapping "
+            "field values to common data elements or a set "
+            "of standards, see `standardsMappings`_\n",
             "title": "Related Concepts - Url",
-            "examples": ["https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"],
+            "examples": [
+                "https://www.ebi.ac.uk/chebi/chebiOntology.do?chebiId=CHEBI:27808",
+                "http://purl.bioontology.org/ontology/RXNORM/3304",
+            ],
             "type": "string",
         },
         {
-            "name": "relatedConcepts.source",
-            "description": "The source of the related concept.\n"
+            "name": "relatedConcepts[0].title",
+            "description": "A human-readable title (ie label) to a concept "
+            "related to the given field.\n"
+            "The listed examples could both be attached to "
+            "any variable related to, for example, heroin "
+            "use.\n"
             "\n"
-            "[Autopopulated, if not filled]\n",
+            "> :point_up: if you are looking for mapping "
+            "field values to common data elements or a set "
+            "of standards, see `standardsMappings`_\n",
+            "title": "Related concepts - Type",
+            "examples": ["Heroin Molecular Structure", "Heroin Ontology"],
+            "type": "string",
+        },
+        {
+            "name": "relatedConcepts[0].source",
+            "description": "The source (e.g., a dictionary or vocabulary "
+            "set) to a concept related to the given field.\n"
+            "The listed examples could both be attached to "
+            "any variable related to, for example, heroin "
+            "use.\n"
+            "\n"
+            "> :point_up: if you are looking for mapping "
+            "field values to common data elements or a set "
+            "of standards, see `standardsMappings`_\n",
             "title": "Related Concepts - Source",
-            "examples": ["TBD (will have controlled vocabulary)"],
+            "examples": ["CHEBI", "RXNORM"],
             "type": "string",
         },
         {
-            "name": "relatedConcepts.id",
-            "description": "The id locating the individual mapping within "
-            "the given source.\n"
+            "name": "relatedConcepts[0].id",
+            "description": "The id locating the individual concept within "
+            "the source of the given field.\n"
+            "The listed examples could both be attached to "
+            "any variable related to, for example, heroin "
+            "use.\n"
             "\n"
-            "[Autopopulated, if not filled]\n",
+            "> :point_up: if you are looking for mapping "
+            "field values to common data elements or a set "
+            "of standards, see `standardsMappings`_\n",
             "title": "Related Concepts - Id",
+            "examples": ["27808", "3304"],
             "type": "string",
         },
-        {"name": "univarStats.median", "type": "number"},
-        {"name": "univarStats.mean", "type": "number"},
-        {"name": "univarStats.std", "type": "number"},
-        {"name": "univarStats.min", "type": "number"},
-        {"name": "univarStats.max", "type": "number"},
-        {"name": "univarStats.mode", "type": "number"},
-        {"name": "univarStats.count", "type": "integer"},
-        {"name": "univarStats.twentyFifthPercentile", "type": "number"},
-        {"name": "univarStats.seventyFifthPercentile", "type": "number"},
-        {"name": "univarStats.categoricalMarginals.name", "type": "string"},
-        {"name": "univarStats.categoricalMarginals.count", "type": "integer"},
     ],
     "missingValues": [""],
 }

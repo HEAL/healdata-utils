@@ -4,9 +4,9 @@ import json
 
 from healdata_utils.io import write_vlmd_template,read_excel
 
-from conftest import compare_vlmd_tmp_to_output
+from conftest import _compare_vlmd_tmp_to_output,fields_propname
 
-def test_write_vlmd_template(fields_propname):
+def test_write_vlmd_template():
 
 
 
@@ -24,7 +24,7 @@ def test_write_vlmd_template(fields_propname):
     csvoutput = Path("data/templates/twofields.csv").read_text().split("\n")
     jsonoutput = json.loads(Path("data/templates/twofields.json").read_text())
 
-    compare_vlmd_tmp_to_output(tmpdir,csvoutput,jsonoutput,fields_propname)
+    _compare_vlmd_tmp_to_output(tmpdir/"heal",csvoutput,jsonoutput,fields_propname)
 
     shutil.rmtree(tmpdir)
 

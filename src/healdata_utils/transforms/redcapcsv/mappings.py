@@ -54,7 +54,7 @@ def _parse_field_properties_from_encodings(
     
     return {
         "type":fieldtype,
-        "encodings":{key.strip():val.strip() for key,val in fieldencodings.items()},
+        "enumLabels":{key.strip():val.strip() for key,val in fieldencodings.items()},
         "constraints":{
             "enum":[val.strip() for val in fieldenums]
         }
@@ -204,7 +204,7 @@ def mapcheckbox(field):
             "name":checkboxname+"___"+re.sub("^\-","_",val).strip(), #NOTE: REDCAP changes negative sign to underscore
             "type":fieldtype,
             "constraints":{"enum":fieldenums},
-            "encodings":fieldencodings
+            "enumLabels":fieldencodings
         }
         for val,choice in choices.items()
     ]
@@ -229,7 +229,7 @@ def mapyesno(field):
     return {
         "type":"boolean",
         "constraints":{"enum":["0","1"]},
-        "encodings":{"0":"No","1":"Yes"}
+        "enumLabels":{"0":"No","1":"Yes"}
     }
 
 
@@ -237,7 +237,7 @@ def maptruefalse(field):
     return {
         "type":"boolean",
         "constraints":{"enum":["0","1"]},
-        "encodings":{"0":"False","1":"True"}
+        "enumLabels":{"0":"False","1":"True"}
     }
 
 
@@ -251,7 +251,7 @@ def mapslider(field):
             "minimum":0,
             "maximum":100
         },
-        "encodings":fieldencodings
+        "enumLabels":fieldencodings
     }
 def mapdescriptive(field):
     return None

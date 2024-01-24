@@ -1,6 +1,7 @@
 """ convert various frictionless objects to
 another format """
 from healdata_utils.transforms.jsontemplate.conversion import convert_templatejson
+from healdata_utils import schemas
 import os 
 import yaml
 import json
@@ -18,6 +19,8 @@ def convert_frictionless_tableschema(
             schemajson = json.loads(Path(schema).read_text())
     else:
         schemajson = schema
+
+
     data_dictionaries = convert_templatejson(
         schemajson,
         data_dictionary_props,

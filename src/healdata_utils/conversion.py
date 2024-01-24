@@ -13,7 +13,9 @@ import click
 from slugify import slugify
 
 from healdata_utils.transforms.excel.conversion import convert_dataexcel
-from healdata_utils.transforms.csvtemplate.conversion import convert_templatecsv
+from healdata_utils.transforms.csvtemplate.conversion import (
+    convert_templatecsv,update_templatecsv_version
+)
 from healdata_utils.transforms.jsontemplate.conversion import convert_templatejson
 
 from healdata_utils.transforms.stata.conversion import convert_stata
@@ -27,12 +29,13 @@ from healdata_utils.transforms.frictionless.conversion import (
 
 from healdata_utils.validators.validate import validate_vlmd_json, validate_vlmd_csv
 from healdata_utils.utils import find_docstring_desc
-
+from healdata_utils import schemas
 # TODO: convert_templatecsv is misleading as it maps variable types. Need, to build this out further to support more translations.
 # for now, just changing function name here.
 convert_datadictcsv = convert_templatecsv
 
 choice_fxn = {
+    "csv-version-update":update_templatecsv_version,
     "excel-data":convert_dataexcel,
     "csv-data": convert_datacsv,
     'csv-data-dict':convert_datadictcsv,
@@ -46,9 +49,10 @@ choice_fxn = {
     "frictionless-tbl-schema": convert_frictionless_tableschema,
 }
 
+# no extension for version updates (need to specify explicitly)
 ext_map = {
     ".data.xlsx":"excel-data",
-    ".data-dict.csv":"csv-data-dict",
+    ".datadict.csv":"csv-data-dict",
     ".data.csv":"csv-data",
     ".sav":"spss",
     ".sas7bdat":"sas",
@@ -63,6 +67,7 @@ ext_map = {
 # }
 
 input_short_descriptions = {
+    "csv-version-update":"A data dictionary in a csv (or tsv file) that converts data dictionaries based on prior versions of the standard to the current version.",
     "excel-data":"Data (not metadata) in an excel (xlsx) workbook. Infers one data dictionary per sheet by default. Runs same inference as csv-data",
     "csv-data":"Data (not metadata) in a csv (or tsv) file. Infers variable/field name, type, and enum (possible values).",
     "csv-data-dict":"A minimal data dictionary in a csv (or tsv file). For example, may have name, type, and description and then adds the rest of the fields. Also maps a few common data types (such as char, character,text to 'string' and 'float' to 'number'.)",
@@ -206,7 +211,8 @@ def convert_to_vlmd(
     output_csv_quoting: bool, optional
         If true, all nonnumeric values will be quoted. This helps reduce ambiguity for programs
         like excel that uses special characters for specific purposes (eg = for formulas)
-    
+    output_overwrite: bool, optional
+        If true, will overwrite files of the same name. 
     **kwargs: keyword arguments for specific registered input types
         currently this includes sas catalog file for sas and sheet_names/other params for excel.
 
@@ -270,9 +276,15 @@ def convert_to_vlmd(
 
     packages_with_reports = {}
     for name,package in packages.items():
-        # TODO: json validate root AND fields while csv currently only validates fields (ie table) but no reason it cant validate entire data package
+
+        # add versions to both formats at top of object
+        for field in package["templatecsv"]['fields']:
+            field.update({"schemaVersion":schemas.healjsonschema["version"],**field})
+
+        package["templatejson"] = {"schemaVersion":schemas.healjsonschema["version"],**dict(package["templatejson"])}
+        
         package_csv = validate_vlmd_csv(
-            package["templatecsv"]["data_dictionary"], to_sync_fields=True
+            package["templatecsv"]['fields'], to_sync_fields=True
         )
         package_json = validate_vlmd_json(package["templatejson"])
 

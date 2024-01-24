@@ -1,0 +1,124 @@
+{
+    "schemaVersion": "0.2.0",
+    "description": "This is a proof of concept to demonstrate the healdata-utils functionality",
+    "title": "Healdata-utils Demonstration Data Dictionary",
+    "fields": [
+        {
+            "name": "id",
+            "type": "integer",
+            "description": "Unique identifier for participant"
+        },
+        {
+            "name": "visit_dt",
+            "type": "any",
+            "description": "Date of the interview"
+        },
+        {
+            "name": "sex_at_birth",
+            "type": "any",
+            "description": "The self-reported sex of the participant/subject at birth",
+            "enumLabels": {
+                "1": "Male",
+                "2": "Female",
+                "3": "Intersex",
+                "4": "None of these describe me",
+                "a": "Not reported",
+                "b": "Prefer not to answer"
+            },
+            "constraints": {
+                "enum": [
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "missingValues": [
+                "a",
+                "b"
+            ]
+        },
+        {
+            "name": "race",
+            "type": "any",
+            "description": "Self-reported race",
+            "enumLabels": {
+                "1": "White",
+                "2": "Black or African American",
+                "3": "American Indian or Alaska Native",
+                "4": "Native",
+                "5": "Hawaiian or Other Pacific Islander",
+                "6": "Asian",
+                "7": "Some other race",
+                "8": "Multiracial",
+                "a": "Not reported",
+                "b": "Prefer not to answer"
+            },
+            "constraints": {
+                "enum": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "missingValues": [
+                "a",
+                "b"
+            ]
+        },
+        {
+            "name": "hispanic_ethnicity",
+            "type": "boolean",
+            "description": "Are you of Hispanic, Latino, or Spanish origin?",
+            "enumLabels": {
+                "0": "No",
+                "1": "Yes",
+                "a": "Not reported",
+                "b": "Prefer not to answer"
+            },
+            "constraints": {
+                "enum": [
+                    0,
+                    1
+                ]
+            },
+            "missingValues": [
+                "a",
+                "b"
+            ]
+        },
+        {
+            "name": "SU4",
+            "type": "any",
+            "description": "Heroin Days Used in days",
+            "enumLabels": {
+                "a": "Not reported",
+                "b": "Prefer not to answer"
+            },
+            "missingValues": [
+                "a",
+                "b"
+            ]
+        },
+        {
+            "name": "age",
+            "type": "integer",
+            "description": "Age of participant in year",
+            "enumLabels": {
+                "a": "Not reported",
+                "b": "Prefer not to answer"
+            },
+            "constraints": {
+                "enum": [
+                    "a",
+                    "b"
+                ]
+            }
+        }
+    ]
+}

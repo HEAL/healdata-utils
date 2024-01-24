@@ -1,0 +1,25 @@
+{
+    "valid": false,
+    "errors": [
+        {
+            "json_path": "$",
+            "message": "'title' is a required property"
+        },
+        {
+            "json_path": "$.fields[0]",
+            "message": "'description' is a required property"
+        },
+        {
+            "json_path": "$.fields[1]",
+            "message": "'description' is a required property"
+        },
+        {
+            "json_path": "$.fields[2]",
+            "message": "'description' is a required property"
+        },
+        {
+            "json_path": "$.fields[3]",
+            "message": "'description' is a required property"
+        }
+    ]
+}

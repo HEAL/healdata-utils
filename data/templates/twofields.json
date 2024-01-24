@@ -1,122 +1,104 @@
 {
   "title": null,
   "description": null,
-  "data_dictionary": [
+  "schemaVersion": "0.2.0",
+  "version": null,
+  "standardsMappings": [
+    null
+  ],
+  "custom": {},
+  "fields": [
     {
-      "module": null,
+      "schemaVersion": null,
+      "section": null,
       "name": null,
       "title": null,
       "description": null,
       "type": null,
       "format": null,
       "constraints": {
+        "required": null,
         "maxLength": null,
         "enum": [],
         "pattern": null,
         "maximum": null,
         "minimum": null
       },
-      "encodings": {},
-      "ordered": null,
+      "enumLabels": {},
+      "enumOrdered": null,
       "missingValues": [],
-      "trueValues": [
-        null
-      ],
+      "trueValues": [],
       "falseValues": [],
-      "repo_link": null,
+      "custom": {},
       "standardsMappings": [
         {
-          "type": null,
-          "label": null,
-          "url": null,
-          "source": null,
-          "id": null
+          "instrument": {
+            "url": null,
+            "source": null,
+            "title": null,
+            "id": null
+          },
+          "item": {
+            "url": null,
+            "source": null,
+            "id": null
+          }
         }
       ],
       "relatedConcepts": [
         {
-          "type": null,
-          "label": null,
           "url": null,
+          "title": null,
           "source": null,
           "id": null
         }
-      ],
-      "univarStats": {
-        "median": null,
-        "mean": null,
-        "std": null,
-        "min": null,
-        "max": null,
-        "mode": null,
-        "count": null,
-        "twentyFifthPercentile": null,
-        "seventyFifthPercentile": null,
-        "categoricalMarginals": [
-          {
-            "name": null,
-            "count": null
-          }
-        ]
-      }
+      ]
     },
     {
-      "module": null,
+      "schemaVersion": null,
+      "section": null,
       "name": null,
       "title": null,
       "description": null,
       "type": null,
       "format": null,
       "constraints": {
+        "required": null,
         "maxLength": null,
         "enum": [],
         "pattern": null,
         "maximum": null,
         "minimum": null
       },
-      "encodings": {},
-      "ordered": null,
+      "enumLabels": {},
+      "enumOrdered": null,
       "missingValues": [],
-      "trueValues": [
-        null
-      ],
+      "trueValues": [],
       "falseValues": [],
-      "repo_link": null,
+      "custom": {},
       "standardsMappings": [
         {
-          "type": null,
-          "label": null,
-          "url": null,
-          "source": null,
-          "id": null
+          "instrument": {
+            "url": null,
+            "source": null,
+            "title": null,
+            "id": null
+          },
+          "item": {
+            "url": null,
+            "source": null,
+            "id": null
+          }
         }
       ],
       "relatedConcepts": [
         {
-          "type": null,
-          "label": null,
           "url": null,
+          "title": null,
           "source": null,
           "id": null
         }
-      ],
-      "univarStats": {
-        "median": null,
-        "mean": null,
-        "std": null,
-        "min": null,
-        "max": null,
-        "mode": null,
-        "count": null,
-        "twentyFifthPercentile": null,
-        "seventyFifthPercentile": null,
-        "categoricalMarginals": [
-          {
-            "name": null,
-            "count": null
-          }
-        ]
-      }
+      ]
     }
   ]
 }

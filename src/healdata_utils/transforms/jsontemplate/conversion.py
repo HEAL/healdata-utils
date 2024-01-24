@@ -1,15 +1,15 @@
 from pathlib import Path
 import json
 # from frictionless import Resource,Package
-from collections.abc import MutableMapping
-from .mappings import join_prop
-from healdata_utils.utils import flatten_except_if
+import collections
+from healdata_utils import utils,schemas
 from os import PathLike
+import pandas as pd
 
 def convert_templatejson(
     jsontemplate,
     data_dictionary_props:dict=None,
-    fields_name:str='data_dictionary',
+    fields_name:str='fields',
     sep_iter = '|',
     sep_dict = '=',
     **kwargs
@@ -30,9 +30,6 @@ def convert_templatejson(
         This input can be any data object or path-like string excepted by a frictionless Resource object.
     data_dictionary_props : dict
         The HEAL-specified data dictionary properties.
-    mappings : dict, optional
-        Mappings (which can be a dictionary of either lambda functions or other to-be-mapped objects).
-        Default: specified fieldmap.
 
     Returns
     -------
@@ -50,7 +47,7 @@ def convert_templatejson(
     """
     if isinstance(jsontemplate,(str,PathLike)):
         jsontemplate_dict = json.loads(Path(jsontemplate).read_text())
-    elif isinstance(jsontemplate, MutableMapping):
+    elif isinstance(jsontemplate, collections.abc.MutableMapping):
         jsontemplate_dict = jsontemplate
     else:
         raise Exception("jsontemplate needs to be either dictionary-like or a path to a json")
@@ -72,17 +69,22 @@ def convert_templatejson(
 
     fields_json = jsontemplate_dict.pop(fields_name)
     data_dictionary_props = jsontemplate_dict
-    
-    fields_csv = []
-    for f in fields_json:
-        field_flattened = flatten_except_if(f)
-        field_csv = {
-            propname:join_prop(propname,prop)
-            for propname,prop in field_flattened.items()
-        }
-        fields_csv.append(field_csv)
 
-    template_json = dict(**data_dictionary_props,data_dictionary=fields_json)
-    template_csv = dict(**data_dictionary_props,data_dictionary=fields_csv)
+    fields_schema = schemas.healjsonschema["properties"]["fields"]["items"]
+    flattened_fields = pd.DataFrame([utils.flatten_to_jsonpath(f,fields_schema) 
+            for f in fields_json])
+    flattened_data_dictionary_props = pd.Series(utils.flatten_to_jsonpath(data_dictionary_props,schemas.healjsonschema))
+
+    flattened_and_embedded = utils.embed_data_dictionary_props(flattened_fields,flattened_data_dictionary_props,schemas.healjsonschema)
+    tbl_csv = (
+        flattened_and_embedded
+        .fillna("")
+        .applymap(lambda v: utils.join_dictitems(v) if isinstance(v,collections.abc.MutableMapping) else v)
+        .applymap(lambda v: utils.join_iter(v) if isinstance(v,collections.abc.MutableSequence) else v)
+    )
+    fields_csv = tbl_csv.to_dict(orient="records")
+
+    template_json = {**data_dictionary_props,"fields":fields_json}
+    template_csv = {**data_dictionary_props,"fields":fields_csv}
 
     return {"templatejson":template_json,"templatecsv":template_csv}

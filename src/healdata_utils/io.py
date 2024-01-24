@@ -168,9 +168,10 @@ def write_vlmd_template(outputfile,output_overwrite=False,numfields=1):
 
     if ext == ".json":
         schema = schemas.healjsonschema
-        fields_propname = "data_dictionary"
+        fields_propname = "fields"
         template = _generate_jsontemplate(schema)
         template[fields_propname] = numfields *  template[fields_propname]
+        template["schemaVersion"] = schema["version"]
         Path(outputfile).write_text(json.dumps(template,indent=2))
     
     elif ext == ".csv":
@@ -180,18 +181,19 @@ def write_vlmd_template(outputfile,output_overwrite=False,numfields=1):
         vals = {}
 
         for field in schema["fields"]:
+            val = ""
             cols.append(field["name"])
+
             if field.get("constraints",{}).get("required"):
-                val = "[Required]"
-            elif re.search("\[Highly Recommended\]",field.get("description",""),
-                flags=re.IGNORECASE):
-                val = "[Highly Recommended]"
-            else:
-                val = ""
+                val += "[Required]"
+
                 
             vals[field["name"]] = numfields * [val]
 
         template = pd.DataFrame(vals)
+        if "version" in schema:
+            template["schemaVersion"] = schema["version"]
+
         template.to_csv(outputfile,index=False)
 
 

@@ -1,104 +1,458 @@
 healjsonschema = {
+    "version": "0.2.0",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "vlmd",
     "title": "Variable Level Metadata (Data Dictionaries)",
     "description": "This schema defines the variable level metadata for one data "
     "dictionary for a given study.Note a given study can have "
-    "multiple data dictionaries",
+    "multiple data dictionaries.",
     "type": "object",
-    "required": ["title", "data_dictionary"],
+    "required": ["title", "fields"],
     "properties": {
         "title": {"type": "string"},
         "description": {"type": "string"},
-        "data_dictionary": {
+        "schemaVersion": {
+            "type": "string",
+            "description": "The version of the schema "
+            "used in agreed upon "
+            "convention of "
+            "major.minor.path (e.g., "
+            "1.0.2) \n"
+            "\n"
+            "NOTE: This is NOT for "
+            "versioning of each "
+            "indiviual data dictionary "
+            "instance. \n"
+            "Rather, it is the\n"
+            "version of THIS schema "
+            "document. See `version` "
+            "property (below) if "
+            "specifying the individual "
+            "data dictionary instance\n"
+            "version.\n"
+            "\n"
+            "If generating a vlmd "
+            "document as a csv file, "
+            "include this version in \n"
+            "every row/record to "
+            "indicate this is a schema "
+            "level property \n"
+            "(not applicable for the "
+            "json version as this "
+            "property is already at "
+            "the schema/root level)\n",
+            "pattern": "\\d+\\.\\d+\\.\\d+",
+            "examples": ["1.0.0", "0.2.0"],
+        },
+        "version": {
+            "type": "string",
+            "description": "The specified individual data "
+            "dictionary instance version.",
+        },
+        "standardsMappings": {
+            "type": "array",
+            "description": "A set of standardized "
+            "instruments linked to "
+            "all variables within "
+            "the `fields` property "
+            "(but see note).\n"
+            "\n"
+            '!!! note "NOTE"\n'
+            "\n"
+            "  If "
+            "`standardsMappings` "
+            "is present at both "
+            "the root (this "
+            "property) and within "
+            "`fields`, \n"
+            "  then the `fields` "
+            "`standardsMappings` "
+            "property takes "
+            "precedence.\n"
+            "\n"
+            "  Note, only "
+            "instrument can be "
+            "mapped to this "
+            "property as opposed "
+            "to the `fields` "
+            "`standardsMappings`\n"
+            "  This property has "
+            "the same "
+            "specification as the "
+            "`fields` "
+            "`standardsMappings` "
+            "to make the cascading "
+            "logic\n"
+            "  easier to "
+            "understand in the "
+            "same way other "
+            "standards implement "
+            "cascading \n"
+            "  (e.g., "
+            "`missingValues` in "
+            "the [frictionless "
+            "specification](https://specs.frictionlessdata.io/patterns/#missing-values-per-field))\n",
+            "items": {
+                "properties": {
+                    "type": "object",
+                    "instrument": {
+                        "type": "object",
+                        "title": "Standard " "mapping " "- " "instrument",
+                        "description": "A "
+                        "standardized "
+                        "set "
+                        "of "
+                        "items "
+                        "which "
+                        "encompass \n"
+                        "a "
+                        "variable "
+                        "in "
+                        "this "
+                        "variable "
+                        "level "
+                        "metadata "
+                        "document "
+                        "(if "
+                        "at "
+                        "the "
+                        "root "
+                        "level "
+                        "or "
+                        "the "
+                        "document "
+                        "level) \n"
+                        "or "
+                        "the "
+                        "individual "
+                        "variable "
+                        "(if "
+                        "at "
+                        "the "
+                        "field "
+                        "level). \n"
+                        "\n"
+                        "\n"
+                        "!!! "
+                        "note "
+                        '"NOTE"\n'
+                        "\n"
+                        "  "
+                        "If "
+                        "information "
+                        "is "
+                        "present "
+                        "at "
+                        "both "
+                        "the "
+                        "root "
+                        "and "
+                        "the "
+                        "field "
+                        "level, \n"
+                        "  "
+                        "then "
+                        "the "
+                        "information "
+                        "at "
+                        "the "
+                        "field "
+                        "level "
+                        "would "
+                        "take "
+                        "precedence "
+                        "(i.e., "
+                        "it "
+                        "would "
+                        "cascade).\n",
+                        "properties": {
+                            "url": {
+                                "title": "Url",
+                                "description": "A "
+                                "url "
+                                "(e.g., "
+                                "link, "
+                                "address) "
+                                "to "
+                                "a "
+                                "file "
+                                "or "
+                                "other "
+                                "resource "
+                                "containing "
+                                "the "
+                                "instrument, "
+                                "or\n"
+                                "a "
+                                "set "
+                                "of "
+                                "items "
+                                "which "
+                                "encompass "
+                                "a "
+                                "variable "
+                                "in "
+                                "this "
+                                "variable "
+                                "level "
+                                "metadata "
+                                "document "
+                                "(if "
+                                "at "
+                                "the "
+                                "root "
+                                "level "
+                                "or "
+                                "the "
+                                "document "
+                                "level) \n"
+                                "or "
+                                "the "
+                                "individual "
+                                "variable "
+                                "(if "
+                                "at "
+                                "the "
+                                "field "
+                                "level). \n",
+                                "type": "string",
+                                "format": "uri",
+                                "examples": [
+                                    "https://www.heal.nih.gov/files/CDEs/2023-05/adult-demographics-cdes.xlsx"
+                                ],
+                            },
+                            "source": {
+                                "type": "string",
+                                "title": "Source",
+                                "description": "An "
+                                "abbreviated "
+                                "name/acronym "
+                                "from "
+                                "a "
+                                "controlled "
+                                "vocabulary "
+                                "referencing "
+                                "the "
+                                "resource "
+                                "(e.g., "
+                                "program "
+                                "or "
+                                "repository)\n"
+                                "containing "
+                                "the "
+                                "instrument, "
+                                "or "
+                                "a "
+                                "set "
+                                "of "
+                                "items "
+                                "which "
+                                "encompass "
+                                "a "
+                                "variable "
+                                "in "
+                                "this "
+                                "variable "
+                                "level "
+                                "metadata "
+                                "document "
+                                "(if "
+                                "at "
+                                "the "
+                                "root "
+                                "level "
+                                "or "
+                                "the "
+                                "document "
+                                "level) \n"
+                                "or "
+                                "the "
+                                "individual "
+                                "variable "
+                                "(if "
+                                "at "
+                                "the "
+                                "field "
+                                "level). \n",
+                                "enum": ["heal-cde"],
+                            },
+                            "title": {
+                                "type": "string",
+                                "title": "Title",
+                                "examples": [
+                                    "Adult " "demographics",
+                                    "adult-demographics",
+                                ],
+                            },
+                            "id": {
+                                "type": "string",
+                                "title": "Identifier",
+                                "description": "A "
+                                "code "
+                                "or "
+                                "other "
+                                "string "
+                                "that "
+                                "identifies "
+                                "the "
+                                "instrument "
+                                "within "
+                                "the "
+                                "source.\n"
+                                "This "
+                                "should "
+                                "always "
+                                "be "
+                                "from "
+                                "the "
+                                "source's "
+                                "formal, "
+                                "standardized "
+                                "identification "
+                                "system \n",
+                                "examples": ["5141"],
+                            },
+                        },
+                    },
+                }
+            },
+        },
+        "custom": {
+            "type": "object",
+            "description": "Additional properties not "
+            "included as a core property. \n",
+        },
+        "fields": {
             "type": "array",
             "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "$id": "vlmd-fields",
-                "title": "HEAL Variable " "Level Metadata " "Fields",
-                "description": "Variable "
-                "level "
-                "metadata "
-                "individual "
-                "fields "
-                "integrated "
-                "into the "
-                "variable "
-                "level\n"
-                "metadata "
-                "object "
-                "within the "
-                "HEAL "
-                "platform "
-                "metadata "
-                "service.\n"
+                "title": "HEAL Variable Level " "Metadata Fields",
+                "description": "\n"
                 "\n"
-                "> Note, only "
-                "`name` and "
+                '!!! note "Highly '
+                'encouraged"\n'
+                "\n"
+                "  - Only `name` and "
                 "`description` "
-                "are "
-                "required.\n"
-                ">  Listed at "
-                "the end of "
-                "the "
-                "description "
-                "are "
-                "suggested "
-                '"priority" '
-                "levels in "
-                "brackets "
-                "(e.g., "
-                "[<priority>]):\n"
-                "  1. "
-                "[Required]: "
-                "Needs to be "
-                "filled out "
-                "to be "
-                "valid.\n"
-                "  2. [Highly "
-                "recommended]: "
-                "Greatly help "
-                "using the "
-                "data "
-                "dictionary "
-                "but not "
+                "properties are "
                 "required. \n"
-                "  3. "
-                "[Optional, "
-                "if "
-                "applicable]: "
-                "May only be "
-                "applicable "
-                "to certain "
-                "fields.\n"
-                "  4. "
-                "[Autopopulated, "
-                "if not "
-                "filled]: "
-                "These fields "
-                "are intended "
-                "to be "
-                "autopopulated "
-                "from other "
-                "fields but "
-                "can be "
-                "filled out "
-                "if desired.\n"
-                "  5. "
-                "[Experimental]: "
-                "These fields "
-                "are not "
-                "currently "
-                "used but are "
-                "in "
-                "development.\n",
+                "  - For categorical "
+                "variables, "
+                "`constraints.enum` "
+                "and `enumLabels` "
+                "(where applicable) "
+                "properties are highly "
+                "encouraged. \n"
+                "  - For studies using "
+                "HEAL or other common "
+                "data elements (CDEs), "
+                "`standardsMappings` "
+                "information is highly "
+                "encouraged.\n"
+                "  - `type` and "
+                "`format` properties "
+                "may be particularly "
+                "useful for some "
+                "variable types (e.g. "
+                "date-like "
+                "variables)\n",
                 "type": "object",
-                "additionalProperties": True,
                 "required": ["name", "description"],
                 "properties": {
-                    "module": {
+                    "schemaVersion": {
                         "type": "string",
-                        "title": "Module",
+                        "description": "The "
+                        "version "
+                        "of "
+                        "the "
+                        "schema "
+                        "used "
+                        "in "
+                        "agreed "
+                        "upon "
+                        "convention "
+                        "of "
+                        "major.minor.path "
+                        "(e.g., "
+                        "1.0.2) \n"
+                        "\n"
+                        "NOTE: "
+                        "This "
+                        "is "
+                        "NOT "
+                        "for "
+                        "versioning "
+                        "of "
+                        "each "
+                        "indiviual "
+                        "data "
+                        "dictionary "
+                        "instance. \n"
+                        "Rather, "
+                        "it "
+                        "is "
+                        "the\n"
+                        "version "
+                        "of "
+                        "THIS "
+                        "schema "
+                        "document. "
+                        "See "
+                        "`version` "
+                        "property "
+                        "(below) "
+                        "if "
+                        "specifying "
+                        "the "
+                        "individual "
+                        "data "
+                        "dictionary "
+                        "instance\n"
+                        "version.\n"
+                        "\n"
+                        "If "
+                        "generating "
+                        "a "
+                        "vlmd "
+                        "document "
+                        "as "
+                        "a "
+                        "csv "
+                        "file, "
+                        "include "
+                        "this "
+                        "version "
+                        "in \n"
+                        "every "
+                        "row/record "
+                        "to "
+                        "indicate "
+                        "this "
+                        "is "
+                        "a "
+                        "schema "
+                        "level "
+                        "property \n"
+                        "(not "
+                        "applicable "
+                        "for "
+                        "the "
+                        "json "
+                        "version "
+                        "as "
+                        "this "
+                        "property "
+                        "is "
+                        "already "
+                        "at "
+                        "the "
+                        "schema/root "
+                        "level)\n",
+                        "pattern": "\\d+\\.\\d+\\.\\d+",
+                        "examples": ["1.0.0", "0.2.0"],
+                    },
+                    "section": {
+                        "type": "string",
+                        "title": "Section",
                         "description": "The "
                         "section, "
                         "form, "
@@ -114,15 +468,11 @@ healjsonschema = {
                         "used \n"
                         "to "
                         "group "
-                        "variables.\n",
-                        "examples": [
-                            "Demographics",
-                            "PROMIS",
-                            "Substance " "use",
-                            "Medical " "History",
-                            "Sleep " "questions",
-                            "Physical " "activity",
-                        ],
+                        "variables. "
+                        "Previously "
+                        "called "
+                        '"module."\n',
+                        "examples": ["Demographics", "PROMIS", "Medical " "History"],
                     },
                     "name": {
                         "type": "string",
@@ -139,9 +489,8 @@ healjsonschema = {
                         "appears "
                         "in "
                         "the "
-                        "data. \n"
-                        "\n"
-                        "[Required]\n",
+                        "data. \n",
+                        "examples": ["gender_id"],
                     },
                     "title": {
                         "type": "string",
@@ -153,13 +502,8 @@ healjsonschema = {
                         "label "
                         "of "
                         "the "
-                        "variable. \n"
-                        "\n"
-                        "[Highly "
-                        "recommended]\n",
-                        "examples": [
-                            "My " "Variable " "(for " "name " "of " "my_variable)"
-                        ],
+                        "variable.\n",
+                        "examples": ["Gender " "identity"],
                     },
                     "description": {
                         "type": "string",
@@ -185,16 +529,41 @@ healjsonschema = {
                         "(e.g., "
                         "if "
                         "a "
-                        "survey). \n"
-                        "\n"
-                        "[Required]\n",
+                        "survey). \n",
                         "examples": [
-                            "Definition",
-                            "Question " "text " "(if " "a " "survey)",
+                            "The "
+                            "participant's "
+                            "age "
+                            "at "
+                            "the "
+                            "time "
+                            "of "
+                            "study "
+                            "enrollment",
+                            "What "
+                            "is "
+                            "the "
+                            "highest "
+                            "grade "
+                            "or "
+                            "level "
+                            "of "
+                            "school "
+                            "you "
+                            "have "
+                            "completed "
+                            "or "
+                            "the "
+                            "highest "
+                            "degree "
+                            "you "
+                            "have "
+                            "received?",
                         ],
                     },
                     "type": {
                         "title": "Variable " "Type",
+                        "type": "string",
                         "description": "A "
                         "classification "
                         "or "
@@ -211,7 +580,9 @@ healjsonschema = {
                         "allowed "
                         "in "
                         "the "
-                        "dataset.\n"
+                        "dataset.\n",
+                        "additionalDescription": "enum "
+                        "definitions:\n"
                         "\n"
                         "-  "
                         "`number` "
@@ -328,7 +699,6 @@ healjsonschema = {
                         "(e.g., "
                         "[51.5074, "
                         "-0.1278]))\n",
-                        "type": "string",
                         "enum": [
                             "number",
                             "integer",
@@ -345,29 +715,19 @@ healjsonschema = {
                         ],
                     },
                     "format": {
-                        "title": "Frictionless " "Formats",
-                        "description": "A "
+                        "title": "Variable " "Format",
+                        "type": "string",
+                        "description": "Indicates "
+                        "the "
                         "format "
-                        "taken "
-                        "from "
-                        "one "
                         "of "
                         "the "
-                        "[frictionless "
-                        "specification](https://specs.frictionlessdata.io/) "
-                        "schemas.\n"
-                        "For "
-                        "example, "
-                        "for "
-                        "tabular "
-                        "data, "
-                        "there "
-                        "is "
+                        "type "
+                        "specified "
+                        "in "
                         "the "
-                        "[Table "
-                        "Schema "
-                        "specification](https://specs.frictionlessdata.io/table-schema)\n"
-                        "\n"
+                        "`type` "
+                        "property. \n"
                         "Each "
                         "format "
                         "is "
@@ -375,268 +735,232 @@ healjsonschema = {
                         "on "
                         "the "
                         "`type` "
-                        "specified. "
-                        "For "
-                        "example:\n"
-                        "If "
-                        "`type` "
-                        "is "
-                        '"string", '
-                        "then "
-                        "see "
-                        "the "
-                        "String "
-                        "formats. \n"
-                        "If "
-                        "`type` "
-                        "is "
-                        "one "
+                        "specified. \n"
+                        "See "
+                        "[here](https://specs.frictionlessdata.io/table-schema/#types-and-formats) \n"
+                        "for "
+                        "more "
+                        "information "
+                        "about "
+                        "appropriate "
+                        "`format` "
+                        "values "
+                        "by "
+                        "variable "
+                        "`type`.\n",
+                        "additionalDescription": "examples/definitions "
                         "of "
-                        "the "
-                        "date-like "
-                        "formats, "
-                        "then "
-                        "see "
-                        "Date "
-                        "formats.\n",
-                        "name": "frictionless_formats",
-                        "anyOf": [
-                            {
-                                "title": "String " "Format",
-                                "enum": ["uri", "email", "binary", "uuid"],
-                            },
-                            {
-                                "title": "Date " "Format",
-                                "description": "A "
-                                "format "
-                                "for "
-                                "a "
-                                "date "
-                                "variable "
-                                "(`date`,`time`,`datetime`).  \n"
-                                "    "
-                                "\\n\\t* "
-                                "**default**: "
-                                "An "
-                                "ISO8601 "
-                                "format "
-                                "string.\n"
-                                "    "
-                                "\\n\\t* "
-                                "**any**: "
-                                "Any "
-                                "parsable "
-                                "representation "
-                                "of "
-                                "a "
-                                "date/time/datetime. "
-                                "The "
-                                "implementing "
-                                "library "
-                                "can "
-                                "attempt "
-                                "to "
-                                "parse "
-                                "the "
-                                "datetime "
-                                "via "
-                                "a "
-                                "range "
-                                "of "
-                                "strategies.\n"
-                                "    "
-                                "\\n\\t* "
-                                "**{PATTERN}**: "
-                                "The "
-                                "value "
-                                "can "
-                                "be "
-                                "parsed "
-                                "according "
-                                "to "
-                                "`{PATTERN}`, "
-                                "which "
-                                "`MUST` "
-                                "follow "
-                                "the "
-                                "date "
-                                "formatting "
-                                "syntax "
-                                "of "
-                                "C "
-                                "/ "
-                                "Python "
-                                "[strftime](http://strftime.org/).\n"
-                                "\n"
-                                "\\nExamples:\n"
-                                "\n"
-                                "  "
-                                "`%Y-%m-%d` "
-                                "(for "
-                                "date, "
-                                "e.g., "
-                                "2023-05-25)\n"
-                                "  "
-                                "`%Y%-%d` "
-                                "(for "
-                                "date, "
-                                "e.g., "
-                                "20230525) "
-                                "for "
-                                "date "
-                                "without "
-                                'dashes"\n'
-                                "  "
-                                "`%Y-%m-%dT%H:%M:%S` "
-                                "(for "
-                                "datetime, "
-                                "e.g., "
-                                "2023-05-25T10:30:45)\n"
-                                "  "
-                                "`%Y-%m-%dT%H:%M:%SZ` "
-                                "(for "
-                                "datetime "
-                                "with "
-                                "UTC "
-                                "timezone, "
-                                "e.g., "
-                                "2023-05-25T10:30:45Z)\n"
-                                "  "
-                                "`%Y-%m-%dT%H:%M:%S%z` "
-                                "(for "
-                                "datetime "
-                                "with "
-                                "timezone "
-                                "offset, "
-                                "e.g., "
-                                "2023-05-25T10:30:45+0300)\n"
-                                "  "
-                                "`%Y-%m-%dT%H:%M` "
-                                "(for "
-                                "datetime "
-                                "without "
-                                "seconds, "
-                                "e.g., "
-                                "2023-05-25T10:30)\n"
-                                "  "
-                                "`%Y-%m-%dT%H` "
-                                "(for "
-                                "datetime "
-                                "without "
-                                "minutes "
-                                "and "
-                                "seconds, "
-                                "e.g., "
-                                "2023-05-25T10)\n"
-                                "  "
-                                "`%H:%M:%S` "
-                                "(for "
-                                "time, "
-                                "e.g., "
-                                "10:30:45)\n"
-                                "  "
-                                "`%H:%M:%SZ` "
-                                "(for "
-                                "time "
-                                "with "
-                                "UTC "
-                                "timezone, "
-                                "e.g., "
-                                "10:30:45Z)\n"
-                                "  "
-                                "`%H:%M:%S%z` "
-                                "(for "
-                                "time "
-                                "with "
-                                "timezone "
-                                "offset, "
-                                "e.g., "
-                                "10:30:45+0300)\n",
-                            },
-                            {
-                                "title": "Geopoint " "Format",
-                                "description": "The "
-                                "two "
-                                "types "
-                                "of "
-                                "formats "
-                                "for "
-                                "`geopoint` "
-                                "(describing "
-                                "a "
-                                "geographic "
-                                "point).",
-                                "oneOf": [
-                                    {
-                                        "type": "array",
-                                        "description": "A "
-                                        "JSON "
-                                        "array "
-                                        "or "
-                                        "a "
-                                        "string "
-                                        "parsable "
-                                        "as "
-                                        "a "
-                                        "JSON "
-                                        "array "
-                                        "where "
-                                        "each "
-                                        "item "
-                                        "is "
-                                        "a "
-                                        "number "
-                                        "with "
-                                        "the "
-                                        "first \n"
-                                        "as "
-                                        "the "
-                                        "latitude "
-                                        "and "
-                                        "the "
-                                        "second "
-                                        "as "
-                                        "longitude. \n",
-                                    },
-                                    {
-                                        "type": "object",
-                                        "description": "Contains "
-                                        "latitude "
-                                        "and "
-                                        "longitude "
-                                        "with "
-                                        "two "
-                                        "keys "
-                                        '("lat" '
-                                        "and "
-                                        '"long") '
-                                        "with "
-                                        "number "
-                                        "items "
-                                        "mapped "
-                                        "to "
-                                        "each "
-                                        "key.\n",
-                                    },
-                                ],
-                            },
-                            {
-                                "title": "geojson",
-                                "description": "The "
-                                "JSON "
-                                "object "
-                                "according "
-                                "to "
-                                "the "
-                                "geojson "
-                                "spec.",
-                                "enum": ["topojson", "default"],
-                            },
-                        ],
+                        "patterns "
+                        "and "
+                        "possible "
+                        "values:\n"
+                        "\n"
+                        "Examples "
+                        "of "
+                        "date "
+                        "time "
+                        "pattern "
+                        "formats\n"
+                        "\n"
+                        "- "
+                        "`%Y-%m-%d` "
+                        "(for "
+                        "date, "
+                        "e.g., "
+                        "2023-05-25)\n"
+                        "- "
+                        "`%Y%-%d` "
+                        "(for "
+                        "date, "
+                        "e.g., "
+                        "20230525) "
+                        "for "
+                        "date "
+                        "without "
+                        "dashes\n"
+                        "- "
+                        "`%Y-%m-%dT%H:%M:%S` "
+                        "(for "
+                        "datetime, "
+                        "e.g., "
+                        "2023-05-25T10:30:45)\n"
+                        "- "
+                        "`%Y-%m-%dT%H:%M:%SZ` "
+                        "(for "
+                        "datetime "
+                        "with "
+                        "UTC "
+                        "timezone, "
+                        "e.g., "
+                        "2023-05-25T10:30:45Z)\n"
+                        "- "
+                        "`%Y-%m-%dT%H:%M:%S%z` "
+                        "(for "
+                        "datetime "
+                        "with "
+                        "timezone "
+                        "offset, "
+                        "e.g., "
+                        "2023-05-25T10:30:45+0300)\n"
+                        "- "
+                        "`%Y-%m-%dT%H:%M` "
+                        "(for "
+                        "datetime "
+                        "without "
+                        "seconds, "
+                        "e.g., "
+                        "2023-05-25T10:30)\n"
+                        "- "
+                        "`%Y-%m-%dT%H` "
+                        "(for "
+                        "datetime "
+                        "without "
+                        "minutes "
+                        "and "
+                        "seconds, "
+                        "e.g., "
+                        "2023-05-25T10)\n"
+                        "- "
+                        "`%H:%M:%S` "
+                        "(for "
+                        "time, "
+                        "e.g., "
+                        "10:30:45)\n"
+                        "- "
+                        "`%H:%M:%SZ` "
+                        "(for "
+                        "time "
+                        "with "
+                        "UTC "
+                        "timezone, "
+                        "e.g., "
+                        "10:30:45Z)\n"
+                        "- "
+                        "`%H:%M:%S%z` "
+                        "(for "
+                        "time "
+                        "with "
+                        "timezone "
+                        "offset, "
+                        "e.g., "
+                        "10:30:45+0300)\n"
+                        "\n"
+                        "Examples "
+                        "of "
+                        "string "
+                        "formats\n"
+                        "\n"
+                        "- "
+                        "`email` "
+                        "if "
+                        "valid "
+                        "emails "
+                        "(e.g., "
+                        "test@gmail.com)\n"
+                        "- "
+                        "`uri` "
+                        "if "
+                        "valid "
+                        "uri "
+                        "addresses "
+                        "(e.g., "
+                        "https://example.com/resource123)\n"
+                        "- "
+                        "`binary` "
+                        "if "
+                        "a "
+                        "base64 "
+                        "binary "
+                        "encoded "
+                        "string "
+                        "(e.g., "
+                        "authentication "
+                        "token "
+                        "like "
+                        "aGVsbG8gd29ybGQ=)\n"
+                        "- "
+                        "`uuid` "
+                        "if "
+                        "a "
+                        "universal "
+                        "unique "
+                        "identifier "
+                        "also "
+                        "known "
+                        "as "
+                        "a "
+                        "guid "
+                        "(eg., "
+                        "f47ac10b-58cc-4372-a567-0e02b2c3d479)\n"
+                        "\n"
+                        "\n"
+                        "Examples "
+                        "of "
+                        "geopoint "
+                        "formats\n"
+                        "\n"
+                        "The "
+                        "two "
+                        "types "
+                        "of "
+                        "formats "
+                        "for "
+                        "`geopoint` "
+                        "(describing "
+                        "a "
+                        "geographic "
+                        "point).\n"
+                        "\n"
+                        "- "
+                        "`array` "
+                        "(if "
+                        "'lat,long' "
+                        "(e.g., "
+                        "36.63,-90.20))\n"
+                        "- "
+                        "`object` "
+                        "(if "
+                        "{'lat':36.63,'lon':-90.20})\n",
                     },
                     "constraints": {
                         "type": "object",
                         "properties": {
+                            "required": {
+                                "type": "boolean",
+                                "title": "Required " "variable",
+                                "description": "If "
+                                "this "
+                                "variable "
+                                "is "
+                                "marked "
+                                "as "
+                                "true, "
+                                "then "
+                                "this "
+                                "variable's "
+                                "value "
+                                "must "
+                                "be "
+                                "present\n"
+                                "(ie "
+                                "not "
+                                "missing; "
+                                "see "
+                                "missingValues). "
+                                "If "
+                                "marked "
+                                "as "
+                                "false "
+                                "or "
+                                "not "
+                                "present, "
+                                "then "
+                                "the \n"
+                                "variable "
+                                "CAN "
+                                "be "
+                                "missing.\n",
+                            },
                             "maxLength": {
                                 "type": "integer",
                                 "title": "Maximum " "Length",
@@ -671,12 +995,10 @@ healjsonschema = {
                                 "a "
                                 "maxLength "
                                 "of "
-                                "11.\n"
-                                "\n"
-                                "[Optional,if "
-                                "applicable]\n",
+                                "11.\n",
                             },
                             "enum": {
+                                "type": "array",
                                 "title": "Variable " "Possible " "Values",
                                 "description": "Constrains "
                                 "possible "
@@ -685,11 +1007,17 @@ healjsonschema = {
                                 "a "
                                 "set "
                                 "of "
-                                "values.\n"
-                                "\n"
-                                "[Optional,if "
-                                "applicable]\n",
-                                "type": "array",
+                                "values.\n",
+                                "examples": [
+                                    [1, 2, 3, 4, 5],
+                                    [
+                                        "Poor",
+                                        "Fair",
+                                        "Good",
+                                        "Very " "good",
+                                        "Excellent",
+                                    ],
+                                ],
                             },
                             "pattern": {
                                 "type": "string",
@@ -702,10 +1030,7 @@ healjsonschema = {
                                 "data "
                                 "MUST "
                                 "conform "
-                                "to.\n"
-                                "\n"
-                                "[Optional,if "
-                                "applicable]\n",
+                                "to.\n",
                             },
                             "maximum": {
                                 "type": "integer",
@@ -734,10 +1059,7 @@ healjsonschema = {
                                 "different "
                                 "then\n"
                                 "maxLength "
-                                "property.\n"
-                                "\n"
-                                "[Optional,if "
-                                "applicable]\n",
+                                "property.\n",
                             },
                             "minimum": {
                                 "type": "integer",
@@ -748,14 +1070,11 @@ healjsonschema = {
                                 "value "
                                 "of "
                                 "a "
-                                "field.\n"
-                                "\n"
-                                "[Optional,if "
-                                "applicable]\n",
+                                "field.\n",
                             },
                         },
                     },
-                    "encodings": {
+                    "enumLabels": {
                         "title": "Variable "
                         "Value "
                         "Encodings "
@@ -840,11 +1159,23 @@ healjsonschema = {
                         "as\n"
                         "abbreviations).\n"
                         "\n"
-                        "[Optional,if "
-                        "applicable]\n",
+                        "This "
+                        "field "
+                        "is "
+                        "intended "
+                        "to "
+                        "follow "
+                        "[this "
+                        "pattern](https://specs.frictionlessdata.io/patterns/#table-schema-enum-labels-and-ordering)\n",
                         "type": "object",
                         "examples": [
-                            {"0": "No", "1": "Yes"},
+                            {
+                                "1": "Poor",
+                                "2": "Fair",
+                                "3": "Good",
+                                "4": "Very " "good",
+                                "5": "Excellent",
+                            },
                             {
                                 "HW": "Hello " "world",
                                 "GBW": "Good " "bye " "world",
@@ -852,7 +1183,7 @@ healjsonschema = {
                             },
                         ],
                     },
-                    "ordered": {
+                    "enumOrdered": {
                         "title": "An " "ordered " "variable",
                         "description": "Indicates "
                         "whether "
@@ -888,8 +1219,20 @@ healjsonschema = {
                         "< "
                         "Agree).\n"
                         "\n"
-                        "[Optional,if "
-                        "applicable]\n",
+                        "This "
+                        "field "
+                        "is "
+                        "intended "
+                        "to "
+                        "follow "
+                        "the "
+                        "ordering "
+                        "aspect "
+                        "of "
+                        "this "
+                        "[this "
+                        "pattern][this "
+                        "pattern](https://specs.frictionlessdata.io/patterns/#table-schema-enum-labels-and-ordering)\n",
                         "type": "boolean",
                     },
                     "missingValues": {
@@ -902,10 +1245,11 @@ healjsonschema = {
                         "specific "
                         "to "
                         "a "
-                        "variable.\n"
-                        "\n"
-                        "[Highly "
-                        "recommended]\n",
+                        "variable.\n",
+                        "examples": [
+                            ["Missing", "Skipped", "No " "preference"],
+                            ["Missing"],
+                        ],
                         "type": "array",
                     },
                     "trueValues": {
@@ -942,20 +1286,9 @@ healjsonschema = {
                         "one "
                         "or "
                         "more "
-                        "values.\n"
-                        "\n"
-                        "[Optional, "
-                        "if "
-                        "applicable]\n",
+                        "values.\n",
                         "type": "array",
-                        "items": {"type": "string"},
-                        "examples": [
-                            "Required",
-                            "REQUIRED",
-                            "required",
-                            "Yes",
-                            'Checked"',
-                        ],
+                        "examples": [["required", "Yes", "Checked"], ["required"]],
                     },
                     "falseValues": {
                         "title": "Boolean " "False " "Value " "Labels",
@@ -1000,177 +1333,676 @@ healjsonschema = {
                         "more "
                         "values.\n",
                         "type": "array",
+                        "examples": [["Not " "required", "NOT " "REQUIRED"], ["No"]],
                     },
-                    "repo_link": {
-                        "type": "string",
-                        "title": "Variable " "Repository " "Link",
-                        "description": "A "
-                        "link "
-                        "to "
-                        "the "
-                        "variable "
-                        "as "
-                        "it "
-                        "exists "
-                        "on "
-                        "the "
-                        "home "
-                        "repository, "
-                        "if "
-                        "applicable\n",
+                    "custom": {
+                        "type": "object",
+                        "description": "Additional "
+                        "properties "
+                        "not "
+                        "included "
+                        "a "
+                        "core "
+                        "property. \n",
                     },
                     "standardsMappings": {
-                        "title": "Standards " "Mappings",
-                        "description": "A "
-                        "published "
+                        "type": "array",
+                        "description": "\n"
+                        "A "
                         "set "
                         "of "
-                        "standard "
-                        "variables "
-                        "such "
+                        "instrument "
+                        "and "
+                        "item "
+                        "references "
+                        "to "
+                        "standardized "
+                        "data "
+                        "elements "
+                        "designed "
+                        "to "
+                        "document\n"
+                        "the "
+                        "[HEAL "
+                        "common "
+                        "data "
+                        "elements "
+                        "program](https://heal.nih.gov/data/common-data-elements)\n"
+                        "and "
+                        "other "
+                        "standardized/common "
+                        "element "
+                        "sources "
+                        "to "
+                        "facilitate "
+                        "cross-study "
+                        "comparison "
+                        "and "
+                        "interoperability\n"
+                        "of "
+                        "data. "
+                        "One "
+                        "can "
+                        "either "
+                        "map "
+                        "an "
+                        "individual "
+                        "data "
+                        "element "
+                        "or "
+                        "an "
+                        "instrument "
+                        "in "
+                        "which "
+                        "the "
+                        "field "
+                        "is \n"
+                        "a "
+                        "part "
+                        "of.\n"
+                        "\n"
+                        "__**All "
+                        "Fields "
+                        "Mapped "
+                        "(Both "
+                        "Instrument "
+                        "and "
+                        "Item)**__\n"
+                        "\n"
+                        "```json\n"
+                        '"standardsMappings": '
+                        "[\n"
+                        "    "
+                        "{\n"
+                        "        "
+                        '"instrument": '
+                        "{\n"
+                        "            "
+                        '"url": '
+                        '"https://www.heal.nih.gov/files/CDEs/2023-05/adult-demographics-cdes.xlsx",\n'
+                        "            "
+                        '"source": '
+                        '"heal-cde",\n'
+                        "            "
+                        '"title": '
+                        '"adult-demographics",\n'
+                        "            "
+                        '"id": '
+                        '"5141"\n'
+                        "        "
+                        "},\n"
+                        "        "
+                        '"item": '
+                        "{\n"
+                        "            "
+                        '"url": '
+                        '"https://evs.nci.nih.gov/ftp1/CDISC/SDTM/SDTM%20Terminology.html#CL.C74457.RACE",\n'
+                        "            "
+                        '"source": '
+                        '"CDISC",\n'
+                        "            "
+                        '"id": '
+                        '"C74457"\n'
+                        "        "
+                        "}\n"
+                        "    "
+                        "}\n"
+                        "]\n"
+                        "```\n"
+                        "\n"
+                        "__**Only "
+                        "Instrument "
+                        "Title "
+                        "of "
+                        "Form "
+                        "CDE "
+                        "File "
+                        "Mapped**__\n"
+                        "\n"
+                        "In "
+                        "this "
+                        "scenario, "
+                        "especially "
                         "as "
+                        "CDE "
+                        "variables "
+                        "do "
+                        "not "
+                        "have "
+                        "associated "
+                        "CDISC "
+                        "ids "
+                        "listed, "
+                        "only "
+                        "instrument "
+                        "information "
+                        "is "
+                        "given.\n"
+                        "\n"
+                        "```json\n"
+                        '"standardsMappings": '
+                        "[\n"
+                        "    "
+                        "{\n"
+                        "        "
+                        '"instrument": '
+                        "{\n"
+                        "            "
+                        '"source": '
+                        '"heal-cde",\n'
+                        "            "
+                        '"title": '
+                        '"Adult '
+                        'demographics"\n'
+                        "        "
+                        "}\n"
+                        "    "
+                        "}\n"
+                        "]\n"
+                        "```\n"
+                        "\n"
+                        "__**Only "
+                        "Instrument "
+                        "ID "
+                        "of "
+                        "HEAL "
+                        "CDE "
+                        "Mapped**__\n"
+                        "\n"
+                        "```json\n"
+                        '"standardsMappings": '
+                        "[\n"
+                        "    "
+                        "{\n"
+                        "        "
+                        '"instrument": '
+                        "{\n"
+                        "            "
+                        '"source": '
+                        '"heal-cde",\n'
+                        "            "
+                        '"id": '
+                        '"5141"\n'
+                        "        "
+                        "}\n"
+                        "    "
+                        "}\n"
+                        "]\n"
+                        "```\n"
+                        "\n"
+                        "__**Other "
+                        "Non-HEAL "
+                        "CDE "
+                        "Use "
+                        "Cases**__\n"
+                        "\n"
+                        "Only "
+                        "item "
+                        "matched "
+                        "(for "
+                        "example "
+                        "if "
+                        "found "
+                        "in "
                         "the "
                         "NIH "
-                        "Common "
-                        "Data "
-                        "Elements "
-                        "program.\n"
-                        "[Autopopulated, "
-                        "if "
-                        "not "
-                        "filled]",
-                        "type": "array",
+                        "(not "
+                        "HEAL) "
+                        "CDE "
+                        "repository). "
+                        "Folks "
+                        "would "
+                        "enter "
+                        "the "
+                        "information "
+                        "in "
+                        "the "
+                        '"Identifier" '
+                        "section. "
+                        "Similar "
+                        "to "
+                        "the "
+                        "above, "
+                        "they "
+                        "could "
+                        "also "
+                        "just "
+                        "enter "
+                        "the "
+                        '"url".\n'
+                        "\n"
+                        "```json\n"
+                        '"standardsMappings": '
+                        "[\n"
+                        "    "
+                        "{\n"
+                        "        "
+                        '"item": '
+                        "{\n"
+                        "            "
+                        '"source": '
+                        '"NLM",\n'
+                        "            "
+                        '"id": '
+                        '"Fakc6Jy2x"\n'
+                        "        "
+                        "}\n"
+                        "    "
+                        "}\n"
+                        "]\n"
+                        "```\n"
+                        "\n"
+                        "__**Multiple "
+                        "CDE "
+                        "Mappings**__\n"
+                        "\n"
+                        "Two "
+                        "separate "
+                        "records. "
+                        "If "
+                        "desired, "
+                        "multiple "
+                        "standard "
+                        "mappings "
+                        "can "
+                        "be "
+                        "entered, "
+                        "say "
+                        "from "
+                        "the "
+                        "NIH "
+                        "HEAL "
+                        "CDE "
+                        "repo "
+                        "and "
+                        "the "
+                        "NIH "
+                        "CDE "
+                        "lookup "
+                        "(NLM) "
+                        "by "
+                        "way "
+                        "of "
+                        "two "
+                        "separate "
+                        "records "
+                        "in "
+                        "the "
+                        "list.\n"
+                        "\n"
+                        "```json\n"
+                        '"standardsMappings": '
+                        "[\n"
+                        "    "
+                        "{\n"
+                        "        "
+                        '"instrument": '
+                        "{\n"
+                        "            "
+                        '"source": '
+                        '"heal-cde",\n'
+                        "            "
+                        '"title": '
+                        '"Adult '
+                        'demographics"\n'
+                        "        "
+                        "},\n"
+                        "        "
+                        '"item": '
+                        "{\n"
+                        "            "
+                        '"source": '
+                        '"CDISC",\n'
+                        "            "
+                        '"id": '
+                        '"C74457"\n'
+                        "        "
+                        "},\n"
+                        "    "
+                        "},\n"
+                        "    "
+                        "{\n"
+                        "        "
+                        '"item": '
+                        "{\n"
+                        "            "
+                        '"source": '
+                        '"NLM",\n'
+                        "            "
+                        '"id": '
+                        '"Fakc6Jy2x"\n'
+                        "        "
+                        "}\n"
+                        "    "
+                        "}\n"
+                        "]\n"
+                        "```\n",
                         "items": {
                             "type": "object",
                             "properties": {
-                                "type": {
-                                    "title": "Standards " "Mapping " "- " "Title",
-                                    "description": "The "
-                                    "**type** "
-                                    "of "
-                                    "mapping "
-                                    "linked "
-                                    "to "
-                                    "a "
-                                    "published "
-                                    "set "
-                                    "of "
-                                    "standard "
-                                    "variables "
-                                    "such "
-                                    "as "
-                                    "the "
-                                    "NIH "
-                                    "Common "
-                                    "Data "
-                                    "Elements "
-                                    "program.\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
-                                    "examples": ["cde", "ontology", "reference_list"],
-                                    "type": "string",
-                                },
-                                "label": {
-                                    "title": "Standards " "Mapping " "- " "Label",
+                                "instrument": {
+                                    "type": "object",
+                                    "title": "Standard " "mapping " "- " "instrument",
                                     "description": "A "
-                                    "free "
-                                    "text "
-                                    "**label** "
-                                    "of "
-                                    "a "
-                                    "mapping "
-                                    "indicating "
-                                    "a "
-                                    "mapping(s) "
-                                    "to "
-                                    "a "
-                                    "published "
+                                    "standardized "
                                     "set "
                                     "of "
-                                    "standard "
-                                    "variables "
-                                    "such "
-                                    "as "
+                                    "items "
+                                    "which "
+                                    "encompass \n"
+                                    "a "
+                                    "variable "
+                                    "in "
+                                    "this "
+                                    "variable "
+                                    "level "
+                                    "metadata "
+                                    "document "
+                                    "(if "
+                                    "at "
                                     "the "
-                                    "NIH "
-                                    "Common "
-                                    "Data "
-                                    "Elements "
-                                    "program.\n"
-                                    "\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
-                                    "type": "string",
-                                    "examples": [
-                                        "substance " "use",
-                                        "chemical " "compound",
-                                        "promis",
-                                    ],
-                                },
-                                "url": {
-                                    "title": "Standards " "Mapping " "- " "Url",
-                                    "description": "The "
-                                    "url "
-                                    "that "
-                                    "links "
-                                    "out "
-                                    "to "
+                                    "root "
+                                    "level "
+                                    "or "
                                     "the "
-                                    "published, "
-                                    "standardized "
-                                    "mapping.\n"
-                                    "\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
-                                    "type": "string",
-                                    "format": "uri",
-                                    "examples": [
-                                        "https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"
-                                    ],
-                                },
-                                "source": {
-                                    "title": "Standard " "Mapping " "- " "Source",
-                                    "description": "The "
-                                    "source "
-                                    "of "
-                                    "the "
-                                    "standardized "
-                                    "variable.\n",
-                                    "type": "string",
-                                    "examples": [
-                                        "TBD "
-                                        "(will "
-                                        "have "
-                                        "controlled "
-                                        "vocabulary)"
-                                    ],
-                                },
-                                "id": {
-                                    "title": "Standard " "Mapping " "- " "Id",
-                                    "type": "string",
-                                    "description": "The "
-                                    "id "
-                                    "locating "
+                                    "document "
+                                    "level) \n"
+                                    "or "
                                     "the "
                                     "individual "
-                                    "mapping "
-                                    "within "
+                                    "variable "
+                                    "(if "
+                                    "at "
                                     "the "
-                                    "given "
-                                    "source.\n",
+                                    "field "
+                                    "level). \n"
+                                    "\n"
+                                    "\n"
+                                    "!!! "
+                                    "note "
+                                    '"NOTE"\n'
+                                    "\n"
+                                    "  "
+                                    "If "
+                                    "information "
+                                    "is "
+                                    "present "
+                                    "at "
+                                    "both "
+                                    "the "
+                                    "root "
+                                    "and "
+                                    "the "
+                                    "field "
+                                    "level, \n"
+                                    "  "
+                                    "then "
+                                    "the "
+                                    "information "
+                                    "at "
+                                    "the "
+                                    "field "
+                                    "level "
+                                    "would "
+                                    "take "
+                                    "precedence "
+                                    "(i.e., "
+                                    "it "
+                                    "would "
+                                    "cascade).\n",
+                                    "properties": {
+                                        "url": {
+                                            "title": "Url",
+                                            "description": "A "
+                                            "url "
+                                            "(e.g., "
+                                            "link, "
+                                            "address) "
+                                            "to "
+                                            "a "
+                                            "file "
+                                            "or "
+                                            "other "
+                                            "resource "
+                                            "containing "
+                                            "the "
+                                            "instrument, "
+                                            "or\n"
+                                            "a "
+                                            "set "
+                                            "of "
+                                            "items "
+                                            "which "
+                                            "encompass "
+                                            "a "
+                                            "variable "
+                                            "in "
+                                            "this "
+                                            "variable "
+                                            "level "
+                                            "metadata "
+                                            "document "
+                                            "(if "
+                                            "at "
+                                            "the "
+                                            "root "
+                                            "level "
+                                            "or "
+                                            "the "
+                                            "document "
+                                            "level) \n"
+                                            "or "
+                                            "the "
+                                            "individual "
+                                            "variable "
+                                            "(if "
+                                            "at "
+                                            "the "
+                                            "field "
+                                            "level). \n",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "examples": [
+                                                "https://www.heal.nih.gov/files/CDEs/2023-05/adult-demographics-cdes.xlsx"
+                                            ],
+                                        },
+                                        "source": {
+                                            "type": "string",
+                                            "title": "Source",
+                                            "description": "An "
+                                            "abbreviated "
+                                            "name/acronym "
+                                            "from "
+                                            "a "
+                                            "controlled "
+                                            "vocabulary "
+                                            "referencing "
+                                            "the "
+                                            "resource "
+                                            "(e.g., "
+                                            "program "
+                                            "or "
+                                            "repository)\n"
+                                            "containing "
+                                            "the "
+                                            "instrument, "
+                                            "or "
+                                            "a "
+                                            "set "
+                                            "of "
+                                            "items "
+                                            "which "
+                                            "encompass "
+                                            "a "
+                                            "variable "
+                                            "in "
+                                            "this "
+                                            "variable "
+                                            "level "
+                                            "metadata "
+                                            "document "
+                                            "(if "
+                                            "at "
+                                            "the "
+                                            "root "
+                                            "level "
+                                            "or "
+                                            "the "
+                                            "document "
+                                            "level) \n"
+                                            "or "
+                                            "the "
+                                            "individual "
+                                            "variable "
+                                            "(if "
+                                            "at "
+                                            "the "
+                                            "field "
+                                            "level). \n",
+                                            "enum": ["heal-cde"],
+                                        },
+                                        "title": {
+                                            "type": "string",
+                                            "title": "Title",
+                                            "examples": [
+                                                "Adult " "demographics",
+                                                "adult-demographics",
+                                            ],
+                                        },
+                                        "id": {
+                                            "type": "string",
+                                            "title": "Identifier",
+                                            "description": "A "
+                                            "code "
+                                            "or "
+                                            "other "
+                                            "string "
+                                            "that "
+                                            "identifies "
+                                            "the "
+                                            "instrument "
+                                            "within "
+                                            "the "
+                                            "source.\n"
+                                            "This "
+                                            "should "
+                                            "always "
+                                            "be "
+                                            "from "
+                                            "the "
+                                            "source's "
+                                            "formal, "
+                                            "standardized "
+                                            "identification "
+                                            "system \n",
+                                            "examples": ["5141"],
+                                        },
+                                    },
+                                },
+                                "item": {
+                                    "type": "object",
+                                    "title": "Standards " "mappings " "- " "Item",
+                                    "description": "A "
+                                    "standardized "
+                                    "item "
+                                    "(ie "
+                                    "field, "
+                                    "variable "
+                                    "etc) "
+                                    "mapped "
+                                    "to "
+                                    "this "
+                                    "individual "
+                                    "variable.\n",
+                                    "properties": {
+                                        "url": {
+                                            "title": "Standards "
+                                            "mappings "
+                                            "- "
+                                            "Url",
+                                            "description": "The "
+                                            "url "
+                                            "that "
+                                            "links "
+                                            "out "
+                                            "to "
+                                            "the "
+                                            "published, "
+                                            "standardized "
+                                            "mapping "
+                                            "of "
+                                            "a "
+                                            "variable "
+                                            "(e.g., "
+                                            "common "
+                                            "data "
+                                            "element)\n",
+                                            "type": "string",
+                                            "format": "uri",
+                                            "examples": [
+                                                "https://evs.nci.nih.gov/ftp1/CDISC/SDTM/SDTM%20Terminology.html#CL.C74457.RACE"
+                                            ],
+                                        },
+                                        "source": {
+                                            "title": "Standards "
+                                            "mappings "
+                                            "- "
+                                            "Source",
+                                            "description": "The "
+                                            "source "
+                                            "of "
+                                            "the "
+                                            "standardized "
+                                            "variable. "
+                                            "Note, "
+                                            "this "
+                                            "property "
+                                            "is "
+                                            "required "
+                                            "if \n"
+                                            "an "
+                                            "id "
+                                            "is "
+                                            "specified.\n",
+                                            "examples": ["CDISC"],
+                                            "type": "string",
+                                        },
+                                        "id": {
+                                            "title": "Standards " "Mappings " "- " "Id",
+                                            "type": "string",
+                                            "description": "The "
+                                            "id "
+                                            "locating "
+                                            "the "
+                                            "individual "
+                                            "mapping "
+                                            "within "
+                                            "the "
+                                            "given "
+                                            "source. \n"
+                                            "Note, "
+                                            "the "
+                                            "`standardsMappings[0].source` "
+                                            "property "
+                                            "is "
+                                            "required "
+                                            "if \n"
+                                            "this "
+                                            "property "
+                                            "is "
+                                            "specified.\n",
+                                            "examples": ["C74457"],
+                                        },
+                                    },
                                 },
                             },
                         },
                     },
                     "relatedConcepts": {
                         "title": "Related " "Concepts",
-                        "description": "Mappings "
+                        "description": "__**[Under "
+                        "development]**__ "
+                        "Mappings "
                         "to "
                         "a "
                         "published "
@@ -1183,90 +2015,18 @@ healjsonschema = {
                         "given "
                         "field "
                         "such "
-                        "as "
+                        "as \n"
                         "ontological "
                         "information "
                         "(eg., "
                         "NCI "
                         "thesaurus, "
                         "bioportal "
-                        "etc)\n"
-                        "[Autopopulated, "
-                        "if "
-                        "not "
-                        "filled]",
+                        "etc)\n",
                         "type": "array",
                         "items": {
                             "type": "object",
                             "properties": {
-                                "type": {
-                                    "title": "Related " "concepts " "- " "Type",
-                                    "description": "The "
-                                    "**type** "
-                                    "of "
-                                    "mapping "
-                                    "to "
-                                    "a "
-                                    "published "
-                                    "set "
-                                    "of "
-                                    "concepts "
-                                    "related "
-                                    "to "
-                                    "the "
-                                    "given "
-                                    "field "
-                                    "such "
-                                    "as \n"
-                                    "ontological "
-                                    "information "
-                                    "(eg., "
-                                    "NCI "
-                                    "thesaurus, "
-                                    "bioportal "
-                                    "etc)\n"
-                                    "\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
-                                    "type": "string",
-                                },
-                                "label": {
-                                    "type": "string",
-                                    "title": "Related " "Concepts " "- " "Label",
-                                    "description": "A "
-                                    "free "
-                                    "text "
-                                    "**label** "
-                                    "of "
-                                    "mapping "
-                                    "to "
-                                    "a "
-                                    "published "
-                                    "set "
-                                    "of "
-                                    "concepts "
-                                    "related "
-                                    "to "
-                                    "the "
-                                    "given "
-                                    "field "
-                                    "such "
-                                    "as \n"
-                                    "ontological "
-                                    "information "
-                                    "(eg., "
-                                    "NCI "
-                                    "thesaurus, "
-                                    "bioportal "
-                                    "etc)\n"
-                                    "\n"
-                                    "[Autopopulated, "
-                                    "if "
-                                    "not "
-                                    "filled]\n",
-                                },
                                 "url": {
                                     "title": "Related " "Concepts " "- " "Url",
                                     "description": "The "
@@ -1277,40 +2037,170 @@ healjsonschema = {
                                     "to "
                                     "the "
                                     "published, "
-                                    "standardized "
-                                    "concept.\n"
+                                    "related "
+                                    "concept. \n"
+                                    "The "
+                                    "listed "
+                                    "examples "
+                                    "could "
+                                    "both "
+                                    "be "
+                                    "attached "
+                                    "to "
+                                    "any "
+                                    "variable "
+                                    "related "
+                                    "to, "
+                                    "for "
+                                    "example, "
+                                    "heroin "
+                                    "use.\n"
                                     "\n"
-                                    "[Autopopulated, "
+                                    "> "
+                                    ":point_up: "
                                     "if "
-                                    "not "
-                                    "filled]\n",
+                                    "you "
+                                    "are "
+                                    "looking "
+                                    "for "
+                                    "mapping "
+                                    "field "
+                                    "values "
+                                    "to "
+                                    "common "
+                                    "data "
+                                    "elements "
+                                    "or "
+                                    "a "
+                                    "set "
+                                    "of "
+                                    "standards, "
+                                    "see "
+                                    "`standardsMappings`_\n",
                                     "type": "string",
                                     "format": "uri",
                                     "examples": [
-                                        "https://cde.nlm.nih.gov/deView?tinyId=XyuSGdTTI"
+                                        "https://www.ebi.ac.uk/chebi/chebiOntology.do?chebiId=CHEBI:27808",
+                                        "http://purl.bioontology.org/ontology/RXNORM/3304",
+                                    ],
+                                },
+                                "title": {
+                                    "title": "Related " "concepts " "- " "Type",
+                                    "description": "A "
+                                    "human-readable "
+                                    "title "
+                                    "(ie "
+                                    "label) "
+                                    "to "
+                                    "a "
+                                    "concept "
+                                    "related "
+                                    "to "
+                                    "the "
+                                    "given "
+                                    "field.\n"
+                                    "The "
+                                    "listed "
+                                    "examples "
+                                    "could "
+                                    "both "
+                                    "be "
+                                    "attached "
+                                    "to "
+                                    "any "
+                                    "variable "
+                                    "related "
+                                    "to, "
+                                    "for "
+                                    "example, "
+                                    "heroin "
+                                    "use.\n"
+                                    "\n"
+                                    "> "
+                                    ":point_up: "
+                                    "if "
+                                    "you "
+                                    "are "
+                                    "looking "
+                                    "for "
+                                    "mapping "
+                                    "field "
+                                    "values "
+                                    "to "
+                                    "common "
+                                    "data "
+                                    "elements "
+                                    "or "
+                                    "a "
+                                    "set "
+                                    "of "
+                                    "standards, "
+                                    "see "
+                                    "`standardsMappings`_\n",
+                                    "type": "string",
+                                    "examples": [
+                                        "Heroin " "Molecular " "Structure",
+                                        "Heroin " "Ontology",
                                     ],
                                 },
                                 "source": {
                                     "title": "Related " "Concepts " "- " "Source",
                                     "description": "The "
                                     "source "
-                                    "of "
-                                    "the "
+                                    "(e.g., "
+                                    "a "
+                                    "dictionary "
+                                    "or "
+                                    "vocabulary "
+                                    "set) "
+                                    "to "
+                                    "a "
+                                    "concept "
                                     "related "
-                                    "concept.\n"
+                                    "to "
+                                    "the "
+                                    "given "
+                                    "field.\n"
+                                    "The "
+                                    "listed "
+                                    "examples "
+                                    "could "
+                                    "both "
+                                    "be "
+                                    "attached "
+                                    "to "
+                                    "any "
+                                    "variable "
+                                    "related "
+                                    "to, "
+                                    "for "
+                                    "example, "
+                                    "heroin "
+                                    "use.\n"
                                     "\n"
-                                    "[Autopopulated, "
+                                    "> "
+                                    ":point_up: "
                                     "if "
-                                    "not "
-                                    "filled]\n",
+                                    "you "
+                                    "are "
+                                    "looking "
+                                    "for "
+                                    "mapping "
+                                    "field "
+                                    "values "
+                                    "to "
+                                    "common "
+                                    "data "
+                                    "elements "
+                                    "or "
+                                    "a "
+                                    "set "
+                                    "of "
+                                    "standards, "
+                                    "see "
+                                    "`standardsMappings`_\n",
                                     "type": "string",
-                                    "examples": [
-                                        "TBD "
-                                        "(will "
-                                        "have "
-                                        "controlled "
-                                        "vocabulary)"
-                                    ],
+                                    "examples": ["CHEBI", "RXNORM"],
                                 },
                                 "id": {
                                     "title": "Related " "Concepts " "- " "Id",
@@ -1320,52 +2210,53 @@ healjsonschema = {
                                     "locating "
                                     "the "
                                     "individual "
-                                    "mapping "
+                                    "concept "
                                     "within "
                                     "the "
+                                    "source "
+                                    "of "
+                                    "the "
                                     "given "
-                                    "source.\n"
+                                    "field.\n"
+                                    "The "
+                                    "listed "
+                                    "examples "
+                                    "could "
+                                    "both "
+                                    "be "
+                                    "attached "
+                                    "to "
+                                    "any "
+                                    "variable "
+                                    "related "
+                                    "to, "
+                                    "for "
+                                    "example, "
+                                    "heroin "
+                                    "use.\n"
                                     "\n"
-                                    "[Autopopulated, "
+                                    "> "
+                                    ":point_up: "
                                     "if "
-                                    "not "
-                                    "filled]\n",
-                                },
-                            },
-                        },
-                    },
-                    "univarStats": {
-                        "type": "object",
-                        "description": "Univariate "
-                        "statistics "
-                        "inferred "
-                        "from "
-                        "the "
-                        "data "
-                        "about "
-                        "the "
-                        "given "
-                        "variable \n"
-                        "\n"
-                        "[Experimental]\n",
-                        "properties": {
-                            "median": {"type": "number"},
-                            "mean": {"type": "number"},
-                            "std": {"type": "number"},
-                            "min": {"type": "number"},
-                            "max": {"type": "number"},
-                            "mode": {"type": "number"},
-                            "count": {"type": "integer", "minimum": 0},
-                            "twentyFifthPercentile": {"type": "number"},
-                            "seventyFifthPercentile": {"type": "number"},
-                            "categoricalMarginals": {
-                                "type": "array",
-                                "items": {
-                                    "type": "object",
-                                    "properties": {
-                                        "name": {"type": "string"},
-                                        "count": {"type": "integer"},
-                                    },
+                                    "you "
+                                    "are "
+                                    "looking "
+                                    "for "
+                                    "mapping "
+                                    "field "
+                                    "values "
+                                    "to "
+                                    "common "
+                                    "data "
+                                    "elements "
+                                    "or "
+                                    "a "
+                                    "set "
+                                    "of "
+                                    "standards, "
+                                    "see "
+                                    "`standardsMappings`_\n",
+                                    "examples": ["27808", "3304"],
                                 },
                             },
                         },
@@ -1373,5 +2264,27 @@ healjsonschema = {
                 },
             },
         },
+    },
+    "propertyNames": {
+        "description": "To allow additional properties for "
+        "compatibility with other standards at the "
+        '"table" , or root, but not included in '
+        "the core `properties` set:\n"
+        "\n"
+        "[Frictionless Data package table schema "
+        "standard](https://specs.frictionlessdata.io/table-schema): "
+        "`missingValues`|`primaryKey`|`foreignKeys`\n",
+        "enum": [
+            "title",
+            "description",
+            "schemaVersion",
+            "version",
+            "standardsMappings",
+            "fields",
+            "custom",
+            "missingValues",
+            "primaryKey",
+            "foreignKeys",
+        ],
     },
 }

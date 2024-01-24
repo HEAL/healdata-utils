@@ -1,0 +1,33 @@
+{
+    "schemaVersion": "0.2.0",
+    "fields": [
+        {
+            "name": "id",
+            "type": "string"
+        },
+        {
+            "name": "sex",
+            "type": "string",
+            "constraints": {
+                "enum": [
+                    "F",
+                    "M"
+                ]
+            }
+        },
+        {
+            "name": "group",
+            "type": "string",
+            "constraints": {
+                "enum": [
+                    "control",
+                    "experiment"
+                ]
+            }
+        },
+        {
+            "name": "withdrawal_freq",
+            "type": "integer"
+        }
+    ]
+}

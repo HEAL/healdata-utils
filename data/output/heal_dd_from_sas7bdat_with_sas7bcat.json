@@ -1,0 +1,617 @@
+{
+    "schemaVersion": "0.2.0",
+    "description": "This is a proof of concept to demonstrate the healdata-utils functionality",
+    "title": "Healdata-utils Demonstration Data Dictionary",
+    "fields": [
+        {
+            "name": "CASEID",
+            "type": "integer"
+        },
+        {
+            "name": "LST",
+            "type": "string"
+        },
+        {
+            "name": "MHINTAKE",
+            "type": "integer"
+        },
+        {
+            "name": "MHDIAGEVAL",
+            "type": "integer"
+        },
+        {
+            "name": "MHREFERRAL",
+            "type": "integer"
+        },
+        {
+            "name": "SMISEDSUD",
+            "type": "integer"
+        },
+        {
+            "name": "TREATMT",
+            "type": "integer"
+        },
+        {
+            "name": "ADMINSERV",
+            "type": "integer"
+        },
+        {
+            "name": "SETTINGIP",
+            "type": "integer"
+        },
+        {
+            "name": "SETTINGRC",
+            "type": "integer"
+        },
+        {
+            "name": "SETTINGDTPH",
+            "type": "integer"
+        },
+        {
+            "name": "SETTINGOP",
+            "type": "integer"
+        },
+        {
+            "name": "FACILITYTYPE",
+            "type": "integer"
+        },
+        {
+            "name": "FOCUS",
+            "type": "integer",
+            "description": "Primary treatment focus of facility",
+            "enumLabels": {
+                "1.0": "Mental health treatment",
+                "2.0": "Substance abuse treatment",
+                "3.0": "Mix of mental health and substance abuse treatment (neither is primary)",
+                "4.0": "General health care",
+                "5.0": "Other service focus"
+            },
+            "constraints": {
+                "enum": [
+                    1.0,
+                    2.0,
+                    3.0,
+                    4.0,
+                    5.0
+                ]
+            }
+        },
+        {
+            "name": "OWNERSHP",
+            "type": "integer"
+        },
+        {
+            "name": "PUBLICAGENCY",
+            "type": "integer"
+        },
+        {
+            "name": "TREATPSYCHOTHRPY",
+            "type": "integer",
+            "description": "Facility offers individual psychotherapy",
+            "enumLabels": {
+                "0.0": "No",
+                "1.0": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    0.0,
+                    1.0
+                ]
+            }
+        },
+        {
+            "name": "TREATFAMTHRPY",
+            "type": "integer"
+        },
+        {
+            "name": "TREATGRPTHRPY",
+            "type": "integer"
+        },
+        {
+            "name": "TREATCOGTHRPY",
+            "type": "integer"
+        },
+        {
+            "name": "TREATDIALTHRPY",
+            "type": "integer"
+        },
+        {
+            "name": "TREATBEHAVMOD",
+            "type": "integer"
+        },
+        {
+            "name": "TREATDUALMHSA",
+            "type": "integer"
+        },
+        {
+            "name": "TREATTRAUMATHRPY",
+            "type": "integer",
+            "description": "Facility offers trauma therapy",
+            "enumLabels": {
+                "0.0": "No",
+                "1.0": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
+        },
+        {
+            "name": "TREATACTVTYTHRPY",
+            "type": "integer"
+        },
+        {
+            "name": "TREATELECTRO",
+            "type": "integer"
+        },
+        {
+            "name": "TREATTELEMEDINCE",
+            "type": "integer"
+        },
+        {
+            "name": "TREATPSYCHOMED",
+            "type": "integer"
+        },
+        {
+            "name": "TREATOTH",
+            "type": "integer"
+        },
+        {
+            "name": "NOTREAT",
+            "type": "integer"
+        },
+        {
+            "name": "ASSERTCOMM",
+            "type": "integer"
+        },
+        {
+            "name": "MHINTCASEMGMT",
+            "type": "integer"
+        },
+        {
+            "name": "MHCASEMGMT",
+            "type": "integer"
+        },
+        {
+            "name": "MHCOURTORDERED",
+            "type": "integer"
+        },
+        {
+            "name": "MHCHRONIC",
+            "type": "integer"
+        },
+        {
+            "name": "ILLNESSMGMT",
+            "type": "integer"
+        },
+        {
+            "name": "PRIMARYCARE",
+            "type": "integer"
+        },
+        {
+            "name": "DIETEXERCOUNSEL",
+            "type": "integer"
+        },
+        {
+            "name": "FAMPSYCHED",
+            "type": "integer"
+        },
+        {
+            "name": "MHEDUCATION",
+            "type": "integer"
+        },
+        {
+            "name": "MHHOUSING",
+            "type": "integer"
+        },
+        {
+            "name": "SUPPHOUSING",
+            "type": "integer"
+        },
+        {
+            "name": "MHPSYCHREHAB",
+            "type": "integer"
+        },
+        {
+            "name": "MHVOCREHAB",
+            "type": "integer"
+        },
+        {
+            "name": "SUPPEMPLOY",
+            "type": "integer"
+        },
+        {
+            "name": "FOSTERCARE",
+            "type": "integer"
+        },
+        {
+            "name": "MHLEGAL",
+            "type": "integer"
+        },
+        {
+            "name": "MHEMGCY",
+            "type": "integer"
+        },
+        {
+            "name": "MHSUICIDE",
+            "type": "integer"
+        },
+        {
+            "name": "MHCONSUMER",
+            "type": "integer"
+        },
+        {
+            "name": "MHTOBACCOUSE",
+            "type": "integer"
+        },
+        {
+            "name": "MHTOBACCOCESS",
+            "type": "integer"
+        },
+        {
+            "name": "MHNICOTINEREP",
+            "type": "integer"
+        },
+        {
+            "name": "SMOKINGCESSATION",
+            "type": "integer"
+        },
+        {
+            "name": "MHOTH",
+            "type": "integer"
+        },
+        {
+            "name": "MHNOSVCS",
+            "type": "integer"
+        },
+        {
+            "name": "CHILDAD",
+            "type": "integer"
+        },
+        {
+            "name": "ADOLES",
+            "type": "integer"
+        },
+        {
+            "name": "YOUNGADULTS",
+            "type": "integer",
+            "description": "Accepts young adults (aged 18-25 years old) for Tx",
+            "enumLabels": {
+                "0.0": "No",
+                "1.0": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0.0",
+                    "1.0"
+                ]
+            }
+        },
+        {
+            "name": "ADULT",
+            "type": "integer"
+        },
+        {
+            "name": "SENIORS",
+            "type": "integer"
+        },
+        {
+            "name": "SED",
+            "type": "integer"
+        },
+        {
+            "name": "TAYOUNGADULTS",
+            "type": "integer"
+        },
+        {
+            "name": "SPMI",
+            "type": "integer"
+        },
+        {
+            "name": "SRVC63",
+            "type": "integer"
+        },
+        {
+            "name": "ALZHDEMENTIA",
+            "type": "integer"
+        },
+        {
+            "name": "SRVC31",
+            "type": "integer"
+        },
+        {
+            "name": "SPECGRPEATING",
+            "type": "integer"
+        },
+        {
+            "name": "POSTTRAUM",
+            "type": "integer"
+        },
+        {
+            "name": "SRVC116",
+            "type": "integer"
+        },
+        {
+            "name": "TRAUMATICBRAIN",
+            "type": "integer"
+        },
+        {
+            "name": "SRVC113",
+            "type": "integer"
+        },
+        {
+            "name": "SRVC114",
+            "type": "integer"
+        },
+        {
+            "name": "SRVC115",
+            "type": "integer"
+        },
+        {
+            "name": "SRVC62",
+            "type": "integer"
+        },
+        {
+            "name": "SRVC61",
+            "type": "integer"
+        },
+        {
+            "name": "SRVC32",
+            "type": "integer"
+        },
+        {
+            "name": "SRVC35",
+            "type": "integer"
+        },
+        {
+            "name": "NOSPECGRP",
+            "type": "integer"
+        },
+        {
+            "name": "CRISISTEAM2",
+            "type": "integer"
+        },
+        {
+            "name": "SIGNLANG",
+            "type": "integer"
+        },
+        {
+            "name": "LANG",
+            "type": "integer"
+        },
+        {
+            "name": "LANGPROV",
+            "type": "integer"
+        },
+        {
+            "name": "LANG16",
+            "type": "integer"
+        },
+        {
+            "name": "LANG_B",
+            "type": "integer"
+        },
+        {
+            "name": "LANG1",
+            "type": "integer"
+        },
+        {
+            "name": "LANG2",
+            "type": "integer"
+        },
+        {
+            "name": "LANG3",
+            "type": "integer"
+        },
+        {
+            "name": "LANG21",
+            "type": "integer"
+        },
+        {
+            "name": "LANG4",
+            "type": "integer"
+        },
+        {
+            "name": "LANG5",
+            "type": "integer"
+        },
+        {
+            "name": "LANG6",
+            "type": "integer"
+        },
+        {
+            "name": "LANG7",
+            "type": "integer"
+        },
+        {
+            "name": "LANG8",
+            "type": "integer"
+        },
+        {
+            "name": "LANG24",
+            "type": "integer"
+        },
+        {
+            "name": "LANG9",
+            "type": "integer"
+        },
+        {
+            "name": "LANG10",
+            "type": "integer"
+        },
+        {
+            "name": "LANG22",
+            "type": "integer"
+        },
+        {
+            "name": "LANG25",
+            "type": "integer"
+        },
+        {
+            "name": "LANG26",
+            "type": "integer"
+        },
+        {
+            "name": "LANG11",
+            "type": "integer"
+        },
+        {
+            "name": "LANG19",
+            "type": "integer"
+        },
+        {
+            "name": "LANG23",
+            "type": "integer"
+        },
+        {
+            "name": "LANG12",
+            "type": "integer"
+        },
+        {
+            "name": "LANG13",
+            "type": "integer"
+        },
+        {
+            "name": "LANG14",
+            "type": "integer"
+        },
+        {
+            "name": "LANG15",
+            "type": "integer"
+        },
+        {
+            "name": "LANG20",
+            "type": "integer"
+        },
+        {
+            "name": "LANG17",
+            "type": "integer"
+        },
+        {
+            "name": "LANG18",
+            "type": "integer"
+        },
+        {
+            "name": "SMOKINGPOLICY",
+            "type": "integer"
+        },
+        {
+            "name": "FEESCALE",
+            "type": "integer"
+        },
+        {
+            "name": "PAYASST",
+            "type": "integer"
+        },
+        {
+            "name": "REVCHK1",
+            "type": "integer"
+        },
+        {
+            "name": "REVCHK2",
+            "type": "integer"
+        },
+        {
+            "name": "REVCHK8",
+            "type": "integer"
+        },
+        {
+            "name": "REVCHK5",
+            "type": "integer"
+        },
+        {
+            "name": "REVCHK10",
+            "type": "integer"
+        },
+        {
+            "name": "FUNDSMHA",
+            "type": "integer"
+        },
+        {
+            "name": "FUNDSTATEWELFARE",
+            "type": "integer"
+        },
+        {
+            "name": "FUNDSTATEJUV",
+            "type": "integer"
+        },
+        {
+            "name": "FUNDSTATEEDUC",
+            "type": "integer"
+        },
+        {
+            "name": "FUNDOTHSTATE",
+            "type": "integer"
+        },
+        {
+            "name": "FUNDLOCALGOV",
+            "type": "integer"
+        },
+        {
+            "name": "FUNDCSBG",
+            "type": "integer"
+        },
+        {
+            "name": "FUNDCMHG",
+            "type": "integer"
+        },
+        {
+            "name": "REVCHK15",
+            "type": "integer"
+        },
+        {
+            "name": "FUNDVA",
+            "type": "integer"
+        },
+        {
+            "name": "REVCHK17",
+            "type": "integer"
+        },
+        {
+            "name": "REVCHK2A",
+            "type": "integer"
+        },
+        {
+            "name": "LICENMH",
+            "type": "integer"
+        },
+        {
+            "name": "LICENSED",
+            "type": "integer"
+        },
+        {
+            "name": "LICENPH",
+            "type": "integer"
+        },
+        {
+            "name": "LICENSEDFCS",
+            "type": "integer"
+        },
+        {
+            "name": "LICENHOS",
+            "type": "integer"
+        },
+        {
+            "name": "JCAHO",
+            "type": "integer"
+        },
+        {
+            "name": "CARF",
+            "type": "integer"
+        },
+        {
+            "name": "COA",
+            "type": "integer"
+        },
+        {
+            "name": "CMS",
+            "type": "integer"
+        },
+        {
+            "name": "OTHSTATE",
+            "type": "integer"
+        }
+    ]
+}

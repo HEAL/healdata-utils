@@ -1,0 +1,299 @@
+{
+    "schemaVersion": "0.2.0",
+    "title": "Healdata-utils Demonstration Data Dictionary",
+    "description": "This is a proof of concept to demonstrate the healdata-utils functionality",
+    "primaryKey": [
+        "id"
+    ],
+    "missingValues": [
+        "Don't know",
+        "Refused"
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "data commons person identifier",
+            "type": "string",
+            "description": "The generated unique identifier specific for a given individual (client or staff).",
+            "constraints": {
+                "required": true,
+                "maxLength": 9,
+                "pattern": "[A-Z][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]"
+            },
+            "custom": {
+                "mystudy:original_name": "fakeid"
+            }
+        },
+        {
+            "name": "age",
+            "title": "Age",
+            "type": "integer",
+            "description": "About how old are you? (top coded at 90)"
+        },
+        {
+            "name": "sex_at_birth",
+            "title": "Sex at birth",
+            "type": "string",
+            "description": "What sex was originally listed on your birth certificate?",
+            "constraints": {
+                "enum": [
+                    "Male",
+                    "Female",
+                    "Decline to answer",
+                    "Something else"
+                ]
+            }
+        },
+        {
+            "name": "gender_id",
+            "title": "Gender Identity",
+            "type": "string",
+            "description": "What is your gender identity?",
+            "constraints": {
+                "enum": [
+                    "Male",
+                    "Female",
+                    "Transgender man/trans man/female-to-male (FTM)",
+                    "Transgender woman/trans woman/male-to-female (MTF)",
+                    "Genderqueer/gender nonconforming/neither exclusively male nor female",
+                    "Additional gender category (or other)",
+                    "Not reported"
+                ]
+            }
+        },
+        {
+            "name": "gender_id_condensed",
+            "title": "Gender Identity (condensed)",
+            "type": "string",
+            "description": "What is your gender identity?",
+            "constraints": {
+                "enum": [
+                    "Male",
+                    "Female",
+                    "Transgender",
+                    "Gender nonconforming",
+                    "Something else",
+                    "Not reported"
+                ]
+            }
+        },
+        {
+            "name": "race_white",
+            "title": "Race: White",
+            "type": "boolean",
+            "description": "[White] What is your race? SELECT ALL THAT APPLY",
+            "trueValues": [
+                "Yes"
+            ],
+            "falseValues": [
+                "No"
+            ],
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "race_black",
+            "title": "Race: Black or African American",
+            "type": "boolean",
+            "description": "[Black or African American] What is your race? SELECT ALL THAT APPLY",
+            "trueValues": [
+                "Yes"
+            ],
+            "falseValues": [
+                "No"
+            ],
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "race_AIAN",
+            "title": "Race: American Indian or Alaska Native",
+            "type": "boolean",
+            "description": "[American Indian or Alaska Native] What is your race? SELECT ALL THAT APPLY",
+            "trueValues": [
+                "Yes"
+            ],
+            "falseValues": [
+                "No"
+            ],
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "race_hawaiian_OPI",
+            "title": "Race: Native Hawaiian or Other Pacific Islander",
+            "type": "boolean",
+            "description": "[Native Hawaiian or Other Pacific Islander] What is your race? SELECT ALL THAT APPLY",
+            "trueValues": [
+                "Yes"
+            ],
+            "falseValues": [
+                "No"
+            ],
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "race_asian",
+            "title": "Race: Asian",
+            "type": "boolean",
+            "description": "[Asian] What is your race? SELECT ALL THAT APPLY",
+            "trueValues": [
+                "Yes"
+            ],
+            "falseValues": [
+                "No"
+            ],
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "race_other",
+            "title": "Race: Other",
+            "type": "boolean",
+            "description": "[Other] What is your race? SELECT ALL THAT APPLY",
+            "trueValues": [
+                "Yes"
+            ],
+            "falseValues": [
+                "No"
+            ],
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "race_AI_tribe",
+            "title": "Race: American indian principal tribe or community specified",
+            "type": "string",
+            "description": "[American indian principal tribe or community specified] What is your race? SELECT ALL THAT APPLY",
+            "constraints": {
+                "maxLength": 80
+            }
+        },
+        {
+            "name": "race_other_specified",
+            "title": "Race: Other specified",
+            "type": "string",
+            "description": "[Other specified] What is your race? SELECT ALL THAT APPLY",
+            "constraints": {
+                "maxLength": 80
+            }
+        },
+        {
+            "name": "hispanic_latino",
+            "title": "Hispanic, Latino, or Spanish Origin",
+            "type": "boolean",
+            "description": "Are you of Hispanic, Latino, or Spanish origin?",
+            "trueValues": [
+                "Yes"
+            ],
+            "falseValues": [
+                "No"
+            ],
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "sex_orient_category",
+            "title": "Sexual orientation",
+            "type": "string",
+            "description": "Sexual orientation:  Do you think of yourself as\u00e2\u20ac\u00a6",
+            "constraints": {
+                "enum": [
+                    "Straight or heterosexual",
+                    "Lesbian or gay",
+                    "Bisexual",
+                    "Queer,pansexual, and/or questioning",
+                    "Something else"
+                ]
+            }
+        },
+        {
+            "name": "sex_orient_other",
+            "title": "Sexual orientation:  Other specified",
+            "type": "string",
+            "description": "Sexual orientation:  Do you think of yourself as\u00e2\u20ac\u00a6"
+        },
+        {
+            "name": "ever_pregnant",
+            "title": "Ever pregnant",
+            "type": "string",
+            "description": "Have you ever been pregnant?",
+            "constraints": {
+                "enum": [
+                    "Never been pregnant",
+                    "Currently pregnant",
+                    "Previously pregnant, had a child",
+                    "Previously pregnant, did not have a child",
+                    "Not applicable",
+                    "Don't know"
+                ]
+            }
+        },
+        {
+            "name": "marital_status",
+            "title": "Marital status",
+            "type": "string",
+            "description": "What is your marital status?",
+            "constraints": {
+                "enum": [
+                    "Married",
+                    "Widowed",
+                    "Divorced",
+                    "Separated",
+                    "Never married"
+                ]
+            }
+        },
+        {
+            "name": "living_as_married",
+            "title": "Married with partner",
+            "type": "string",
+            "description": "Are you currently living as married with a romantic partner?",
+            "constraints": {
+                "enum": [
+                    "Yes, I am living as married with partner",
+                    "No, I am not living as married with partner"
+                ]
+            }
+        },
+        {
+            "name": "educ_category",
+            "title": "Education",
+            "type": "string",
+            "description": "What is the highest grade or level of school you have completed or the highest degree you have received?",
+            "constraints": {
+                "enum": [
+                    "Did not complete high school",
+                    "GED or equivalent",
+                    "Regular high school diploma",
+                    "Some college credit but less than 1 year of college credit",
+                    "1 or more years of college credit but no degree",
+                    "Associate's degree (e.g., AA or AS)",
+                    "Bachelor's degree (e.g.,  BA or BS)",
+                    "Graduate degree (e.g., MSW, MA, MS, JD, MD, DSW, EdD, PhD)",
+                    "Other (specify)"
+                ]
+            }
+        },
+        {
+            "name": "educ_highest_grade",
+            "title": "Education:  Highest grade level (if less than GED or h.s. diploma)",
+            "type": "integer",
+            "description": "What is the highest grade completed?"
+        },
+        {
+            "name": "educ_other_specified",
+            "title": "Education: Other specified",
+            "type": "string",
+            "description": "What is the highest grade or level of school you have completed or the highest degree you have received?"
+        }
+    ]
+}

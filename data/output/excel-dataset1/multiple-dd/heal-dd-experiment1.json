@@ -1,0 +1,47 @@
+{
+    "schemaVersion": "0.2.0",
+    "fields": [
+        {
+            "name": "id",
+            "type": "string"
+        },
+        {
+            "name": "sex",
+            "type": "string",
+            "constraints": {
+                "enum": [
+                    "F",
+                    "M"
+                ]
+            }
+        },
+        {
+            "name": "force_mn",
+            "type": "number",
+            "constraints": {
+                "enum": [
+                    0.98,
+                    9.8
+                ]
+            }
+        },
+        {
+            "name": "timepoint",
+            "type": "string"
+        },
+        {
+            "name": "group",
+            "type": "string",
+            "constraints": {
+                "enum": [
+                    "control",
+                    "experiment"
+                ]
+            }
+        },
+        {
+            "name": "withdrawal_freq",
+            "type": "integer"
+        }
+    ]
+}
