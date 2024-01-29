@@ -76,13 +76,3 @@ if __name__ == "__main__":
 
     for p in template_params:
         healdata_utils.write_vlmd_template(**p)
-
-    # sync converted schema
-    transformed_path = ("tests/criteria_data/transforms/"
-        "frictionless/convert_frictionless_to_jsonschema_check1.json")
-
-
-    frictionless_input_schema = healdata_utils.schemas.healcsvschema
-    jsonschema_props = healdata_utils.transforms.frictionless.convert_frictionless_to_jsonschema(frictionless_input_schema)
-    Path(transformed_path).write_text(json.dumps(jsonschema_props,indent=3))
-
