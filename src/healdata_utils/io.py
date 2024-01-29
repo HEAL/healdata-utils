@@ -176,19 +176,18 @@ def write_vlmd_template(outputfile,output_overwrite=False,numfields=1):
     
     elif ext == ".csv":
         schema = schemas.healcsvschema
-        fields_propname = "fields"
         cols = []
         vals = {}
 
-        for field in schema["fields"]:
+        for field in schema:
             val = ""
-            cols.append(field["name"])
+            cols.append(field)
 
-            if field.get("constraints",{}).get("required"):
+            if field in schema["required"]:
                 val += "[Required]"
 
                 
-            vals[field["name"]] = numfields * [val]
+            vals[field] = numfields * [val]
 
         template = pd.DataFrame(vals)
         if "version" in schema:
