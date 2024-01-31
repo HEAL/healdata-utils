@@ -3,6 +3,7 @@
 command line interface for generating HEAL data dictionary/vlmd json files
 
 """
+from functools import partial
 import json
 from pathlib import Path
 import petl as etl
@@ -12,10 +13,9 @@ from collections import deque
 import click
 from slugify import slugify
 
+from healdata_utils import mappings
 from healdata_utils.transforms.excel.conversion import convert_dataexcel
-from healdata_utils.transforms.csvtemplate.conversion import (
-    convert_templatecsv,update_templatecsv_version
-)
+from healdata_utils.transforms.csvdatadict.conversion import convert_datadictcsv
 from healdata_utils.transforms.jsontemplate.conversion import convert_templatejson
 
 from healdata_utils.transforms.stata.conversion import convert_stata
@@ -32,13 +32,21 @@ from healdata_utils.utils import find_docstring_desc
 from healdata_utils import schemas
 # TODO: convert_templatecsv is misleading as it maps variable types. Need, to build this out further to support more translations.
 # for now, just changing function name here.
-convert_datadictcsv = convert_templatecsv
 
 choice_fxn = {
-    "csv-version-update":update_templatecsv_version,
+    "csv-version-update":partial(
+        convert_datadictcsv,    
+        renamemap=mappings.versions.fields_renamemap,
+        recodemap=mappings.versions.fields_recodemap,
+        droplist=mappings.versions.fields_droplist
+    ),
     "excel-data":convert_dataexcel,
     "csv-data": convert_datacsv,
-    'csv-data-dict':convert_datadictcsv,
+    'csv-data-dict':partial(
+        convert_datadictcsv, 
+        renamemap=mappings.renamemap,
+        recodemap=mappings.recodemap
+    ),
     #'csv-template':convert_templatecsv,
     "spss": convert_spss,
     "stata": convert_stata,

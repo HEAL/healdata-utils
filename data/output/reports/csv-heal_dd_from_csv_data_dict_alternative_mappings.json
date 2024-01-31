@@ -1,0 +1,9 @@
+{
+    "valid": false,
+    "errors": [
+        {
+            "json_path": "$[0].enumLabels",
+            "message": "'1:hi;2:hello;3:howdy' is not valid under any of the given schemas"
+        }
+    ]
+}

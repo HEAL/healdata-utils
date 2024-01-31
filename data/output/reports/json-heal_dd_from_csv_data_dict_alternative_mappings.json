@@ -1,0 +1,13 @@
+{
+    "valid": false,
+    "errors": [
+        {
+            "json_path": "$.fields[0].constraints.enum",
+            "message": "'1;2;3' is not of type 'array'"
+        },
+        {
+            "json_path": "$.fields[0].enumLabels",
+            "message": "'1:hi;2:hello;3:howdy' is not of type 'object'"
+        }
+    ]
+}

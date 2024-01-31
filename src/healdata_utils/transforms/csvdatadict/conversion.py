@@ -113,8 +113,6 @@ def convert_datadictcsv(
     if not droplist:
         droplist = []
 
-    # get flattened (json path) property names
-    fields_schema = utils.flatten_properties(schemas.healjsonschema["properties"]["fields"]["items"]["properties"])
     slugify = lambda s: s.strip().lower().replace("_","-").replace(" ","-") 
     
     # init to-be formatted tables
@@ -143,9 +141,18 @@ def convert_datadictcsv(
 
         if newcolname in droplist:
             del tbl_csv[newcolname]
-        
-        if newcolname in fields_schema:
-            fieldprop = fields_schema[newcolname]
+
+        # cast or convert types based on schema property (or pattern property) types
+        fields_properties = schemas.healcsvschema["properties"]
+        fields_patterns = schemas.healcsvschema["patternProperties"]
+    
+        fieldprop = fields_properties.get(newcolname,None)
+        if not fieldprop:
+            for pattern in fields_patterns:
+                if re.match(pattern,newcolname):
+                    fieldprop = fields_patterns[pattern]
+
+        if fieldprop:
             if fieldprop["type"] == "integer":
                 tbl_csv[newcolname] = tbl_csv[newcolname].apply(lambda s: int(float(s)) if s else s)
             elif fieldprop["type"] == "number":
@@ -171,8 +178,8 @@ def convert_datadictcsv(
     # parse string objects and array
     tbl_json = tbl_csv.copy()
     for colname in tbl_json.columns.tolist():
-        if colname in fields_schema:
-            fieldprop = fields_schema[colname]
+        if colname in fields_properties:
+            fieldprop = fields_properties[colname]
             if fieldprop["type"] == "object":
                 tbl_json[colname] = tbl_csv[colname].apply(
                     utils.parse_dictionary_str,
