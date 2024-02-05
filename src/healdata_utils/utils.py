@@ -3,16 +3,20 @@ import re
 from collections.abc import MutableMapping
 import pandas as pd
 
-def _get_propnames_to_rearrange(schema):
+def _get_propnames_to_rearrange(propnames,schema):
     """ 
     get data dictionary props to search for refactoring or embedding
     
+    Supports patternProperties
     """
 
     annotation_names = ["title","description","name","additionalDescription"]
     root_names = flatten_properties(schema["properties"]).keys()
     field_names = flatten_properties(schema["properties"]["fields"]["items"]["properties"]).keys()
-    names_to_rearrange = set(root_names).intersection(field_names).difference(annotation_names)
+    props_to_rearrange = set(root_names).intersection(field_names).difference(annotation_names)
+
+    propnames_exp = "|".join("^"+name+"$" for name in props_to_rearrange)
+    names_to_rearrange = [name for name in propnames if re.match(propnames_exp,name)]
 
     return list(names_to_rearrange)
 
@@ -33,8 +37,8 @@ def embed_data_dictionary_props(flat_fields,flat_root,schema):
     pd.DataFrame with the flat fields with the embedded root properties
     """
     flat_fields = pd.DataFrame(flat_fields)
-    propnames = _get_propnames_to_rearrange(schema)
-    flat_root = pd.Series(flat_root).loc[lambda s: s.index.isin(propnames)] # take out annotation props
+    propnames = _get_propnames_to_rearrange(list(flat_root.keys()),schema)
+    flat_root = pd.Series(flat_root).loc[propnames] # take out annotation props
     if len(flat_root) > 0:
         for propname in propnames:
             if propname in flat_root:
@@ -53,14 +57,14 @@ def refactor_field_props(flat_fields,schema):
 
     """  
     flat_fields_df = pd.DataFrame(flat_fields)
-    propnames = _get_propnames_to_rearrange(schema)
+    propnames = _get_propnames_to_rearrange(flat_fields_df.columns.tolist(),schema)
     flat_record = pd.Series(dtype="object")
     for name in propnames:
-        if name in flat_fields_df:
-            unique_val = flat_fields_df[name].unique() # NOTE: Includes NA values which is desired
-            if len(unique_val) == 1:
-                flat_record[name] = unique_val[0]
-                flat_fields_df.drop(columns=name,inplace=True)
+        in_df = name in flat_fields_df
+        is_one_unique = len(flat_fields_df[name].unique()) == 1 # NOTE: Includes NA values which is desired
+        if in_df and is_one_unique:
+            flat_record[name] = flat_fields_df.pop(name).iloc[0]
+            
 
     return flat_record,flat_fields_df
 
@@ -282,7 +286,7 @@ def sync_fields(data, field_list,missing_value=None):
     Parameters
     --------------
     data [list]: json array of values
-    fields [list]: the list of all fields (e.g., from a schema)
+    field_list [list]: the list of all field names  (e.g., propertjies from a schema)
 
     Returns
     -------------
@@ -291,9 +295,30 @@ def sync_fields(data, field_list,missing_value=None):
     data_with_missing = []
 
     for record in data:
-        extra_fields = list(set(list(record)).difference(field_list))
-        new_record = {field:record.get(field, missing_value) 
-            for field in field_list+extra_fields}
+        new_record = {}
+        for fieldpropname in field_list:
+            # check if the fieldname is a property (or could be a pattern property)
+            fieldnames = re.findall("|".join("^"+fieldname+"$" for fieldname in record),fieldpropname)
+            # if match then add to new record
+            if fieldnames:
+                for name in fieldnames:
+                    new_record[name] = record[name]
+            # if no record than add missing value (if there is a regex list index, then add [0])
+            else:
+                extra_fieldname = (
+                    fieldpropname
+                    .replace("^","")
+                    .replace("$","")
+                    .replace("\[\d+\]","[0]")
+                ) #replace list item regex
+                new_record[extra_fieldname] = missing_value
+
+        # tack on extra fields not in field_list at back
+        extra_fields = list(set(list(record)).difference(list(new_record)))
+        for name in extra_fields:
+            new_record[name] = record[name]
+
+        # append the newly synced record with missing values
         data_with_missing.append(new_record)
 
     
@@ -376,14 +401,14 @@ def flatten_schema(schema):
 
 def find_propname(colname,properties):
     """ 
-    given a dictionary of json schema object properties, return the 
+    given a dictionary of json schema object properties OR a list of property names, return the 
     matching property name. 
 
     This function is needed when a schema is flattened according to a json path 
     and converted into a regular expression for list (array) indices.
 
     """ 
-    propmatch = re.findall("|".join("^"+name+"$" for name in properties.keys()),colname)
+    propmatch = re.findall("|".join("^"+name+"$" for name in list(properties)),colname)
 
     if len(propmatch) == 1:
         return propmatch[0]

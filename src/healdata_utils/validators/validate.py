@@ -158,6 +158,8 @@ def validate_vlmd_csv(
     NOTE: (the frictionless v4 tools have some
     issues with pyinstaller currently (haven't tried frictionless v5 though)) 
 
+    TODO: replace the csv schema with flattened json json-schema
+
     Parameters
     ----------
     data_or_path : Path-like object indicating a path to a tabular data source (eg CSV or TSV) or a json array of records (see validate fxn)
@@ -216,8 +218,7 @@ def validate_vlmd_csv(
     # sync fields
     field_list = list(schema["items"].get("properties",[]))
     for name in list(schema["items"].get("patternProperties",[])):
-        newname = name.replace("^","").replace("$","").replace("[\d+]","[0]")
-        field_list.append(newname)
+        field_list.append(name)
     
     if to_sync_fields:
         validator.data = utils.sync_fields(validator.data, field_list,missing_value="")
