@@ -1,5 +1,5 @@
 healjsonschema = {
-    "version": "0.3.0",
+    "version": "0.3.1",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "vlmd",
     "title": "Variable Level Metadata (Data Dictionaries)",
@@ -2054,29 +2054,7 @@ healjsonschema = {
                                     "for "
                                     "example, "
                                     "heroin "
-                                    "use.\n"
-                                    "\n"
-                                    "> "
-                                    ":point_up: "
-                                    "if "
-                                    "you "
-                                    "are "
-                                    "looking "
-                                    "for "
-                                    "mapping "
-                                    "field "
-                                    "values "
-                                    "to "
-                                    "common "
-                                    "data "
-                                    "elements "
-                                    "or "
-                                    "a "
-                                    "set "
-                                    "of "
-                                    "standards, "
-                                    "see "
-                                    "`standardsMappings`_\n",
+                                    "use.\n",
                                     "type": "string",
                                     "format": "uri",
                                     "examples": [
@@ -2114,29 +2092,7 @@ healjsonschema = {
                                     "for "
                                     "example, "
                                     "heroin "
-                                    "use.\n"
-                                    "\n"
-                                    "> "
-                                    ":point_up: "
-                                    "if "
-                                    "you "
-                                    "are "
-                                    "looking "
-                                    "for "
-                                    "mapping "
-                                    "field "
-                                    "values "
-                                    "to "
-                                    "common "
-                                    "data "
-                                    "elements "
-                                    "or "
-                                    "a "
-                                    "set "
-                                    "of "
-                                    "standards, "
-                                    "see "
-                                    "`standardsMappings`_\n",
+                                    "use.\n",
                                     "type": "string",
                                     "examples": [
                                         "Heroin " "Molecular " "Structure",
@@ -2176,29 +2132,7 @@ healjsonschema = {
                                     "for "
                                     "example, "
                                     "heroin "
-                                    "use.\n"
-                                    "\n"
-                                    "> "
-                                    ":point_up: "
-                                    "if "
-                                    "you "
-                                    "are "
-                                    "looking "
-                                    "for "
-                                    "mapping "
-                                    "field "
-                                    "values "
-                                    "to "
-                                    "common "
-                                    "data "
-                                    "elements "
-                                    "or "
-                                    "a "
-                                    "set "
-                                    "of "
-                                    "standards, "
-                                    "see "
-                                    "`standardsMappings`_\n",
+                                    "use.\n",
                                     "type": "string",
                                     "examples": ["CHEBI", "RXNORM"],
                                 },
@@ -2233,29 +2167,7 @@ healjsonschema = {
                                     "for "
                                     "example, "
                                     "heroin "
-                                    "use.\n"
-                                    "\n"
-                                    "> "
-                                    ":point_up: "
-                                    "if "
-                                    "you "
-                                    "are "
-                                    "looking "
-                                    "for "
-                                    "mapping "
-                                    "field "
-                                    "values "
-                                    "to "
-                                    "common "
-                                    "data "
-                                    "elements "
-                                    "or "
-                                    "a "
-                                    "set "
-                                    "of "
-                                    "standards, "
-                                    "see "
-                                    "`standardsMappings`_\n",
+                                    "use.\n",
                                     "examples": ["27808", "3304"],
                                 },
                             },
