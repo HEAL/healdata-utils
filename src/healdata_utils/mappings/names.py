@@ -1,4 +1,13 @@
 condensed_renamemap = {
+    "type":[
+        "data-type",
+        "data-types",
+        "field-type",
+        "field-types",
+        "types",
+        "variable-types",
+        "variable-type"
+    ],
     "name": [
         "variable-name",
         "variable-names",
