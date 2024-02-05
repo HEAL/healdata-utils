@@ -302,7 +302,7 @@ def sync_fields(data, field_list,missing_value=None):
 
 # %% 
 # Working with schemas
-def flatten_properties(properties, parentkey="", sep=".",itemsep="[0]"):
+def flatten_properties(properties, parentkey="", sep=".",itemsep="\[\d+\]"):
     """
     flatten schema properties
     """
@@ -333,8 +333,63 @@ def flatten_properties(properties, parentkey="", sep=".",itemsep="[0]"):
     return properties_flattened
 
 def flatten_schema(schema):
+    """ 
+    Flatten a schema of type object with properties. 
+    
+    If a regular expression indicating a list index exists, puts this
+    under `patternProperties`
+    
+    """ 
     schema_flattened = dict(schema)
-    properties = schema.get("properties")
-    if properties:
-        schema_flattened["properties"] = flatten_properties(properties)
+    if "properties" in schema:
+        properties = schema_flattened.pop("properties")
+        item_sep = "\[\d+\]"
+        schema_flattened["properties"] = flatten_properties(properties,itemsep=item_sep)
+        schema_flattened["patternProperties"] = {}
+        for propname in list(schema_flattened["properties"].keys()):
+            if item_sep in propname:
+                # TODO: put on table level for csv schema
+                # var0 = propname.replace(item_sep,"[0]")
+                # var1 = propname.replace(item_sep,"[1]")
+                # var2 = propname.replace(item_sep,"[2]")
+                # pattern_property_note = (
+                #     "\n\n"
+                #     "Specifying field names:\n\n"
+                #     "This field can have 1 or more columns using the digit index number in brackets (`[0]` --> `[1]` --> `[n]`)\n\n"
+                #     "For 1 value, you will have the field (column) names:\n"
+                #     "`{0}`\n\n"
+                #     # "\tFor 2 values, you will have the columns: "
+                #     # "`{0},`{1}`\n"
+                #     "For 3 values, you will have the field (column) names:\n"
+                #     "`{0}`\t`{1}`\t`{2}`\n\n"
+                # ).format(var0,var1,var2)
+                pattern_property_note = ""
+                pattern_prop = schema_flattened["properties"].pop(propname)
+                pattern_prop["description"] = pattern_prop.get("description","") + pattern_property_note
+                schema_flattened["patternProperties"]["^"+propname+"$"] = pattern_prop
+
     return schema_flattened
+
+
+
+
+
+def find_propname(colname,properties):
+    """ 
+    given a dictionary of json schema object properties, return the 
+    matching property name. 
+
+    This function is needed when a schema is flattened according to a json path 
+    and converted into a regular expression for list (array) indices.
+
+    """ 
+    propmatch = re.findall("|".join("^"+name+"$" for name in properties.keys()),colname)
+
+    if len(propmatch) == 1:
+        return propmatch[0]
+    elif len(propmatch) > 1:
+        raise Exception(f"Multiple matching properties found for {colname}. Can only have one match")
+    elif len(propmatch) == 0:
+        raise Exception(f"No matching properties found for {colname}")
+    else:
+        raise Exception(f"Unknown error when matching properties against {colname}")

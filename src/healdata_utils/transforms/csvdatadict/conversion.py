@@ -99,6 +99,9 @@ def convert_datadictcsv(
 
         return inferred_delim
 
+
+
+
     if isinstance(csvtemplate,(str,PathLike)):
         template_tbl = read_delim(str(Path(csvtemplate)))
     else:
@@ -114,6 +117,14 @@ def convert_datadictcsv(
         droplist = []
 
     slugify = lambda s: s.strip().lower().replace("_","-").replace(" ","-") 
+    # flattened properties
+    field_properties = utils.flatten_properties(
+        schemas.healjsonschema
+        ["properties"]
+        ["fields"]
+        ["items"]
+        ["properties"]
+    )
     
     # init to-be formatted tables
     tbl_csv = template_tbl.copy()
@@ -142,15 +153,8 @@ def convert_datadictcsv(
         if newcolname in droplist:
             del tbl_csv[newcolname]
 
-        # cast or convert types based on schema property (or pattern property) types
-        fields_properties = schemas.healcsvschema["properties"]
-        fields_patterns = schemas.healcsvschema["patternProperties"]
-    
-        fieldprop = fields_properties.get(newcolname,None)
-        if not fieldprop:
-            for pattern in fields_patterns:
-                if re.match(pattern,newcolname):
-                    fieldprop = fields_patterns[pattern]
+        fieldpropname = utils.find_propname(newcolname,field_properties)
+        fieldprop = field_properties.get(fieldpropname)
 
         if fieldprop:
             if fieldprop["type"] == "integer":
@@ -175,11 +179,12 @@ def convert_datadictcsv(
                 item_sep = infer_delim(tbl_csv[newcolname],possible_list,firstmatch=False) or "|"
                 tbl_csv[newcolname] = tbl_csv[newcolname].replace(item_sep,"|")
 
-    # parse string objects and array
+    # parse string objects and array to create the dict (json) instance
     tbl_json = tbl_csv.copy()
     for colname in tbl_json.columns.tolist():
-        if colname in fields_properties:
-            fieldprop = fields_properties[colname]
+        fieldpropname = utils.find_propname(colname,field_properties)
+        fieldprop = field_properties.get(fieldpropname)
+        if fieldprop:
             if fieldprop["type"] == "object":
                 tbl_json[colname] = tbl_csv[colname].apply(
                     utils.parse_dictionary_str,
