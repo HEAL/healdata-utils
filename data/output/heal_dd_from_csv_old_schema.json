@@ -1,28 +1,35 @@
 {
-    "schemaVersion": "0.3.0",
+    "schemaVersion": "0.3.1",
     "description": "This tests the mapping from previous version variable names to new ones in csv",
     "title": "CSV data dictionary version update",
-    "standardsMappings": [
-        {
-            "instrument": {
-                "title": "Adult Demographics"
-            }
-        }
-    ],
     "fields": [
         {
             "section": "Demographics",
             "name": "BRTHDTC",
             "title": "Birth date",
             "description": "Date (and time, if applicable and known) the participant/subject was born.",
-            "type": "date"
+            "type": "date",
+            "standardsMappings": [
+                {
+                    "instrument": {
+                        "title": "Adult Demographics"
+                    }
+                }
+            ]
         },
         {
             "section": "Demographics",
             "name": "Age",
             "title": "Age",
             "description": "Value for participant/subject's age, calculated as elapsed time since the birth of the participant/subject.",
-            "type": "integer"
+            "type": "integer",
+            "standardsMappings": [
+                {
+                    "instrument": {
+                        "title": "Adult Demographics"
+                    }
+                }
+            ]
         },
         {
             "section": "Demographics",
@@ -41,6 +48,9 @@
             },
             "standardsMappings": [
                 {
+                    "instrument": {
+                        "title": "Adult Demographics"
+                    },
                     "item": {
                         "source": "CDISC",
                         "id": "C66781"
@@ -70,6 +80,9 @@
             },
             "standardsMappings": [
                 {
+                    "instrument": {
+                        "title": "Adult Demographics"
+                    },
                     "item": {
                         "source": "CDISC",
                         "id": "C66731"
@@ -99,6 +112,9 @@
             },
             "standardsMappings": [
                 {
+                    "instrument": {
+                        "title": "Adult Demographics"
+                    },
                     "item": {
                         "source": "CDISC",
                         "id": "C158277"
@@ -111,7 +127,14 @@
             "name": "GENIDENTOTH",
             "title": "Gender identification other type text",
             "description": "The free-text field related to 'Gender idenitification type.",
-            "type": "string"
+            "type": "string",
+            "standardsMappings": [
+                {
+                    "instrument": {
+                        "title": "Adult Demographics"
+                    }
+                }
+            ]
         },
         {
             "section": "Demographics",
@@ -135,6 +158,9 @@
             },
             "standardsMappings": [
                 {
+                    "instrument": {
+                        "title": "Adult Demographics"
+                    },
                     "item": {
                         "source": "CDISC",
                         "id": "C66790"

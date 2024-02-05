@@ -1,20 +1,26 @@
 {
-    "schemaVersion": "0.3.0",
+    "schemaVersion": "0.3.1",
     "description": "This tests the alternative delimiters and name mappings (eg Variable Name instead of name and ; instead of | for list delim)",
     "title": "Alternative delimiters and name mappings",
     "fields": [
         {
             "name": "helloworld",
-            "Variable Types": "Numeric",
+            "type": "number",
             "description": "Saying hello to the world",
             "constraints": {
-                "enum": "1;2;3"
+                "enum": [
+                    "1;2;3"
+                ]
             },
-            "enumLabels": "1:hi;2:hello;3:howdy"
+            "enumLabels": {
+                "1": "hi",
+                "2": "hello",
+                "3": "howdy"
+            }
         },
         {
             "name": "bye",
-            "Variable Types": "Char",
+            "type": "string",
             "description": "Random string variable"
         }
     ]

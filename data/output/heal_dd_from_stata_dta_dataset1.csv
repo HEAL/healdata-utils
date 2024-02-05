@@ -1,8 +1,8 @@
-schemaVersion,section,name,title,description,type,format,constraints.required,constraints.maxLength,constraints.enum,constraints.pattern,constraints.maximum,constraints.minimum,enumLabels,enumOrdered,missingValues,trueValues,falseValues,custom,standardsMappings[0].instrument.url,standardsMappings[0].instrument.source,standardsMappings[0].instrument.title,standardsMappings[0].instrument.id,standardsMappings[0].item.url,standardsMappings[0].item.source,standardsMappings[0].item.id,relatedConcepts[0].url,relatedConcepts[0].title,relatedConcepts[0].source,relatedConcepts[0].id
-0.3.0,,id,,Unique identifier for participant,integer,,,,,,,,,,,,,,,,,,,,,,,,
-0.3.0,,visit_dt,,Date of the interview,any,,,,,,,,,,,,,,,,,,,,,,,,
-0.3.0,,sex_at_birth,,The self-reported sex of the participant/subject at birth,any,,,,1|2|3|4,,,,1=Male|2=Female|3=Intersex|4=None of these describe me|a=Not reported|b=Prefer not to answer,,a|b,,,,,,,,,,,,,,
-0.3.0,,race,,Self-reported race,any,,,,1|2|3|4|5|6|7|8,,,,1=White|2=Black or African American|3=American Indian or Alaska Native|4=Native|5=Hawaiian or Other Pacific Islander|6=Asian|7=Some other race|8=Multiracial|a=Not reported|b=Prefer not to answer,,a|b,,,,,,,,,,,,,,
-0.3.0,,hispanic_ethnicity,,"Are you of Hispanic, Latino, or Spanish origin?",boolean,,,,0|1,,,,0=No|1=Yes|a=Not reported|b=Prefer not to answer,,a|b,,,,,,,,,,,,,,
-0.3.0,,SU4,,Heroin Days Used in days,any,,,,,,,,a=Not reported|b=Prefer not to answer,,a|b,,,,,,,,,,,,,,
-0.3.0,,age,,Age of participant in year,integer,,,,a|b,,,,a=Not reported|b=Prefer not to answer,,,,,,,,,,,,,,,,
+schemaVersion,section,name,title,description,type,format,constraints.required,constraints.maxLength,constraints.enum,constraints.pattern,constraints.maximum,constraints.minimum,enumLabels,enumOrdered,missingValues,trueValues,falseValues,custom,standardsMappings\[\d+\].instrument.url,standardsMappings\[\d+\].instrument.source,standardsMappings\[\d+\].instrument.title,standardsMappings\[\d+\].instrument.id,standardsMappings\[\d+\].item.url,standardsMappings\[\d+\].item.source,standardsMappings\[\d+\].item.id,relatedConcepts\[\d+\].url,relatedConcepts\[\d+\].title,relatedConcepts\[\d+\].source,relatedConcepts\[\d+\].id
+0.3.1,,id,,Unique identifier for participant,integer,,,,,,,,,,,,,,,,,,,,,,,,
+0.3.1,,visit_dt,,Date of the interview,any,,,,,,,,,,,,,,,,,,,,,,,,
+0.3.1,,sex_at_birth,,The self-reported sex of the participant/subject at birth,any,,,,1|2|3|4,,,,1=Male|2=Female|3=Intersex|4=None of these describe me|a=Not reported|b=Prefer not to answer,,a|b,,,,,,,,,,,,,,
+0.3.1,,race,,Self-reported race,any,,,,1|2|3|4|5|6|7|8,,,,1=White|2=Black or African American|3=American Indian or Alaska Native|4=Native|5=Hawaiian or Other Pacific Islander|6=Asian|7=Some other race|8=Multiracial|a=Not reported|b=Prefer not to answer,,a|b,,,,,,,,,,,,,,
+0.3.1,,hispanic_ethnicity,,"Are you of Hispanic, Latino, or Spanish origin?",boolean,,,,0|1,,,,0=No|1=Yes|a=Not reported|b=Prefer not to answer,,a|b,,,,,,,,,,,,,,
+0.3.1,,SU4,,Heroin Days Used in days,any,,,,,,,,a=Not reported|b=Prefer not to answer,,a|b,,,,,,,,,,,,,,
+0.3.1,,age,,Age of participant in year,integer,,,,a|b,,,,a=Not reported|b=Prefer not to answer,,,,,,,,,,,,,,,,
