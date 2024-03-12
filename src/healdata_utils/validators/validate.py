@@ -144,9 +144,7 @@ def validate_vlmd_json(
     
 def validate_vlmd_csv(
     data_or_path,
-    schema=healcsvschema,
-    input_schema_type="frictionless",
-    validation_schema_type="jsonschema",
+    schema={"type":"array","items":healcsvschema},
     to_sync_fields=True
 ):
     """
@@ -160,11 +158,13 @@ def validate_vlmd_csv(
     NOTE: (the frictionless v4 tools have some
     issues with pyinstaller currently (haven't tried frictionless v5 though)) 
 
+    TODO: replace the csv schema with flattened json json-schema
+
     Parameters
     ----------
     data_or_path : Path-like object indicating a path to a tabular data source (eg CSV or TSV) or a json array of records (see validate fxn)
     schema : dict, optional
-        The schema to compare data_or_path to (default: HEAL frictionless template)
+        The schema of type object with all field properties to compare data_or_path to (default: HEAL csv specs).
     input_schema_type: str, optional : the type of schema ["jsonschema","frictionless"]
     validation_schema_type: str, optional : the type of schema to use for validation (will convert if input does not eq validation schema types)
     to_sync_fields : bool, optional[default=True]:whether to add missing fields (ie null) in schema before validation. 
@@ -176,8 +176,39 @@ def validate_vlmd_csv(
         the returned `validate` function object 
         (eg., `{"valid":False,"errors":[...]}`)
     """
-
+    def _add_missing_type(propname,prop,schema):
+        missing_values = ["",None] # NOTE: include physical rep and logical for now
+        if propname in schema.get("required",[]):
+            # if required value: MUST be NOT missing value and the property
+             newprop = {
+                "allOf":[
+                    prop,{"not": {"enum":missing_values}}
+                ]
+            }
+        else:
+            # if not required value: MUST be property OR the specified missing value
+            newprop = {
+                "anyOf":[
+                    prop,{"enum":missing_values}
+            ]}
+        return newprop
     # instantiate validator object with correct class method depending on input
+
+    input_schema_type = "jsonschema" # NOTE: prior version was frictionless but changed to jsonschema
+    validation_schema_type = "jsonschema"
+
+    props_with_missing = {}
+    for propname,prop in schema.get("items",{}).get("properties",{}).items():
+        props_with_missing[propname] = _add_missing_type(propname,prop,schema)
+
+    patterns_with_missing = {}
+    for patternname,prop in schema.get("items",{}).get("patternProperties",{}).items():
+        patterns_with_missing[patternname] = _add_missing_type(patternname,prop,schema)
+    
+    schema = {"type":"array","items":{}}
+    schema["items"]["properties"] = props_with_missing
+    schema["items"]["patternProperties"] = patterns_with_missing
+            
     if isinstance(data_or_path, (str, os.PathLike)):
         validator = Validator.from_csv_file(path=data_or_path,schema=schema,schema_type=input_schema_type)
 
@@ -185,36 +216,23 @@ def validate_vlmd_csv(
         validator = Validator.from_jsonarray(data=data_or_path,schema=schema,schema_type=input_schema_type)
 
     # sync fields
-    if input_schema_type=="frictionless":
-        field_list = [field["name"] for field in schema["fields"]]
-    elif input_schema_type=="jsonschema":
-        field_list = [fieldname for fieldname in list(schema["items"]["properties"])]
+    field_list = list(schema["items"].get("properties",[]))
+    for name in list(schema["items"].get("patternProperties",[])):
+        field_list.append(name)
     
     if to_sync_fields:
         validator.data = utils.sync_fields(validator.data, field_list,missing_value="")
 
     package = validator.validate(validation_schema_type)
     report = package["report"]
-
-    # get most relevant report properties specific to tabular data
-    error_list = []
     # report_summary = []
+    errors_list = []
     for error in report["errors"]:
-        if error["validator"]=="required":
-            row = error["relative_path"][0]
-            column = error["validator_value"][-1]
-        else:
-            row,column = error["relative_path"]
+        errors_list.append({"json_path":error["json_path"],
+            "message":error["message"]})
+        # report_summary.append([error["json_path"],error["message"]])
 
-        error_list.append(
-            {"row":row,
-            "column":column,
-            "message":error["message"]}
-        )
-        # report_summary.append([row,column,error["message"]])
-
-    package["report"] = {"valid":report["valid"],"errors":error_list}
-
+    package["report"] = {"valid":report["valid"],"errors":errors_list}
     # report_summary_str += "Validation summary for {data_name}"
     # report_summary_str += "\n\n"
     # report_summary_str += "VALID" if report["valid"] else "INVALID"
@@ -224,11 +242,22 @@ def validate_vlmd_csv(
 
     # report_summary_str+=str(tabulate(
     #     report_summary,
-    #     headers=["Row", "Column", "Message"],
+    #     headers=["JsonPath", "Message"],
     #     tablefmt="grid",
     #     maxcolwidths=[5, 5, 90]
     # ))
 
+    # another possible way:
+    
+    # if not report["valid"]:
+    #     print("JSON data dictionary requires modifications:")
+    #     console_report = (
+    #         pd.DataFrame(data_dictionaries["errors"])
+    #         ["jsontemplate"]
+    #         ["errors"]
+    #         .drop(columns=["json_path"])
+    #         .value_counts()
+    #     )
 
 
     return package

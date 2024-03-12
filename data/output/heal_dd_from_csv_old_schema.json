@@ -1,7 +1,7 @@
 {
-    "schemaVersion": "0.2.0",
-    "description": "This is a proof of concept to demonstrate the healdata-utils functionality",
-    "title": "Healdata-utils Demonstration Data Dictionary",
+    "schemaVersion": "0.3.1",
+    "description": "This tests the mapping from previous version variable names to new ones in csv",
+    "title": "CSV data dictionary version update",
     "standardsMappings": [
         {
             "instrument": {

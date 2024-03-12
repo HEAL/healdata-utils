@@ -1,2 +1,2 @@
-from .jsonschema import healjsonschema
-from .frictionless import healcsvschema
+from .json import healjsonschema
+from .csv import healcsvschema

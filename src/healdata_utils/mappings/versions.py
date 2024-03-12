@@ -4,9 +4,9 @@ field names (headers, properties) and the current name
 in addition to these field name values or value mappings.
 
 """
-from healdata_utils.schemas import healjsonschema, healcsvschema
+from healdata_utils.schemas import healjsonschema
 
-VERSION = ["0", "2"]
+VERSION = ["0", "3"]
 
 root_mappings = [
     {"target": "fields", "source": ["data_dictionary"]},
@@ -19,7 +19,7 @@ field_mappings = [
         "target": "schemaVersion",
         "source": [None],
         # should be same as csv schema version
-        "values": healcsvschema["version"],
+        "values": healjsonschema["version"],
     },
     {"target": "section", "source": ["module"]},
     {"target": "enumLabels", "source": ["encoding", "encodings"]},
