@@ -196,8 +196,14 @@ def unflatten_from_jsonpath(field):
 
                 if array_index is not None:
                     # Handle array properties
+                    length_of_array = int(array_index) + 1
                     if prop_name not in prop_json:
-                        prop_json[prop_name] = [None] * (int(array_index) + 1)
+                        prop_json[prop_name] = [None] * (length_of_array + 1)
+                    
+                    # elif length_of_array < len(prop_json[prop_name]):
+                    #     diff_len = length_of_array - len(prop_json[prop_name])
+                    #     prop_json[prop_name].extend([None]*diff_len)
+
 
                     if is_last_nested:
                         if prop_json[prop_name][int(array_index)] is None:
