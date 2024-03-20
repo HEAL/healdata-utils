@@ -170,7 +170,7 @@ def stringify_keys(dictionary):
         dictionary[str(key)] = dictionary.pop(key)
 
 
-def unflatten_from_jsonpath(field):
+def unflatten_from_jsonpath(field,missing_values=[None,""]):
     """
     Converts a flattened dictionary with key names conforming to 
     JSONpath notation to the nested dictionary format.
@@ -178,6 +178,10 @@ def unflatten_from_jsonpath(field):
     field_json = {}
 
     for prop_path, prop in field.items():
+        
+        if prop in missing_values:
+            continue
+
         prop_json = field_json
 
         nested_names = prop_path.split(".")
