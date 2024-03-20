@@ -169,6 +169,7 @@ def stringify_keys(dictionary):
     for key in orig_keys:
         dictionary[str(key)] = dictionary.pop(key)
 
+
 def unflatten_from_jsonpath(field):
     """
     Converts a flattened dictionary with key names conforming to 
@@ -179,63 +180,38 @@ def unflatten_from_jsonpath(field):
     for prop_path, prop in field.items():
         prop_json = field_json
 
-        # if isinstance(prop,list):
-        #     prop = [v for val in prop if if val != None or val != ""]
-        # elif isinstance(prop,dict):
-        #     # filter falsey  values of "" and None
-        #     prop = {key:val for key,val in prop.items() if val != None or val != ""}
+        nested_names = prop_path.split(".")
+        for prop_name in nested_names[:-1]:
+            if '[' in prop_name:
+                array_name, array_index = prop_name.split('[')
+                array_index = int(array_index[:-1])
+                if array_name not in prop_json:
+                    prop_json[array_name] = [{} for _ in range(array_index + 1)]
+                elif len(prop_json[array_name]) <= array_index:
+                    prop_json[array_name].extend([{} for _ in range(array_index - len(prop_json[array_name]) + 1)])
+                prop_json = prop_json[array_name][array_index]
+            else:
+                if prop_name not in prop_json:
+                    prop_json[prop_name] = {}
+                prop_json = prop_json[prop_name]
 
-
-        if prop:
-            # Get the necessary info from the JSON path 
-            nested_names = [re.sub("\[\d+\]$", "", prop_name) for prop_name in prop_path.split(".")]
-            nested_indices = [re.findall("\[(\d+)\]$", prop_name)[-1] if re.search("\[(\d+)\]$", prop_name) else None for prop_name in prop_path.split(".")]
-
-            for prop_name, array_index in zip(nested_names, nested_indices):
-                is_last_nested = prop_name == nested_names[-1]
-
-                if array_index is not None:
-                    # Handle array properties
-                    length_of_array = int(array_index) + 1
-                    if prop_name not in prop_json:
-                        prop_json[prop_name] = [None] * length_of_array
-                    
-                    # elif length_of_array < len(prop_json[prop_name]):
-                    #     diff_len = length_of_array - len(prop_json[prop_name])
-                    #     prop_json[prop_name].extend([None]*diff_len)
-
-
-                    if is_last_nested:
-                        if prop_json[prop_name][int(array_index)] is None:
-                            prop_json[prop_name][int(array_index)] = {}
-                        
-                        if isinstance(prop_json[prop_name][int(array_index)], dict):
-                            prop_json[prop_name][int(array_index)].update({prop_name: prop})
-                        else:
-                            prop_json[prop_name][int(array_index)] = {prop_name: prop}
-                    else:
-                        if prop_json[prop_name][int(array_index)] is None:
-                            prop_json[prop_name][int(array_index)] = {}
-                        
-                        prop_json = prop_json[prop_name][int(array_index)]
-                else:
-                    # Handle non-array properties
-                    if is_last_nested:
-                        if prop_name not in prop_json:
-                            prop_json[prop_name] = prop
-                        else:
-                            if isinstance(prop_json[prop_name], dict):
-                                prop_json[prop_name].update({prop_name: prop})
-                            else:
-                                prop_json[prop_name] = {prop_name: prop}
-                    else:
-                        if prop_name not in prop_json:
-                            prop_json[prop_name] = {}
-                        
-                        prop_json = prop_json[prop_name]
+        last_prop_name = nested_names[-1]
+        if '[' in last_prop_name:
+            array_name, array_index = last_prop_name.split('[')
+            array_index = int(array_index[:-1])
+            if array_name not in prop_json:
+                prop_json[array_name] = [{} for _ in range(array_index + 1)]
+            elif len(prop_json[array_name]) <= array_index:
+                prop_json[array_name].extend([{} for _ in range(array_index - len(prop_json[array_name]) + 1)])
+            if isinstance(prop_json[array_name][array_index], dict):
+                prop_json[array_name][array_index].update({array_name: prop})
+            else:
+                prop_json[array_name][array_index] = {array_name: prop}
+        else:
+            prop_json[last_prop_name] = prop
 
     return field_json
-
+    
 # json to csv utils
 def join_iter(iterable,sep_list="|"):
     return sep_list.join([str(p) for p in iterable])
