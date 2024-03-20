@@ -8,13 +8,13 @@ def generate_long_description():
 
 def get_install_requirements():
     return '''petl==1.7.12
-jsonschema==4.17.3
-PyYaml==6.0
-pandas>=1.5
-pyreadstat==1.2.0
-charset_normalizer==2.1
-visions== 0.7.5
-click==8.1.3
+jsonschema>=4.17.3
+PyYaml>=6.0
+pandas>=1.4
+pyreadstat>=1.2.0
+charset_normalizer>=2.1
+visions>=0.7.5
+click>=8.1.3
 python-slugify
 openpyxl
 
