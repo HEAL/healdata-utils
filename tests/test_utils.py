@@ -37,6 +37,8 @@ schema_to_rearrange = {
         },
     },
 }
+
+
 def test_add_missing_fields():
     # data (note one var not in schema)
     data = [
@@ -62,8 +64,10 @@ def test_unflatten_jsonpath():
         "module": "Testing",
         "constraints.enum": "1|2|3|4",
         "standardsMappings[1].item.url": "http//:helloitem1",
-        "standardsMappings[0].item.url": "http//:helloitem2",
-        "standardsMappings[1].instrument.url": "http//:helloworld4",
+        "standardsMappings[0].item.url": "http//:helloitem0",
+        "standardsMappings[0].instrument.url": "http//:helloworld0",
+        "standardsMappings[1].instrument.url": "http//:helloworld1",
+        "standardsMappings[2].item.url": "http//:helloitem2",
         "test1.test2.test3[1]": "test3_1",
         "test1.test2.test3[0].test4": "test4_1",
     }
@@ -72,11 +76,17 @@ def test_unflatten_jsonpath():
         "module": "Testing",
         "constraints": {"enum": "1|2|3|4"},
         "standardsMappings": [
-            {"item": {"url": "http//:helloitem2"}},
+            {
+                "item": {"url": "http//:helloitem0"},
+                "instrument": {"url": "http//:helloworld1"},
+            },
             {
                 "item": {"url": "http//:helloitem1"},
-                "instrument": {"url": "http//:helloworld4"},
+                "instrument": {"url": "http//:helloworld1"},
             },
+            {
+                "item":{"url":"http//helloitem2"}
+            }
         ],
         "test1": {"test2": {"test3": [{"test4": "test4_1"}, {"test3": "test3_1"}]}},
     }
@@ -100,7 +110,9 @@ def test_embed_data_dictionary_props():
         "anotherFieldToEmbed[0].thisone": "helloworld",
     }
     flat_fields_array = [{"justAField": "cool"}, {"justAField": "sad"}]
-    flat_fields = utils.embed_data_dictionary_props(flat_fields_array, flat_root, schema_to_rearrange)
+    flat_fields = utils.embed_data_dictionary_props(
+        flat_fields_array, flat_root, schema_to_rearrange
+    )
 
     assert flat_fields.to_dict(orient="records") == [
         {
@@ -121,7 +133,9 @@ def test_refactor_field_props():
         {"justAField": "cool", "anotherFieldToEmbed[0].thisone": "helloworld"},
         {"justAField": "sad", "anotherFieldToEmbed[0].thisone": "helloworld"},
     ]
-    flat_root, flat_fields = utils.refactor_field_props(flat_fields_array, schema_to_rearrange)
+    flat_root, flat_fields = utils.refactor_field_props(
+        flat_fields_array, schema_to_rearrange
+    )
 
     assert flat_root.to_dict() == {"anotherFieldToEmbed[0].thisone": "helloworld"}
     assert flat_fields.to_dict(orient="records") == [

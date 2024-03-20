@@ -198,7 +198,7 @@ def unflatten_from_jsonpath(field):
                     # Handle array properties
                     length_of_array = int(array_index) + 1
                     if prop_name not in prop_json:
-                        prop_json[prop_name] = [None] * (length_of_array + 1)
+                        prop_json[prop_name] = [None] * length_of_array
                     
                     # elif length_of_array < len(prop_json[prop_name]):
                     #     diff_len = length_of_array - len(prop_json[prop_name])
