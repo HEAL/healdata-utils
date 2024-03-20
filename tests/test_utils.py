@@ -78,14 +78,14 @@ def test_unflatten_jsonpath():
         "standardsMappings": [
             {
                 "item": {"url": "http//:helloitem0"},
-                "instrument": {"url": "http//:helloworld1"},
+                "instrument": {"url": "http//:helloworld0"},
             },
             {
                 "item": {"url": "http//:helloitem1"},
                 "instrument": {"url": "http//:helloworld1"},
             },
             {
-                "item":{"url":"http//helloitem2"}
+                "item":{"url":"http//:helloitem2"}
             }
         ],
         "test1": {"test2": {"test3": [{"test4": "test4_1"}, {"test3": "test3_1"}]}},
