@@ -25,7 +25,7 @@ def read(file_path):
         read_delim(file_path)
         .fillna("")
         .rename(columns=headers.mapping)
-        .applymap(utils.strip_html)
+        .map(utils.strip_html)
     )
 
     #downfill section (if blank -- given we read in with petl, blanks are "" but ffill takes in np.nan)

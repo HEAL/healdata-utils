@@ -53,7 +53,8 @@
             "description": "What is your age? (age at enrollment)",
             "type": "integer",
             "constraints": {
-                "maximum": 90
+                "maximum": 90,
+                "minimum": 0
             }
         },
         {
