@@ -79,8 +79,8 @@ def convert_templatejson(
     tbl_csv = (
         flattened_and_embedded
         .fillna("")
-        .applymap(lambda v: utils.join_dictitems(v) if isinstance(v,collections.abc.MutableMapping) else v)
-        .applymap(lambda v: utils.join_iter(v) if isinstance(v,collections.abc.MutableSequence) else v)
+        .map(lambda v: utils.join_dictitems(v) if isinstance(v,collections.abc.MutableMapping) else v)
+        .map(lambda v: utils.join_iter(v) if isinstance(v,collections.abc.MutableSequence) else v)
     )
     fields_csv = tbl_csv.to_dict(orient="records")
 
