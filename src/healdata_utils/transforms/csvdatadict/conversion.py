@@ -193,7 +193,14 @@ def convert_datadictcsv(
             elif fieldprop["type"] == "array":
                 tbl_json[colname] = tbl_csv[colname].apply(
                     utils.parse_list_str,item_sep="|")
+        else:
+            if colname.split(".")[0] == "custom":
+                if not "custom" in tbl_json:
+                    tbl_json["custom"] = [{}] * len(tbl_json)
 
+                for i in range(len(tbl_csv)):
+                    tbl_json["custom"].iloc[i].update({colname:tbl_csv[colname].iloc[i]})
+    
     # refactor (i.e., cascade, move up to root) properties if present in all records
     refactored_props,tbl_json = utils.refactor_field_props(
         tbl_json,schema=schemas.healjsonschema)
