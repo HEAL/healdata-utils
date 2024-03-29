@@ -61,7 +61,7 @@ def refactor_field_props(flat_fields,schema):
     flat_record = pd.Series(dtype="object")
     for name in propnames:
         in_df = name in flat_fields_df
-        is_one_unique = len(flat_fields_df[name].unique()) == 1 # NOTE: Includes NA values which is desired
+        is_one_unique = len(flat_fields_df[name].map(str).unique()) == 1 # NOTE: Includes NA values which is desired
         if in_df and is_one_unique:
             flat_record[name] = flat_fields_df.pop(name).iloc[0]
             
@@ -394,13 +394,16 @@ def find_propname(colname,properties):
     and converted into a regular expression for list (array) indices.
 
     """ 
-    propmatch = re.findall("|".join("^"+name+"$" for name in list(properties)),colname)
+    propmatch = []
+    for name in list(properties):
+        if re.match("^"+name+"$",colname):
+            propmatch.append(name)
 
     if len(propmatch) == 1:
         return propmatch[0]
     elif len(propmatch) > 1:
         raise Exception(f"Multiple matching properties found for {colname}. Can only have one match")
     elif len(propmatch) == 0:
-        raise Exception(f"No matching properties found for {colname}")
+        return None
     else:
         raise Exception(f"Unknown error when matching properties against {colname}")
