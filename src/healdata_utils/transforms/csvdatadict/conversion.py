@@ -128,8 +128,6 @@ def convert_datadictcsv(
     
     # init to-be formatted tables
     tbl_csv = template_tbl.copy()
-    tbl_json = template_tbl.copy()
-
     # transform each column with slugified mappings, harmonizing delims (if array, object) 
     for colname in tbl_csv.columns.tolist():
         slugified_col = slugify(colname)
@@ -153,10 +151,14 @@ def convert_datadictcsv(
         if newcolname in droplist:
             del tbl_csv[newcolname]
 
+        # NOTE: the below methodology uses the schema to instruct how to convert to json.
         fieldpropname = utils.find_propname(newcolname,field_properties)
         fieldprop = field_properties.get(fieldpropname)
+        # infer delimiters of stringified lists (note: stringified lists are identified from schema)
 
-        if fieldprop:
+        
+        if fieldpropname:
+            
             if fieldprop["type"] == "integer":
                 tbl_csv[newcolname] = tbl_csv[newcolname].apply(lambda s: int(float(s)) if s else s)
             elif fieldprop["type"] == "number":
@@ -180,8 +182,9 @@ def convert_datadictcsv(
                 tbl_csv[newcolname] = tbl_csv[newcolname].replace(item_sep,"|")
 
     # parse string objects and array to create the dict (json) instance
-    tbl_json = tbl_csv.copy()
+    tbl_json = tbl_csv.copy()   
     for colname in tbl_json.columns.tolist():
+        # NOTE: the below methodology uses the schema to instruct how to convert to json.
         fieldpropname = utils.find_propname(colname,field_properties)
         fieldprop = field_properties.get(fieldpropname)
         if fieldprop:
@@ -193,14 +196,29 @@ def convert_datadictcsv(
             elif fieldprop["type"] == "array":
                 tbl_json[colname] = tbl_csv[colname].apply(
                     utils.parse_list_str,item_sep="|")
+        # columns not included in schema (custom or other)
         else:
             if colname.split(".")[0] == "custom":
+                
                 if not "custom" in tbl_json:
                     tbl_json["custom"] = [{}] * len(tbl_json)
 
                 for i in range(len(tbl_csv)):
-                    tbl_json["custom"].iloc[i].update({colname:tbl_csv[colname].iloc[i]})
-    
+                    value = tbl_csv[colname].iloc[i]
+                    if value:
+                        custom = {}
+                        parts = colname.split(".")[1:]
+                        
+                        for key in reversed(parts):
+                            result = {key: value}
+
+                        tbl_json["custom"].iloc[i].update(result)
+            else:
+                tbl_json[colname] = tbl_csv[colname]
+
+    # drop all custom columns (as I have nested already)
+    tbl_json.drop(columns=tbl_json.filter(regex="^custom\\.").columns, inplace=True)
+
     # refactor (i.e., cascade, move up to root) properties if present in all records
     refactored_props,tbl_json = utils.refactor_field_props(
         tbl_json,schema=schemas.healjsonschema)
