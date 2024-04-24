@@ -6,6 +6,10 @@ Currently, the focus of this repository is generating standardized variable leve
 
 However, in the future, this will be expanded for all HEAL-specific data packaging functions (e.g., study- and file-level metadata and data).
 
+!!! important
+
+    See the README for the HEAL VLMD specifications, conventions, and rules [here](https://github.com/HEAL/heal-metadata-schemas/tree/main/variable-level-metadata-schema#readme). The `vlmd` tool is intended to be an implementation of these specifications. 
+
 ## Quick start
 
 !!! note

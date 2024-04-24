@@ -13,6 +13,9 @@ Variable level metadata (VLMD), in the form of standardized data dictionaries, p
 
 - Supports HEAL projects and goals such as the [common data elements program](https://heal.nih.gov/data/common-data-elements)
 
+!!! important
+
+    See the README for the HEAL VLMD specifications, conventions, and rules [here](https://github.com/HEAL/heal-metadata-schemas/tree/main/variable-level-metadata-schema#readme). The `vlmd` tool is intended to be an implementation of these specifications. 
 
 ## Functions
 
