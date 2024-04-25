@@ -61,7 +61,7 @@ def refactor_field_props(flat_fields,schema):
     flat_record = pd.Series(dtype="object")
     for name in propnames:
         in_df = name in flat_fields_df
-        is_one_unique = len(flat_fields_df[name].unique()) == 1 # NOTE: Includes NA values which is desired
+        is_one_unique = len(flat_fields_df[name].map(str).unique()) == 1 # NOTE: Includes NA values which is desired
         if in_df and is_one_unique:
             flat_record[name] = flat_fields_df.pop(name).iloc[0]
             
@@ -169,7 +169,8 @@ def stringify_keys(dictionary):
     for key in orig_keys:
         dictionary[str(key)] = dictionary.pop(key)
 
-def unflatten_from_jsonpath(field):
+
+def unflatten_from_jsonpath(field,missing_values=[None,""]):
     """
     Converts a flattened dictionary with key names conforming to 
     JSONpath notation to the nested dictionary format.
@@ -177,59 +178,44 @@ def unflatten_from_jsonpath(field):
     field_json = {}
 
     for prop_path, prop in field.items():
+        
+        if prop in missing_values:
+            continue
+
         prop_json = field_json
 
-        # if isinstance(prop,list):
-        #     prop = [v for val in prop if if val != None or val != ""]
-        # elif isinstance(prop,dict):
-        #     # filter falsey  values of "" and None
-        #     prop = {key:val for key,val in prop.items() if val != None or val != ""}
+        nested_names = prop_path.split(".")
+        for prop_name in nested_names[:-1]:
+            if '[' in prop_name:
+                array_name, array_index = prop_name.split('[')
+                array_index = int(array_index[:-1])
+                if array_name not in prop_json:
+                    prop_json[array_name] = [{} for _ in range(array_index + 1)]
+                elif len(prop_json[array_name]) <= array_index:
+                    prop_json[array_name].extend([{} for _ in range(array_index - len(prop_json[array_name]) + 1)])
+                prop_json = prop_json[array_name][array_index]
+            else:
+                if prop_name not in prop_json:
+                    prop_json[prop_name] = {}
+                prop_json = prop_json[prop_name]
 
-
-        if prop:
-            # Get the necessary info from the JSON path 
-            nested_names = [re.sub("\[\d+\]$", "", prop_name) for prop_name in prop_path.split(".")]
-            nested_indices = [re.findall("\[(\d+)\]$", prop_name)[-1] if re.search("\[(\d+)\]$", prop_name) else None for prop_name in prop_path.split(".")]
-
-            for prop_name, array_index in zip(nested_names, nested_indices):
-                is_last_nested = prop_name == nested_names[-1]
-
-                if array_index is not None:
-                    # Handle array properties
-                    if prop_name not in prop_json:
-                        prop_json[prop_name] = [None] * (int(array_index) + 1)
-
-                    if is_last_nested:
-                        if prop_json[prop_name][int(array_index)] is None:
-                            prop_json[prop_name][int(array_index)] = {}
-                        
-                        if isinstance(prop_json[prop_name][int(array_index)], dict):
-                            prop_json[prop_name][int(array_index)].update({prop_name: prop})
-                        else:
-                            prop_json[prop_name][int(array_index)] = {prop_name: prop}
-                    else:
-                        if prop_json[prop_name][int(array_index)] is None:
-                            prop_json[prop_name][int(array_index)] = {}
-                        
-                        prop_json = prop_json[prop_name][int(array_index)]
-                else:
-                    # Handle non-array properties
-                    if is_last_nested:
-                        if prop_name not in prop_json:
-                            prop_json[prop_name] = prop
-                        else:
-                            if isinstance(prop_json[prop_name], dict):
-                                prop_json[prop_name].update({prop_name: prop})
-                            else:
-                                prop_json[prop_name] = {prop_name: prop}
-                    else:
-                        if prop_name not in prop_json:
-                            prop_json[prop_name] = {}
-                        
-                        prop_json = prop_json[prop_name]
+        last_prop_name = nested_names[-1]
+        if '[' in last_prop_name:
+            array_name, array_index = last_prop_name.split('[')
+            array_index = int(array_index[:-1])
+            if array_name not in prop_json:
+                prop_json[array_name] = [{} for _ in range(array_index + 1)]
+            elif len(prop_json[array_name]) <= array_index:
+                prop_json[array_name].extend([{} for _ in range(array_index - len(prop_json[array_name]) + 1)])
+            if isinstance(prop_json[array_name][array_index], dict):
+                prop_json[array_name][array_index].update({array_name: prop})
+            else:
+                prop_json[array_name][array_index] = {array_name: prop}
+        else:
+            prop_json[last_prop_name] = prop
 
     return field_json
-
+    
 # json to csv utils
 def join_iter(iterable,sep_list="|"):
     return sep_list.join([str(p) for p in iterable])
@@ -408,13 +394,16 @@ def find_propname(colname,properties):
     and converted into a regular expression for list (array) indices.
 
     """ 
-    propmatch = re.findall("|".join("^"+name+"$" for name in list(properties)),colname)
+    propmatch = []
+    for name in list(properties):
+        if re.match("^"+name+"$",colname):
+            propmatch.append(name)
 
     if len(propmatch) == 1:
         return propmatch[0]
     elif len(propmatch) > 1:
         raise Exception(f"Multiple matching properties found for {colname}. Can only have one match")
     elif len(propmatch) == 0:
-        raise Exception(f"No matching properties found for {colname}")
+        return None
     else:
         raise Exception(f"Unknown error when matching properties against {colname}")

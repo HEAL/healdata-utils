@@ -2,6 +2,9 @@
     "schemaVersion": "0.3.1",
     "description": "This is a proof of concept to demonstrate the healdata-utils functionality",
     "title": "Healdata-utils Demonstration Data Dictionary",
+    "custom": {
+        "notes": "This is a custom note"
+    },
     "fields": [
         {
             "section": "Enrollment",
@@ -53,7 +56,8 @@
             "description": "What is your age? (age at enrollment)",
             "type": "integer",
             "constraints": {
-                "maximum": 90
+                "maximum": 90,
+                "minimum": 0
             }
         },
         {
