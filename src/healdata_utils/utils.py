@@ -1,4 +1,5 @@
 """ General utilities/helper functions"""
+import json
 import re
 from collections.abc import MutableMapping
 import pandas as pd
@@ -59,7 +60,9 @@ def refactor_field_props(flat_fields,schema):
     flat_fields_df = pd.DataFrame(flat_fields)
     propnames = _get_propnames_to_rearrange(flat_fields_df.columns.tolist(),schema)
     flat_record = pd.Series(dtype="object")
+    # print(propnames)
     for name in propnames:
+        # print(name)
         in_df = name in flat_fields_df
         is_one_unique = len(flat_fields_df[name].map(str).unique()) == 1 # NOTE: Includes NA values which is desired
         if in_df and is_one_unique:
@@ -176,7 +179,6 @@ def unflatten_from_jsonpath(field,missing_values=[None,""]):
     JSONpath notation to the nested dictionary format.
     """
     field_json = {}
-
     for prop_path, prop in field.items():
         
         if prop in missing_values:
@@ -184,9 +186,13 @@ def unflatten_from_jsonpath(field,missing_values=[None,""]):
 
         prop_json = field_json
 
+        # MS: for example a prop_path looks like "standardsMappings\[\d+\].instrument.url" 
         nested_names = prop_path.split(".")
+
         for prop_name in nested_names[:-1]:
+            # MS: now prop_name is "standardsMappings\[\d+\]"
             if '[' in prop_name:
+                # MS: this cond evals true and then the code below just try to convert the "\d+\" using int(), which leads to an error
                 array_name, array_index = prop_name.split('[')
                 array_index = int(array_index[:-1])
                 if array_name not in prop_json:
@@ -295,7 +301,7 @@ def sync_fields(data, field_list,missing_value=None):
                     fieldpropname
                     .replace("^","")
                     .replace("$","")
-                    .replace("\[\d+\]","[0]")
+                    .replace("\\[\\d+\\]","[0]")
                 ) #replace list item regex
                 new_record[extra_fieldname] = missing_value
 
@@ -313,7 +319,7 @@ def sync_fields(data, field_list,missing_value=None):
 
 # %% 
 # Working with schemas
-def flatten_properties(properties, parentkey="", sep=".",itemsep="\[\d+\]"):
+def flatten_properties(properties, parentkey="", sep=".",itemsep="\\[\\d+\\]"):
     """
     flatten schema properties
     """
@@ -354,7 +360,7 @@ def flatten_schema(schema):
     schema_flattened = dict(schema)
     if "properties" in schema:
         properties = schema_flattened.pop("properties")
-        item_sep = "\[\d+\]"
+        item_sep = "\\[\\d+\\]"
         schema_flattened["properties"] = flatten_properties(properties,itemsep=item_sep)
         schema_flattened["patternProperties"] = {}
         for propname in list(schema_flattened["properties"].keys()):

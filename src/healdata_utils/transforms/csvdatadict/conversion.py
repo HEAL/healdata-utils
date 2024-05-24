@@ -17,6 +17,8 @@ from healdata_utils import schemas,utils,mappings
 from healdata_utils.mappings import versions
 from os import PathLike
 import re
+
+# MS: This is the function for converting CSV to VLMD that has some issues
 def convert_datadictcsv(
     csvtemplate: str,
     data_dictionary_props: dict,
@@ -116,7 +118,7 @@ def convert_datadictcsv(
     if not droplist:
         droplist = []
 
-    slugify = lambda s: s.strip().lower().replace("_","-").replace(" ","-") 
+    slugify = lambda s: s.strip().lower().replace("_","-").replace(" ","-")
     # flattened properties
     field_properties = utils.flatten_properties(
         schemas.healjsonschema
@@ -128,7 +130,10 @@ def convert_datadictcsv(
     
     # init to-be formatted tables
     tbl_csv = template_tbl.copy()
-    # transform each column with slugified mappings, harmonizing delims (if array, object) 
+    # transform each column with slugified mappings, harmonizing delims (if array, object)
+    # MS: template_tbl and tbl_csv has column names like these in them "standardsMappings\[\d+\].instrument.url"
+    # I feel this is the place of logic that should take care of the conversion so "\[\d+\]" is transformed into "[0]", "[1]", "[2]" etc in the output dictionary object
+    # But it seems not happening
     for colname in tbl_csv.columns.tolist():
         slugified_col = slugify(colname)
         newcolname = colname
@@ -228,6 +233,7 @@ def convert_datadictcsv(
     data_dictionary_props_json = {**data_dictionary_props,**utils.unflatten_from_jsonpath(refactored_props)}
 
     # create the data dictionary objects
+    # MS: a field name like `standardsMappings\[\d+\].instrument.url` goes all the way down to here, and got passed into utils.unflatten_from_jsonpath()
     fields_json = [utils.unflatten_from_jsonpath(record) 
         for record in tbl_json.to_dict(orient="records")]
     template_json = dict(**data_dictionary_props_json,fields=fields_json)
