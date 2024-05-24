@@ -16,12 +16,12 @@ def validate_against_jsonschema(json_object,schema):
     for error in validator.iter_errors(json_object):
         is_valid = False
         error_report = {
-            "json_path":error.get("json_path", ""),
-            "message":error.get("message", ""),
-            "absolute_path":list(error.get("path", [])),
-            "relative_path":list(error.get("relative_path", [])),
-            "validator":error.get("validator", ""),
-            "validator_value":error.get("validator_value", "")
+            "json_path":error.json_path,
+            "message":error.message,
+            "absolute_path":list(error.path),
+            "relative_path":list(error.relative_path),
+            "validator":error.validator,
+            "validator_value":error.validator_value
         }
         report.append(error_report)
 
