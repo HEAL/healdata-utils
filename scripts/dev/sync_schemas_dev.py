@@ -62,7 +62,7 @@ if __name__ == "__main__":
         default="HEAL")
     args = parser.parse_args()
     args.fork = "norc-heal"
-    args.branch = "feat/v0.3.1"
+    args.branch = "pr-integration"
     copy_schemas(args.fork,args.branch)
 
     # sync data

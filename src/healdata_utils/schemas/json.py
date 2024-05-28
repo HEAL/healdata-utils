@@ -1,5 +1,5 @@
 healjsonschema = {
-    "version": "0.3.1",
+    "version": "0.3.2",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "vlmd",
     "title": "Variable Level Metadata (Data Dictionaries)",
@@ -8,6 +8,7 @@ healjsonschema = {
     "multiple data dictionaries.",
     "type": "object",
     "required": ["title", "fields"],
+    "additionalProperties": False,
     "properties": {
         "title": {"type": "string"},
         "description": {"type": "string"},
@@ -357,6 +358,7 @@ healjsonschema = {
                 "variables)\n",
                 "type": "object",
                 "required": ["name", "description"],
+                "additionalProperties": False,
                 "properties": {
                     "schemaVersion": {
                         "type": "string",

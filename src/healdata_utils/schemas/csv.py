@@ -1,5 +1,5 @@
 healcsvschema = {
-    "version": "0.3.1",
+    "version": "0.3.2",
     "title": "HEAL Variable Level Metadata Fields",
     "description": "\n"
     "\n"
@@ -16,6 +16,7 @@ healcsvschema = {
     "useful for some variable types (e.g. date-like variables)\n",
     "type": "object",
     "required": ["name", "description"],
+    "additionalProperties": False,
     "properties": {
         "schemaVersion": {
             "type": "string",
