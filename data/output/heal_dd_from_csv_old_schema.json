@@ -1,5 +1,5 @@
 {
-    "schemaVersion": "0.3.1",
+    "schemaVersion": "0.3.2",
     "description": "This tests the mapping from previous version variable names to new ones in csv",
     "title": "CSV data dictionary version update",
     "standardsMappings": [
