@@ -57,13 +57,21 @@ def refactor_field_props(flat_fields,schema):
 
     """  
     flat_fields_df = pd.DataFrame(flat_fields)
-    propnames = _get_propnames_to_rearrange(flat_fields_df.columns.tolist(),schema)
+    propnames = set(_get_propnames_to_rearrange(flat_fields_df.columns.tolist(),schema))
     flat_record = pd.Series(dtype="object")
     for name in propnames:
         in_df = name in flat_fields_df
-        is_one_unique = len(flat_fields_df[name].map(str).unique()) == 1 # NOTE: Includes NA values which is desired
-        if in_df and is_one_unique:
-            flat_record[name] = flat_fields_df.pop(name).iloc[0]
+        if in_df:
+            # need to handle if some values are pandas series
+            is_one_unique = (flat_fields_df[name].nunique() == 1) # NOTE: Includes NA values which is desired
+            if isinstance(is_one_unique, pd.Series):
+                is_one_unique = is_one_unique.all()
+            if is_one_unique:
+                flat_record[name] = flat_fields_df.pop(name).iloc[0]
+                if isinstance(flat_record[name], pd.Series):
+                    flat_record[name] = flat_record[name].to_list()
+                print(type(flat_record[name]))
+                print(flat_record[name])
             
 
     return flat_record,flat_fields_df
@@ -170,7 +178,7 @@ def stringify_keys(dictionary):
         dictionary[str(key)] = dictionary.pop(key)
 
 
-def unflatten_from_jsonpath(field,missing_values=[None,""]):
+def unflatten_from_jsonpath(field):
     """
     Converts a flattened dictionary with key names conforming to 
     JSONpath notation to the nested dictionary format.
@@ -178,10 +186,6 @@ def unflatten_from_jsonpath(field,missing_values=[None,""]):
     field_json = {}
 
     for prop_path, prop in field.items():
-        
-        if prop in missing_values:
-            continue
-
         prop_json = field_json
 
         nested_names = prop_path.split(".")

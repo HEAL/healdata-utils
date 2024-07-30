@@ -225,7 +225,7 @@ def convert_datadictcsv(
 
     # data dictionary root level properties
     data_dictionary_props_csv = dict(data_dictionary_props)
-    data_dictionary_props_json = {**data_dictionary_props,**utils.unflatten_from_jsonpath(refactored_props)}
+    data_dictionary_props_json = {**data_dictionary_props,**utils.unflatten_from_jsonpath(refactored_props.to_dict())}
 
     # create the data dictionary objects
     fields_json = [utils.unflatten_from_jsonpath(record) 
