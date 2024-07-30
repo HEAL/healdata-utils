@@ -299,7 +299,7 @@ healcsvschema = {
             "conform to.\n",
         },
         "constraints.maximum": {
-            "type": "integer",
+            "type": "string",
             "title": "Maximum Value",
             "description": "Specifies the "
             "maximum value of a "
@@ -313,7 +313,7 @@ healcsvschema = {
             "property.\n",
         },
         "constraints.minimum": {
-            "type": "integer",
+            "type": "string",
             "title": "Minimum Value",
             "description": "Specifies the " "minimum value of a " "field.\n",
         },
