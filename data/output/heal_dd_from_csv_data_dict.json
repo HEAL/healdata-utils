@@ -12,9 +12,19 @@
             "title": "Participant Id",
             "description": "Unique identifier for participant",
             "type": "string",
+            "format": "",
             "constraints": {
-                "pattern": "[A-Z][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]"
-            }
+                "maxLength": "",
+                "enum": "",
+                "pattern": "[A-Z][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]",
+                "maximum": "",
+                "minimum": ""
+            },
+            "enumLabels": "",
+            "enumOrdered": "",
+            "missingValues": "",
+            "trueValues": "",
+            "falseValues": ""
         },
         {
             "section": "Demographics",
@@ -22,7 +32,9 @@
             "title": "Race",
             "description": "Self-reported race",
             "type": "integer",
+            "format": "",
             "constraints": {
+                "maxLength": "",
                 "enum": [
                     "1",
                     "2",
@@ -32,7 +44,10 @@
                     "6",
                     "7",
                     "8"
-                ]
+                ],
+                "pattern": "",
+                "maximum": "",
+                "minimum": ""
             },
             "enumLabels": {
                 "1": "White",
@@ -45,9 +60,12 @@
                 "8": "Multiracial",
                 "99": "Not reported"
             },
+            "enumOrdered": "",
             "missingValues": [
                 "99"
-            ]
+            ],
+            "trueValues": "",
+            "falseValues": ""
         },
         {
             "section": "Demographics",
@@ -55,10 +73,19 @@
             "title": "Age",
             "description": "What is your age? (age at enrollment)",
             "type": "integer",
+            "format": "",
             "constraints": {
+                "maxLength": "",
+                "enum": "",
+                "pattern": "",
                 "maximum": 90,
                 "minimum": 0
-            }
+            },
+            "enumLabels": "",
+            "enumOrdered": "",
+            "missingValues": "",
+            "trueValues": "",
+            "falseValues": ""
         },
         {
             "section": "Demographics",
@@ -66,6 +93,16 @@
             "title": "Hispanic, Latino, or Spanish Origin",
             "description": "Are you of Hispanic, Latino, or Spanish origin?",
             "type": "boolean",
+            "format": "",
+            "constraints": {
+                "maxLength": "",
+                "enum": "",
+                "pattern": "",
+                "maximum": "",
+                "minimum": ""
+            },
+            "enumLabels": "",
+            "enumOrdered": "",
             "missingValues": [
                 "Not reported"
             ],
@@ -82,7 +119,9 @@
             "title": "Sex at Birth",
             "description": "The self-reported sex of the participant/subject at birth",
             "type": "string",
+            "format": "",
             "constraints": {
+                "maxLength": "",
                 "enum": [
                     "Male",
                     "Female",
@@ -90,26 +129,59 @@
                     "None of these describe me",
                     "Prefer not to answer",
                     "Unknown"
-                ]
+                ],
+                "pattern": "",
+                "maximum": "",
+                "minimum": ""
             },
+            "enumLabels": "",
+            "enumOrdered": "",
             "missingValues": [
                 "Prefer not to answer",
                 "Unknown"
-            ]
+            ],
+            "trueValues": "",
+            "falseValues": ""
         },
         {
             "section": "Substance Use",
             "name": "SU4",
             "title": "Heroin Days Used",
             "description": "During the past 30 days how many days did you use heroin (alone or mixed with other drugs)? ] [Write 0 days if no use]",
-            "type": "integer"
+            "type": "integer",
+            "format": "",
+            "constraints": {
+                "maxLength": "",
+                "enum": "",
+                "pattern": "",
+                "maximum": "",
+                "minimum": ""
+            },
+            "enumLabels": "",
+            "enumOrdered": "",
+            "missingValues": "",
+            "trueValues": "",
+            "falseValues": ""
         },
         {
             "section": "Biomeasures",
             "name": "pulse_rate",
             "title": "Pulse Rate",
             "description": "Heart rate measured at systemic artery",
-            "type": "number"
+            "type": "number",
+            "format": "",
+            "constraints": {
+                "maxLength": "",
+                "enum": "",
+                "pattern": "",
+                "maximum": "",
+                "minimum": ""
+            },
+            "enumLabels": "",
+            "enumOrdered": "",
+            "missingValues": "",
+            "trueValues": "",
+            "falseValues": ""
         }
     ]
 }

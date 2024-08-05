@@ -2,6 +2,7 @@
 import re
 from collections.abc import MutableMapping
 import pandas as pd
+from pandas.api.types import is_object_dtype
 
 def _get_propnames_to_rearrange(propnames,schema):
     """ 
@@ -63,15 +64,17 @@ def refactor_field_props(flat_fields,schema):
         in_df = name in flat_fields_df
         if in_df:
             # need to handle if some values are pandas series
-            is_one_unique = (flat_fields_df[name].nunique() == 1) # NOTE: Includes NA values which is desired
-            if isinstance(is_one_unique, pd.Series):
-                is_one_unique = is_one_unique.all()
+            if isinstance(flat_fields_df[name], pd.DataFrame):
+                is_one_unique = (flat_fields_df[name].nunique() == 1).all()
+            elif isinstance(flat_fields_df[name], pd.Series):
+                if is_object_dtype(flat_fields_df[name]):
+                    is_one_unique = len(flat_fields_df[name].map(str).unique()) == 1
+                else:
+                    is_one_unique = flat_fields_df[name].nunique() == 1
             if is_one_unique:
                 flat_record[name] = flat_fields_df.pop(name).iloc[0]
                 if isinstance(flat_record[name], pd.Series):
                     flat_record[name] = flat_record[name].to_list()
-                print(type(flat_record[name]))
-                print(flat_record[name])
             
 
     return flat_record,flat_fields_df

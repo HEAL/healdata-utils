@@ -15,14 +15,38 @@
             "name": "BRTHDTC",
             "title": "Birth date",
             "description": "Date (and time, if applicable and known) the participant/subject was born.",
-            "type": "date"
+            "type": "date",
+            "enumLabels": "",
+            "constraints": {
+                "enum": ""
+            },
+            "standardsMappings": [
+                {
+                    "item": {
+                        "source": "",
+                        "id": ""
+                    }
+                }
+            ]
         },
         {
             "section": "Demographics",
             "name": "Age",
             "title": "Age",
             "description": "Value for participant/subject's age, calculated as elapsed time since the birth of the participant/subject.",
-            "type": "integer"
+            "type": "integer",
+            "enumLabels": "",
+            "constraints": {
+                "enum": ""
+            },
+            "standardsMappings": [
+                {
+                    "item": {
+                        "source": "",
+                        "id": ""
+                    }
+                }
+            ]
         },
         {
             "section": "Demographics",
@@ -30,6 +54,7 @@
             "title": "Age unit",
             "description": "Unit of measure for Age",
             "type": "string",
+            "enumLabels": "",
             "constraints": {
                 "enum": [
                     "years",
@@ -111,7 +136,19 @@
             "name": "GENIDENTOTH",
             "title": "Gender identification other type text",
             "description": "The free-text field related to 'Gender idenitification type.",
-            "type": "string"
+            "type": "string",
+            "enumLabels": "",
+            "constraints": {
+                "enum": ""
+            },
+            "standardsMappings": [
+                {
+                    "item": {
+                        "source": "",
+                        "id": ""
+                    }
+                }
+            ]
         },
         {
             "section": "Demographics",
