@@ -53,7 +53,7 @@ def test_vlmd_extract_all_params():
         assert result.exit_code == 0
 
         compare_vlmd_tmp_to_output(_input_params)
-            # clean up
+        # clean up
         shutil.rmtree(_outdir)
 
 
@@ -125,16 +125,8 @@ def test_vlmd_template():
 
     _compare_vlmd_tmp_to_output("tmp/template",csvoutput,jsonoutput,fields_propname)
 
-    shutil.rmtree(tmpdir) 
-
-    
-
+    shutil.rmtree(tmpdir)
 
 
 if __name__=="__main__":
     vlmd.main()
-
-
-
-
-
