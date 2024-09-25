@@ -22,7 +22,7 @@ openpyxl
 
 setup(
     name='healdata_utils',
-    version='0.6.0',
+    version='0.5.2',
     author='Michael Kranz',
     author_email='kranz-michael@norc.org',
     long_description=generate_long_description(),
